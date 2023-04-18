@@ -8,6 +8,9 @@ book:
   date: ""
   chapters:
     - index.qmd
+    - summary.qmd
+    - intro.qmd
+    - metodologia.qmd
     - kernel.qmd
     - references.qmd
 
