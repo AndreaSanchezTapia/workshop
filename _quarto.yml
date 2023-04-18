@@ -1,0 +1,23 @@
+project:
+  type: book
+
+book:
+  title: "workshop"
+  author: "Projeto Resiliencia "
+  date: "2/7/2023"
+  chapters:
+    - index.qmd
+    - summary.qmd
+    - intro.qmd
+    - metodologia.qmd
+    - references.qmd
+
+bibliography: 1_UFABC-TNC.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
