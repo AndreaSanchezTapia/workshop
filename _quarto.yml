@@ -3,14 +3,12 @@ project:
   output-dir: docs
 
 book:
-  title: "workshop"
-  author: "Projeto Resiliencia "
-  date: "2/7/2023"
+  title: "Oficina: Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros"
+  author: ""
+  date: ""
   chapters:
     - index.qmd
-    - summary.qmd
-    - intro.qmd
-    - metodologia.qmd
+    - kernel.qmd
     - references.qmd
 
 bibliography: 1_UFABC-TNC.bib
