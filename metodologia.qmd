@@ -1,0 +1,32 @@
+# Métodos
+
+A metodologia do projeto está baseada em
+@anderson_estimating_2014 e @anderson_resilient_2023
+
+
+## Diversidade da paisagem 
+
++ TPI
++ Classes de declividade
++ Tipos de solo 
++ 
+O cálculo de diversidade da paisagem foi realizado em Google Earth Engine [@gorelick_google_2017]
+
+Faixa altitudinal
+
+Residuos da regressão da diversidade da paisagem em função do clima. 
+
+
+## Conectividade local 
+
+### Cálculos de resistência
+
+Valores de resistência por bioma.
+
+
+
+### Conectividade local.
+
+
+O método de _kernel_ resistente (_resistant kernel analysis_) [@compton_resistantkernel_2007]
+
