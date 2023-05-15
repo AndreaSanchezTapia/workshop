@@ -11,7 +11,7 @@ book:
     - summary.qmd
     - intro.qmd
     - metodologia.qmd
-    - kernel.qmd
+    - resultados.qmd
     - references.qmd
 
 bibliography: 1_UFABC-TNC.bib

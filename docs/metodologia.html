@@ -49,7 +49,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./resultados.html" rel="next">
 <link href="./intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -80,6 +80,7 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -134,6 +135,11 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./resultados.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Resultados</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
   </div>
 </li>
@@ -150,7 +156,8 @@ div.csl-indent {
   <li><a href="#conectividade-local" id="toc-conectividade-local" class="nav-link" data-scroll-target="#conectividade-local"><span class="toc-section-number">3.2</span>  Conectividade local</a>
   <ul class="collapse">
   <li><a href="#cálculos-de-resistência" id="toc-cálculos-de-resistência" class="nav-link" data-scroll-target="#cálculos-de-resistência"><span class="toc-section-number">3.2.1</span>  Cálculos de resistência</a></li>
-  <li><a href="#conectividade-local." id="toc-conectividade-local." class="nav-link" data-scroll-target="#conectividade-local."><span class="toc-section-number">3.2.2</span>  Conectividade local.</a></li>
+  <li><a href="#conectividade-local-1" id="toc-conectividade-local-1" class="nav-link" data-scroll-target="#conectividade-local-1"><span class="toc-section-number">3.2.2</span>  Conectividade local</a></li>
+  <li><a href="#conectividade-baseada-em-teoria-de-circuitos" id="toc-conectividade-baseada-em-teoria-de-circuitos" class="nav-link" data-scroll-target="#conectividade-baseada-em-teoria-de-circuitos"><span class="toc-section-number">3.2.3</span>  Conectividade baseada em teoria de circuitos</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -191,11 +198,28 @@ div.csl-indent {
 <h2 data-number="3.2" class="anchored" data-anchor-id="conectividade-local"><span class="header-section-number">3.2</span> Conectividade local</h2>
 <section id="cálculos-de-resistência" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="cálculos-de-resistência"><span class="header-section-number">3.2.1</span> Cálculos de resistência</h3>
-<p>Valores de resistência por bioma.</p>
+<p>Os valores de resistência das classes de cobertura foram estimados para cada bioma, atribuindo baixas resistências a coberturas naturais, resistências intermediárias a coberturas semi-naturais ou levemente modificadas, e resistências máximas a coberturas relacionadas com cidades, estradas, cultivos perenes de alta intensidade (Tabela x).</p>
 </section>
-<section id="conectividade-local." class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="conectividade-local."><span class="header-section-number">3.2.2</span> Conectividade local.</h3>
-<p>O método de <em>kernel</em> resistente (<em>resistant kernel analysis</em>) <span class="citation" data-cites="compton_resistantkernel_2007">(<a href="references.html#ref-compton_resistantkernel_2007" role="doc-biblioref">Compton et al. 2007</a>)</span></p>
+<section id="conectividade-local-1" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="conectividade-local-1"><span class="header-section-number">3.2.2</span> Conectividade local</h3>
+<p><!-- O método de _kernel_ resistente (_resistant kernel analysis_) [@compton_resistantkernel_2007] --> Um filtro de <em>kernel</em> de 23 x 23 píxeis (~2070m) foi aplicado ao raster de resistências.</p>
+</section>
+<section id="conectividade-baseada-em-teoria-de-circuitos" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="conectividade-baseada-em-teoria-de-circuitos"><span class="header-section-number">3.2.3</span> Conectividade baseada em teoria de circuitos</h3>
+<p>Omniscape implementa a medida de resistência baseada em teoria de circuitos <span class="citation" data-cites="mcrae_isolation_2006">(<a href="references.html#ref-mcrae_isolation_2006" role="doc-biblioref">McRae 2006</a>)</span>. A diferença de abordagens de mínimo custo, a conectividade baseada em teoria de circuitos (doravante CTC) consegue propor diferentes caminhos de menor resistência por onde a “corrente” (o fluxo entre áreas) pode passar, e detecta áreas onde esta corrente se veria <strong>concentrada</strong> pela configuração espacial (por exemplo, através de uma barra ou um estreito), e áreas onde o fluxo seria <strong>difuso</strong> (por exemplo, em áreas contíguas de baixa resistência, onde o fluxo pode acontecer em qualquer direção e com menor intensidade).</p>
+<p>Uma dificuldade desta abordagem é que as áreas com alta resistência, onde o fluxo seria impedido, devem ser diferenciadas das áreas de baixa resistência onde o fluxo é baixo por ter se dispersado.</p>
+<p>O cálculo da conectividade baseada em teoria de circuitos foi realizado utilizando a implementação de Omniscape para Julia <span class="citation" data-cites="hall_circuitscape_2021">Landau et al. (<a href="references.html#ref-landau_omniscapejl_2021" role="doc-biblioref">2021</a>)</span>. Foram utilisados:</p>
+<ul>
+<li>o raster de conectividade sem filtro de <em>kernel</em></li>
+<li>um tamanho da área de interesse de 100 píxeis (~9km)</li>
+<li>agrupamentos de 5 píxeis de interesse para a janela móvel (~450m).</li>
+</ul>
+<p>O output de Omniscape são três arquivos de conectividade relacionados:</p>
+<ul>
+<li><code>flow_current</code> é o fluxo que aconteceria sem levar em conta a camada de resistência. Ele leva em conta a configuração espacial da paisagem (estreitos, barras) e dos píxeis de baixa resistência de origem. Nem todo pixel é source pixel, mas a corrente que entra em cada pixel de baixa resistência entra sem resistência. Flow current é usado como um “modelo nulo” de conectividade.</li>
+<li><code>cumulative_current</code> é a corrente levando em conta a configuração espacial e os valores de resistência</li>
+<li><code>normalized_current</code> equivale a <span class="math inline">\(\frac{cumulative\_current}{flow\_current}\)</span> e controla o efeito da configuração espacial do cálculo de conectividade.</li>
+</ul>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
@@ -205,11 +229,17 @@ Anderson, Mark G., Melissa Clark, Arlene P. Olivero, Analie R. Barnett, Kimberly
 <div id="ref-anderson_estimating_2014" class="csl-entry" role="doc-biblioentry">
 Anderson, Mark G., Melissa Clark, and Arlene Olivero Sheldon. 2014. <span>“Estimating <span>Climate Resilience</span> for <span>Conservation</span> Across <span>Geophysical Settings</span>.”</span> <em>Conservation Biology</em> 28 (4): 959–70. <a href="https://doi.org/10.1111/cobi.12272">https://doi.org/10.1111/cobi.12272</a>.
 </div>
-<div id="ref-compton_resistantkernel_2007" class="csl-entry" role="doc-biblioentry">
-Compton, Bradley W., Kevin McGARIGAL, Samuel A. Cushman, and Lloyd R. Gamble. 2007. <span>“A <span>Resistant</span>-<span>Kernel Model</span> of <span>Connectivity</span> for <span>Amphibians</span> That <span>Breed</span> in <span>Vernal Pools</span>.”</span> <em>Conservation Biology</em> 21 (3): 788–99. <a href="https://doi.org/10.1111/j.1523-1739.2007.00674.x">https://doi.org/10.1111/j.1523-1739.2007.00674.x</a>.
-</div>
 <div id="ref-gorelick_google_2017" class="csl-entry" role="doc-biblioentry">
 Gorelick, Noel, Matt Hancher, Mike Dixon, Simon Ilyushchenko, David Thau, and Rebecca Moore. 2017. <span>“Google <span>Earth Engine</span>: <span class="nocase">Planetary-scale</span> Geospatial Analysis for Everyone.”</span> <em>Remote Sensing of Environment</em>. <a href="https://doi.org/10.1016/j.rse.2017.06.031">https://doi.org/10.1016/j.rse.2017.06.031</a>.
+</div>
+<div id="ref-hall_circuitscape_2021" class="csl-entry" role="doc-biblioentry">
+Hall, Kimberly R., Ranjan Anantharaman, Vincent A. Landau, Melissa Clark, Brett G. Dickson, Aaron Jones, Jim Platt, Alan Edelman, and Viral B. Shah. 2021. <span>“Circuitscape in <span>Julia</span>: <span>Empowering Dynamic Approaches</span> to <span>Connectivity Assessment</span>.”</span> <em>Land</em> 10 (3): 301. <a href="https://doi.org/10.3390/land10030301">https://doi.org/10.3390/land10030301</a>.
+</div>
+<div id="ref-landau_omniscapejl_2021" class="csl-entry" role="doc-biblioentry">
+Landau, Vincent, Viral Shah, Ranjan Anantharaman, and Kimberly Hall. 2021. <span>“Omniscape.jl: <span>Software</span> to Compute Omnidirectional Landscape Connectivity.”</span> <em>Journal of Open Source Software</em> 6 (57): 2829. <a href="https://doi.org/10.21105/joss.02829">https://doi.org/10.21105/joss.02829</a>.
+</div>
+<div id="ref-mcrae_isolation_2006" class="csl-entry" role="doc-biblioentry">
+McRae, Brad H. 2006. <span>“Isolation by Resistance.”</span> <em>Evolution</em> 60 (8): 1551–61.
 </div>
 </div>
 </section>
@@ -356,8 +386,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./resultados.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Resultados</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
