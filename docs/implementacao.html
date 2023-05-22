@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Oficina: Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros - 1&nbsp; Resumo</title>
+<title>Oficina: Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros - 6&nbsp; Implementação</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -30,8 +49,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./justificativa.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./resultados.html" rel="next">
+<link href="./metodologia.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,6 +80,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -70,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Resumo</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Implementação</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -100,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Resumo</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Resumo</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -125,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./implementacao.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Implementação</span></a>
+  <a href="./implementacao.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Implementação</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -143,14 +163,25 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#conectividade-local" id="toc-conectividade-local" class="nav-link active" data-scroll-target="#conectividade-local"><span class="toc-section-number">6.1</span>  Conectividade local</a>
+  <ul class="collapse">
+  <li><a href="#cálculos-de-resistência" id="toc-cálculos-de-resistência" class="nav-link" data-scroll-target="#cálculos-de-resistência"><span class="toc-section-number">6.1.1</span>  Cálculos de resistência</a></li>
+  <li><a href="#conectividade-local-1" id="toc-conectividade-local-1" class="nav-link" data-scroll-target="#conectividade-local-1"><span class="toc-section-number">6.1.2</span>  Conectividade local</a></li>
+  <li><a href="#conectividade-baseada-em-teoria-de-circuitos" id="toc-conectividade-baseada-em-teoria-de-circuitos" class="nav-link" data-scroll-target="#conectividade-baseada-em-teoria-de-circuitos"><span class="toc-section-number">6.1.3</span>  Conectividade baseada em teoria de circuitos</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Resumo</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Implementação</span></h1>
 </div>
 
 
@@ -165,10 +196,53 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>As mudanças no clima modificam ambientes naturais e pressionam espécies para se adaptar ou alterar a sua distribuição no espaço. A identificação de locais que podem ser mais adequados para resguardar um conjunto de espécies em um futuro de mudanças é imprescindível para o planejamento de ações de conservação e restauração. Nesse sentido, o objetivo principal do projeto é mapear sítios resilientes a mudanças climáticas e conectados entre si, identificando locais que seriam mais adequados a persistir e se adaptar a mudanças no clima. O termo <em>áreas resilientes</em> indica locais que apresentam condições necessárias para que espécies e processos ecológicos persistam às mudanças climáticas regionais, definidos por sua alta diversidade microclimática, grau de conservação e conectividade. A metodologia proposta para isso combina a avaliação da diversidade da paisagem e da conectividade local, de modo a identificar locais com maior variabilidade topografia e cuja matriz seja mais permeável à movimentação de espécies. A diversidade da paisagem é baseada nas características físicas do terreno e resume informações da variedade de <em>landforms</em>, amplitude altitudinal, densidade de áreas úmidas e propriedades do solo. A conectividade local é baseada nos valores de resistência da paisagem, que permite identificar barreias para movimentação de espécies a partir dos tipos de uso do solo existentes (com maior ou menor grau de antropização). A metodologia desenvolvida segue três premissas básicas: (1) a diversidade de espécies é correlacionada com a diversidade geofísica; (2) em um cenário de mudança climática, espécies se beneficiam de microclimas locais para se manter na paisagem; e (3) populações de espécies podem usar microclimas e se adaptar às mudanças se a área for permeável e bem conectada. Essa análise, proposta e validada para a América do Norte pela <em>The Nature Conservancy</em>, complementa outras disponíveis na literatura, uma vez que ela foca nas propriedades do terreno. A aplicação dela para a realidade dos biomas do Brasil é um passo importante para identificar sítios resilientes em ambientes tropicais. Em conjunto com especialistas atuando na região e baseado na literatura disponível, o projeto busca testar a aplicabilidade dessa metodologia ao contexto dos biomas brasileiros, refinando e adaptando quando necessário. O produto resultante desse projeto é um mapa de áreas resilientes e conectadas para os biomas do Brasil e permite identificar áreas com potencial de sustentar animais e plantas em um clima sob mudanças.</p>
-<p><strong>Palavras chave:</strong> Resiliência climática, mudanças climáticas, conectividade, paisagem, topografia, conservação, biodiversidade</p>
+<p>O cálculo de diversidade da paisagem foi realizado em Google Earth Engine <span class="citation" data-cites="gorelick_google_2017">(<a href="references.html#ref-gorelick_google_2017" role="doc-biblioref">Gorelick et al. 2017</a>)</span></p>
+<p>Faixa altitudinal</p>
+<p>Residuos da regressão da diversidade da paisagem em função do clima.</p>
+<section id="conectividade-local" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="conectividade-local"><span class="header-section-number">6.1</span> Conectividade local</h2>
+<section id="cálculos-de-resistência" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="cálculos-de-resistência"><span class="header-section-number">6.1.1</span> Cálculos de resistência</h3>
+<p>Os valores de resistência das classes de cobertura foram estimados para cada bioma, atribuindo baixas resistências a coberturas naturais, resistências intermediárias a coberturas semi-naturais ou levemente modificadas, e resistências máximas a coberturas relacionadas com cidades, estradas, cultivos perenes de alta intensidade (Tabela x).</p>
+</section>
+<section id="conectividade-local-1" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="conectividade-local-1"><span class="header-section-number">6.1.2</span> Conectividade local</h3>
+<p><!-- O método de _kernel_ resistente (_resistant kernel analysis_) [@compton_resistantkernel_2007] --> Um filtro de <em>kernel</em> de 23 x 23 píxeis (~2070m) foi aplicado ao raster de resistências.</p>
+</section>
+<section id="conectividade-baseada-em-teoria-de-circuitos" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="conectividade-baseada-em-teoria-de-circuitos"><span class="header-section-number">6.1.3</span> Conectividade baseada em teoria de circuitos</h3>
+<p>Omniscape implementa a medida de resistência baseada em teoria de circuitos <span class="citation" data-cites="mcrae_isolation_2006">(<a href="references.html#ref-mcrae_isolation_2006" role="doc-biblioref">McRae 2006</a>)</span>. A diferença de abordagens de mínimo custo, a conectividade baseada em teoria de circuitos (doravante CTC) consegue propor diferentes caminhos de menor resistência por onde a “corrente” (o fluxo entre áreas) pode passar, e detecta áreas onde esta corrente se veria <strong>concentrada</strong> pela configuração espacial (por exemplo, através de uma barra ou um estreito), e áreas onde o fluxo seria <strong>difuso</strong> (por exemplo, em áreas contíguas de baixa resistência, onde o fluxo pode acontecer em qualquer direção e com menor intensidade).</p>
+<p>Uma dificuldade desta abordagem é que as áreas com alta resistência, onde o fluxo seria impedido, devem ser diferenciadas das áreas de baixa resistência onde o fluxo é baixo por ter se dispersado.</p>
+<p>O cálculo da conectividade baseada em teoria de circuitos foi realizado utilizando a implementação de Omniscape para Julia <span class="citation" data-cites="hall_circuitscape_2021">Landau et al. (<a href="references.html#ref-landau_omniscapejl_2021" role="doc-biblioref">2021</a>)</span>. Foram utilisados:</p>
+<ul>
+<li>o raster de conectividade sem filtro de <em>kernel</em></li>
+<li>um tamanho da área de interesse de 100 píxeis (~9km)</li>
+<li>agrupamentos de 5 píxeis de interesse para a janela móvel (~450m).</li>
+</ul>
+<p>O output de Omniscape são três arquivos de conectividade relacionados:</p>
+<ul>
+<li><code>flow_current</code> é o fluxo que aconteceria sem levar em conta a camada de resistência. Ele leva em conta a configuração espacial da paisagem (estreitos, barras) e dos píxeis de baixa resistência de origem. Nem todo pixel é source pixel, mas a corrente que entra em cada pixel de baixa resistência entra sem resistência. Flow current é usado como um “modelo nulo” de conectividade.</li>
+<li><code>cumulative_current</code> é a corrente levando em conta a configuração espacial e os valores de resistência</li>
+<li><code>normalized_current</code> equivale a <span class="math inline">\(\frac{cumulative\_current}{flow\_current}\)</span> e controla o efeito da configuração espacial do cálculo de conectividade.</li>
+</ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-gorelick_google_2017" class="csl-entry" role="doc-biblioentry">
+Gorelick, Noel, Matt Hancher, Mike Dixon, Simon Ilyushchenko, David Thau, and Rebecca Moore. 2017. <span>“Google <span>Earth Engine</span>: <span class="nocase">Planetary-scale</span> Geospatial Analysis for Everyone.”</span> <em>Remote Sensing of Environment</em>. <a href="https://doi.org/10.1016/j.rse.2017.06.031">https://doi.org/10.1016/j.rse.2017.06.031</a>.
+</div>
+<div id="ref-hall_circuitscape_2021" class="csl-entry" role="doc-biblioentry">
+Hall, Kimberly R., Ranjan Anantharaman, Vincent A. Landau, Melissa Clark, Brett G. Dickson, Aaron Jones, Jim Platt, Alan Edelman, and Viral B. Shah. 2021. <span>“Circuitscape in <span>Julia</span>: <span>Empowering Dynamic Approaches</span> to <span>Connectivity Assessment</span>.”</span> <em>Land</em> 10 (3): 301. <a href="https://doi.org/10.3390/land10030301">https://doi.org/10.3390/land10030301</a>.
+</div>
+<div id="ref-landau_omniscapejl_2021" class="csl-entry" role="doc-biblioentry">
+Landau, Vincent, Viral Shah, Ranjan Anantharaman, and Kimberly Hall. 2021. <span>“Omniscape.jl: <span>Software</span> to Compute Omnidirectional Landscape Connectivity.”</span> <em>Journal of Open Source Software</em> 6 (57): 2829. <a href="https://doi.org/10.21105/joss.02829">https://doi.org/10.21105/joss.02829</a>.
+</div>
+<div id="ref-mcrae_isolation_2006" class="csl-entry" role="doc-biblioentry">
+McRae, Brad H. 2006. <span>“Isolation by Resistance.”</span> <em>Evolution</em> 60 (8): 1551–61.
+</div>
+</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -306,13 +380,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Prefácio</span>
+      <a href="./metodologia.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Métodos</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./justificativa.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Justificativa</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./resultados.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Resultados</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,0 +1,12 @@
+# Objetivo
+
+O objetivo principal do projeto é mapear sítios resilientes a mudanças climáticas e conectados entre si, identificando locais que seriam mais adequados a persistir e se adaptar a mudanças no clima. 
+
+## Objetivos específicos
+
+O objetivo geral do estudo pode ser detalhado em dois objetivos específicos: 
+
++ Aplicar a metodologia de mapeamento de sítios resilientes, proposta e validada para a região da América do Norte, para o Brasil, conduzindo as análises de diversidade da paisagem e de conectividade local
+
++ Refinar e adaptar a metodologia proposta, __com base em discussões com especialistas no tema que atuam na região de estudo__, produzindo um mapa de áreas resilientes para o Brasil.
+

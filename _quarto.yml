@@ -9,8 +9,11 @@ book:
   chapters:
     - index.qmd
     - summary.qmd
+    - justificativa.qmd
+    - objetivo.qmd
     - intro.qmd
     - metodologia.qmd
+    - implementacao.qmd
     - resultados.qmd
     - references.qmd
 

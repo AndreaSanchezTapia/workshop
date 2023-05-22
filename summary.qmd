@@ -1,3 +1,18 @@
 # Resumo
 
-xxx
+As mudanças no clima modificam ambientes naturais e pressionam espécies para se adaptar ou alterar a sua distribuição no espaço.
+A identificação de locais que podem ser mais adequados para resguardar um conjunto de espécies em um futuro de mudanças é imprescindível para o planejamento de ações de conservação e restauração.
+Nesse sentido, o objetivo principal do projeto é mapear sítios resilientes a mudanças climáticas e conectados entre si, identificando locais que seriam mais adequados a persistir e se adaptar a mudanças no clima. 
+O termo _áreas resilientes_ indica locais que apresentam condições necessárias para que espécies e processos ecológicos persistam às mudanças climáticas regionais, definidos por sua alta diversidade microclimática, grau de conservação e conectividade. 
+A metodologia proposta para isso combina a avaliação da diversidade da paisagem e da conectividade local, de modo a identificar locais com maior variabilidade topografia e cuja matriz seja mais permeável à movimentação de espécies.
+A diversidade da paisagem é baseada nas características físicas do terreno e resume informações da variedade de _landforms_, amplitude altitudinal, densidade de áreas úmidas e propriedades do solo.
+A conectividade local é baseada nos valores de resistência da paisagem, que permite identificar barreias para movimentação de espécies a partir dos tipos de uso do solo existentes (com maior ou menor grau de antropização).
+A metodologia desenvolvida segue três premissas básicas: (1) a diversidade de espécies é correlacionada com a diversidade geofísica; (2) em um cenário de mudança climática, espécies se beneficiam de microclimas locais para se manter na paisagem; e (3) populações de espécies podem usar microclimas e se adaptar às mudanças se a área for permeável e bem conectada.
+Essa análise, proposta e validada para a América do Norte pela _The Nature Conservancy_, complementa outras disponíveis na literatura, uma vez que ela foca nas propriedades do terreno. 
+A aplicação dela para a realidade dos biomas do Brasil é um passo importante para identificar sítios resilientes em ambientes tropicais. 
+Em conjunto com especialistas atuando na região e baseado na literatura disponível, o projeto busca testar a aplicabilidade dessa metodologia ao contexto dos biomas brasileiros, refinando e adaptando quando necessário.
+O produto resultante desse projeto é um mapa de áreas resilientes e conectadas para os biomas do Brasil e permite identificar áreas com potencial de sustentar animais e plantas em um clima sob mudanças.
+
+__Palavras chave:__
+Resiliência climática, mudanças climáticas, conectividade, paisagem, topografia, conservação, biodiversidade
+

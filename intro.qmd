@@ -1,6 +1,6 @@
 # Introdução
 
-O projeto _Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros_ está coordenado por _The Nature Conservancy_ Brasil e será realizado virtualmente nas datas {data}.
+O projeto _Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros_ está coordenado por _The Nature Conservancy_ Brasil e será realizado virtualmente nos dias __12 e 16 de junho de 2023__.
 
 O projeto procura mapear sítios resilientes a mudanças climáticas e áreas importantes para manutenção ou restabelecimento da conectividade entre eles, identificando locais que seriam mais adequados a persistir e se adaptar às futuras mudanças no clima.
 O produto principal do projeto é um mapa de áreas resilientes a mudanças climáticas para o Brasil.
@@ -14,9 +14,11 @@ knitr::include_graphics("figs/0_team.png")
 
 ### Equipe TNC
 
-Milena F. Rosenfield
-José Fronza
-Mário Barroso
+- Milena F. Rosenfield  
+- José Fronza
+- Mário Barroso
+- Edenise Silveira
+- Clícia Barata
 
 ### Equipe Biomas
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Oficina: Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros - 3&nbsp; Métodos</title>
+<title>Oficina: Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros - 5&nbsp; Métodos</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -49,7 +49,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./resultados.html" rel="next">
+<link href="./implementacao.html" rel="next">
 <link href="./intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -80,7 +80,6 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -90,7 +89,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Métodos</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Métodos</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -125,17 +124,32 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></a>
+  <a href="./justificativa.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Justificativa</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./metodologia.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Métodos</span></a>
+  <a href="./objetivo.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Objetivo</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./resultados.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Resultados</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introdução</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./metodologia.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Métodos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./implementacao.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Implementação</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./resultados.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Resultados</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -152,12 +166,13 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#diversidade-da-paisagem" id="toc-diversidade-da-paisagem" class="nav-link active" data-scroll-target="#diversidade-da-paisagem"><span class="toc-section-number">3.1</span>  Diversidade da paisagem</a></li>
-  <li><a href="#conectividade-local" id="toc-conectividade-local" class="nav-link" data-scroll-target="#conectividade-local"><span class="toc-section-number">3.2</span>  Conectividade local</a>
+  <li><a href="#configurações-geofísicas" id="toc-configurações-geofísicas" class="nav-link active" data-scroll-target="#configurações-geofísicas"><span class="toc-section-number">5.1</span>  Configurações geofísicas</a></li>
+  <li><a href="#resiliência" id="toc-resiliência" class="nav-link" data-scroll-target="#resiliência"><span class="toc-section-number">5.2</span>  Resiliência</a>
   <ul class="collapse">
-  <li><a href="#cálculos-de-resistência" id="toc-cálculos-de-resistência" class="nav-link" data-scroll-target="#cálculos-de-resistência"><span class="toc-section-number">3.2.1</span>  Cálculos de resistência</a></li>
-  <li><a href="#conectividade-local-1" id="toc-conectividade-local-1" class="nav-link" data-scroll-target="#conectividade-local-1"><span class="toc-section-number">3.2.2</span>  Conectividade local</a></li>
-  <li><a href="#conectividade-baseada-em-teoria-de-circuitos" id="toc-conectividade-baseada-em-teoria-de-circuitos" class="nav-link" data-scroll-target="#conectividade-baseada-em-teoria-de-circuitos"><span class="toc-section-number">3.2.3</span>  Conectividade baseada em teoria de circuitos</a></li>
+  <li><a href="#diversidade-da-paisagem" id="toc-diversidade-da-paisagem" class="nav-link" data-scroll-target="#diversidade-da-paisagem"><span class="toc-section-number">5.2.1</span>  Diversidade da paisagem</a></li>
+  <li><a href="#amplitude-altitudinal" id="toc-amplitude-altitudinal" class="nav-link" data-scroll-target="#amplitude-altitudinal"><span class="toc-section-number">5.2.2</span>  Amplitude altitudinal</a></li>
+  <li><a href="#conectividade-local" id="toc-conectividade-local" class="nav-link" data-scroll-target="#conectividade-local"><span class="toc-section-number">5.2.3</span>  Conectividade local</a></li>
+  <li><a href="#combinando-diversidade-da-paisagem-e-conectividade-local-resiliência" id="toc-combinando-diversidade-da-paisagem-e-conectividade-local-resiliência" class="nav-link" data-scroll-target="#combinando-diversidade-da-paisagem-e-conectividade-local-resiliência"><span class="toc-section-number">5.2.4</span>  Combinando diversidade da paisagem e conectividade local: resiliência</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -167,7 +182,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Métodos</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Métodos</span></h1>
 </div>
 
 
@@ -182,44 +197,55 @@ div.csl-indent {
 
 </header>
 
-<p>A metodologia do projeto está baseada em <span class="citation" data-cites="anderson_estimating_2014">Anderson, Clark, and Sheldon (<a href="references.html#ref-anderson_estimating_2014" role="doc-biblioref">2014</a>)</span> e <span class="citation" data-cites="anderson_resilient_2023">Anderson et al. (<a href="references.html#ref-anderson_resilient_2023" role="doc-biblioref">2023</a>)</span></p>
-<section id="diversidade-da-paisagem" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="diversidade-da-paisagem"><span class="header-section-number">3.1</span> Diversidade da paisagem</h2>
-<ul>
-<li>TPI</li>
-<li>Classes de declividade</li>
-<li>Tipos de solo</li>
-<li>O cálculo de diversidade da paisagem foi realizado em Google Earth Engine <span class="citation" data-cites="gorelick_google_2017">(<a href="references.html#ref-gorelick_google_2017" role="doc-biblioref">Gorelick et al. 2017</a>)</span></li>
-</ul>
-<p>Faixa altitudinal</p>
-<p>Residuos da regressão da diversidade da paisagem em função do clima.</p>
+<p>A metodologia proposta para identificar sítios resilientes <span class="citation" data-cites="anderson_estimating_2014 anderson_resilient_2016 anderson_resilient_2016-1 anderson_resilient_2023">(<a href="references.html#ref-anderson_estimating_2014" role="doc-biblioref">M. G. Anderson, Clark, and Sheldon 2014</a>, <a href="references.html#ref-anderson_resilient_2016" role="doc-biblioref">2016</a>; <a href="references.html#ref-anderson_resilient_2016-1" role="doc-biblioref">M. Anderson et al. 2016</a>; e <a href="references.html#ref-anderson_resilient_2023" role="doc-biblioref">M. G. Anderson et al. 2023</a>)</span> envolve o mapeamento das configurações geofísicas, a análise da diversidade da paisagem e da conectividade local, para, por fim, gerar o mapa de áreas resilientes. Cada uma dessas etapas é descrita a seguir.</p>
+<section id="configurações-geofísicas" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="configurações-geofísicas"><span class="header-section-number">5.1</span> Configurações geofísicas</h2>
+<p>A primeira etapa consiste em caracterizar e classificar a região de estudo em <strong>configurações geofísicas</strong> baseadas em suas propriedades físicas, tais como geologia, solo e altitude, que correspondem às diferenças na fauna e flora associadas. No estudo desenvolvido nos EUA, o mapeamento foi feito por ecoregiões, uma vez que esses locais apresentam condições ambientais similares, especialmente relacionado a <em>landforms</em>, geologia e solos, e que compartilham conjuntos de comunidades naturais e espécies. As configurações geofísicas são definidas como a combinação de uma zona altitudinal e da classe geológica (rocha ou substrato superficial). As zonas altitudinais e as classes geológicas foram desenvolvidas para corresponder com mudanças perceptíveis em comunidades e espécies.</p>
+<p>Conjuntos de dados necessários para essa análise incluem: geologia das rochas (<em>bedrock geology</em>), solo, altitude (obtido de um modelo digital de elevação – <em>digital elevation model</em> ou DEM com resolução de 30 m) e <em>landforms</em> (derivado do DEM). Esses dados são integrados para identificar um número de tipos de configurações geofísicas com características específicas.</p>
 </section>
-<section id="conectividade-local" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="conectividade-local"><span class="header-section-number">3.2</span> Conectividade local</h2>
-<section id="cálculos-de-resistência" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="cálculos-de-resistência"><span class="header-section-number">3.2.1</span> Cálculos de resistência</h3>
-<p>Os valores de resistência das classes de cobertura foram estimados para cada bioma, atribuindo baixas resistências a coberturas naturais, resistências intermediárias a coberturas semi-naturais ou levemente modificadas, e resistências máximas a coberturas relacionadas com cidades, estradas, cultivos perenes de alta intensidade (Tabela x).</p>
-</section>
-<section id="conectividade-local-1" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="conectividade-local-1"><span class="header-section-number">3.2.2</span> Conectividade local</h3>
-<p><!-- O método de _kernel_ resistente (_resistant kernel analysis_) [@compton_resistantkernel_2007] --> Um filtro de <em>kernel</em> de 23 x 23 píxeis (~2070m) foi aplicado ao raster de resistências.</p>
-</section>
-<section id="conectividade-baseada-em-teoria-de-circuitos" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="conectividade-baseada-em-teoria-de-circuitos"><span class="header-section-number">3.2.3</span> Conectividade baseada em teoria de circuitos</h3>
-<p>Omniscape implementa a medida de resistência baseada em teoria de circuitos <span class="citation" data-cites="mcrae_isolation_2006">(<a href="references.html#ref-mcrae_isolation_2006" role="doc-biblioref">McRae 2006</a>)</span>. A diferença de abordagens de mínimo custo, a conectividade baseada em teoria de circuitos (doravante CTC) consegue propor diferentes caminhos de menor resistência por onde a “corrente” (o fluxo entre áreas) pode passar, e detecta áreas onde esta corrente se veria <strong>concentrada</strong> pela configuração espacial (por exemplo, através de uma barra ou um estreito), e áreas onde o fluxo seria <strong>difuso</strong> (por exemplo, em áreas contíguas de baixa resistência, onde o fluxo pode acontecer em qualquer direção e com menor intensidade).</p>
-<p>Uma dificuldade desta abordagem é que as áreas com alta resistência, onde o fluxo seria impedido, devem ser diferenciadas das áreas de baixa resistência onde o fluxo é baixo por ter se dispersado.</p>
-<p>O cálculo da conectividade baseada em teoria de circuitos foi realizado utilizando a implementação de Omniscape para Julia <span class="citation" data-cites="hall_circuitscape_2021">Landau et al. (<a href="references.html#ref-landau_omniscapejl_2021" role="doc-biblioref">2021</a>)</span>. Foram utilisados:</p>
+<section id="resiliência" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="resiliência"><span class="header-section-number">5.2</span> Resiliência</h2>
+<p>A segunda etapa consiste nas estimativas de resiliência dos sítios. Para estimar a resiliência de um sítio, é necessário estimar a <a href="#diversidade-da-paisagem"><strong>diversidade da paisagem</strong></a> e a <a href="#conectividade-local"><strong>conectividade local</strong></a> para cada célula de 30 m. O resultado dessas análises é combinado para então estimar o valor de resiliência para cada local.</p>
+<section id="diversidade-da-paisagem" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="diversidade-da-paisagem"><span class="header-section-number">5.2.1</span> Diversidade da paisagem</h3>
+<p>A diversidade da paisagem está relacionada à variedade de microclimas em um determinado local. A análise de diversidade da paisagem resume informações relacionadas a: (a) variedade de landforms, (b) amplitude altitudinal, (c) densidade de banhados ou áreas úmidas (<em>wetlands</em>) e (d) propriedades do solo em um determinado local. A variedade de <em>landforms</em> diz respeito à variedade de componentes naturais do terreno criados pela topografia. Sua avaliação é baseada em um modelo de landforms (derivado de um DEM com resolução de 30 m), que classifica a superfície em diversas categorias de <em>landforms</em>, como por exemplo:</p>
 <ul>
-<li>o raster de conectividade sem filtro de <em>kernel</em></li>
-<li>um tamanho da área de interesse de 100 píxeis (~9km)</li>
-<li>agrupamentos de 5 píxeis de interesse para a janela móvel (~450m).</li>
+<li>precipícios e áreas íngremes -<em>cliff and steep slope</em></li>
+<li>topos de montanha e divisores de águas (<em>summit and ridge-top</em>)</li>
+<li>vertentes norte e sul, que determinam se uma vertente é cálida ou fria, especialmente em latitudes maiores, (<em>north/south-facing side slope</em>)</li>
+<li>colinas baixas (<em>low hill</em>)</li>
+<li>áreas planas de terras baixas (<em>dry flat</em>), entre outros.</li>
 </ul>
-<p>O output de Omniscape são três arquivos de conectividade relacionados:</p>
-<ul>
-<li><code>flow_current</code> é o fluxo que aconteceria sem levar em conta a camada de resistência. Ele leva em conta a configuração espacial da paisagem (estreitos, barras) e dos píxeis de baixa resistência de origem. Nem todo pixel é source pixel, mas a corrente que entra em cada pixel de baixa resistência entra sem resistência. Flow current é usado como um “modelo nulo” de conectividade.</li>
-<li><code>cumulative_current</code> é a corrente levando em conta a configuração espacial e os valores de resistência</li>
-<li><code>normalized_current</code> equivale a <span class="math inline">\(\frac{cumulative\_current}{flow\_current}\)</span> e controla o efeito da configuração espacial do cálculo de conectividade.</li>
-</ul>
+<p>A classificação de <em>landforms</em> leva em conta a combinação de informações sobre <strong>inclinação, orientação, posição no terreno e acumulação de umidade</strong> (<em>slope</em>, <em>aspect</em>, <em>land position</em>, <em>moisture accumulation</em>), que corresponde a ambientes topográficos locais com combinações distintas de umidade, radiação e deposição.</p>
+<p>A <strong>diversidade da paisagem</strong> é calculada pelo número de <em>landforms</em> dentro de uma área circular de 40 ha no entorno de cada célula de 30 m.</p>
+<p><!-- checar isto! --></p>
+</section>
+<section id="amplitude-altitudinal" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="amplitude-altitudinal"><span class="header-section-number">5.2.2</span> Amplitude altitudinal</h3>
+<p>A amplitude altitudinal é determinada a partir do DEM, tabulando a amplitude em uma área circular de 40 ha no entorno de cada célula de 30 m. A amplitude altitudinal considerada no estudo corresponde ao componente não correlacionado com o componente de <em>landforms</em>. Para áreas extremamente planas, nas quais a variedade de <em>landforms</em> e a amplitude altitudinal não permitem discriminar de forma correta células equivalentes, foram avaliadas a densidade de áreas úmidas/banhados (<em>wetlands</em>) e a diversidade de solos. A densidade de banhados é incluída como um indicador em escala mais fina de características microtopográficas não capturadas nas classes do modelo de <em>landforms</em>. O índice de densidade de banhados é obtido pelo cálculo do percentual de banhados dentro de buffers de 40 ha e 400 ha em cada célula de 30 m. O cálculo do valor de banhados envolve ainda a avaliação de manchas irregulares de áreas úmidas (<em>wetland patchiness</em>) na paisagem, que leva em conta a distribuição irregular de áreas úmidas de tamanho reduzido. Por fim, em áreas muito planas de regiões costeiras, <strong>foi incluído ainda um componente adicional de diversidade de solos</strong>, que gera uma informação em escala mais fina para identificar variações em áreas planas de alta diversidade nas características do solo.</p>
+<p>A combinação dos índices de variedade de <strong>landforms</strong>, amplitude altitudinal, valor de banhado e diversidade de solos descritos acima gera o <strong>índice de diversidade da paisagem</strong>. Esse índice pondera a variedade de <em>landforms</em> com peso maior, sendo ela o dobro do peso das demais variáveis:</p>
+<p><!-- ${diversidade\_da\_paisagem} = 2\times{variedade\_de\_landforms} + \\
+{amplitude\_altitudinal} + \\
+{wetland\_density} + \\
+{soil\_diversity}.$ --></p>
+</section>
+<section id="conectividade-local" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="conectividade-local"><span class="header-section-number">5.2.3</span> Conectividade local</h3>
+<p>A conectividade local permite estimar o grau de permeabilidade (ou reciprocamente o grau de resistência) em torno de cada célula avaliada. O algoritmo utilizado mede a conectividade de uma célula focal com o seu vizinho ecológico quando a célula é vista como uma fonte de movimento radiando em todas as direções. O pressuposto é de que a permeabilidade de duas células adjacentes aumenta quando a sua similaridade ecológica aumenta.</p>
+<p>A partir de um mapa de uso e cobertura do solo, incluindo a presença de estradas, é realizada uma simplificação dos tipos de uso em componentes principais da paisagem e determinado pesos de resistência para cada categoria, nos quais áreas naturais apresentam o valor mínimo, e áreas com intervenção antrópica intensa, o valor máximo.</p>
+<p>As categorias principais de componentes da paisagem foram definidas como: + áreas naturais (florestas, banhados, campos), + áreas agrícolas ou modificadas (incluindo áreas improdutivas não-naturais) + áreas urbanizadas (de baixa ou alta intensidade).</p>
+<p>A conectividade local é medida através da análise de resistência de cada célula. Nesse contexto, a dispersão teórica de uma espécie (ou processo) a partir de uma célula focal é uma função dos valores de resistência das células vizinhas e suas distâncias com relação à célula focal, até uma distância máxima de 3 km. A nota de conectividade local para uma célula é igual à área de dispersão, levando em conta a resistência dividida pela área de dispersão teórica se não houvesse resistência.</p>
+</section>
+<section id="combinando-diversidade-da-paisagem-e-conectividade-local-resiliência" class="level3" data-number="5.2.4">
+<h3 data-number="5.2.4" class="anchored" data-anchor-id="combinando-diversidade-da-paisagem-e-conectividade-local-resiliência"><span class="header-section-number">5.2.4</span> Combinando diversidade da paisagem e conectividade local: resiliência</h3>
+<p>O valor de resiliência de um sítio é determinado pela combinação da diversidade da paisagem e da conectividade local</p>
+<p>(valor de resiliência = (diversidade da paisagem + conectividade local)/2),</p>
+<p>utilizando dados padronizados (<em>z-scores</em>).</p>
+<p>O resultado final é um mapa com grid de 30 m, constando os valores estimados de resiliência para cada local.</p>
+<p>O mapeamento final dos sítios resilientes é feito por <a href="#configurações-geofísicas"><strong>configurações geofísicas</strong></a> (item acima) dentro de ecoregiões. Isso garante a inclusão de condições físicas e ambientais distintas e permite capturar variações na composição da biota associada. Nesse sentido, <strong>a resiliência é comparada dentro de cada configuração e não entre configurações geofísicas</strong>.</p>
+<p>O mapa final de resiliência indica locais com maior ou menor resiliência comparados ao valor médio da região avaliada. São considerados valores médios aqueles com -0,5 a 0,5 desvios padrão ao redor da média.</p>
+<p>Os sítios com valores mais elevados de resiliência estão associados a locais com maiores níveis de biodiversidade <span class="citation" data-cites="anderson_estimating_2014">(<a href="references.html#ref-anderson_estimating_2014" role="doc-biblioref">M. G. Anderson, Clark, and Sheldon 2014</a>)</span>. A metodologia descrita indica, para cada configuração geofísica, sítios que são mais prováveis de reter espécies e funções por um maior período sob mudanças no clima, possibilitando a identificação de refúgios naturais para conservação no futuro <span class="citation" data-cites="anderson_estimating_2014">(<a href="references.html#ref-anderson_estimating_2014" role="doc-biblioref">M. G. Anderson, Clark, and Sheldon 2014</a>)</span></p>
+<p><!-- As atividades previstas para o projeto serão divididas em duas etapas: a primeira se refere à aplicação da metodologia de mapeamento descrita acima; e a segunda corresponde ao refinamento e adaptação dela para a realidade dos diversos biomas brasileiros, que será feita a partir de discussões com especialistas. A partir da metodologia proposta, serão realizadas reuniões internas com a equipe e workshops com especialistas nas temáticas do projeto e com experiência em diversos biomas do Brasil para discussão da metodologia e sugestão de refinamento para a sua melhoria. Esses workshops terão como objetivo refinar a metodologia de forma que ela seja mais adequada às características dos ecossistemas e particularidades da região. Com base nas discussões com o grupo de especialistas, se espera incorporar possíveis novos elementos (variáveis) e validar a metodologia para o Brasil. O processo consistirá, portanto, da aplicação da abordagem desenvolvida, análise dos métodos, avaliação, complementação e validação dos resultados, e geração de mapas de áreas resilientes e conectadas em biomas brasileiros. --></p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
@@ -229,17 +255,11 @@ Anderson, Mark G., Melissa Clark, Arlene P. Olivero, Analie R. Barnett, Kimberly
 <div id="ref-anderson_estimating_2014" class="csl-entry" role="doc-biblioentry">
 Anderson, Mark G., Melissa Clark, and Arlene Olivero Sheldon. 2014. <span>“Estimating <span>Climate Resilience</span> for <span>Conservation</span> Across <span>Geophysical Settings</span>.”</span> <em>Conservation Biology</em> 28 (4): 959–70. <a href="https://doi.org/10.1111/cobi.12272">https://doi.org/10.1111/cobi.12272</a>.
 </div>
-<div id="ref-gorelick_google_2017" class="csl-entry" role="doc-biblioentry">
-Gorelick, Noel, Matt Hancher, Mike Dixon, Simon Ilyushchenko, David Thau, and Rebecca Moore. 2017. <span>“Google <span>Earth Engine</span>: <span class="nocase">Planetary-scale</span> Geospatial Analysis for Everyone.”</span> <em>Remote Sensing of Environment</em>. <a href="https://doi.org/10.1016/j.rse.2017.06.031">https://doi.org/10.1016/j.rse.2017.06.031</a>.
+<div id="ref-anderson_resilient_2016" class="csl-entry" role="doc-biblioentry">
+———. 2016. <span>“Resilient <span>Sites</span> for <span>Terrestrial Conservation</span> in <span>Eastern North America</span>.”</span> <em>Conservation Biology</em> 28 (4): 959–70. <a href="https://doi.org/10.1111/cobi.12272">https://doi.org/10.1111/cobi.12272</a>.
 </div>
-<div id="ref-hall_circuitscape_2021" class="csl-entry" role="doc-biblioentry">
-Hall, Kimberly R., Ranjan Anantharaman, Vincent A. Landau, Melissa Clark, Brett G. Dickson, Aaron Jones, Jim Platt, Alan Edelman, and Viral B. Shah. 2021. <span>“Circuitscape in <span>Julia</span>: <span>Empowering Dynamic Approaches</span> to <span>Connectivity Assessment</span>.”</span> <em>Land</em> 10 (3): 301. <a href="https://doi.org/10.3390/land10030301">https://doi.org/10.3390/land10030301</a>.
-</div>
-<div id="ref-landau_omniscapejl_2021" class="csl-entry" role="doc-biblioentry">
-Landau, Vincent, Viral Shah, Ranjan Anantharaman, and Kimberly Hall. 2021. <span>“Omniscape.jl: <span>Software</span> to Compute Omnidirectional Landscape Connectivity.”</span> <em>Journal of Open Source Software</em> 6 (57): 2829. <a href="https://doi.org/10.21105/joss.02829">https://doi.org/10.21105/joss.02829</a>.
-</div>
-<div id="ref-mcrae_isolation_2006" class="csl-entry" role="doc-biblioentry">
-McRae, Brad H. 2006. <span>“Isolation by Resistance.”</span> <em>Evolution</em> 60 (8): 1551–61.
+<div id="ref-anderson_resilient_2016-1" class="csl-entry" role="doc-biblioentry">
+Anderson, Mark, Analie Barnett, Melissa Clark, Jeremy Prince, Sheldon A Olivero, and B Vickery. 2016. <span>“Resilient and <span>Connected Landscapes</span> for <span>Terrestrial Conservation</span>.”</span>
 </div>
 </div>
 </section>
@@ -382,12 +402,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./intro.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introdução</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./resultados.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Resultados</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./implementacao.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Implementação</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

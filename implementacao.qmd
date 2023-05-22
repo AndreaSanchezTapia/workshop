@@ -1,0 +1,44 @@
+# Implementação
+
+O cálculo de diversidade da paisagem foi realizado em Google Earth Engine [@gorelick_google_2017]
+
+Faixa altitudinal
+
+Residuos da regressão da diversidade da paisagem em função do clima. 
+
+
+## Conectividade local 
+
+### Cálculos de resistência
+
+Os valores de resistência das classes de cobertura foram estimados para cada bioma, atribuindo baixas resistências a coberturas naturais, resistências intermediárias a coberturas semi-naturais ou levemente modificadas, e resistências máximas a coberturas relacionadas com cidades, estradas, cultivos perenes de alta intensidade (Tabela x).
+
+
+### Conectividade local
+
+
+ <!-- O método de _kernel_ resistente (_resistant kernel analysis_) [@compton_resistantkernel_2007] --> 
+Um filtro de _kernel_ de 23 x 23 píxeis (~2070m) foi aplicado ao raster de resistências. 
+
+
+### Conectividade baseada em teoria de circuitos
+
+Omniscape implementa a medida de resistência baseada em teoria de circuitos [@mcrae_isolation_2006]. 
+A diferença de abordagens de mínimo custo, a conectividade baseada em teoria de circuitos (doravante CTC) consegue propor diferentes caminhos de menor resistência por onde a "corrente" (o fluxo entre áreas) pode passar, e detecta áreas onde esta corrente se veria __concentrada__ pela configuração espacial (por exemplo, através de uma barra ou um estreito), e áreas onde o fluxo seria __difuso__ (por exemplo, em áreas contíguas de baixa resistência, onde o fluxo pode acontecer em qualquer direção e com menor intensidade).
+
+Uma dificuldade desta abordagem é que as áreas com alta resistência, onde o fluxo seria impedido, devem ser diferenciadas das áreas de baixa resistência onde o fluxo é baixo por ter se dispersado. 
+
+O cálculo da conectividade baseada em teoria de circuitos foi realizado utilizando a implementação de Omniscape para Julia [@hall_circuitscape_2021, @landau_omniscapejl_2021]. 
+Foram utilisados: 
+
++ o raster de conectividade sem filtro de _kernel_ 
++ um tamanho da área de interesse de 100 píxeis (~9km)
++ agrupamentos de 5 píxeis de interesse para a janela móvel (~450m).
+
+
+O output de Omniscape são três arquivos de conectividade relacionados: 
+
++ `flow_current` é o fluxo que aconteceria sem levar em conta a camada de resistência. Ele leva em conta a configuração espacial da paisagem (estreitos, barras) e dos píxeis de baixa resistência de origem. Nem todo pixel é source pixel, mas a corrente que entra em cada pixel de baixa resistência entra sem resistência. Flow current é usado como um "modelo nulo" de conectividade. 
++ `cumulative_current` é a corrente levando em conta a configuração espacial e os valores de resistência
++ `normalized_current` equivale a $\frac{cumulative\_current}{flow\_current}$
+e controla o efeito da configuração espacial do cálculo de conectividade.

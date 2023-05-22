@@ -1,0 +1,11 @@
+# Justificativa
+
+
+As mudanças no clima modificam ambientes naturais e pressionam espécies para se adaptar ou alterar a sua distribuição no espaço.
+Estratégias de conservação de espécies e ecossistemas devem considerar o efeito das mudanças climáticas, bem como pressões antrópicas diretas na biodiversidade [@jones_incorporating_2016]. 
+Entretanto, para conservar espécies em um clima em mudança é preciso considerar como as espécies poderão utilizar os hábitats no futuro, levando em consideração como as mudanças climáticas em andamento vão afetar esses locais e essas espécies ao longo do tempo [@carrasco_global_2021].
+Identificar locais que podem ser mais adequados para resguardar um conjunto de espécies em um futuro de mudanças é imprescindível para o planejamento de ações de conservação e restauração [@jones_incorporating_2016; @carrasco_global_2021].
+Nesse contexto, existem diversas técnicas de priorização espacial que buscam identificar locais adequados para a conservação de espécies e ecossistemas [@anderson_conserving_2010; @jones_incorporating_2016].
+Uma delas, desenvolvida e aplicada para a América do Norte [@anderson_estimating_2014; @anderson_resilient_2016; @anderson_resilient_2016-1], prevê a identificação de áreas-chave para conservação, baseadas nas características do terreno que aumentam a diversidade microclimática, propiciando maior diversidade de habitats para espécies, e que aumentam a conectividade entre esses locais, possibilitando a dispersão das espécies.
+Essa metodologia, ainda não aplicada para regiões tropicais, tem um potencial alto de aplicação para o planejamento de conservação. 
+Ela identifica áreas com maior resiliência e conectadas entre si, indicando locais que seriam mais resilientes às futuras mudanças no clima e teriam maior potencial de sustentar animais e plantas em um clima sob mudanças.

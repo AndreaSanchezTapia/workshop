@@ -1,55 +1,101 @@
 # Métodos
 
-A metodologia do projeto está baseada em
-@anderson_estimating_2014 e @anderson_resilient_2023
+A metodologia proposta para identificar sítios resilientes [@anderson_estimating_2014; @anderson_resilient_2016; @anderson_resilient_2016-1; e @anderson_resilient_2023] envolve o mapeamento das configurações geofísicas, a análise da diversidade da paisagem e da conectividade local, para, por fim, gerar o mapa de áreas resilientes. 
+Cada uma dessas etapas é descrita a seguir.
+
+ 
+## Configurações geofísicas
+
+A primeira etapa consiste em caracterizar e classificar a região de estudo em __configurações geofísicas__ baseadas em suas propriedades físicas, tais como geologia, solo e altitude, que correspondem às diferenças na fauna e flora associadas.
+No estudo desenvolvido nos EUA, o mapeamento foi feito por ecoregiões, uma vez que esses locais apresentam condições ambientais similares, especialmente relacionado a _landforms_, geologia e solos, e que compartilham conjuntos de comunidades naturais e espécies.
+As configurações geofísicas são definidas como a combinação de uma zona altitudinal e da classe geológica (rocha ou substrato superficial). 
+As zonas altitudinais e as classes geológicas foram desenvolvidas para corresponder com mudanças perceptíveis em comunidades e espécies. 
+
+Conjuntos de dados necessários para essa análise incluem: geologia das rochas (_bedrock geology_), solo, altitude (obtido de um modelo digital de elevação  – _digital elevation model_ ou DEM com resolução de 30 m) e _landforms_ (derivado do DEM).
+Esses dados são integrados para identificar um número de tipos de configurações geofísicas com características específicas.
+
+## Resiliência
+
+A segunda etapa consiste nas estimativas de resiliência dos sítios.
+Para estimar a resiliência de um sítio, é necessário estimar a [__diversidade da paisagem__](#diversidade-da-paisagem) e a [__conectividade local__](#conectividade-local) para cada célula de 30 m.
+O resultado dessas análises é combinado para então estimar o valor de resiliência para cada local.
 
 
-## Diversidade da paisagem 
+### Diversidade da paisagem 
 
-+ TPI
-+ Classes de declividade
-+ Tipos de solo 
-+ 
-O cálculo de diversidade da paisagem foi realizado em Google Earth Engine [@gorelick_google_2017]
+A diversidade da paisagem está relacionada à variedade de microclimas em um determinado local.
+A análise de diversidade da paisagem resume informações relacionadas a:
+(a) variedade de landforms, (b) amplitude altitudinal, (c) densidade de banhados ou áreas úmidas (_wetlands_) e (d) propriedades do solo em um determinado local. 
+A variedade de _landforms_ diz respeito à variedade de componentes naturais do terreno criados pela topografia.
+Sua avaliação é baseada em um modelo de landforms (derivado de um DEM com resolução de 30 m), que classifica a superfície em diversas categorias de _landforms_, como por exemplo:
 
-Faixa altitudinal
++ precipícios e áreas íngremes -_cliff and steep slope_
++ topos de montanha e divisores de águas (_summit and ridge-top_)
++ vertentes norte e sul, que determinam se uma vertente é cálida ou fria, especialmente em latitudes maiores, (_north/south-facing side slope_)
++ colinas baixas (_low hill_)
++ áreas planas de terras baixas (_dry flat_), entre outros.
 
-Residuos da regressão da diversidade da paisagem em função do clima. 
+A classificação de _landforms_ leva em conta a combinação de informações sobre __inclinação, orientação, posição no terreno e acumulação de umidade__ (_slope_, _aspect_, _land position_, _moisture accumulation_), que corresponde a ambientes topográficos locais com combinações distintas de umidade, radiação e deposição.
 
+A __diversidade da paisagem__ é calculada pelo número de _landforms_ dentro de uma área circular de 40 ha no entorno de cada célula de 30 m.
 
-## Conectividade local 
+ <!-- checar isto! --> 
 
-### Cálculos de resistência
+### Amplitude altitudinal
 
-Os valores de resistência das classes de cobertura foram estimados para cada bioma, atribuindo baixas resistências a coberturas naturais, resistências intermediárias a coberturas semi-naturais ou levemente modificadas, e resistências máximas a coberturas relacionadas com cidades, estradas, cultivos perenes de alta intensidade (Tabela x).
+A amplitude altitudinal é determinada a partir do DEM, tabulando a amplitude em uma área circular de 40 ha no entorno de cada célula de 30 m.
+A amplitude altitudinal considerada no estudo corresponde ao componente não correlacionado com o componente de _landforms_.
+Para áreas extremamente planas, nas quais a variedade de _landforms_ e a amplitude altitudinal não permitem discriminar de forma correta células equivalentes, foram avaliadas a densidade de áreas úmidas/banhados (_wetlands_) e a diversidade de solos. 
+A densidade de banhados é incluída como um indicador em escala mais fina de características microtopográficas não capturadas nas classes do modelo de _landforms_.
+O índice de densidade de banhados é obtido pelo cálculo do percentual de banhados dentro de buffers de 40 ha e 400 ha em cada célula de 30 m.
+O cálculo do valor de banhados envolve ainda a avaliação de manchas irregulares de áreas úmidas (_wetland patchiness_) na paisagem, que leva em conta a distribuição irregular de áreas úmidas de tamanho reduzido.
+Por fim, em áreas muito planas de regiões costeiras, __foi incluído ainda um componente adicional de diversidade de solos__, que gera uma informação em escala mais fina para identificar variações em áreas planas de alta diversidade nas características do solo.
+
+A combinação dos índices de variedade de __landforms__, amplitude altitudinal, valor de banhado e diversidade de solos descritos acima gera o __índice de diversidade da paisagem__.
+Esse índice pondera a variedade de _landforms_ com peso maior, sendo ela o dobro do peso das demais variáveis: 
+
+ <!-- ${diversidade\_da\_paisagem} = 2\times{variedade\_de\_landforms} + \\
+{amplitude\_altitudinal} + \\
+{wetland\_density} + \\
+{soil\_diversity}.$ --> 
 
 
 ### Conectividade local
 
+A conectividade local permite estimar o grau de permeabilidade (ou reciprocamente o grau de resistência) em torno de cada célula avaliada.
+O algoritmo utilizado mede a conectividade de uma célula focal com o seu vizinho ecológico quando a célula é vista como uma fonte de movimento radiando em todas as direções.
+O pressuposto é de que a permeabilidade de duas células adjacentes aumenta quando a sua similaridade ecológica aumenta.
 
- <!-- O método de _kernel_ resistente (_resistant kernel analysis_) [@compton_resistantkernel_2007] --> 
-Um filtro de _kernel_ de 23 x 23 píxeis (~2070m) foi aplicado ao raster de resistências. 
+A partir de um mapa de uso e cobertura do solo, incluindo a presença de estradas, é realizada uma simplificação dos tipos de uso em componentes principais da paisagem e determinado pesos de resistência para cada categoria, nos quais áreas naturais apresentam o valor mínimo, e áreas com intervenção antrópica intensa, o valor máximo. 
 
+As categorias principais de componentes da paisagem foram definidas como: 
++ áreas naturais (florestas, banhados, campos), 
++ áreas agrícolas ou modificadas (incluindo áreas improdutivas não-naturais)
++ áreas urbanizadas (de baixa ou alta intensidade).
 
-### Conectividade baseada em teoria de circuitos
+A conectividade local é medida através da análise de resistência de cada célula.
+Nesse contexto, a dispersão teórica de uma espécie (ou processo) a partir de uma célula focal é uma função dos valores de resistência das células vizinhas e suas distâncias com relação à célula focal, até uma distância máxima de 3 km.
+A nota de conectividade local para uma célula é igual à área de dispersão, levando em conta a resistência dividida pela área de dispersão teórica se não houvesse resistência.
 
-Omniscape implementa a medida de resistência baseada em teoria de circuitos [@mcrae_isolation_2006]. 
-A diferença de abordagens de mínimo custo, a conectividade baseada em teoria de circuitos (doravante CTC) consegue propor diferentes caminhos de menor resistência por onde a "corrente" (o fluxo entre áreas) pode passar, e detecta áreas onde esta corrente se veria __concentrada__ pela configuração espacial (por exemplo, através de uma barra ou um estreito), e áreas onde o fluxo seria __difuso__ (por exemplo, em áreas contíguas de baixa resistência, onde o fluxo pode acontecer em qualquer direção e com menor intensidade).
+### Combinando diversidade da paisagem e conectividade local: resiliência
 
-Uma dificuldade desta abordagem é que as áreas com alta resistência, onde o fluxo seria impedido, devem ser diferenciadas das áreas de baixa resistência onde o fluxo é baixo por ter se dispersado. 
+O valor de resiliência de um sítio é determinado pela combinação da diversidade da paisagem e da conectividade local
 
-O cálculo da conectividade baseada em teoria de circuitos foi realizado utilizando a implementação de Omniscape para Julia [@hall_circuitscape_2021, @landau_omniscapejl_2021]. 
-Foram utilisados: 
+(valor de resiliência = (diversidade da paisagem + conectividade local)/2),
 
-+ o raster de conectividade sem filtro de _kernel_ 
-+ um tamanho da área de interesse de 100 píxeis (~9km)
-+ agrupamentos de 5 píxeis de interesse para a janela móvel (~450m).
+utilizando dados padronizados (_z-scores_).
 
+O resultado final é um mapa com grid de 30 m, constando os valores estimados de resiliência para cada local.
 
-O output de Omniscape são três arquivos de conectividade relacionados: 
+O mapeamento final dos sítios resilientes é feito por [__configurações geofísicas__](#configurações-geofísicas) (item acima) dentro de ecoregiões.
+Isso garante a inclusão de condições físicas e ambientais distintas e permite capturar variações na composição da biota associada.
+Nesse sentido, __a resiliência é comparada dentro de cada configuração e não entre configurações geofísicas__.
 
-+ `flow_current` é o fluxo que aconteceria sem levar em conta a camada de resistência. Ele leva em conta a configuração espacial da paisagem (estreitos, barras) e dos píxeis de baixa resistência de origem. Nem todo pixel é source pixel, mas a corrente que entra em cada pixel de baixa resistência entra sem resistência. Flow current é usado como um "modelo nulo" de conectividade. 
-+ `cumulative_current` é a corrente levando em conta a configuração espacial e os valores de resistência
-+ `normalized_current` equivale a $\frac{cumulative\_current}{flow\_current}$
-e controla o efeito da configuração espacial do cálculo de conectividade.
+O mapa final de resiliência indica locais com maior ou menor resiliência comparados ao valor médio da região avaliada.
+São considerados valores médios aqueles com -0,5 a 0,5 desvios padrão ao redor da média.
+
+Os sítios com valores mais elevados de resiliência estão associados a locais com maiores níveis de biodiversidade [@anderson_estimating_2014]. 
+A metodologia descrita indica, para cada configuração geofísica, sítios que são mais prováveis de reter espécies e funções por um maior período sob mudanças no clima, possibilitando a identificação de refúgios naturais para conservação no futuro [@anderson_estimating_2014]
+
+ <!-- As atividades previstas para o projeto serão divididas em duas etapas: a primeira se refere à aplicação da metodologia de mapeamento descrita acima; e a segunda corresponde ao refinamento e adaptação dela para a realidade dos diversos biomas brasileiros, que será feita a partir de discussões com especialistas. A partir da metodologia proposta, serão realizadas reuniões internas com a equipe e workshops com especialistas nas temáticas do projeto e com experiência em diversos biomas do Brasil para discussão da metodologia e sugestão de refinamento para a sua melhoria. Esses workshops terão como objetivo refinar a metodologia de forma que ela seja mais adequada às características dos ecossistemas e particularidades da região. Com base nas discussões com o grupo de especialistas, se espera incorporar possíveis novos elementos (variáveis) e validar a metodologia para o Brasil. O processo consistirá, portanto, da aplicação da abordagem desenvolvida, análise dos métodos, avaliação, complementação e validação dos resultados, e geração de mapas de áreas resilientes e conectadas em biomas brasileiros. --> 
 
