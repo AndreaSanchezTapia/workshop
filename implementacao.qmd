@@ -16,8 +16,7 @@ Os valores de resistência das classes de cobertura foram estimados para cada bi
 
 ### Conectividade local
 
-
- <!-- O método de _kernel_ resistente (_resistant kernel analysis_) [@compton_resistantkernel_2007] --> 
+ 
 Um filtro de _kernel_ de 23 x 23 píxeis (~2070m) foi aplicado ao raster de resistências. 
 
 
