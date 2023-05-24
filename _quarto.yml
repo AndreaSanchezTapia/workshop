@@ -18,6 +18,7 @@ book:
     - references.qmd
 
 bibliography: bibliografia.bib
+csl: citation_style.csl
 
 format:
   html:
