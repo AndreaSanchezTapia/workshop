@@ -27,7 +27,7 @@ A diferença de abordagens de mínimo custo, a conectividade baseada em teoria d
 
 Uma dificuldade desta abordagem é que as áreas com alta resistência, onde o fluxo seria impedido, devem ser diferenciadas das áreas de baixa resistência onde o fluxo é baixo por ter se dispersado. 
 
-O cálculo da conectividade baseada em teoria de circuitos foi realizado utilizando a implementação de Omniscape para Julia [@hall_circuitscape_2021, @landau_omniscapejl_2021]. 
+O cálculo da conectividade baseada em teoria de circuitos foi realizado utilizando a implementação de Omniscape para Julia [@hall_circuitscape_2021; @landau_omniscapejl_2021]. 
 Foram utilisados: 
 
 + o raster de conectividade sem filtro de _kernel_ 
