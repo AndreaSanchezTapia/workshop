@@ -17,7 +17,7 @@ book:
     - resultados.qmd
     - references.qmd
 
-bibliography: 1_UFABC-TNC.bib
+bibliography: bibliografia.bib
 
 format:
   html:
