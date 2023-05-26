@@ -4,13 +4,55 @@
 
 <!-- Alisson: este nome pode mudar -->
 
-## Resiliência
+## Resiliência da Paisagem
+A Resiliência da Paisagem foi calculada como a média entre os valores padronizados de [__diversidade da paisagem__](#diversidade-da-paisagem) e [__diversidade da paisagem__](#conectividade-local-1). Todas as imagens estavam na escala de 90 metros e reprojetadas para o DATUM WGS84
 
 ### Diversidade da paisagem
 
-O cálculo de diversidade da paisagem foi realizado em Google Earth Engine [@gorelick_google_2017]
+O cálculo de diversidade da paisagem foi realizado no Google Earth Engine [@gorelick_google_2017] e é composto por médias feitas pixel a pixel entre os maiores valores padronizados (_Z-scores_) das imagens: [__diversidade de formas de relevo__](#formas-de-relevo), [__amplitude altitudinal__](#amplitude-altitudinal), [__densidade de banhados__](#densidade-de-banhados) e [__diversidade de Solo__](#diversidade-de-solo). 
+Utilizamos o Google Earth Engine por ser uma plataforma baseada em nuvem  que oferece acesso remoto a uma vasta coleção de imagens de satélite e bases de dados geoespaciais de acesso livre e com capacidade computacional para realizar as análises em qualquer equipamento disponivel (citação). Isso possibilita com que nossas análises sejam de livre acesso e que contribua para uma ciência mais transparente e livre (citação).
 
-### Amplitude altitudinal
+#### Formas de Relevo
+<!--1- Calculate relief slopes, aspects and Topographic Position Index (TPI) from a Digital Elevation Model.-->
+
+<!--2- Calculate a moisture index from a flow accumulation raster and slopes.-->
+
+<!--3- Transform slopes, aspect, TPI and moisture index into classes-->
+
+<!--4- Combine slopes, aspect, TPI and moisture classes into a code string-->
+
+<!--5- Re-classify landform string into landform types-->
+
+<!--6- Count the number of distinct landforms within a focal cell kernel (landform variety)-->
+
+<!--7- Calculate the Z-scores for global and whithin geophysical -->
+#### Amplitude Altitudinal
+<!--1- Calculate elevation range within a neighborhood-->
+
+<!--2- Run a regression between elevation range and elevation-->
+
+<!--3- Calculate regression residuals-->
+
+<!--4- Calculate the Z-scores for global and whithin geophysical -->
+#### Densidade de Banhados
+<!--1- Import wetland raster; -->
+Para calcular a densidade de banhados usados os dados disponibilizados na base de dados _Global Wetlands Database_ (citação), que é uma base de dados que fornece informação e inventário de áreas de zonas úmidas no mundo. Os dados são obtidos através de imagens de satélite, amostragens aéreas e relatórios publicados. Como áreas de banhados ocorrem em diversas configurações e distribuição no espaço, calculamos a densidade em escala local, escala regional e a  
+<!--2- filter rivers and lake out; -->
+
+<!--3- Count the number of wetlands within a circular kernel with 1170 meters radius; -->
+
+<!--4- Divide the number of wetlands by the number of cells within the kernel.-->
+
+#### Diversidade de Solo
+<!--1- Import soil data-->
+
+<!--2- Filter soil codes-->
+
+<!--3- Calculate a raster of soil type presence within a neighborhood-->
+
+<!--4- Sum the soil presence rasters to create a raster of soil diversity within the neighborhood-->
+
+<!--5- Calculate the Z-scores for global and whithin geophysical -->
 
 ### Conectividade local
 
