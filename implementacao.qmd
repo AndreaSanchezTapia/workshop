@@ -19,7 +19,10 @@ Residuos da regressão da diversidade da paisagem em função do clima.
 
 #### Cálculos de resistência
 
-Os valores de resistência das classes de cobertura foram estimados para cada bioma, atribuindo baixas resistências a coberturas naturais, resistências intermediárias a coberturas semi-naturais ou levemente modificadas, e resistências máximas a coberturas relacionadas com cidades, estradas, cultivos perenes de alta intensidade (Tabela x).
+Os valores de resitência são medidas relativas do grau de dificuldade de deslocamento dos organismos nos diferentes tipos de cobertura do solo. Essas medidas foram atribuídos por bioma, seguindo a premissa é que quanto maior for a diferença estrutural entre um dado tipo de cobertura do solo e a vegetação original do bioma, maior será o valor de resistência da classe de cobertura do solo em questão.
+
+Os dados espaciais primários utilizados para calcular a superfície de resistência até o momento foram a camada de cobertura do solo fornecida pelo MapBiomas (coleção 7, ano 2021) e a base de estradas fornecida pelo IBGE (BCIM250, ano 2021). Para tanto, preliminarmente, a superfície de cobertura do solo do MapBiomas foi reamostrada para geral pixels com 90 metros de tamanho, aproximadamente. Também foi necessário converter o arquivo vetorial de estradas para o formato matricial, com pixels de tamanho aproximado de 90 metros.  
+<!-- Falta completar -->
 
 
 #### Filtro de kernel como _proxy_ da conectividade local
