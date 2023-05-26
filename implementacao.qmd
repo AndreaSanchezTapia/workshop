@@ -1,39 +1,44 @@
 # Implementação
 
+## Configurações geofísicas 
+
+<!-- Alisson: este nome pode mudar -->
+
+## Resiliência
+
+### Diversidade da paisagem
+
 O cálculo de diversidade da paisagem foi realizado em Google Earth Engine [@gorelick_google_2017]
 
-Faixa altitudinal
+### Amplitude altitudinal
+
+### Conectividade local
 
 Residuos da regressão da diversidade da paisagem em função do clima. 
 
 
-## Conectividade local 
-
-### Cálculos de resistência
+#### Cálculos de resistência
 
 Os valores de resistência das classes de cobertura foram estimados para cada bioma, atribuindo baixas resistências a coberturas naturais, resistências intermediárias a coberturas semi-naturais ou levemente modificadas, e resistências máximas a coberturas relacionadas com cidades, estradas, cultivos perenes de alta intensidade (Tabela x).
 
 
-### Conectividade local
+#### Filtro de kernel como _proxy_ da conectividade local
 
- 
 Um filtro de _kernel_ de 23 x 23 píxeis (~2070m) foi aplicado ao raster de resistências. 
 
 
-### Conectividade baseada em teoria de circuitos
+### Combinando diversidade da paisagem e conectividade local: resiliência
 
-Omniscape implementa a medida de resistência baseada em teoria de circuitos [@mcrae_isolation_2006]. 
-A diferença de abordagens de mínimo custo, a conectividade baseada em teoria de circuitos (doravante CTC) consegue propor diferentes caminhos de menor resistência por onde a "corrente" (o fluxo entre áreas) pode passar, e detecta áreas onde esta corrente se veria __concentrada__ pela configuração espacial (por exemplo, através de uma barra ou um estreito), e áreas onde o fluxo seria __difuso__ (por exemplo, em áreas contíguas de baixa resistência, onde o fluxo pode acontecer em qualquer direção e com menor intensidade).
+## Conectividade regional
 
-Uma dificuldade desta abordagem é que as áreas com alta resistência, onde o fluxo seria impedido, devem ser diferenciadas das áreas de baixa resistência onde o fluxo é baixo por ter se dispersado. 
+O cálculo da conectividade regional, baseada em teoria de circuitos [@mcrae_isolation_2006] foi realizado utilizando a implementação de Omniscape para Julia [@hall_circuitscape_2021; @landau_omniscapejl_2021]. 
 
-O cálculo da conectividade baseada em teoria de circuitos foi realizado utilizando a implementação de Omniscape para Julia [@hall_circuitscape_2021; @landau_omniscapejl_2021]. 
+
 Foram utilisados: 
 
-+ o raster de conectividade sem filtro de _kernel_ 
-+ um tamanho da área de interesse de 100 píxeis (~9km)
-+ agrupamentos de 5 píxeis de interesse para a janela móvel (~450m).
-
++ o raster de resistência, com filtro de _kernel_ utilizado como base para a conectividade local, subamostrado para uma resolução de 900m por pixel,
++ um raio da área de interesse de 100 píxeis (~90km)
++ agrupamentos de 5 píxeis de interesse para a janela móvel (~4.5km).
 
 O output de Omniscape são três arquivos de conectividade relacionados: 
 
@@ -41,3 +46,11 @@ O output de Omniscape são três arquivos de conectividade relacionados:
 + `cumulative_current` é a corrente levando em conta a configuração espacial e os valores de resistência
 + `normalized_current` equivale a $\frac{cumulative\_current}{flow\_current}$
 e controla o efeito da configuração espacial do cálculo de conectividade.
+
+Os resultados da análise nesta escala espacial foram reclassificados de acordo com a distribuição ao redor da média dos valores nas categorias seguintes:
+
++ Entre o valor mínimo e média - 0,5 desvio padrão: fluxo impedido. O fluxo não consegue circular devido à presença de áreas de alta resistência, podendo se redirecionar em torno a essas áreas
++ Entre média - 0,5 desvio padrão e média + 1 desvio padrão: fluxo difuso. O fluxo consegue se dispersar em áreas contíguas de resistências baixas a moderadas, sem se ver impedido ou canalizado 
++ Entre média + 1 desvio padrão e média + 2 desvios padrão: fluxo intensificado. O fluxo potencial se concentra devido à configuração da paisagem ou de áreas de alta resistência que forçam um rumo determinado
++ Maior que a média + 2 desvios padrão: fluxo canalizado. Fluxo muito acima do esperado em uma área sem resistência. Ele passa por estreitos, barras de areia e estruturas similares. 
+

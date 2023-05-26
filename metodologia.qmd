@@ -69,6 +69,7 @@ O pressuposto é de que a permeabilidade de duas células adjacentes aumenta qua
 A partir de um mapa de uso e cobertura do solo, incluindo a presença de estradas, é realizada uma simplificação dos tipos de uso em componentes principais da paisagem e determinado pesos de resistência para cada categoria, nos quais áreas naturais apresentam o valor mínimo, e áreas com intervenção antrópica intensa, o valor máximo. 
 
 As categorias principais de componentes da paisagem foram definidas como: 
+
 + áreas naturais (florestas, banhados, campos), 
 + áreas agrícolas ou modificadas (incluindo áreas improdutivas não-naturais)
 + áreas urbanizadas (de baixa ou alta intensidade).
@@ -99,3 +100,11 @@ A metodologia descrita indica, para cada configuração geofísica, sítios que 
 
  <!-- As atividades previstas para o projeto serão divididas em duas etapas: a primeira se refere à aplicação da metodologia de mapeamento descrita acima; e a segunda corresponde ao refinamento e adaptação dela para a realidade dos diversos biomas brasileiros, que será feita a partir de discussões com especialistas. A partir da metodologia proposta, serão realizadas reuniões internas com a equipe e workshops com especialistas nas temáticas do projeto e com experiência em diversos biomas do Brasil para discussão da metodologia e sugestão de refinamento para a sua melhoria. Esses workshops terão como objetivo refinar a metodologia de forma que ela seja mais adequada às características dos ecossistemas e particularidades da região. Com base nas discussões com o grupo de especialistas, se espera incorporar possíveis novos elementos (variáveis) e validar a metodologia para o Brasil. O processo consistirá, portanto, da aplicação da abordagem desenvolvida, análise dos métodos, avaliação, complementação e validação dos resultados, e geração de mapas de áreas resilientes e conectadas em biomas brasileiros. --> 
 
+## Conectividade regional 
+
+A conectividade regional...
+
+A conectividade baseada em teoria de circuitos utiliza um marco conceitual originário da teoria de circuitos (elétricos) e consegue propor diferentes caminhos de menor resistência por onde a "corrente" (o fluxo entre áreas) pode passar. 
+Esta abordagem detecta áreas onde esta corrente se veria __concentrada__ pela configuração espacial da paisagem (por exemplo, através de uma barra ou um estreito) ou a presença de áreas de alta resistência, e áreas onde o fluxo seria __difuso__ (por exemplo, em áreas contíguas de baixa resistência, onde o fluxo pode acontecer em qualquer direção e com menor intensidade).
+
+Nesta abordagem, áreas com alta resistência--onde o fluxo seria impedido--devem ser diferenciadas das áreas de baixa resistência onde o fluxo é baixo por ter se dispersado. 
