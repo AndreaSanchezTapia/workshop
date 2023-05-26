@@ -8,7 +8,8 @@ Cada uma dessas etapas é descrita a seguir.
 
 A primeira etapa consiste em caracterizar e classificar a região de estudo em __configurações geofísicas__ baseadas em suas propriedades físicas, tais como geologia, solo e altitude, que correspondem às diferenças na fauna e flora associadas.
 No estudo desenvolvido nos EUA, o mapeamento foi feito por ecoregiões, uma vez que esses locais apresentam condições ambientais similares, especialmente relacionado a _landforms_, geologia e solos, e que compartilham conjuntos de comunidades naturais e espécies.
-As configurações geofísicas são definidas como a combinação de uma zona altitudinal e da classe geológica (rocha ou substrato superficial). 
+Neste trabalho geramos as configurações geofísicas utilizando geologia e ecorregiões.
+[As configurações geofísicas são definidas como a combinação de uma zona altitudinal e da classe geológica (rocha ou substrato superficial).]
 As zonas altitudinais e as classes geológicas foram desenvolvidas para corresponder com mudanças perceptíveis em comunidades e espécies. 
 
 Conjuntos de dados necessários para essa análise incluem: geologia das rochas (_bedrock geology_), solo, altitude (obtido de um modelo digital de elevação  – _digital elevation model_ ou DEM com resolução de 30 m) e _landforms_ (derivado do DEM).
