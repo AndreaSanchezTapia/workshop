@@ -12,6 +12,59 @@ Já as **Ecoregiões** são agrupamentos de regiões ecológicas similiares, con
 Tanto os domínios geológicos quanto as ecoregiões são polígonos que representam as diferentes categorias, que foram rasterizados para prosseguir com o cálculo das regiões eco-geológicas através da sequinte equação: 
 $$Regiões\ eco-geológicas = {(Ecoregiões)+(100\times Domínio \ Geológico)}$$ 
 Desta forma, os valores do raster final estão no formato **GGEE**, onde **GG** representam os domínios geológicos e **EE** as categorias de ecoregiões.
+<!--
+|Código|Ecoregião|
+|1|Alto Paraná Atlantic forests|
+|2|Amazon-Orinoco-Southern Caribbean mangroves|
+|3|Araucaria moist forests|
+|4|Atlantic Coast restingas|
+|5|Atlantic dry forests|
+|6|Bahia coastal forests|
+|7|Bahia interior forests|
+|8|Beni savanna|
+|9|Caatinga|
+|10|Caatinga Enclaves moist forests|
+|11|Campos Rupestres montane savanna|
+|12|Caqueta moist forests|
+|13|Cerrado|
+|14|Chiquitano dry forests|
+|15|Dry Chaco|
+|16|Espinal|
+|17|Fernando de Noronha-Atol das Rocas moist forests|
+|18|Guianan Highlands moist forests|
+|19|Guianan moist forests|
+|20|Guianan piedmont and lowland moist forests|
+|21|Guianan savanna|
+|22|Gurupa varzeá|
+|23|Humid Chaco|
+|24|Iquitos varzeá|
+|25|Japurá-Solimoes-Negro moist forests|
+|26|Juruá-Purus moist forests|
+|27|Madeira-Tapajós moist forests|
+|28|Marajó varzeá|
+|29|Maranhão Babaçu forests|
+|30|Mato Grosso seasonal forests|
+|31|Monte Alegre varzeá|
+|32|Negro-Branco moist forests|
+|33|Northeastern Brazil restingas|
+|34|Pantanal|
+|35|Pantepui|
+|36|Pernambuco coastal forests|
+|37|Pernambuco interior forests|
+|38|Purus varzeá|
+|39|Purus-Madeira moist forests|
+|40|Rio Negro campinarana|
+|41|Serra do Mar coastal forests|
+|42|Solimões-Japurá moist forests|
+|43|Southern Atlantic mangroves|
+|44|Southern Cone Mesopotamian savanna|
+|45|Southwest Amazon moist forests|
+|46|Tapajós-Xingu moist forests|
+|47|Tocantins/Pindare moist forests|
+|48|Uatuma-Trombetas moist forests|
+|49|Uruguayan savanna|
+|50|Xingu-Tocantins-Araguaia moist forests|
+-->
 
 ## Resiliência da Paisagem
 A Resiliência da Paisagem foi calculada como a média entre os valores padronizados (${Z}$) de [__Diversidade da Paisagem__](#diversidade-da-paisagem) e [__Conectividade Local__](#conectividade-local-1). Todas as imagens utilizadas para o calculo de Resiliência estão na escala de 90 metros e foram reprojetadas para o _DATUM WGS84_.
