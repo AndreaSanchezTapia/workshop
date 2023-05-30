@@ -22,7 +22,7 @@ O cálculo de diversidade da paisagem foi realizado no Google Earth Engine [@gor
 
 #### Formas de Relevo
 
-A classificação e distribuição espacial das formas de relevo são a base para o cálculo da **diversidade da paisagem** e representam áreas com maiores estabilidade microclimática que resistirão aos impactos causados pelas mudanças climáticas [@citação]. Essa classificação é baseada em combinações de informações sobre a **inclinação** (_slope_), **orientação** (_aspect_), **indice de posição topográfica** (_topographic position index_), **acumulação de fluxo** (_flow accumulation_) e a distribuição de **rios**, **lagos** e **áreas úmidas** dos ambientes. Essa combinação corresponde a ambientes topográficos locais com combinações distintas de umidade, radiação e deposição de sedimentos [@citação].
+A classificação e distribuição espacial das formas de relevo são a base para o cálculo da **diversidade da paisagem** e representam áreas com maiores estabilidade microclimática que resistirão aos impactos causados pelas mudanças climáticas [@citação]. Essa classificação é baseada em combinações de informações sobre a **inclinação** (_slope_), **orientação** (_aspect_), **indice de posição topográfica** (_topographic position index_), **indice de umidade** (_moisture index_) e a distribuição de **rios**, **lagos** e **áreas úmidas** dos ambientes. Essa combinação corresponde a ambientes topográficos locais com combinações distintas de umidade, radiação e deposição de sedimentos [@citação].
 
 Nossa metodologia de classificação de formas de relevo foi baseada em estudos prévios executados pela equipe de **Ciências da TNC Global**, publicada inicialmente em 2014 [@citação] e refinada em 2016 [@citação dos dois relatórios].
 
@@ -51,8 +51,13 @@ A **inclinação do relevo** é calculada como um gradiente local das 4 células
 |24º a 35º| 4 |
 |35º a 90º| 5 |
 
-##### Acúmulo de fluxo
-
+##### Índice de umidade
+O índice de umidade foi calculado com base no **acúmulo de fluxo** do Merit-Hydro e a **inclinação do relevo** que calculamos anteriormente.
+$$
+moisture.index = \frac{\log \left(fluxo+1\right)}{\left(slope+1\right)}  \times1000
+$$
+O _moisture index_ é a média do índice dentro de um _kernel_ circular de uma célula de raio. O tamanho do raio foi escolhido visualmente para suavizar o índice, mas representando bem a distribuição dos cursos d'água.
+Classificamos como áreas úmidas somente regiões que apresentassem um valor do indice de umidade acima de 3000 e definimos esse valor para que visualmente pudessemos capturar a distribuição dos cursos d'água sem superestimar outras áreas planas. Porém, esse corte do índice não consegue classificar bem corpos de água com grandes extensões (Amazonas, represas e grandes lagos), por isso nós corrigimos a classificação sobrepondo a camada do indice de umidade com a camada de águas do MapBiomas.
 
 |Códigos | Nomes|
 |--|--|
