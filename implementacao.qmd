@@ -21,19 +21,56 @@ A Resiliência da Paisagem foi calculada como a média entre os valores padroniz
 O cálculo de diversidade da paisagem foi realizado no Google Earth Engine [@gorelick_google_2017] e é composto por médias feitas pixel a pixel entre os maiores valores padronizados ( _Z-scores_ ) das imagens: [__Variedade de Formas de Relevo__](#formas-de-relevo), [__Amplitude Altitudinal__](#amplitude-altitudinal), [__Densidade de Banhados__](#densidade-de-banhados) e [__Diversidade de Solo__](#diversidade-de-solo). Utilizamos o Google Earth Engine por ser uma plataforma baseada em nuvem  que oferece acesso remoto a uma vasta coleção de imagens de satélite e bases de dados geoespaciais de acesso livre e com capacidade computacional para realizar as análises em qualquer equipamento disponivel [@gorelick_google_2017]. Isso possibilita com que nossas análises sejam de livre acesso e que contribua para uma ciência mais transparente e livre [@citação].
 
 #### Formas de Relevo
-<!--1- Calculate relief slopes, aspects and Topographic Position Index (TPI) from a Digital Elevation Model.-->
 
-<!--2- Calculate a moisture index from a flow accumulation raster and slopes.-->
+A classificação e distribuição espacial das formas de relevo são a base para o cálculo da **diversidade da paisagem** e representam áreas com maiores estabilidade microclimática que resistirão aos impactos causados pelas mudanças climáticas [@citação]. Essa classificação é baseada em combinações de informações sobre a **inclinação** (_slope_), **orientação** (_aspect_), **indice de posição topográfica** (_topographic position index_), **acumulação de fluxo** (_flow accumulation_) e a distribuição de **rios**, **lagos** e **áreas úmidas** dos ambientes. Essa combinação corresponde a ambientes topográficos locais com combinações distintas de umidade, radiação e deposição de sedimentos [@citação].
 
-<!--3- Transform slopes, aspect, TPI and moisture index into classes-->
+Nossa metodologia de classificação de formas de relevo foi baseada em estudos prévios executados pela equipe de **Ciências da TNC Global**, publicada inicialmente em 2014 [@citação] e refinada em 2016 [@citação dos dois relatórios].
 
-<!--4- Combine slopes, aspect, TPI and moisture classes into a code string-->
+Para o cálculo de  [inclinação](#inclinacao_do_relevo), [aspecto](#aspecto_do_relevo) e [índice de posição topográfica (TPI)](#indice_de_posicao_topografica), utilizamos a imagem do modelo digital de elevação (DEM) do Merit-DEM [@citação], em uma escala de 90 metros. Escolhemos utilizar esse DEM por ser um produto em escala global, de livre acesso e com correções de vários viéses de modelos de elevação, que possibilitam que nosso trabalho seja replicável e mais próximo a realidade dos biomas que modelamos [@citação].
 
-<!--5- Re-classify landform string into landform types-->
+Para o cálculo de [acúmulo de fluxo](#acumulo_de_fluxo), utilizamos o Merit-Hydro [@citação] que é um produto derivado do Merit-DEM e que possibilita o calculo do acúmulo de fluxo em uma escala glogal e corrigada para o efeito da densidade de árvores no cálculo da rede hidrográfica da região [@citação].
 
-<!--6- Count the number of distinct landforms within a focal cell kernel (landform variety)-->
+Para complementar a superfície gerada pelo acúmulo de fluxo e definir a presença de **rios**, **lagos** e **áreas umidas**, nós incluímos as classes de água do MapBiomas [@citação]. O MapBiomas é um projeto nacional de mapeamento e classificação de mudanças do uso do solo dos últimos 30 anos a partir de dados de sensoriamento remoto.
+##### Índice de posição topográfica
+O cálculo do TPI foi feito em três escalas com um _kernel_ circular com 7, 11 e 15 células de raio, calculando a diferença da média de elevação entre a célula focal e um conjunto de células vizinhas no _kernel_, divididos pelo número de células vizinhas ($n$).
+$$
+TPI = \frac {\sum  _{i}^{n}\left(vizinhança_i - focal \right)}{n}
+$$
+Onde a vizinhança $i$ representa cada uma das $n$ células dentro do _kernel_ da célula focal. O índice final é composto pela média de TPI das três janelas, o que permite a consideração de diferentes níveis de resolução da paisagem, tanto local quanto regional (Theobald _et al_. 2015)[@citação]. Os tamanhos das janelas foram definidos visualmente para que melhor representassem as formas de relevo.
 
-<!--7- Calculate the Z-scores for global and whithin geophysical -->
+##### Aspecto do relevo
+ O **aspecto do relevo** é calculado como um gradiente local das 4 células adjacentes, os resultados são apresentado em graus que representam a direção do relevo (0º = Norte, 90º = Leste, 180º = Sul e 270º = Oeste). Nós dividimos os resultados do aspecto em dois grupos baseados na quantidade de insidência solar, sendo células com valores entre 90º e 270º classificados como **faces frias** e valores entre 0º a 90º e 270º a 360º foram classificados como **faces quentes**.
+
+##### Inclinação do Relevo
+A **inclinação do relevo** é calculada como um gradiente local das 4 células adjacentes, os resultados são apresentado em graus que representam a inclinação do relevo (0º a 90º). A inclinação foi dividida em 5 grupos baseado em faixas de inclinação, para melhor classificar diferentes formas do relevo. 
+|Inclinação|Grupo  |
+|--|--|
+|0º a 2º  | 1 |
+|2º a 6º  | 2 |
+|6º a 24º | 3 |
+|24º a 35º| 4 |
+|35º a 90º| 5 |
+
+##### Acúmulo de fluxo
+
+
+|Códigos | Nomes|
+|--|--|
+|3 |Cool Steep Slope  |
+|4 | Warms Steep Slope  |
+|5 |Cliff  |
+|11 | Summit/Ridgetop  |
+|13 | Slope Crest  |
+|21 | Flat Hilltop  |
+|22 | Gentle Slope Hilltop|  
+|23 | Cool Sideslope  |
+|24 | Warm Sideslope  |
+|30 | Dry Flats  |
+|32 | Valley/Toeslope|  
+|39 | Moist Flats  |
+|43 | Cool Footslope  |
+|44 |Warm Sideslope|
+
 #### Amplitude Altitudinal
 A amplitude Altitudinal vai representar a variação da elevação em uma região, independente do número de [__formas de relevo__](#formas_de_relevo), para diminuir a relação entre as formas de relevo e a elevação já que elas são correlacionadas entre si [@citação]<!--??? Precisamos de citação aqui??-->.  A amplitude altitudinal  foi calculada como a diferença entre os valores máximos e mínimos de elevação, dentro de um _kernel_ circular de 450 metros, a partir dos dados do _Digital Elevation Model_ do MERIT [@citação]. Então fizemos uma Regressão Linear Simples (_Ordinary Linear Regression_; [@citação]) entre os **valores de amplitude** e a **variedade de formas de relevo** e obtivemos os valores dos resíduos dessa análise para diminuir a correlação estre as duas variáveis.
 
@@ -63,15 +100,12 @@ $$
 Ao final de todas as operações, temos uma única imagem com valores que representam a variação em relação à média dos valores de densidade e contagem de pixels de áreas de banhado tanto para a extensão do Brasil, quanto referentes às configurações geofísicas.
 
 #### Diversidade de Solo
-<!--1- Import soil data-->
+A diversidade de solo foi calculada como a distribuição do número de classes de solo, dentro de um _kernel_ de 1350 metros e foi usada para indicar áreas com grande concentração dos diferentes tipos de solo que vão afetar diretamente na diversidade de espécies do ambiente. Para calcular o raster de diversidade do solo usamos a classificação oficial dos solos brasileiros, disponibilizada pelo Instituto Brasileiro de Geografica e Estatística (IBGE; [@citação]). 
+Como a classificação do IBGE foi disponibilizada em formato de _shapefiles_, começamos a análise separando cada uma das 108 classes de solo do Brasil e calculamos um raster de presença e ausência do tipo de solo. Ao final do processo podemos somar os diferentes mapas de presença para obter os mapas de diversidade do solo, onde os maiores valores de cada pixel mostram áreas com concentração de diferentes tipos de solo.
 
-<!--2- Filter soil codes-->
-
-<!--3- Calculate a raster of soil type presence within a neighborhood-->
-
-<!--4- Sum the soil presence rasters to create a raster of soil diversity within the neighborhood-->
-
-<!--5- Calculate the Z-scores for global and whithin geophysical -->
+Por fim, calculamos os valores de Z para cada pixel ($Z_{pixel}$) ao subtrair o valor da média ($\mu$) e dividindo o resultado pelo desvio padrão ($\sigma$), como mostrado na fórmula a seguir:
+$$Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}$$
+Os cálculos de Z foram feitos tanto a nivel nacional do Brasil, quanto dentro de cada classificação de **categorias geofísicas** usando as médias e desvios padrões dentro de cada uma das classes.
 
 ### Conectividade local
 
