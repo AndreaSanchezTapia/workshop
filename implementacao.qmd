@@ -95,8 +95,9 @@ Onde a vizinhança $i$ representa cada uma das $n$ células dentro do _kernel_ d
  O **aspecto do relevo** é calculado como um gradiente local das 4 células adjacentes, os resultados são apresentado em graus que representam a direção do relevo (0º = Norte, 90º = Leste, 180º = Sul e 270º = Oeste). Nós dividimos os resultados do aspecto em dois grupos baseados na quantidade de insidência solar, sendo células com valores entre 90º e 270º classificados como **faces frias** e valores entre 0º a 90º e 270º a 360º foram classificados como **faces quentes**.
 
 ##### Inclinação do Relevo
-A **inclinação do relevo** é calculada como um gradiente local das 4 células adjacentes, os resultados são apresentado em graus que representam a inclinação do relevo (0º a 90º). A inclinação foi dividida em 5 grupos baseado em faixas de inclinação, para melhor classificar diferentes formas do relevo. 
-|Inclinação|Grupo  |
+A **inclinação do relevo** é calculada como um gradiente local das 4 células adjacentes, os resultados são apresentado em graus que representam a inclinação do relevo (0º a 90º). A inclinação foi dividida em 5 grupos baseado em faixas de inclinação, para melhor classificar diferentes formas do relevo.
+
+|Inclinação|Grupo|
 |--|--|
 |0º a 2º  | 1 |
 |2º a 6º  | 2 |
