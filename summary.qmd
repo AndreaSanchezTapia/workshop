@@ -1,7 +1,7 @@
 # Resumo
 <!-- Nos nossos textos temos que padronizar o que entendemos por adatação às mudanças climáticas. No sentido mais restrito, adaptação é a mudança evolutiva da espécies em reposta à pressão ambiental, assim as espécies podem se adaptar (evoluir) para terem condições fisiológicas que suportem o novo clima, ou migrarem para áreas adequadas aos seus nichos. No entento, há também adaptação sendo usado em sentidos mais amplos, incluindo a migração. Sugiro mantermos o termo mais restrito, para ficar mais relacionado conceitualmente com a discussão de evolução de nicho e resgate evolutivo --> 
 
-As mudanças no clima modificam ambientes naturais e pressionam espécies a se adaptarem às novas condições ambientais ou alterarem suas distribuições espaciais para locais adequados climaticatimente.
+As mudanças no clima modificam ambientes naturais e pressionam espécies a se adaptarem às novas condições ambientais ou alterarem suas distribuições espaciais para locais adequados climaticamente.
 A identificação de locais com adequabilidade climática para sustentar a biodiversidade no futuro de mudanças climáticas é imprescindível para o planejamento sistemático de ações de conservação e restauração.
 Nesse sentido, o objetivo principal do projeto é mapear sítios resilientes às mudanças climáticas, que permitam a movimentação da biodiversidade na busca de áreas mais climaticamente adequadas.
 O termo _áreas resilientes_ indica locais que apresentam condições necessárias para que espécies e processos ecológicos persistam às mudanças climáticas regionais, definidos por sua alta diversidade microclimática, grau de conservação e conectividade. 
