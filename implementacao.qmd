@@ -1,16 +1,16 @@
 # Detalhamento das Análises
 
-## Configurações geofísicas 
+## Regiões eco-geológicas 
 
 <!-- Alisson: este nome pode mudar -->
-As configurações geofísicas do Brasil foram feitas para encontrar regiões homogêneas em relação aos **Domínios Geológicos** e as **Ecoregiões** do páis, que pudessem ser usadas para limitar a variação das variáveis ambientais usadas ao calcular [__Resiliência da Paisagem__](#resiliencia-da-paisagem). 
+As regiões eco-geológicas do Brasil foram feitas para encontrar regiões homogêneas em relação aos **Domínios Geológicos** e às **Ecoregiões** do páis, que pudessem ser usadas para limitar a variação das variáveis ambientais usadas ao calcular [__Resiliência da Paisagem__](#resiliencia-da-paisagem), de modo a normalizar os valores de resiliência de acordo com regiões homólogas, ao invés de todo o país.
 
-Os **Domínios geológicos** são grupos de unidades geológicas, separados pelas similidades nas classificações de tipo de rocha. Os domínios foram criados a partir da classificação feita pela CPRM (Serviços Ecológicos do Brasil; **@citação**), como essa classificação consistia em um número muito grande de categorias para o Brasil (aproximadamente 1350) nós utilizamos a classificação simplificada dos **Domínios Geológicos** (14 categorias).
+Os **Domínios Geológicos** são grupos de unidades geológicas, separados pelas similidades nas classificações de tipo de rocha. Os domínios foram criados a partir da classificação feita pela CPRM (Serviços Geológico do Brasil; **@citação**). A classificação por unidades geológicas consistia em um número muito grande de categorias para o Brasil (aproximadamente 1350), por esse motivo utilizamos um agrupamento dessas categorias por **Domínios Geológicos** (14 domínios).
 
-Já as **Ecoregiões** são um grupamentos de regiões ecológicas similiares, consistem em unidades biogeográficas que compartilhem comunidades naturais de espécies, dinâmicas naturais e condições ambientais [@citação]. Nós utilizamos a classificação da Terrestrial Ecoregions of the World (TEOW), que é uma regionalização biogeográfica da biodiversidade terrestre realizada pela WWF [@citação].
+Já as **Ecoregiões** são agrupamentos de regiões ecológicas similiares, consistem em unidades biogeográficas que compartilhem comunidades naturais de espécies, dinâmicas naturais e condições ambientais [@citação]. Nós utilizamos a classificação da Terrestrial Ecoregions of the World (TEOW), que é uma regionalização biogeográfica da biodiversidade terrestre realizada pela WWF [@citação]. Para o Brasil existem 50 ecoregiões.
 
-Tanto os domínios geológicos quanto as ecoregiões eram polígonos que representavam as diferentes categorias, que foram rasterizados para prosseguir com o cálculo das configurações geofísicas, usando a expressão: 
-$$Configurações\ Geofisicas = {(Ecoregiões)+(100\times Domínio \ Geológico)}$$ 
+Tanto os domínios geológicos quanto as ecoregiões são polígonos que representam as diferentes categorias, que foram rasterizados para prosseguir com o cálculo das configurações geofísicas, usando a expressão: 
+$$Regiões\ eco-geológicas = {(Ecoregiões)+(100\times Domínio \ Geológico)}$$ 
 Desta forma, os valores do raster final estão no formato **GGEE**, onde **GG** representam os valores de domínio geológico e **EE** as categorias de ecoregiões, totalizando **XX** categorias de configurações geofísicas.
 
 ## Resiliência da Paisagem
