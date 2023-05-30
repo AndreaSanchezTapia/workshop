@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.242">
+<meta name="generator" content="quarto-1.2.475">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -80,6 +80,7 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -114,7 +115,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Prefácio</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Resumo executivo</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -144,7 +145,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./implementacao.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Implementação</span></a>
+  <a href="./implementacao.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Detalhamento das Análises</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -166,7 +167,7 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#configurações-geofísicas" id="toc-configurações-geofísicas" class="nav-link active" data-scroll-target="#configurações-geofísicas"><span class="toc-section-number">5.1</span>  Configurações geofísicas</a></li>
+  <li><a href="#regiões-eco-geológicas" id="toc-regiões-eco-geológicas" class="nav-link active" data-scroll-target="#regiões-eco-geológicas"><span class="toc-section-number">5.1</span>  Regiões eco-geológicas</a></li>
   <li><a href="#resiliência" id="toc-resiliência" class="nav-link" data-scroll-target="#resiliência"><span class="toc-section-number">5.2</span>  Resiliência</a>
   <ul class="collapse">
   <li><a href="#diversidade-da-paisagem" id="toc-diversidade-da-paisagem" class="nav-link" data-scroll-target="#diversidade-da-paisagem"><span class="toc-section-number">5.2.1</span>  Diversidade da paisagem</a></li>
@@ -174,6 +175,7 @@ div.csl-indent {
   <li><a href="#conectividade-local" id="toc-conectividade-local" class="nav-link" data-scroll-target="#conectividade-local"><span class="toc-section-number">5.2.3</span>  Conectividade local</a></li>
   <li><a href="#combinando-diversidade-da-paisagem-e-conectividade-local-resiliência" id="toc-combinando-diversidade-da-paisagem-e-conectividade-local-resiliência" class="nav-link" data-scroll-target="#combinando-diversidade-da-paisagem-e-conectividade-local-resiliência"><span class="toc-section-number">5.2.4</span>  Combinando diversidade da paisagem e conectividade local: resiliência</a></li>
   </ul></li>
+  <li><a href="#conectividade-regional" id="toc-conectividade-regional" class="nav-link" data-scroll-target="#conectividade-regional"><span class="toc-section-number">5.3</span>  Conectividade regional</a></li>
   </ul>
 </nav>
     </div>
@@ -197,11 +199,15 @@ div.csl-indent {
 
 </header>
 
-<p>A metodologia proposta para identificar sítios resilientes <span class="citation" data-cites="anderson_estimating_2014 anderson_resilient_2016 anderson_resilient_2016-1 anderson_resilient_2023">(<a href="references.html#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>, <a href="references.html#ref-anderson_resilient_2016" role="doc-biblioref">2016a</a>, <a href="references.html#ref-anderson_resilient_2016-1" role="doc-biblioref">Anderson et al. 2016b</a>, e <a href="references.html#ref-anderson_resilient_2023" role="doc-biblioref">Anderson et al. 2023</a>)</span> envolve o mapeamento das configurações geofísicas, a análise da diversidade da paisagem e da conectividade local, para, por fim, gerar o mapa de áreas resilientes. Cada uma dessas etapas é descrita a seguir.</p>
-<section id="configurações-geofísicas" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="configurações-geofísicas"><span class="header-section-number">5.1</span> Configurações geofísicas</h2>
-<p>A primeira etapa consiste em caracterizar e classificar a região de estudo em <strong>configurações geofísicas</strong> baseadas em suas propriedades físicas, tais como geologia, solo e altitude, que correspondem às diferenças na fauna e flora associadas. No estudo desenvolvido nos EUA, o mapeamento foi feito por ecoregiões, uma vez que esses locais apresentam condições ambientais similares, especialmente relacionado a <em>landforms</em>, geologia e solos, e que compartilham conjuntos de comunidades naturais e espécies. As configurações geofísicas são definidas como a combinação de uma zona altitudinal e da classe geológica (rocha ou substrato superficial). As zonas altitudinais e as classes geológicas foram desenvolvidas para corresponder com mudanças perceptíveis em comunidades e espécies.</p>
-<p>Conjuntos de dados necessários para essa análise incluem: geologia das rochas (<em>bedrock geology</em>), solo, altitude (obtido de um modelo digital de elevação – <em>digital elevation model</em> ou DEM com resolução de 30 m) e <em>landforms</em> (derivado do DEM). Esses dados são integrados para identificar um número de tipos de configurações geofísicas com características específicas.</p>
+<p>A metodologia proposta para identificar sítios resilientes <span class="citation" data-cites="anderson_estimating_2014 anderson_resilient_2016 anderson_resilient_2016-1 anderson_resilient_2023">(<a href="#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>, <a href="#ref-anderson_resilient_2016" role="doc-biblioref">2016a</a>, <a href="#ref-anderson_resilient_2016-1" role="doc-biblioref">Anderson et al. 2016b</a>, e <a href="#ref-anderson_resilient_2023" role="doc-biblioref">Anderson et al. 2023</a>)</span> envolve o mapeamento das configurações geofísicas, a análise da diversidade da paisagem e da conectividade local, para, por fim, gerar o mapa de áreas resilientes. Cada uma dessas etapas é descrita a seguir.</p>
+<section id="regiões-eco-geológicas" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="regiões-eco-geológicas"><span class="header-section-number">5.1</span> Regiões eco-geológicas</h2>
+<p>A primeira etapa consiste em caracterizar e classificar a região de estudo em <strong>regiões eco-geológicas</strong> baseadas no meio físico e biológico. Para tal, nós utilizamos domínios geológicos e ecoregiões. Os domínios geológicos foram derivados de unidades geológicas, as quais são agrupamentos de rochas. Entretanto, devido ao alto número de categorias para o Brasil (em torno de 1350), foram utilizados os domínios geológicos (14 categorias) como agrupamentos de unidades geológicas. Zonas altitudinais não foram utilizadas, pois a variabilidade proveniente das mesmas já é considerada nas ecoregiões. Esses dados são então integrados para identificar regiões homólogas (com características similares). Tanto os domínios geológicos quanto as ecoregiões são polígonos que representam as diferentes categorias, que foram rasterizados para prosseguir com o cálculo das regiões eco-geológicas através da sequinte equação: <span class="math display">\[Regiões\ eco-geológicas = {(Ecoregiões)+(100\times Domínio \ Geológico)}\]</span> Desta forma, os valores do raster final estão no formato <strong>GGEE</strong>, onde <strong>GG</strong> representam os domínios geológicos e <strong>EE</strong> as categorias de ecoregiões.</p>
+<p>No estudo desenvolvido nos EUA o mapeamento foi feito por ecoregiões, uma vez que esses locais apresentam condições ambientais similares, especialmente relacionado a <em>landforms</em>, geologia e solos, e que compartilham conjuntos de comunidades naturais e espécies. Esse produto foi chamado de <em>geophysical settings</em>, levando em conta a geologia ou solo com zonas altitudinais. Entretanto, neste trabalho chamamos o mesmo produto de regiões eco-geológicas, visto que a geofísica investiga características não utilizadas no trabalho (elétricas, térmicas, magnéticas, gravitacionais e sísmicas). <!-- Será que isso aqui fica em metodologia? A parte de nomenclatura a gente menciona? --></p>
+<!-- As configurações geofísicas são definidas como a combinação de uma zona altitudinal e da classe geológica (rocha ou substrato superficial).-->
+<!-- Como não usamos zona altitudinal, talvez seja interessante deixar fora. -->
+<!-- As zonas altitudinais e as classes geológicas foram desenvolvidas para corresponder com mudanças perceptíveis em comunidades e espécies.  -->
+<!-- Conjuntos de dados necessários para essa análise incluem: geologia (_bedrock geology_), solo, altitude (obtido de um modelo digital de elevação  – _digital elevation model_ ou DEM com resolução de 30 m) e _landforms_ (derivado do DEM). -->
 </section>
 <section id="resiliência" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="resiliência"><span class="header-section-number">5.2</span> Resiliência</h2>
@@ -233,7 +239,12 @@ div.csl-indent {
 <h3 data-number="5.2.3" class="anchored" data-anchor-id="conectividade-local"><span class="header-section-number">5.2.3</span> Conectividade local</h3>
 <p>A conectividade local permite estimar o grau de permeabilidade (ou reciprocamente o grau de resistência) em torno de cada célula avaliada. O algoritmo utilizado mede a conectividade de uma célula focal com o seu vizinho ecológico quando a célula é vista como uma fonte de movimento radiando em todas as direções. O pressuposto é de que a permeabilidade de duas células adjacentes aumenta quando a sua similaridade ecológica aumenta.</p>
 <p>A partir de um mapa de uso e cobertura do solo, incluindo a presença de estradas, é realizada uma simplificação dos tipos de uso em componentes principais da paisagem e determinado pesos de resistência para cada categoria, nos quais áreas naturais apresentam o valor mínimo, e áreas com intervenção antrópica intensa, o valor máximo.</p>
-<p>As categorias principais de componentes da paisagem foram definidas como: + áreas naturais (florestas, banhados, campos), + áreas agrícolas ou modificadas (incluindo áreas improdutivas não-naturais) + áreas urbanizadas (de baixa ou alta intensidade).</p>
+<p>As categorias principais de componentes da paisagem foram definidas como:</p>
+<ul>
+<li>áreas naturais (florestas, banhados, campos),</li>
+<li>áreas agrícolas ou modificadas (incluindo áreas improdutivas não-naturais)</li>
+<li>áreas urbanizadas (de baixa ou alta intensidade).</li>
+</ul>
 <p>A conectividade local é medida através da análise de resistência de cada célula. Nesse contexto, a dispersão teórica de uma espécie (ou processo) a partir de uma célula focal é uma função dos valores de resistência das células vizinhas e suas distâncias com relação à célula focal, até uma distância máxima de 3 km. A nota de conectividade local para uma célula é igual à área de dispersão, levando em conta a resistência dividida pela área de dispersão teórica se não houvesse resistência.</p>
 </section>
 <section id="combinando-diversidade-da-paisagem-e-conectividade-local-resiliência" class="level3" data-number="5.2.4">
@@ -244,11 +255,18 @@ div.csl-indent {
 <p>O resultado final é um mapa com grid de 30 m, constando os valores estimados de resiliência para cada local.</p>
 <p>O mapeamento final dos sítios resilientes é feito por <a href="#configurações-geofísicas"><strong>configurações geofísicas</strong></a> (item acima) dentro de ecoregiões. Isso garante a inclusão de condições físicas e ambientais distintas e permite capturar variações na composição da biota associada. Nesse sentido, <strong>a resiliência é comparada dentro de cada configuração e não entre configurações geofísicas</strong>.</p>
 <p>O mapa final de resiliência indica locais com maior ou menor resiliência comparados ao valor médio da região avaliada. São considerados valores médios aqueles com -0,5 a 0,5 desvios padrão ao redor da média.</p>
-<p>Os sítios com valores mais elevados de resiliência estão associados a locais com maiores níveis de biodiversidade <span class="citation" data-cites="anderson_estimating_2014">(<a href="references.html#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>)</span>. A metodologia descrita indica, para cada configuração geofísica, sítios que são mais prováveis de reter espécies e funções por um maior período sob mudanças no clima, possibilitando a identificação de refúgios naturais para conservação no futuro <span class="citation" data-cites="anderson_estimating_2014">(<a href="references.html#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>)</span></p>
+<p>Os sítios com valores mais elevados de resiliência estão associados a locais com maiores níveis de biodiversidade <span class="citation" data-cites="anderson_estimating_2014">(<a href="#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>)</span>. A metodologia descrita indica, para cada configuração geofísica, sítios que são mais prováveis de reter espécies e funções por um maior período sob mudanças no clima, possibilitando a identificação de refúgios naturais para conservação no futuro <span class="citation" data-cites="anderson_estimating_2014">(<a href="#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>)</span></p>
 <p><!-- As atividades previstas para o projeto serão divididas em duas etapas: a primeira se refere à aplicação da metodologia de mapeamento descrita acima; e a segunda corresponde ao refinamento e adaptação dela para a realidade dos diversos biomas brasileiros, que será feita a partir de discussões com especialistas. A partir da metodologia proposta, serão realizadas reuniões internas com a equipe e workshops com especialistas nas temáticas do projeto e com experiência em diversos biomas do Brasil para discussão da metodologia e sugestão de refinamento para a sua melhoria. Esses workshops terão como objetivo refinar a metodologia de forma que ela seja mais adequada às características dos ecossistemas e particularidades da região. Com base nas discussões com o grupo de especialistas, se espera incorporar possíveis novos elementos (variáveis) e validar a metodologia para o Brasil. O processo consistirá, portanto, da aplicação da abordagem desenvolvida, análise dos métodos, avaliação, complementação e validação dos resultados, e geração de mapas de áreas resilientes e conectadas em biomas brasileiros. --></p>
+</section>
+</section>
+<section id="conectividade-regional" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="conectividade-regional"><span class="header-section-number">5.3</span> Conectividade regional</h2>
+<p>A conectividade regional…</p>
+<p>A conectividade baseada em teoria de circuitos utiliza um marco conceitual originário da teoria de circuitos (elétricos) e consegue propor diferentes caminhos de menor resistência por onde a “corrente” (o fluxo entre áreas) pode passar. Esta abordagem detecta áreas onde esta corrente se veria <strong>concentrada</strong> pela configuração espacial da paisagem (por exemplo, através de uma barra ou um estreito) ou a presença de áreas de alta resistência, e áreas onde o fluxo seria <strong>difuso</strong> (por exemplo, em áreas contíguas de baixa resistência, onde o fluxo pode acontecer em qualquer direção e com menor intensidade).</p>
+<p>Nesta abordagem, áreas com alta resistência–onde o fluxo seria impedido–devem ser diferenciadas das áreas de baixa resistência onde o fluxo é baixo por ter se dispersado.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
 <div id="ref-anderson_resilient_2023" class="csl-entry" role="doc-biblioentry">
 Anderson, M. G., M. Clark, A. P. Olivero, A. R. Barnett, K. R. Hall, M. W. Cornett, M. Ahlering, M. Schindel, B. Unnasch, C. Schloss, and D. R. Cameron. 2023. <a href="https://doi.org/10.1073/pnas.2204434119">A resilient and connected network of sites to sustain biodiversity under a changing climate</a>. Proceedings of the National Academy of Sciences 120:e2204434119.
 </div>
@@ -262,7 +280,6 @@ Anderson, M. G., M. Clark, and A. O. Sheldon. 2016a. <a href="https://doi.org/10
 Anderson, M., A. Barnett, M. Clark, J. Prince, S. A. Olivero, and B. Vickery. 2016b. Resilient and <span>Connected Landscapes</span> for <span>Terrestrial Conservation</span>.
 </div>
 </div>
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -407,7 +424,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./implementacao.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Implementação</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Detalhamento das Análises</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
