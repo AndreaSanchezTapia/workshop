@@ -9,16 +9,18 @@ Cada uma dessas etapas é descrita a seguir.
 A primeira etapa consiste em caracterizar e classificar a região de estudo em __regiões eco-geológicas__ baseadas no meio físico e biológico. Para tal, nós utilizamos domínios geológicos e ecoregiões.
 Os domínios geológicos foram derivados de unidades geológicas, as quais são agrupamentos de rochas. Entretanto, devido ao alto número de categorias para o Brasil (em torno de 1350), foram utilizados os domínios geológicos (14 categorias) como agrupamentos de unidades geológicas.
 Zonas altitudinais não foram utilizadas, pois a variabilidade proveniente das mesmas já é considerada nas ecoregiões.
+Esses dados são então integrados para identificar regiões homólogas (com características similares). Tanto os domínios geológicos quanto as ecoregiões são polígonos que representam as diferentes categorias, que foram rasterizados para prosseguir com o cálculo das regiões eco-geológicas através da sequinte equação: 
+$$Regiões\ eco-geológicas = {(Ecoregiões)+(100\times Domínio \ Geológico)}$$ 
+Desta forma, os valores do raster final estão no formato **GGEE**, onde **GG** representam os domínios geológicos e **EE** as categorias de ecoregiões.
 
 No estudo desenvolvido nos EUA o mapeamento foi feito por ecoregiões, uma vez que esses locais apresentam condições ambientais similares, especialmente relacionado a _landforms_, geologia e solos, e que compartilham conjuntos de comunidades naturais e espécies. Esse produto foi chamado de _geophysical settings_, levando em conta a geologia ou solo com zonas altitudinais. Entretanto, neste trabalho chamamos o mesmo produto de regiões eco-geológicas, visto que a geofísica investiga características não utilizadas no trabalho (elétricas, térmicas, magnéticas, gravitacionais e sísmicas). <!-- Será que isso aqui fica em metodologia? A parte de nomenclatura a gente menciona? -->
 
 <!-- As configurações geofísicas são definidas como a combinação de uma zona altitudinal e da classe geológica (rocha ou substrato superficial).-->
 <!-- Como não usamos zona altitudinal, talvez seja interessante deixar fora. -->
 <!-- As zonas altitudinais e as classes geológicas foram desenvolvidas para corresponder com mudanças perceptíveis em comunidades e espécies.  -->
-
 <!-- Conjuntos de dados necessários para essa análise incluem: geologia (_bedrock geology_), solo, altitude (obtido de um modelo digital de elevação  – _digital elevation model_ ou DEM com resolução de 30 m) e _landforms_ (derivado do DEM). -->
 
-Esses dados são integrados para identificar um número de tipos de configurações geofísicas com características específicas.
+
 
 ## Resiliência
 
