@@ -1,7 +1,7 @@
 project:
   type: book
   output-dir: docs
-
+logo: figs/TNC.jpg
 book:
   title: "Oficina: Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros"
   author: ""
@@ -15,8 +15,10 @@ book:
     - metodologia.qmd
     - implementacao.qmd
     - resultados.qmd
+    - oficina.qmd
     - references.qmd
-
+  page-navigation: true
+  favicon: figs/TNC.png
 bibliography: bibliografia.bib
 csl: citation_style.csl
 
