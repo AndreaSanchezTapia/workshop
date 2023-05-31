@@ -1,8 +1,5 @@
 # Resultados
 
-## Diversidade da paisagem 
-
-## Conectividade local 
-
-### Conectividade baseada em teoria de circuitos
+Os resultados das análises realizadas pela equipe se encontram no website da _The Nature Conservancy_ Brasil [_Mapping climate resilient
+sites in Brazil_](https://projeto-resiliencia-tnc.hub.arcgis.com/?share=link)
 
