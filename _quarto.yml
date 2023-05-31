@@ -5,13 +5,11 @@ logo: figs/TNC.jpg
 book:
   title: "Oficina: Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros"
   author: ""
-  date: ""
+  date: "2023-06-12"
   chapters:
     - index.qmd
-    - summary.qmd
-    - justificativa.qmd
-    - objetivo.qmd
     - intro.qmd
+    - objetivo.qmd
     - metodologia.qmd
     - implementacao.qmd
     - resultados.qmd
