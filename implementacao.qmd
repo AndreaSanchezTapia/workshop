@@ -3,7 +3,7 @@
 ## Regiões eco-geológicas 
 
 <!-- Alisson: este nome pode mudar -->
-As regiões eco-geológicas do Brasil foram feitas para encontrar regiões homólogas em relação aos **Domínios Geológicos** e às **Ecoregiões** do páis, que pudessem ser usadas para limitar a variação das variáveis ambientais usadas ao calcular [__Resiliência da Paisagem__](#resiliencia-da-paisagem), de modo a normalizar os valores de resiliência de acordo com regiões homólogas, ao invés de todo o país.
+As regiões eco-geológicas do Brasil foram feitas para encontrar regiões homólogas em relação aos **Domínios Geológicos** e às **Ecoregiões** do páis, que pudessem ser usadas para limitar a variação das variáveis ambientais usadas ao calcular [__Resiliência da Paisagem__](#resiliência-da-paisagem), de modo a normalizar os valores de resiliência de acordo com regiões homólogas, ao invés de todo o país.
 
 Os **Domínios Geológicos** são grupos de unidades geológicas, separados pelas similidades nas classificações de tipo de rocha. Os domínios foram criados a partir da classificação feita pela CPRM (Serviços Geológico do Brasil; **@citação**). A classificação por unidades geológicas consistia em um número muito grande de categorias para o Brasil (aproximadamente 1350), por esse motivo utilizamos um agrupamento dessas categorias por **Domínios Geológicos** (14 domínios).
 
@@ -67,7 +67,7 @@ Desta forma, os valores do raster final estão no formato **GGEE**, onde **GG** 
 -->
 
 ## Resiliência da Paisagem
-A Resiliência da Paisagem foi calculada como a média entre os valores padronizados (${Z}$) de [__Diversidade da Paisagem__](#diversidade-da-paisagem) e [__Conectividade Local__](#conectividade-local-1). Todas as imagens utilizadas para o calculo de Resiliência estão na escala de 90 metros e foram reprojetadas para o _DATUM WGS84_.
+A Resiliência da Paisagem foi calculada como a média entre os valores padronizados (${Z}$) de [__Diversidade da Paisagem__](#diversidade-da-paisagem) e [__Conectividade Local__](#conectividade-local). Todas as imagens utilizadas para o calculo de Resiliência estão na escala de 90 metros e foram reprojetadas para o _DATUM WGS84_.
 
 ### Diversidade da paisagem
 
@@ -79,7 +79,7 @@ A classificação e distribuição espacial das formas de relevo são a base par
 
 Nossa metodologia de classificação de formas de relevo foi baseada em estudos prévios executados pela equipe de **Ciências da TNC Global**, publicada inicialmente em 2014 [@citação] e refinada em 2016 [@citação dos dois relatórios].
 
-Para o cálculo de  [inclinação](#inclinacao_do_relevo), [aspecto](#aspecto_do_relevo) e [índice de posição topográfica (TPI)](#indice_de_posicao_topografica), utilizamos a imagem do modelo digital de elevação (DEM) do Merit-DEM [@citação], em uma escala de 90 metros. Escolhemos utilizar esse DEM por ser um produto em escala global, de livre acesso e com correções de vários viéses de modelos de elevação, que possibilitam que nosso trabalho seja replicável e mais próximo a realidade dos biomas que modelamos [@citação].
+Para o cálculo de  [inclinação](#inclinação_do_relevo), [aspecto](#aspecto_do_relevo) e [índice de posição topográfica (TPI)](#índice_de_posição_topográfica), utilizamos a imagem do modelo digital de elevação (DEM) do Merit-DEM [@citação], em uma escala de 90 metros. Escolhemos utilizar esse DEM por ser um produto em escala global, de livre acesso e com correções de vários viéses de modelos de elevação, que possibilitam que nosso trabalho seja replicável e mais próximo a realidade dos biomas que modelamos [@citação].
 
 Para o cálculo de [acúmulo de fluxo](#acumulo_de_fluxo), utilizamos o Merit-Hydro [@citação] que é um produto derivado do Merit-DEM e que possibilita o calculo do acúmulo de fluxo em uma escala glogal e corrigada para o efeito da densidade de árvores no cálculo da rede hidrográfica da região [@citação].
 
@@ -131,7 +131,7 @@ Classificamos como áreas úmidas somente regiões que apresentassem um valor do
 |44 |Warm Sideslope|
 
 #### Amplitude Altitudinal
-A amplitude Altitudinal vai representar a variação da elevação em uma região, independente do número de [__formas de relevo__](#formas_de_relevo), para diminuir a relação entre as formas de relevo e a elevação já que elas são correlacionadas entre si [@citação]<!--??? Precisamos de citação aqui??-->.  A amplitude altitudinal  foi calculada como a diferença entre os valores máximos e mínimos de elevação, dentro de um _kernel_ circular de 450 metros, a partir dos dados do _Digital Elevation Model_ do MERIT [@citação]. Então fizemos uma Regressão Linear Simples (_Ordinary Linear Regression_; [@citação]) entre os **valores de amplitude** e a **variedade de formas de relevo** e obtivemos os valores dos resíduos dessa análise para diminuir a correlação estre as duas variáveis.
+A amplitude Altitudinal vai representar a variação da elevação em uma região, independente do número de [__formas de relevo__](#formas-de-relevo), para diminuir a relação entre as formas de relevo e a elevação já que elas são correlacionadas entre si [@citação]<!--??? Precisamos de citação aqui??-->.  A amplitude altitudinal  foi calculada como a diferença entre os valores máximos e mínimos de elevação, dentro de um _kernel_ circular de 450 metros, a partir dos dados do _Digital Elevation Model_ do MERIT [@citação]. Então fizemos uma Regressão Linear Simples (_Ordinary Linear Regression_; [@citação]) entre os **valores de amplitude** e a **variedade de formas de relevo** e obtivemos os valores dos resíduos dessa análise para diminuir a correlação estre as duas variáveis.
 
 Por fim, os valores da variação desses residuós da correlação entre a amplitude e a variedade da forma de relevo, para cada pixel ($Z_{pixel}$) podem ser calculados ao subtrair o valor da média ($\mu$) e dividindo o resultado pelo desvio padrão ($\sigma$), como mostrado na fórmula a seguir:
 $$Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}$$
