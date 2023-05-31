@@ -1,16 +1,16 @@
-# Detalhamento das Análises
+# Detalhamento das análises
 
-## Regiões eco-geológicas 
+## Regiões eco-geológicas
 
 <!-- Alisson: este nome pode mudar -->
-As regiões eco-geológicas do Brasil foram feitas para encontrar regiões homólogas em relação aos **Domínios Geológicos** e às **Ecoregiões** do páis, que pudessem ser usadas para limitar a variação das variáveis ambientais usadas ao calcular [__Resiliência da Paisagem__](#resiliência-da-paisagem), de modo a normalizar os valores de resiliência de acordo com regiões homólogas, ao invés de todo o país.
+As regiões eco-geológicas do Brasil foram delimitadas para encontrar regiões homólogas em relação aos **Domínios Geológicos** e às **Ecoregiões** do país, que pudessem ser usadas para limitar a variação das variáveis ambientais usadas ao calcular a [__Resiliência da Paisagem__](#resiliência-da-paisagem), de modo a normalizar os valores de resiliência de acordo com regiões homólogas, ao invés de todo o país.
 
 Os **Domínios Geológicos** são grupos de unidades geológicas, separados pelas similidades nas classificações de tipo de rocha. Os domínios foram criados a partir da classificação feita pela CPRM (Serviços Geológico do Brasil; **@citação**). A classificação por unidades geológicas consistia em um número muito grande de categorias para o Brasil (aproximadamente 1350), por esse motivo utilizamos um agrupamento dessas categorias por **Domínios Geológicos** (14 domínios).
 
 Já as **Ecoregiões** são agrupamentos de regiões ecológicas similiares, consistem em unidades biogeográficas que compartilhem comunidades naturais de espécies, dinâmicas naturais e condições ambientais [@citação]. Nós utilizamos a classificação da Terrestrial Ecoregions of the World (TEOW), que é uma regionalização biogeográfica da biodiversidade terrestre realizada pela WWF [@citação]. Para o Brasil existem 50 ecoregiões.
 
-Tanto os domínios geológicos quanto as ecoregiões são polígonos que representam as diferentes categorias, que foram rasterizados para prosseguir com o cálculo das regiões eco-geológicas através da sequinte equação: 
-$$Regiões\ eco-geológicas = {(Ecoregiões)+(100\times Domínio \ Geológico)}$$ 
+Tanto os domínios geológicos quanto as ecoregiões são polígonos que representam as diferentes categorias, que foram rasterizados para prosseguir com o cálculo das regiões eco-geológicas através da sequinte equação:
+$$Regiões\ eco-geológicas = {(Ecoregiões)+(100\times Domínio \ Geológico)}$$
 Desta forma, os valores do raster final estão no formato **GGEE**, onde **GG** representam os domínios geológicos e **EE** as categorias de ecoregiões.
 <!--
 |Código|Ecoregião|
@@ -67,11 +67,11 @@ Desta forma, os valores do raster final estão no formato **GGEE**, onde **GG** 
 -->
 
 ## Resiliência da Paisagem
-A Resiliência da Paisagem foi calculada como a média entre os valores padronizados (${Z}$) de [__Diversidade da Paisagem__](#diversidade-da-paisagem) e [__Conectividade Local__](#conectividade-local). Todas as imagens utilizadas para o calculo de Resiliência estão na escala de 90 metros e foram reprojetadas para o _DATUM WGS84_.
+A Resiliência da Paisagem foi calculada como a média entre os valores padronizados (${Z}$) de [__Diversidade da Paisagem__](#diversidade-da-paisagem) e [__Conectividade Local__](#conectividade-local). Todas as imagens utilizadas para o cálculo de Resiliência estão na escala de 90 metros e foram reprojetadas para o _DATUM WGS84_.
 
 ### Diversidade da paisagem
 
-O cálculo de diversidade da paisagem foi realizado no Google Earth Engine [@gorelick_google_2017] e é composto por médias feitas pixel a pixel entre os maiores valores padronizados ( _Z-scores_ ) das imagens: [__Variedade de Formas de Relevo__](#formas-de-relevo), [__Amplitude Altitudinal__](#amplitude-altitudinal), [__Densidade de Banhados__](#densidade-de-banhados) e [__Diversidade de Solo__](#diversidade-de-solo). Utilizamos o Google Earth Engine por ser uma plataforma baseada em nuvem  que oferece acesso remoto a uma vasta coleção de imagens de satélite e bases de dados geoespaciais de acesso livre e com capacidade computacional para realizar as análises em qualquer equipamento disponivel [@gorelick_google_2017]. Isso possibilita com que nossas análises sejam de livre acesso e que contribua para uma ciência mais transparente e livre [@citação].
+O cálculo de diversidade da paisagem foi realizado no Google Earth Engine [@gorelick_google_2017] e é composto por médias feitas pixel a pixel entre os maiores valores padronizados ( _Z-scores_ ) das imagens: [__Variedade de Formas de Relevo__](#formas-de-relevo), [__Amplitude Altitudinal__](#amplitude-altitudinal), [__Densidade de Banhados__](#densidade-de-banhados) e [__Diversidade de Solo__](#diversidade-de-solo). Utilizamos o Google Earth Engine por ser uma plataforma baseada em nuvem que oferece acesso remoto a uma vasta coleção de imagens de satélite e bases de dados geoespaciais de acesso livre e com capacidade computacional para realizar as análises em qualquer equipamento disponivel [@gorelick_google_2017]. Isso possibilita com que nossas análises sejam de livre acesso e que contribuam para uma ciência mais transparente e livre [@citação].
 
 #### Formas de Relevo
 
@@ -84,7 +84,9 @@ Para o cálculo de  [inclinação](#inclinação_do_relevo), [aspecto](#aspecto_
 Para o cálculo de [acúmulo de fluxo](#acumulo_de_fluxo), utilizamos o Merit-Hydro [@citação] que é um produto derivado do Merit-DEM e que possibilita o calculo do acúmulo de fluxo em uma escala glogal e corrigada para o efeito da densidade de árvores no cálculo da rede hidrográfica da região [@citação].
 
 Para complementar a superfície gerada pelo acúmulo de fluxo e definir a presença de **rios**, **lagos** e **áreas umidas**, nós incluímos as classes de água do MapBiomas [@citação]. O MapBiomas é um projeto nacional de mapeamento e classificação de mudanças do uso do solo dos últimos 30 anos a partir de dados de sensoriamento remoto.
-##### Índice de posição topográfica
+
+##### Índice de posição topográfica (TPI)
+
 O cálculo do TPI foi feito em três escalas com um _kernel_ circular com 7, 11 e 15 células de raio, calculando a diferença da média de elevação entre a célula focal e um conjunto de células vizinhas no _kernel_, divididos pelo número de células vizinhas ($n$).
 $$
 TPI = \frac {\sum  _{i}^{n}\left(vizinhança_i - focal \right)}{n}
@@ -121,29 +123,32 @@ Classificamos como áreas úmidas somente regiões que apresentassem um valor do
 |11 | Summit/Ridgetop  |
 |13 | Slope Crest  |
 |21 | Flat Hilltop  |
-|22 | Gentle Slope Hilltop|  
+|22 | Gentle Slope Hilltop|
 |23 | Cool Sideslope  |
 |24 | Warm Sideslope  |
 |30 | Dry Flats  |
-|32 | Valley/Toeslope|  
+|32 | Valley/Toeslope|
 |39 | Moist Flats  |
 |43 | Cool Footslope  |
 |44 |Warm Sideslope|
 
 #### Amplitude Altitudinal
+
 A amplitude Altitudinal vai representar a variação da elevação em uma região, independente do número de [__formas de relevo__](#formas-de-relevo), para diminuir a relação entre as formas de relevo e a elevação já que elas são correlacionadas entre si [@citação]<!--??? Precisamos de citação aqui??-->.  A amplitude altitudinal  foi calculada como a diferença entre os valores máximos e mínimos de elevação, dentro de um _kernel_ circular de 450 metros, a partir dos dados do _Digital Elevation Model_ do MERIT [@citação]. Então fizemos uma Regressão Linear Simples (_Ordinary Linear Regression_; [@citação]) entre os **valores de amplitude** e a **variedade de formas de relevo** e obtivemos os valores dos resíduos dessa análise para diminuir a correlação estre as duas variáveis.
 
-Por fim, os valores da variação desses residuós da correlação entre a amplitude e a variedade da forma de relevo, para cada pixel ($Z_{pixel}$) podem ser calculados ao subtrair o valor da média ($\mu$) e dividindo o resultado pelo desvio padrão ($\sigma$), como mostrado na fórmula a seguir:
+Por fim, os valores da variação desses resíduos da correlação entre a amplitude e a variedade da forma de relevo, para cada pixel ($Z_{pixel}$) podem ser calculados ao subtrair o valor da média ($\mu$) e dividindo o resultado pelo desvio padrão ($\sigma$), como mostrado na fórmula a seguir:
 $$Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}$$
 
-Dessa forma, temos uma imagem que nos mostra a variação, em relação a média, dos valores dos resíduos da amplitude altitudinal para o Brasil e dentro de cada uma das categorias de **regiões eco-geológicas**.
+Dessa forma, temos uma imagem que nos mostra a variação, em relação à média, dos valores dos resíduos da amplitude altitudinal para o Brasil e dentro de cada uma das categorias de **regiões eco-geológicas**.
 
 #### Densidade de Banhados
-Para calcular a densidade de banhados usados os dados disponibilizados na base de dados _Global Wetlands Database_ [@citação], que é uma base de dados que fornece informação e inventário de áreas úmidas no mundo. Os dados são obtidos através de imagens de satélite, amostragens aéreas e relatórios publicados. Como áreas de banhados ocorrem em diversas configurações e distribuição no espaço, nós avaliamos as variações das mesmas em escala local (450 metros) e em uma escala regional (1170 metros). Para o cálculo final dos valores de Densidade de banhados, utilizamos tanto o número de pixels em escala regional e a densidade, tanto em escala regional quanto local.
-A  **densidade de banhados** foi calculada como o uma média do número de _pixels_  de áreas de banhado, dentro de um kernel de escala regional (1170 metros) e um kernel em escala local (450 metros), excluindo rios e lagos. Já a **contagem em escala local** foi calculada como uma contagem de _pixels_ dentro de um _kernel_ circular com 1170 metros de diâmetro. A contagem vai representar o número de áreas umidas (excluindo rios e lagos), mostrando regiões de maiores concentrações de pixels de áreas úmidas, que apresentem uma baixa densidade de banhados.
+
+Para calcular a densidade de banhados usados os dados disponibilizados na base de dados _Global Wetlands Database_ [@gumbricht_tropical_2017], que é uma base de dados que fornece informação e inventário de áreas úmidas no mundo. Os dados são obtidos através de imagens de satélite, amostragens aéreas e relatórios publicados. Como áreas de banhados ocorrem em diversas configurações e distribuição no espaço, nós avaliamos as variações das mesmas em escala local (450 metros) e em uma escala regional (1170 metros). Para o cálculo final dos valores de Densidade de banhados, utilizamos tanto o número de pixels em escala regional e a densidade, tanto em escala regional quanto local.
+
+A  **densidade de banhados** foi calculada como uma média do número de _pixels_  de áreas de banhado, dentro de um kernel de escala regional (1170 metros) e um kernel em escala local (450 metros), excluindo rios e lagos. Já a **contagem em escala local** foi calculada como uma contagem de _pixels_ dentro de um _kernel_ circular com 1170 metros de diâmetro. A contagem vai representar o número de áreas umidas (excluindo rios e lagos), mostrando regiões de maiores concentrações de pixels de áreas úmidas, que apresentem uma baixa densidade de banhados.
 Essas 3 camadas vão auxiliar na identificação de regiões de **Diversidade da Paisagem** que apresentem valores baixos para formas de relevo e amplitude de elevação, mas que tenham uma acumulação de áreas umidas que poderiam amenizar localmente o efeito das mudanças climáticas [@citação].
 
-Para calcular os valores finais de densidade de banhado, precisamos juntar as informações das 3 camadas produzidas, primeiro calculando os valores estandartizados para cada uma delas e depois fazendo uma série de médias pixel a pixel para selecionar os maiores valores de $Z$. 
+Para calcular os valores finais de densidade de banhado, precisamos juntar as informações das 3 camadas produzidas, primeiro calculando os valores estandartizados para cada uma delas e depois fazendo uma série de médias pixel a pixel para selecionar os maiores valores de $Z$.
 Calculamos os valores estandarizados de $Z$ para cada pixel ($Z_{pixel}$) ao subtrair o valor da média ($\mu$) e dividir o resultado pelo desvio padrão ($\sigma$), como mostrado na fórmula a seguir:
 $$Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}$$
 A média e o desvio padrão, e portanto os valores de Z, foram calculados tanto para toda a extensão do Brasil, como dentro das diferentes categorias de [__regiões eco-geológicas__](#regioes-eco-geologicas).
@@ -159,7 +164,7 @@ $$
 Ao final de todas as operações, temos uma única imagem com valores que representam a variação em relação à média dos valores de densidade e contagem de pixels de áreas de banhado tanto para a extensão do Brasil, quanto referentes às regiões eco-geológicas.
 
 #### Diversidade de Solo
-A diversidade de solo foi calculada como a distribuição do número de classes de solo, dentro de um _kernel_ de 1350 metros e foi usada para indicar áreas com grande concentração dos diferentes tipos de solo que vão afetar diretamente na diversidade de espécies do ambiente. Para calcular o raster de diversidade do solo usamos a classificação oficial dos solos brasileiros, disponibilizada pelo Instituto Brasileiro de Geografica e Estatística (IBGE; [@citação]). 
+A diversidade de solo foi calculada como a distribuição do número de classes de solo, dentro de um _kernel_ de 1350 metros e foi usada para indicar áreas com grande concentração dos diferentes tipos de solo que vão afetar diretamente na diversidade de espécies do ambiente. Para calcular o raster de diversidade do solo usamos a classificação oficial dos solos brasileiros, disponibilizada pelo Instituto Brasileiro de Geografica e Estatística (IBGE; [@citação]).
 Como a classificação do IBGE foi disponibilizada em formato de _shapefiles_, começamos a análise separando cada uma das 108 classes de solo do Brasil e calculamos um raster de presença e ausência do tipo de solo. Ao final do processo podemos somar os diferentes mapas de presença para obter os mapas de diversidade do solo, onde os maiores valores de cada pixel mostram áreas com concentração de diferentes tipos de solo.
 
 Por fim, calculamos os valores de Z para cada pixel ($Z_{pixel}$) ao subtrair o valor da média ($\mu$) e dividindo o resultado pelo desvio padrão ($\sigma$), como mostrado na fórmula a seguir:
@@ -168,12 +173,10 @@ Os cálculos de Z foram feitos tanto a nivel nacional do Brasil, quanto dentro d
 
 ### Conectividade local
 
-Residuos da regressão da diversidade da paisagem em função do clima. 
-
 
 #### Cálculos de resistência
 
-Os valores de resitência são medidas relativas do grau de dificuldade de deslocamento dos organismos nos diferentes tipos de cobertura do solo. Essas medidas foram atribuídos por bioma, seguindo a premissa é que quanto maior for a diferença estrutural entre um dado tipo de cobertura do solo e a vegetação original do bioma, maior será o valor de resistência da classe de cobertura do solo em questão.
+Os valores de resistência são medidas relativas do grau de dificuldade de deslocamento dos organismos nos diferentes tipos de cobertura do solo. Esses valores foram atribuídos por bioma, seguindo a premissa de que quanto maior for a diferença estrutural entre um dado tipo de cobertura do solo e a vegetação original do bioma, maior será o valor de resistência da classe de cobertura do solo em questão.
 
 Os dados espaciais primários utilizados para calcular a superfície de resistência, até o momento, foram a camada de cobertura do solo fornecida pelo MapBiomas (coleção 7, ano 2021) e a base de estradas pavimentadas e não pavimentadas fornecida pelo IBGE (BCIM250, ano 2021). Para tanto, preliminarmente, a superfície de cobertura do solo do MapBiomas foi reamostrada para gerar pixels com 90 metros de tamanho, aproximadamente. Também convertemos o arquivo vetorial de estradas para o formato matricial, com pixels de tamanho aproximado de 90 metros. Conjugamos, por álgebra de mapas, as bases matriciais do MapBiomas e de estadas de tal maneira que todos os pixels da base do MapBiomas que se sobrepuseram a um pixel de estrada assumiram um novo valor correpondente a um pixel de estrada pavimentada ou não pavimentada.
 Os pixels do mapa consolidado de cobertura do solo, já incluindo as estradas pavimentadas e não pavimentadas como novas classes, receberam, separadamente por bioma, valores de resistência que buscaram traduzir, comparativamente entre as classes, o grau de dificuldade de movimentação de um dado animal ou propágulo numa dada classe de cobertura do solo. A premissa assumida aqui é que quanto maior for a diferença estrutural da classe de cobertura do solo para o hábitat original do bioma, maior será a dificuldade à movimentação que esta classe oferece. Os valores de resistência dos pixels de cada uma das classes foram atribuídos, por bioma, pela equipe do Projeto e podem ser vistos na tabela XXX.
@@ -191,25 +194,24 @@ Depois de atribuídos os valores de resistência, aplicamos à superfície gerad
 
 #### Filtro de kernel como _proxy_ da conectividade local
 
-Um filtro de _kernel_ de 23 x 23 píxeis (~2070m) foi aplicado ao raster de resistências. 
+Um filtro de _kernel_ de 23 x 23 píxeis (~2070m) foi aplicado ao raster de resistências.
 
 
 ### Combinando diversidade da paisagem e conectividade local: resiliência
 
 ## Conectividade regional
 
-O cálculo da conectividade regional, baseada em teoria de circuitos [@mcrae_isolation_2006] foi realizado utilizando a implementação de Omniscape para Julia [@hall_circuitscape_2021; @landau_omniscapejl_2021]. 
+Calculamos a conectividade regional baseada em teoria de circuitos [@mcrae_isolation_2006] utilizando a implementação de Omniscape para Julia [@hall_circuitscape_2021; @landau_omniscapejl_2021].
 
+Como base para estas análises, utilizamos:
 
-Foram utilisados: 
-
-+ o raster de resistência, com filtro de _kernel_ utilizado como base para a conectividade local, subamostrado para uma resolução de 900m por pixel,
++ o raster de resistência calculado acima com o filtro de _kernel_ utilizado como base para a conectividade local e subamostrado para uma resolução de 900m por pixel,
 + um raio da área de interesse de 100 píxeis (~90km)
 + agrupamentos de 5 píxeis de interesse para a janela móvel (~4.5km).
 
-O output de Omniscape são três arquivos de conectividade relacionados: 
+O output de Omniscape são três arquivos de conectividade relacionados:
 
-+ `flow_current` é o fluxo que aconteceria sem levar em conta a camada de resistência. Ele leva em conta a configuração espacial da paisagem (estreitos, barras) e dos píxeis de baixa resistência de origem. Nem todo pixel é source pixel, mas a corrente que entra em cada pixel de baixa resistência entra sem resistência. Flow current é usado como um "modelo nulo" de conectividade. 
++ `flow_current` é o fluxo que aconteceria sem levar em conta a camada de resistência. Ele leva em conta a configuração espacial da paisagem (estreitos, barras) e dos píxeis de baixa resistência de origem. Nem todo pixel é source pixel, mas a corrente que entra em cada pixel de baixa resistência entra sem resistência. Flow current é usado como um "modelo nulo" de conectividade.
 + `cumulative_current` é a corrente levando em conta a configuração espacial e os valores de resistência
 + `normalized_current` equivale a $\frac{cumulative\_current}{flow\_current}$
 e controla o efeito da configuração espacial do cálculo de conectividade.
@@ -217,7 +219,7 @@ e controla o efeito da configuração espacial do cálculo de conectividade.
 Os resultados da análise nesta escala espacial foram reclassificados de acordo com a distribuição ao redor da média dos valores nas categorias seguintes:
 
 + Entre o valor mínimo e média - 0,5 desvio padrão: fluxo impedido. O fluxo não consegue circular devido à presença de áreas de alta resistência, podendo se redirecionar em torno a essas áreas
-+ Entre média - 0,5 desvio padrão e média + 1 desvio padrão: fluxo difuso. O fluxo consegue se dispersar em áreas contíguas de resistências baixas a moderadas, sem se ver impedido ou canalizado 
++ Entre média - 0,5 desvio padrão e média + 1 desvio padrão: fluxo difuso. O fluxo consegue se dispersar em áreas contíguas de resistências baixas a moderadas, sem se ver impedido ou canalizado
 + Entre média + 1 desvio padrão e média + 2 desvios padrão: fluxo intensificado. O fluxo potencial se concentra devido à configuração da paisagem ou de áreas de alta resistência que forçam um rumo determinado
-+ Maior que a média + 2 desvios padrão: fluxo canalizado. Fluxo muito acima do esperado em uma área sem resistência. Ele passa por estreitos, barras de areia e estruturas similares. 
++ Maior que a média + 2 desvios padrão: fluxo canalizado. Fluxo muito acima do esperado em uma área sem resistência. Ele passa por estreitos, barras de areia e estruturas similares.
 
