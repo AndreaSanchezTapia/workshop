@@ -27,9 +27,14 @@ Cada capítulo é um arquivo `.qmd` formatado com markdown. [Aqui](https://quart
 
 A bibliografia oficial é o arquivo `bibliografia.bib` que vem de uma coleção de Zotero [Documento_workshop](https://www.zotero.org/groups/4991512/climate_resilience_brazil/collections/PSGS5W5W) em nosso grupo de Zotero: [URL do grupo](https://www.zotero.org/groups/4991512/climate_resilience_brazil), [Biblioteca](https://www.zotero.org/groups/4991512/climate_resilience_brazil/library)
 
-Para atualizar o arquivo: + acrescente a referência à coleção. + Exporte a coleção como BibTex e sobreescreva `bibliografia.bib` + (Vai ter mudanças no arquivo e o arquivo precisa ser empurrado para GitHub com `git add`, `git commit -m ""`, `git push...`)
+Para atualizar o arquivo: 
 
--   É melhor se só um membro da equipe faz isso.
++ acrescente a referência à coleção. 
++ Exporte a coleção como BibTex e sobreescreva `bibliografia.bib` 
++ (Vai ter mudanças no arquivo e o arquivo precisa ser empurrado para GitHub com `git add`, `git commit -m ""`, `git push...`)
+
+
+__É melhor se só um membro da equipe fizer isso__
 
 -   Também é melhor se essa pessoa instalar [BetterBibTex](https://retorque.re/zotero-better-bibtex/installation/) e na hora de exportar marcar Keep Updated, para que qualquer modificação à coleção seja refletida imediatamente em vez de exportar manualmente toda vez.
 
@@ -42,3 +47,9 @@ Aqui, o estilo da revista Ecology foi escolhido e salvo como `citation_style.csl
 No arquivo `_quarto.yml`, o campo `csl:` cria o link para esse arquivo. csl: `citation_style.csl`.
 
 Não é necessário modificar isto, só se precisar mudar o estilo de citação.
+
+# Gerar PDF e .docx
+
++ O comando `quarto render` vai gerar PDF e docx automaticamente na pasta `/docs` porque são as opções de formato em [_quarto.yml](_quarto.yml)
+
++ O formato do documento word depende de um template que também está lá: `custom-reference.docx`
