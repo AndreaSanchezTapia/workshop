@@ -35,7 +35,7 @@ A diversidade da paisagem está relacionada à variedade de microclimas em um de
 A análise de diversidade da paisagem resume informações relacionadas a:
 (a) variedade de landforms, (b) amplitude altitudinal, (c) densidade de banhados ou áreas úmidas (_wetlands_) e (d) propriedades do solo em um determinado local. 
 A variedade de _landforms_ diz respeito à variedade de componentes naturais do terreno criados pela topografia.
-Sua avaliação é baseada em um modelo de landforms (derivado de um DEM com resolução de 30 m), que classifica a superfície em diversas categorias de _landforms_, como por exemplo:
+Sua avaliação é baseada em um modelo de _landforms_, derivado de um modelo digital de elevação (DEM) com resolução de 30 m, que classifica a superfície em diversas categorias, como por exemplo:
 
 + precipícios e áreas íngremes -_cliff and steep slope_
 + topos de montanha e divisores de águas (_summit and ridge-top_)
@@ -52,11 +52,14 @@ A __diversidade da paisagem__ é calculada pelo número de _landforms_ dentro de
 ### Amplitude altitudinal
 
 A amplitude altitudinal é determinada a partir do DEM, tabulando a amplitude em uma área circular de 40 ha no entorno de cada célula de 30 m.
-A amplitude altitudinal considerada no estudo corresponde ao componente não correlacionado com o componente de _landforms_.
+A amplitude altitudinal considerada no estudo corresponde ao componente não correlacionado (os resíduos de uma regressão linear simples) com a diversidade de _landforms_.
+
 Para áreas extremamente planas, nas quais a variedade de _landforms_ e a amplitude altitudinal não permitem discriminar de forma correta células equivalentes, foram avaliadas a densidade de áreas úmidas/banhados (_wetlands_) e a diversidade de solos. 
 A densidade de banhados é incluída como um indicador em escala mais fina de características microtopográficas não capturadas nas classes do modelo de _landforms_.
+
 O índice de densidade de banhados é obtido pelo cálculo do percentual de banhados dentro de buffers de 40 ha e 400 ha em cada célula de 30 m.
 O cálculo do valor de banhados envolve ainda a avaliação de manchas irregulares de áreas úmidas (_wetland patchiness_) na paisagem, que leva em conta a distribuição irregular de áreas úmidas de tamanho reduzido.
+
 Por fim, em áreas muito planas de regiões costeiras, __foi incluído ainda um componente adicional de diversidade de solos__, que gera uma informação em escala mais fina para identificar variações em áreas planas de alta diversidade nas características do solo.
 
 A combinação dos índices de variedade de __landforms__, amplitude altitudinal, valor de banhado e diversidade de solos descritos acima gera o __índice de diversidade da paisagem__.
@@ -72,9 +75,10 @@ Esse índice pondera a variedade de _landforms_ com peso maior, sendo ela o dobr
 
 A conectividade local permite estimar o grau de permeabilidade (ou reciprocamente o grau de resistência) em torno de cada célula avaliada.
 O algoritmo utilizado mede a conectividade de uma célula focal com o seu vizinho ecológico quando a célula é vista como uma fonte de movimento radiando em todas as direções.
+
 O pressuposto é de que a permeabilidade de duas células adjacentes aumenta quando a sua similaridade ecológica aumenta.
 
-A partir de um mapa de uso e cobertura do solo, incluindo a presença de estradas, é realizada uma simplificação dos tipos de uso em componentes principais da paisagem e determinado pesos de resistência para cada categoria, nos quais áreas naturais apresentam o valor mínimo, e áreas com intervenção antrópica intensa, o valor máximo. 
+A partir de um mapa de uso e cobertura do solo, incluindo a presença de estradas, foi realizada uma simplificação dos tipos de uso em componentes principais da paisagem e determinado pesos de resistência para cada categoria, nos quais áreas naturais apresentam o valor mínimo, e áreas com intervenção antrópica intensa, o valor máximo. 
 
 As categorias principais de componentes da paisagem foram definidas como: 
 
@@ -108,11 +112,13 @@ A metodologia descrita indica, para cada configuração geofísica, sítios que 
 
  <!-- As atividades previstas para o projeto serão divididas em duas etapas: a primeira se refere à aplicação da metodologia de mapeamento descrita acima; e a segunda corresponde ao refinamento e adaptação dela para a realidade dos diversos biomas brasileiros, que será feita a partir de discussões com especialistas. A partir da metodologia proposta, serão realizadas reuniões internas com a equipe e workshops com especialistas nas temáticas do projeto e com experiência em diversos biomas do Brasil para discussão da metodologia e sugestão de refinamento para a sua melhoria. Esses workshops terão como objetivo refinar a metodologia de forma que ela seja mais adequada às características dos ecossistemas e particularidades da região. Com base nas discussões com o grupo de especialistas, se espera incorporar possíveis novos elementos (variáveis) e validar a metodologia para o Brasil. O processo consistirá, portanto, da aplicação da abordagem desenvolvida, análise dos métodos, avaliação, complementação e validação dos resultados, e geração de mapas de áreas resilientes e conectadas em biomas brasileiros. --> 
 
+<!--
 ## Conectividade regional 
 
-A conectividade regional...
+A conectividade regional é uma análise complementar que busca encontrar áreas conectadas entre biomas, 
 
 A conectividade baseada em teoria de circuitos utiliza um marco conceitual originário da teoria de circuitos (elétricos) e consegue propor diferentes caminhos de menor resistência por onde a "corrente" (o fluxo entre áreas) pode passar. 
 Esta abordagem detecta áreas onde esta corrente se veria __concentrada__ pela configuração espacial da paisagem (por exemplo, através de uma barra ou um estreito) ou a presença de áreas de alta resistência, e áreas onde o fluxo seria __difuso__ (por exemplo, em áreas contíguas de baixa resistência, onde o fluxo pode acontecer em qualquer direção e com menor intensidade).
 
 Nesta abordagem, áreas com alta resistência--onde o fluxo seria impedido--devem ser diferenciadas das áreas de baixa resistência onde o fluxo é baixo por ter se dispersado. 
+-->
