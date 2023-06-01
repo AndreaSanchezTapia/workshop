@@ -5,7 +5,7 @@
 As mudanças no clima modificam ambientes naturais e pressionam espécies a se adaptarem às novas condições ambientais ou alterarem suas distribuições espaciais para locais adequados climaticamente.
 A identificação de locais com adequabilidade climática para sustentar a biodiversidade no futuro de mudanças climáticas é imprescindível para o planejamento sistemático de ações de conservação e restauração.
 
-O __objetivo__ principal do projeto é __mapear sítios resilientes às mudanças climáticas__, que permitam a movimentação da biodiversidade na busca de áreas mais climaticamente adequadas.
+O __objetivo__ principal do projeto _Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros_ é __mapear sítios resilientes às mudanças climáticas__, que permitam a movimentação da biodiversidade na busca de áreas mais climaticamente adequadas.
 
 O termo _áreas resilientes_ indica locais que apresentam condições necessárias para que espécies e processos ecológicos persistam às mudanças climáticas regionais, definidos por sua alta diversidade microclimática, grau de conservação e conectividade. 
 

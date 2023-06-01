@@ -13,13 +13,12 @@ book:
     - metodologia.qmd
     - implementacao.qmd
     - resultados.qmd
-    - oficina.qmd
     - references.qmd
   page-navigation: true
   favicon: figs/TNC.png
 bibliography: bibliografia.bib
 csl: citation_style.csl
-
+lang: pt-br
 format:
   html:
     theme: cosmo
