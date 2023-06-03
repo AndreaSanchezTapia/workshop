@@ -188,7 +188,7 @@ A partir das classificações de todas as variáveis anteriores podemos gerar um
 |245| 5|
 |251| 51|
 |1000| 39|
-:Combinações entre as variáveis para classificar as formas de relevo#tbl-combinacoes
+:Combinações entre as variáveis para classificar as formas de relevo {#tbl-combinacoes}
 
 A classificação final de landforms se encontra na @tbl-landforms.
 
@@ -209,6 +209,7 @@ A classificação final de landforms se encontra na @tbl-landforms.
 |43 | Cool Footslope  |
 |44 |Warm Sideslope|
 : Códigos das formas de relevo obtidas após classificação das variáveis {#tbl-landforms}
+
 <!-- Seria interessante algumas figuras de exemplos de landforms dentro dos biomas!!-->
 ##### Variedade de Formas de relevo
 Para utilizar no cálculo de **diversidade da paisagem**, calculamos a variedade de formas de relevo como a soma dos diferentes tipos de formas, dentro de um _kernel_ circular da célula focal. O tamanho do raio do kernel foi definido calculando a variedade em diferentes raios (2, 5, 7, 10, 15, 20 células) e calculando o ganho de variedade a cada aumento de raio. O raio escolhido foi aquele que o subsequente não adicionou variedade. Desta forma, o raio representa o nível de resolução da paisagem que captura o máximo de variedade de landforms. Raios maiores podem aumentar a variedade, mas devido a mudança de paisagem. Assim, o raio escolhido foi de 5 células de raio (450 metros) para todo o Brasil.
@@ -246,6 +247,7 @@ $$
 Z_{densidade}=\frac {{{(Z_{local}}{\times2)}}+{Z_{regional}}}{3}
 $$
 Ao compararmos esse resultado com a camada de contagem regional, podemos identificar os locais onde os valores para densidade ($Z_{densidade}$) são menores que os valores de contagem ($Z_{contagem}$) e calculamos a média para esses pixels, novamente dando mais peso ao valores de densidade:
+
 $$
 Z_{banhado}=\frac {{{(Z_{densidade}}{\times3)}}+{Z_{contagem}}}{4}
 $$
