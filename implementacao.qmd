@@ -67,7 +67,7 @@ Desta forma, os valores do raster final estão no formato **GGEE**, onde **GG** 
 -->
 
 ## Resiliência da Paisagem
-A Resiliência da Paisagem foi calculada como a média entre os valores padronizados (${Z}$) de [__Diversidade da Paisagem__](#diversidade-da-paisagem) e [__Conectividade Local__](#conectividade-local). Todas as imagens utilizadas para o cálculo de Resiliência estão na escala de 90 metros e foram reprojetadas para o _DATUM WGS84_.
+A Resiliência da Paisagem foi calculada como a média entre os valores padronizados (${Z}$) de [__Diversidade da Paisagem__](#diversidade-da-paisagem) e [__Conectividade Local__](#conectividade-local). Todas as imagens utilizadas para o cálculo de Resiliência estão na escala de 90 metros e foram reprojetadas para o _DATUM_ _WGS84_.
 
 ### Diversidade da paisagem
 
@@ -116,6 +116,7 @@ $$
 O índice de umidade é a média do índice dentro de um _kernel_ circular de uma célula de raio determinado. O tamanho do raio foi escolhido visualmente para suavizar o índice, mas representando bem a distribuição dos cursos d'água.
 
 Classificamos como áreas úmidas somente regiões que apresentassem um valor do índice de umidade acima de 3000 e definimos esse valor para que visualmente pudessemos capturar a distribuição dos cursos d'água sem superestimar outras áreas planas. Porém, esse corte do índice não consegue classificar bem corpos de água com grandes extensões (Amazonas, represas e grandes lagos), por isso nós corrigimos a classificação sobrepondo a camada do índice de umidade com a camada de águas do MapBiomas.
+
 ##### Combinando as variáveis e Classificando as formas de relevo
 A partir das classificações de todas as variáveis anteriores podemos gerar um código representativo para combinar todas elas. Começamos multiplicando índices de umidade por 1000, aspect por 100, TPI por 10 e slope por 1. Dessa forma, podemos classificar os tipos de formas de relevo que são melhor representadas pelas diferenças em cada variável. Por exemplo, o código 11 representa áreas de baixa inclinação do relevo e uma posição do relevo mais alta que o entorno, sendo portanto um topo de montanha (Summit). No entanto, alguns códigos tiveram que ser bem inspecionados para separar alguns tipos de landforms como Sideslopes de Valleys e Toeslopes @tbl-combinacoes.
 
@@ -214,7 +215,9 @@ A classificação final de landforms se encontra na @tbl-landforms.
 ##### Variedade de Formas de relevo
 Para utilizar no cálculo de **diversidade da paisagem**, calculamos a variedade de formas de relevo como a soma dos diferentes tipos de formas, dentro de um _kernel_ circular da célula focal. O tamanho do raio do kernel foi definido calculando a variedade em diferentes raios (2, 5, 7, 10, 15, 20 células) e calculando o ganho de variedade a cada aumento de raio. O raio escolhido foi aquele que o subsequente não adicionou variedade. Desta forma, o raio representa o nível de resolução da paisagem que captura o máximo de variedade de landforms. Raios maiores podem aumentar a variedade, mas devido a mudança de paisagem. Assim, o raio escolhido foi de 5 células de raio (450 metros) para todo o Brasil.
 Por fim, calculamos os valores de Z para cada pixel ($Z_{pixel}$) ao subtrair o valor da média ($\mu$) e dividindo o resultado pelo desvio padrão ($\sigma$), como mostrado na fórmula a seguir:
-$$Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}$$
+$$
+Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}
+$$
 Os cálculos de $Z$ foram feitos dentro de cada classificação de **regiões eco-geológicas** usando as médias e desvios padrões dentro de cada uma das classes.
 
 #### Amplitude Altitudinal
@@ -281,7 +284,13 @@ Os pixels do mapa consolidado de cobertura do solo, já incluindo as estradas pa
 : Valores de resistência para cada tipo de cobertura por bioma {#tbl-resistencia}
 
 
-Depois de atribuídos os valores de resistência, aplicamos à superfície gerada a função Kernel de decaimento linear. Esta análise considerou, numa janela móvel de 23 pixels, o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior um sobre outro do que pixels mais distantes. Desta maneira, a função Kernel nos auxilia na tarefa de encontrar os melhores caminhos de deslocamento na paisagem, ou seja, aqueles caminhos que oferecem menor resistência.
+Depois de atribuídos os valores de resistência, aplicamos à superfície gerada a função Kernel de decaimento linear. Esta análise considerou, numa janela móvel de 23 pixels (~2070m), o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior um sobre outro do que pixels mais distantes. Desta maneira, a função Kernel nos auxilia na tarefa de encontrar os melhores caminhos de deslocamento na paisagem, ou seja, aqueles caminhos que oferecem menor resistência.
+
+Por fim, calculamos os valores de Z para cada pixel ($Z_{pixel}$) ao subtrair o valor da média ($\mu$) e dividindo o resultado pelo desvio padrão ($\sigma$) e multiplicando tudo por -1, como mostrado na fórmula a seguir:
+$$
+Z_{pixel}= \left(\frac {X_{pixel}-\mu} {\sigma}\right) \times -1
+$$
+Os cálculos de $Z$ foram feitos dentro de cada classificação de **regiões eco-geológicas** usando as médias e desvios padrões dentro de cada uma das classes. Nós multiplicamos o valores por -1 por considerarmos que a conectividade local é o inverso dos valores de resistência suavizados pelo _kernel_.
 
 
 <!-- Os dados espaciais primários para calcular a superfície de resistência foram a camada de cobertura do solo fornecida pelo MapBiomas (coleção 7 – ano 2021) e a base de estradas fornecida pelo IBGE (BCIM250 de 2021). Os seguintes passos foram realizados:
@@ -292,12 +301,12 @@ Depois de atribuídos os valores de resistência, aplicamos à superfície gerad
 5.	Depois de atribuídos os valores de resistência, usando a ferramenta “Focal Statistics” do ArcGis 10.5, foi calculada o valor médio do pixel focal, em um raio de 23 pixels, aplicando a função de Kernel, com decaimento linear. Esta análise considera o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior um sobre o outro do que pixels mais distantes -->
 
 
-#### Filtro de kernel como _proxy_ da conectividade local
-
-Um filtro de _kernel_ de 23 x 23 píxeis (~2070m) foi aplicado ao raster de resistências.
-
-
 ### Combinando diversidade da paisagem e conectividade local: resiliência
+ A **Resiliência da Paisagem** é definida como a capacidade de um local em mantem diversidade de espécies e funções ecosistêmicas perante as pressões impostas por mudanças climáticas. Ela foi calculada como a média entre os valores padronizados (${Z}$) de [__Diversidade da Paisagem__](#diversidade-da-paisagem) e [__Conectividade Local__](#conectividade-local).
+ 
+ Para melhorar a visualização e comparação entre os valores de conectividade e diversidade da paisagem calculamos os quartis de 5% e 95% e limitamos os valores maiores que 95% e menores que 5%.
+ 
+
 
 <!--
 ## Conectividade regional
