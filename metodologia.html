@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.361">
+<meta name="generator" content="quarto-1.3.340">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Oficina: Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros - 3&nbsp; Métodos</title>
+<title>Oficina: Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros - 3&nbsp; Metodologia resumida</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,8 +77,7 @@ div.csl-indent {
     "search-more-matches-text": "mais correspondências neste documento",
     "search-clear-button-title": "Limpar",
     "search-detached-cancel-button-title": "Cancelar",
-    "search-submit-button-title": "Enviar",
-    "search-label": "Procurar"
+    "search-submit-button-title": "Enviar"
   }
 }</script>
 
@@ -96,10 +95,10 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./metodologia.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Métodos</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./metodologia.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Metodologia resumida</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -124,7 +123,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Resumo</span></a>
+ <span class="menu-text">Síntese do projeto</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -142,7 +141,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./metodologia.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Métodos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Metodologia resumida</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -177,9 +176,10 @@ div.csl-indent {
   <li><a href="#resiliência" id="toc-resiliência" class="nav-link" data-scroll-target="#resiliência"><span class="header-section-number">3.2</span> Resiliência</a>
   <ul class="collapse">
   <li><a href="#diversidade-da-paisagem" id="toc-diversidade-da-paisagem" class="nav-link" data-scroll-target="#diversidade-da-paisagem"><span class="header-section-number">3.2.1</span> Diversidade da paisagem</a></li>
-  <li><a href="#amplitude-altitudinal" id="toc-amplitude-altitudinal" class="nav-link" data-scroll-target="#amplitude-altitudinal"><span class="header-section-number">3.2.2</span> Amplitude altitudinal</a></li>
+  <li><a href="#diversidade-de-solo" id="toc-diversidade-de-solo" class="nav-link" data-scroll-target="#diversidade-de-solo"><span class="header-section-number">3.2.2</span> Diversidade de solo</a></li>
   <li><a href="#conectividade-local" id="toc-conectividade-local" class="nav-link" data-scroll-target="#conectividade-local"><span class="header-section-number">3.2.3</span> Conectividade local</a></li>
-  <li><a href="#combinando-diversidade-da-paisagem-e-conectividade-local-resiliência" id="toc-combinando-diversidade-da-paisagem-e-conectividade-local-resiliência" class="nav-link" data-scroll-target="#combinando-diversidade-da-paisagem-e-conectividade-local-resiliência"><span class="header-section-number">3.2.4</span> Combinando diversidade da paisagem e conectividade local: resiliência</a></li>
+  <li><a href="#resiliência-combinando-diversidade-da-paisagem-e-conectividade-local" id="toc-resiliência-combinando-diversidade-da-paisagem-e-conectividade-local" class="nav-link" data-scroll-target="#resiliência-combinando-diversidade-da-paisagem-e-conectividade-local"><span class="header-section-number">3.2.4</span> Resiliência: combinando diversidade da paisagem e conectividade local</a></li>
+  <li><a href="#dados-padronizados-z-scores" id="toc-dados-padronizados-z-scores" class="nav-link" data-scroll-target="#dados-padronizados-z-scores"><span class="header-section-number">3.2.5</span> Dados padronizados (<em>Z</em>-<em>scores</em>)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -189,7 +189,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Métodos</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Metodologia resumida</span></h1>
 </div>
 
 
@@ -204,11 +204,16 @@ div.csl-indent {
 
 </header>
 
-<p>A metodologia proposta para identificar sítios resilientes <span class="citation" data-cites="anderson_estimating_2014 anderson_resilient_2016 anderson_resilient_2016-1 anderson_resilient_2023">(<a href="references.html#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>, <a href="references.html#ref-anderson_resilient_2016" role="doc-biblioref">2016a</a>, <a href="references.html#ref-anderson_resilient_2016-1" role="doc-biblioref">Anderson et al. 2016b</a>, e <a href="references.html#ref-anderson_resilient_2023" role="doc-biblioref">Anderson et al. 2023</a>)</span> envolve o mapeamento das configurações geofísicas, a análise da diversidade da paisagem e da conectividade local, para, por fim, gerar o mapa de áreas resilientes. Cada uma dessas etapas é descrita a seguir.</p>
+<p>A metodologia proposta para identificar os sítios resilientes às mudanças climáticas <span class="citation" data-cites="anderson_estimating_2014 anderson_resilient_2016 anderson_resilient_2016-1 anderson_resilient_2023">(<a href="#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>, <a href="#ref-anderson_resilient_2016" role="doc-biblioref">2016a</a>, <a href="#ref-anderson_resilient_2016-1" role="doc-biblioref">Anderson et al. 2016b</a>, e <a href="#ref-anderson_resilient_2023" role="doc-biblioref">Anderson et al. 2023</a>)</span> envolve a divisão do espaço geográfico em regiões eco-geológicas, que são similares na sua geologia, geomorfologia, vulnerabilidade ao intemperismo, formação de solos e biodiversidade. Dentro de cada região são mapeadas a diversidade da paisagem e a conectividade local, que posteriomente, formam a camada de resiliência da paisagem.</p>
+<p>Os sítios com valores mais elevados de resiliência estão associados a locais com maiores níveis de biodiversidade <span class="citation" data-cites="anderson_estimating_2014">(<a href="#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>)</span>. A metodologia utilizada indica, para cada configuração geofísica, sítios que são mais prováveis de reter espécies e funções por um longo período em um futuro de mudanças no clima, possibilitando a identificação de refúgios naturais para conservação no futuro <span class="citation" data-cites="anderson_estimating_2014">(<a href="#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>)</span></p>
 <section id="regiões-eco-geológicas" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="regiões-eco-geológicas"><span class="header-section-number">3.1</span> Regiões eco-geológicas</h2>
-<p>A primeira etapa consiste em caracterizar e classificar a região de estudo em <strong>regiões eco-geológicas</strong> baseadas no meio físico e biológico. Para tal, nós utilizamos domínios geológicos e ecoregiões. Os domínios geológicos foram derivados de unidades geológicas, as quais são agrupamentos de rochas. Entretanto, devido ao alto número de categorias para o Brasil (em torno de 1350), foram utilizados os domínios geológicos (14 categorias) como agrupamentos de unidades geológicas. Zonas altitudinais não foram utilizadas, pois a variabilidade proveniente das mesmas já é considerada nas ecoregiões. Esses dados são então integrados para identificar regiões homólogas (com características similares). Tanto os domínios geológicos quanto as ecoregiões são polígonos que representam as diferentes categorias, que foram rasterizados para prosseguir com o cálculo das regiões eco-geológicas através da sequinte equação: <span class="math display">\[Regiões\ eco-geológicas = {(Ecoregiões)+(100\times Domínio \ Geológico)}\]</span> Desta forma, os valores do raster final estão no formato <strong>GGEE</strong>, onde <strong>GG</strong> representam os domínios geológicos e <strong>EE</strong> as categorias de ecoregiões.</p>
-<p>No estudo desenvolvido nos EUA o mapeamento foi feito por ecoregiões, uma vez que esses locais apresentam condições ambientais similares, especialmente relacionado a <em>landforms</em>, geologia e solos, e que compartilham conjuntos de comunidades naturais e espécies. Esse produto foi chamado de <em>geophysical settings</em>, levando em conta a geologia ou solo com zonas altitudinais. Entretanto, neste trabalho chamamos o mesmo produto de regiões eco-geológicas, visto que a geofísica investiga características não utilizadas no trabalho (elétricas, térmicas, magnéticas, gravitacionais e sísmicas). <!-- Será que isso aqui fica em metodologia? A parte de nomenclatura a gente menciona? --></p>
+<p>As regiões eco-geológicas são agrupamentos dos domínios geológicos e ecoregiões, que descrevem as variações geológicas e geomorfológicas promotoras da formação das paisagens, das redes de drenagem, da pedologia e que atuam como base de sustentação da biodiversidade que evoluiu nessas regiões, representadas pelas ecoregiões. A identificação de áreas resilientes às mudanças climáticas dentro das regiões eco-geológicas permitirá o mapeamento de locais que suportarão a biodiversidade, sem viéses geo-biológicos.</p>
+<p>Os domínios geológicos são grupos de litoestratigrafia semelhantes em relação ao posicionamento tectônico, nível crustal, classe de rocha, expressão geomorfológica, entre outros […]. Os domínios geológicos são agrupamentos hierarquicos superiores às unidades geológicas, que são agrupamentos de rochas. Portanto, os diferentes domínios geológicos descrevem variações no tipo de rocha, potencial de sofrer intemperismo e idade geológica. <!--Zonas altitudinais não foram utilizadas, pois a variabilidade proveniente das mesmas já é considerada nas ecoregiões. --></p>
+<p>As ecoregiões são regionalizações biogeográficas abaixo hierarquicamente dos domínios biogeográficos e biomas, representando agrupamentos espaciais da biodiversidade, numa escala regional, sustentando seus processos ecológicos principais [Olson et al . 2001; Dinerstein et al 2017 (veja material suplementar)].</p>
+<p>Esses dados são então integrados para identificar regiões homólogas (com características similares). Tanto os domínios geológicos quanto as ecoregiões são polígonos que representam as diferentes categorias, que foram rasterizados para prosseguir com o cálculo das regiões eco-geológicas através da sequinte equação: <span class="math display">\[Regiões\ eco-geológicas = {(Ecoregiões)+(100\times Domínio \ Geológico)}\]</span> Desta forma, os valores do raster final estão no formato <strong>GGEE</strong>, onde <strong>GG</strong> representam os domínios geológicos e <strong>EE</strong> as categorias de ecoregiões.</p>
+<!--No estudo desenvolvido nos EUA o mapeamento foi feito por ecoregiões, uma vez que esses locais apresentam condições ambientais similares, especialmente relacionado a _landforms_, geologia e solos, e que compartilham conjuntos de comunidades naturais e espécies. Esse produto foi chamado de _geophysical settings_, levando em conta a geologia ou solo com zonas altitudinais. Entretanto, neste trabalho chamamos o mesmo produto de regiões eco-geológicas, visto que a geofísica investiga características não utilizadas no trabalho (elétricas, térmicas, magnéticas, gravitacionais e sísmicas).-->
+<!-- Será que isso aqui fica em metodologia? A parte de nomenclatura a gente menciona? -->
 <!-- As configurações geofísicas são definidas como a combinação de uma zona altitudinal e da classe geológica (rocha ou substrato superficial).-->
 <!-- Como não usamos zona altitudinal, talvez seja interessante deixar fora. -->
 <!-- As zonas altitudinais e as classes geológicas foram desenvolvidas para corresponder com mudanças perceptíveis em comunidades e espécies.  -->
@@ -216,10 +221,13 @@ div.csl-indent {
 </section>
 <section id="resiliência" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="resiliência"><span class="header-section-number">3.2</span> Resiliência</h2>
-<p>A segunda etapa consiste nas estimativas de resiliência dos sítios. Para estimar a resiliência de um sítio, é necessário estimar a <a href="#diversidade-da-paisagem"><strong>diversidade da paisagem</strong></a> e a <a href="#conectividade-local"><strong>conectividade local</strong></a> para cada célula de 30 m. O resultado dessas análises é combinado para então estimar o valor de resiliência para cada local.</p>
+<p>A segunda etapa consiste nas estimativas de resiliência dos sítios. Para estimar a resiliência de um sítio, é necessário estimar a <a href="#diversidade-da-paisagem"><strong>diversidade da paisagem</strong></a> e a <a href="#conectividade-local"><strong>conectividade local</strong></a> para cada célula de 90 m. O resultado dessas análises é combinado para então estimar o valor de resiliência para cada local.</p>
 <section id="diversidade-da-paisagem" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="diversidade-da-paisagem"><span class="header-section-number">3.2.1</span> Diversidade da paisagem</h3>
-<p>A diversidade da paisagem está relacionada à variedade de microclimas em um determinado local. A análise de diversidade da paisagem resume informações relacionadas a: (a) variedade de landforms, (b) amplitude altitudinal, (c) densidade de banhados ou áreas úmidas (<em>wetlands</em>) e (d) propriedades do solo em um determinado local. A variedade de <em>landforms</em> diz respeito à variedade de componentes naturais do terreno criados pela topografia. Sua avaliação é baseada em um modelo de <em>landforms</em>, derivado de um modelo digital de elevação (DEM) com resolução de 30 m, que classifica a superfície em diversas categorias, como por exemplo:</p>
+<p>A diversidade da paisagem está relacionada à variedade de microclimas em um determinado local. A análise de diversidade da paisagem resume informações relacionadas a: (a) variedade de <em>landforms</em>, (b) amplitude altitudinal, (c) densidade de banhados ou áreas úmidas (<em>wetlands</em>) e (d) propriedades do solo em um determinado local.</p>
+<section id="variedade-de-landforms" class="level4" data-number="3.2.1.1">
+<h4 data-number="3.2.1.1" class="anchored" data-anchor-id="variedade-de-landforms"><span class="header-section-number">3.2.1.1</span> Variedade de <em>landforms</em></h4>
+<p>A variedade de <em>landforms</em> diz respeito à variedade de componentes naturais do terreno criados pela topografia. Sua avaliação é baseada em um modelo de <em>landforms</em>, derivado de um modelo digital de elevação (DEM) com resolução de 90 m, que classifica a superfície em diversas categorias, como por exemplo:</p>
 <ul>
 <li>precipícios e áreas íngremes -<em>cliff and steep slope</em></li>
 <li>topos de montanha e divisores de águas (<em>summit and ridge-top</em>)</li>
@@ -227,17 +235,23 @@ div.csl-indent {
 <li>colinas baixas (<em>low hill</em>)</li>
 <li>áreas planas de terras baixas (<em>dry flat</em>), entre outros.</li>
 </ul>
-<p>A classificação de <em>landforms</em> leva em conta a combinação de informações sobre <strong>inclinação, orientação, posição no terreno e acumulação de umidade</strong> (<em>slope</em>, <em>aspect</em>, <em>land position</em>, <em>moisture accumulation</em>), que corresponde a ambientes topográficos locais com combinações distintas de umidade, radiação e deposição.</p>
-<p>A <strong>diversidade da paisagem</strong> é calculada pelo número de <em>landforms</em> dentro de uma área circular de 40 ha no entorno de cada célula de 30 m.</p>
-<p><!-- checar isto! --></p>
+<p>A classificação de <em>landforms</em> leva em conta a combinação de informações sobre <strong>inclinação, orientação, posição no terreno e acumulação de umidade</strong> (<em>slope</em>, <em>aspect</em>, <em>land position</em> e <em>moisture accumulation</em>), que correspondem a ambientes topográficos locais com combinações distintas de umidade, radiação e deposição.</p>
+<p>A <strong>diversidade da paisagem</strong> é calculada pelo número de <em>landforms</em> dentro de uma área circular de 450 m no entorno de cada célula de 90 m.</p>
 </section>
-<section id="amplitude-altitudinal" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="amplitude-altitudinal"><span class="header-section-number">3.2.2</span> Amplitude altitudinal</h3>
-<p>A amplitude altitudinal é determinada a partir do DEM, tabulando a amplitude em uma área circular de 40 ha no entorno de cada célula de 30 m. A amplitude altitudinal considerada no estudo corresponde ao componente não correlacionado (os resíduos de uma regressão linear simples) com a diversidade de <em>landforms</em>.</p>
-<p>Para áreas extremamente planas, nas quais a variedade de <em>landforms</em> e a amplitude altitudinal não permitem discriminar de forma correta células equivalentes, foram avaliadas a densidade de áreas úmidas/banhados (<em>wetlands</em>) e a diversidade de solos. A densidade de banhados é incluída como um indicador em escala mais fina de características microtopográficas não capturadas nas classes do modelo de <em>landforms</em>.</p>
-<p>O índice de densidade de banhados é obtido pelo cálculo do percentual de banhados dentro de buffers de 40 ha e 400 ha em cada célula de 30 m. O cálculo do valor de banhados envolve ainda a avaliação de manchas irregulares de áreas úmidas (<em>wetland patchiness</em>) na paisagem, que leva em conta a distribuição irregular de áreas úmidas de tamanho reduzido.</p>
+<section id="amplitude-altitudinal" class="level4" data-number="3.2.1.2">
+<h4 data-number="3.2.1.2" class="anchored" data-anchor-id="amplitude-altitudinal"><span class="header-section-number">3.2.1.2</span> Amplitude altitudinal</h4>
+<p>A amplitude altitudinal é determinada a partir do DEM, tabulando a amplitude em uma área circular de 450 m no entorno de cada célula de 90 m. A amplitude altitudinal considerada no estudo corresponde ao componente não correlacionado com a diversidade de <em>landforms</em> (os resíduos de uma regressão linear simples).</p>
+</section>
+<section id="densidade-de-banhados" class="level4" data-number="3.2.1.3">
+<h4 data-number="3.2.1.3" class="anchored" data-anchor-id="densidade-de-banhados"><span class="header-section-number">3.2.1.3</span> Densidade de banhados</h4>
+<p>Para áreas extremamente planas, nas quais a variedade de <em>landforms</em> e a amplitude altitudinal não permitem discriminar de forma correta células equivalentes, foram avaliadas a densidade de banhados/áreas úmidas (<em>wetlands</em>) e a diversidade de solos (descrito abaixo). A densidade de banhados é incluída como um indicador em escala mais fina de características microtopográficas não capturadas nas classes do modelo de <em>landforms</em>.</p>
+<p>O índice de densidade de banhados é obtido pelo cálculo do percentual de banhados dentro de buffers de 40 ha (escala local) e 400 ha (escala regional) em cada célula de 30 m. O cálculo do valor de banhados envolve ainda a avaliação de manchas irregulares de áreas úmidas (<em>wetland patchiness</em>) na paisagem, que leva em conta a distribuição irregular de áreas úmidas de tamanho reduzido.</p>
+</section>
+</section>
+<section id="diversidade-de-solo" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="diversidade-de-solo"><span class="header-section-number">3.2.2</span> Diversidade de solo</h3>
 <p>Por fim, em áreas muito planas de regiões costeiras, <strong>foi incluído ainda um componente adicional de diversidade de solos</strong>, que gera uma informação em escala mais fina para identificar variações em áreas planas de alta diversidade nas características do solo.</p>
-<p>A combinação dos índices de variedade de <strong>landforms</strong>, amplitude altitudinal, valor de banhado e diversidade de solos descritos acima gera o <strong>índice de diversidade da paisagem</strong>. Esse índice pondera a variedade de <em>landforms</em> com peso maior, sendo ela o dobro do peso das demais variáveis:</p>
+<p>A combinação dos índices de variedade de <em>landforms</em>, amplitude altitudinal, valor de banhado e diversidade de solos descritos acima gera o <strong>índice de diversidade da paisagem</strong>. Esse índice pondera a variedade de <em>landforms</em> com peso maior, sendo ela o dobro do peso das demais variáveis:</p>
 <p><!-- ${diversidade\_da\_paisagem} = 2\times{variedade\_de\_landforms} + \\
 {amplitude\_altitudinal} + \\
 {wetland\_density} + \\
@@ -247,25 +261,27 @@ div.csl-indent {
 <h3 data-number="3.2.3" class="anchored" data-anchor-id="conectividade-local"><span class="header-section-number">3.2.3</span> Conectividade local</h3>
 <p>A conectividade local permite estimar o grau de permeabilidade (ou reciprocamente o grau de resistência) em torno de cada célula avaliada. O algoritmo utilizado mede a conectividade de uma célula focal com o seu vizinho ecológico quando a célula é vista como uma fonte de movimento radiando em todas as direções.</p>
 <p>O pressuposto é de que a permeabilidade de duas células adjacentes aumenta quando a sua similaridade ecológica aumenta.</p>
-<p>A partir de um mapa de uso e cobertura do solo, incluindo a presença de estradas, foi realizada uma simplificação dos tipos de uso em componentes principais da paisagem e determinado pesos de resistência para cada categoria, nos quais áreas naturais apresentam o valor mínimo, e áreas com intervenção antrópica intensa, o valor máximo.</p>
+<p>A partir de um mapa de uso e cobertura do solo, incluindo a presença de infraestruturas energéticas e de transporte, foi realizada uma simplificação dos tipos de uso em componentes principais da paisagem e determinado pesos de resistência para cada categoria, nos quais áreas naturais apresentam o valor mínimo, e áreas com intervenção antrópica intensa, o valor máximo.</p>
 <p>As categorias principais de componentes da paisagem foram definidas como:</p>
 <ul>
-<li>áreas naturais (florestas, banhados, campos),</li>
+<li>áreas naturais (florestas, banhados, campos, etc.),</li>
 <li>áreas agrícolas ou modificadas (incluindo áreas improdutivas não-naturais)</li>
 <li>áreas urbanizadas (de baixa ou alta intensidade).</li>
 </ul>
 <p>A conectividade local é medida através da análise de resistência de cada célula. Nesse contexto, a dispersão teórica de uma espécie (ou processo) a partir de uma célula focal é uma função dos valores de resistência das células vizinhas e suas distâncias com relação à célula focal, até uma distância máxima de 3 km. A nota de conectividade local para uma célula é igual à área de dispersão, levando em conta a resistência dividida pela área de dispersão teórica se não houvesse resistência.</p>
 </section>
-<section id="combinando-diversidade-da-paisagem-e-conectividade-local-resiliência" class="level3" data-number="3.2.4">
-<h3 data-number="3.2.4" class="anchored" data-anchor-id="combinando-diversidade-da-paisagem-e-conectividade-local-resiliência"><span class="header-section-number">3.2.4</span> Combinando diversidade da paisagem e conectividade local: resiliência</h3>
+<section id="resiliência-combinando-diversidade-da-paisagem-e-conectividade-local" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="resiliência-combinando-diversidade-da-paisagem-e-conectividade-local"><span class="header-section-number">3.2.4</span> Resiliência: combinando diversidade da paisagem e conectividade local</h3>
 <p>O valor de resiliência de um sítio é determinado pela combinação da diversidade da paisagem e da conectividade local</p>
-<p>(valor de resiliência = (diversidade da paisagem + conectividade local)/2),</p>
-<p>utilizando dados padronizados (<em>z-scores</em>).</p>
-<p>O resultado final é um mapa com grid de 30 m, constando os valores estimados de resiliência para cada local.</p>
-<p>O mapeamento final dos sítios resilientes é feito por <a href="#configurações-geofísicas"><strong>configurações geofísicas</strong></a> (item acima) dentro de ecoregiões. Isso garante a inclusão de condições físicas e ambientais distintas e permite capturar variações na composição da biota associada. Nesse sentido, <strong>a resiliência é comparada dentro de cada configuração e não entre configurações geofísicas</strong>.</p>
+<p><span class="math display">\[
+Resiliência = \frac{ \left(Diversidade\  da\  paisagem+{Conectividade}\right)}{2}
+\]</span></p>
+</section>
+<section id="dados-padronizados-z-scores" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="dados-padronizados-z-scores"><span class="header-section-number">3.2.5</span> Dados padronizados (<em>Z</em>-<em>scores</em>)</h3>
+<p>O resultado final é um mapa com grid de 90 m, constando os valores estimados de resiliência para cada local.</p>
+<p>O mapeamento final dos sítios resilientes é feito por <a href="#configurações-eco-geológicas"><strong>configurações eco-geológicas</strong></a> (item acima). Isso garante a inclusão de condições físicas e ambientais distintas e permite capturar variações na composição da biota associada. Nesse sentido, <strong>a resiliência é comparada dentro de cada configuração e não entre configurações eco-geológicas</strong>.</p>
 <p>O mapa final de resiliência indica locais com maior ou menor resiliência comparados ao valor médio da região avaliada. São considerados valores médios aqueles com -0,5 a 0,5 desvios padrão ao redor da média.</p>
-<p>Os sítios com valores mais elevados de resiliência estão associados a locais com maiores níveis de biodiversidade <span class="citation" data-cites="anderson_estimating_2014">(<a href="references.html#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>)</span>. A metodologia descrita indica, para cada configuração geofísica, sítios que são mais prováveis de reter espécies e funções por um maior período sob mudanças no clima, possibilitando a identificação de refúgios naturais para conservação no futuro <span class="citation" data-cites="anderson_estimating_2014">(<a href="references.html#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>)</span></p>
-<p><!-- As atividades previstas para o projeto serão divididas em duas etapas: a primeira se refere à aplicação da metodologia de mapeamento descrita acima; e a segunda corresponde ao refinamento e adaptação dela para a realidade dos diversos biomas brasileiros, que será feita a partir de discussões com especialistas. A partir da metodologia proposta, serão realizadas reuniões internas com a equipe e workshops com especialistas nas temáticas do projeto e com experiência em diversos biomas do Brasil para discussão da metodologia e sugestão de refinamento para a sua melhoria. Esses workshops terão como objetivo refinar a metodologia de forma que ela seja mais adequada às características dos ecossistemas e particularidades da região. Com base nas discussões com o grupo de especialistas, se espera incorporar possíveis novos elementos (variáveis) e validar a metodologia para o Brasil. O processo consistirá, portanto, da aplicação da abordagem desenvolvida, análise dos métodos, avaliação, complementação e validação dos resultados, e geração de mapas de áreas resilientes e conectadas em biomas brasileiros. --></p>
 <!--
 ## Conectividade regional 
 
@@ -278,7 +294,7 @@ Nesta abordagem, áreas com alta resistência--onde o fluxo seria impedido--deve
 -->
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
 <div id="ref-anderson_resilient_2023" class="csl-entry" role="listitem">
 Anderson, M. G., M. Clark, A. P. Olivero, A. R. Barnett, K. R. Hall, M. W. Cornett, M. Ahlering, M. Schindel, B. Unnasch, C. Schloss, e D. R. Cameron. 2023. <a href="https://doi.org/10.1073/pnas.2204434119">A Resilient and Connected Network of Sites to Sustain Biodiversity under a Changing Climate</a>. Proceedings of the National Academy of Sciences 120:e2204434119.
 </div>
