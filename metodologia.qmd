@@ -67,7 +67,7 @@ A densidade de banhados é incluída como um indicador em escala mais fina de ca
 O índice de densidade de banhados é obtido pelo cálculo do percentual de banhados dentro de buffers de 40 ha (escala local) e 400 ha (escala regional) em cada célula de 30 m.
 O cálculo do valor de banhados envolve ainda a avaliação de manchas irregulares de áreas úmidas (_wetland patchiness_) na paisagem, que leva em conta a distribuição irregular de áreas úmidas de tamanho reduzido.
 
-### Diversidade de solo
+#### Diversidade de solo
 Por fim, em áreas muito planas de regiões costeiras, __foi incluído ainda um componente adicional de diversidade de solos__, que gera uma informação em escala mais fina para identificar variações em áreas planas de alta diversidade nas características do solo.
 
 A combinação dos índices de variedade de _landforms_, amplitude altitudinal, valor de banhado e diversidade de solos descritos acima gera o __índice de diversidade da paisagem__.
@@ -107,7 +107,7 @@ Resiliência = \frac{ \left(Diversidade\  da\  paisagem+{Conectividade}\right)}{
 $$
 
 
-### Dados padronizados (_Z_-_scores_)
+## Dados padronizados (_Z_-_scores_)
 
 O resultado final é um mapa com grid de 90 m, constando os valores estimados de resiliência para cada local.
 
