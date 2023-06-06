@@ -25,7 +25,7 @@ No estudo desenvolvido nos EUA o mapeamento foi feito por ecoregiões, uma vez q
 ## Resiliência
 
 A segunda etapa consiste nas estimativas de resiliência dos sítios.
-Para estimar a resiliência de um sítio, é necessário estimar a [__diversidade da paisagem__](#diversidade-da-paisagem) e a [__conectividade local__](#conectividade-local) para cada célula de 30 m.
+Para estimar a resiliência de um sítio, é necessário estimar a [__diversidade da paisagem__](#diversidade-da-paisagem) e a [__conectividade local__](#conectividade-local) para cada célula de 90 metros.
 O resultado dessas análises é combinado para então estimar o valor de resiliência para cada local.
 
 
@@ -33,9 +33,10 @@ O resultado dessas análises é combinado para então estimar o valor de resili�
 
 A diversidade da paisagem está relacionada à variedade de microclimas em um determinado local.
 A análise de diversidade da paisagem resume informações relacionadas a:
-(a) variedade de landforms, (b) amplitude altitudinal, (c) densidade de banhados ou áreas úmidas (_wetlands_) e (d) propriedades do solo em um determinado local. 
+(a) variedade de landforms, (b) amplitude altitudinal, (c) densidade de banhados ou áreas úmidas (_wetlands_) e (d) propriedades do solo em um determinado local.
+#### Variedade de Landforms
 A variedade de _landforms_ diz respeito à variedade de componentes naturais do terreno criados pela topografia.
-Sua avaliação é baseada em um modelo de _landforms_, derivado de um modelo digital de elevação (DEM) com resolução de 30 m, que classifica a superfície em diversas categorias, como por exemplo:
+Sua avaliação é baseada em um modelo de _landforms_, derivado de um modelo digital de elevação (DEM) com resolução de 90 m, que classifica a superfície em diversas categorias, como por exemplo:
 
 + precipícios e áreas íngremes -_cliff and steep slope_
 + topos de montanha e divisores de águas (_summit and ridge-top_)
@@ -43,23 +44,23 @@ Sua avaliação é baseada em um modelo de _landforms_, derivado de um modelo di
 + colinas baixas (_low hill_)
 + áreas planas de terras baixas (_dry flat_), entre outros.
 
-A classificação de _landforms_ leva em conta a combinação de informações sobre __inclinação, orientação, posição no terreno e acumulação de umidade__ (_slope_, _aspect_, _land position_, _moisture accumulation_), que corresponde a ambientes topográficos locais com combinações distintas de umidade, radiação e deposição.
+A classificação de _landforms_ leva em conta a combinação de informações sobre __inclinação, orientação, posição no terreno e acumulação de umidade__ (_slope_, _aspect_, _land position_ e _moisture accumulation_), que correspondem a ambientes topográficos locais com combinações distintas de umidade, radiação e deposição.
 
-A __diversidade da paisagem__ é calculada pelo número de _landforms_ dentro de uma área circular de 40 ha no entorno de cada célula de 30 m.
+A __diversidade da paisagem__ é calculada pelo número de _landforms_ dentro de uma área circular de 450 metros no entorno de cada célula de 90 metros.
 
- <!-- checar isto! --> 
 
-### Amplitude altitudinal
+#### Amplitude altitudinal
 
-A amplitude altitudinal é determinada a partir do DEM, tabulando a amplitude em uma área circular de 40 ha no entorno de cada célula de 30 m.
+A amplitude altitudinal é determinada a partir do DEM, tabulando a amplitude em uma área circular de 450 metros no entorno de cada célula de 90 metros.
 A amplitude altitudinal considerada no estudo corresponde ao componente não correlacionado (os resíduos de uma regressão linear simples) com a diversidade de _landforms_.
 
+#### Densidade de banhados
 Para áreas extremamente planas, nas quais a variedade de _landforms_ e a amplitude altitudinal não permitem discriminar de forma correta células equivalentes, foram avaliadas a densidade de áreas úmidas/banhados (_wetlands_) e a diversidade de solos. 
 A densidade de banhados é incluída como um indicador em escala mais fina de características microtopográficas não capturadas nas classes do modelo de _landforms_.
 
 O índice de densidade de banhados é obtido pelo cálculo do percentual de banhados dentro de buffers de 40 ha e 400 ha em cada célula de 30 m.
 O cálculo do valor de banhados envolve ainda a avaliação de manchas irregulares de áreas úmidas (_wetland patchiness_) na paisagem, que leva em conta a distribuição irregular de áreas úmidas de tamanho reduzido.
-
+### Diversidade de solo
 Por fim, em áreas muito planas de regiões costeiras, __foi incluído ainda um componente adicional de diversidade de solos__, que gera uma informação em escala mais fina para identificar variações em áreas planas de alta diversidade nas características do solo.
 
 A combinação dos índices de variedade de __landforms__, amplitude altitudinal, valor de banhado e diversidade de solos descritos acima gera o __índice de diversidade da paisagem__.
@@ -94,15 +95,18 @@ A nota de conectividade local para uma célula é igual à área de dispersão, 
 
 O valor de resiliência de um sítio é determinado pela combinação da diversidade da paisagem e da conectividade local
 
-(valor de resiliência = (diversidade da paisagem + conectividade local)/2),
+$$
+Resiliência = \frac{ \left(Diversidade\  da\  paisagem+{Conectividade}\right)}{2}
+$$
 
-utilizando dados padronizados (_z-scores_).
 
-O resultado final é um mapa com grid de 30 m, constando os valores estimados de resiliência para cada local.
+### Dados padronizados (_Z_-_scores_)
 
-O mapeamento final dos sítios resilientes é feito por [__configurações geofísicas__](#configurações-geofísicas) (item acima) dentro de ecoregiões.
+O resultado final é um mapa com grid de 90 m, constando os valores estimados de resiliência para cada local.
+
+O mapeamento final dos sítios resilientes é feito por [__configurações eco-geológicas__](#configurações-eco-geológicas) (item acima) dentro de ecoregiões.
 Isso garante a inclusão de condições físicas e ambientais distintas e permite capturar variações na composição da biota associada.
-Nesse sentido, __a resiliência é comparada dentro de cada configuração e não entre configurações geofísicas__.
+Nesse sentido, __a resiliência é comparada dentro de cada configuração e não entre configurações eco-geológicas__.
 
 O mapa final de resiliência indica locais com maior ou menor resiliência comparados ao valor médio da região avaliada.
 São considerados valores médios aqueles com -0,5 a 0,5 desvios padrão ao redor da média.
