@@ -1,14 +1,17 @@
 # Métodos
 
-A metodologia proposta para identificar sítios resilientes [@anderson_estimating_2014; @anderson_resilient_2016; @anderson_resilient_2016-1; e @anderson_resilient_2023] envolve o mapeamento das configurações geofísicas, a análise da diversidade da paisagem e da conectividade local, para, por fim, gerar o mapa de áreas resilientes. 
-Cada uma dessas etapas é descrita a seguir.
+A metodologia proposta para identificar os sítios resilientes às mudanças climáticas [@anderson_estimating_2014; @anderson_resilient_2016; @anderson_resilient_2016-1; e @anderson_resilient_2023] envolve a divisão do espaço geográfico em regiões eco-geológicas, que são similares na sua geologia, geomorfologia, vulnerabilidade ao intemperismo, formação de solos e biodiversidade. Dentro de cada região são mapeadas a diversidade da paisagem e a conectividade local, que posteriomente, formam a resiliência da paisagem.
 
  
 ## Regiões eco-geológicas
 
-A primeira etapa consiste em caracterizar e classificar a região de estudo em __regiões eco-geológicas__ baseadas no meio físico e biológico. Para tal, nós utilizamos domínios geológicos e ecoregiões.
+ <!-- Acho que podemos explicar melhor o que são os domínios geológicos, o que representam no nosso estudo, quanto a caracterização das regiões, como formação de solos, intemperismo etc... Infelizmente ainda não achei uma literatura do CPRM boa para ver como fizeram e o que significa -->
+
+A primeira etapa consiste em caracterizar e classificar a região de estudo em __regiões eco-geológicas__, baseadas no meio físico e biológico. Para tal, nós utilizamos domínios geológicos e ecoregiões.
 Os domínios geológicos foram derivados de unidades geológicas, as quais são agrupamentos de rochas. Entretanto, devido ao alto número de categorias para o Brasil (em torno de 1350), foram utilizados os domínios geológicos (14 categorias) como agrupamentos de unidades geológicas.
-Zonas altitudinais não foram utilizadas, pois a variabilidade proveniente das mesmas já é considerada nas ecoregiões.
+<!--Zonas altitudinais não foram utilizadas, pois a variabilidade proveniente das mesmas já é considerada nas ecoregiões. -->
+
+Ecoregiões são regiões biogeográficas abaixo hierarquicamente de domínios biogeográficos e biomas, representando agrupamentos de biodiversidade distintos espacialmente, numa escala regional, sustentando seus processos ecológicos principais [Olson et al . 2001; Dinerstein et al 2017 (veja material suplementar)]. Desta forma, ao agruparmos domínios geológicos e ecoregiões estamos classificando variações geológicas e geomorfológicas que promovem a formação das paisagens, das redes de drenagem, da pedologia e que atuam como base de sustenção da biodiversidade que evoluiu nessas localidades, representadas pelas ecoregiões. A identificação de áreas resilientes às mudanças climáticas dentro das regiões eco-geológicas permitirá o mapeamento sem viés da diversidade geo-biológica, buscando garantir a diversidade de ambientes que mantenham a diversidade biológica e mantenham a sua capacidade evolutiva. 
 Esses dados são então integrados para identificar regiões homólogas (com características similares). Tanto os domínios geológicos quanto as ecoregiões são polígonos que representam as diferentes categorias, que foram rasterizados para prosseguir com o cálculo das regiões eco-geológicas através da sequinte equação: 
 $$Regiões\ eco-geológicas = {(Ecoregiões)+(100\times Domínio \ Geológico)}$$ 
 Desta forma, os valores do raster final estão no formato **GGEE**, onde **GG** representam os domínios geológicos e **EE** as categorias de ecoregiões.
