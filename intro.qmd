@@ -12,23 +12,24 @@ knitr::include_graphics("figs/0_team.png")
 ```
 
 
-### Equipe TNC
+### Equipe TNC Brasil
 
-- Milena Rosenfield  
+- Milena Rosenfield (coordenação)
 - Mário Barroso
 - José Fronza
 - Clícia Barata
 - Edenise Garcia
 
-### Equipe Biomas
+### Equipe central por bioma
 
-- Amazônia: Ana Albernaz, Luciano Querido
-- Caatinga: Eduardo Venticinque, Marina Antongiovanni
-- Cerrado: Levi Carina Terribile, Lucas Jardim
-- Mata Atlântica: Leandro Tambosi, Andrea Sánchez-Tapia
-- Pampa: Milena Rosenfield, Mário Barroso, José Fronza
-- Pantanal: Letícia Couto Garcia, Alisson Ribeiro
+- Amazônia: Ana Albernaz, Luciano Querido (Museu Paraense Emílio Goeldi)
+- Caatinga: Eduardo Venticinque, Marina Antongiovanni (Universidade Federal do Rio Grande do Norte)
+- Cerrado: Levi Carina Terribile, Lucas Jardim (Universidade Federal do Jataí)
+- Mata Atlântica: Leandro Tambosi, Andrea Sánchez-Tapia (Universidade Federal do ABC)
+- Pampa: Milena Rosenfield, Mário Barroso, José Fronza (The Nature Conservancy Brasil)
+- Pantanal: Letícia Couto Garcia, Alisson Ribeiro (Universidade Federal do Mato Grosso do Sul)
 
- <!-- ## Especialistas convidados --> 
+ ## Especialistas convidados
 
+ <!-- Inserir tabela com a lista de especialistas que confirmaram participação --> 
 
