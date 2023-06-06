@@ -10,6 +10,7 @@ book:
     - index.qmd
     - intro.qmd
     - objetivo.qmd
+    - oficina.qmd
     - metodologia.qmd
     - implementacao.qmd
     - resultados.qmd
