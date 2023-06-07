@@ -1,6 +1,6 @@
 # Introdução
 
-O projeto _Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros_ é coordenado por _The Nature Conservancy_ Brasil e a primeira oficina com especialistas de cada bioma será realizada virtualmente nos dias __13 e 15 de junho de 2023__.
+O projeto _Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros_ é coordenado por _The Nature Conservancy Brasil_ e a primeira oficina com especialistas de cada bioma será realizada virtualmente nos dias __13 e 15 de junho de 2023__.
 
 O projeto procura mapear sítios resilientes a mudanças climáticas e áreas importantes para manutenção ou restabelecimento da conectividade entre eles, identificando locais que seriam mais adequados a persistir e se adaptar às futuras mudanças no clima.
 O produto principal do projeto é um mapa de áreas resilientes a mudanças climáticas para o Brasil.
@@ -43,7 +43,8 @@ knitr::include_graphics("figs/0_team.png")
 |Caatinga|Adrian Garda|UFRN|Natal |
 |Caatinga|Camile Lugarini|ICMBio|Juazeiro|
 |Caatinga|Carlos R. S. D. da Fonseca|UFRN|Natal |
-|Caatinga|Cláudia B. Campos|ICMBio/Pró-carnívoros	|Juazeiro|
+|Caatinga|Cláudia B. Campos|ICMBio|Juazeiro|
+|Caatinga|Eugenia Cordero Schmidt	|IUCN|João Pessoa|
 |Caatinga|Felipe P. L. de Melo	|UFPE|Recife|
 |Caatinga|Marcelo F. Moro|UFC	|Fortaleza|
 |Cerrado |Alessandro R. de Morais|IF Rio Verde	|Rio Verde|

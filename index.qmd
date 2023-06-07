@@ -2,7 +2,7 @@
 
 <!-- Nos nossos textos temos que padronizar o que entendemos por adatação às mudanças climáticas. No sentido mais restrito, adaptação é a mudança evolutiva da espécies em reposta à pressão ambiental, assim as espécies podem se adaptar (evoluir) para terem condições fisiológicas que suportem o novo clima, ou migrarem para áreas adequadas aos seus nichos. No entento, há também adaptação sendo usado em sentidos mais amplos, incluindo a migração. Sugiro mantermos o termo mais restrito, para ficar mais relacionado conceitualmente com a discussão de evolução de nicho e resgate evolutivo --> 
 
-As mudanças no clima modificam ambientes naturais e pressionam espécies a se adaptarem às novas condições ambientais ou alterarem sua distribuição espacial para locais mais adequados climaticamente.
+As mudanças climáticas modificam os ambientes naturais e pressionam as espécies a se adaptarem às novas condições ambientais ou alterarem sua distribuição espacial para locais mais adequados climaticamente.
 A identificação de locais com adequabilidade climática para sustentar a biodiversidade no futuro de mudanças climáticas é imprescindível para o planejamento sistemático de ações de conservação e restauração.
 
 O __objetivo__ principal do projeto _Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros_ é __mapear sítios resilientes às mudanças climáticas__.
@@ -12,7 +12,7 @@ A __metodologia__ proposta para isso combina a diversidade da paisagem, um _prox
 
 + A __diversidade da paisagem__ é baseada na geodiversidade (geomorfologia, geologia, pedologia e hidrologia) do terreno, composta pela variedade de _landforms_, amplitude altitudinal, densidade e quantidade de áreas úmidas e diversidade de solos.
 
-+ A __conectividade local__ é baseada na resistência das matrizes da paisagem ao movimento da biodiversidade, combinando uso do solo e infraestruturas de energia e transporte existentes (com maior ou menor grau de antropização).
++ A __conectividade local__ é baseada na resistência das matrizes da paisagem ao movimento da biodiversidade, combinando o uso do solo e as infraestruturas de energia e transporte existentes (com maior ou menor grau de antropização).
 
 A metodologia desenvolvida segue três premissas básicas:
 
@@ -24,7 +24,7 @@ A metodologia desenvolvida segue três premissas básicas:
 Essa análise foi proposta e validada para a América do Norte pela _The Nature Conservancy_ (TNC), complementando outras metodologias disponíveis na literatura, uma vez que ela foca nas propriedades do terreno para identificar áreas resilientes. 
 A aplicação da metodologia da TNC para os biomas brasileiros é um passo importante na identificaçao de sítios resilientes em ambientes tropicais megadiversos. 
 
-Atuando em conjunto com especialistas dos diferentes biomas e em diferentes temáticas de pesquisa, e baseado na literatura disponível, o projeto busca adequar a metodologia original ao contexto dos biomas brasileiros, refinando e adaptando quando necessário. <!-- Não estamos testando, estamos adequando e desenvolvendo a metodologia  --> 
+Atuando em conjunto com especialistas dos diferentes biomas, em diferentes temáticas de pesquisa, e baseado na literatura disponível, o projeto busca adequar a metodologia original ao contexto dos biomas brasileiros, refinando e adaptando quando necessário. <!-- Não estamos testando, estamos adequando e desenvolvendo a metodologia  --> 
 
 O __produto__ principal resultante desse projeto é um mapa de áreas resilientes e conectadas para o Brasil, que permite identificar áreas com potencial de sustentar animais e plantas em um clima sob mudanças.
 Além disso, estão previstos ainda a prepararação de um relatório técnico sobre o projeto, uma documentação reproduzível das análises e ao menos um artigo científico.
