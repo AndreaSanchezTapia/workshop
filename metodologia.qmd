@@ -80,7 +80,7 @@ A nota de conectividade local para uma célula é igual à área de dispersão, 
 
 ### Dados padronizados (_Z_-_scores_)
 
-Antes de calcularmos a resiliência da paisagem, as variáveis (variedade de *landforms*, amplitude de elevação, índice de áreas úmidas, diversidade de solos e conectividade local) são convertidas para valores de Z (_Z-scores_), assumindo as médias e desvios padrões das [__Regiões eco-geológicas__](#Regiões-eco-geológicas). Isso garante a inclusão de condições físicas e ambientais distintas e permite capturar variações na composição da biota associada. Posteriomente, os valores de Z são combinados em diversidade da paisagem, exceto conectividade local. 
+Antes de calcularmos a resiliência da paisagem, as variáveis (variedade de *landforms*, amplitude de elevação, índice de áreas úmidas, diversidade de solos e conectividade local) são convertidas para valores de Z (_Z-scores_), assumindo as médias e desvios padrões das [__Regiões eco-geológicas__](#regiões-eco-geológicas). Isso garante a inclusão de condições físicas e ambientais distintas e permite capturar variações na composição da biota associada. Posteriomente, os valores de Z são combinados em diversidade da paisagem, exceto conectividade local. 
 
 ### Resiliência: combinando diversidade da paisagem e conectividade local
 
