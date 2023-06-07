@@ -78,7 +78,7 @@ A conectividade local é a média ponderada das resistências dentro uma vizinha
 <!--Nesse contexto, a dispersão teórica de uma espécie (ou processo) a partir de uma célula focal é uma função dos valores de resistência das células vizinhas e suas distâncias com relação à célula focal, até uma distância máxima de 3 km.
 A nota de conectividade local para uma célula é igual à área de dispersão, levando em conta a resistência dividida pela área de dispersão teórica se não houvesse resistência. --> 
 
-## Dados padronizados (_Z_-_scores_)
+### Dados padronizados (_Z_-_scores_)
 
 Antes de calcularmos a resiliência da paisagem, as variáveis (variedade de *landforms*, amplitude de elevação, índice de áreas úmidas, diversidade de solos e conectividade local) são convertidas para valores de Z (_Z-scores_), assumindo as médias e desvios padrões das [__Regiões eco-geológicas__](#Regiões eco-geológicas). Isso garante a inclusão de condições físicas e ambientais distintas e permite capturar variações na composição da biota associada. Posteriomente, os valores de Z são combinados em diversidade da paisagem, exceto conectividade local. 
 
