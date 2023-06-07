@@ -43,7 +43,8 @@ knitr::include_graphics("figs/0_team.png")
 |Caatinga|Adrian Garda|UFRN|Natal |
 |Caatinga|Camile Lugarini|ICMBio|Juazeiro|
 |Caatinga|Carlos R. S. D. da Fonseca|UFRN|Natal |
-|Caatinga|Cláudia B. Campos|ICMBio/Pró-carnívoros	|Juazeiro|
+|Caatinga|Cláudia B. Campos|ICMBio|Juazeiro|
+|Caatinga|Eugenia Cordero Schmidt	|IUCN|João Pessoa|
 |Caatinga|Felipe P. L. de Melo	|UFPE|Recife|
 |Caatinga|Marcelo F. Moro|UFC	|Fortaleza|
 |Cerrado |Alessandro R. de Morais|IF Rio Verde	|Rio Verde|
