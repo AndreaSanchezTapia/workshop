@@ -74,7 +74,7 @@ As categorias principais de componentes da paisagem foram definidas como:
 + áreas agrícolas ou modificadas (incluindo áreas improdutivas não-naturais)
 + áreas urbanizadas (de baixa ou alta intensidade).
 
-A conectividade local é a média ponderada das resistências dentro uma vizinhança de   , sendo os pesos um decaimento linear pela distância da célula focal.
+A conectividade local é a média ponderada das resistências dentro uma vizinhança quadrada de ~2070 m, sendo os pesos um decaimento linear pela distância da célula focal.
 <!--Nesse contexto, a dispersão teórica de uma espécie (ou processo) a partir de uma célula focal é uma função dos valores de resistência das células vizinhas e suas distâncias com relação à célula focal, até uma distância máxima de 3 km.
 A nota de conectividade local para uma célula é igual à área de dispersão, levando em conta a resistência dividida pela área de dispersão teórica se não houvesse resistência. --> 
 
