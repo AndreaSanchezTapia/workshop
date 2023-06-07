@@ -274,26 +274,26 @@ div.csl-indent {
 <section id="diversidade-da-paisagem" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="diversidade-da-paisagem"><span class="header-section-number">5.2.1</span> Diversidade da paisagem</h3>
 <p>O cálculo de diversidade da paisagem foi realizado no <em>Google Earth Engine</em> <span class="citation" data-cites="gorelick_google_2017">(<a href="references.html#ref-gorelick_google_2017" role="doc-biblioref">Gorelick et al. 2017</a>)</span> e é composto por médias feitas pixel a pixel entre os maiores valores padronizados ( <em>Z-scores</em> ) das imagens: <a href="#variedade-de-landforms"><strong>Variedade de <em>landforms</em></strong></a>, <a href="#amplitude-altitudinal"><strong>Amplitude altitudinal</strong></a>, <a href="#valores-de-áreas-úmidas"><strong>Valores de áreas úmidas</strong></a> e <a href="#diversidade-de-solo"><strong>Diversidade de solo</strong></a>. Utilizamos o <em>Google Earth Engine</em> devido a demanda computacional das análises e por ser uma plataforma baseada em nuvem, que oferece acesso remoto a uma vasta coleção de imagens de satélite e bases de dados geoespaciais de acesso livre e com capacidade computacional para realizar as análises em qualquer equipamento disponível <span class="citation" data-cites="gorelick_google_2017">(<a href="references.html#ref-gorelick_google_2017" role="doc-biblioref">Gorelick et al. 2017</a>)</span>. Isso possibilita que nossas análises sejam de livre acesso, escalonáveis para outras regiões do mundo e que contribuam para uma ciência mais transparente, reproduzível e livre.</p>
-<section id="variedade-de-landforms" class="level4" data-number="5.2.1.1">
-<h4 data-number="5.2.1.1" class="anchored" data-anchor-id="variedade-de-landforms"><span class="header-section-number">5.2.1.1</span> Variedade de <em>landforms</em></h4>
+<section id="variedade-de-landforms" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="variedade-de-landforms">Variedade de <em>landforms</em></h4>
 <p>A classificação e distribuição espacial de <em>landforms</em> (formas de relevo) são a base para o cálculo da <strong>diversidade da paisagem</strong> e representam áreas com maiores estabilidade microclimática que resistirão aos impactos causados pelas mudanças climáticas <span class="citation" data-cites="anderson_resilient_2016">(<a href="references.html#ref-anderson_resilient_2016" role="doc-biblioref">Anderson et al. 2016</a>)</span>. Essa classificação é baseada em combinações de informações sobre a <strong>inclinação</strong> (<em>slope</em>), <strong>orientação do relevo</strong> (<em>aspect</em>), <strong>indice de posição topográfica</strong> (<em>topographic position index</em>), <strong>índice de umidade</strong> (<em>moisture index</em>) e a distribuição de <strong>rios</strong> e <strong>lagos</strong> <!-- e **áreas úmidas**--> dos ambientes. A combinação dessas variáveis representa a variação de umidade, radiação solar e deposição de sedimentos <span class="citation" data-cites="anderson_resilient_2016">(<a href="references.html#ref-anderson_resilient_2016" role="doc-biblioref">Anderson et al. 2016</a>)</span> na paisagem.</p>
 <p>A metodologia de classificação de formas de relevo foi baseada em estudos prévios conduzidos pela equipe da <a href="https://crcs.tnc.org/pages/land"><strong>TNC América do Norte</strong></a>, publicada inicialmente em 2014 <span class="citation" data-cites="anderson_estimating_2014">(<a href="references.html#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>)</span> e refinada em estudos posteriores <span class="citation" data-cites="anderson_resilient_2023">(<a href="references.html#ref-anderson_resilient_2023" role="doc-biblioref">Anderson et al. 2023</a>)</span>. <!--Adaptamos a metodologia aplicada anteriormente, utilizando o TPI ao invés do LPI... [Lucas, sugiro algo nessa linha, indicando quais alterações fizemos na metodologia anterior --></p>
 <p>Para o cálculo de <a href="#inclinação-do-relevo">inclinação</a>, <a href="#orientação-do-relevo">orientação do relevo</a> e <a href="#índice-de-posição-topográfica">índice de posição topográfica (TPI)</a>, utilizamos o modelo digital de elevação (DEM) do Merit-DEM <span class="citation" data-cites="yamazaki_high-accuracy_2017">(<a href="references.html#ref-yamazaki_high-accuracy_2017" role="doc-biblioref">Yamazaki et al. 2017</a>)</span>, em uma escala de 90 m. Escolhemos utilizar esse DEM por ser um produto em escala global, de livre acesso e com correções de vários viéses de modelos de elevação, principalmente viéses de elevação em áreas com alta densidade de florestas. Além disso, o Merit-DEM já possui um <a href="#acúmulo-de-fluxo">acúmulo de fluxo</a> calculado sobre ele, em escala global, disponível no Merit-Hydro <span class="citation" data-cites="yamazaki_merit_2019">(<a href="references.html#ref-yamazaki_merit_2019" role="doc-biblioref">Yamazaki et al. 2019</a>)</span>. Essa camada de acúmulo de fluxo é corrigida para o efeito da densidade de árvores no cálculo da rede hidrográfica da região <span class="citation" data-cites="yamazaki_merit_2019">(<a href="references.html#ref-yamazaki_merit_2019" role="doc-biblioref">Yamazaki et al. 2019</a>)</span>, o que possibilita que nosso trabalho seja replicável e mais próximo da realidade dos biomas que modelamos.</p>
 <p>Para complementar a superfície gerada pelo acúmulo de fluxo e definir a presença de <strong>rios</strong> e <strong>lagos</strong> <!--e **áreas umidas** -->, nós incluímos as classes de água do MapBiomas Coleção 7 <span class="citation" data-cites="mapbiomas_project_collection_2020">(<a href="references.html#ref-mapbiomas_project_collection_2020" role="doc-biblioref">Project 2020</a>)</span>. O MapBiomas é um projeto nacional de mapeamento e classificação de mudanças do uso do solo dos últimos 30 anos, a partir de dados de sensoriamento remoto.</p>
-<section id="índice-de-posição-topográfica-tpi" class="level5" data-number="5.2.1.1.1">
-<h5 data-number="5.2.1.1.1" class="anchored" data-anchor-id="índice-de-posição-topográfica-tpi"><span class="header-section-number">5.2.1.1.1</span> Índice de posição topográfica (TPI)</h5>
+<section id="índice-de-posição-topográfica-tpi" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="índice-de-posição-topográfica-tpi">Índice de posição topográfica (TPI)</h5>
 <p>O cálculo do TPI foi feito em três escalas com uma janela circular com 7, 11 e 15 células de raio, calculando a diferença da média de elevação entre a célula focal e um conjunto de células vizinhas (<span class="math inline">\(i\)</span>), divididos pelo número de células vizinhas (<span class="math inline">\(n\)</span>).</p>
 <p><span class="math display">\[
 TPI = \frac {\sum  _{i}^{n}\left(vizinhança_i - focal \right)}{n}
 \]</span></p>
 <p>O índice é composto pela média de TPI das três escalas, o que permite a consideração de níveis locais e regional de resolução da paisagem <span class="citation" data-cites="theobald_ecologically-relevant_2015">(<a href="references.html#ref-theobald_ecologically-relevant_2015" role="doc-biblioref">Theobald et al. 2015</a>)</span>. Os tamanhos das janelas foram definidos visualmente para que melhor representassem as formas de relevo.</p>
 </section>
-<section id="orientação-do-relevo" class="level5" data-number="5.2.1.1.2">
-<h5 data-number="5.2.1.1.2" class="anchored" data-anchor-id="orientação-do-relevo"><span class="header-section-number">5.2.1.1.2</span> Orientação do relevo</h5>
+<section id="orientação-do-relevo" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="orientação-do-relevo">Orientação do relevo</h5>
 <p>A orientação do relevo é calculado como um gradiente local das 4 células adjacentes. Os resultados são apresentados em graus, que representam a direção do relevo (0º = Norte, 90º = Leste, 180º = Sul e 270º = Oeste). Nós dividimos a orientação do relevo em dois grupos, baseados na quantidade de incidência solar, sendo células com valores entre 90º e 270º classificados como <strong>faces frias</strong> e valores entre 0º a 90º e 270º a 360º, classificados como <strong>faces quentes</strong>.</p>
 </section>
-<section id="inclinação-do-relevo" class="level5" data-number="5.2.1.1.3">
-<h5 data-number="5.2.1.1.3" class="anchored" data-anchor-id="inclinação-do-relevo"><span class="header-section-number">5.2.1.1.3</span> Inclinação do relevo</h5>
+<section id="inclinação-do-relevo" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="inclinação-do-relevo">Inclinação do relevo</h5>
 <p>A inclinação do relevo é calculada como um gradiente local das 4 células adjacentes, os resultados são apresentado em graus que representam a inclinação do relevo (0º a 90º).</p>
 <!-- A inclinação foi dividida em 5 grupos baseado em faixas de inclinação, para melhor classificar diferentes formas do relevo (@tbl-inclinacao).
 
@@ -307,8 +307,8 @@ TPI = \frac {\sum  _{i}^{n}\left(vizinhança_i - focal \right)}{n}
 : Classes de declividade usadas para a classificação de _landforms_ {#tbl-inclinacao}
 -->
 </section>
-<section id="índice-de-umidade" class="level5" data-number="5.2.1.1.4">
-<h5 data-number="5.2.1.1.4" class="anchored" data-anchor-id="índice-de-umidade"><span class="header-section-number">5.2.1.1.4</span> Índice de umidade</h5>
+<section id="índice-de-umidade" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="índice-de-umidade">Índice de umidade</h5>
 <p>O índice de umidade (<em>moisture index</em>) foi calculado com base no <strong>acúmulo de fluxo</strong> do Merit-Hydro e a <strong>inclinação do relevo</strong> que calculamos anteriormente. <span class="math display">\[
 moisture.index = \frac{\log \left(fluxo+1\right)}{\left(slope+1\right)}  \times1000
 \]</span> O índice de umidade é a média do índice dentro de uma janela circular de uma célula de raio determinado. O tamanho do raio foi escolhido visualmente para suavizar o índice, mas representando bem a distribuição dos cursos d’água.</p>
@@ -317,8 +317,8 @@ Classificamos como áreas úmidas somente regiões que apresentassem um valor do
 -->
 </section>
 </section>
-<section id="transformando-os-índices-em-classes" class="level4" data-number="5.2.1.2">
-<h4 data-number="5.2.1.2" class="anchored" data-anchor-id="transformando-os-índices-em-classes"><span class="header-section-number">5.2.1.2</span> Transformando os índices em classes</h4>
+<section id="transformando-os-índices-em-classes" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="transformando-os-índices-em-classes">Transformando os índices em classes</h4>
 <p>Cada índice (TPI, inclinação, orientação e índice de úmidade) foi transformado em classes (<a href="#tbl-classes">Tabela&nbsp;<span>5.1</span></a>) para formarem os tipos de <em>landforms</em>. O índice umidade é classificado como presença ou ausência de umidade, sendo locais com rios e lagos classificados como presença.</p>
 <div id="tbl-classes" class="anchored">
 <table class="table">
@@ -419,8 +419,8 @@ Classificamos como áreas úmidas somente regiões que apresentassem um valor do
 </tbody>
 </table>
 </div>
-<section id="combinando-as-variáveis-e-classificando-as-landforms" class="level5" data-number="5.2.1.2.1">
-<h5 data-number="5.2.1.2.1" class="anchored" data-anchor-id="combinando-as-variáveis-e-classificando-as-landforms"><span class="header-section-number">5.2.1.2.1</span> Combinando as variáveis e classificando as <em>landforms</em></h5>
+<section id="combinando-as-variáveis-e-classificando-as-landforms" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="combinando-as-variáveis-e-classificando-as-landforms">Combinando as variáveis e classificando as <em>landforms</em></h5>
 <p>A partir das classificações de todas as variáveis, geramos um código representativo das combinações de classificações das localidades. A classe do índices de umidade é multiĺicado por 1000, orientação do relevo por 100, TPI por 10 e inclinação do relevo por 1. Dessa forma, podemos representar as classes dos índices de uma localidade por um único número. Por exemplo, o código 11 representa áreas de baixa inclinação do relevo e uma posição do relevo mais alta que o entorno, sendo portanto um topo de montanha (<em>summit</em>). No entanto, alguns códigos tiveram que ser inspecionados visualmente para classificar alguns tipos de <em>landforms</em>, como <em>sideslopes</em>, <em>valleys</em> e <em>toeslopes</em> (<a href="#tbl-combinacoes">Tabela&nbsp;<span>5.2</span></a>).</p>
 <div id="tbl-combinacoes" class="anchored">
 <table class="table">
@@ -775,22 +775,22 @@ Classificamos como áreas úmidas somente regiões que apresentassem um valor do
 </div>
 <!-- Seria interessante algumas figuras de exemplos de landforms dentro dos biomas!!-->
 </section>
-<section id="gerando-a-variedade-de-landforms" class="level5" data-number="5.2.1.2.2">
-<h5 data-number="5.2.1.2.2" class="anchored" data-anchor-id="gerando-a-variedade-de-landforms"><span class="header-section-number">5.2.1.2.2</span> Gerando a variedade de <em>landforms</em></h5>
+<section id="gerando-a-variedade-de-landforms" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="gerando-a-variedade-de-landforms">Gerando a variedade de <em>landforms</em></h5>
 <p>A variedade de <em>landforms</em> foi calculada como quantidade de tipos de <em>landforms</em> dentro de um <em>kernel</em> circular da célula focal. O tamanho do raio do kernel foi definido calculando a variedade em diferentes raios (2, 5, 7, 10, 15, 20 células) e calculando o ganho de variedade a cada aumento de raio. O raio escolhido foi aquele em que o seu subsequente não adicionou variedade.</p>
 <p>Desta forma, o raio representa o nível de resolução da paisagem que captura o máximo de variedade de landforms. <!-- Raios maiores podem aumentar a variedade, mas devido a mudança de paisagem. --> Assim, o raio escolhido foi de 5 células de raio (450 m) para todo o Brasil. Por fim, calculamos os valores de Z para cada pixel (<span class="math inline">\(Z_{pixel}\)</span>) ao subtrair o valor da média (<span class="math inline">\(\mu\)</span>) e dividindo o resultado pelo desvio padrão (<span class="math inline">\(\sigma\)</span>), como mostrado na fórmula a seguir: <span class="math display">\[
 Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}
 \]</span> Os cálculos de <span class="math inline">\(Z\)</span> foram feitos dentro de cada classificação de <strong>regiões eco-geológicas</strong> usando médias e desvios padrão dentro de cada uma das classes.</p>
 </section>
 </section>
-<section id="amplitude-altitudinal" class="level4" data-number="5.2.1.3">
-<h4 data-number="5.2.1.3" class="anchored" data-anchor-id="amplitude-altitudinal"><span class="header-section-number">5.2.1.3</span> Amplitude altitudinal</h4>
+<section id="amplitude-altitudinal" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="amplitude-altitudinal">Amplitude altitudinal</h4>
 <p>A amplitude altitudinal representa a variação da elevação em uma região, independente do número de <a href="#variedade-de-landforms"><strong><em>landforms</em></strong></a>, controlando a relação entre ambas já que elas são correlacionadas entre si. A amplitude altitudinal foi calculada como a diferença entre os valores máximos e mínimos de elevação, dentro de um <em>kernel</em> circular de 450 m, a partir dos dados do DEM do MERIT <span class="citation" data-cites="yamazaki_high-accuracy_2017">(<a href="references.html#ref-yamazaki_high-accuracy_2017" role="doc-biblioref">Yamazaki et al. 2017</a>)</span>. fizemos então uma Regressão Linear Simples (<em>Ordinary Linear Regression</em>) entre os <strong>valores de amplitude altitudinal</strong> e a <strong>variedade <em>landforms</em></strong> e obtivemos os valores dos resíduos dessa análise para diminuir a correlação estre as duas variáveis.</p>
 <p>Por fim, os valores da variação desses resíduos da correlação entre a amplitude e a variedade da forma de relevo, para cada pixel (<span class="math inline">\(Z_{pixel}\)</span>), podem ser calculados ao subtrair o valor da média (<span class="math inline">\(\mu\)</span>) e dividir o resultado pelo desvio padrão (<span class="math inline">\(\sigma\)</span>), como mostrado na fórmula a seguir: <span class="math display">\[Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}\]</span></p>
 <p>Dessa forma, temos uma imagem que mostra a variação, em relação à média, dos valores dos resíduos da amplitude altitudinal dentro de cada uma das categorias de regiões eco-geológicas.</p>
 </section>
-<section id="índice-de-áreas-úmidas" class="level4" data-number="5.2.1.4">
-<h4 data-number="5.2.1.4" class="anchored" data-anchor-id="índice-de-áreas-úmidas"><span class="header-section-number">5.2.1.4</span> Índice de áreas úmidas</h4>
+<section id="índice-de-áreas-úmidas" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="índice-de-áreas-úmidas">Índice de áreas úmidas</h4>
 <p>Para calcular o índice de áreas úmidas, utilizamos os dados disponibilizados na base de dados <em>Global Wetlands Database</em> <span class="citation" data-cites="gumbricht_tropical_2017">(<a href="references.html#ref-gumbricht_tropical_2017" role="doc-biblioref">Gumbricht et al. 2017</a>)</span>, que é uma base de dados que fornece informação e inventário de áreas úmidas no mundo. Os dados são obtidos através de imagens de satélite, amostragens aéreas e relatórios publicados. Como áreas úmidas ocorrem em diversas configurações e distribuições no espaço, nós avaliamos a densidade e o número de áreas úmidas em escala local (450 metros) e escala regional (1170 metros). A <strong>densidade de áreas úmidas</strong> foi calculada como a média do número de <em>pixels</em> de áreas úmidas, dentro de um <em>kernel</em> de escala regional (1170 m) e um kernel em escala local (450 m). Já a <strong>contagem em escala local</strong> foi calculada como uma contagem de <em>pixels</em> dentro de um <em>kernel</em> circular em escala regional (1170 metros). A contagem vai representar o número de áreas umidas ao redor do <em>pixel</em> focal, mostrando regiões de maiores quantidades de áreas úmidas, mas em baixa densidade.</p>
 <p>Essas 3 camadas vão auxiliar na identificação de regiões de diversidade da paisagem que apresentem valores baixos para formas de relevo e amplitude de elevação, mas que tenham um acúmulo de áreas umidas que poderiam amenizar localmente o efeito das mudanças climáticas <span class="citation" data-cites="anderson_resilient_2016">(<a href="references.html#ref-anderson_resilient_2016" role="doc-biblioref">Anderson et al. 2016</a>)</span>.</p>
 <p>Para calcular os <strong>valores finais de áreas úmidas</strong>, é necessário juntar as informações das camadas de <strong>densidade local</strong>, <strong>densidade regional</strong> e a <strong>contagem em escala local</strong>. Começamos calculando valores padronizados para cada uma delas (<span class="math inline">\(Z_{local}\)</span>, <span class="math inline">\(Z_{regional}\)</span> e <span class="math inline">\(Z_{contagem}\)</span>, respectivamente) ao subtrair os valores de pixels (<span class="math inline">\(X_{pixel}\)</span>) pela média (<span class="math inline">\(\mu\)</span>) e dividirmos o resultado pelo desvio padrão (<span class="math inline">\(\sigma\)</span>) dentro das diferentes categorias de <a href="#regiões-eco-geológicas"><strong>regiões eco-geológicas</strong></a>, como na fórmula: <span class="math display">\[
@@ -804,8 +804,8 @@ Z_{densidade}=\frac {{{(Z_{local}}{\times2)}}+{Z_{regional}}}{3}
 Z_{úmidas}=\frac {{{(Z_{densidade}}{\times3)}}+{Z_{contagem}}}{4}
 \]</span> Ao final de todas as operações, temos uma única camada com valores que representam a variação em relação à média dos valores de densidade e contagem de pixels de áreas úmidas referentes às regiões eco-geológicas.</p>
 </section>
-<section id="diversidade-de-solo" class="level4" data-number="5.2.1.5">
-<h4 data-number="5.2.1.5" class="anchored" data-anchor-id="diversidade-de-solo"><span class="header-section-number">5.2.1.5</span> Diversidade de solo</h4>
+<section id="diversidade-de-solo" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="diversidade-de-solo">Diversidade de solo</h4>
 <p>A diversidade de solo foi calculada como a distribuição do número de classes de solo, dentro de um <em>kernel</em> de 1350 m. Ela foi usada para indicar áreas com grande concentração dos diferentes tipos de solo que vão afetar diretamente na diversidade de espécies no ambiente. Para calcular o raster de diversidade do solo usamos a classificação oficial dos solos brasileiros, disponibilizada pelo <a href="https://www.ibge.gov.br/geociencias/informacoes-ambientais/pedologia/10871-pedologia.html">Instituto Brasileiro de Geografica e Estatística (IBGE)</a>.</p>
 <p>Como a classificação do IBGE foi disponibilizada em formato de <em>shapefile</em>, começamos a análise separando cada uma das 108 classes de solo do Brasil e calculamos um raster de presença e ausência do tipo de solo. Ao final do processo podemos somar os diferentes mapas de presença para obter os mapas de diversidade do solo, onde os maiores valores de cada pixel mostram áreas com concentração de diferentes tipos de solo.</p>
 <p>Por fim, calculamos os valores de Z para cada pixel (<span class="math inline">\(Z_{pixel}\)</span>) ao subtrair o valor da média (<span class="math inline">\(\mu\)</span>) e dividindo o resultado pelo desvio padrão (<span class="math inline">\(\sigma\)</span>), como mostrado na fórmula a seguir: <span class="math display">\[Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}\]</span> Os cálculos de <span class="math inline">\(Z\)</span> foram feitos dentro de cada classificação de regiões eco-geológicas usando as médias e desvios padrão dentro de cada uma das classes.</p>
@@ -813,13 +813,300 @@ Z_{úmidas}=\frac {{{(Z_{densidade}}{\times3)}}+{Z_{contagem}}}{4}
 </section>
 <section id="conectividade-local" class="level3" data-number="5.2.2">
 <h3 data-number="5.2.2" class="anchored" data-anchor-id="conectividade-local"><span class="header-section-number">5.2.2</span> Conectividade local</h3>
-<section id="cálculos-de-resistência" class="level4" data-number="5.2.2.1">
-<h4 data-number="5.2.2.1" class="anchored" data-anchor-id="cálculos-de-resistência"><span class="header-section-number">5.2.2.1</span> Cálculos de resistência</h4>
+<section id="cálculos-de-resistência" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="cálculos-de-resistência">Cálculos de resistência</h4>
 <p>Os valores de resistência são medidas relativas do grau de dificuldade de deslocamento dos organismos nos diferentes tipos de cobertura do solo. Esses valores foram atribuídos por bioma, seguindo a premissa de que quanto maior for a diferença estrutural entre um dado tipo de cobertura do solo e a vegetação original do bioma, maior será o valor de resistência da classe de cobertura do solo em questão.</p>
 <p>Os dados espaciais primários utilizados para calcular a superfície de resistência foram a camada de cobertura do solo fornecida pelo MapBiomas <span class="citation" data-cites="mapbiomas_project_collection_2020">(<a href="references.html#ref-mapbiomas_project_collection_2020" role="doc-biblioref">Project 2020</a>)</span> e a base de estradas pavimentadas e não pavimentadas fornecida pelo IBGE (BCIM250, ano 2021). Em um segundo momento, serão ainda inseridas bases de dados de infraestrutura energética, a serem incorporadas nessa camada.</p>
 <p>A superfície de cobertura do solo do MapBiomas foi reamostrada para gerar pixels com 90 m de tamanho, aproximadamente. Também convertemos o arquivo vetorial de estradas para o formato matricial, com pixels de tamanho aproximado de 90 m. Conjugamos, por álgebra de mapas, as bases matriciais do MapBiomas e de estradas, de tal maneira que todos os pixels da base do MapBiomas que se sobrepuseram a um pixel de estrada assumiram um novo valor correpondente a um pixel de estrada pavimentada ou não pavimentada.</p>
-<p>Os pixels do mapa consolidado de cobertura do solo, já incluindo as estradas pavimentadas e não pavimentadas como novas classes, receberam, separadamente por bioma, valores de resistência que buscaram traduzir, comparativamente entre as classes, o grau de dificuldade de movimentação da biodiversidade numa dada classe de cobertura do solo. A premissa assumida aqui é que quanto maior for a diferença estrutural da classe de cobertura do solo para o hábitat original do bioma, maior será a dificuldade à movimentação que esta classe oferece. Os valores de resistência dos pixels de cada uma das classes foram atribuídos, por bioma, pela equipe do Projeto e podem ser vistos na <span class="quarto-unresolved-ref">?tbl-resistencia</span>.</p>
-<p>|Classe de cobertura do solo|Amazônia| Caatinga| Cerrado |MataAtlântica| Pampa Pantanal| |–:|–:|–:||–:|–:|–:|–:| |Aquaculture|- |10 |7 |7 |7 |- | |Beach, Dune and Sand Spot|2 |2 |2 |2 |2 |- | |Citrus|- |- |10 |10 |- |- | |Coffee|- |7 |10 |10 |- |- | |Cotton|7 |7 |10 |- |- |- | |Estradas não pavimentadas|10 |10 |7 |10 |7 |7 | |Estradas pavimentadas|20 |20 |20 |20 |20 |20| |Forest Formation|1 |1 |1 |1 |1 |1 | |Forest Plantation|7 |2 |7 |3 |10 |5 | |Grassland|2 |1 |1 |2 |1 |1 | |Herbaceous Sandbank Vegetation |- |1 |- |2 |1 |- | |Mangrove|1 |1 |1 |1 |- |- | |Mining|20 |20 |20 |20 |20 |20| |Mosaic of Uses|7 |7 |10 |10 |10 |10| |Other non Forest Formations|- |- |- |7 |- |- | |Other non Vegetated Areas|- |9 |10 |10 |10 |10| |Other Perennial Crops|7 |7 |10 |10 |- |- | |Other Temporary Crops|15 |7 |10 |10 |10 |10| |Pasture|15 |7 |5 |9 |5 |7 | |Rice|- |- |10 |10 |10 |- | |River, Lake and Ocean|2 |5 |5 |5 |5 |2 | |Rocky Outcrop|- |1 |2 |2 |2 |- | |Salt Flat|2 |1 |2 |2 |- |- | |Savanna Formation|2 |1 |1 |2 |- |2 | |Soybean|15 |10 |10 |10 |10 |10| |Sugar cane|15 |10 |10 |10 |- |10| |Urban Area|20 |20 |20 |20 |20 |20| |Wetland| 1 |- |1 |1 |1 |1 | |Wooded Sandbank Vegetation|- |1 |- |1 |1 |- | : Valores de resistência para cada tipo de cobertura por bioma {#tbl-resistencia}</p>
+<p>Os pixels do mapa consolidado de cobertura do solo, já incluindo as estradas pavimentadas e não pavimentadas como novas classes, receberam, separadamente por bioma, valores de resistência que buscaram traduzir, comparativamente entre as classes, o grau de dificuldade de movimentação da biodiversidade numa dada classe de cobertura do solo. A premissa assumida aqui é que quanto maior for a diferença estrutural da classe de cobertura do solo para o hábitat original do bioma, maior será a dificuldade à movimentação que esta classe oferece. Os valores de resistência dos pixels de cada uma das classes foram atribuídos, por bioma, pela equipe do Projeto e podem ser vistos na <a href="#tbl-resistencia">Tabela&nbsp;<span>5.4</span></a>.</p>
+<div id="tbl-resistencia" class="anchored">
+<table class="table">
+<caption>Tabela&nbsp;5.4: Valores de resistência para cada tipo de cobertura por bioma</caption>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Classe de cobertura do solo</th>
+<th style="text-align: right;">Amazônia</th>
+<th style="text-align: right;">Caatinga</th>
+<th style="text-align: right;">Cerrado</th>
+<th style="text-align: right;">MataAtlântica</th>
+<th style="text-align: right;">Pampa</th>
+<th style="text-align: right;">Pantanal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Aquaculture</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Beach, Dune and Sand Spot</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Citrus</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Coffee</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Cotton</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Estradas não pavimentadas</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Estradas pavimentadas</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Forest Formation</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Forest Plantation</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Grassland</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Herbaceous Sandbank Vegetation</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Mangrove</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Mining</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Mosaic of Uses</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Other non Forest Formations</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Other non Vegetated Areas</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Other Perennial Crops</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Other Temporary Crops</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Pasture</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Rice</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">River, Lake and Ocean</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Rocky Outcrop</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Salt Flat</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Savanna Formation</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Soybean</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Sugar cane</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Urban Area</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Wetland</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Wooded Sandbank Vegetation</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>Depois de atribuídos os valores de resistência, aplicamos à superfície gerada a função <em>kernel</em> de decaimento linear. Esta análise considerou, numa janela móvel de 23 pixels (~2070 m), o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior que os mais distantes. Desta maneira, a função <em>kernel</em> nos auxilia na tarefa de encontrar os melhores caminhos de deslocamento na paisagem, ou seja, aqueles caminhos que oferecem menor resistência.</p>
 <p>Por fim, calculamos os valores de Z para cada pixel (<span class="math inline">\(Z_{pixel}\)</span>) ao subtrair o valor da média (<span class="math inline">\(\mu\)</span>) e dividindo o resultado pelo desvio padrão (<span class="math inline">\(\sigma\)</span>) e multiplicando tudo por -1, como mostrado na fórmula a seguir: <span class="math display">\[
 Z_{pixel}= \left(\frac {X_{pixel}-\mu} {\sigma}\right) \times -1
