@@ -4,7 +4,6 @@ O detalhamento das análises apresenta uma descrição mais aprofundada da metod
 
 ## Regiões eco-geológicas
 
-<!-- Alisson: este nome pode mudar -->
 As regiões eco-geológicas do Brasil foram delimitadas para encontrar regiões homólogas em relação aos **domínios geológicos** e às **ecoregiões** do país. Essas regiões são usadas para limitar a variação das características ambientais usadas ao calcular a [__Resiliência da Paisagem__](#resiliência-da-paisagem), de modo a normalizar os valores de resiliência de acordo com regiões homólogas, ao invés de todo o país.
 
 Os **domínios geológicos** são grupos de unidades geológicas, separados pelas similidades nas classificações de tipo de rocha. Os domínios foram criados a partir da classificação feita pela CPRM (Serviços Geológico do Brasil). A classificação por unidades geológicas consistia em um número muito grande de categorias para o Brasil (aproximadamente 1350), por esse motivo utilizamos um agrupamento dessas categorias por domínios geológicos (14 domínios).
@@ -104,7 +103,7 @@ A orientação do relevo é calculado como um gradiente local das 4 células adj
 A inclinação do relevo é calculada como um gradiente local das 4 células adjacentes, os resultados são apresentado em graus que representam a inclinação do relevo (0º a 90º). A inclinação foi dividida em 5 grupos baseado em faixas de inclinação, para melhor classificar diferentes formas do relevo (@tbl-inclinacao).
 
 |Inclinação|Grupo|
-|--|--|
+|--:|--:|
 |0º a 2º  | 1 |
 |2º a 6º  | 2 |
 |6º a 24º | 3 |
@@ -127,7 +126,7 @@ A partir das classificações de todas as variáveis anteriores podemos gerar um
 Por exemplo, o código 11 representa áreas de baixa inclinação do relevo e uma posição do relevo mais alta que o entorno, sendo portanto um topo de montanha (_summit_). No entanto, alguns códigos tiveram que ser inspecionados para separar alguns tipos de _landforms_ como foi o caso para _sideslopes_, _valleys_ e _toeslopes_ @tbl-combinacoes.
 
 |Valores da Combinação| Código para Landforms|
-|--|--|
+|--:|--:|
 |10| 11|
 |11| 11|
 |12| 11|
@@ -200,7 +199,7 @@ Por exemplo, o código 11 representa áreas de baixa inclinação do relevo e um
 A classificação final de landforms se encontra na @tbl-landforms.
 
 |Códigos | Nomes|
-|--|--|
+|--:|--:|
 |3 |Cool Steep Slope  |
 |4 | Warms Steep Slope  |
 |5 |Cliff  |
@@ -288,10 +287,37 @@ A superfície de cobertura do solo do MapBiomas foi reamostrada para gerar pixel
 
 Os pixels do mapa consolidado de cobertura do solo, já incluindo as estradas pavimentadas e não pavimentadas como novas classes, receberam, separadamente por bioma, valores de resistência que buscaram traduzir, comparativamente entre as classes, o grau de dificuldade de movimentação de um dado animal ou propágulo numa dada classe de cobertura do solo. A premissa assumida aqui é que quanto maior for a diferença estrutural da classe de cobertura do solo para o hábitat original do bioma, maior será a dificuldade à movimentação que esta classe oferece. Os valores de resistência dos pixels de cada uma das classes foram atribuídos, por bioma, pela equipe do Projeto e podem ser vistos na @tbl-resistencia.
 
-|  a|  b|  c|
-|--:|--:|--:|
-|  1|  2|  3|
-|  2|  3|  4|
+|Classe de cobertura do solo|Amazônia|	Caatinga|	Cerrado	|MataAtlântica|	Pampa	Pantanal|
+|--:|--:|--:||--:|--:|--:|--:|
+|Aquaculture|-	|10	|7	|7	|7	|- |
+|Beach, Dune and Sand Spot|2	|2	|2	|2	|2	|- |
+|Citrus|-	|-	|10	|10	|-	|- |
+|Coffee|-	|7	|10	|10	|-	|- |
+|Cotton|7	|7	|10	|-	|-	|- |
+|Estradas não pavimentadas|10	|10	|7	|10	|7	|7 |
+|Estradas pavimentadas|20	|20	|20	|20	|20	|20|
+|Forest Formation|1	|1	|1	|1	|1	|1 |
+|Forest Plantation|7	|2	|7	|3	|10	|5 |
+|Grassland|2	|1	|1	|2	|1	|1 |
+|Herbaceous Sandbank Vegetation	|-	|1	|-	|2	|1	|- |
+|Mangrove|1	|1	|1	|1	|-	|- |
+|Mining|20	|20	|20	|20	|20	|20|
+|Mosaic of Uses|7	|7	|10	|10	|10	|10|
+|Other non Forest Formations|-	|-	|-	|7	|-	|- |
+|Other non Vegetated Areas|-	|9	|10	|10	|10	|10|
+|Other Perennial Crops|7	|7	|10	|10	|-	|- |
+|Other Temporary Crops|15	|7	|10	|10	|10	|10|
+|Pasture|15	|7	|5	|9	|5	|7 |
+|Rice|-	|-	|10	|10	|10	|- |
+|River, Lake and Ocean|2	|5	|5	|5	|5	|2 |
+|Rocky Outcrop|-	|1	|2	|2	|2	|- |
+|Salt Flat|2	|1	|2	|2	|-	|- |
+|Savanna Formation|2	|1	|1	|2	|-	|2 |
+|Soybean|15	|10	|10	|10	|10	|10|
+|Sugar cane|15	|10	|10	|10	|-	|10|
+|Urban Area|20	|20	|20	|20	|20	|20|
+|Wetland| 1	|-	|1	|1	|1	|1 |
+|Wooded Sandbank Vegetation|-	|1	|-	|1	|1	|- |
 : Valores de resistência para cada tipo de cobertura por bioma {#tbl-resistencia}
 
 
