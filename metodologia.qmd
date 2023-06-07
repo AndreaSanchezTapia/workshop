@@ -1,13 +1,13 @@
 # Metodologia resumida
 
-A metodologia proposta para identificar os sítios resilientes às mudanças climáticas [@anderson_estimating_2014; @anderson_resilient_2016; @anderson_resilient_2016-1; e @anderson_resilient_2023] envolve a divisão do espaço geográfico em regiões eco-geológicas, que são similares na sua geologia, geomorfologia, vulnerabilidade ao intemperismo, formação de solos e biodiversidade. Dentro de cada região são mapeadas a diversidade da paisagem e a conectividade local, que posteriomente, compõem a resiliência da paisagem. Os sítios com maior resiliência possuem alto potencial de abrigar a biodiversidade num cenário de mudanças climáticas e  estão conectados entre si [@anderson_estimating_2014], permitindo a migração da biodiversidade para essas localidades.
+A metodologia proposta para identificar os sítios resilientes às mudanças climáticas [@anderson_estimating_2014; @anderson_resilient_2016; @anderson_resilient_2016-1; e @anderson_resilient_2023] envolve a divisão do espaço geográfico em regiões eco-geológicas, que são similares na sua geologia, geomorfologia, vulnerabilidade ao intemperismo, formação de solos e biodiversidade. Dentro de cada região são mapeadas a diversidade da paisagem e a conectividade local, que posteriomente, compõem a resiliência da paisagem. Os sítios com maior resiliência, possuem alto potencial de abrigar a biodiversidade num cenário de mudanças climáticas e  estão conectados entre si [@anderson_estimating_2014], permitindo a migração da biodiversidade para essas localidades.
  
 ## Regiões eco-geológicas
 
 As regiões eco-geológicas são agrupamentos dos domínios geológicos e ecoregiões, que descrevem as variações geológicas e geomorfológicas promotoras da formação das paisagens, das redes de drenagem, da pedologia e que atuam como base de sustentação da biodiversidade que evoluiu nessas regiões, representadas pelas ecoregiões. O mapeamento das áreas resilientes às mudanças climáticas dentro das regiões eco-geológicas permite a identificação de locais que suportarão a biodiversidade pelos parâmetros locais, sem o enviesamento para regiões com mais variação de elevação e formas de relevo.
 
 Os domínios geológicos são grupos de litoestratigrafia semelhantes em relação ao posicionamento tectônico, nível crustal, classe de rocha, expressão geomorfológica, entre outros [...]. Os domínios geológicos agrupam unidades geológicas, que são agrupamentos de rochas. Portanto, os diferentes domínios geológicos descrevem variações no tipo de rocha, potencial de sofrer intemperismo e idade geológica.
-<!-- Zonas altitudinais não foram utilizadas, pois a variabilidade proveniente das mesmas já é considerada nas ecoregiões. -->As ecoregiões são regionalizações biogeográficas abaixo hierarquicamente dos domínios biogeográficos e biomas, representando agrupamentos espaciais da biodiversidade, numa escala regional, sustentando seus processos ecológicos principais [Olson et al . 2001; Dinerstein et al 2017 (veja material suplementar)]. As integração dos domínios geológicos e ecoregiões foram realizadas pela transformação dos polígonos dos domínios geológicos e ecoregiões em *rasters*, que são posteriormente combinados como a seguinte equação: 
+<!-- Zonas altitudinais não foram utilizadas, pois a variabilidade proveniente das mesmas já é considerada nas ecoregiões. -->As ecoregiões são regionalizações biogeográficas abaixo hierarquicamente dos domínios biogeográficos e biomas, representando agrupamentos espaciais da biodiversidade, numa escala regional, sustentando seus processos ecológicos principais [Olson et al . 2001; Dinerstein et al 2017 (veja material suplementar)]. A integração dos domínios geológicos e ecoregiões foram realizadas pela transformação dos polígonos dos domínios geológicos e ecoregiões em *rasters*, que são posteriormente combinados como a seguinte equação: 
 $$Regiões\ eco-geológicas = {(Ecoregiões)+(100\times Domínio \ Geológico)}$$ 
 Desta forma, os valores do raster final estão no formato **GGEE**, onde as duas primeiras unidades (**GG**) representam os domínios geológicos e as duas últimas unidades (**EE**) as ecoregiões.
 
@@ -29,40 +29,32 @@ O resultado dessas análises é combinado para então estimar o valor de resili�
 ### Diversidade da paisagem 
 
 A diversidade da paisagem está relacionada à variedade de microclimas em um determinado local.
-A análise de diversidade da paisagem resume informações relacionadas a:
-(a) variedade de _landforms_, (b) amplitude altitudinal, (c) densidade de banhados ou áreas úmidas (_wetlands_) e (d) propriedades do solo em um determinado local.
+A análise de diversidade da paisagem resume informações relacionadas à (a) variedade de _landforms_, (b) amplitude altitudinal, (c) índice de áreas úmidas (_wetlands_) e (d) diversidade de solos.
 
 #### Variedade de _landforms_
-A variedade de _landforms_ diz respeito à variedade de componentes naturais do terreno criados pela topografia.
+A variedade de _landforms_ diz respeito à variedade das formas do relevo criados pela topografia.
 Sua avaliação é baseada em um modelo de _landforms_, derivado de um modelo digital de elevação (DEM) com resolução de 90 m, que classifica a superfície em diversas categorias, como por exemplo:
 
-+ precipícios e áreas íngremes -_cliff and steep slope_
-+ topos de montanha e divisores de águas (_summit and ridge-top_)
-+ vertentes norte e sul, que determinam se uma vertente é cálida ou fria, especialmente em latitudes maiores, (_north/south-facing side slope_)
-+ colinas baixas (_low hill_)
++ precipícios e áreas íngremes (_cliff e steep slope_)
++ topos de montanha e divisores de águas (_summit/ridge-top_)
++ vertentes norte e sul, que determinam se uma vertente é quente ou fria, especialmente em latitudes maiores, (_warm/cool side slope_)
++ colinas (_flat hill top_ e _gentle slope hilltop_)
 + áreas planas de terras baixas (_dry flat_), entre outros.
 
-A classificação de _landforms_ leva em conta a combinação de informações sobre __inclinação, orientação, posição no terreno e acumulação de umidade__ (_slope_, _aspect_, _land position_ e _moisture accumulation_), que correspondem a ambientes topográficos locais com combinações distintas de umidade, radiação e deposição.
-
-A __diversidade da paisagem__ é calculada pelo número de _landforms_ dentro de uma área circular de 450 m no entorno de cada célula de 90 m.
-
+A classificação de _landforms_ é baseada na em índices de __inclinação do relevo__, __orientação da vertente__, __posição topográfica__ e __acúmulo de umidade__(_slope_, _aspect_, _land position_ e _moisture accumulation_), que correspondem aos locais com diferenças em umidade, radiação e deposição. A variedade de *landforms* é calculada como a quantidade de *landforms* dentro de uma área circular, de 450 metros de raio, no entorno de cada célula de 90 m.
 
 #### Amplitude altitudinal
 
-A amplitude altitudinal é determinada a partir do DEM, tabulando a amplitude em uma área circular de 450 m no entorno de cada célula de 90 m.
-A amplitude altitudinal considerada no estudo corresponde ao componente não correlacionado com a diversidade de _landforms_ (os resíduos de uma regressão linear simples).
+A amplitude altitudinal é determinada a partir do DEM, calculando a amplitude em uma área circular, de 450 m de raio, no entorno de cada célula de 90 m.
+A amplitude altitudinal considerada no estudo corresponde ao componente não correlacionado com a diversidade de _landforms_ (os resíduos de uma regressão linear simples (*Ordinary Linear Squares*)).
 
-#### Densidade de banhados
-Para áreas extremamente planas, nas quais a variedade de _landforms_ e a amplitude altitudinal não permitem discriminar de forma correta células equivalentes, foram avaliadas a densidade de banhados/áreas úmidas (_wetlands_) e a diversidade de solos (descrito abaixo). 
-A densidade de banhados é incluída como um indicador em escala mais fina de características microtopográficas não capturadas nas classes do modelo de _landforms_.
-
-O índice de densidade de banhados é obtido pelo cálculo do percentual de banhados dentro de buffers de 40 ha (escala local) e 400 ha (escala regional) em cada célula de 30 m.
-O cálculo do valor de banhados envolve ainda a avaliação de manchas irregulares de áreas úmidas (_wetland patchiness_) na paisagem, que leva em conta a distribuição irregular de áreas úmidas de tamanho reduzido.
+#### Índice de áreas úmidas
+Para áreas planas, nas quais a variedade de _landforms_ e a amplitude altitudinal não permitem discriminar a variação microclimática, a densidade e quantidade de áreas úmidas captura a variação microclimática. A densidade e quantidade de áreas úmidas é resumido no índice de áreas úmidas, que é obtido pela média das densidade de aŕeas úmidas dentro de áreas circulares de 450 metros de raio (escala local) e 1170 metros de raio (escala regional), em cada célula de 90 m. Essa densidade é combinada com a quantidade de áreas úmidas (_wetland patchiness_) em áreas circular de 1170 metros de raio, formando o índice de áreas úmidas.
 
 #### Diversidade de solo
-Por fim, em áreas muito planas de regiões costeiras, __foi incluído ainda um componente adicional de diversidade de solos__, que gera uma informação em escala mais fina para identificar variações em áreas planas de alta diversidade nas características do solo.
+Por fim, em locais com baixa variação de *landforms*, amplitude de elevação e presença de áreas úmidas, a diversidade de solo é usada para identificar variações na paisagem que possam sustentar a variação da biodiversidade.
 
-A combinação dos índices de variedade de _landforms_, amplitude altitudinal, valor de banhado e diversidade de solos descritos acima gera o __índice de diversidade da paisagem__.
+A combinação dos índices de variedade de _landforms_, amplitude altitudinal, índice de áreas úmidas e diversidade de solos gera a __diversidade da paisagem__.
 Esse índice pondera a variedade de _landforms_ com peso maior, sendo ela o dobro do peso das demais variáveis: 
 
  <!-- ${diversidade\_da\_paisagem} = 2\times{variedade\_de\_landforms} + \\
@@ -73,12 +65,8 @@ Esse índice pondera a variedade de _landforms_ com peso maior, sendo ela o dobr
 
 ### Conectividade local
 
-A conectividade local permite estimar o grau de permeabilidade (ou reciprocamente o grau de resistência) em torno de cada célula avaliada.
-O algoritmo utilizado mede a conectividade de uma célula focal com o seu vizinho ecológico quando a célula é vista como uma fonte de movimento radiando em todas as direções.
-
-O pressuposto é de que a permeabilidade de duas células adjacentes aumenta quando a sua similaridade ecológica aumenta.
-
-A partir de um mapa de uso e cobertura do solo, incluindo a presença de infraestruturas energéticas e de transporte, foi realizada uma simplificação dos tipos de uso em componentes principais da paisagem e determinado pesos de resistência para cada categoria, nos quais áreas naturais apresentam o valor mínimo, e áreas com intervenção antrópica intensa, o valor máximo. 
+A conectividade local representa o grau de permeabilidade das matrizes da paisagem (ou reciprocamente o grau de resistência) em torno de cada célula avaliada.
+A partir de um mapa de uso e cobertura do solo, incluindo a presença de infraestruturas energéticas e de transporte, foi atribuido pesos <!--realizada uma simplificação dos tipos de uso em componentes principais da paisagem e determinado pesos --> de resistência de movimento para cada categoria de uso do solo, nos quais áreas naturais apresentam o valor mínimo, e áreas com intervenção antrópica intensa (áreas urbanas), o valor máximo. 
 
 As categorias principais de componentes da paisagem foram definidas como: 
 
@@ -86,30 +74,21 @@ As categorias principais de componentes da paisagem foram definidas como:
 + áreas agrícolas ou modificadas (incluindo áreas improdutivas não-naturais)
 + áreas urbanizadas (de baixa ou alta intensidade).
 
-A conectividade local é medida através da análise de resistência de cada célula.
-Nesse contexto, a dispersão teórica de uma espécie (ou processo) a partir de uma célula focal é uma função dos valores de resistência das células vizinhas e suas distâncias com relação à célula focal, até uma distância máxima de 3 km.
-A nota de conectividade local para uma célula é igual à área de dispersão, levando em conta a resistência dividida pela área de dispersão teórica se não houvesse resistência.
+A conectividade local é a média ponderada das resistências dentro uma vizinhança de   , sendo os pesos um decaimento linear pela distância da célula focal.
+<!--Nesse contexto, a dispersão teórica de uma espécie (ou processo) a partir de uma célula focal é uma função dos valores de resistência das células vizinhas e suas distâncias com relação à célula focal, até uma distância máxima de 3 km.
+A nota de conectividade local para uma célula é igual à área de dispersão, levando em conta a resistência dividida pela área de dispersão teórica se não houvesse resistência. --> 
+
+## Dados padronizados (_Z_-_scores_)
+
+Antes de calcularmos a resiliência da paisagem, as variáveis (variedade de *landforms*, amplitude de elevação, índice de áreas úmidas, diversidade de solos e conectividade local) são convertidas para valores de Z (_Z-scores_), assumindo as médias e desvios padrões das [__Regiões eco-geológicas__](#Regiões eco-geológicas). Isso garante a inclusão de condições físicas e ambientais distintas e permite capturar variações na composição da biota associada. Posteriomente, os valores de Z são combinados em diversidade da paisagem, exceto conectividade local. 
 
 ### Resiliência: combinando diversidade da paisagem e conectividade local
 
-O valor de resiliência de um sítio é determinado pela combinação da diversidade da paisagem e da conectividade local
+Finalmente, a resiliência da paisagem é determinada pela média diversidade da paisagem e e valor de Z da conectividade local:
 
 $$
 Resiliência = \frac{ \left(Diversidade\  da\  paisagem+{Conectividade}\right)}{2}
 $$
-
-
-## Dados padronizados (_Z_-_scores_)
-
-O resultado final é um mapa com grid de 90 m, constando os valores estimados de resiliência para cada local.
-
-O mapeamento final dos sítios resilientes é feito por [__configurações eco-geológicas__](#configurações-eco-geológicas) (item acima).
-Isso garante a inclusão de condições físicas e ambientais distintas e permite capturar variações na composição da biota associada.
-Nesse sentido, __a resiliência é comparada dentro de cada configuração e não entre configurações eco-geológicas__.
-
-O mapa final de resiliência indica locais com maior ou menor resiliência comparados ao valor médio da região avaliada.
-São considerados valores médios aqueles com -0,5 a 0,5 desvios padrão ao redor da média.
-
 
 <!--
 ## Conectividade regional 
