@@ -74,7 +74,7 @@ A resiliência da paisagem foi calculada como a média entre os valores padroniz
 
 O cálculo de diversidade da paisagem foi realizado no *Google Earth Engine* [@gorelick_google_2017] e é composto por médias feitas pixel a pixel entre os maiores valores padronizados ( _Z-scores_ ) das imagens: [__Variedade de _landforms___](#variedade-de-landforms), [__Amplitude altitudinal__](#amplitude-altitudinal), [__Valores de áreas úmidas__](#valores-de-áreas-úmidas) e [__Diversidade de solo__](#diversidade-de-solo). Utilizamos o *Google Earth Engine* devido a demanda computacional das análises e por ser uma plataforma baseada em nuvem, que oferece acesso remoto a uma vasta coleção de imagens de satélite e bases de dados geoespaciais de acesso livre e com capacidade computacional para realizar as análises em qualquer equipamento disponível [@gorelick_google_2017]. Isso possibilita que nossas análises sejam de livre acesso, escalonáveis para outras regiões do mundo e que contribuam para uma ciência mais transparente, reproduzível e livre.
 
-#### Variedade de _landforms_
+#### Variedade de _landforms_ {-}
 
 A classificação e distribuição espacial de _landforms_ (formas de relevo) são a base para o cálculo da **diversidade da paisagem** e representam áreas com maiores estabilidade microclimática que resistirão aos impactos causados pelas mudanças climáticas [@anderson_resilient_2016]. Essa classificação é baseada em combinações de informações sobre a **inclinação** (_slope_), **orientação do relevo** (_aspect_), **indice de posição topográfica** (_topographic position index_), **índice de umidade** (_moisture index_) e a distribuição de **rios** e **lagos** <!-- e **áreas úmidas**--> dos ambientes. A combinação dessas variáveis representa a variação de umidade, radiação solar e deposição de sedimentos [@anderson_resilient_2016] na paisagem.
 
@@ -86,7 +86,7 @@ Para o cálculo de [inclinação](#inclinação-do-relevo), [orientação do rel
 Para complementar a superfície gerada pelo acúmulo de fluxo e definir a presença de **rios** e **lagos** <!--e **áreas umidas** -->, nós incluímos as classes de água do MapBiomas Coleção 7 [@mapbiomas_project_collection_2020]. O MapBiomas é um projeto nacional de mapeamento e classificação de mudanças do uso do solo dos últimos 30 anos, a partir de dados de sensoriamento remoto.
 
 
-##### Índice de posição topográfica (TPI)
+##### Índice de posição topográfica (TPI) {-}
 
 O cálculo do TPI foi feito em três escalas com uma janela circular com 7, 11 e 15 células de raio, calculando a diferença da média de elevação entre a célula focal e um conjunto de células vizinhas ($i$), divididos pelo número de células vizinhas ($n$).
 
@@ -96,10 +96,10 @@ $$
 
 O índice é composto pela média de TPI das três escalas, o que permite a consideração de níveis locais e regional de resolução da paisagem [@theobald_ecologically-relevant_2015]. Os tamanhos das janelas foram definidos visualmente para que melhor representassem as formas de relevo.
 
-##### Orientação do relevo
+##### Orientação do relevo {-}
 A orientação do relevo é calculado como um gradiente local das 4 células adjacentes. Os resultados são apresentados em graus, que representam a direção do relevo (0º = Norte, 90º = Leste, 180º = Sul e 270º = Oeste). Nós dividimos a orientação do relevo em dois grupos, baseados na quantidade de incidência solar, sendo células com valores entre 90º e 270º classificados como **faces frias** e valores entre 0º a 90º e 270º a 360º, classificados como **faces quentes**.
 
-##### Inclinação do relevo
+##### Inclinação do relevo {-}
 A inclinação do relevo é calculada como um gradiente local das 4 células adjacentes, os resultados são apresentado em graus que representam a inclinação do relevo (0º a 90º). 
 
 <!-- A inclinação foi dividida em 5 grupos baseado em faixas de inclinação, para melhor classificar diferentes formas do relevo (@tbl-inclinacao).
@@ -114,7 +114,7 @@ A inclinação do relevo é calculada como um gradiente local das 4 células adj
 : Classes de declividade usadas para a classificação de _landforms_ {#tbl-inclinacao}
 -->
 
-##### Índice de umidade
+##### Índice de umidade {-}
 O índice de umidade (_moisture index_) foi calculado com base no **acúmulo de fluxo** do Merit-Hydro e a **inclinação do relevo** que calculamos anteriormente.
 $$
 moisture.index = \frac{\log \left(fluxo+1\right)}{\left(slope+1\right)}  \times1000
@@ -124,7 +124,7 @@ O índice de umidade é a média do índice dentro de uma janela circular de uma
 <!--
 Classificamos como áreas úmidas somente regiões que apresentassem um valor do índice de umidade acima de 3000 e definimos esse valor para que visualmente pudéssemos capturar a distribuição dos cursos d'água sem superestimar outras áreas planas. Porém, esse corte do índice não consegue classificar bem corpos de água com grandes extensões (por exemplo, rio Amazonas, represas e grandes lagos), por isso nós corrigimos a classificação sobrepondo a camada do índice de umidade com a camada de águas do MapBiomas.
 -->
-#### Transformando os índices em classes
+#### Transformando os índices em classes {-}
 
 Cada índice (TPI, inclinação, orientação e índice de úmidade) foi transformado em classes (@tbl-classes) para formarem os tipos de *landforms*. O índice umidade é classificado como presença ou ausência de umidade, sendo locais com rios e lagos classificados como presença.  
 
@@ -146,7 +146,7 @@ Cada índice (TPI, inclinação, orientação e índice de úmidade) foi transfo
 |Índice de Umidade|1|3000|Inf|
 : Classes dos índices usados para a classificação de _landforms_ {#tbl-classes}
 
-##### Combinando as variáveis e classificando as _landforms_
+##### Combinando as variáveis e classificando as _landforms_ {-}
 
 A partir das classificações de todas as variáveis, geramos um código representativo das combinações de classificações das localidades. A classe do índices de umidade é multiĺicado por 1000, orientação do relevo por 100, TPI por 10 e inclinação do relevo por 1. Dessa forma, podemos representar as classes dos índices de uma localidade por um único número. Por exemplo, o código 11 representa áreas de baixa inclinação do relevo e uma posição do relevo mais alta que o entorno, sendo portanto um topo de montanha (_summit_). No entanto, alguns códigos tiveram que ser inspecionados visualmente para classificar alguns tipos de _landforms_, como _sideslopes_, _valleys_ e _toeslopes_ (@tbl-combinacoes).
 
@@ -243,7 +243,7 @@ A classificação final de landforms se encontra na @tbl-landforms.
 
 <!-- Seria interessante algumas figuras de exemplos de landforms dentro dos biomas!!-->
 
-##### Gerando a variedade de _landforms_
+##### Gerando a variedade de _landforms_ {-}
 A variedade de _landforms_ foi calculada como quantidade de tipos de _landforms_ dentro de um _kernel_ circular da célula focal. O tamanho do raio do kernel foi definido calculando a variedade em diferentes raios (2, 5, 7, 10, 15, 20 células) e calculando o ganho de variedade a cada aumento de raio. O raio escolhido foi aquele em que o seu subsequente não adicionou variedade. 
 
 Desta forma, o raio representa o nível de resolução da paisagem que captura o máximo de variedade de landforms. <!-- Raios maiores podem aumentar a variedade, mas devido a mudança de paisagem. --> Assim, o raio escolhido foi de 5 células de raio (450 m) para todo o Brasil.
@@ -253,7 +253,7 @@ Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}
 $$
 Os cálculos de $Z$ foram feitos dentro de cada classificação de **regiões eco-geológicas** usando médias e desvios padrão dentro de cada uma das classes.
 
-#### Amplitude altitudinal
+#### Amplitude altitudinal {-}
 
 A amplitude altitudinal representa a variação da elevação em uma região, independente do número de [___landforms___](#variedade-de-landforms), controlando a relação entre ambas já que elas são correlacionadas entre si. A amplitude altitudinal foi calculada como a diferença entre os valores máximos e mínimos de elevação, dentro de um _kernel_ circular de 450 m, a partir dos dados do DEM do MERIT [@yamazaki_high-accuracy_2017]. fizemos então uma Regressão Linear Simples (_Ordinary Linear Regression_) entre os **valores de amplitude altitudinal** e a **variedade _landforms_** e obtivemos os valores dos resíduos dessa análise para diminuir a correlação estre as duas variáveis.
 
@@ -262,7 +262,7 @@ $$Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}$$
 
 Dessa forma, temos uma imagem que mostra a variação, em relação à média, dos valores dos resíduos da amplitude altitudinal dentro de cada uma das categorias de regiões eco-geológicas.
 
-#### Índice de áreas úmidas
+#### Índice de áreas úmidas {-}
 
 Para calcular o índice de áreas úmidas, utilizamos os dados disponibilizados na base de dados _Global Wetlands Database_ [@gumbricht_tropical_2017], que é uma base de dados que fornece informação e inventário de áreas úmidas no mundo. Os dados são obtidos através de imagens de satélite, amostragens aéreas e relatórios publicados. Como áreas úmidas ocorrem em diversas configurações e distribuições no espaço, nós avaliamos a densidade e o número de áreas úmidas em escala local (450 metros) e escala regional (1170 metros).
 A **densidade de áreas úmidas** foi calculada como a média do número de _pixels_  de áreas úmidas, dentro de um _kernel_ de escala regional (1170 m) e um kernel em escala local (450 m).
@@ -288,7 +288,7 @@ Z_{úmidas}=\frac {{{(Z_{densidade}}{\times3)}}+{Z_{contagem}}}{4}
 $$
 Ao final de todas as operações, temos uma única camada com valores que representam a variação em relação à média dos valores de densidade e contagem de pixels de áreas úmidas referentes às regiões eco-geológicas.
 
-#### Diversidade de solo
+#### Diversidade de solo {-}
 
 A diversidade de solo foi calculada como a distribuição do número de classes de solo, dentro de um _kernel_ de 1350 m. Ela foi usada para indicar áreas com grande concentração dos diferentes tipos de solo que vão afetar diretamente na diversidade de espécies no ambiente. Para calcular o raster de diversidade do solo usamos a classificação oficial dos solos brasileiros, disponibilizada pelo [Instituto Brasileiro de Geografica e Estatística (IBGE)](https://www.ibge.gov.br/geociencias/informacoes-ambientais/pedologia/10871-pedologia.html).
 
@@ -300,7 +300,7 @@ Os cálculos de $Z$ foram feitos dentro de cada classificação de regiões eco-
 
 ### Conectividade local
 
-#### Cálculos de resistência
+#### Cálculos de resistência {-}
 
 Os valores de resistência são medidas relativas do grau de dificuldade de deslocamento dos organismos nos diferentes tipos de cobertura do solo. Esses valores foram atribuídos por bioma, seguindo a premissa de que quanto maior for a diferença estrutural entre um dado tipo de cobertura do solo e a vegetação original do bioma, maior será o valor de resistência da classe de cobertura do solo em questão.
 
@@ -310,8 +310,9 @@ A superfície de cobertura do solo do MapBiomas foi reamostrada para gerar pixel
 
 Os pixels do mapa consolidado de cobertura do solo, já incluindo as estradas pavimentadas e não pavimentadas como novas classes, receberam, separadamente por bioma, valores de resistência que buscaram traduzir, comparativamente entre as classes, o grau de dificuldade de movimentação da biodiversidade numa dada classe de cobertura do solo. A premissa assumida aqui é que quanto maior for a diferença estrutural da classe de cobertura do solo para o hábitat original do bioma, maior será a dificuldade à movimentação que esta classe oferece. Os valores de resistência dos pixels de cada uma das classes foram atribuídos, por bioma, pela equipe do Projeto e podem ser vistos na @tbl-resistencia.
 
-|Classe de cobertura do solo|Amazônia|	Caatinga|	Cerrado	|MataAtlântica|	Pampa	Pantanal|
-|--:|--:|--:||--:|--:|--:|--:|
+
+|Classe de cobertura do solo|Amazônia|	Caatinga|	Cerrado	|MataAtlântica|	Pampa	| Pantanal|
+|--:|--:|--:|--:|--:|--:|--:|
 |Aquaculture|-	|10	|7	|7	|7	|- |
 |Beach, Dune and Sand Spot|2	|2	|2	|2	|2	|- |
 |Citrus|-	|-	|10	|10	|-	|- |
