@@ -84,7 +84,7 @@ Antes de calcularmos a resiliência da paisagem, as variáveis (variedade de *la
 
 ### Resiliência: combinando diversidade da paisagem e conectividade local
 
-Finalmente, a resiliência da paisagem é determinada pela média diversidade da paisagem e e valor de Z da conectividade local:
+Finalmente, a resiliência da paisagem é determinada pela média diversidade da paisagem e valor de Z da conectividade local:
 
 $$
 Resiliência = \frac{ \left(Diversidade\  da\  paisagem+{Conectividade}\right)}{2}
