@@ -72,7 +72,7 @@ A resiliência da paisagem foi calculada como a média entre os valores padroniz
 
 ### Diversidade da paisagem
 
-O cálculo de diversidade da paisagem foi realizado no Google Earth Engine [@gorelick_google_2017] e é composto por médias feitas pixel a pixel entre os maiores valores padronizados ( _Z-scores_ ) das imagens: [__Variedade de _landforms___](#variedade-de-landforms), [__Amplitude altitudinal__](#amplitude-altitudinal), [__Densidade de banhados__](#densidade-de-banhados) e [__Diversidade de solo__](#diversidade-de-solo). Utilizamos o Google Earth Engine por ser uma plataforma baseada em nuvem que oferece acesso remoto a uma vasta coleção de imagens de satélite e bases de dados geoespaciais de acesso livre e com capacidade computacional para realizar as análises em qualquer equipamento disponivel [@gorelick_google_2017]. Isso possibilita que nossas análises sejam de livre acesso e que contribuam para uma ciência mais transparente e livre.
+O cálculo de diversidade da paisagem foi realizado no Google Earth Engine [@gorelick_google_2017] e é composto por médias feitas pixel a pixel entre os maiores valores padronizados ( _Z-scores_ ) das imagens: [__Variedade de _landforms___](#variedade-de-landforms), [__Amplitude altitudinal__](#amplitude-altitudinal), [__Valores de áreas úmidas__](#valores-de-áreas-úmidas) e [__Diversidade de solo__](#diversidade-de-solo). Utilizamos o Google Earth Engine por ser uma plataforma baseada em nuvem que oferece acesso remoto a uma vasta coleção de imagens de satélite e bases de dados geoespaciais de acesso livre e com capacidade computacional para realizar as análises em qualquer equipamento disponivel [@gorelick_google_2017]. Isso possibilita que nossas análises sejam de livre acesso e que contribuam para uma ciência mais transparente e livre.
 
 #### Variedade de _landforms_
 
@@ -237,33 +237,33 @@ $$Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}$$
 
 Dessa forma, temos uma imagem que mostra a variação, em relação à média, dos valores dos resíduos da amplitude altitudinal dentro de cada uma das categorias de regiões eco-geológicas.
 
-#### Densidade de banhados
+#### Valores de áreas úmidas
 
-Para calcular a densidade de banhados usados os dados disponibilizados na base de dados _Global Wetlands Database_ [@gumbricht_tropical_2017], que é uma base de dados que fornece informação e inventário de áreas úmidas no mundo. Os dados são obtidos através de imagens de satélite, amostragens aéreas e relatórios publicados. 
+Para calcular a valores de áreas úmidas usados os dados disponibilizados na base de dados _Global Wetlands Database_ [@gumbricht_tropical_2017], que é uma base de dados que fornece informação e inventário de áreas úmidas no mundo. Os dados são obtidos através de imagens de satélite, amostragens aéreas e relatórios publicados. 
 
-Como áreas de banhados ocorrem em diversas configurações e distribuição no espaço, nós avaliamos as variações das mesmas em escala local (450 m) e em uma escala regional (1170 m). Para o cálculo final dos valores de densidade de banhados, utilizamos tanto o número de pixels em escala regional e a densidade em escala regional e local.
-
-A  **densidade de banhados** foi calculada como a média do número de _pixels_  de áreas de banhado, dentro de um kernel de escala regional (1170 m) e um kernel em escala local (450 m), excluindo rios e lagos. Já a **contagem em escala local** foi calculada como uma contagem de _pixels_ dentro de um _kernel_ circular com 1170 m de diâmetro. A contagem vai representar o número de áreas umidas (excluindo rios e lagos), mostrando regiões de maiores concentrações de pixels de áreas úmidas, que apresentem uma baixa densidade de banhados.
+Como áreas úmidas ocorrem em diversas configurações e distribuições no espaço, nós avaliamos a densidade e o número de áreas úmidas em escala local (450 metros) e escala regional (1170 metros).
+A **densidade de áreas úmidas** foi calculada como a média do número de _pixels_  de áreas de banhado, dentro de um _kernel_ de escala regional (1170 m) e um kernel em escala local (450 m).
+Já a **contagem em escala local** foi calculada como uma contagem de _pixels_ dentro de um _kernel_ circular em escala regional (1170 metros). A contagem vai representar o número de áreas umidas ao redor do _pixel_ focal, mostrando regiões de maiores concentrações de pixels de áreas úmidas, que apresentem baixos valores de densidade de áreas úmidas.
 
 Essas 3 camadas vão auxiliar na identificação de regiões de diversidade da paisagem que apresentem valores baixos para formas de relevo e amplitude de elevação, mas que tenham um acúmulo de áreas umidas que poderiam amenizar localmente o efeito das mudanças climáticas [@anderson_resilient_2016].
 
-Para calcular os valores finais de densidade de banhado, é necessário juntar as informações das 3 camadas produzidas, primeiro calculando os valores padronizados para cada uma delas e depois fazendo uma série de médias pixel a pixel para selecionar os maiores valores de $Z$.
+Para calcular os **valores finais de áreas úmidas**, é necessário juntar as informações das camadas de **densidade local**, **densidade regional** e a **contagem em escala local**. Começamos calculando valores padronizados para cada uma delas ($Z_{local}$, $Z_{regional}$ e $Z_{contagem}$, respectivamente)  ao subtrair os valores de pixels ($X_{pixel}$) pela média ($\mu$) e dividirmos o resultado pelo desvio padrão ($\sigma$) dentro das diferentes categorias de [__regiões eco-geológicas__](#regiões-eco-geológicas), como na fórmula:
+$$
+Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}
+$$
 
-Calculamos os valores padronizados de $Z$ para cada pixel ($Z_{pixel}$) ao subtrair o valor da média ($\mu$) e dividir o resultado pelo desvio padrão ($\sigma$), como mostrado na fórmula a seguir:
-$$Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}$$
-A média e o desvio padrão, e portanto os valores de $Z$, foram calculados tanto para toda a extensão do Brasil, como dentro das diferentes categorias de [__regiões eco-geológicas__](#regiões-eco-geológicas).
-Com o $Z$ calculado para as 3 camadas, podemos calcular os valores de diversidade de áreas de banhado ($Z_{banhado}$) ao fazermos uma média dos valores para as camadas de densidade e contagem.
+Com o $Z$ calculado para as 3 camadas, podemos calcular os valores de áreas úmidas ($Z_{úmidas}$) ao fazermos uma média dos valores para as camadas de densidade local, densidade regional e contagem.
 
-Primeiro calculamos a média entre as imagens de densidade de banhados em escala local ($Z_{local}$) e regional ($Z_{regional}$), atribuindo mais peso para os valores da densidade local:
+Primeiro calculamos a média entre as imagens de valores de áreas úmidas em escala local ($Z_{local}$) e regional ($Z_{regional}$), atribuindo mais peso para os valores da densidade local:
 $$
 Z_{densidade}=\frac {{{(Z_{local}}{\times2)}}+{Z_{regional}}}{3}
 $$
 Ao compararmos esse resultado com a camada de contagem regional, podemos identificar os locais onde os valores para densidade ($Z_{densidade}$) são menores que os valores de contagem ($Z_{contagem}$) e calculamos a média para esses pixels, novamente dando mais peso ao valores de densidade:
 
 $$
-Z_{banhado}=\frac {{{(Z_{densidade}}{\times3)}}+{Z_{contagem}}}{4}
+Z_{úmidas}=\frac {{{(Z_{densidade}}{\times3)}}+{Z_{contagem}}}{4}
 $$
-Ao final de todas as operações, temos uma única camada com valores que representam a variação em relação à média dos valores de densidade e contagem de pixels de áreas de banhado referentes às regiões eco-geológicas.
+Ao final de todas as operações, temos uma única camada com valores que representam a variação em relação à média dos valores de densidade e contagem de pixels de áreas úmidas referentes às regiões eco-geológicas.
 
 #### Diversidade de solo
 
