@@ -298,6 +298,8 @@ Por fim, calculamos os valores de Z para cada pixel ($Z_{pixel}$) ao subtrair o 
 $$Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}$$
 Os cálculos de $Z$ foram feitos dentro de cada classificação de regiões eco-geológicas usando as médias e desvios padrão dentro de cada uma das classes.
 
+#### Diversidade da paisagem {-}
+
 ### Conectividade local
 
 #### Cálculos de resistência {-}
