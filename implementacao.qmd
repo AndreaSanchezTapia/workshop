@@ -4,7 +4,7 @@ O detalhamento das análises apresenta uma descrição mais aprofundada da metod
 
 ## Regiões eco-geológicas
 
-As regiões eco-geológicas do Brasil foram delimitadas para encontrar regiões homólogas em relação aos **domínios geológicos** e às **ecoregiões** do país. Essas regiões são usadas para limitar a variação das características ambientais usadas ao calcular a [__Resiliência da Paisagem__](#resiliência-da-paisagem), de modo a normalizar os valores de resiliência de acordo com regiões homólogas, ao invés de todo o país.
+As regiões eco-geológicas do Brasil foram delimitadas para encontrar regiões homólogas em relação aos **domínios geológicos** e às **ecoregiões** do país. Essas regiões são usadas para limitar a variação das características ambientais usadas ao calcular a [__Resiliência da Paisagem__](#resiliência-combinando-diversidade-da-paisagem-e-conectividade-local), de modo a normalizar os valores de resiliência de acordo com regiões homólogas, ao invés de todo o país.
 
 Os **domínios geológicos** são grupos de unidades geológicas, separados pelas similidades nas classificações de tipo de rocha. Os domínios foram criados a partir da classificação feita pela CPRM (Serviços Geológico do Brasil). A classificação por unidades geológicas consistia em um número muito grande de categorias para o Brasil (aproximadamente 1350), por esse motivo utilizamos um agrupamento dessas categorias por domínios geológicos (14 domínios).
 
@@ -299,6 +299,36 @@ $$Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}$$
 Os cálculos de $Z$ foram feitos dentro de cada classificação de regiões eco-geológicas usando as médias e desvios padrão dentro de cada uma das classes.
 
 #### Diversidade da paisagem {-}
+A diversidade da paisagem é calculada pela média dos maiores valores de $Z$ entre **variedades de landforms** ($Z_{diversidade}$), **amplitude de elevação** ($Z_{elevação}$), **índice de áreas úmidas** ($Z_{úmidas}$) e **diversidade de solo** ($Z_{solos}$). Começamos assumindo que a diversidade da paisagem seja igual a variedade de _landforms_ nos locais onde os valores de amplitude de elevação sejam maiores que a variedade de _landforms_ a diversidade da paisagem é calculada como a média entre os valores de $Z$ das duas camadas, com maior peso dado para a camada de variedade de landforms, conforme a fórmula a seguir.
+$$
+Z_{diversidade}= \frac{\left(Z_{landforms}\times 2 \right)+Z_{elevação}}{3}
+$$
+Depois comparamos os valores desse $Z$ com a camada do índice de áreas úmidas e nas áreas onde esses valores sejam maiores substituímos pelo valor do índice de áreas úmidas. Portanto em regiões onde os valores de áreas úmidas são maiores eles substituem os valores de $Z$ nesses _pixels_.
+
+Na localidades onde a diversidade de solo é maior que a diversidade da paisagem, os valores são substituídos pela média ponderada das variáveis naquela localidade
+Nas localidades onde a diversidade do solo for maior que a diversidade da paisagem calculada até aqui, vamos substituir os valores pela média ponderada entre todas as outras camadas, dependendo de quais camadas apresentam maiores valores.
+
+Se os valores da diversidade forem menores que os valores de _landforms_, amplitude de elevação, índice de áreas úmidas e diversidade de solo somamos todos os valores de $Z$, dobrando os valores de _landforms_ e dividimos por 5.
+$$
+Z_{diversidade}= \frac{\left(Z_{landforms}\times 2 \right)+Z_{elevação}+Z_{úmidas}+Z_{solos}}{5}
+$$
+
+
+Se os valores de diversidade forem menores que variedade de _landforms_ elevação e diversidade de solos, mas forem maiores que o índice de áreas úmidas somamos os valores das 3 camadas, dobrando os valores para _landforms_ e dividimos por 4.
+$$
+Z_{diversidade}= \frac{\left(Z_{landforms}\times 2 \right)+Z_{elevação}+Z_{solos}}{4}
+$$
+Se os valores de diversidade forem menos que _landforms_, índices de áreas úmidas e amplitude de elevação, somamos os valores das 3 camadas, dobrando os valores de _landforms_ e dividimos por 4.
+$$
+Z_{diversidade}= \frac{\left(Z_{landforms}\times 2 \right)+Z_{elevação}+Z_{úmidas}}{4}
+$$
+
+Se os valores de diversidade forem menores que variedade de _landforms_ e diversidade de solo, somamos os valores das camadas, dobrando os valores de _landforms_ e dividimos por 3.
+
+$$
+Z_{diversidade}= \frac{\left(Z_{landforms}\times 2 \right)+Z_{solos}}{3}
+$$
+Agora os valores de diversidade de paisagem já contém toda a variação das camadas de $Z$ que calculamos anteriormente, como temos uma grande variação dos valores fazemos um truncamento dos valores da diversidade maiores e menores que 95% da distribuição dos dados. Esse truncamento foi feito para suavizar a imagem final de diversidade e remover valores _outliers_ que possam influenciar o cálculo da [__Resiliência da Paisagem__](#resiliência-combinando-diversidade-da-paisagem-e-conectividade-local). Para essa suavização, calculamos a distribuição dos dados e todo valor de _pixel_ fora de 95% da distribuição foi substituido pelos valores de máximo e mínimo da distribuição. 
 
 ### Conectividade local
 
