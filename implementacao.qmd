@@ -96,10 +96,10 @@ $$
 
 O índice é composto pela média de TPI das três escalas, o que permite a consideração de níveis locais e regional de resolução da paisagem [@theobald_ecologically-relevant_2015]. Os tamanhos das janelas foram definidos visualmente para que melhor representassem as formas de relevo.
 
-##### Orientação do relevo {-}
+##### Orientação do relevo (*aspect*) {-}
 A orientação do relevo é calculado como um gradiente local das 4 células adjacentes. Os resultados são apresentados em graus, que representam a direção do relevo (0º = Norte, 90º = Leste, 180º = Sul e 270º = Oeste). Nós dividimos a orientação do relevo em dois grupos, baseados na quantidade de incidência solar, sendo células com valores entre 90º e 270º classificados como **faces frias** e valores entre 0º a 90º e 270º a 360º, classificados como **faces quentes**.
 
-##### Inclinação do relevo {-}
+##### Inclinação do relevo (*slope*) {-}
 A inclinação do relevo é calculada como um gradiente local das 4 células adjacentes, os resultados são apresentado em graus que representam a inclinação do relevo (0º a 90º). 
 
 <!-- A inclinação foi dividida em 5 grupos baseado em faixas de inclinação, para melhor classificar diferentes formas do relevo (@tbl-inclinacao).
@@ -114,7 +114,7 @@ A inclinação do relevo é calculada como um gradiente local das 4 células adj
 : Classes de declividade usadas para a classificação de _landforms_ {#tbl-inclinacao}
 -->
 
-##### Índice de umidade {-}
+##### Índice de umidade (*moisture index*) {-}
 O índice de umidade (_moisture index_) foi calculado com base no **acúmulo de fluxo** do Merit-Hydro e a **inclinação do relevo** que calculamos anteriormente.
 $$
 moisture.index = \frac{\log \left(fluxo+1\right)}{\left(slope+1\right)}  \times1000

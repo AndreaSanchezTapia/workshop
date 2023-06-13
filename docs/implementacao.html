@@ -288,12 +288,12 @@ TPI = \frac {\sum  _{i}^{n}\left(vizinhança_i - focal \right)}{n}
 \]</span></p>
 <p>O índice é composto pela média de TPI das três escalas, o que permite a consideração de níveis locais e regional de resolução da paisagem <span class="citation" data-cites="theobald_ecologically-relevant_2015">(<a href="references.html#ref-theobald_ecologically-relevant_2015" role="doc-biblioref">Theobald et al. 2015</a>)</span>. Os tamanhos das janelas foram definidos visualmente para que melhor representassem as formas de relevo.</p>
 </section>
-<section id="orientação-do-relevo" class="level5 unnumbered">
-<h5 class="unnumbered anchored" data-anchor-id="orientação-do-relevo">Orientação do relevo</h5>
+<section id="orientação-do-relevo-aspect" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="orientação-do-relevo-aspect">Orientação do relevo (<em>aspect</em>)</h5>
 <p>A orientação do relevo é calculado como um gradiente local das 4 células adjacentes. Os resultados são apresentados em graus, que representam a direção do relevo (0º = Norte, 90º = Leste, 180º = Sul e 270º = Oeste). Nós dividimos a orientação do relevo em dois grupos, baseados na quantidade de incidência solar, sendo células com valores entre 90º e 270º classificados como <strong>faces frias</strong> e valores entre 0º a 90º e 270º a 360º, classificados como <strong>faces quentes</strong>.</p>
 </section>
-<section id="inclinação-do-relevo" class="level5 unnumbered">
-<h5 class="unnumbered anchored" data-anchor-id="inclinação-do-relevo">Inclinação do relevo</h5>
+<section id="inclinação-do-relevo-slope" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="inclinação-do-relevo-slope">Inclinação do relevo (<em>slope</em>)</h5>
 <p>A inclinação do relevo é calculada como um gradiente local das 4 células adjacentes, os resultados são apresentado em graus que representam a inclinação do relevo (0º a 90º).</p>
 <!-- A inclinação foi dividida em 5 grupos baseado em faixas de inclinação, para melhor classificar diferentes formas do relevo (@tbl-inclinacao).
 
@@ -307,8 +307,8 @@ TPI = \frac {\sum  _{i}^{n}\left(vizinhança_i - focal \right)}{n}
 : Classes de declividade usadas para a classificação de _landforms_ {#tbl-inclinacao}
 -->
 </section>
-<section id="índice-de-umidade" class="level5 unnumbered">
-<h5 class="unnumbered anchored" data-anchor-id="índice-de-umidade">Índice de umidade</h5>
+<section id="índice-de-umidade-moisture-index" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="índice-de-umidade-moisture-index">Índice de umidade (<em>moisture index</em>)</h5>
 <p>O índice de umidade (<em>moisture index</em>) foi calculado com base no <strong>acúmulo de fluxo</strong> do Merit-Hydro e a <strong>inclinação do relevo</strong> que calculamos anteriormente. <span class="math display">\[
 moisture.index = \frac{\log \left(fluxo+1\right)}{\left(slope+1\right)}  \times1000
 \]</span> O índice de umidade é a média do índice dentro de uma janela circular de uma célula de raio determinado. O tamanho do raio foi escolhido visualmente para suavizar o índice, mas representando bem a distribuição dos cursos d’água.</p>
