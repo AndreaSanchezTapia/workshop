@@ -14,11 +14,12 @@ knitr::include_graphics("figs/0_team.png")
 
 ### Equipe TNC Brasil
 
-- Milena Rosenfield (coordenação)
-- Mário Barroso
-- José Fronza
-- Clícia Barata
-- Edenise Garcia
+- Edenise Garcia (diretora de ciências)
+- Milena Rosenfield (coordenadora técnica)
+- Mário Barroso (especialista SIG)
+- José Fronza (especialista SIG/dados)
+- Clícia Barata (especialista SIG)
+
 
 ### Equipe central por bioma
 
