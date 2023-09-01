@@ -8,12 +8,18 @@ book:
   date: "2023-06-12"
   chapters:
     - index.qmd
-    - intro.qmd
-    - objetivo.qmd
-    - oficina.qmd
-    - metodologia.qmd
-    - implementacao.qmd
-    - resultados.qmd
+    - Equipe_envolvida.qmd
+    - Objetivo_produtos.qmd
+    - Atividades_oficinas.qmd
+    - Introducao.qmd
+    - Glossario.qmd
+    - Modelo_conceitual_premissas.qmd
+    - Metodologia_resumida.qmd
+    - Codigos_bases_dados.qmd
+    - Diversidade_da_paisagem.qmd
+    - Conectividade_local.qmd
+    - Resiliencia_da_paisagem.qmd
+    - Resultados.qmd
     - references.qmd
   page-navigation: true
   favicon: figs/TNC.png
