@@ -10,3 +10,5 @@ O objetivo geral do estudo pode ser detalhado em dois objetivos específicos:
 
 + Refinar e adaptar a metodologia proposta, __com base em discussões com especialistas no tema que atuam na região de estudo__, produzindo um mapa de áreas resilientes para o Brasil.
 
+## Produtos previstos
+
