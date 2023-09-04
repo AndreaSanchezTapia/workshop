@@ -1,1 +1,9 @@
-# Introdução
+# Introdução geral
+
+O projeto _Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros_ é coordenado por _The Nature Conservancy Brasil_ e executado por diversas instituições de pesquisa localizadas em cada um dos biomas do Brasil.
+
+O objetivo principal do projeto é mapear sítios resilientes a mudanças climáticas e conectados entre si, identificando locais que seriam mais adequados a sustentar a biodiversidade em um futuro de mudanças no clima. O produto principal do projeto é um mapa indicando as áreas resilientes e conectadas no Brasil.
+
+<!---
+Detalhar mais a contextualização teórica (brevemente). 
+-->
