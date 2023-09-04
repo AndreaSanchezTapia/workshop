@@ -8,10 +8,10 @@ book:
   date: "2023-06-12"
   chapters:
     - index.qmd
+    - Introducao.qmd
     - Equipe_envolvida.qmd
     - Objetivo_produtos.qmd
     - Atividades_oficinas.qmd
-    - Introducao.qmd
     - Glossario.qmd
     - Modelo_conceitual_premissas.qmd
     - Metodologia_resumida.qmd
