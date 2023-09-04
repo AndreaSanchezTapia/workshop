@@ -1,5 +1,21 @@
 # Resultados preliminares
 
-Os resultados preliminares das análises realizadas pela equipe se encontram no website da _The Nature Conservancy_ Brasil: [_Mapping climate resilient
-sites in Brazil_](https://projeto-resiliencia-tnc.hub.arcgis.com/?share=link)
+Os mapas das camadas principais e das variáveis intermediárias da análise podem ser visualizados no seguinte link: https://projeto-resiliencia-tnc.hub.arcgis.com/?share=link
 
+**Atenção: o projeto ainda está em andamento, então os resultados apresentados são ainda versões preliminares do estudo.**
+
+Abaixo são descritos resultados principais por bioma e alguns padrões gerais obtidos para cada uma das camadas.
+
+## Diversidade da paisagem
+
+<!---
+[explorar resultados; discutir resultados quebrando pelas variáveis, para saber qual atributo está influenciando mais na diversidade da paisagem]
+-->
+
+## Conectividade da paisagem
+
+## Resiliência da paisagem
+
+<!---
+[padrões gerais para cada bioma; incluir recorte de cada bioma e breve descrição]
+-->
