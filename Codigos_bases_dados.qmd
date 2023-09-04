@@ -2,10 +2,63 @@
 
 ## Códigos
 
+Os códigos para as análises estão disponíveis no repositório do projeto:
+[inserir link]
+
+A documentação para cada uma das diferentes camadas pode ser encontrada nos links abaixo.
+
 ### Diversidade da paisagem
+
+[inserir link]
 
 ### Conectividade local
 
++ Resistência da paisagem:
+[inserir link]
+
++ Conectividade (omniscape):
+[inserir link]
+
 ### Resiliência da paisagem
 
+[inserir link]
+
+
 ## Bases de dados
+
+As seguintes bases de dados foram utilizadas para gerar as análises:
+
+### Diversidade da paisagem
+
++ Formas de relevo e altitude:
+MERIT DEM: Multi-Error-Removed Improved-Terrain DEM
+https://developers.google.com/earth-engine/datasets/catalog/MERIT_DEM_v1_0_3
+
++ Acúmulo de fluxo:
+MERIT Hydro: Global Hydrography Datasets
+https://developers.google.com/earth-engine/datasets/catalog/MERIT_Hydro_v1_0_1
+
++ Áreas úmidas:
+Global Wetlands
+https://www2.cifor.org/global-wetlands/
+
++ Solos:
+IBGE
+https://www.ibge.gov.br/geociencias/informacoes-ambientais/pedologia/10871-pedologia.html
+
++ Corpos d’água:
+Mapbiomas Água
+https://mapbiomas.org/
+
+
+### Conectividade local
+
++ Uso e cobertura do solo: Mapbiomas Coleção 7
+https://mapbiomas.org/
+
++ Infraestrutura de transporte: IBGE BCIM
+[inserir link]
+
++ Infraestrutura de energia: ANEEL
+[inserir link]
+
