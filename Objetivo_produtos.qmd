@@ -12,3 +12,13 @@ O objetivo geral do estudo pode ser detalhado em dois objetivos específicos:
 
 ## Produtos previstos
 
+O produto principal do projeto é um mapa de áreas resilientes e conectadas para os biomas do Brasil, que permite identificar áreas com potencial de sustentar animais e plantas em um clima sob mudanças.
+
+Estão previstos ainda:
+
++ Relatório técnico, em português, descrevendo o projeto e a metodologia utilizada;
+
++ Documentação detalhada das análises, incluindo o compartilhamento dos códigos, para que seja possível reproduzir as análises;
+
++ Elaboração de, no mínimo, um artigo científico a ser submetido a uma revista científica internacional.
+
