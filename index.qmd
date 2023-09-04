@@ -1,36 +1,57 @@
 # Síntese do projeto {.unnumbered}
 
-<!-- Nos nossos textos temos que padronizar o que entendemos por adatação às mudanças climáticas. No sentido mais restrito, adaptação é a mudança evolutiva da espécies em reposta à pressão ambiental, assim as espécies podem se adaptar (evoluir) para terem condições fisiológicas que suportem o novo clima, ou migrarem para áreas adequadas aos seus nichos. No entento, há também adaptação sendo usado em sentidos mais amplos, incluindo a migração. Sugiro mantermos o termo mais restrito, para ficar mais relacionado conceitualmente com a discussão de evolução de nicho e resgate evolutivo --> 
-
-As mudanças climáticas modificam os ambientes naturais e pressionam as espécies a se adaptarem às novas condições ambientais ou alterarem sua distribuição espacial para locais mais adequados climaticamente.
+## Contexto geral do estudo
+As mudanças no clima modificam ambientes naturais e pressionam espécies a se adaptarem às novas condições ambientais ou alterarem suas distribuições espaciais para locais mais adequados climaticamente.
 A identificação de locais com adequabilidade climática para sustentar a biodiversidade no futuro de mudanças climáticas é imprescindível para o planejamento sistemático de ações de conservação e restauração.
 
-O __objetivo__ principal do projeto _Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros_ é __mapear sítios resilientes às mudanças climáticas__.
-O termo _áreas resilientes_ indica locais que apresentam condições necessárias para que espécies e processos ecológicos persistam às mudanças climáticas regionais, definidos por sua alta diversidade microclimática, grau de conservação e conectividade. 
 
-A __metodologia__ proposta para isso combina a diversidade da paisagem, um _proxy_ da variabilidade microclimática, com a conectividade local, identificando locais que fornecem condições microclimáticas para o enfrentamento às mudanças climáticas e cujas matrizes da paisagem sejam permeáveis à movimentação das espécies.
+## O que queremos fazer?
+O objetivo principal do projeto é __mapear sítios resilientes às mudanças climáticas__, que permitam a movimentação da biodiversidade na busca de áreas mais adequadas climaticamente.
 
-+ A __diversidade da paisagem__ é baseada na geodiversidade (geomorfologia, geologia, pedologia e hidrologia) do terreno, composta pela variedade de _landforms_, amplitude altitudinal, densidade e quantidade de áreas úmidas e diversidade de solos.
+O termo _áreas resilientes_ indica locais que apresentam condições necessárias para que espécies e processos ecológicos persistam às mudanças climáticas regionais, definidos por sua alta diversidade microclimática e conectividade. 
 
-+ A __conectividade local__ é baseada na resistência das matrizes da paisagem ao movimento da biodiversidade, combinando o uso do solo e as infraestruturas de energia e transporte existentes (com maior ou menor grau de antropização).
 
+## Quais as premissas básicas desse estudo?
 A metodologia desenvolvida segue três premissas básicas:
 
-1) a diversidade de espécies é correlacionada com a diversidade da paisagem (geodiversidade);
-2) em um cenário de mudança climática, espécies se beneficiam de microclimas locais para se manterem na paisagem;
-3) populações de espécies podem usar microclimas e acompanhar mudanças microclimáticas se as áreas adequadas forem permeáveis e bem conectadas.
+1. A diversidade da paisagem é determinada pela heterogeneidade de habitats, variáveis condicionadas por características do meio físico, como feições topográficas, altitude, disponibilidade hídrica e tipo de solo, e que promovem variabilidade microclimática, influenciando diversidade genética e fenotípica de espécies.
+
+2. A conectividade da paisagem é determinada pela resistência que os tipos de uso e cobertura do solo oferecem para a movimentação das espécies na paisagem, considerando as relações de vizinhança estabelecidas em uma escala local.
+
+3. A resiliência da paisagem a mudanças do clima é determinada pela heterogeneidade de habitat disponíveis para as espécies, que geram condições diversificadas de microclimas aos organismos, e pela conectividade desses habitats na paisagem, que permitem a movimentação desses organismos para áreas mais adequadas.
 
 
+## Qual metodologia estamos utilizando?
+A metodologia proposta para isso combina a diversidade da paisagem, um _proxy_ da variabilidade microclimática, com a conectividade local, identificando locais que forneçam condições microclimáticas para o enfrentamento às mudanças climáticas, cujas matrizes da paisagem sejam permeáveis à movimentação das espécies.
+
+A diversidade da paisagem é baseada na geodiversidade (geomorfologia, geologia, pedologia e hidrologia) do terreno, composta pela variedade de formas de relevo, amplitude altitudinal, densidade de áreas úmidas e riqueza de solos.
+
+A conectividade local é baseada na resistência das matrizes da paisagem ao movimento da biodiversidade, combinando uso do solo e infraestruturas de transporte e de energia existentes (com maior ou menor grau de antropização).
+
+
+## Por que a escolha por essa metodologia de análise?
 Essa análise foi proposta e validada para a América do Norte pela _The Nature Conservancy_ (TNC), complementando outras metodologias disponíveis na literatura, uma vez que ela foca nas propriedades do terreno para identificar áreas resilientes. 
-A aplicação da metodologia da TNC para os biomas brasileiros é um passo importante na identificaçao de sítios resilientes em ambientes tropicais megadiversos. 
 
-Atuando em conjunto com especialistas dos diferentes biomas, em diferentes temáticas de pesquisa, e baseado na literatura disponível, o projeto busca adequar a metodologia original ao contexto dos biomas brasileiros, refinando e adaptando quando necessário. <!-- Não estamos testando, estamos adequando e desenvolvendo a metodologia  --> 
+A aplicação da metodologia da TNC para os biomas brasileiros é um passo importante na identificação de sítios resilientes em ambientes tropicais megadiversos. 
+Atuando em conjunto com especialistas dos diferentes biomas e baseado na literatura disponível, o projeto busca adequar a metodologia original ao contexto dos biomas brasileiros, refinando e adaptando quando necessário.
 
-O __produto__ principal resultante desse projeto é um mapa de áreas resilientes e conectadas para o Brasil, que permite identificar áreas com potencial de sustentar animais e plantas em um clima sob mudanças.
-Além disso, estão previstos ainda a prepararação de um relatório técnico sobre o projeto, uma documentação reproduzível das análises e ao menos um artigo científico.
+
+## Onde e com quem estamos trabalhando?
+O mapeamento está sendo conduzido para cada um dos seis biomas do Brasil.
+Para isso, em cada um dos biomas temos coordenadores(as) responsáveis em instituições de pesquisa, além de um(a) pesquisador(a) de pós-doutorado diretamente envolvido(a) no projeto. Há ainda uma equipe de especialistas, de diversas áreas de atuação relacionadas à 
+Temática do projeto, que participam como colaboradores do desenvolvimento do estudo.
+
+
+## Quais são os produtos previstos desse projeto?
+O produto resultante desse projeto é um mapa de áreas resilientes e conectadas para os biomas do Brasil que permite identificar áreas com potencial de sustentar animais e plantas em um clima sob mudanças.
+Está em construção também um relatório técnico descrevendo o projeto e a metodologia utilizada, além de uma documentação reproduzível das análises.
+Além desses produtos, está prevista a elaboração de, no mínimo, um artigo científico a ser submetido a uma revista científica internacional.
+	
+
+## Como temos conduzido as atividades?
+Os(as) bolsistas de pós-doutorado têm sido responsáveis por liderar as análises e conduzir o projeto regionalmente. A equipe da TNC Brasil coordena as atividades em cada bioma e entre os biomas e também a integração entre as diversas equipes, participando diretamente das discussões nos grupos.
+Estão sendo realizadas oficinas e reuniões virtuais com as equipes de cada bioma e com os(as) especialistas para discutir as particularidades regionais, refinar as análises e os resultados obtidos.
+
 
 ## __Palavras chave:__
-
-Resiliência climática, mudanças climáticas, conectividade, paisagem, geodiversidade, conservação, biodiversidade.
-
-
+Resiliência climática, mudanças climáticas, conectividade, paisagem, geodiversidade, conservação, biodiversidade
