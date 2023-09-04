@@ -3,7 +3,7 @@ project:
   output-dir: docs
 logo: figs/TNC.jpg
 book:
-  title: "Oficina: Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros"
+  title: "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros"
   author: ""
   date: "2023-06-12"
   chapters:
