@@ -46,12 +46,17 @@ Temática do projeto, que participam como colaboradores do desenvolvimento do es
 O produto resultante desse projeto é um mapa de áreas resilientes e conectadas para os biomas do Brasil que permite identificar áreas com potencial de sustentar animais e plantas em um clima sob mudanças.
 Está em construção também um relatório técnico descrevendo o projeto e a metodologia utilizada, além de uma documentação reproduzível das análises.
 Além desses produtos, está prevista a elaboração de, no mínimo, um artigo científico a ser submetido a uma revista científica internacional.
-	
+
 
 ## Como temos conduzido as atividades?
 Os(as) bolsistas de pós-doutorado têm sido responsáveis por liderar as análises e conduzir o projeto regionalmente. A equipe da TNC Brasil coordena as atividades em cada bioma e entre os biomas e também a integração entre as diversas equipes, participando diretamente das discussões nos grupos.
 Estão sendo realizadas oficinas e reuniões virtuais com as equipes de cada bioma e com os(as) especialistas para discutir as particularidades regionais, refinar as análises e os resultados obtidos.
 
 
-## __Palavras chave:__
-Resiliência climática, mudanças climáticas, conectividade, paisagem, geodiversidade, conservação, biodiversidade
+## Palavras chave
+Resiliência climática, mudanças climáticas, conectividade, paisagem, geodiversidade, conservação, biodiversidade.
+
+
+## Instituições parceiras do projeto
+
+[INSERIR LOGO DAS INSTITUIÇÕES: TNC, MPEG, UFABC, UFJ, UFMS, UFRN; SOS Pantanal, Associação Caatinga]
