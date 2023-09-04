@@ -2,5 +2,17 @@
 
 ## Atividades previstas
 
+As atividades previstas para o projeto serão divididas em duas etapas: a primeira é a aplicação da metodologia de mapeamento de diversidade da paisagem, conectividade local e resiliência da paisagem; e a segunda etapa corresponde ao refinamento e adaptação desta metodologia para o contexto dos diversos biomas brasileiros, que será feita a partir de discussões com especialistas.
+
+A partir da metodologia proposta, serão realizadas reuniões internas com a equipe e workshops com especialistas nas temáticas do projeto e com experiência em diversos biomas do Brasil para discussão da metodologia e sugestão de soluções de potenciais limitações do projeto. 
+O processo consistirá, portanto, da aplicação da abordagem desenvolvida, análise dos métodos, avaliação, complementação e validação dos resultados, e geração de mapas de áreas resilientes e conectadas nos biomas brasileiros.
+
+
 ## Planejamento das oficinas
+
+As oficinas previstas para o projeto terão como objetivo discutir a metodologia proposta e sugerir adequações (metodológicas e de bases de dados) às características dos ecossistemas e particularidades dos biomas brasileiros. A exequibilidade das sugestões será posteriormente avaliadas internamente sob as condições limitantes de recurso e tempo de conclusão do projeto.  
+
+Está prevista a realização de três oficinas, nas quais participarão especialistas de todos os biomas do Brasil. Nessas oficinas serão discutidas questões importantes relativas ao projeto, incluindo pontos teóricos, procedimentos analíticos e resultados obtidos.
+
+[INSERIR TABELA COM AS TRÊS OFICINAS]
 
