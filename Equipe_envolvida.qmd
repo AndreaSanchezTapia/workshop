@@ -1,18 +1,16 @@
-# Introdução
+# Membros da equipe
 
-O projeto _Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros_ é coordenado por _The Nature Conservancy Brasil_ e a primeira oficina com especialistas de cada bioma será realizada virtualmente nos dias __13 e 15 de junho de 2023__.
-
-O projeto procura mapear sítios resilientes a mudanças climáticas e áreas importantes para manutenção ou restabelecimento da conectividade entre eles, identificando locais que seriam mais adequados a persistir e se adaptar às futuras mudanças no clima.
-O produto principal do projeto é um mapa de áreas resilientes a mudanças climáticas para o Brasil.
-
-## Membros da equipe
+O projeto _Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros_ é coordenado pela _The Nature Conservancy Brasil_ e executado por diversas instituições de pesquisa localizadas em cada um dos biomas do Brasil: Museu Paraense Emílio Goeldi (MPEG), Universidade Federal do ABC (UFABC), Universidade Federal do Jataí (UFJ), Universidade Federal do Mato Grosso do Sul (UFMS) e Universidade Federal do Rio Grande do Norte (UFRN).
 
 ```{r, echo = F, out.width=800}
 knitr::include_graphics("figs/0_team.png")
 ```
 
 
-### Equipe TNC Brasil
+## Equipe TNC Brasil
+<!---
+[INSERIR TABELA]
+--> 
 
 - Edenise Garcia (diretora de ciências)
 - Milena Rosenfield (coordenadora técnica)
@@ -21,16 +19,20 @@ knitr::include_graphics("figs/0_team.png")
 - Clícia Barata (especialista SIG)
 
 
-### Equipe central por bioma
+## Equipe central por bioma
+
+<!---
+[INSERIR TABELA]
+--> 
 
 - Amazônia: Ana Albernaz, Luciano Querido (Museu Paraense Emílio Goeldi)
 - Caatinga: Eduardo Venticinque, Marina Antongiovanni (Universidade Federal do Rio Grande do Norte)
 - Cerrado: Levi Carina Terribile, Lucas Jardim (Universidade Federal do Jataí)
-- Mata Atlântica: Leandro Tambosi, Andrea Sánchez-Tapia (Universidade Federal do ABC)
+- Mata Atlântica: Leandro Tambosi, Priscila Silveira (Universidade Federal do ABC)
 - Pampa: Milena Rosenfield, Mário Barroso, José Fronza (The Nature Conservancy Brasil)
 - Pantanal: Letícia Couto Garcia, Alisson Ribeiro (Universidade Federal do Mato Grosso do Sul)
 
-### Especialistas convidados
+## Especialistas convidados
  
 |Bioma|Pesquisador(a)|Instituição	|Cidade|
 |--|--|--|--|
