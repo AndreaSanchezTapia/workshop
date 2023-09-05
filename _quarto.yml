@@ -5,7 +5,7 @@ logo: figs/TNC.jpg
 book:
   title: "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros"
   author: ""
-  date: "2023-06-12"
+  date: ""
   chapters:
     - index.qmd
     - Introducao.qmd
