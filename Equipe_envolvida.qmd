@@ -2,28 +2,27 @@
 
 O projeto _Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros_ é coordenado pela _The Nature Conservancy Brasil_ e executado por diversas instituições de pesquisa localizadas em cada um dos biomas do Brasil: Museu Paraense Emílio Goeldi (MPEG), Universidade Federal do ABC (UFABC), Universidade Federal do Jataí (UFJ), Universidade Federal do Mato Grosso do Sul (UFMS) e Universidade Federal do Rio Grande do Norte (UFRN).
 
-```{r, echo = F, out.width=800}
-knitr::include_graphics("figs/0_team.png")
-```
-
-
 ## Equipe TNC Brasil
-<!---
-[INSERIR TABELA]
---> 
-
-- Edenise Garcia (diretora de ciências)
-- Milena Rosenfield (coordenadora técnica)
-- Mário Barroso (especialista SIG)
-- José Fronza (especialista SIG/dados)
-- Clícia Barata (especialista SIG)
-
+| Nome | Atuação | Lattes |
+|--|--|--|
+|Edenise Garcia|Diretora de ciências|[http://lattes.cnpq.br/6575206025031796](http://lattes.cnpq.br/6575206025031796)|
+|Milena Rosenfield|Coordenadora técnica|[http://lattes.cnpq.br/8181631357765054](http://lattes.cnpq.br/8181631357765054)|
+|Mário Barroso|Especialista em  SIG|[http://lattes.cnpq.br/7182178358444899](http://lattes.cnpq.br/7182178358444899)|
+|José Fronza|Especialista em SIG e dados|[http://lattes.cnpq.br/1205403331686811](http://lattes.cnpq.br/1205403331686811)|
+|Clícia Barata|Especialista em SIG|[http://lattes.cnpq.br/2750496081930336](http://lattes.cnpq.br/2750496081930336)|
 
 ## Equipe central por bioma
+|Bioma|Supervisão|Equipe|Intituição|
+|--|--|--|--|
+|Amazônia|Ana Albernaz [http://lattes.cnpq.br/1220240487835422](http://lattes.cnpq.br/1220240487835422)|Luciano Querido [http://lattes.cnpq.br/3123978281728788](http://lattes.cnpq.br/3123978281728788)|Museu Paraense Emílio Goeldi|
+|Caatinga|Eduardo Venticinque [http://lattes.cnpq.br/3582966116563351](http://lattes.cnpq.br/3582966116563351)|Marina Antongiovanni [http://lattes.cnpq.br/6734509642838870](http://lattes.cnpq.br/6734509642838870)|Universidade Federal do Rio Grande do Norte|
+|Cerrado| Levi Carina Terribile [http://lattes.cnpq.br/0833667862532867](http://lattes.cnpq.br/0833667862532867)|Lucas Jardim [http://lattes.cnpq.br/6537020596919365](http://lattes.cnpq.br/6537020596919365)|Universidade Federal do Jataí|
+|Mata Atlântica|Leandro Tambosi [http://lattes.cnpq.br/5301210732686095](http://lattes.cnpq.br/5301210732686095)|Priscila Silveira [http://lattes.cnpq.br/4707570912229034](http://lattes.cnpq.br/4707570912229034)|Universidade Federal do ABC|
+|Pampa|Milena Rosenfield [http://lattes.cnpq.br/8181631357765054](http://lattes.cnpq.br/8181631357765054)| Mário Barroso [http://lattes.cnpq.br/7182178358444899](http://lattes.cnpq.br/7182178358444899) e José Fronza []()|The Nature Conservancy Brasil|
+|Pantanal| Letícia Couto Garcia [http://lattes.cnpq.br/9330007643430035](http://lattes.cnpq.br/9330007643430035)| Alisson Ribeiro [http://lattes.cnpq.br/9104693095499880](http://lattes.cnpq.br/9104693095499880)| Universidade Federal do Mato Grosso do Sul|
+
 
 <!---
-[INSERIR TABELA]
---> 
 
 - Amazônia: Ana Albernaz, Luciano Querido (Museu Paraense Emílio Goeldi)
 - Caatinga: Eduardo Venticinque, Marina Antongiovanni (Universidade Federal do Rio Grande do Norte)
@@ -31,6 +30,8 @@ knitr::include_graphics("figs/0_team.png")
 - Mata Atlântica: Leandro Tambosi, Priscila Silveira (Universidade Federal do ABC)
 - Pampa: Milena Rosenfield, Mário Barroso, José Fronza (The Nature Conservancy Brasil)
 - Pantanal: Letícia Couto Garcia, Alisson Ribeiro (Universidade Federal do Mato Grosso do Sul)
+
+--> 
 
 ## Especialistas convidados
  

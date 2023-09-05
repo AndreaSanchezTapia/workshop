@@ -2,51 +2,135 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Oficina: Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros",
+    "title": "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros",
     "section": "",
-    "text": "Síntese do projeto\nAs mudanças climáticas modificam os ambientes naturais e pressionam as espécies a se adaptarem às novas condições ambientais ou alterarem sua distribuição espacial para locais mais adequados climaticamente. A identificação de locais com adequabilidade climática para sustentar a biodiversidade no futuro de mudanças climáticas é imprescindível para o planejamento sistemático de ações de conservação e restauração.\nO objetivo principal do projeto Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros é mapear sítios resilientes às mudanças climáticas. O termo áreas resilientes indica locais que apresentam condições necessárias para que espécies e processos ecológicos persistam às mudanças climáticas regionais, definidos por sua alta diversidade microclimática, grau de conservação e conectividade.\nA metodologia proposta para isso combina a diversidade da paisagem, um proxy da variabilidade microclimática, com a conectividade local, identificando locais que fornecem condições microclimáticas para o enfrentamento às mudanças climáticas e cujas matrizes da paisagem sejam permeáveis à movimentação das espécies.\nA metodologia desenvolvida segue três premissas básicas:\nEssa análise foi proposta e validada para a América do Norte pela The Nature Conservancy (TNC), complementando outras metodologias disponíveis na literatura, uma vez que ela foca nas propriedades do terreno para identificar áreas resilientes. A aplicação da metodologia da TNC para os biomas brasileiros é um passo importante na identificaçao de sítios resilientes em ambientes tropicais megadiversos.\nAtuando em conjunto com especialistas dos diferentes biomas, em diferentes temáticas de pesquisa, e baseado na literatura disponível, o projeto busca adequar a metodologia original ao contexto dos biomas brasileiros, refinando e adaptando quando necessário.\nO produto principal resultante desse projeto é um mapa de áreas resilientes e conectadas para o Brasil, que permite identificar áreas com potencial de sustentar animais e plantas em um clima sob mudanças. Além disso, estão previstos ainda a prepararação de um relatório técnico sobre o projeto, uma documentação reproduzível das análises e ao menos um artigo científico."
+    "text": "Síntese do projeto"
+  },
+  {
+    "objectID": "index.html#contexto-geral-do-estudo",
+    "href": "index.html#contexto-geral-do-estudo",
+    "title": "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros",
+    "section": "Contexto geral do estudo",
+    "text": "Contexto geral do estudo\nAs mudanças no clima modificam ambientes naturais e pressionam espécies a se adaptarem às novas condições ambientais ou alterarem suas distribuições espaciais para locais mais adequados climaticamente. A identificação de locais com adequabilidade climática para sustentar a biodiversidade no futuro de mudanças climáticas é imprescindível para o planejamento sistemático de ações de conservação e restauração."
+  },
+  {
+    "objectID": "index.html#o-que-queremos-fazer",
+    "href": "index.html#o-que-queremos-fazer",
+    "title": "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros",
+    "section": "O que queremos fazer?",
+    "text": "O que queremos fazer?\nO objetivo principal do projeto é mapear sítios resilientes às mudanças climáticas, que permitam a movimentação da biodiversidade na busca de áreas mais adequadas climaticamente.\nO termo áreas resilientes indica locais que apresentam condições necessárias para que espécies e processos ecológicos persistam às mudanças climáticas regionais, definidos por sua alta diversidade microclimática e conectividade."
+  },
+  {
+    "objectID": "index.html#quais-as-premissas-básicas-desse-estudo",
+    "href": "index.html#quais-as-premissas-básicas-desse-estudo",
+    "title": "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros",
+    "section": "Quais as premissas básicas desse estudo?",
+    "text": "Quais as premissas básicas desse estudo?\nA metodologia desenvolvida segue três premissas básicas:\n\nA diversidade da paisagem é determinada pela heterogeneidade de habitats, variáveis condicionadas por características do meio físico, como feições topográficas, altitude, disponibilidade hídrica e tipo de solo, e que promovem variabilidade microclimática, influenciando diversidade genética e fenotípica de espécies.\nA conectividade da paisagem é determinada pela resistência que os tipos de uso e cobertura do solo oferecem para a movimentação das espécies na paisagem, considerando as relações de vizinhança estabelecidas em uma escala local.\nA resiliência da paisagem a mudanças do clima é determinada pela heterogeneidade de habitat disponíveis para as espécies, que geram condições diversificadas de microclimas aos organismos, e pela conectividade desses habitats na paisagem, que permitem a movimentação desses organismos para áreas mais adequadas."
+  },
+  {
+    "objectID": "index.html#qual-metodologia-estamos-utilizando",
+    "href": "index.html#qual-metodologia-estamos-utilizando",
+    "title": "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros",
+    "section": "Qual metodologia estamos utilizando?",
+    "text": "Qual metodologia estamos utilizando?\nA metodologia proposta para isso combina a diversidade da paisagem, um proxy da variabilidade microclimática, com a conectividade local, identificando locais que forneçam condições microclimáticas para o enfrentamento às mudanças climáticas, cujas matrizes da paisagem sejam permeáveis à movimentação das espécies.\nA diversidade da paisagem é baseada na geodiversidade (geomorfologia, geologia, pedologia e hidrologia) do terreno, composta pela variedade de formas de relevo, amplitude altitudinal, densidade de áreas úmidas e riqueza de solos.\nA conectividade local é baseada na resistência das matrizes da paisagem ao movimento da biodiversidade, combinando uso do solo e infraestruturas de transporte e de energia existentes (com maior ou menor grau de antropização)."
+  },
+  {
+    "objectID": "index.html#por-que-a-escolha-por-essa-metodologia-de-análise",
+    "href": "index.html#por-que-a-escolha-por-essa-metodologia-de-análise",
+    "title": "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros",
+    "section": "Por que a escolha por essa metodologia de análise?",
+    "text": "Por que a escolha por essa metodologia de análise?\nEssa análise foi proposta e validada para a América do Norte pela The Nature Conservancy (TNC), complementando outras metodologias disponíveis na literatura, uma vez que ela foca nas propriedades do terreno para identificar áreas resilientes.\nA aplicação da metodologia da TNC para os biomas brasileiros é um passo importante na identificação de sítios resilientes em ambientes tropicais megadiversos. Atuando em conjunto com especialistas dos diferentes biomas e baseado na literatura disponível, o projeto busca adequar a metodologia original ao contexto dos biomas brasileiros, refinando e adaptando quando necessário."
+  },
+  {
+    "objectID": "index.html#onde-e-com-quem-estamos-trabalhando",
+    "href": "index.html#onde-e-com-quem-estamos-trabalhando",
+    "title": "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros",
+    "section": "Onde e com quem estamos trabalhando?",
+    "text": "Onde e com quem estamos trabalhando?\nO mapeamento está sendo conduzido para cada um dos seis biomas do Brasil. Para isso, em cada um dos biomas temos coordenadores(as) responsáveis em instituições de pesquisa, além de um(a) pesquisador(a) de pós-doutorado diretamente envolvido(a) no projeto. Há ainda uma equipe de especialistas, de diversas áreas de atuação relacionadas à Temática do projeto, que participam como colaboradores do desenvolvimento do estudo."
+  },
+  {
+    "objectID": "index.html#quais-são-os-produtos-previstos-desse-projeto",
+    "href": "index.html#quais-são-os-produtos-previstos-desse-projeto",
+    "title": "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros",
+    "section": "Quais são os produtos previstos desse projeto?",
+    "text": "Quais são os produtos previstos desse projeto?\nO produto resultante desse projeto é um mapa de áreas resilientes e conectadas para os biomas do Brasil que permite identificar áreas com potencial de sustentar animais e plantas em um clima sob mudanças. Está em construção também um relatório técnico descrevendo o projeto e a metodologia utilizada, além de uma documentação reproduzível das análises. Além desses produtos, está prevista a elaboração de, no mínimo, um artigo científico a ser submetido a uma revista científica internacional."
+  },
+  {
+    "objectID": "index.html#como-temos-conduzido-as-atividades",
+    "href": "index.html#como-temos-conduzido-as-atividades",
+    "title": "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros",
+    "section": "Como temos conduzido as atividades?",
+    "text": "Como temos conduzido as atividades?\nOs(as) bolsistas de pós-doutorado têm sido responsáveis por liderar as análises e conduzir o projeto regionalmente. A equipe da TNC Brasil coordena as atividades em cada bioma e entre os biomas e também a integração entre as diversas equipes, participando diretamente das discussões nos grupos. Estão sendo realizadas oficinas e reuniões virtuais com as equipes de cada bioma e com os(as) especialistas para discutir as particularidades regionais, refinar as análises e os resultados obtidos."
   },
   {
     "objectID": "index.html#palavras-chave",
     "href": "index.html#palavras-chave",
-    "title": "Oficina: Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros",
-    "section": "Palavras chave:",
-    "text": "Palavras chave:\nResiliência climática, mudanças climáticas, conectividade, paisagem, geodiversidade, conservação, biodiversidade."
+    "title": "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros",
+    "section": "Palavras chave",
+    "text": "Palavras chave\nResiliência climática, mudanças climáticas, conectividade, paisagem, geodiversidade, conservação, biodiversidade."
   },
   {
-    "objectID": "Equipe_envolvida.html#membros-da-equipe",
-    "href": "Equipe_envolvida.html#membros-da-equipe",
-    "title": "1  Introdução",
-    "section": "1.1 Membros da equipe",
-    "text": "1.1 Membros da equipe\n\n\n\n\n\n\n1.1.1 Equipe TNC Brasil\n\nEdenise Garcia (diretora de ciências)\nMilena Rosenfield (coordenadora técnica)\nMário Barroso (especialista SIG)\nJosé Fronza (especialista SIG/dados)\nClícia Barata (especialista SIG)\n\n\n\n1.1.2 Equipe central por bioma\n\nAmazônia: Ana Albernaz, Luciano Querido (Museu Paraense Emílio Goeldi)\nCaatinga: Eduardo Venticinque, Marina Antongiovanni (Universidade Federal do Rio Grande do Norte)\nCerrado: Levi Carina Terribile, Lucas Jardim (Universidade Federal do Jataí)\nMata Atlântica: Leandro Tambosi, Andrea Sánchez-Tapia (Universidade Federal do ABC)\nPampa: Milena Rosenfield, Mário Barroso, José Fronza (The Nature Conservancy Brasil)\nPantanal: Letícia Couto Garcia, Alisson Ribeiro (Universidade Federal do Mato Grosso do Sul)\n\n\n\n1.1.3 Especialistas convidados\n\n\n\nBioma\nPesquisador(a)\nInstituição\nCidade\n\n\n\n\nAmazônia\nAne A. C. Alencar\nIPAM\nBrasília\n\n\nAmazônia\nCintia Cornelius Frische\nUFAM\nManaus\n\n\nAmazônia\nFernanda Werneck\nINPA\nManaus\n\n\nAmazônia\nFlávia Costa\nINPA\nManaus\n\n\nAmazônia\nIma Vieira\nMuseu Goeldi\nBelém\n\n\nAmazônia\nLiana O. Anderson\nCEMADEN\nSão José dos Campos\n\n\nAmazônia\nMarcos Adami\nINPE\nSão José dos Campos\n\n\nCaatinga\nAdrian Garda\nUFRN\nNatal\n\n\nCaatinga\nCamile Lugarini\nICMBio\nJuazeiro\n\n\nCaatinga\nCarlos R. S. D. da Fonseca\nUFRN\nNatal\n\n\nCaatinga\nCláudia B. Campos\nICMBio\nJuazeiro\n\n\nCaatinga\nEugenia Cordero Schmidt\nIUCN\nJoão Pessoa\n\n\nCaatinga\nFelipe P. L. de Melo\nUFPE\nRecife\n\n\nCaatinga\nMarcelo F. Moro\nUFC\nFortaleza\n\n\nCerrado\nAlessandro R. de Morais\nIF Rio Verde\nRio Verde\n\n\nCerrado\nBeatriz S. Marimon\nUNEMAT\nNova Xavantina\n\n\nCerrado\nGustavo Vasquez\nEmbrapa Solos\nRio de Janeiro\n\n\nCerrado\nKarla Maria Silva de Faria\nUFG\nGoiânia\n\n\nCerrado\nLuisa Carvalheiro\nUFG\nGoiânia\n\n\nCerrado\nManuel E. Ferreira\nUFG\nGoiânia\n\n\nCerrado\nPaulo de Marco\nUFG\nGoiânia\n\n\nCerrado\nPriscila L. de A. Silva\nUFMT\nCuiabá\n\n\nCerrado\nRafael Loyola\nIIS\nRio de Janeiro\n\n\nCerrado\nVania R. Pivello\nUSP\nSão Paulo\n\n\nMata Atlântica\nAndreza Neri\nUFV\nViçosa\n\n\nMata Atlântica\nCamila Rezende\nFBDS\nRio de Janeiro\n\n\nMata Atlântica\nDanilo Neves\nUFMG\nBelo Horizonte\n\n\nMata Atlântica\nGerd Sparovek\nESALQ\nPiracicaba\n\n\nMata Atlântica\nKátia M. de B. Ferraz\nUSP\nSão Paulo\n\n\nMata Atlântica\nMaíra Benchimol\nUESC\nIlhéus\n\n\nMata Atlântica\nMárcia Marques\nUFPR\nCuritiba\n\n\nMata Atlântica\nMariana M. Vale\nUFRJ\nRio de Janeiro\n\n\nMata Atlântica\nRicardo Dobrovolski\nUFBA\nSalvador\n\n\nMata Atlântica\nRita Portela\nUFRJ\nRio de Janeiro\n\n\nPampa\nAlexandre J. D. Krob\nInst. Curicaca\nPorto Alegre\n\n\nPampa\nEduardo Vélez Martin\nUFRGS\nPorto Alegre\n\n\nPampa\nFernando Becker\nUFRGS\nPorto Alegre\n\n\nPampa\nGerhard E. Overbeck\nUFRGS\nPorto Alegre\n\n\nPampa\nHeinrich Hasenack\nUFRGS\nPorto Alegre\n\n\nPampa\nMárcio Borges Martins\nUFRGS\nPorto Alegre\n\n\nPampa\nSandra C. Müller\nUFRGS\nPorto Alegre\n\n\nPantanal\nAngélica Guerra\nIHP\nCorumbá\n\n\nPantanal\nAntônio C. Paranhos Filho\nUFMS\nCampo Grande\n\n\nPantanal\nCamila Leonardo Mioto\nUFR\nRondonópolis\n\n\nPantanal\nCátia N. da Cunha\nUFMT\nCuiabá\n\n\nPantanal\nFabio de O. Roque\nUFMS\nCampo Grande\n\n\nPantanal\nGeraldo A. Damasceno Júnior\nUFMS\nCampo Grande\n\n\nPantanal\nMario Luis Assine\nUnesp\nRio Claro\n\n\nPantanal\nRenata Libonati\nUFRJ\nRio de Janeiro\n\n\nPantanal\nThadeu Sobral de Souza\nUFMT\nCuiabá"
+    "objectID": "index.html#instituições-parceiras-do-projeto",
+    "href": "index.html#instituições-parceiras-do-projeto",
+    "title": "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros",
+    "section": "Instituições parceiras do projeto",
+    "text": "Instituições parceiras do projeto\n[INSERIR LOGO DAS INSTITUIÇÕES: TNC, MPEG, UFABC, UFJ, UFMS, UFRN; SOS Pantanal, Associação Caatinga]"
+  },
+  {
+    "objectID": "Introducao.html",
+    "href": "Introducao.html",
+    "title": "1  Introdução geral",
+    "section": "",
+    "text": "O projeto Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros é coordenado por The Nature Conservancy Brasil e executado por diversas instituições de pesquisa localizadas em cada um dos biomas do Brasil.\nO objetivo principal do projeto é mapear sítios resilientes a mudanças climáticas e conectados entre si, identificando locais que seriam mais adequados a sustentar a biodiversidade em um futuro de mudanças no clima. O produto principal do projeto é um mapa indicando as áreas resilientes e conectadas no Brasil."
+  },
+  {
+    "objectID": "Equipe_envolvida.html#equipe-tnc-brasil",
+    "href": "Equipe_envolvida.html#equipe-tnc-brasil",
+    "title": "2  Membros da equipe",
+    "section": "2.1 Equipe TNC Brasil",
+    "text": "2.1 Equipe TNC Brasil\n\n\n\nNome\nAtuação\nLattes\n\n\n\n\nEdenise Garcia\nDiretora de ciências\nhttp://lattes.cnpq.br/6575206025031796\n\n\nMilena Rosenfield\nCoordenadora técnica\nhttp://lattes.cnpq.br/8181631357765054\n\n\nMário Barroso\nEspecialista em SIG\nhttp://lattes.cnpq.br/7182178358444899\n\n\nJosé Fronza\nEspecialista em SIG e dados\nhttp://lattes.cnpq.br/1205403331686811\n\n\nClícia Barata\nEspecialista em SIG\nhttp://lattes.cnpq.br/2750496081930336"
+  },
+  {
+    "objectID": "Equipe_envolvida.html#equipe-central-por-bioma",
+    "href": "Equipe_envolvida.html#equipe-central-por-bioma",
+    "title": "2  Membros da equipe",
+    "section": "2.2 Equipe central por bioma",
+    "text": "2.2 Equipe central por bioma\n\n\n\nBioma\nSupervisão\nEquipe\nIntituição\n\n\n\n\nAmazônia\nAna Albernaz http://lattes.cnpq.br/1220240487835422\nLuciano Querido http://lattes.cnpq.br/3123978281728788\nMuseu Paraense Emílio Goeldi\n\n\nCaatinga\nEduardo Venticinque http://lattes.cnpq.br/3582966116563351\nMarina Antongiovanni http://lattes.cnpq.br/6734509642838870\nUniversidade Federal do Rio Grande do Norte\n\n\nCerrado\nLevi Carina Terribile http://lattes.cnpq.br/0833667862532867\nLucas Jardim http://lattes.cnpq.br/6537020596919365\nUniversidade Federal do Jataí\n\n\nMata Atlântica\nLeandro Tambosi http://lattes.cnpq.br/5301210732686095\nPriscila Silveira http://lattes.cnpq.br/4707570912229034\nUniversidade Federal do ABC\n\n\nPampa\nMilena Rosenfield http://lattes.cnpq.br/8181631357765054\nMário Barroso http://lattes.cnpq.br/7182178358444899 e José Fronza \nThe Nature Conservancy Brasil\n\n\nPantanal\nLetícia Couto Garcia http://lattes.cnpq.br/9330007643430035\nAlisson Ribeiro http://lattes.cnpq.br/9104693095499880\nUniversidade Federal do Mato Grosso do Sul"
+  },
+  {
+    "objectID": "Equipe_envolvida.html#especialistas-convidados",
+    "href": "Equipe_envolvida.html#especialistas-convidados",
+    "title": "2  Membros da equipe",
+    "section": "2.3 Especialistas convidados",
+    "text": "2.3 Especialistas convidados\n\n\n\nBioma\nPesquisador(a)\nInstituição\nCidade\n\n\n\n\nAmazônia\nAne A. C. Alencar\nIPAM\nBrasília\n\n\nAmazônia\nCintia Cornelius Frische\nUFAM\nManaus\n\n\nAmazônia\nFernanda Werneck\nINPA\nManaus\n\n\nAmazônia\nFlávia Costa\nINPA\nManaus\n\n\nAmazônia\nIma Vieira\nMuseu Goeldi\nBelém\n\n\nAmazônia\nLiana O. Anderson\nCEMADEN\nSão José dos Campos\n\n\nAmazônia\nMarcos Adami\nINPE\nSão José dos Campos\n\n\nCaatinga\nAdrian Garda\nUFRN\nNatal\n\n\nCaatinga\nCamile Lugarini\nICMBio\nJuazeiro\n\n\nCaatinga\nCarlos R. S. D. da Fonseca\nUFRN\nNatal\n\n\nCaatinga\nCláudia B. Campos\nICMBio\nJuazeiro\n\n\nCaatinga\nEugenia Cordero Schmidt\nIUCN\nJoão Pessoa\n\n\nCaatinga\nFelipe P. L. de Melo\nUFPE\nRecife\n\n\nCaatinga\nMarcelo F. Moro\nUFC\nFortaleza\n\n\nCerrado\nAlessandro R. de Morais\nIF Rio Verde\nRio Verde\n\n\nCerrado\nBeatriz S. Marimon\nUNEMAT\nNova Xavantina\n\n\nCerrado\nGustavo Vasquez\nEmbrapa Solos\nRio de Janeiro\n\n\nCerrado\nKarla Maria Silva de Faria\nUFG\nGoiânia\n\n\nCerrado\nLuisa Carvalheiro\nUFG\nGoiânia\n\n\nCerrado\nManuel E. Ferreira\nUFG\nGoiânia\n\n\nCerrado\nPaulo de Marco\nUFG\nGoiânia\n\n\nCerrado\nPriscila L. de A. Silva\nUFMT\nCuiabá\n\n\nCerrado\nRafael Loyola\nIIS\nRio de Janeiro\n\n\nCerrado\nVania R. Pivello\nUSP\nSão Paulo\n\n\nMata Atlântica\nAndreza Neri\nUFV\nViçosa\n\n\nMata Atlântica\nCamila Rezende\nFBDS\nRio de Janeiro\n\n\nMata Atlântica\nDanilo Neves\nUFMG\nBelo Horizonte\n\n\nMata Atlântica\nGerd Sparovek\nESALQ\nPiracicaba\n\n\nMata Atlântica\nKátia M. de B. Ferraz\nUSP\nSão Paulo\n\n\nMata Atlântica\nMaíra Benchimol\nUESC\nIlhéus\n\n\nMata Atlântica\nMárcia Marques\nUFPR\nCuritiba\n\n\nMata Atlântica\nMariana M. Vale\nUFRJ\nRio de Janeiro\n\n\nMata Atlântica\nRicardo Dobrovolski\nUFBA\nSalvador\n\n\nMata Atlântica\nRita Portela\nUFRJ\nRio de Janeiro\n\n\nPampa\nAlexandre J. D. Krob\nInst. Curicaca\nPorto Alegre\n\n\nPampa\nEduardo Vélez Martin\nUFRGS\nPorto Alegre\n\n\nPampa\nFernando Becker\nUFRGS\nPorto Alegre\n\n\nPampa\nGerhard E. Overbeck\nUFRGS\nPorto Alegre\n\n\nPampa\nHeinrich Hasenack\nUFRGS\nPorto Alegre\n\n\nPampa\nMárcio Borges Martins\nUFRGS\nPorto Alegre\n\n\nPampa\nSandra C. Müller\nUFRGS\nPorto Alegre\n\n\nPantanal\nAngélica Guerra\nIHP\nCorumbá\n\n\nPantanal\nAntônio C. Paranhos Filho\nUFMS\nCampo Grande\n\n\nPantanal\nCamila Leonardo Mioto\nUFR\nRondonópolis\n\n\nPantanal\nCátia N. da Cunha\nUFMT\nCuiabá\n\n\nPantanal\nFabio de O. Roque\nUFMS\nCampo Grande\n\n\nPantanal\nGeraldo A. Damasceno Júnior\nUFMS\nCampo Grande\n\n\nPantanal\nMario Luis Assine\nUnesp\nRio Claro\n\n\nPantanal\nRenata Libonati\nUFRJ\nRio de Janeiro\n\n\nPantanal\nThadeu Sobral de Souza\nUFMT\nCuiabá"
   },
   {
     "objectID": "Objetivo_produtos.html#objetivos-específicos",
     "href": "Objetivo_produtos.html#objetivos-específicos",
-    "title": "2  Objetivo",
-    "section": "2.1 Objetivos específicos",
-    "text": "2.1 Objetivos específicos\nO objetivo geral do estudo pode ser detalhado em dois objetivos específicos:\n\nAplicar a metodologia de mapeamento de sítios resilientes, proposta e validada para a região da América do Norte, para o Brasil, conduzindo as análises de diversidade da paisagem e de conectividade local;\nRefinar e adaptar a metodologia proposta, com base em discussões com especialistas no tema que atuam na região de estudo, produzindo um mapa de áreas resilientes para o Brasil."
+    "title": "3  Objetivo",
+    "section": "3.1 Objetivos específicos",
+    "text": "3.1 Objetivos específicos\nO objetivo geral do estudo pode ser detalhado em dois objetivos específicos:\n\nAplicar a metodologia de mapeamento de sítios resilientes, proposta e validada para a região da América do Norte, para o Brasil, conduzindo as análises de diversidade da paisagem e de conectividade local;\nRefinar e adaptar a metodologia proposta, com base em discussões com especialistas no tema que atuam na região de estudo, produzindo um mapa de áreas resilientes para o Brasil."
   },
   {
     "objectID": "Objetivo_produtos.html#produtos-previstos",
     "href": "Objetivo_produtos.html#produtos-previstos",
-    "title": "2  Objetivo",
-    "section": "2.2 Produtos previstos",
-    "text": "2.2 Produtos previstos"
+    "title": "3  Objetivo",
+    "section": "3.2 Produtos previstos",
+    "text": "3.2 Produtos previstos\nO produto principal do projeto é um mapa de áreas resilientes e conectadas para os biomas do Brasil, que permite identificar áreas com potencial de sustentar animais e plantas em um clima sob mudanças.\nEstão previstos ainda:\n\nRelatório técnico, em português, descrevendo o projeto e a metodologia utilizada;\nDocumentação detalhada das análises, incluindo o compartilhamento dos códigos, para que seja possível reproduzir as análises;\nElaboração de, no mínimo, um artigo científico a ser submetido a uma revista científica internacional."
   },
   {
     "objectID": "Atividades_oficinas.html#atividades-previstas",
     "href": "Atividades_oficinas.html#atividades-previstas",
-    "title": "3  Atividades e oficinas previstas",
-    "section": "3.1 Atividades previstas",
-    "text": "3.1 Atividades previstas"
+    "title": "4  Atividades e oficinas previstas",
+    "section": "4.1 Atividades previstas",
+    "text": "4.1 Atividades previstas\nAs atividades previstas para o projeto serão divididas em duas etapas: a primeira é a aplicação da metodologia de mapeamento de diversidade da paisagem, conectividade local e resiliência da paisagem; e a segunda etapa corresponde ao refinamento e adaptação desta metodologia para o contexto dos diversos biomas brasileiros, que será feita a partir de discussões com especialistas.\nA partir da metodologia proposta, serão realizadas reuniões internas com a equipe e workshops com especialistas nas temáticas do projeto e com experiência em diversos biomas do Brasil para discussão da metodologia e sugestão de soluções de potenciais limitações do projeto. O processo consistirá, portanto, da aplicação da abordagem desenvolvida, análise dos métodos, avaliação, complementação e validação dos resultados, e geração de mapas de áreas resilientes e conectadas nos biomas brasileiros."
   },
   {
     "objectID": "Atividades_oficinas.html#planejamento-das-oficinas",
     "href": "Atividades_oficinas.html#planejamento-das-oficinas",
-    "title": "3  Atividades e oficinas previstas",
-    "section": "3.2 Planejamento das oficinas",
-    "text": "3.2 Planejamento das oficinas"
+    "title": "4  Atividades e oficinas previstas",
+    "section": "4.2 Planejamento das oficinas",
+    "text": "4.2 Planejamento das oficinas\nAs oficinas previstas para o projeto terão como objetivo discutir a metodologia proposta e sugerir adequações (metodológicas e de bases de dados) às características dos ecossistemas e particularidades dos biomas brasileiros. A exequibilidade das sugestões será posteriormente avaliadas internamente sob as condições limitantes de recurso e tempo de conclusão do projeto.\nEstá prevista a realização de três oficinas, nas quais participarão especialistas de todos os biomas do Brasil. Nessas oficinas serão discutidas questões importantes relativas ao projeto, incluindo pontos teóricos, procedimentos analíticos e resultados obtidos.\n\n\n\n\n\n\n\n\n\nOficina\nData prevista\nModalidade\nPontos discutidos\n\n\n\n\nOficina #1\n13/06 e 15/06\nVirtual\nIntrodução geral do projeto; apresentação das análises e dos resultados preliminares; momento de perguntas e respostas\n\n\nOficina #2\nset/outubro (a confirmar)\nVirtual\nDevolutiva e refinamento das análises; discussão de valores de resistência e avaliação dos resultados das camadas conforme ajustes feitos após Oficina #1\n\n\nOficina #3\nnov/dez (a confirmar)\npresencial (a confirmar)\nApresentação dos resultados obtidos após Oficina #2 e avaliação dos resultados"
   },
   {
     "objectID": "Metodologia_resumida.html#regiões-eco-geológicas",
@@ -67,21 +151,35 @@
     "href": "Codigos_bases_dados.html#códigos",
     "title": "8  Códigos e bases de dados",
     "section": "8.1 Códigos",
-    "text": "8.1 Códigos\n\n8.1.1 Diversidade da paisagem\n\n\n8.1.2 Conectividade local\n\n\n8.1.3 Resiliência da paisagem"
+    "text": "8.1 Códigos\nOs códigos para as análises estão disponíveis no repositório do projeto: \nA documentação para cada uma das diferentes camadas pode ser encontrada nos links abaixo.\n\n8.1.1 Diversidade da paisagem\n\n\n\n8.1.2 Conectividade local\n\nResistência da paisagem: \nConectividade (omniscape): \n\n\n\n8.1.3 Resiliência da paisagem"
   },
   {
     "objectID": "Codigos_bases_dados.html#bases-de-dados",
     "href": "Codigos_bases_dados.html#bases-de-dados",
     "title": "8  Códigos e bases de dados",
     "section": "8.2 Bases de dados",
-    "text": "8.2 Bases de dados"
+    "text": "8.2 Bases de dados\nAs seguintes bases de dados foram utilizadas para gerar as análises:\n\n8.2.1 Diversidade da paisagem\n\nFormas de relevo e altitude: MERIT DEM: Multi-Error-Removed Improved-Terrain DEM\nAcúmulo de fluxo: MERIT Hydro: Global Hydrography Datasets\nÁreas úmidas: Global Wetlands\nSolos: IBGE\nCorpos d’água: Mapbiomas Coleção 7\n\n\n\n8.2.2 Conectividade local\n\nUso e cobertura do solo: Mapbiomas Coleção 7\nInfraestrutura de transporte: IBGE BCIM\nInfraestrutura de energia: ANEEL"
   },
   {
-    "objectID": "Resultados.html",
-    "href": "Resultados.html",
+    "objectID": "Resultados.html#diversidade-da-paisagem",
+    "href": "Resultados.html#diversidade-da-paisagem",
     "title": "12  Resultados preliminares",
-    "section": "",
-    "text": "Os resultados preliminares das análises realizadas pela equipe se encontram no website da The Nature Conservancy Brasil: Mapping climate resilient sites in Brazil"
+    "section": "12.1 Diversidade da paisagem",
+    "text": "12.1 Diversidade da paisagem"
+  },
+  {
+    "objectID": "Resultados.html#conectividade-da-paisagem",
+    "href": "Resultados.html#conectividade-da-paisagem",
+    "title": "12  Resultados preliminares",
+    "section": "12.2 Conectividade da paisagem",
+    "text": "12.2 Conectividade da paisagem"
+  },
+  {
+    "objectID": "Resultados.html#resiliência-da-paisagem",
+    "href": "Resultados.html#resiliência-da-paisagem",
+    "title": "12  Resultados preliminares",
+    "section": "12.3 Resiliência da paisagem",
+    "text": "12.3 Resiliência da paisagem"
   },
   {
     "objectID": "references.html",
