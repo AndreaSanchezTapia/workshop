@@ -37,16 +37,16 @@ website:
           - Conectividade_local.qmd
           - Resiliencia_da_paisagem.qmd
           - Resultados.qmd
-          - references.qmd  
-         
+          - references.qmd          
   page-navigation: true
-  favicon: figs/TNC_logo.png
+  favicon: figs/1667403883848_theme_logo.png
 bibliography: bibliografia.bib
 csl: citation_style.csl
 lang: pt-br
 format:
   html:
-    theme: cosmo
+    theme: default
+    toc: false
     
   pdf:
     documentclass: scrreprt

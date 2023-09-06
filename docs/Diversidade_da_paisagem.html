@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros - 9&nbsp; Diversidade da paisagem</title>
+<title>diversidade_da_paisagem</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -32,7 +51,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./Conectividade_local.html" rel="next">
 <link href="./Codigos_bases_dados.html" rel="prev">
-<link href="./figs/TNC.png" rel="icon" type="image/png">
+<link href="./figs/1667403883848_theme_logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -62,10 +81,12 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -74,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Diversidade_da_paisagem.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Diversidade da paisagem</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Sumário</a></li><li class="breadcrumb-item"><a href="./Diversidade_da_paisagem.html">Diversidade da paisagem</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -86,8 +107,11 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./figs/1667403883848_theme_logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros</a> 
     </div>
@@ -99,122 +123,705 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Sumário</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Síntese do projeto</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Introducao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução geral</span></span></a>
+ <span class="menu-text">Introdução geral</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Equipe_envolvida.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Membros da equipe</span></span></a>
+ <span class="menu-text">Membros da equipe</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Objetivo_produtos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Objetivo</span></span></a>
+ <span class="menu-text">Objetivo</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Atividades_oficinas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Atividades e oficinas previstas</span></span></a>
+ <span class="menu-text">Atividades e oficinas previstas</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Glossario.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Glossário</span></span></a>
+ <span class="menu-text">Glossário</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Modelo_conceitual_premissas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Modelo conceitual e premissas</span></span></a>
+ <span class="menu-text">Modelo conceitual e premissas</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Metodologia_resumida.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Metodologia resumida</span></span></a>
+ <span class="menu-text">Metodologia resumida</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Codigos_bases_dados.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Códigos e bases de dados</span></span></a>
+ <span class="menu-text">Códigos e bases de dados</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Diversidade_da_paisagem.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Diversidade da paisagem</span></span></a>
+ <span class="menu-text">Diversidade da paisagem</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Conectividade_local.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Conectividade local</span></span></a>
+ <span class="menu-text">Conectividade local</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Resiliencia_da_paisagem.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Resiliência da paisagem</span></span></a>
+ <span class="menu-text">Resiliência da paisagem</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Resultados.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Resultados preliminares</span></span></a>
+ <span class="menu-text">Resultados preliminares</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    <div class="quarto-alternate-formats"><h2>Outros formatos</h2><ul><li><a href="Diversidade_da_paisagem.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="Diversidade_da_paisagem.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Diversidade da paisagem</span></h1>
+
+
+<section id="diversidade-da-paisagem" class="level1">
+<h1>Diversidade da paisagem</h1>
+<p>O cálculo de diversidade da paisagem foi realizado no <em>Google Earth Engine</em> <span class="citation" data-cites="gorelick_google_2017">(<a href="#ref-gorelick_google_2017" role="doc-biblioref">Gorelick et al. 2017</a>)</span> e é composto por médias feitas pixel a pixel entre os maiores valores padronizados ( <em>Z-scores</em> ) das imagens: <a href="#variedade-de-landforms"><strong>Variedade de <em>landforms</em></strong></a>, <a href="#amplitude-altitudinal"><strong>Amplitude altitudinal</strong></a>, <a href="#valores-de-áreas-úmidas"><strong>Valores de áreas úmidas</strong></a> e <a href="#diversidade-de-solo"><strong>Diversidade de solo</strong></a>. Utilizamos o <em>Google Earth Engine</em> devido a demanda computacional das análises e por ser uma plataforma baseada em nuvem, que oferece acesso remoto a uma vasta coleção de imagens de satélite e bases de dados geoespaciais de acesso livre e com capacidade computacional para realizar as análises em qualquer equipamento disponível <span class="citation" data-cites="gorelick_google_2017">(<a href="#ref-gorelick_google_2017" role="doc-biblioref">Gorelick et al. 2017</a>)</span>. Isso possibilita que nossas análises sejam de livre acesso, escalonáveis para outras regiões do mundo e que contribuam para uma ciência mais transparente, reproduzível e livre.</p>
+<section id="variedade-de-landforms" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="variedade-de-landforms">Variedade de <em>landforms</em></h4>
+<p>A classificação e distribuição espacial de <em>landforms</em> (formas de relevo) são a base para o cálculo da <strong>diversidade da paisagem</strong> e representam áreas com maiores estabilidade microclimática que resistirão aos impactos causados pelas mudanças climáticas <span class="citation" data-cites="anderson_resilient_2016">(<a href="#ref-anderson_resilient_2016" role="doc-biblioref">Anderson et al. 2016</a>)</span>. Essa classificação é baseada em combinações de informações sobre a <strong>inclinação</strong> (<em>slope</em>), <strong>orientação do relevo</strong> (<em>aspect</em>), <strong>indice de posição topográfica</strong> (<em>topographic position index</em>), <strong>índice de umidade</strong> (<em>moisture index</em>) e a distribuição de <strong>rios</strong> e <strong>lagos</strong> <!-- e **áreas úmidas**--> dos ambientes. A combinação dessas variáveis representa a variação de umidade, radiação solar e deposição de sedimentos <span class="citation" data-cites="anderson_resilient_2016">(<a href="#ref-anderson_resilient_2016" role="doc-biblioref">Anderson et al. 2016</a>)</span> na paisagem.</p>
+<p>A metodologia de classificação de formas de relevo foi baseada em estudos prévios conduzidos pela equipe da <a href="https://crcs.tnc.org/pages/land"><strong>TNC América do Norte</strong></a>, publicada inicialmente em 2014 <span class="citation" data-cites="anderson_estimating_2014">(<a href="#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>)</span> e refinada em estudos posteriores <span class="citation" data-cites="anderson_resilient_2023">(<a href="#ref-anderson_resilient_2023" role="doc-biblioref">Anderson et al. 2023</a>)</span>. <!--Adaptamos a metodologia aplicada anteriormente, utilizando o TPI ao invés do LPI... [Lucas, sugiro algo nessa linha, indicando quais alterações fizemos na metodologia anterior --></p>
+<p>Para o cálculo de <a href="#inclinação-do-relevo">inclinação</a>, <a href="#orientação-do-relevo">orientação do relevo</a> e <a href="#índice-de-posição-topográfica">índice de posição topográfica (TPI)</a>, utilizamos o modelo digital de elevação (DEM) do Merit-DEM <span class="citation" data-cites="yamazaki_high-accuracy_2017">(<a href="#ref-yamazaki_high-accuracy_2017" role="doc-biblioref">Yamazaki et al. 2017</a>)</span>, em uma escala de 90 m. Escolhemos utilizar esse DEM por ser um produto em escala global, de livre acesso e com correções de vários viéses de modelos de elevação, principalmente viéses de elevação em áreas com alta densidade de florestas. Além disso, o Merit-DEM já possui um <a href="#acúmulo-de-fluxo">acúmulo de fluxo</a> calculado sobre ele, em escala global, disponível no Merit-Hydro <span class="citation" data-cites="yamazaki_merit_2019">(<a href="#ref-yamazaki_merit_2019" role="doc-biblioref">Yamazaki et al. 2019</a>)</span>. Essa camada de acúmulo de fluxo é corrigida para o efeito da densidade de árvores no cálculo da rede hidrográfica da região <span class="citation" data-cites="yamazaki_merit_2019">(<a href="#ref-yamazaki_merit_2019" role="doc-biblioref">Yamazaki et al. 2019</a>)</span>, o que possibilita que nosso trabalho seja replicável e mais próximo da realidade dos biomas que modelamos.</p>
+<p>Para complementar a superfície gerada pelo acúmulo de fluxo e definir a presença de <strong>rios</strong> e <strong>lagos</strong> <!--e **áreas umidas** -->, nós incluímos as classes de água do MapBiomas Coleção 7 <span class="citation" data-cites="mapbiomas_project_collection_2020">(<a href="#ref-mapbiomas_project_collection_2020" role="doc-biblioref">Project 2020</a>)</span>. O MapBiomas é um projeto nacional de mapeamento e classificação de mudanças do uso do solo dos últimos 30 anos, a partir de dados de sensoriamento remoto.</p>
+<section id="índice-de-posição-topográfica-tpi" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="índice-de-posição-topográfica-tpi">Índice de posição topográfica (TPI)</h5>
+<p>O cálculo do TPI foi feito em três escalas com uma janela circular com 7, 11 e 15 células de raio, calculando a diferença da média de elevação entre a célula focal e um conjunto de células vizinhas (<span class="math inline">\(i\)</span>), divididos pelo número de células vizinhas (<span class="math inline">\(n\)</span>).</p>
+<p><span class="math display">\[
+TPI = \frac {\sum  _{i}^{n}\left(vizinhança_i - focal \right)}{n}
+\]</span></p>
+<p>O índice é composto pela média de TPI das três escalas, o que permite a consideração de níveis locais e regional de resolução da paisagem <span class="citation" data-cites="theobald_ecologically-relevant_2015">(<a href="#ref-theobald_ecologically-relevant_2015" role="doc-biblioref">Theobald et al. 2015</a>)</span>. Os tamanhos das janelas foram definidos visualmente para que melhor representassem as formas de relevo.</p>
+</section>
+<section id="orientação-do-relevo-aspect" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="orientação-do-relevo-aspect">Orientação do relevo (<em>aspect</em>)</h5>
+<p>A orientação do relevo é calculado como um gradiente local das 4 células adjacentes. Os resultados são apresentados em graus, que representam a direção do relevo (0º = Norte, 90º = Leste, 180º = Sul e 270º = Oeste). Nós dividimos a orientação do relevo em dois grupos, baseados na quantidade de incidência solar, sendo células com valores entre 90º e 270º classificados como <strong>faces frias</strong> e valores entre 0º a 90º e 270º a 360º, classificados como <strong>faces quentes</strong>.</p>
+</section>
+<section id="inclinação-do-relevo-slope" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="inclinação-do-relevo-slope">Inclinação do relevo (<em>slope</em>)</h5>
+<p>A inclinação do relevo é calculada como um gradiente local das 4 células adjacentes, os resultados são apresentado em graus que representam a inclinação do relevo (0º a 90º).</p>
+<!-- A inclinação foi dividida em 5 grupos baseado em faixas de inclinação, para melhor classificar diferentes formas do relevo (@tbl-inclinacao).
+
+|Inclinação|Grupo|
+|--:|--:|
+|0º a 2º  | 1 |
+|2º a 6º  | 2 |
+|6º a 24º | 3 |
+|24º a 35º| 4 |
+|35º a 90º| 5 |
+: Classes de declividade usadas para a classificação de _landforms_ {#tbl-inclinacao}
+-->
+</section>
+<section id="índice-de-umidade-moisture-index" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="índice-de-umidade-moisture-index">Índice de umidade (<em>moisture index</em>)</h5>
+<p>O índice de umidade (<em>moisture index</em>) foi calculado com base no <strong>acúmulo de fluxo</strong> do Merit-Hydro e a <strong>inclinação do relevo</strong> que calculamos anteriormente. <span class="math display">\[
+moisture.index = \frac{\log \left(fluxo+1\right)}{\left(slope+1\right)}  \times1000
+\]</span> O índice de umidade é a média do índice dentro de uma janela circular de uma célula de raio determinado. O tamanho do raio foi escolhido visualmente para suavizar o índice, mas representando bem a distribuição dos cursos d’água.</p>
+<!--
+Classificamos como áreas úmidas somente regiões que apresentassem um valor do índice de umidade acima de 3000 e definimos esse valor para que visualmente pudéssemos capturar a distribuição dos cursos d'água sem superestimar outras áreas planas. Porém, esse corte do índice não consegue classificar bem corpos de água com grandes extensões (por exemplo, rio Amazonas, represas e grandes lagos), por isso nós corrigimos a classificação sobrepondo a camada do índice de umidade com a camada de águas do MapBiomas.
+-->
+</section>
+</section>
+<section id="transformando-os-índices-em-classes" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="transformando-os-índices-em-classes">Transformando os índices em classes</h4>
+<p>Cada índice (TPI, inclinação, orientação e índice de úmidade) foi transformado em classes (<a href="#tbl-classes">Tabela&nbsp;1</a>) para formarem os tipos de <em>landforms</em>. O índice umidade é classificado como presença ou ausência de umidade, sendo locais com rios e lagos classificados como presença.</p>
+<div id="tbl-classes" class="anchored">
+<table class="table">
+<caption>Tabela&nbsp;1: Classes dos índices usados para a classificação de <em>landforms</em></caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Variáveis</th>
+<th style="text-align: center;">Classes</th>
+<th style="text-align: center;">Limiar inferior</th>
+<th style="text-align: center;">Limiar superior</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Inclinação do relevo</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">-1</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Inclinação do relevo</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Inclinação do relevo</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">24</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Inclinação do relevo</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">35</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Inclinação do relevo</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">90</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TPI</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">-Inf</td>
+<td style="text-align: center;">-15</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TPI</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">-15</td>
+<td style="text-align: center;">-1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TPI</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-1</td>
+<td style="text-align: center;">30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TPI</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">975</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Aspecto</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">90</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Aspecto</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">90</td>
+<td style="text-align: center;">270</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Aspecto</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">270</td>
+<td style="text-align: center;">360</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Índice de Umidade</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-Inf</td>
+<td style="text-align: center;">30000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Índice de Umidade</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">3000</td>
+<td style="text-align: center;">Inf</td>
+</tr>
+</tbody>
+</table>
 </div>
+<section id="combinando-as-variáveis-e-classificando-as-landforms" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="combinando-as-variáveis-e-classificando-as-landforms">Combinando as variáveis e classificando as <em>landforms</em></h5>
+<p>A partir das classificações de todas as variáveis, geramos um código representativo das combinações de classificações das localidades. A classe do índices de umidade é multiĺicado por 1000, orientação do relevo por 100, TPI por 10 e inclinação do relevo por 1. Dessa forma, podemos representar as classes dos índices de uma localidade por um único número. Por exemplo, o código 11 representa áreas de baixa inclinação do relevo e uma posição do relevo mais alta que o entorno, sendo portanto um topo de montanha (<em>summit</em>). No entanto, alguns códigos tiveram que ser inspecionados visualmente para classificar alguns tipos de <em>landforms</em>, como <em>sideslopes</em>, <em>valleys</em> e <em>toeslopes</em> (<a href="#tbl-combinacoes">Tabela&nbsp;2</a>).</p>
+<div id="tbl-combinacoes" class="anchored">
+<table class="table">
+<caption>Tabela&nbsp;2: Combinações entre as variáveis para classificar as formas de relevo</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Valores da Combinação</th>
+<th style="text-align: right;">Código para Landforms</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">21</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">21</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">43</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">51</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">111</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">112</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">113</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">114</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">115</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">121</td>
+<td style="text-align: right;">21</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">122</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">123</td>
+<td style="text-align: right;">23</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">124</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">125</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">131</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">132</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">133</td>
+<td style="text-align: right;">23</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">134</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">135</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">141</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">142</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">143</td>
+<td style="text-align: right;">43</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">144</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">145</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">151</td>
+<td style="text-align: right;">51</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">211</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">212</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">213</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">214</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">215</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">221</td>
+<td style="text-align: right;">21</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">222</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">223</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">224</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">225</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">231</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">232</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">233</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">234</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">235</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">241</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">242</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">243</td>
+<td style="text-align: right;">44</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">244</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">245</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">251</td>
+<td style="text-align: right;">51</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">39</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A classificação final de landforms se encontra na <a href="#tbl-landforms">Tabela&nbsp;3</a>.</p>
+<div id="tbl-landforms" class="anchored">
+<table class="table">
+<caption>Tabela&nbsp;3: Códigos das formas de relevo obtidas após classificação das variáveis</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Códigos</th>
+<th style="text-align: right;">Nomes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">Cool Steep Slope</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">Warms Steep Slope</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">Cliff</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">Summit/Ridgetop</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">Slope Crest</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">Flat Hilltop</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">Gentle Slope Hilltop</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">Cool Sideslope</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">Warm Sideslope</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">Dry Flats</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">Valley/Toeslope</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">39</td>
+<td style="text-align: right;">Moist Flats</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">Cool Footslope</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">Warm Sideslope</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Seria interessante algumas figuras de exemplos de landforms dentro dos biomas!!-->
+</section>
+<section id="gerando-a-variedade-de-landforms" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="gerando-a-variedade-de-landforms">Gerando a variedade de <em>landforms</em></h5>
+<p>A variedade de <em>landforms</em> foi calculada como quantidade de tipos de <em>landforms</em> dentro de um <em>kernel</em> circular da célula focal. O tamanho do raio do kernel foi definido calculando a variedade em diferentes raios (2, 5, 7, 10, 15, 20 células) e calculando o ganho de variedade a cada aumento de raio. O raio escolhido foi aquele em que o seu subsequente não adicionou variedade.</p>
+<p>Desta forma, o raio representa o nível de resolução da paisagem que captura o máximo de variedade de landforms. <!-- Raios maiores podem aumentar a variedade, mas devido a mudança de paisagem. --> Assim, o raio escolhido foi de 5 células de raio (450 m) para todo o Brasil. Por fim, calculamos os valores de Z para cada pixel (<span class="math inline">\(Z_{pixel}\)</span>) ao subtrair o valor da média (<span class="math inline">\(\mu\)</span>) e dividindo o resultado pelo desvio padrão (<span class="math inline">\(\sigma\)</span>), como mostrado na fórmula a seguir: <span class="math display">\[
+Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}
+\]</span> Os cálculos de <span class="math inline">\(Z\)</span> foram feitos dentro de cada classificação de <strong>regiões eco-geológicas</strong> usando médias e desvios padrão dentro de cada uma das classes.</p>
+</section>
+</section>
+<section id="amplitude-altitudinal" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="amplitude-altitudinal">Amplitude altitudinal</h4>
+<p>A amplitude altitudinal representa a variação da elevação em uma região, independente do número de <a href="#variedade-de-landforms"><strong><em>landforms</em></strong></a>, controlando a relação entre ambas já que elas são correlacionadas entre si. A amplitude altitudinal foi calculada como a diferença entre os valores máximos e mínimos de elevação, dentro de um <em>kernel</em> circular de 450 m, a partir dos dados do DEM do MERIT <span class="citation" data-cites="yamazaki_high-accuracy_2017">(<a href="#ref-yamazaki_high-accuracy_2017" role="doc-biblioref">Yamazaki et al. 2017</a>)</span>. fizemos então uma Regressão Linear Simples (<em>Ordinary Linear Regression</em>) entre os <strong>valores de amplitude altitudinal</strong> e a <strong>variedade <em>landforms</em></strong> e obtivemos os valores dos resíduos dessa análise para diminuir a correlação estre as duas variáveis.</p>
+<p>Por fim, os valores da variação desses resíduos da correlação entre a amplitude e a variedade da forma de relevo, para cada pixel (<span class="math inline">\(Z_{pixel}\)</span>), podem ser calculados ao subtrair o valor da média (<span class="math inline">\(\mu\)</span>) e dividir o resultado pelo desvio padrão (<span class="math inline">\(\sigma\)</span>), como mostrado na fórmula a seguir: <span class="math display">\[Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}\]</span></p>
+<p>Dessa forma, temos uma imagem que mostra a variação, em relação à média, dos valores dos resíduos da amplitude altitudinal dentro de cada uma das categorias de regiões eco-geológicas.</p>
+</section>
+<section id="índice-de-áreas-úmidas" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="índice-de-áreas-úmidas">Índice de áreas úmidas</h4>
+<p>Para calcular o índice de áreas úmidas, utilizamos os dados disponibilizados na base de dados <em>Global Wetlands Database</em> <span class="citation" data-cites="gumbricht_tropical_2017">(<a href="#ref-gumbricht_tropical_2017" role="doc-biblioref">Gumbricht et al. 2017</a>)</span>, que é uma base de dados que fornece informação e inventário de áreas úmidas no mundo. Os dados são obtidos através de imagens de satélite, amostragens aéreas e relatórios publicados. Como áreas úmidas ocorrem em diversas configurações e distribuições no espaço, nós avaliamos a densidade e o número de áreas úmidas em escala local (450 metros) e escala regional (1170 metros). A <strong>densidade de áreas úmidas</strong> foi calculada como a média do número de <em>pixels</em> de áreas úmidas, dentro de um <em>kernel</em> de escala regional (1170 m) e um kernel em escala local (450 m). Já a <strong>contagem em escala local</strong> foi calculada como uma contagem de <em>pixels</em> dentro de um <em>kernel</em> circular em escala regional (1170 metros). A contagem vai representar o número de áreas umidas ao redor do <em>pixel</em> focal, mostrando regiões de maiores quantidades de áreas úmidas, mas em baixa densidade.</p>
+<p>Essas 3 camadas vão auxiliar na identificação de regiões de diversidade da paisagem que apresentem valores baixos para formas de relevo e amplitude de elevação, mas que tenham um acúmulo de áreas umidas que poderiam amenizar localmente o efeito das mudanças climáticas <span class="citation" data-cites="anderson_resilient_2016">(<a href="#ref-anderson_resilient_2016" role="doc-biblioref">Anderson et al. 2016</a>)</span>.</p>
+<p>Para calcular os <strong>valores finais de áreas úmidas</strong>, é necessário juntar as informações das camadas de <strong>densidade local</strong>, <strong>densidade regional</strong> e a <strong>contagem em escala local</strong>. Começamos calculando valores padronizados para cada uma delas (<span class="math inline">\(Z_{local}\)</span>, <span class="math inline">\(Z_{regional}\)</span> e <span class="math inline">\(Z_{contagem}\)</span>, respectivamente) ao subtrair os valores de pixels (<span class="math inline">\(X_{pixel}\)</span>) pela média (<span class="math inline">\(\mu\)</span>) e dividirmos o resultado pelo desvio padrão (<span class="math inline">\(\sigma\)</span>) dentro das diferentes categorias de <a href="#regiões-eco-geológicas"><strong>regiões eco-geológicas</strong></a>, como na fórmula: <span class="math display">\[
+Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}
+\]</span></p>
+<p>Com o <span class="math inline">\(Z\)</span> calculado para as 3 camadas, podemos calcular os valores de áreas úmidas (<span class="math inline">\(Z_{úmidas}\)</span>) ao fazermos uma média dos valores para as camadas de densidade local, densidade regional e contagem.</p>
+<p>Primeiro calculamos a média entre as imagens de valores de áreas úmidas em escala local (<span class="math inline">\(Z_{local}\)</span>) e regional (<span class="math inline">\(Z_{regional}\)</span>), atribuindo mais peso para os valores da densidade local: <span class="math display">\[
+Z_{densidade}=\frac {{{(Z_{local}}{\times2)}}+{Z_{regional}}}{3}
+\]</span> Ao compararmos esse resultado com a camada de contagem regional, podemos identificar os locais onde os valores para densidade (<span class="math inline">\(Z_{densidade}\)</span>) são menores que os valores de contagem (<span class="math inline">\(Z_{contagem}\)</span>) e calculamos a média para esses pixels, novamente dando mais peso ao valores de densidade:</p>
+<p><span class="math display">\[
+Z_{úmidas}=\frac {{{(Z_{densidade}}{\times3)}}+{Z_{contagem}}}{4}
+\]</span> Ao final de todas as operações, temos uma única camada com valores que representam a variação em relação à média dos valores de densidade e contagem de pixels de áreas úmidas referentes às regiões eco-geológicas.</p>
+</section>
+<section id="diversidade-de-solo" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="diversidade-de-solo">Diversidade de solo</h4>
+<p>A diversidade de solo foi calculada como a distribuição do número de classes de solo, dentro de um <em>kernel</em> de 1350 m. Ela foi usada para indicar áreas com grande concentração dos diferentes tipos de solo que vão afetar diretamente na diversidade de espécies no ambiente. Para calcular o raster de diversidade do solo usamos a classificação oficial dos solos brasileiros, disponibilizada pelo <a href="https://www.ibge.gov.br/geociencias/informacoes-ambientais/pedologia/10871-pedologia.html">Instituto Brasileiro de Geografica e Estatística (IBGE)</a>.</p>
+<p>Como a classificação do IBGE foi disponibilizada em formato de <em>shapefile</em>, começamos a análise separando cada uma das 108 classes de solo do Brasil e calculamos um raster de presença e ausência do tipo de solo. Ao final do processo podemos somar os diferentes mapas de presença para obter os mapas de diversidade do solo, onde os maiores valores de cada pixel mostram áreas com concentração de diferentes tipos de solo.</p>
+<p>Por fim, calculamos os valores de Z para cada pixel (<span class="math inline">\(Z_{pixel}\)</span>) ao subtrair o valor da média (<span class="math inline">\(\mu\)</span>) e dividindo o resultado pelo desvio padrão (<span class="math inline">\(\sigma\)</span>), como mostrado na fórmula a seguir: <span class="math display">\[Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}\]</span> Os cálculos de <span class="math inline">\(Z\)</span> foram feitos dentro de cada classificação de regiões eco-geológicas usando as médias e desvios padrão dentro de cada uma das classes.</p>
+</section>
+<section id="diversidade-da-paisagem-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="diversidade-da-paisagem-1">Diversidade da paisagem</h4>
+<p>A diversidade da paisagem é calculada pela média dos maiores valores de <span class="math inline">\(Z\)</span> entre <strong>variedades de landforms</strong> (<span class="math inline">\(Z_{diversidade}\)</span>), <strong>amplitude de elevação</strong> (<span class="math inline">\(Z_{elevação}\)</span>), <strong>índice de áreas úmidas</strong> (<span class="math inline">\(Z_{úmidas}\)</span>) e <strong>diversidade de solo</strong> (<span class="math inline">\(Z_{solos}\)</span>). Começamos assumindo que a diversidade da paisagem seja igual a variedade de <em>landforms</em> nos locais onde os valores de amplitude de elevação sejam maiores que a variedade de <em>landforms</em> a diversidade da paisagem é calculada como a média entre os valores de <span class="math inline">\(Z\)</span> das duas camadas, com maior peso dado para a camada de variedade de landforms, conforme a fórmula a seguir. <span class="math display">\[
+Z_{diversidade}= \frac{\left(Z_{landforms}\times 2 \right)+Z_{elevação}}{3}
+\]</span> Depois comparamos os valores desse <span class="math inline">\(Z\)</span> com a camada do índice de áreas úmidas e nas áreas onde esses valores sejam maiores substituímos pelo valor do índice de áreas úmidas. Portanto em regiões onde os valores de áreas úmidas são maiores eles substituem os valores de <span class="math inline">\(Z\)</span> nesses <em>pixels</em>.</p>
+<p>Na localidades onde a diversidade de solo é maior que a diversidade da paisagem, os valores são substituídos pela média ponderada das variáveis naquela localidade Nas localidades onde a diversidade do solo for maior que a diversidade da paisagem calculada até aqui, vamos substituir os valores pela média ponderada entre todas as outras camadas, dependendo de quais camadas apresentam maiores valores.</p>
+<p>Se os valores da diversidade forem menores que os valores de <em>landforms</em>, amplitude de elevação, índice de áreas úmidas e diversidade de solo somamos todos os valores de <span class="math inline">\(Z\)</span>, dobrando os valores de <em>landforms</em> e dividimos por 5. <span class="math display">\[
+Z_{diversidade}= \frac{\left(Z_{landforms}\times 2 \right)+Z_{elevação}+Z_{úmidas}+Z_{solos}}{5}
+\]</span></p>
+<p>Se os valores de diversidade forem menores que variedade de <em>landforms</em> elevação e diversidade de solos, mas forem maiores que o índice de áreas úmidas somamos os valores das 3 camadas, dobrando os valores para <em>landforms</em> e dividimos por 4. <span class="math display">\[
+Z_{diversidade}= \frac{\left(Z_{landforms}\times 2 \right)+Z_{elevação}+Z_{solos}}{4}
+\]</span> Se os valores de diversidade forem menos que <em>landforms</em>, índices de áreas úmidas e amplitude de elevação, somamos os valores das 3 camadas, dobrando os valores de <em>landforms</em> e dividimos por 4. <span class="math display">\[
+Z_{diversidade}= \frac{\left(Z_{landforms}\times 2 \right)+Z_{elevação}+Z_{úmidas}}{4}
+\]</span></p>
+<p>Se os valores de diversidade forem menores que variedade de <em>landforms</em> e diversidade de solo, somamos os valores das camadas, dobrando os valores de <em>landforms</em> e dividimos por 3.</p>
+<p><span class="math display">\[
+Z_{diversidade}= \frac{\left(Z_{landforms}\times 2 \right)+Z_{solos}}{3}
+\]</span> Agora os valores de diversidade de paisagem já contém toda a variação das camadas de <span class="math inline">\(Z\)</span> que calculamos anteriormente, como temos uma grande variação dos valores fazemos um truncamento dos valores da diversidade maiores e menores que 95% da distribuição dos dados. Esse truncamento foi feito para suavizar a imagem final de diversidade e remover valores <em>outliers</em> que possam influenciar o cálculo da <a href="#resiliência-combinando-diversidade-da-paisagem-e-conectividade-local"><strong>Resiliência da Paisagem</strong></a>. Para essa suavização, calculamos a distribuição dos dados e todo valor de <em>pixel</em> fora de 95% da distribuição foi substituido pelos valores de máximo e mínimo da distribuição.</p>
 
 
 
-<div class="quarto-title-meta">
+</section>
+</section>
 
-    
-  
-    
-  </div>
-  
-
-</header>
-
-
-
-
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
+<div id="ref-anderson_resilient_2023" class="csl-entry" role="listitem">
+Anderson, M. G., M. Clark, A. P. Olivero, A. R. Barnett, K. R. Hall, M. W. Cornett, M. Ahlering, M. Schindel, B. Unnasch, C. Schloss, e D. R. Cameron. 2023. <a href="https://doi.org/10.1073/pnas.2204434119">A Resilient and Connected Network of Sites to Sustain Biodiversity under a Changing Climate</a>. Proceedings of the National Academy of Sciences 120:e2204434119.
+</div>
+<div id="ref-anderson_estimating_2014" class="csl-entry" role="listitem">
+Anderson, M. G., M. Clark, e A. O. Sheldon. 2014. <a href="https://doi.org/10.1111/cobi.12272">Estimating <span>Climate Resilience</span> for <span>Conservation</span> across <span>Geophysical Settings</span></a>. Conservation Biology 28:959–970.
+</div>
+<div id="ref-anderson_resilient_2016" class="csl-entry" role="listitem">
+Anderson, M. G., M. Clark, e A. O. Sheldon. 2016. <a href="https://doi.org/10.1111/cobi.12272">Resilient <span>Sites</span> for <span>Terrestrial Conservation</span> in <span>Eastern North America</span></a>. Conservation Biology 28:959–970.
+</div>
+<div id="ref-gorelick_google_2017" class="csl-entry" role="listitem">
+Gorelick, N., M. Hancher, M. Dixon, S. Ilyushchenko, D. Thau, e R. Moore. 2017. <a href="https://doi.org/10.1016/j.rse.2017.06.031">Google <span>Earth Engine</span>: <span>Planetary-scale</span> Geospatial Analysis for Everyone</a>. Remote Sensing of Environment.
+</div>
+<div id="ref-gumbricht_tropical_2017" class="csl-entry" role="listitem">
+Gumbricht, T., R. M. Román-Cuesta, L. V. Verchot, M. Herold, F. Wittmann, E. Householder, N. Herold, e D. Murdiyarso. 2017. <a href="https://doi.org/10.17528/cifor/data.00058">Tropical and Subtropical Wetlands Distribution Version 2</a>.
+</div>
+<div id="ref-mapbiomas_project_collection_2020" class="csl-entry" role="listitem">
+Project, M. 2020. Collection 7 of the <span>Annual Series</span> of <span>Land Use</span> and <span>Land Cover Maps</span> of <span>Brazil</span>. projects/mapbiomas-workspace/public/collection7/mapbiomas_collection70_integration_v2.
+</div>
+<div id="ref-theobald_ecologically-relevant_2015" class="csl-entry" role="listitem">
+Theobald, D. M., D. Harrison-Atlas, W. B. Monahan, e C. M. Albano. 2015. <a href="https://doi.org/10.1371/journal.pone.0143619">Ecologically-<span>Relevant Maps</span> of <span>Landforms</span> and <span>Physiographic Diversity</span> for <span>Climate Adaptation Planning</span></a>. PLOS ONE 10:e0143619.
+</div>
+<div id="ref-yamazaki_merit_2019" class="csl-entry" role="listitem">
+Yamazaki, D., D. Ikeshima, J. Sosa, P. D. Bates, G. H. Allen, e T. M. Pavelsky. 2019. <a href="https://doi.org/10.1029/2019WR024873"><span>MERIT Hydro</span>: <span>A High</span>-<span>Resolution Global Hydrography Map Based</span> on <span>Latest Topography Dataset</span></a>. Water Resources Research 55:5053–5073.
+</div>
+<div id="ref-yamazaki_high-accuracy_2017" class="csl-entry" role="listitem">
+Yamazaki, D., D. Ikeshima, R. Tawatari, T. Yamaguchi, F. O’Loughlin, J. C. Neal, C. C. Sampson, S. Kanae, e P. D. Bates. 2017. <a href="https://doi.org/10.1002/2017GL072874">A High-Accuracy Map of Global Terrain Elevations: <span>Accurate Global Terrain Elevation</span> Map</a>. Geophysical Research Letters 44:5844–5853.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -451,12 +1058,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./Codigos_bases_dados.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Códigos e bases de dados</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Códigos e bases de dados</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./Conectividade_local.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Conectividade local</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Conectividade local</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

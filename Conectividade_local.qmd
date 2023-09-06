@@ -1,1 +1,62 @@
 # Conectividade local
+
+## Cálculos de resistência {-}
+
+Os valores de resistência são medidas relativas do grau de dificuldade de deslocamento dos organismos nos diferentes tipos de cobertura do solo. Esses valores foram atribuídos por bioma, seguindo a premissa de que quanto maior for a diferença estrutural entre um dado tipo de cobertura do solo e a vegetação original do bioma, maior será o valor de resistência da classe de cobertura do solo em questão.
+
+Os dados espaciais primários utilizados para calcular a superfície de resistência foram a camada de cobertura do solo fornecida pelo MapBiomas [@mapbiomas_project_collection_2020] e a base de estradas pavimentadas e não pavimentadas fornecida pelo IBGE (BCIM250, ano 2021). Em um segundo momento, serão ainda inseridas bases de dados de infraestrutura energética, a serem incorporadas nessa camada.
+
+A superfície de cobertura do solo do MapBiomas foi reamostrada para gerar pixels com 90 m de tamanho, aproximadamente. Também convertemos o arquivo vetorial de estradas para o formato matricial, com pixels de tamanho aproximado de 90 m. Conjugamos, por álgebra de mapas, as bases matriciais do MapBiomas e de estradas, de tal maneira que todos os pixels da base do MapBiomas que se sobrepuseram a um pixel de estrada assumiram um novo valor correpondente a um pixel de estrada pavimentada ou não pavimentada.
+
+Os pixels do mapa consolidado de cobertura do solo, já incluindo as estradas pavimentadas e não pavimentadas como novas classes, receberam, separadamente por bioma, valores de resistência que buscaram traduzir, comparativamente entre as classes, o grau de dificuldade de movimentação da biodiversidade numa dada classe de cobertura do solo. A premissa assumida aqui é que quanto maior for a diferença estrutural da classe de cobertura do solo para o hábitat original do bioma, maior será a dificuldade à movimentação que esta classe oferece. Os valores de resistência dos pixels de cada uma das classes foram atribuídos, por bioma, pela equipe do Projeto e podem ser vistos na @tbl-resistencia.
+
+
+|Classe de cobertura do solo|Amazônia|	Caatinga|	Cerrado	|MataAtlântica|	Pampa	| Pantanal|
+|--:|--:|--:|--:|--:|--:|--:|
+|Aquaculture|-	|10	|7	|7	|7	|- |
+|Beach, Dune and Sand Spot|2	|2	|2	|2	|2	|- |
+|Citrus|-	|-	|10	|10	|-	|- |
+|Coffee|-	|7	|10	|10	|-	|- |
+|Cotton|7	|7	|10	|-	|-	|- |
+|Estradas não pavimentadas|10	|10	|7	|10	|7	|7 |
+|Estradas pavimentadas|20	|20	|20	|20	|20	|20|
+|Forest Formation|1	|1	|1	|1	|1	|1 |
+|Forest Plantation|7	|2	|7	|3	|10	|5 |
+|Grassland|2	|1	|1	|2	|1	|1 |
+|Herbaceous Sandbank Vegetation	|-	|1	|-	|2	|1	|- |
+|Mangrove|1	|1	|1	|1	|-	|- |
+|Mining|20	|20	|20	|20	|20	|20|
+|Mosaic of Uses|7	|7	|10	|10	|10	|10|
+|Other non Forest Formations|-	|-	|-	|7	|-	|- |
+|Other non Vegetated Areas|-	|9	|10	|10	|10	|10|
+|Other Perennial Crops|7	|7	|10	|10	|-	|- |
+|Other Temporary Crops|15	|7	|10	|10	|10	|10|
+|Pasture|15	|7	|5	|9	|5	|7 |
+|Rice|-	|-	|10	|10	|10	|- |
+|River, Lake and Ocean|2	|5	|5	|5	|5	|2 |
+|Rocky Outcrop|-	|1	|2	|2	|2	|- |
+|Salt Flat|2	|1	|2	|2	|-	|- |
+|Savanna Formation|2	|1	|1	|2	|-	|2 |
+|Soybean|15	|10	|10	|10	|10	|10|
+|Sugar cane|15	|10	|10	|10	|-	|10|
+|Urban Area|20	|20	|20	|20	|20	|20|
+|Wetland| 1	|-	|1	|1	|1	|1 |
+|Wooded Sandbank Vegetation|-	|1	|-	|1	|1	|- |
+: Valores de resistência para cada tipo de cobertura por bioma {#tbl-resistencia}
+
+
+Depois de atribuídos os valores de resistência, aplicamos à superfície gerada a função _kernel_ de decaimento linear. Esta análise considerou, numa janela móvel de 23 pixels (~2070 m), o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior que os mais distantes. Desta maneira, a função _kernel_ nos auxilia na tarefa de encontrar os melhores caminhos de deslocamento na paisagem, ou seja, aqueles caminhos que oferecem menor resistência.
+
+Por fim, calculamos os valores de Z para cada pixel ($Z_{pixel}$) ao subtrair o valor da média ($\mu$) e dividindo o resultado pelo desvio padrão ($\sigma$) e multiplicando tudo por -1, como mostrado na fórmula a seguir:
+$$
+Z_{pixel}= \left(\frac {X_{pixel}-\mu} {\sigma}\right) \times -1
+$$
+Os cálculos de $Z$ foram feitos dentro de cada classificação de regiões eco-geológicas usando as médias e desvios padrão dentro de cada uma das classes. Multiplicamos o valores por -1 por considerarmos que a conectividade local é o inverso dos valores de resistência suavizados pelo _kernel_.
+
+
+<!-- Os dados espaciais primários para calcular a superfície de resistência foram a camada de cobertura do solo fornecida pelo MapBiomas [@mapbiomas_project_collection_2020] e a base de estradas fornecida pelo IBGE (BCIM250 de 2021). Os seguintes passos foram realizados:
+1.	Os pixels da camada do MapBiomas foram reamostrados de 30 metros par 90 metros, usando a ferramenta “Ressample” do software ArcGis 10.5
+2.	O shapefile de estradas do IBGE foi convertido para o formato raster, com pixels de aproximadamente 90 metros de tamanho. Os pixels correspondentes a estradas pavimentadas receberam o valor de 2000, os pixels de estradas não pavimentadas receberam o valor de 1000 e os demais pixels (que não correspondem a nenhuma estrada) receberam o valor de 0 (zero)
+3.	No ArcGis 10.5, usando a ferramenta “Map Calculator” as camadas de cobertura do solo e de estradas foram somadas. Na superfície gerada, foram mantidos os valores dos pixels, originalmente atribuídos pelo MapBiomas, quando um pixel de cobertura do solo se sobrepusesse a algum pixel da camada de estradas com valor igual a zero. Nos casos onde os pixels de cobertura do solo se sobrepuseram a um pixel de estrada pavimentadas o valor final desses pixels foi reclassificado para 98 e quando a sobreposição ocorreu com algum pixel de estrada não pavimentada, o valor final foi reclassificado para 99
+4.	Na superfície gerada, os pixels de cada uma das classes receberam valores de resistência, inferidos separadamente para cada bioma (obs: neste arquivo os valores de resistência foram inferidos pela equipe de bolsistas de pós-doutorado do Projeto e seus supervisores, com auxílio da equipe da TNC). Os valores de resistência para cada classe de uso e cobertura do solo, por bioma, encontram-se na tabela 1 (abaixo). Os valores de resistência buscaram traduzir, comparativamente entre as classes, o grau de dificuldade de movimentação de um dado animal ou propágulo naquela classe de cobertura do solo. A premissa assumida aqui, para todos os biomas, é que quanto maior fora a diferença estrutural daquela classe para o hábitat original do bioma, maior será a dificuldade de movimentação por um dado pixel
+5.	Depois de atribuídos os valores de resistência, usando a ferramenta “Focal Statistics” do ArcGis 10.5, foi calculada o valor médio do pixel focal, em um raio de 23 pixels, aplicando a função de _Kernel_, com decaimento linear. Esta análise considera o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior um sobre o outro do que pixels mais distantes -->
