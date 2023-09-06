@@ -2,6 +2,7 @@
 # Síntese do projeto {.unnumbered}
 
 ## Contexto geral do estudo
+
 As mudanças no clima modificam ambientes naturais e pressionam espécies a se adaptarem às novas condições ambientais ou alterarem suas distribuições espaciais para locais mais adequados climaticamente.
 A identificação de locais com adequabilidade climática para sustentar a biodiversidade no futuro de mudanças climáticas é imprescindível para o planejamento sistemático de ações de conservação e restauração.
 
@@ -63,3 +64,4 @@ Resiliência climática, mudanças climáticas, conectividade, paisagem, geodive
 
 
 [INSERIR LOGO DAS INSTITUIÇÕES: TNC, MPEG, UFABC, UFJ, UFMS, UFRN; SOS Pantanal, Associação Caatinga]
+
