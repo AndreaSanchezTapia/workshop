@@ -1,1 +1,4 @@
 # Resiliência da paisagem
+
+ A **resiliência da paisagem** é definida como a capacidade de um local manter a diversidade de espécies e funções ecossistêmicas perante as pressões impostas por mudanças climáticas. Ela foi calculada como a média entre os valores padronizados (${Z}$) de [__diversidade da paisagem__](#diversidade-da-paisagem) e [__conectividade local__](#conectividade-local).
+ 
