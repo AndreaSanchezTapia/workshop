@@ -26,7 +26,7 @@ website:
          - text: "Conectividade local" 
          - text: "Resiliência da paisagem"  
       - text: "Downloads"
-        url: https://projeto-resiliencia-tnc.hub.arcgis.com       
+        href: https://projeto-resiliencia-tnc.hub.arcgis.com       
   sidebar: 
     title: "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros" 
     logo: figs/1667403883848_theme_logo.png     
