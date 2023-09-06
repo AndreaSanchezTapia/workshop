@@ -1,12 +1,7 @@
 project:
-  type: book
+  type: website
   output-dir: docs
-logo: figs/TNC.jpg
-book:
-  title: "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros"
-  author: ""
-  date: ""
-  chapters:
+  render:
     - index.qmd
     - Introducao.qmd
     - Equipe_envolvida.qmd
@@ -21,14 +16,38 @@ book:
     - Resiliencia_da_paisagem.qmd
     - Resultados.qmd
     - references.qmd
+website:  
+  sidebar: 
+    title: "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros" 
+    logo: figs/1667403883848_theme_logo.png     
+    style: "docked"
+    contents:
+      - section: "Sumário"
+        contents:
+          - index.qmd
+          - Introducao.qmd
+          - Equipe_envolvida.qmd
+          - Objetivo_produtos.qmd
+          - Atividades_oficinas.qmd
+          - Glossario.qmd
+          - Modelo_conceitual_premissas.qmd
+          - Metodologia_resumida.qmd
+          - Codigos_bases_dados.qmd
+          - Diversidade_da_paisagem.qmd
+          - Conectividade_local.qmd
+          - Resiliencia_da_paisagem.qmd
+          - Resultados.qmd
+          - references.qmd  
+         
   page-navigation: true
-  favicon: figs/TNC.png
+  favicon: figs/TNC_logo.png
 bibliography: bibliografia.bib
 csl: citation_style.csl
 lang: pt-br
 format:
   html:
     theme: cosmo
+    
   pdf:
     documentclass: scrreprt
   docx:
