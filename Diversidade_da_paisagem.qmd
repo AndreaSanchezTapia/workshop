@@ -1,13 +1,13 @@
 # Diversidade da paisagem
 
-A diversidade da paisagem é uma métrica composta pelas médias de *Z-scores* da [__variedade de landforms__](#variedade-de-landforms), [__amplitude altitudinal__](#amplitude-altitudinal), [__índice de áreas úmidas__](#índice-de-áreas-úmidas) e [__diversidade de solo__](#diversidade-de-solo). A composição da métrica possui uma hierarquia entre as variáveis para o cálculo das médias **(Figura)**. A seguir, descreveremos como cada variável que compõe a métrica é criada e como elas são combinadas para formar a diversidade da paisagem. 
+A diversidade da paisagem é uma métrica composta pelas médias de *Z-scores* da [__variedade de landforms__](#variedade-de-landforms), [__amplitude altitudinal__](#amplitude-altitudinal), [__índice de áreas úmidas__](#índice-de-áreas-úmidas) e [__diversidade de solo__](#diversidade-de-solo). A métrica é composta por uma média hieráquica das variáveis **(Figura)**. A seguir, descreveremos como cada variável que compõe a métrica é criada e como elas são combinadas para formar a diversidade da paisagem. 
 As análises de diversidade da paisagem foram realizadas no *Google Earth Engine* [@gorelick_google_2017] devido a demanda computacional, sua escalabilidade, a possibilidade de reprodução das análises.
 
 ##### Base de dados  
 
 Nós utilizamos o modelo digital de elevação (DEM) do Merit-DEM [@yamazaki_high-accuracy_2017], na escala de 90 m, como base para os cálculos de terreno como [declividade](#declividade-do-relevo), [orientação do relevo](#orientação-do-relevo) e [índice de posição topográfica (TPI)](#índice-de-posição-topográfica). Esse DEM é um produto em escala global, permitindo a replicabilidade das análises em outras regiões, e possui correções de vários viéses derivados de imagens de satélite, principalmente em áreas com alta densidade de florestas como a floresta Amazônica. Além disso, o Merit-DEM já possui uma camada de [acúmulo de fluxo](#acúmulo-de-fluxo), em escala global, disponível no Merit-Hydro [@yamazaki_merit_2019]. Essa camada de acúmulo de fluxo possui correções para áreas planas e para o efeito da densidade de árvores no cálculo da rede hidrográfica [@yamazaki_merit_2019], que são importantes para a análise de florestas tropicais com alta densidade de árvores. 
 
-O acúmulo de fluxo não captura bem a distribuição e área de lagos e rios largos como o rio Amazonas. Desta forma, nós incluímos a classe de água do MapBiomas **Coleção 7** <!--conferir para mudar depois a versão para 7.1 ou 8 --> [@mapbiomas_project_collection_2020], que representa os rios e lagos para complementar as informações sobre as áreas úmidas. O MapBiomas é um projeto nacional de mapeamento e classificação de mudanças do uso do solo dos últimos 30 anos, a partir de dados de sensoriamento remoto.
+O acúmulo de fluxo não captura bem a distribuição e área de lagos e rios largos como o rio Amazonas. Desta forma, nós incluímos a **classe 33** do MapBiomas **Coleção 7** <!--conferir para mudar depois a versão para 7.1 ou 8 --> [@mapbiomas_project_collection_2020], que representa os rios e lagos para complementar as informações sobre as áreas úmidas. O MapBiomas é um projeto nacional de mapeamento e classificação de mudanças do uso do solo dos últimos 30 anos, a partir de dados de sensoriamento remoto.
 
 #### Variedade de _landforms_ {-}
 
@@ -23,31 +23,20 @@ As formas de relevo representam a variação na umidade, exposição à radiaç�
 Modificações foram feitas em relação aos estudos anteriores. O  cálculo da posição topográfica foi substituído entre o *landscape position index* (LPI) [@anderson_resilient_2012] por *topographic position index* [@weiss_topographic_2001]. A orientação do relevo (faces quentes ou frias) foi ajustada para o Hemisférios Sul. A classificação das *landforms* foi ajustada para valores de TPI e índice de umidade que melhor classificavam as formas de relevo das paisagens analisadas.
 
 ![Classificação de *landforms* de acordo com a declividade do relevo, índice de posição topográfica,
-  orientação do relevo, índice úmidade, rios e lagos. Baseado na classificação de @anderson_resilient_2016.](figs/landform_scheme.png){#fig-landforms}
+  orientação do relevo, índice de úmidade, rios e lagos. Baseado na classificação de @anderson_resilient_2016.](figs/landform_scheme.png){#fig-landforms}
 
 ##### Declividade do relevo (*slope*) {-}
 
-A declividade do relevo foi calculada como um gradiente local das 4 células adjacentes, os resultados são apresentado em graus de declividade (0º a 90º). 
+A declividade do relevo foi calculada pela função `ee.Terrain.slope`, como um gradiente local das 4 células adjacentes. Os resultados são apresentado em graus de declividade (0º a 90º). 
 
 ##### Orientação do relevo (*aspect*) {-}
 
-A orientação do relevo foi calculado como um gradiente local das 4 células adjacentes. Os resultados são apresentados em graus, que representam a direção do relevo (0º = Norte, 90º = Leste, 180º = Sul e 270º = Oeste). Nós dividimos a orientação do relevo em dois grupos, baseados na quantidade de incidência solar, sendo células com valores entre 90º e 270º classificados como **faces frias** e valores entre 0º a 90º e 270º a 360º, classificados como **faces quentes**.
+A orientação do relevo foi calculada pela função `ee.Terrain.aspect`, como um gradiente local das 4 células adjacentes. Os resultados são apresentados em graus da direção do relevo (0º = Norte, 90º = Leste, 180º = Sul e 270º = Oeste). Nós dividimos a orientação do relevo em dois grupos, baseados na quantidade de incidência solar, sendo células com valores entre 90º e 270º classificados como **faces frias** e valores entre 0º a 90º e 270º a 360º, classificados como **faces quentes**.
 
-<!-- A inclinação foi dividida em 5 grupos baseado em faixas de inclinação, para melhor classificar diferentes formas do relevo (@tbl-inclinacao).
-
-|Inclinação|Grupo|
-|--:|--:|
-|0º a 2º  | 1 |
-|2º a 6º  | 2 |
-|6º a 24º | 3 |
-|24º a 35º| 4 |
-|35º a 90º| 5 |
-: Classes de declividade usadas para a classificação de _landforms_ {#tbl-inclinacao}
--->
 
 ##### Índice de posição topográfica (TPI) {-}
 
-O cálculo do TPI foi feito em três escalas com uma janela circular com 7, 11 e 15 células de raio, calculando a diferença média da elevação da célula focal para as suas vizinhas ($i$), divididos pelo número de células vizinhas ($n$).
+O cálculo do TPI foi feito em três escalas com uma janela circular com 7, 11 e 15 células de raio, calculando a soma da diferença da elevação da célula focal para as suas vizinhas ($i$), divididos pelo número de células vizinhas ($n$).
 
 $$
 TPI = \frac {\sum  _{i}^{n}\left(vizinhança_i - focal \right)}{n}
@@ -61,33 +50,33 @@ O índice de umidade (_moisture index_) foi calculado com base no **acúmulo de 
 $$
 moisture.index = \frac{\log \left(fluxo+1\right)}{\left(slope+1\right)}  \times1000
 $$
-Após o cálculo do índice de umidade para cada célula,  calculamos a média do índice dentro de uma janela circular de uma célula de raio par a suavizar o padrão de distribuição da rede de drenagem. Classificamos como áreas úmidas somente células com índice de umidade acima de 3000, uma vez que valores menores superestimava a distribuição de corpos d'água em áreas planas.
+Após o cálculo do índice de umidade para cada célula,  suavizamos o padrão de distribuição da rede de drenagem como a média do índice dentro de uma janela circular com uma célula de raio. 
 
 ##### Transformando os índices em classes {-}
 
-Cada índice (TPI, declividade, orientação e índice de úmidade) foi transformado em classes (@tbl-classes) para formarem os tipos de *landforms*. Os ajustes dos limiares de TPI e índice de umidade foram definidos visualmente. A declividade e orientação do relevo seguiram a classificação em @anderson_resilient_2016. A classe de presença de áreas umidas (1), derivadas do índice de umidade, foram combinadas com os rios e lagos do MapBiomas.
+Cada índice (TPI, declividade, orientação e índice de úmidade) foi transformado em classes (@tbl-classes) para formarem os tipos de *landforms*. Os ajustes dos limiares de TPI e índice de umidade foram definidos visualmente. Classificamos como áreas úmidas somente células com índice de umidade acima de 3000, uma vez que valores menores superestimavam a distribuição de corpos d'água em áreas planas. Depois combinamos o mapa de áreas úmidas com o dado de água e lagos do MapBiomas. A declividade e orientação do relevo seguiram a classificação em @anderson_resilient_2016, mas a orietanção do relevo foi ajustada para o Hemisfério Sul. 
 
 | Variáveis | Classes | Limiar inferior | Limiar superior |
 |:-:|:-:|:-:|:-:|
-| Inclinação do relevo|1|-1|2|
-|Inclinação do relevo|2|2|6|
-|Inclinação do relevo|3|6|24|
-|Inclinação do relevo|4|24|35|
-|Inclinação do relevo|5|35|90|
+| Declividade do relevo|1|-1|2|
+|Declividade do relevo|2|2|6|
+|Declividade do relevo|3|6|24|
+|Declividade do relevo|4|24|35|
+|Declividade do relevo|5|35|90|
 |TPI|1|-Inf|-15|
 |TPI|2|-15|-1|
 |TPI|3|-1|30|
 |TPI|4|30|975|
-|Aspecto|2|0|90|
-|Aspecto|1|90|270|
-|Aspecto|2|270|360|
+|Orientação|2|0|90|
+|Orientação|1|90|270|
+|Orientação|2|270|360|
 |Índice de Umidade|0|-Inf|30000|
 |Índice de Umidade|1|3000|Inf|
 : Classes dos índices usados para a classificação de _landforms_ {#tbl-classes}
 
 ##### Combinando as variáveis e classificando as _landforms_ {-}
 
-As classes de cada variável foram combinadas para representar as *landforms* como um código numérico. A classe do índices de umidade foi multiĺicado por 1000, orientação do relevo por 100, TPI por 10 e inclinação do relevo por 1. Por exemplo, o código 11 (0011) representa a primeira classe de declividade (áreas de baixa declividade) e a classe um de TPI (posição do relevo mais alta que o entorno), sendo portanto um topo de montanha (_summit_). No entanto, alguns códigos tiveram que ser inspecionados visualmente para classificar alguns tipos de _landforms_, como _sideslopes_, _valleys_ e _toeslopes_ (@tbl-combinacoes) apropriadamente.
+As classes de cada variável foram combinadas para representar as *landforms* como um código numérico. A classe do índices de umidade foi multipĺicado por 1000, orientação do relevo por 100, TPI por 10 e declividade do relevo por 1. Por exemplo, o código 11 (0011) representa a primeira classe de declividade (áreas de baixa declividade) e a primeira classe de TPI (posição do relevo mais alta que o entorno), sendo portanto um topo de montanha (_summit_). No entanto, alguns códigos tiveram que ser inspecionados visualmente para classificar apropriadamente alguns tipos de _landforms_, como _sideslopes_, _valleys_ e _toeslopes_ (@tbl-combinacoes).
 
 |Valores da Combinação| Código para Landforms|
 |--:|--:|
@@ -184,97 +173,83 @@ A classificação final de landforms se encontra na @tbl-landforms.
 
 ##### Gerando a variedade de _landforms_ {-}
 
-A variedade de _landforms_ foi calculada como a quantidade de tipos de _landforms_ dentro de uma janela circular da célula focal. O tamanho do raio do kernel foi definido calculando a variedade em diferentes raios (2, 5, 7, 10, 15, 20 células) e calculando a diferença na média de variedade do Brasil a cada aumento de raio. O raio escolhido foi aquele em que o seu subsequente não adicionou variedade. Desta forma, o raio representa o nível de resolução da paisagem que captura o máximo de variedade de landforms. O raio escolhido foi de 5 células de raio (450 m) para todo o Brasil.
-
-<!--
-Por fim, calculamos os valores de *Z-score* para cada pixel ($Z_{pixel}$) ao subtrair o valor da média ($\mu$) e dividindo o resultado pelo desvio padrão ($\sigma$), como mostrado na fórmula a seguir:
-$$
-Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}
-$$
-
-Os cálculos de *Z-score* foram feitos dentro de uma janela circular de 200 células, representando o quanto cada célula desvia na sua variedade de *landforms* para a média da paisagem que está inserida. conferir o tamanho do raio
--->
+A variedade de _landforms_ foi calculada como a quantidade de tipos de _landforms_ dentro de uma janela circular da célula focal. O tamanho do raio dda janela foi definido calculando a variedade em diferentes raios (2, 5, 7, 10, 15, 20 células) e calculando a diferença na média de variedade do Brasil a cada aumento de raio. O raio escolhido foi aquele em que o seu subsequente não adicionou variedade. Desta forma, o raio representa o nível de resolução da paisagem que captura o máximo de variedade de landforms. O raio escolhido foi de 5 células de raio (450 m) para todo o Brasil.
 
 #### Amplitude altitudinal {-}
 
-A amplitude altitudinal representa a variação da elevação em uma região, independente do número de [___landforms___](#variedade-de-landforms). A amplitude altitudinal foi calculada como a diferença entre os valores máximos e mínimos de elevação, dentro de um _kernel_ circular de 450 m (5 células de raio), a partir do MERIT-DEM [@yamazaki_high-accuracy_2017]. Em seguida, fizemos uma Regressão Linear Simples (_Ordinary Linear Regression_) entre os **valores de amplitude altitudinal** e a **variedade _landforms_** e obtivemos os valores dos resíduos dessa análise como a amplitude altitudinal independente da variedade de *landforms*. 
-
-<!--
-
-Por fim, os valores da variação desses resíduos da correlação entre a amplitude e a variedade da forma de relevo, para cada pixel ($Z_{pixel}$), podem ser calculados ao subtrair o valor da média ($\mu$) e dividir o resultado pelo desvio padrão ($\sigma$), como mostrado na fórmula a seguir:
-$$Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}$$
-
-Dessa forma, temos uma imagem que mostra a variação, em relação à média, dos valores dos resíduos da amplitude altitudinal dentro de cada uma das categorias de regiões eco-geológicas.
-
--->
+A amplitude altitudinal representa a variação da elevação em uma região, independente da variedade de *landforms*. A amplitude altitudinal foi calculada como a diferença entre os valores máximos e mínimos de elevação, dentro de uma janela circular de 450 m (5 células de raio), a partir do MERIT-DEM [@yamazaki_high-accuracy_2017]. Em seguida, fizemos uma Regressão Linear Simples (_Ordinary Linear Regression_) entre os **valores de amplitude altitudinal** e a **variedade _landforms_** e obtivemos os valores dos resíduos dessa análise como a amplitude altitudinal independente da variedade de *landforms*. 
 
 #### Diversidade de solo {-}
 
-A diversidade de solo foi calculada como a quantidade de tipos de solos dominantes e sub-dominantes nos polígonos de solo do [Instituto Brasileiro de Geografica e Estatística (IBGE)](https://www.ibge.gov.br/geociencias/informacoes-ambientais/pedologia/10871-pedologia.html). Depois essa informação foi rasterizada e projetada na mesma resolução espacial das variáves anteriores.
-
-<!--
-
-Por fim, calculamos os valores de Z para cada pixel ($Z_{pixel}$) ao subtrair o valor da média ($\mu$) e dividindo o resultado pelo desvio padrão ($\sigma$), como mostrado na fórmula a seguir:
-$$Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}$$
-Os cálculos de $Z$ foram feitos dentro de cada classificação de regiões eco-geológicas usando as médias e desvios padrão dentro de cada uma das classes.
-
--->
+A diversidade de solo foi calculada como a quantidade de tipos de solos dominantes e sub-dominantes nos polígonos de solo do Instituto Brasileiro de Geografica e Estatística (IBGE)([https://www.ibge.gov.br/geociencias/informacoes-ambientais/pedologia/10871-pedologia.html](https://www.ibge.gov.br/geociencias/informacoes-ambientais/pedologia/10871-pedologia.html)). Depois essa informação foi rasterizada e projetada na mesma resolução espacial das variáves anteriores.
 
 #### Índice de áreas úmidas {-}
 
-O índice de áreas úmidas foi calculado a partir dos dados da _Global Wetlands Database_ [@gumbricht_tropical_2017]. Essa base de dados fornece informação e inventário de áreas úmidas no mundo. Os dados são obtidos através de imagens de satélite, amostragens aéreas e relatórios publicados. Nós calculamos o índice de áreas úmidas considerando a densidade de áreas úmidas na escala local (450 metros) e na escala regional (1170 metros). Também foi incluído no índice a **quantidade de áreas úmidas** regional [@anderson_resilient_2016].  
+O índice de áreas úmidas foi calculado a partir dos dados da _Global Wetlands Database_ [@gumbricht_tropical_2017]. Essa base de dados fornece informação e inventário de áreas úmidas no mundo. Os dados são obtidos através de imagens de satélite, amostragens aéreas e relatórios publicados. Nós projetamos o mapa de áreas úmidas para a mesma resolução das outras variáveis. Depois, calculamos o índice de áreas úmidas considerando a densidade de áreas úmidas na escala local (450 metros) e na escala regional (1170 metros). Também foi incluído no índice a **quantidade de áreas úmidas** regional [@anderson_resilient_2016].  
 
-Primeiro calculamos a quantidade de áreas úmidas como o número de _células_ de áreas úmidas dentro de uma _janela_ regional (1170 m) e local (450 m). A divisão da quantidade de áreas úmidas pelo número de células na janela produz a **densidade de áreas úmidas**. Em seguida, as densidades de áreas úmidas local e regional e a quantidade de áreas úmidas regional são transformados em *Z-scores* ao subtrair os valores das células ($X_{pixel}$) pela média ($\mu$) e dividir o resultado pelo desvio padrão ($\sigma$), como na fórmula:
-
-$$
-Z_{pixel}= \frac {X_{pixel}-\mu} {\sigma}
-$$
-
-A média e desvio padrão é calculado para cada célula dentro de uma vizinhança circular de 200 células de raio. 
-
-O índice de áreas úmidas é calculado como a média ponderada da densidade local e regional, atribuindo peso 2 para a densidade local:
+Primeiro, calculamos a quantidade de áreas úmidas como o número de _células_ de áreas úmidas dentro de uma _janela_ regional (1170 m) e local (450 m). A divisão da quantidade de áreas úmidas pelo número de células na janela produz a **densidade de áreas úmidas**. Em seguida, as densidades de áreas úmidas local e regional e a quantidade de áreas úmidas regional foram transformados em *Z-scores*. Cada célula focal ($X_{célula}$) foi subtraída pela média da vizinhança ($\mu$) e dividida pelo desvio padrão ($\sigma$) da vizinhança. A média e desvio padrão foram calculados dentro de uma vizinhança circular de 200 células de raio de cada célula focal. 
 
 $$
-Z_{densidade}=\frac {{{(Z_{local}}{\times2)}}+{Z_{regional}}}{3}
+Z_{célula}= \frac {X_{célula}-\mu_{vizinhança}} {\sigma_{vizinhança}}
 $$
 
-Nos locais onde quantidade de áreas úmidas regionais (*Z-score*) eram maiores que o índice de áreas úmidas, o índice é calculado como a média ponderada das densidades e da quantidade de áreas úmidas:
+
+O índice de áreas úmidas foi calculado como a média ponderada da densidade local e regional, atribuindo peso 2 para a densidade local:
+
+$$
+Z_{índice\,de\,áreas\,úmidas}=\frac {{{(Z_{local}}{\times2)}}+{Z_{regional}}}{3}
+$$
+
+Nos locais onde a quantidade de áreas úmidas regionais (*Z-score*) eram maiores que o índice de áreas úmidas, o índice foi calculado como a média ponderada das densidades e da quantidade de áreas úmidas:
 
 $$
 Z_{índice\,de\,áreas\,úmidas} =\frac {{{(Z_{local}}{\times2)}} + {Z_{regional}} + {Z_{quantidade}}}{4}
 $$
 
-A tranformação de *Z-score* foi aplicada também para a **variedade de _landforms_**, **amplitude de elevação** e **diversidade de solos**.
+A tranformação de *Z-score* foi aplicada também para a **variedade de _landforms_**, **amplitude de elevação** e **diversidade de solos** para compormos a diversidade da paisagem.
 
 #### Diversidade da paisagem {-}
 
-A diversidade da paisagem é calculada pela média dos maiores valores de $Z$ entre **variedades de landforms** ($Z_{diversidade}$), **amplitude de elevação** ($Z_{elevação}$), **índice de áreas úmidas** ($Z_{úmidas}$) e **diversidade de solo** ($Z_{solos}$). Começamos assumindo que a diversidade da paisagem seja igual a variedade de _landforms_ nos locais onde os valores de amplitude de elevação sejam maiores que a variedade de _landforms_ a diversidade da paisagem é calculada como a média entre os valores de $Z$ das duas camadas, com maior peso dado para a camada de variedade de landforms, conforme a fórmula a seguir.
+A diversidade da paisagem foi calculada seguindo uma hierarquia nas variáveis. A diversidade da paisagem é definida como o *Z-score* da variedade de *landforms*. Em locais com maior *Z-score* para amplitude altitudinal que variedade de *landforms*, a diversidade da paisagem foi calculada como a média ponderada das duas variáveis, com peso 2 para variedade de *landforms*.
 $$
-Z_{diversidade}= \frac{\left(Z_{landforms}\times 2 \right)+Z_{elevação}}{3}
+Z_{diversidade\, da\,paisagem}= \frac{\left(Z_{variedade\,de\,landforms}\times 2 \right)+Z_{amplitude\,altitudinal}}{3}
 $$
-Depois comparamos os valores desse $Z$ com a camada do índice de áreas úmidas e nas áreas onde esses valores sejam maiores substituímos pelo valor do índice de áreas úmidas. Portanto em regiões onde os valores de áreas úmidas são maiores eles substituem os valores de $Z$ nesses _pixels_.
-
-Na localidades onde a diversidade de solo é maior que a diversidade da paisagem, os valores são substituídos pela média ponderada das variáveis naquela localidade
-Nas localidades onde a diversidade do solo for maior que a diversidade da paisagem calculada até aqui, vamos substituir os valores pela média ponderada entre todas as outras camadas, dependendo de quais camadas apresentam maiores valores.
-
-Se os valores da diversidade forem menores que os valores de _landforms_, amplitude de elevação, índice de áreas úmidas e diversidade de solo somamos todos os valores de $Z$, dobrando os valores de _landforms_ e dividimos por 5.
-$$
-Z_{diversidade}= \frac{\left(Z_{landforms}\times 2 \right)+Z_{elevação}+Z_{úmidas}+Z_{solos}}{5}
-$$
-
-
-Se os valores de diversidade forem menores que variedade de _landforms_ elevação e diversidade de solos, mas forem maiores que o índice de áreas úmidas somamos os valores das 3 camadas, dobrando os valores para _landforms_ e dividimos por 4.
-$$
-Z_{diversidade}= \frac{\left(Z_{landforms}\times 2 \right)+Z_{elevação}+Z_{solos}}{4}
-$$
-Se os valores de diversidade forem menos que _landforms_, índices de áreas úmidas e amplitude de elevação, somamos os valores das 3 camadas, dobrando os valores de _landforms_ e dividimos por 4.
-$$
-Z_{diversidade}= \frac{\left(Z_{landforms}\times 2 \right)+Z_{elevação}+Z_{úmidas}}{4}
-$$
-
-Se os valores de diversidade forem menores que variedade de _landforms_ e diversidade de solo, somamos os valores das camadas, dobrando os valores de _landforms_ e dividimos por 3.
+Nos locais onde o índice áreas úmida é maior que a diversidade da paisagem calculada anteriormente, calculamos a média ponderada da diversidade da paisagem e índice de áreas úmidas, atribuindo peso dois para as áreas úmidas. O peso dobrado das áreas úmidas é justificado por esses locais estarem em áreas planas com baixa variabilidade topográfica, sendo as áreas úmidas a variável mais importante para determinar a variabilidade microclimática. 
 
 $$
-Z_{diversidade}= \frac{\left(Z_{landforms}\times 2 \right)+Z_{solos}}{3}
+Z_{diversidade\, da\,paisagem}= \frac{Z_{variedade\,de\,landforms}+Z_{amplitude\,altitudinal} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{4}
 $$
-Agora os valores de diversidade de paisagem já contém toda a variação das camadas de $Z$ que calculamos anteriormente, como temos uma grande variação dos valores fazemos um truncamento dos valores da diversidade maiores e menores que 95% da distribuição dos dados. Esse truncamento foi feito para suavizar a imagem final de diversidade e remover valores _outliers_ que possam influenciar o cálculo da [__Resiliência da Paisagem__](#resiliência-combinando-diversidade-da-paisagem-e-conectividade-local). Para essa suavização, calculamos a distribuição dos dados e todo valor de _pixel_ fora de 95% da distribuição foi substituido pelos valores de máximo e mínimo da distribuição. 
+
+Se a amplitude altitudinal não foi importante para a célula, calculamos assim:
+
+$$
+Z_{diversidade\, da\,paisagem}= \frac{Z_{variedade\,de\,landforms} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{3}
+$$
+
+Nas localidades onde o *Z-score* da diversidade de solo foi maior que a diversidade da paisagem anterior, os valores foram substituídos pela média ponderada das variáveis naquela localidade, com peso 2 para variedade de *landforms*.
+
+
+$$
+Z_{diversidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2)+Z_{amplitude\,altitudinal}+Z_{índice\,de\,áreas\,úmidas}+Z_{diversidade\,de\,solos}}{5}
+$$
+
+Nas células onde o índice de áreas úmidas não foi importante:
+
+$$
+Z_{diversidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2)+Z_{amplitude\,altitudinal}+Z_{diversidade\,de\,solos}}{4}
+$$
+
+Onde a amplitude altitudinal não foi importante:
+
+$$
+Z_{diversidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2)+Z_{índice\,de\,áreas\,úmidas}+Z_{diversidade\,de\,solos}}{4}
+$$
+
+Localidades o somente  a variedade de *landforms* havia sido importante:
+
+$$
+Z_{diversidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2) + Z_{diversidade\,de\,solos}}{3}
+$$
+
+
+<!-- incluir o escalonamento entre 0 e 1 se foi feito-->
