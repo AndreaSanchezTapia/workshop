@@ -18,20 +18,9 @@ O projeto _Mapeamento de áreas resilientes a mudanças climáticas nos biomas b
 |Caatinga|Eduardo Venticinque [http://lattes.cnpq.br/3582966116563351](http://lattes.cnpq.br/3582966116563351)|Marina Antongiovanni [http://lattes.cnpq.br/6734509642838870](http://lattes.cnpq.br/6734509642838870)|Universidade Federal do Rio Grande do Norte|
 |Cerrado| Levi Carina Terribile [http://lattes.cnpq.br/0833667862532867](http://lattes.cnpq.br/0833667862532867)|Lucas Jardim [http://lattes.cnpq.br/6537020596919365](http://lattes.cnpq.br/6537020596919365)|Universidade Federal do Jataí|
 |Mata Atlântica|Leandro Tambosi [http://lattes.cnpq.br/5301210732686095](http://lattes.cnpq.br/5301210732686095)|Priscila Silveira [http://lattes.cnpq.br/4707570912229034](http://lattes.cnpq.br/4707570912229034)|Universidade Federal do ABC|
-|Pampa|Milena Rosenfield [http://lattes.cnpq.br/8181631357765054](http://lattes.cnpq.br/8181631357765054)| Mário Barroso [http://lattes.cnpq.br/7182178358444899](http://lattes.cnpq.br/7182178358444899) e José Fronza []()|The Nature Conservancy Brasil|
+|Pampa|Milena Rosenfield [http://lattes.cnpq.br/8181631357765054](http://lattes.cnpq.br/8181631357765054)| Mário Barroso [http://lattes.cnpq.br/7182178358444899](http://lattes.cnpq.br/7182178358444899) e José Fronza [http://lattes.cnpq.br/1205403331686811](http://lattes.cnpq.br/1205403331686811)|The Nature Conservancy Brasil|
 |Pantanal| Letícia Couto Garcia [http://lattes.cnpq.br/9330007643430035](http://lattes.cnpq.br/9330007643430035)| Alisson Ribeiro [http://lattes.cnpq.br/9104693095499880](http://lattes.cnpq.br/9104693095499880)| Universidade Federal do Mato Grosso do Sul|
 
-
-<!---
-
-- Amazônia: Ana Albernaz, Luciano Querido (Museu Paraense Emílio Goeldi)
-- Caatinga: Eduardo Venticinque, Marina Antongiovanni (Universidade Federal do Rio Grande do Norte)
-- Cerrado: Levi Carina Terribile, Lucas Jardim (Universidade Federal do Jataí)
-- Mata Atlântica: Leandro Tambosi, Priscila Silveira (Universidade Federal do ABC)
-- Pampa: Milena Rosenfield, Mário Barroso, José Fronza (The Nature Conservancy Brasil)
-- Pantanal: Letícia Couto Garcia, Alisson Ribeiro (Universidade Federal do Mato Grosso do Sul)
-
---> 
 
 ## Especialistas convidados
  
