@@ -14,9 +14,12 @@ O termo _áreas resilientes_ indica locais que apresentam condições necessári
 
 
 ## Quais as premissas básicas desse estudo?
+
+![Modelo conceitual do projeto](figs/modelo_conceitual.png)
+
 A metodologia desenvolvida segue três premissas básicas:
 
-1. A diversidade da paisagem é determinada pela heterogeneidade de habitats, variáveis condicionadas por características do meio físico, como feições topográficas, altitude, disponibilidade hídrica e tipo de solo, e que promovem variabilidade microclimática, influenciando diversidade genética e fenotípica de espécies.
+1. A heterogeneidade da paisagem é determinada pela heterogeneidade de habitats, variáveis condicionadas por características do meio físico, como feições topográficas, altitude, disponibilidade hídrica e tipo de solo, e que promovem variabilidade microclimática, influenciando diversidade genética e fenotípica de espécies.
 
 2. A conectividade da paisagem é determinada pela resistência que os tipos de uso e cobertura do solo oferecem para a movimentação das espécies na paisagem, considerando as relações de vizinhança estabelecidas em uma escala local.
 
@@ -24,9 +27,9 @@ A metodologia desenvolvida segue três premissas básicas:
 
 
 ## Qual metodologia estamos utilizando?
-A metodologia proposta para isso combina a diversidade da paisagem, um _proxy_ da variabilidade microclimática, com a conectividade local, identificando locais que forneçam condições microclimáticas para o enfrentamento às mudanças climáticas, cujas matrizes da paisagem sejam permeáveis à movimentação das espécies.
+A metodologia proposta para isso combina a heterogeneidade da paisagem, um _proxy_ da variabilidade microclimática, com a conectividade local, identificando locais que forneçam condições microclimáticas para o enfrentamento às mudanças climáticas, cujas matrizes da paisagem sejam permeáveis à movimentação das espécies.
 
-A diversidade da paisagem é baseada na geodiversidade (geomorfologia, geologia, pedologia e hidrologia) do terreno, composta pela variedade de formas de relevo, amplitude altitudinal, densidade de áreas úmidas e riqueza de solos.
+A heterogeneidade da paisagem é baseada na geodiversidade (geomorfologia, geologia, pedologia e hidrologia) do terreno, composta pela variedade de formas de relevo, amplitude altitudinal, densidade de áreas úmidas e riqueza de solos.
 
 A conectividade local é baseada na resistência das matrizes da paisagem ao movimento da biodiversidade, combinando uso do solo e infraestruturas de transporte e de energia existentes (com maior ou menor grau de antropização).
 
