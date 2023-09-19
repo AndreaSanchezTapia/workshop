@@ -1,4 +1,14 @@
 # Resiliência da paisagem
 
- A **resiliência da paisagem** é definida como a capacidade de um local manter a diversidade de espécies e funções ecossistêmicas perante as pressões impostas por mudanças climáticas. Ela foi calculada como a média entre os valores padronizados (${Z}$) de [__diversidade da paisagem__](#diversidade-da-paisagem) e [__conectividade local__](#conectividade-local).
+ A **resiliência da paisagem** é definida como a capacidade de um local manter a diversidade de espécies e funções ecossistêmicas perante as pressões impostas por mudanças climáticas. Ela foi calculada a partir da classificação das imagens de Heterogeneidade da Paisagem e Conectividade Local de acordo com a divisão em quantis a partir da distribuição do histograma de valores.
  
+ |Quantis| Classes para Heterogeneidade da Paisagem | Classes para Conectividade Local|
+ |:--|:-|:-|
+ |0 - 25% |1|10|
+ |25 - 50%|2|20|
+ |50 - 75%|3|30|
+ |75 - 100%|4|40|
+ 
+ A partir dessa classificação fazemos a soma das duas images.
+ 
+ <!-- colocar figuras de exemplo -->
