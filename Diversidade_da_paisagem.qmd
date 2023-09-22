@@ -1,7 +1,7 @@
-# Diversidade da paisagem
+# heterogeneidade da paisagem
 
-A diversidade da paisagem é uma métrica composta pelas médias de *Z-scores* da [__variedade de landforms__](#variedade-de-landforms), [__amplitude altitudinal__](#amplitude-altitudinal), [__índice de áreas úmidas__](#índice-de-áreas-úmidas) e [__diversidade de solo__](#diversidade-de-solo). A métrica é composta por uma média hieráquica das variáveis **(Figura)**. A seguir, descreveremos como cada variável que compõe a métrica é criada e como elas são combinadas para formar a diversidade da paisagem. 
-As análises de diversidade da paisagem foram realizadas no *Google Earth Engine* [@gorelick_google_2017] devido a demanda computacional, sua escalabilidade, a possibilidade de reprodução das análises.
+A heterogeneidade da paisagem é uma métrica composta pelas médias de *Z-scores* da [__variedade de landforms__](#variedade-de-landforms), [__amplitude altitudinal__](#amplitude-altitudinal), [__índice de áreas úmidas__](#índice-de-áreas-úmidas) e [__diversidade de solo__](#diversidade-de-solo). A métrica é composta por uma média hieráquica das variáveis **(Figura)**. A seguir, descreveremos como cada variável que compõe a métrica é criada e como elas são combinadas para formar a heterogeneidade da paisagem. 
+As análises de heterogeneidade da paisagem foram realizadas no *Google Earth Engine* [@gorelick_google_2017] devido a demanda computacional, sua escalabilidade, a possibilidade de reprodução das análises.
 
 ##### Base de dados  
 
@@ -57,7 +57,7 @@ Após o cálculo do índice de umidade para cada célula,  suavizamos o padrão 
 Cada índice (TPI, declividade, orientação e índice de úmidade) foi transformado em classes (@tbl-classes) para formarem os tipos de *landforms*. Os ajustes dos limiares de TPI e índice de umidade foram definidos visualmente. Classificamos como áreas úmidas somente células com índice de umidade acima de 3000, uma vez que valores menores superestimavam a distribuição de corpos d'água em áreas planas. Depois combinamos o mapa de áreas úmidas com o dado de água e lagos do MapBiomas. A declividade e orientação do relevo seguiram a classificação em @anderson_resilient_2016, mas a orietanção do relevo foi ajustada para o Hemisfério Sul. 
 
 | Variáveis | Classes | Limiar inferior | Limiar superior |
-|:-:|:-:|:-:|:-:|
+|-:|-:|-:|-:|
 | Declividade do relevo|1|-1|2|
 |Declividade do relevo|2|2|6|
 |Declividade do relevo|3|6|24|
@@ -76,10 +76,10 @@ Cada índice (TPI, declividade, orientação e índice de úmidade) foi transfor
 
 ##### Combinando as variáveis e classificando as _landforms_ {-}
 
-As classes de cada variável foram combinadas para representar as *landforms* como um código numérico. A classe do índices de umidade foi multipĺicado por 1000, orientação do relevo por 100, TPI por 10 e declividade do relevo por 1. Por exemplo, o código 11 (0011) representa a primeira classe de declividade (áreas de baixa declividade) e a primeira classe de TPI (posição do relevo mais alta que o entorno), sendo portanto um topo de montanha (_summit_). No entanto, alguns códigos tiveram que ser inspecionados visualmente para classificar apropriadamente alguns tipos de _landforms_, como _sideslopes_, _valleys_ e _toeslopes_ (@tbl-combinacoes).
+As classes de cada variável foram combinadas para representar as *landforms* como um código numérico (@fig2). A classe do índices de umidade foi multipĺicado por 1000, orientação do relevo por 100, TPI por 10 e declividade do relevo por 1. Por exemplo, o código 11 (0011) representa a primeira classe de declividade (áreas de baixa declividade) e a primeira classe de TPI (posição do relevo mais alta que o entorno), sendo portanto um topo de montanha (_summit_). No entanto, alguns códigos tiveram que ser inspecionados visualmente para classificar apropriadamente alguns tipos de _landforms_, como _sideslopes_, _valleys_ e _toeslopes_ (@tbl-combinacoes).
 
 |Valores da Combinação| Código para Landforms|
-|--:|--:|
+|-:|-:|
 |10| 11|
 |11| 11|
 |12| 11|
@@ -170,6 +170,8 @@ A classificação final de landforms se encontra na @tbl-landforms.
 : Códigos das formas de relevo obtidas após classificação das variáveis {#tbl-landforms}
 
 <!-- Seria interessante algumas figuras de exemplos de landforms dentro dos biomas!!-->
+![Figura 2 - Tipos de formas de relevo](figs/landform_types_BR.png){#fig2}
+
 
 ##### Gerando a variedade de _landforms_ {-}
 
@@ -206,49 +208,49 @@ $$
 Z_{índice\,de\,áreas\,úmidas} =\frac {{{(Z_{local}}{\times2)}} + {Z_{regional}} + {Z_{quantidade}}}{4}
 $$
 
-A tranformação de *Z-score* foi aplicada também para a **variedade de _landforms_**, **amplitude de elevação** e **diversidade de solos** para compormos a diversidade da paisagem.
+A tranformação de *Z-score* foi aplicada também para a **variedade de _landforms_**, **amplitude de elevação** e **diversidade de solos** para compormos a heterogeneidade da paisagem.
 
-#### Diversidade da paisagem {-}
+#### heterogeneidade da paisagem {-}
 
-A diversidade da paisagem foi calculada seguindo uma hierarquia nas variáveis. A diversidade da paisagem é definida como o *Z-score* da variedade de *landforms*. Em locais com maior *Z-score* para amplitude altitudinal que variedade de *landforms*, a diversidade da paisagem foi calculada como a média ponderada das duas variáveis, com peso 2 para variedade de *landforms*.
+A heterogeneidade da paisagem foi calculada seguindo uma hierarquia nas variáveis. A heterogeneidade da paisagem é definida como o *Z-score* da variedade de *landforms*. Em locais com maior *Z-score* para amplitude altitudinal que variedade de *landforms*, a heterogeneidade da paisagem foi calculada como a média ponderada das duas variáveis, com peso 2 para variedade de *landforms*.
 $$
-Z_{diversidade\, da\,paisagem}= \frac{\left(Z_{variedade\,de\,landforms}\times 2 \right)+Z_{amplitude\,altitudinal}}{3}
+Z_{heterogeneidade\, da\,paisagem}= \frac{\left(Z_{variedade\,de\,landforms}\times 2 \right)+Z_{amplitude\,altitudinal}}{3}
 $$
-Nos locais onde o índice áreas úmida é maior que a diversidade da paisagem calculada anteriormente, calculamos a média ponderada da diversidade da paisagem e índice de áreas úmidas, atribuindo peso dois para as áreas úmidas. O peso dobrado das áreas úmidas é justificado por esses locais estarem em áreas planas com baixa variabilidade topográfica, sendo as áreas úmidas a variável mais importante para determinar a variabilidade microclimática. 
+Nos locais onde o índice áreas úmida é maior que a heterogeneidade da paisagem calculada anteriormente, calculamos a média ponderada da heterogeneidade da paisagem e índice de áreas úmidas, atribuindo peso dois para as áreas úmidas. O peso dobrado das áreas úmidas é justificado por esses locais estarem em áreas planas com baixa variabilidade topográfica, sendo as áreas úmidas a variável mais importante para determinar a variabilidade microclimática. 
 
 $$
-Z_{diversidade\, da\,paisagem}= \frac{Z_{variedade\,de\,landforms}+Z_{amplitude\,altitudinal} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{4}
+Z_{heterogeneidade\, da\,paisagem}= \frac{Z_{variedade\,de\,landforms}+Z_{amplitude\,altitudinal} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{4}
 $$
 
 Se a amplitude altitudinal não foi importante para a célula, calculamos assim:
 
 $$
-Z_{diversidade\, da\,paisagem}= \frac{Z_{variedade\,de\,landforms} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{3}
+Z_{heterogeneidade\, da\,paisagem}= \frac{Z_{variedade\,de\,landforms} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{3}
 $$
 
-Nas localidades onde o *Z-score* da diversidade de solo foi maior que a diversidade da paisagem anterior, os valores foram substituídos pela média ponderada das variáveis naquela localidade, com peso 2 para variedade de *landforms*.
+Nas localidades onde o *Z-score* da diversidade de solo foi maior que a heterogeneidade da paisagem anterior, os valores foram substituídos pela média ponderada das variáveis naquela localidade, com peso 2 para variedade de *landforms*.
 
 
 $$
-Z_{diversidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2)+Z_{amplitude\,altitudinal}+Z_{índice\,de\,áreas\,úmidas}+Z_{diversidade\,de\,solos}}{5}
+Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2)+Z_{amplitude\,altitudinal}+Z_{índice\,de\,áreas\,úmidas}+Z_{diversidade\,de\,solos}}{5}
 $$
 
 Nas células onde o índice de áreas úmidas não foi importante:
 
 $$
-Z_{diversidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2)+Z_{amplitude\,altitudinal}+Z_{diversidade\,de\,solos}}{4}
+Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2)+Z_{amplitude\,altitudinal}+Z_{diversidade\,de\,solos}}{4}
 $$
 
 Onde a amplitude altitudinal não foi importante:
 
 $$
-Z_{diversidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2)+Z_{índice\,de\,áreas\,úmidas}+Z_{diversidade\,de\,solos}}{4}
+Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2)+Z_{índice\,de\,áreas\,úmidas}+Z_{diversidade\,de\,solos}}{4}
 $$
 
 Localidades o somente  a variedade de *landforms* havia sido importante:
 
 $$
-Z_{diversidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2) + Z_{diversidade\,de\,solos}}{3}
+Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2) + Z_{diversidade\,de\,solos}}{3}
 $$
 
 
