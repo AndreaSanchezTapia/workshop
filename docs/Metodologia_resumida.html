@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -77,12 +77,11 @@ div.csl-indent {
     "search-more-matches-text": "mais correspondências neste documento",
     "search-clear-button-title": "Limpar",
     "search-detached-cancel-button-title": "Cancelar",
-    "search-submit-button-title": "Enviar"
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -208,7 +207,7 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Diversidade_da_paisagem.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Diversidade da paisagem</span></a>
+ <span class="menu-text">heterogeneidade da paisagem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -252,25 +251,40 @@ div.csl-indent {
 
 <section id="metodologia-resumida" class="level1">
 <h1>Metodologia resumida</h1>
-<p>A metodologia proposta para identificar os sítios resilientes às mudanças climáticas <span class="citation" data-cites="anderson_estimating_2014 anderson_resilient_2016 anderson_resilient_2016-1 anderson_resilient_2023">(<a href="#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>, <a href="#ref-anderson_resilient_2016" role="doc-biblioref">2016a</a>, <a href="#ref-anderson_resilient_2016-1" role="doc-biblioref">Anderson et al. 2016b</a>, e <a href="#ref-anderson_resilient_2023" role="doc-biblioref">Anderson et al. 2023</a>)</span> envolve a divisão do espaço geográfico em regiões eco-geológicas, que são similares na sua geologia, geomorfologia, vulnerabilidade ao intemperismo, formação de solos e biodiversidade. Dentro de cada região são mapeadas a diversidade da paisagem e a conectividade local, que posteriomente, compõem a resiliência da paisagem. Os sítios com maior resiliência, possuem alto potencial de abrigar a biodiversidade num cenário de mudanças climáticas e estão conectados entre si <span class="citation" data-cites="anderson_estimating_2014">(<a href="#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>)</span>, permitindo a migração da biodiversidade para essas localidades.</p>
-<p><img src="figs/drawing-1.png" class="img-fluid"> Figura 1. Fluxograma da análise de resiliência da paisagem.</p>
-<section id="regiões-eco-geológicas" class="level2">
-<h2 class="anchored" data-anchor-id="regiões-eco-geológicas">Regiões eco-geológicas</h2>
-<p>As regiões eco-geológicas são agrupamentos dos domínios geológicos e ecoregiões, que descrevem as variações geológicas e geomorfológicas promotoras da formação das paisagens, das redes de drenagem, da pedologia e que atuam como base de sustentação da biodiversidade que evoluiu nessas regiões, representadas pelas ecoregiões. O mapeamento das áreas resilientes às mudanças climáticas dentro das regiões eco-geológicas permite a identificação de locais que suportarão a biodiversidade pelos parâmetros locais, sem o enviesamento para regiões com mais variação de elevação e formas de relevo.</p>
-<p>Os domínios geológicos são grupos de litoestratigrafia semelhantes em relação ao posicionamento tectônico, nível crustal, classe de rocha, expressão geomorfológica, entre outros […]. Os domínios geológicos agrupam unidades geológicas, que são agrupamentos de rochas. Portanto, os diferentes domínios geológicos descrevem variações no tipo de rocha, potencial de sofrer intemperismo e idade geológica. <!-- Zonas altitudinais não foram utilizadas, pois a variabilidade proveniente das mesmas já é considerada nas ecoregiões. -->As ecoregiões são regionalizações biogeográficas abaixo hierarquicamente dos domínios biogeográficos e biomas, representando agrupamentos espaciais da biodiversidade, numa escala regional, sustentando seus processos ecológicos principais [Olson et al . 2001; Dinerstein et al 2017 (veja material suplementar)]. A integração dos domínios geológicos e ecoregiões foram realizadas pela transformação dos polígonos dos domínios geológicos e ecoregiões em <em>rasters</em>, que são posteriormente combinados como a seguinte equação: <span class="math display">\[Regiões\ eco-geológicas = {(Ecoregiões)+(100\times Domínio \ Geológico)}\]</span> Desta forma, os valores do raster final estão no formato <strong>GGEE</strong>, onde as duas primeiras unidades (<strong>GG</strong>) representam os domínios geológicos e as duas últimas unidades (<strong>EE</strong>) as ecoregiões.</p>
+<p>A metodologia proposta para identificar os sítios resilientes às mudanças climáticas <span class="citation" data-cites="anderson_estimating_2014 anderson_resilient_2016 anderson_resilient_2016-1 anderson_resilient_2023">(<a href="#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>, <a href="#ref-anderson_resilient_2016" role="doc-biblioref">2016a</a>, <a href="#ref-anderson_resilient_2016-1" role="doc-biblioref">Anderson et al. 2016b</a>, e <a href="#ref-anderson_resilient_2023" role="doc-biblioref">Anderson et al. 2023</a>)</span> envolve o mapeamento da <strong>heterogeneidade da paisagem</strong> e a <strong>conectividade local</strong>, que posteriomente, compõem a resiliência da paisagem. Os sítios com maior resiliência, possuem alto potencial de abrigar a biodiversidade num cenário de mudanças climáticas e estão conectados entre si <span class="citation" data-cites="anderson_estimating_2014">(<a href="#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>)</span>, permitindo a migração da biodiversidade para essas localidades.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/Diagrama_metodologia.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figura 1 - Fluxograma da análise de resiliência da paisagem.</figcaption>
+</figure>
+</div>
+<!--
+## Regiões eco-geológicas {#regiões-eco-geológicas}
+
+As regiões eco-geológicas são agrupamentos dos domínios geológicos e ecoregiões, que descrevem as variações geológicas e geomorfológicas promotoras da formação das paisagens, das redes de drenagem, da pedologia e que atuam como base de sustentação da biodiversidade que evoluiu nessas regiões, representadas pelas ecoregiões.
+O mapeamento das áreas resilientes às mudanças climáticas dentro das regiões eco-geológicas permite a identificação de locais que suportarão a biodiversidade pelos parâmetros locais, sem o enviesamento para regiões com mais variação de elevação e formas de relevo.
+
+Os domínios geológicos são grupos de litoestratigrafia semelhantes em relação ao posicionamento tectônico, nível crustal, classe de rocha, expressão geomorfológica, entre outros \[...\].
+Os domínios geológicos agrupam unidades geológicas, que são agrupamentos de rochas.
+Portanto, os diferentes domínios geológicos descrevem variações no tipo de rocha, potencial de sofrer intemperismo e idade geológica.
+<!-- Zonas altitudinais não foram utilizadas, pois a variabilidade proveniente das mesmas já é considerada nas ecoregiões. -->
+<!--
+As ecoregiões são regionalizações biogeográficas abaixo hierarquicamente dos domínios biogeográficos e biomas, representando agrupamentos espaciais da biodiversidade, numa escala regional, sustentando seus processos ecológicos principais \[Olson et al .
+2001; Dinerstein et al 2017 (veja material suplementar)\].
+A integração dos domínios geológicos e ecoregiões foram realizadas pela transformação dos polígonos dos domínios geológicos e ecoregiões em *rasters*, que são posteriormente combinados como a seguinte equação: $$Regiões\ eco-geológicas = {(Ecoregiões)+(100\times Domínio \ Geológico)}$$ Desta forma, os valores do raster final estão no formato **GGEE**, onde as duas primeiras unidades (**GG**) representam os domínios geológicos e as duas últimas unidades (**EE**) as ecoregiões.
+
+-->
 <!--No estudo desenvolvido nos EUA o mapeamento foi feito por ecoregiões, uma vez que esses locais apresentam condições ambientais similares, especialmente relacionado a _landforms_, geologia e solos, e que compartilham conjuntos de comunidades naturais e espécies. Esse produto foi chamado de _geophysical settings_, levando em conta a geologia ou solo com zonas altitudinais. Entretanto, neste trabalho chamamos o mesmo produto de regiões eco-geológicas, visto que a geofísica investiga características não utilizadas no trabalho (elétricas, térmicas, magnéticas, gravitacionais e sísmicas).-->
 <!-- Será que isso aqui fica em metodologia? A parte de nomenclatura a gente menciona? -->
 <!-- As configurações geofísicas são definidas como a combinação de uma zona altitudinal e da classe geológica (rocha ou substrato superficial).-->
 <!-- Como não usamos zona altitudinal, talvez seja interessante deixar fora. -->
 <!-- As zonas altitudinais e as classes geológicas foram desenvolvidas para corresponder com mudanças perceptíveis em comunidades e espécies.  -->
-<!-- Conjuntos de dados necessários para essa análise incluem: geologia (_bedrock geology_), solo, altitude (obtido de um modelo digital de elevação  – _digital elevation model_ ou DEM com resolução de 30 m) e _landforms_ (derivado do DEM). -->
-</section>
 <section id="resiliência" class="level2">
 <h2 class="anchored" data-anchor-id="resiliência">Resiliência</h2>
-<p>A segunda etapa consiste nas estimativas de resiliência dos sítios. Para estimar a resiliência de um sítio, é necessário estimar a <a href="#diversidade-da-paisagem"><strong>diversidade da paisagem</strong></a> e a <a href="#conectividade-local"><strong>conectividade local</strong></a> para cada célula de 90 m. O resultado dessas análises é combinado para então estimar o valor de resiliência para cada local.</p>
+<p>A segunda etapa consiste nas estimativas de resiliência dos sítios. Para estimar a resiliência de um sítio, é necessário estimar a <a href="#diversidade-da-paisagem"><strong>heterogeneidade da paisagem</strong></a> e a <a href="#conectividade-local"><strong>conectividade local</strong></a> para cada célula de 90 m. O resultado dessas análises é combinado para então estimar o valor de resiliência para cada local.</p>
 <section id="diversidade-da-paisagem" class="level3">
-<h3 class="anchored" data-anchor-id="diversidade-da-paisagem">Diversidade da paisagem</h3>
-<p>A diversidade da paisagem está relacionada à variedade de microclimas em um determinado local. A análise de diversidade da paisagem resume informações relacionadas à (a) variedade de <em>landforms</em>, (b) amplitude altitudinal, (c) índice de áreas úmidas (<em>wetlands</em>) e (d) diversidade de solos.</p>
+<h3 class="anchored" data-anchor-id="diversidade-da-paisagem">heterogeneidade da paisagem</h3>
+<p>A heterogeneidade da paisagem está relacionada à variedade de microclimas em um determinado local. A análise de heterogeneidade da paisagem resume informações relacionadas à (a) variedade de <em>landforms</em>, (b) amplitude altitudinal, (c) índice de áreas úmidas (<em>wetlands</em>) e (d) diversidade de solos.</p>
 <section id="variedade-de-landforms" class="level4">
 <h4 class="anchored" data-anchor-id="variedade-de-landforms">Variedade de <em>landforms</em></h4>
 <p>A variedade de <em>landforms</em> diz respeito à variedade das formas do relevo criados pela topografia. Sua avaliação é baseada em um modelo de <em>landforms</em>, derivado de um modelo digital de elevação (DEM) com resolução de 90 m, que classifica a superfície em diversas categorias, como por exemplo:</p>
@@ -294,11 +308,12 @@ div.csl-indent {
 <section id="diversidade-de-solo" class="level4">
 <h4 class="anchored" data-anchor-id="diversidade-de-solo">Diversidade de solo</h4>
 <p>Por fim, em locais com baixa variação de <em>landforms</em>, amplitude de elevação e presença de áreas úmidas, a diversidade de solo é usada para identificar variações na paisagem que possam sustentar a variação da biodiversidade.</p>
-<p>A combinação dos índices de variedade de <em>landforms</em>, amplitude altitudinal, índice de áreas úmidas e diversidade de solos gera a <strong>diversidade da paisagem</strong>. Esse índice pondera a variedade de <em>landforms</em> com peso maior, sendo ela o dobro do peso das demais variáveis:</p>
-<p><!-- ${diversidade\_da\_paisagem} = 2\times{variedade\_de\_landforms} + \\
+<p>A combinação dos índices de variedade de <em>landforms</em>, amplitude altitudinal, índice de áreas úmidas e diversidade de solos gera a <strong>heterogeneidade da paisagem</strong>. Esse índice pondera a variedade de <em>landforms</em> com peso maior, sendo ela o dobro do peso das demais variáveis. <!--
+ ${diversidade\_da\_paisagem} = 2\times{variedade\_de\_landforms} + \\
 {amplitude\_altitudinal} + \\
 {wetland\_density} + \\
-{soil\_diversity}.$ --></p>
+{soil\_diversity}.$ 
+--></p>
 </section>
 </section>
 <section id="conectividade-local" class="level3">
@@ -310,19 +325,17 @@ div.csl-indent {
 <li>áreas agrícolas ou modificadas (incluindo áreas improdutivas não-naturais)</li>
 <li>áreas urbanizadas (de baixa ou alta intensidade).</li>
 </ul>
-<p>A conectividade local é a média ponderada das resistências dentro uma vizinhança quadrada de ~2070 m, sendo os pesos um decaimento linear pela distância da célula focal. <!--Nesse contexto, a dispersão teórica de uma espécie (ou processo) a partir de uma célula focal é uma função dos valores de resistência das células vizinhas e suas distâncias com relação à célula focal, até uma distância máxima de 3 km.
-A nota de conectividade local para uma célula é igual à área de dispersão, levando em conta a resistência dividida pela área de dispersão teórica se não houvesse resistência. --></p>
+<p>A conectividade local é a média ponderada das resistências dentro uma vizinhança quadrada de ~2070 m, sendo os pesos um decaimento linear pela distância da célula focal.</p>
+<!--Nesse contexto, a dispersão teórica de uma espécie (ou processo) a partir de uma célula focal é uma função dos valores de resistência das células vizinhas e suas distâncias com relação à célula focal, até uma distância máxima de 3 km. A nota de conectividade local para uma célula é igual à área de dispersão, levando em conta a resistência dividida pela área de dispersão teórica se não houvesse resistência. -->
 </section>
 <section id="dados-padronizados-z-scores" class="level3">
 <h3 class="anchored" data-anchor-id="dados-padronizados-z-scores">Dados padronizados (<em>Z</em>-<em>scores</em>)</h3>
-<p>Antes de calcularmos a resiliência da paisagem, as variáveis (variedade de <em>landforms</em>, amplitude de elevação, índice de áreas úmidas, diversidade de solos e conectividade local) são convertidas para valores de Z (<em>Z-scores</em>), assumindo as médias e desvios padrões das <a href="#regiões-eco-geológicas"><strong>Regiões eco-geológicas</strong></a>. Isso garante a inclusão de condições físicas e ambientais distintas e permite capturar variações na composição da biota associada. Posteriomente, os valores de Z são combinados em diversidade da paisagem, exceto conectividade local.</p>
+<p>Antes de calcularmos a resiliência da paisagem, as variáveis (variedade de <em>landforms</em>, amplitude de elevação, índice de áreas úmidas, diversidade de solos e conectividade local) são convertidas para valores de Z (<em>Z-scores</em>), assumindo as médias e desvios padrões dentro de janelas móveis de 200 pixels de raio. Isso garante a inclusão de condições físicas e ambientais distintas e permite capturar variações locais na composição da biota associada. Posteriomente, os valores de Z são combinados em heterogeneidade da paisagem.</p>
 </section>
-<section id="resiliência-combinando-diversidade-da-paisagem-e-conectividade-local" class="level3">
-<h3 class="anchored" data-anchor-id="resiliência-combinando-diversidade-da-paisagem-e-conectividade-local">Resiliência: combinando diversidade da paisagem e conectividade local</h3>
-<p>Finalmente, a resiliência da paisagem é determinada pela média diversidade da paisagem e valor de Z da conectividade local:</p>
-<p><span class="math display">\[
-Resiliência = \frac{ \left(Diversidade\  da\  paisagem+{Conectividade}\right)}{2}
-\]</span></p>
+<section id="resiliência-combinando-heterogeneidade-da-paisagem-e-conectividade-local" class="level3">
+<h3 class="anchored" data-anchor-id="resiliência-combinando-heterogeneidade-da-paisagem-e-conectividade-local">Resiliência: combinando heterogeneidade da paisagem e conectividade local</h3>
+<p>Finalmente, a <strong>resiliência da paisagem</strong> é definida como asobreposição dos mapas de heterogeneidade e conectividade local baseada no histograma de distribuição dos valores dessas métricas. Dessa forma, podemos criar um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem, baseado na escala de cor que escolhemos destacando regiões que merecem atenção especial em termos de conservação e manejo, identificando áreas onde a conectividade local e a heterogeneidade da paisagem são mais importantes para a resiliência da paisagem.</p>
+<p><img src="figs/resilience_classes.png" class="img-fluid" alt="Definição das classes de Resiliência da Paisagem, baseada na distribuição de pixels nas imagens originais de Heterogeneidade da Paisagem e Conectividade Local">(#res_classes)</p>
 <!--
 ## Conectividade regional 
 
