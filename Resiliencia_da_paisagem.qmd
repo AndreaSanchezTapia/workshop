@@ -18,6 +18,6 @@ Assim, no mapa bivariado da resiliência da paisagem, podemos identificar difere
 
 -   **Áreas em verde**: As áreas em verde no mapa bivariado são aquelas que apresentam os maiores valores para as duas métricas, ou seja, possuem alta conectividade local e alta heterogeneidade da paisagem. Isso sugere que essas áreas são particularmente resilientes, pois são capazes de manter a diversidade de espécies e funções ecossistêmicas, mesmo diante das mudanças climáticas.
 
-Portanto, o mapa bivariado da resiliência da paisagem destaca as regiões que merecem atenção especial em termos de conservação e manejo, identificando áreas onde a conectividade local e a heterogeneidade da paisagem são mais favoráveis para a resiliência da paisagem e possivelmente se adaptar às mudanças climáticas em uma determinada área.
+Portanto, o mapa bivariado da resiliência da paisagem destaca as regiões que merecem atenção especial em termos de conservação e manejo, identificando áreas onde a conectividade local e a heterogeneidade da paisagem são mais importantes para explicar a resiliência da paisagem.
 
 ![Mapa final de Resiliência da Paisagem com a sobreposição dos mapas de heterogeneidade e conectividade.](figs/Resilience_bivariate.png)(#resilience_bivariate)
