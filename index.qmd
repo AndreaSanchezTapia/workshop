@@ -15,7 +15,7 @@ O termo _áreas resilientes_ indica locais que apresentam condições necessári
 
 ## Quais as premissas básicas desse estudo?
 
-![Modelo conceitual do projeto](figs/modelo_conceitual.png)
+![Modelo conceitual do projeto](figs/modelo_conceitual.png){width="400" fig-align="center"}
 
 A metodologia desenvolvida segue três premissas básicas:
 

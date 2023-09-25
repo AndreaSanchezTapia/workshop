@@ -126,7 +126,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Sumário</a></li><li class="breadcrumb-item"><a href="./Diversidade_da_paisagem.html">heterogeneidade da paisagem</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Sumário</a></li><li class="breadcrumb-item"><a href="./Diversidade_da_paisagem.html">Heterogeneidade da paisagem</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -209,7 +209,7 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Diversidade_da_paisagem.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">heterogeneidade da paisagem</span></a>
+ <span class="menu-text">Heterogeneidade da paisagem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -252,8 +252,8 @@ div.csl-indent {
 
 
 <section id="heterogeneidade-da-paisagem" class="level1">
-<h1>heterogeneidade da paisagem</h1>
-<p>A heterogeneidade da paisagem é uma métrica composta pelas médias de <em>Z-scores</em> da <a href="#variedade-de-landforms"><strong>variedade de landforms</strong></a>, <a href="#amplitude-altitudinal"><strong>amplitude altitudinal</strong></a>, <a href="#índice-de-áreas-úmidas"><strong>índice de áreas úmidas</strong></a> e <a href="#diversidade-de-solo"><strong>diversidade de solo</strong></a>. A métrica é composta por uma média hieráquica das variáveis <strong>(Figura)</strong>. A seguir, descreveremos como cada variável que compõe a métrica é criada e como elas são combinadas para formar a heterogeneidade da paisagem. As análises de heterogeneidade da paisagem foram realizadas no <em>Google Earth Engine</em> <span class="citation" data-cites="gorelick_google_2017">(<a href="#ref-gorelick_google_2017" role="doc-biblioref">Gorelick et al. 2017</a>)</span> devido a demanda computacional, sua escalabilidade, a possibilidade de reprodução das análises.</p>
+<h1>Heterogeneidade da paisagem</h1>
+<p>A <strong>heterogeneidade da paisagem</strong> é uma métrica composta pelas médias de <em>Z-scores</em> da <a href="#variedade-de-landforms"><strong>variedade de landforms</strong></a>, <a href="#amplitude-altitudinal"><strong>amplitude altitudinal</strong></a>, <a href="#índice-de-áreas-úmidas"><strong>índice de áreas úmidas</strong></a> e <a href="#diversidade-de-solo"><strong>diversidade de solo</strong></a>. A métrica é composta por uma média hieráquica das variáveis <strong>(Figura)</strong>. A seguir, descreveremos como cada variável que compõe a métrica é criada e como elas são combinadas para formar a heterogeneidade da paisagem. As análises de heterogeneidade da paisagem foram realizadas no <em>Google Earth Engine</em> <span class="citation" data-cites="gorelick_google_2017">(<a href="#ref-gorelick_google_2017" role="doc-biblioref">Gorelick et al. 2017</a>)</span> devido a demanda computacional, sua escalabilidade, a possibilidade de reprodução das análises.</p>
 <section id="base-de-dados" class="level5">
 <h5 class="anchored" data-anchor-id="base-de-dados">Base de dados</h5>
 <p>Nós utilizamos o modelo digital de elevação (DEM) do Merit-DEM <span class="citation" data-cites="yamazaki_high-accuracy_2017">(<a href="#ref-yamazaki_high-accuracy_2017" role="doc-biblioref">Yamazaki et al. 2017</a>)</span>, na escala de 90 m, como base para os cálculos de terreno como <a href="#declividade-do-relevo">declividade</a>, <a href="#orientação-do-relevo">orientação do relevo</a> e <a href="#índice-de-posição-topográfica">índice de posição topográfica (TPI)</a>. Esse DEM é um produto em escala global, permitindo a replicabilidade das análises em outras regiões, e possui correções de vários viéses derivados de imagens de satélite, principalmente em áreas com alta densidade de florestas como a floresta Amazônica. Além disso, o Merit-DEM já possui uma camada de <a href="#acúmulo-de-fluxo">acúmulo de fluxo</a>, em escala global, disponível no Merit-Hydro <span class="citation" data-cites="yamazaki_merit_2019">(<a href="#ref-yamazaki_merit_2019" role="doc-biblioref">Yamazaki et al. 2019</a>)</span>. Essa camada de acúmulo de fluxo possui correções para áreas planas e para o efeito da densidade de árvores no cálculo da rede hidrográfica <span class="citation" data-cites="yamazaki_merit_2019">(<a href="#ref-yamazaki_merit_2019" role="doc-biblioref">Yamazaki et al. 2019</a>)</span>, que são importantes para a análise de florestas tropicais com alta densidade de árvores.</p>
@@ -757,7 +757,7 @@ moisture.index = \frac{\log \left(fluxo+1\right)}{\left(slope+1\right)}  \times1
 <!-- Seria interessante algumas figuras de exemplos de landforms dentro dos biomas!!-->
 <div id="fig2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="figs/landform_types_BR.png" class="img-fluid figure-img"></p>
+<p><img src="figs/landform_types_BR.png" class="img-fluid figure-img" width="400"></p>
 <figcaption class="figure-caption">Figura 2 - Tipos de formas de relevo</figcaption>
 </figure>
 </div>
