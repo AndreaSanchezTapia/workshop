@@ -2,13 +2,13 @@
 
 A **resiliência da paisagem** é um conceito que se refere à capacidade de um determinado local em manter a diversidade de espécies e as funções ecossistêmicas mesmo diante das pressões provocadas pelas mudanças climáticas. Para calcular essa resiliência, utilizamos a classificação em quatro quantis das imagens que representam a Heterogeneidade da Paisagem e a Conectividade Local. Essa classificação é baseada no histograma de distribuição dos valores dessas métricas.
 
-![Figura 1 - Classificação da Heterogeneidade da Paisagem de acordo com as divisões por quantis de 25%](figs/Heterogeneity_bivariate.png)
+![Figura 1 - Classificação da Heterogeneidade da Paisagem de acordo com as divisões por quantis de 25%](figs/Heterogeneity_bivariate.png){width="400" fig-align="center"}
 
-![Figura 2 - Classificação da Conectividade Local de acordo com as divisões por quantis de 25%](figs/Connectedness_bivariate.png){#conectividade}
+![Figura 2 - Classificação da Conectividade Local de acordo com as divisões por quantis de 25%](figs/Connectedness_bivariate.png){width="400" fig-align="center"}
 
 Com as duas imagens agora classificadas, podemos criar um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem, baseado na escala de cor que escolhemos.
 
-![Definição das classes de Resiliência da Paisagem, baseada na distribuição de pixels nas imagens originais de Heterogeneidade da Paisagem e Conectividade Local](figs/resilience_classes.png)
+![Figura 3 - Definição das classes de Resiliência da Paisagem, baseada na distribuição de pixels nas imagens originais de Heterogeneidade da Paisagem e Conectividade Local](figs/resilience_classes.png){width="300" fig-align="center"}
 
 Assim, no mapa bivariado da resiliência da paisagem, podemos identificar diferentes áreas de interesse:
 
@@ -20,4 +20,4 @@ Assim, no mapa bivariado da resiliência da paisagem, podemos identificar difere
 
 Portanto, o mapa bivariado da resiliência da paisagem destaca as regiões que merecem atenção especial em termos de conservação e manejo, identificando áreas onde a conectividade local e a heterogeneidade da paisagem são mais importantes para explicar a resiliência da paisagem.
 
-![Mapa final de Resiliência da Paisagem com a sobreposição dos mapas de heterogeneidade e conectividade.](figs/Resilience_bivariate.png)
+![Figura 4 - Mapa final de Resiliência da Paisagem com a sobreposição dos mapas de heterogeneidade e conectividade.](figs/Resilience_bivariate.png){width="400" fig-align="center"}

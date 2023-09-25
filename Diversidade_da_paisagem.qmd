@@ -1,6 +1,6 @@
-# heterogeneidade da paisagem
+# Heterogeneidade da paisagem
 
-A heterogeneidade da paisagem é uma métrica composta pelas médias de *Z-scores* da [__variedade de landforms__](#variedade-de-landforms), [__amplitude altitudinal__](#amplitude-altitudinal), [__índice de áreas úmidas__](#índice-de-áreas-úmidas) e [__diversidade de solo__](#diversidade-de-solo). A métrica é composta por uma média hieráquica das variáveis **(Figura)**. A seguir, descreveremos como cada variável que compõe a métrica é criada e como elas são combinadas para formar a heterogeneidade da paisagem. 
+A **heterogeneidade da paisagem** é uma métrica composta pelas médias de *Z-scores* da [__variedade de landforms__](#variedade-de-landforms), [__amplitude altitudinal__](#amplitude-altitudinal), [__índice de áreas úmidas__](#índice-de-áreas-úmidas) e [__diversidade de solo__](#diversidade-de-solo). A métrica é composta por uma média hieráquica das variáveis **(Figura)**. A seguir, descreveremos como cada variável que compõe a métrica é criada e como elas são combinadas para formar a heterogeneidade da paisagem. 
 As análises de heterogeneidade da paisagem foram realizadas no *Google Earth Engine* [@gorelick_google_2017] devido a demanda computacional, sua escalabilidade, a possibilidade de reprodução das análises.
 
 ##### Base de dados  
@@ -170,7 +170,7 @@ A classificação final de landforms se encontra na @tbl-landforms.
 : Códigos das formas de relevo obtidas após classificação das variáveis {#tbl-landforms}
 
 <!-- Seria interessante algumas figuras de exemplos de landforms dentro dos biomas!!-->
-![Figura 2 - Tipos de formas de relevo](figs/landform_types_BR.png){#fig2}
+![Figura 2 - Tipos de formas de relevo](figs/landform_types_BR.png){#fig2 width="400" fig-align="center"}
 
 
 ##### Gerando a variedade de _landforms_ {-}
