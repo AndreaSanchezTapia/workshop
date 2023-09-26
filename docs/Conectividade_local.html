@@ -254,20 +254,20 @@ div.csl-indent {
 <section id="cálculos-de-resistência" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="cálculos-de-resistência">Cálculos de resistência</h2>
 <p>Os valores de resistência são medidas relativas do grau de dificuldade de deslocamento dos organismos nos diferentes tipos de cobertura do solo. Esses valores foram atribuídos por bioma, seguindo a premissa de que quanto maior for a diferença estrutural entre um dado tipo de cobertura do solo e a vegetação original do bioma, maior será o valor de resistência da classe de cobertura do solo em questão.</p>
-<p>Os dados espaciais primários utilizados para calcular a superfície de resistência foram a camada de cobertura do solo fornecida pelo MapBiomas <span class="citation" data-cites="mapbiomas_project_collection_2020">(<a href="#ref-mapbiomas_project_collection_2020" role="doc-biblioref">MapBiomas Project 2020</a>)</span> e a base de estradas pavimentadas e não pavimentadas fornecida pelo IBGE (BCIM250, ano 2021). Em um segundo momento, serão ainda inseridas bases de dados de infraestrutura energética, a serem incorporadas nessa camada.</p>
-<p>A superfície de cobertura do solo do MapBiomas foi reamostrada para gerar pixels com 90 m de tamanho, aproximadamente. Também convertemos o arquivo vetorial de estradas para o formato matricial, com pixels de tamanho aproximado de 90 m. Conjugamos, por álgebra de mapas, as bases matriciais do MapBiomas e de estradas, de tal maneira que todos os pixels da base do MapBiomas que se sobrepuseram a um pixel de estrada assumiram um novo valor correpondente a um pixel de estrada pavimentada ou não pavimentada.</p>
-<p>Os pixels do mapa consolidado de cobertura do solo, já incluindo as estradas pavimentadas e não pavimentadas como novas classes, receberam, separadamente por bioma, valores de resistência que buscaram traduzir, comparativamente entre as classes, o grau de dificuldade de movimentação da biodiversidade numa dada classe de cobertura do solo. A premissa assumida aqui é que quanto maior for a diferença estrutural da classe de cobertura do solo para o hábitat original do bioma, maior será a dificuldade à movimentação que esta classe oferece. Os valores de resistência dos pixels de cada uma das classes foram atribuídos, por bioma, pela equipe do Projeto e podem ser vistos na <a href="#tbl-resistencia">Tabela&nbsp;1</a>.</p>
+<p>Os dados espaciais primários utilizados para calcular a superfície de resistência foram a camada de cobertura do solo gerada pelo MapBiomas <span class="citation" data-cites="mapbiomas_project_collection_2020">(<a href="#ref-mapbiomas_project_collection_2020" role="doc-biblioref">MapBiomas Project 2020</a>)</span> e a base de estradas pavimentadas e não pavimentadas fornecida pelo IBGE (BCIM250, ano 2021). Em um segundo momento, serão ainda inseridas bases de dados de infraestrutura energética, a serem incorporadas nessa camada. <!-- Precisamos atualizar a explicação das bases usadas na camada de conectividade --></p>
+<p>A superfície de cobertura do solo do MapBiomas foi reamostrada para gerar pixels com 90 m de tamanho, aproximadamente. Também convertemos o arquivo vetorial de estradas para o formato matricial, com pixels de tamanho aproximado de 90 m. Conjugamos, por álgebra de mapas, as bases matriciais do MapBiomas e de estradas, de tal maneira que todos os pixels da base do MapBiomas que se sobrepuseram a um pixel de estrada assumiram um novo valor correpondentes a um pixel de estrada pavimentada ou não pavimentada.</p>
+<p>Os pixels do mapa consolidado de cobertura do solo, já incluindo as estradas pavimentadas e não pavimentadas como novas classes, receberam, separadamente por bioma, valores de resistência que buscaram traduzir, comparativamente entre as classes, o grau de dificuldade de movimentação da biodiversidade numa dada classe de cobertura do solo. Os valores de resistência dos pixels de cada uma das classes foram atribuídos, por bioma, pela equipe do Projeto e podem ser vistos na <a href="#tbl-resistencia">Tabela&nbsp;1</a>.</p>
 <div id="tbl-resistencia" class="anchored">
 <table class="table">
 <caption>Tabela&nbsp;1: Valores de resistência para cada tipo de cobertura por bioma</caption>
 <colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
+<col style="width: 18%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -549,7 +549,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figs/C2_Resistencia.png" class="img-fluid figure-img" width="400"></p>
-<figcaption class="figure-caption">Mapa final de Resistência</figcaption>
+<figcaption class="figure-caption">Mapa final de classificação da Resistência dos diferentes usos da terra do MapBiomas.</figcaption>
 </figure>
 </div>
 <!--
