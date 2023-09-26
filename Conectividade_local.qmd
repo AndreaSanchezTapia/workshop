@@ -4,15 +4,17 @@
 
 Os valores de resistência são medidas relativas do grau de dificuldade de deslocamento dos organismos nos diferentes tipos de cobertura do solo. Esses valores foram atribuídos por bioma, seguindo a premissa de que quanto maior for a diferença estrutural entre um dado tipo de cobertura do solo e a vegetação original do bioma, maior será o valor de resistência da classe de cobertura do solo em questão.
 
-Os dados espaciais primários utilizados para calcular a superfície de resistência foram a camada de cobertura do solo fornecida pelo MapBiomas [@mapbiomas_project_collection_2020] e a base de estradas pavimentadas e não pavimentadas fornecida pelo IBGE (BCIM250, ano 2021). Em um segundo momento, serão ainda inseridas bases de dados de infraestrutura energética, a serem incorporadas nessa camada.
+Os dados espaciais primários utilizados para calcular a superfície de resistência foram a camada de cobertura do solo gerada pelo MapBiomas [@mapbiomas_project_collection_2020] e a base de estradas pavimentadas e não pavimentadas fornecida pelo IBGE (BCIM250, ano 2021). Em um segundo momento, serão ainda inseridas bases de dados de infraestrutura energética, a serem incorporadas nessa camada.
+<!-- Precisamos atualizar a explicação das bases usadas na camada de conectividade --> 
 
-A superfície de cobertura do solo do MapBiomas foi reamostrada para gerar pixels com 90 m de tamanho, aproximadamente. Também convertemos o arquivo vetorial de estradas para o formato matricial, com pixels de tamanho aproximado de 90 m. Conjugamos, por álgebra de mapas, as bases matriciais do MapBiomas e de estradas, de tal maneira que todos os pixels da base do MapBiomas que se sobrepuseram a um pixel de estrada assumiram um novo valor correpondente a um pixel de estrada pavimentada ou não pavimentada.
 
-Os pixels do mapa consolidado de cobertura do solo, já incluindo as estradas pavimentadas e não pavimentadas como novas classes, receberam, separadamente por bioma, valores de resistência que buscaram traduzir, comparativamente entre as classes, o grau de dificuldade de movimentação da biodiversidade numa dada classe de cobertura do solo. A premissa assumida aqui é que quanto maior for a diferença estrutural da classe de cobertura do solo para o hábitat original do bioma, maior será a dificuldade à movimentação que esta classe oferece. Os valores de resistência dos pixels de cada uma das classes foram atribuídos, por bioma, pela equipe do Projeto e podem ser vistos na @tbl-resistencia.
+A superfície de cobertura do solo do MapBiomas foi reamostrada para gerar pixels com 90 m de tamanho, aproximadamente. Também convertemos o arquivo vetorial de estradas para o formato matricial, com pixels de tamanho aproximado de 90 m. Conjugamos, por álgebra de mapas, as bases matriciais do MapBiomas e de estradas, de tal maneira que todos os pixels da base do MapBiomas que se sobrepuseram a um pixel de estrada assumiram um novo valor correpondentes a um pixel de estrada pavimentada ou não pavimentada.
+
+Os pixels do mapa consolidado de cobertura do solo, já incluindo as estradas pavimentadas e não pavimentadas como novas classes, receberam, separadamente por bioma, valores de resistência que buscaram traduzir, comparativamente entre as classes, o grau de dificuldade de movimentação da biodiversidade numa dada classe de cobertura do solo. Os valores de resistência dos pixels de cada uma das classes foram atribuídos, por bioma, pela equipe do Projeto e podem ser vistos na @tbl-resistencia.
 
 
 |Classe de cobertura do solo|Amazônia|	Caatinga|	Cerrado	|MataAtlântica|	Pampa	| Pantanal|
-|--:|--:|--:|--:|--:|--:|--:|
+|---:|--:|--:|--:|--:|--:|--:|
 |Aquaculture|-	|10	|7	|7	|7	|- |
 |Beach, Dune and Sand Spot|2	|2	|2	|2	|2	|- |
 |Citrus|-	|-	|10	|10	|-	|- |
@@ -47,7 +49,7 @@ Os pixels do mapa consolidado de cobertura do solo, já incluindo as estradas pa
 
 Depois de atribuídos os valores de resistência, aplicamos à superfície gerada a função _kernel_ de decaimento linear. Esta análise considerou, numa janela móvel de 23 pixels (~2070 m), o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior que os mais distantes. Desta maneira, a função _kernel_ nos auxilia na tarefa de encontrar os melhores caminhos de deslocamento na paisagem, ou seja, aqueles caminhos que oferecem menor resistência.
 
-![Mapa final de Resistência](figs/C2_Resistencia.png){width="400" fig-align="center"}
+![Mapa final de classificação da Resistência dos diferentes usos da terra do MapBiomas.](figs/C2_Resistencia.png){width="400" fig-align="center"}
 
 <!--
 

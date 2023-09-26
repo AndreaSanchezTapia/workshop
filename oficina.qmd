@@ -1,39 +1,37 @@
 # Oficinas e atividades previstas
 
 ## Atividades previstas
+
 As atividades previstas para o projeto serão divididas em duas etapas: a primeira é a aplicação da metodologia de mapeamento de diversidade da paisagem, conectividade local e resiliência da paisagem, descritas anteriormente. A segunda etapa corresponde ao refinamento e adaptação desta metodologia para a realidade dos diversos biomas brasileiros, que será feita a partir de discussões com especialistas.
 
-A partir da metodologia proposta, serão realizadas reuniões internas com a equipe e workshops com especialistas nas temáticas do projeto e com experiência em diversos biomas do Brasil para discussão da metodologia e sugestão de soluções de potenciais fraquezas do projeto. 
-O processo consistirá, portanto, da aplicação da abordagem desenvolvida, análise dos métodos, avaliação, complementação e validação dos resultados, e geração de mapas de áreas resilientes e conectadas nos biomas brasileiros.
+A partir da metodologia proposta, serão realizadas reuniões internas com a equipe e workshops com especialistas nas temáticas do projeto e com experiência em diversos biomas do Brasil para discussão da metodologia e sugestão de soluções de potenciais fraquezas do projeto. O processo consistirá, portanto, da aplicação da abordagem desenvolvida, análise dos métodos, avaliação, complementação e validação dos resultados, e geração de mapas de áreas resilientes e conectadas nos biomas brasileiros.
 
 ## Workshops / oficinas
 
-Os workshops previstos para o projeto terão como objetivo discutir a metodologia proposta e sugerir adequações (metodológicas e de bases de dados) às características dos ecossistemas e particularidades dos biomas brasileiros. As exequibilidade das sugestões serão posteriormente avaliadas internamente sob as condições limitantes de recurso e tempo de conclusão do projeto.  
-
+Os workshops previstos para o projeto terão como objetivo discutir a metodologia proposta e sugerir adequações (metodológicas e de bases de dados) às características dos ecossistemas e particularidades dos biomas brasileiros. As exequibilidade das sugestões serão posteriormente avaliadas internamente sob as condições limitantes de recurso e tempo de conclusão do projeto.
 
 ### Planejamento dos workshops
 
-| Workshop  | Data prevista | Modalidade  | Sugestão de pauta |
-|:-:|:-:|:-:|:-:|
-|Workshop #1|13/jun e 15/jun|virtual|Introdução geral, apresentação das análises e dos resultados preliminares; momento de perguntas e respostas gerais e também direcionadas ao padrão geral dos mapas principais|
-|Workshop #2|"05/jul (a confirmar)"|virtual|Trabalho mais efetivo no refinamento das análises, orientada por perguntas direcionadas aos especialistas|
-|Workshop #3|"31/ago (a confirmar)"|"presencial (a confirmar)"|Refinamento das análises baseado no que foi discutido no Workshop #2 e nas discussões internas do grupo; alinhando para o que é prioritário para chegar ao resultado final|
-|Workshop #4|"23/nov (a confirmar)"|virtual|Apresentação dos resultados quase finais do mapeamento e contribuições finais ao estudo|
-
+|  Workshop   |     Data prevista      |         Modalidade         |                                                                               Sugestão de pauta                                                                               |
+|:----------------:|:----------------:|:----------------:|:----------------:|
+| Workshop #1 |    13/jun e 15/jun     |          virtual           | Introdução geral, apresentação das análises e dos resultados preliminares; momento de perguntas e respostas gerais e também direcionadas ao padrão geral dos mapas principais |
+| Workshop #2 | "05/jul (a confirmar)" |          virtual           |                                   Trabalho mais efetivo no refinamento das análises, orientada por perguntas direcionadas aos especialistas                                   |
+| Workshop #3 | "31/ago (a confirmar)" | "presencial (a confirmar)" |  Refinamento das análises baseado no que foi discutido no Workshop #2 e nas discussões internas do grupo; alinhando para o que é prioritário para chegar ao resultado final   |
+| Workshop #4 | "23/nov (a confirmar)" |          virtual           |                                            Apresentação dos resultados quase finais do mapeamento e contribuições finais ao estudo                                            |
 
 ### Workshop #1: agenda
 
-| Início  | Tempo	| Atividade	| Dinâmica |
-|:-:|:-:|:-:|:-:|
-|14:30|70'|Parte 1: Introdução geral e apresentação das análises|Sala geral|
-|14:30|5'|Chegada e apresentação da agenda da reunião|Apresentação|
-|14:35|10'|Introdução geral sobre o projeto|Apresentação|
-|14:45|10'|Apresentação das equipes e especialistas por bioma|Apresentação|
-|14:55|30'|Detalhes específicos das análises - Diversidade da paisagem|Apresentação|
-|15:25|15'|Detalhes específicos das análises - Conectividade e resiliência|Apresentação|
-|15:40|10'|Intervalo; preenchimento planilha|Doc|
-|15:50|60'|Parte 2: Conversa em grupos menores, por bioma|Salas paralelas|
-|15:50|5'|Apresentação dos mapas dos biomas|Apresentação|
-|15:55|55'|Momento para dúvidas gerais; perguntas orientadoras|Discussão e Doc|
-|16:50|10'|Parte 3: Encerramento e próximos passos|Sala geral|
-|16:50|10'|Próximos passos|Apresentação|
+| Início | Tempo |                            Atividade                            |    Dinâmica     |
+|:----------------:|:----------------:|:----------------:|:----------------:|
+| 14:30  |  70'  |      Parte 1: Introdução geral e apresentação das análises      |   Sala geral    |
+| 14:30  |  5'   |           Chegada e apresentação da agenda da reunião           |  Apresentação   |
+| 14:35  |  10'  |                Introdução geral sobre o projeto                 |  Apresentação   |
+| 14:45  |  10'  |       Apresentação das equipes e especialistas por bioma        |  Apresentação   |
+| 14:55  |  30'  |   Detalhes específicos das análises - Diversidade da paisagem   |  Apresentação   |
+| 15:25  |  15'  | Detalhes específicos das análises - Conectividade e resiliência |  Apresentação   |
+| 15:40  |  10'  |                Intervalo; preenchimento planilha                |       Doc       |
+| 15:50  |  60'  |         Parte 2: Conversa em grupos menores, por bioma          | Salas paralelas |
+| 15:50  |  5'   |                Apresentação dos mapas dos biomas                |  Apresentação   |
+| 15:55  |  55'  |       Momento para dúvidas gerais; perguntas orientadoras       | Discussão e Doc |
+| 16:50  |  10'  |             Parte 3: Encerramento e próximos passos             |   Sala geral    |
+| 16:50  |  10'  |                         Próximos passos                         |  Apresentação   |

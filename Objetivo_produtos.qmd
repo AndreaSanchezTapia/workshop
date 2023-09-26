@@ -1,24 +1,23 @@
 # Objetivo
 
-O objetivo principal do projeto é mapear sítios resilientes a mudanças climáticas e conectados entre si, identificando locais que seriam mais adequados a sustentar a biodiversidade em um futuro de mudanças no clima. 
+O objetivo principal do projeto é mapear a **resiliência às mudanças climáticas**, por meio do mapeamento da **heterogeneidade ambiental** e da **conectividade local** entre áreas, para identificar locais maior potencial de sustentar a biodiversidade em um futuro de mudanças no clima.
 
 ## Objetivos específicos
 
-O objetivo geral do estudo pode ser detalhado em dois objetivos específicos: 
+O objetivo geral do estudo pode ser detalhado em dois objetivos específicos:
 
-+ Aplicar a metodologia de mapeamento de sítios resilientes, proposta e validada para a região da América do Norte, para o Brasil, conduzindo as análises de diversidade da paisagem e de conectividade local;
+-   Aplicar a metodologia de mapeamento de sítios resilientes, proposta e validada para a região da América do Norte, para o Brasil, conduzindo as análises de **heterogeneidade da paisagem** e de **conectividade local **;
 
-+ Refinar e adaptar a metodologia proposta, __com base em discussões com especialistas no tema que atuam na região de estudo__, produzindo um mapa de áreas resilientes para o Brasil.
+-   Refinar e adaptar a metodologia proposta, **com base em discussões com especialistas no tema que atuam na região de estudo**, produzindo um mapa de áreas resilientes para o Brasil.
 
 ## Produtos previstos
 
-O produto principal do projeto é um mapa de áreas resilientes e conectadas para os biomas do Brasil, que permite identificar áreas com potencial de sustentar animais e plantas em um clima sob mudanças.
+O produto principal do projeto é um mapa de áreas resilientes (ambientalmente heterogêneas e conectadas entre si) para os biomas do Brasil, que permita identificar áreas com potencial de sustentar animais e plantas em um clima sob mudanças.
 
 Estão previstos ainda:
 
-+ Relatório técnico, em português, descrevendo o projeto e a metodologia utilizada;
+-   Relatório técnico, em português, descrevendo o projeto e a metodologia utilizada;
 
-+ Documentação detalhada das análises, incluindo o compartilhamento dos códigos, para que seja possível reproduzir as análises;
+-   Documentação detalhada das análises, incluindo o compartilhamento dos códigos, para que seja possível reproduzir as análises;
 
-+ Elaboração de, no mínimo, um artigo científico a ser submetido a uma revista científica internacional.
-
+-   Elaboração de, no mínimo, um artigo científico a ser submetido a uma revista científica internacional.
