@@ -1,23 +1,24 @@
 # Heterogeneidade da paisagem
 
-A **heterogeneidade da paisagem** é uma métrica composta pelas médias de *Z-scores* das variáveis [__variedade de formas de relevo__](#variedade-de-landforms), [__amplitude altitudinal__](#amplitude-altitudinal), [__índice de áreas úmidas__](#índice-de-áreas-úmidas) e [__riqueza de solos__](#diversidade-de-solo). A métrica é composta por uma média hierárquica dessas diferentes variáveis **(Figura)**. A seguir, descreveremos como cada variável que compõe a métrica é criada e como elas são combinadas para formar a heterogeneidade da paisagem. 
+A **heterogeneidade da paisagem** é uma métrica composta pelas médias de *Z-scores* das variáveis [__variedade de formas de relevo__](#variedade-de-landforms), [__amplitude altitudinal__](#amplitude-altitudinal), [__índice de áreas úmidas__](#índice-de-áreas-úmidas) e [__riqueza de solos__](#diversidade-de-solo). A métrica é composta por uma média hierárquica dessas diferentes variáveis **(Figura)**. A seguir, descreveremos como cada variável que compõe a métrica é criada e como elas são combinadas para formar a heterogeneidade da paisagem.
+
 As análises de heterogeneidade da paisagem foram realizadas no *Google Earth Engine* [@gorelick_google_2017].
 
 <!-- A figura citada acima não está aparecendo!!-->
 
-## Base de dados  
+## Bases de dados utilizadas
 
 Nós utilizamos o modelo digital de elevação (DEM) do Merit-DEM [@yamazaki_high-accuracy_2017], na escala de 90 m, como base para os cálculos de terreno como [declividade](#declividade-do-relevo), [orientação do relevo](#orientação-do-relevo) e [índice de posição topográfica (TPI)](#índice-de-posição-topográfica). Esse DEM é um produto em escala global, permitindo a replicabilidade das análises em outras regiões, e possui correções de vários vieses derivados de imagens de satélite, principalmente em áreas com alta densidade de florestas como a floresta Amazônica. Além disso, o Merit-DEM já possui uma camada de [acúmulo de fluxo](#acúmulo-de-fluxo), em escala global, disponível no Merit-Hydro [@yamazaki_merit_2019]. Essa camada de acúmulo de fluxo possui correções para áreas planas e para o efeito da densidade de árvores no cálculo da rede hidrográfica [@yamazaki_merit_2019], que são importantes para a análise de florestas tropicais com alta densidade de árvores. 
 
 O acúmulo de fluxo não captura bem a distribuição e área de lagos e rios largos como o rio Amazonas. Desta forma, nós incluímos a **classe 33** do MapBiomas **Coleção 7** <!--conferir para mudar depois a versão para 7.1 ou 8 --> [@mapbiomas_project_collection_2020], que representa os rios e lagos para complementar as informações sobre as áreas úmidas. O MapBiomas é um projeto nacional de mapeamento e classificação de mudanças do uso do solo dos últimos 30 anos, a partir de dados de sensoriamento remoto.
 
-## Variedade de formas de relevo (*landforms*) {-}
+## Variáveis que compõem a heterogeneidade da paisagem
+
+### Variedade de formas de relevo (*landforms*) {-}
 
 A variedade de formas de relevo (*landforms*) é a representada pela quantidade de formas de relevo dentro de uma vizinhança da célula focal. Primeiro classificamos as formas de relevo e em seguida contabilizamos a quantidade de formas no entorno de cada célula.
 
-### Classificação das formas de relevo
-
-As formas de relevo representam a variação na umidade, exposição à radiação solar, velocidade de ventos e deposição de sedimentos na paisagem [@dobrowski_climatic_2011; @anderson_resilient_2016]. Essa classificação é determinada pelas variáveis de **declividade do relevo** (_slope_), **orientação do relevo** (_aspect_), **índice de posição topográfica** (_topographic position index_), **índice de umidade** (_moisture index_) e distribuição de **rios** e **lagos**.
+As formas de relevo representam a variação na umidade, exposição à radiação solar, velocidade de ventos e deposição de sedimentos na paisagem [@dobrowski_climatic_2011; @anderson_resilient_2016]. Essa classificação é determinada pelas variáveis de **declividade do relevo** (_slope_), **orientação do relevo** (_aspect_), **índice de posição topográfica** (_topographic position index_), **índice de umidade** (_moisture index_) e distribuição de **rios e lagos**, descritas em detalhes abaixo.
 
 A combinação dessas variáveis permite identificar os topos de montanhas e vales, áreas íngremes ou planas, orientação do relevo com mais sombra ou incidência solar, áreas secas ou úmidas dado o acúmulo de fluxo, declividade do relevo e a presença de lagos e rios (@fig-landforms). A classificação foi baseada em estudos anteriores [@fels_cognitively-based_1996; @anderson_resilient_2016; @anderson_resilient_2012;  @anderson_mark_g_estimating_2014; @anderson_mark_g_resilient_2023] conduzidos para a América do Norte ( [https://crcs.tnc.org/pages/land](https://crcs.tnc.org/pages/land)). 
 
@@ -31,16 +32,15 @@ Por fim, a classificação das formas de relevo foi ajustada para valores de TPI
 ![Classificação de formas de relevo de acordo com a declividade do relevo, índice de posição topográfica,
   orientação do relevo, índice de umidade, rios e lagos. Baseado na classificação de @anderson_resilient_2016.](figs/landform_scheme.png){#fig-landforms width="300" fig-align="center"}
 
-### Declividade do relevo (*slope*) {-}
+#### Declividade do relevo (*slope*) {-}
 
 A declividade do relevo foi calculada pela função `ee.Terrain.slope`, como um gradiente local das 4 células adjacentes. Os resultados são apresentados em graus de declividade (0º a 90º). 
 
-### Orientação do relevo (*aspect*) {-}
+#### Orientação do relevo (*aspect*) {-}
 
 A orientação do relevo foi calculada pela função `ee.Terrain.aspect`, como um gradiente local das 4 células adjacentes. Os resultados são apresentados em graus da direção do relevo (0º = Norte, 90º = Leste, 180º = Sul e 270º = Oeste). Nós dividimos a orientação do relevo em dois grupos, baseados na quantidade de incidência solar, sendo células com valores entre 90º e 270º classificados como **faces frias** e valores entre 0º a 90º e 270º a 360º, classificados como **faces quentes**.
 
-
-### Índice de posição topográfica (TPI) {-}
+#### Índice de posição topográfica (TPI) {-}
 
 O cálculo do TPI foi feito em três escalas com uma janela circular com 7, 11 e 15 células de raio, calculando a soma da diferença da elevação da célula focal para as suas vizinhas ($i$), divididos pelo número de células vizinhas ($n$).
 
@@ -50,7 +50,7 @@ $$
 
 O índice é composto pela média de TPI das três escalas, o que permite a consideração de níveis locais e regional de resolução da paisagem [@theobald_ecologically-relevant_2015]. Essa abordagem foi implementada para permitir a classificação de formas de relevo que emergem tanto em escalas locais (ex. vales, topos de montanhas) quanto regionais (ex. topos planos de chapadas) [@fels_cognitively-based_1996]. Os tamanhos das janelas foram ajustados visualmente para que representassem as formas de relevo.
 
-### Índice de umidade (*moisture index*) {-}
+#### Índice de umidade (*moisture index*) {-}
 O índice de umidade (_moisture index_) foi calculado com base no **acúmulo de fluxo** do Merit-Hydro e na **declividade do relevo** calculadas anteriormente.
 
 $$
@@ -58,9 +58,9 @@ moisture.index = \frac{\log \left(fluxo+1\right)}{\left(slope+1\right)}  \times1
 $$
 Após o cálculo do índice de umidade para cada célula,  suavizamos o padrão de distribuição da rede de drenagem como a média do índice dentro de uma janela circular com uma célula de raio. 
 
-### Transformando os índices em classes {-}
+#### Transformando os índices em classes {-}
 
-Cada índice (TPI, declividade, orientação e índice de úmidade) foi transformado em classes (@tbl-classes) para formarem os tipos de formas de relevo. Os ajustes dos limiares de TPI e índice de umidade foram definidos visualmente. Classificamos como áreas úmidas somente células com índice de umidade acima de 3000, uma vez que valores menores superestimavam a distribuição de corpos d'água em áreas planas. Depois combinamos o mapa de áreas úmidas com o de água e lagos do MapBiomas. A declividade e orientação do relevo seguiram a classificação em @anderson_resilient_2016, com a orietação do relevo foi ajustada para o Hemisfério Sul. 
+Cada índice (declividade e orientação do relevo, TPI e índice de úmidade) foi transformado em classes (@tbl-classes) para formarem os tipos de formas de relevo. A declividade e orientação do relevo seguiram a classificação em @anderson_resilient_2016, com a orietação do relevo ajustada para o Hemisfério Sul. Os ajustes dos limiares de TPI e índice de umidade foram definidos visualmente. Classificamos como áreas úmidas somente células com índice de umidade acima de 3000, uma vez que valores menores superestimavam a distribuição de corpos d'água em áreas planas. Depois combinamos o mapa de áreas úmidas com o de água e lagos do MapBiomas.
 
 | Variáveis | Classes | Limiar inferior | Limiar superior |
 |-:|-:|-:|-:|
@@ -80,7 +80,7 @@ Cada índice (TPI, declividade, orientação e índice de úmidade) foi transfor
 |Índice de Umidade|1|3000|Inf|
 : Classes dos índices usados para a classificação de _landforms_ {#tbl-classes}
 
-### Combinando as variáveis e classificando as formas de relevo {-}
+#### Combinando as variáveis e classificando as formas de relevo {-}
 
 As classes de cada variável foram combinadas para representar as formas de relevo como um código numérico (@fig-BR):
 + **índice de umidade** foi multiplicado por 1000;
@@ -185,12 +185,12 @@ A classificação final de formas de relevo pode ser visualizada na @tbl-landfor
 
 <!-- Seria interessante algumas figuras de exemplos de landforms dentro dos biomas!!-->
 
-
-### Gerando a variedade de formas de relevo {-}
+#### Obtendo a variedade de formas de relevo {-}
 
 A variedade de formas de relevo foi calculada como a quantidade de tipos de formas de relevo dentro de uma janela circular da célula focal. O tamanho do raio da janela foi definido calculando a variedade em diferentes raios (2, 5, 7, 10, 15, 20 células) e calculando a diferença na média de variedade obtido para o Brasil a cada aumento de raio. O raio escolhido foi aquele em que o seu subsequente não adicionou variedade. Desta forma, o raio representa o nível de resolução da paisagem que captura o máximo de variedade de formas de relevo. O raio escolhido foi de 5 células de raio (450 m) para todo o Brasil.
 
-## Amplitude altitudinal {-}
+
+### Amplitude altitudinal {-}
 
 A amplitude altitudinal representa a variação da altitude em uma região, independente da variedade de formas de relevo. A amplitude altitudinal foi calculada como a diferença entre os valores máximos e mínimos de altitude, dentro de uma janela circular de 450 m (5 células de raio), a partir do MERIT-DEM [@yamazaki_high-accuracy_2017]. Em seguida, fizemos uma Regressão Linear Simples (_Ordinary Linear Regression_) entre os **valores de amplitude altitudinal** e a **variedade formas de relevo** e obtivemos os valores dos resíduos dessa análise como a amplitude altitudinal independente da variedade de formas de relevo. 
 
@@ -222,48 +222,51 @@ $$
 A riqueza de solos foi calculada como a quantidade de tipos de solos dominantes e sub-dominantes nos polígonos de solo obtidos da base do Instituto Brasileiro de Geografica e Estatística (IBGE) ([https://www.ibge.gov.br/geociencias/informacoes-ambientais/pedologia/10871-pedologia.html](https://www.ibge.gov.br/geociencias/informacoes-ambientais/pedologia/10871-pedologia.html)). Essa informação foi rasterizada e projetada na mesma resolução espacial das variáves descritas anteriormente.
 
 
-<!-- Falta incluir aqui o item que explicar a padronização das variáveis-->
-A transformação de *Z-score* foi aplicada também para a **variedade de _landforms_**, **amplitude de elevação** e **diversidade de solos** para compormos a heterogeneidade da paisagem.
+<!-- Incluí aqui o item que explicar a padronização das variáveis, falta complementar-->
+## Padronização das variáveis
+A transformação de *Z-score* foi aplicada também para a **variedade de formas de relevo**, **amplitude altitudinal** e **riqueza de solos** para compormos a heterogeneidade da paisagem.
 
 
-### Heterogeneidade da paisagem: combinação das variáveis {-}
+## Heterogeneidade da paisagem: combinação das variáveis {-}
 
-A heterogeneidade da paisagem foi calculada seguindo uma hierarquia nas variáveis. A heterogeneidade da paisagem é definida como o *Z-score* da variedade de *landforms*. Em locais com maior *Z-score* para amplitude altitudinal que variedade de *landforms*, a heterogeneidade da paisagem foi calculada como a média ponderada das duas variáveis, com peso 2 para variedade de *landforms*.
+A heterogeneidade da paisagem é calculada seguindo uma hierarquia nas variáveis.
+Na etapa 1, ela é definida inicialmente como o valor de Z da variedade de formas de relevo.
+Na etapa 2, em locais onde o valor de Z para amplitude altitudinal é maior que aquele obtido para a variedade de formas de relevo, a heterogeneidade da paisagem é calculada como a média ponderada das duas variáveis, dando peso 2 para variedade de formas de relevo.
 $$
 Z_{heterogeneidade\, da\,paisagem}= \frac{\left(Z_{variedade\,de\,landforms}\times 2 \right)+Z_{amplitude\,altitudinal}}{3}
 $$
-Nos locais onde o índice áreas úmida é maior que a heterogeneidade da paisagem calculada anteriormente, calculamos a média ponderada da heterogeneidade da paisagem e índice de áreas úmidas, atribuindo peso dois para as áreas úmidas. O peso dobrado das áreas úmidas é justificado por esses locais estarem em áreas planas com baixa variabilidade topográfica, sendo as áreas úmidas a variável mais importante para determinar a variabilidade microclimática. 
+<!-- Importante padronizar os termos em português: formas de relevo, riqueza de solos e valor de Z. Revisei o texto geral, mas precisa editar as figuras-->
+Na etapa 3, em locais onde o índice áreas úmidas é maior que a heterogeneidade da paisagem calculada na etapa 2, calculamos a média ponderada da heterogeneidade da paisagem e índice de áreas úmidas, atribuindo peso dois para as áreas úmidas. O peso duplo das áreas úmidas é justificado por esses locais estarem em áreas planas com baixa variabilidade topográfica, sendo as áreas úmidas locais com alta disponibilidade hídrica que determinam a variabilidade microclimática. 
 
 $$
 Z_{heterogeneidade\, da\,paisagem}= \frac{Z_{variedade\,de\,landforms}+Z_{amplitude\,altitudinal} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{4}
 $$
 
-Se a amplitude altitudinal não foi importante para a célula, calculamos assim:
+Se, na etapa 2, a amplitude altitudinal não foi importante para a célula, a heterogeneidade da etapa 3 é calculada conforme segue:
 
 $$
 Z_{heterogeneidade\, da\,paisagem}= \frac{Z_{variedade\,de\,landforms} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{3}
 $$
 
-Nas localidades onde o *Z-score* da diversidade de solo foi maior que a heterogeneidade da paisagem anterior, os valores foram substituídos pela média ponderada das variáveis naquela localidade, com peso 2 para variedade de *landforms*.
-
+Na etapa 4, nos locais onde o valor de Z da riqueza de solos é maior que a heterogeneidade da paisagem calculada na etapa 3, os valores são substituídos pela média ponderada das variáveis naquela localidade, com peso 2 para variedade de formas de relevo.
 
 $$
 Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2)+Z_{amplitude\,altitudinal}+Z_{índice\,de\,áreas\,úmidas}+Z_{diversidade\,de\,solos}}{5}
 $$
 
-Nas células onde o índice de áreas úmidas não foi importante:
+Se, na etapa 3, nas células onde o índice de áreas úmidas não foi importante, a heterogeneidade da paisagem é calculada conforme segue:
 
 $$
 Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2)+Z_{amplitude\,altitudinal}+Z_{diversidade\,de\,solos}}{4}
 $$
 
-Onde a amplitude altitudinal não foi importante:
+Da mesma forma, em locais onde a amplitude altitudinal não foi importante, a heterogeneidade da paisagem é calculada conforme segue:
 
 $$
 Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2)+Z_{índice\,de\,áreas\,úmidas}+Z_{diversidade\,de\,solos}}{4}
 $$
 
-Localidades o somente  a variedade de *landforms* havia sido importante:
+Por fim, em locais onde apenas a variedade de formas de relevo foram importantes até aqui, a heterogeneidade da paisagem é calculada conforme segue:
 
 $$
 Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2) + Z_{diversidade\,de\,solos}}{3}
