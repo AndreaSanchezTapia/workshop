@@ -5,7 +5,22 @@ Os mapas das camadas principais e das variáveis intermediárias da análise pod
 **Atenção: o projeto ainda está em andamento, então os resultados apresentados são ainda versões preliminares do estudo.**
 
 Abaixo são descritos resultados principais por bioma e alguns padrões gerais obtidos para cada uma das camadas.
+<!--- Inserir em cada item abaixo os mapas de resiliência recortados por bioma? -->
+## Amazônica
 
+## Caatinga
+
+## Cerrado
+
+## Mata Atlântica
+
+## Pampa
+
+## Pantanal
+
+
+<!---
+Dividindo por camada
 ## Diversidade da paisagem
 
 <!---
@@ -18,4 +33,6 @@ Abaixo são descritos resultados principais por bioma e alguns padrões gerais o
 
 <!---
 [padrões gerais para cada bioma; incluir recorte de cada bioma e breve descrição]
+-->
+
 -->
