@@ -10,66 +10,15 @@ Abaixo são descritos resultados principais por bioma e alguns padrões gerais o
 [explorar resultados; discutir resultados quebrando pelas variáveis, para saber qual atributo está influenciando mais na diversidade da paisagem]
 -->
 
-## [Heterogeneidade da paisagem](https://projeto-resiliencia-tnc.hub.arcgis.com/maps/30e4cffc33314e908cba249ef565d41c/explore)
+## Heterogeneidade da paisagem [(link)](https://projeto-resiliencia-tnc.hub.arcgis.com/maps/30e4cffc33314e908cba249ef565d41c/explore)
 
 ![Heterogeneidade da paisagem, criada a partir da média pomderada dos Z-scores de variedade de formas de relevo, amplitude altitudinal, índice de áreas úmidas e diversidade do solo.](figs/heterogeneity_original.png){#fig-hetero-original width="600" fig-align="center"}
 
-### Amazônia
-
-![Recorte da camada de **Heterogeneidade da Paisagem** para a Amazônia](figs/results_bybiome/Amazonia_heterogeneidade.png){#fig_biomas_hetero_AM width="400" fig-align="center"}
-
-### Caatinga
-
-![Recorte da camada de **Heterogeneidade da Paisagem** para a Caatinga.](figs/results_bybiome/Caatinga_heterogeneidade.png){#fig_biomas_hetero_CA width="400" fig-align="center"}
-
-### Cerrado
-
-![Recorte da camada de **Heterogeneidade da Paisagem** para o Cerrado.](figs/results_bybiome/Cerrado_heterogeneidade.png){#fig_biomas_hetero_CE width="400" fig-align="center"}
-
-### Mata Atlântica
-
-![Recorte da camada de **Heterogeneidade da Paisagem** para o Mata Atlântica.](figs/results_bybiome/Atlantica_heterogeneidade.png){#fig_biomas_hetero_AT width="400" fig-align="center"}
-
-### Pampa
-
-![Recorte da camada de **Heterogeneidade da Paisagem** para o Pampa.](figs/results_bybiome/Pampa_heterogeneidade.png){#fig_biomas_hetero_PM width="400" fig-align="center"}
-
-### Pantanal
-
-![Recorte da camada de **Heterogeneidade da Paisagem** para o Pantanal.](figs/results_bybiome/Pantanal_heterogeneidade.png){#fig_biomas_hetero_PA width="400" fig-align="center"}
-
-
-
-## [Conectividade Local](https://projeto-resiliencia-tnc.hub.arcgis.com/maps/c7725afd65da4198bba59a7ccde49fce/explore)
+## Conectividade Local[(link)](https://projeto-resiliencia-tnc.hub.arcgis.com/maps/c7725afd65da4198bba59a7ccde49fce/explore)
 
 ![Resistência da paisagem, baseada na dificuldade de locomoção imposta pelos diferentes usos da terra.](figs/C2_Resistencia.png){#fig-conect-original width="600" fig-align="center"}
 
-### Amazônia
-
-![Recorte da camada de **Conectividade Local** para a Amazônia](figs/results_bybiome/Amazonia_resistencia.png){#fig_biomas_conect_AM width="400" fig-align="center"}
-
-### Caatinga
-
-![Recorte da camada de **Conectividade Local** para a Caatinga.](figs/results_bybiome/Caatinga_resistencia.png){#fig_biomas_conect_CA width="400" fig-align="center"}
-
-### Cerrado
-
-![Recorte da camada de **Conectividade Local** para o Cerrado.](figs/results_bybiome/Cerrado_resistencia.png){#fig_biomas_conect_CE width="400" fig-align="center"}
-
-### Mata Atlântica
-
-![Recorte da camada de **Conectividade Local** para o Mata Atlântica.](figs/results_bybiome/Atlantica_resistencia.png){#fig_biomas_conect_AT width="400" fig-align="center"}
-
-### Pampa
-
-![Recorte da camada de **Conectividade Local** para o Pampa.](figs/results_bybiome/Pampa_resistencia.png){#fig_biomas_conect_PM width="400" fig-align="center"}
-
-### Pantanal
-
-![Recorte da camada de **Conectividade Local** para o Pantanal.](figs/results_bybiome/Pantanal_resistencia.png){#fig_biomas_conect_PA width="400" fig-align="center"}
-
-
-## [Resiliência da paisagem](https://projeto-resiliencia-tnc.hub.arcgis.com/maps/4e5b37de7de640c0a7b8505f6c72091d/explore)
+## Resiliência da paisagem [(link)](https://projeto-resiliencia-tnc.hub.arcgis.com/maps/4e5b37de7de640c0a7b8505f6c72091d/explore)
 
 ![Classificação da Heterogeneidade da Paisagem de acordo com as divisões do histograma de densidade em quantis de 25%](figs/Heterogeneity_bivariate.png){#fig-hetero width="600" fig-align="center"}
 
@@ -79,31 +28,33 @@ Abaixo são descritos resultados principais por bioma e alguns padrões gerais o
 
 ![Mapa final de Resiliência da Paisagem com a sobreposição dos mapas de heterogeneidade e conectividade classificados por quantis de 25%.](figs/Resilience_bivariate.png){#fig-resilience width="600" fig-align="center"}
 
+## Recortes por biomas
+
 <!---
 [padrões gerais para cada bioma; incluir recorte de cada bioma e breve descrição]
 -->
 
 ### Amazônia
 
-![Recorte da camada de **Resiliência da Paisagem** para a Amazônia](figs/results_bybiome/Amazonia_resiliencia.png){#fig_biomas_resilience_AM width="400" fig-align="center"}
+![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Amazônia](figs/results_bybiome/Amazonia_resultados.png){#fig_biomas_hetero_AM width="600" fig-align="center"}
 
 ### Caatinga
 
-![Recorte da camada de **Resiliência da Paisagem** para a Caatinga.](figs/results_bybiome/Caatinga_resiliencia.png){#fig_biomas_resilience_CA width="400" fig-align="center"}
+![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Caatinga](figs/results_bybiome/Caatinga_resultados.png){#fig_biomas_hetero_CA width="600" fig-align="center"}
 
 ### Cerrado
 
-![Recorte da camada de **Resiliência da Paisagem** para o Cerrado.](figs/results_bybiome/Cerrado_resiliencia.png){#fig_biomas_resilience_CE width="400" fig-align="center"}
+![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para o Cerrado](figs/results_bybiome/Cerrado_resultados.png){#fig_biomas_hetero_CE width="600" fig-align="center"}
 
 ### Mata Atlântica
 
-![Recorte da camada de **Resiliência da Paisagem** para o Mata Atlântica.](figs/results_bybiome/Atlantica_resiliencia.png){#fig_biomas_resilience_AT width="400" fig-align="center"}
+![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Mata Atlântica.](figs/results_bybiome/Atlantica_resultados.png){#fig_biomas_hetero_AT width="600" fig-align="center"}
 
 ### Pampa
 
-![Recorte da camada de **Resiliência da Paisagem** para o Pampa.](figs/results_bybiome/Pampa_resiliencia.png){#fig_biomas_resilience_PM width="400" fig-align="center"}
+![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Pampa](figs/results_bybiome/Pampa_resultados.png){#fig_biomas_hetero_PM width="600" fig-align="center"}
 
 ### Pantanal
 
-![Recorte da camada de **Resiliência da Paisagem** para o Pantanal.](figs/results_bybiome/Pantanal_resiliencia.png){#fig_biomas_resilience_PA width="400" fig-align="center"}
+![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Pantanal.](figs/results_bybiome/Pantanal_resultados.png){#fig_biomas_hetero_PA width="600" fig-align="center"}
 
