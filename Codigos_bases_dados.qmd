@@ -2,25 +2,27 @@
 
 ## Códigos
 
-Os códigos para as análises estão disponíveis no repositório do projeto:
+Os códigos para as análises estão disponíveis no repositório do projeto: ...
 [](inserir link)
 
 A documentação para cada uma das diferentes camadas pode ser encontrada nos links abaixo.
 
-### Diversidade da paisagem
+### Heterogeneidade da paisagem
 
+Documentação para a análise de heterogeneidade da paisagem: ...
 [](inserir link)
 
 ### Conectividade local
 
-+ Resistência da paisagem:
++ Documentação para a análise de resistência da paisagem: ...
 [](inserir link)
 
-+ Conectividade (omniscape):
++ Documentação para a análise de conectividade da paisagem (análise omniscape): ...
 [](inserir link)
 
 ### Resiliência da paisagem
 
+Documentação para a análise de resiliência da paisagem: ..
 [](inserir link)
 
 
