@@ -51,9 +51,9 @@ Os pixels do mapa consolidado de cobertura do solo, já incluindo as estradas pa
 
 ## Aplicação do filtro kernel
 
-Depois de atribuídos os valores de resistência, aplicamos à superfície gerada a função _kernel_ de decaimento linear. Esta análise considerou, numa janela móvel de 23 pixels (~2070 m), o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior que os mais distantes. Desta maneira, a função _kernel_ nos auxilia na tarefa de encontrar os melhores caminhos de deslocamento na paisagem, ou seja, aqueles caminhos que oferecem menor resistência.
+Depois de atribuídos os valores de resistência, aplicamos à superfície gerada a função _kernel_ de decaimento linear. Esta análise considerou, numa janela móvel de 23 pixels (~2070 m), o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior que os mais distantes. Desta maneira, a função _kernel_ nos auxilia na tarefa de encontrar os melhores caminhos de deslocamento na paisagem, ou seja, aqueles caminhos que oferecem menor resistência (@fig-res).
 
-![Mapa final de classificação da resistência dos diferentes tipos de uso e cobertura da terra.](figs/C2_Resistencia.png){width="400" fig-align="center"}
+![Mapa final de classificação da resistência dos diferentes tipos de uso e cobertura da terra.](figs/C2_Resistencia.png){#fig-res width="400" fig-align="center"}
 
 <!-- Falta incluir a descrição da análise omniscape --> 
 

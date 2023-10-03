@@ -1,36 +1,9 @@
 # Metodologia resumida
 
-A metodologia proposta para identificar os sítios resilientes às mudanças climáticas [@anderson_estimating_2014; @anderson_resilient_2016; @anderson_resilient_2016-1; e @anderson_resilient_2023] envolve o mapeamento da **heterogeneidade da paisagem** e da **conectividade local**, que são as camadas que irão compoar a **resiliência da paisagem**. Os sítios com maior resiliência, possuem alto potencial de abrigar a biodiversidade em um cenário de mudanças climáticas e estão conectados entre si [@anderson_estimating_2014], permitindo a movimentação da biodiversidade entre diferentes microclimas nesses locais.
+A metodologia proposta para identificar os sítios resilientes às mudanças climáticas [@anderson_estimating_2014; @anderson_resilient_2016; @anderson_resilient_2016-1; e @anderson_resilient_2023] envolve o mapeamento da **heterogeneidade da paisagem** e da **conectividade local**, que são as camadas que irão compoar a **resiliência da paisagem** (@fig_fluxograma. Os sítios com maior resiliência, possuem alto potencial de abrigar a biodiversidade em um cenário de mudanças climáticas e estão conectados entre si [@anderson_estimating_2014], permitindo a movimentação da biodiversidade entre diferentes microclimas nesses locais.
 
-![Figura 1 - Fluxograma da análise de resiliência da paisagem, que inclui as camadas de heterogeneidade da paisagem e de conectividade local.](figs/Diagrama_metodologia.png){width="300" fig-align="center"}
+![Figura 1 - Fluxograma da análise de resiliência da paisagem, que inclui as camadas de heterogeneidade da paisagem e de conectividade local.](figs/Diagrama_metodologia.png){#fig_fluxograma width="500" fig-align="center"}
 
-<!--
-## Regiões eco-geológicas {#regiões-eco-geológicas}
-
-As regiões eco-geológicas são agrupamentos dos domínios geológicos e ecoregiões, que descrevem as variações geológicas e geomorfológicas promotoras da formação das paisagens, das redes de drenagem, da pedologia e que atuam como base de sustentação da biodiversidade que evoluiu nessas regiões, representadas pelas ecoregiões.
-O mapeamento das áreas resilientes às mudanças climáticas dentro das regiões eco-geológicas permite a identificação de locais que suportarão a biodiversidade pelos parâmetros locais, sem o enviesamento para regiões com mais variação de elevação e formas de relevo.
-
-Os domínios geológicos são grupos de litoestratigrafia semelhantes em relação ao posicionamento tectônico, nível crustal, classe de rocha, expressão geomorfológica, entre outros \[...\].
-Os domínios geológicos agrupam unidades geológicas, que são agrupamentos de rochas.
-Portanto, os diferentes domínios geológicos descrevem variações no tipo de rocha, potencial de sofrer intemperismo e idade geológica.
-<!-- Zonas altitudinais não foram utilizadas, pois a variabilidade proveniente das mesmas já é considerada nas ecoregiões. -->
-
-<!--
-As ecoregiões são regionalizações biogeográficas abaixo hierarquicamente dos domínios biogeográficos e biomas, representando agrupamentos espaciais da biodiversidade, numa escala regional, sustentando seus processos ecológicos principais \[Olson et al .
-2001; Dinerstein et al 2017 (veja material suplementar)\].
-A integração dos domínios geológicos e ecoregiões foram realizadas pela transformação dos polígonos dos domínios geológicos e ecoregiões em *rasters*, que são posteriormente combinados como a seguinte equação: $$Regiões\ eco-geológicas = {(Ecoregiões)+(100\times Domínio \ Geológico)}$$ Desta forma, os valores do raster final estão no formato **GGEE**, onde as duas primeiras unidades (**GG**) representam os domínios geológicos e as duas últimas unidades (**EE**) as ecoregiões.
-
--->
-
-<!--No estudo desenvolvido nos EUA o mapeamento foi feito por ecoregiões, uma vez que esses locais apresentam condições ambientais similares, especialmente relacionado a _landforms_, geologia e solos, e que compartilham conjuntos de comunidades naturais e espécies. Esse produto foi chamado de _geophysical settings_, levando em conta a geologia ou solo com zonas altitudinais. Entretanto, neste trabalho chamamos o mesmo produto de regiões eco-geológicas, visto que a geofísica investiga características não utilizadas no trabalho (elétricas, térmicas, magnéticas, gravitacionais e sísmicas).-->
-
-<!-- Será que isso aqui fica em metodologia? A parte de nomenclatura a gente menciona? -->
-
-<!-- As configurações geofísicas são definidas como a combinação de uma zona altitudinal e da classe geológica (rocha ou substrato superficial).-->
-
-<!-- Como não usamos zona altitudinal, talvez seja interessante deixar fora. -->
-
-<!-- As zonas altitudinais e as classes geológicas foram desenvolvidas para corresponder com mudanças perceptíveis em comunidades e espécies.  -->
 
 
 ## Heterogeneidade da paisagem {#diversidade-da-paisagem}
@@ -65,17 +38,12 @@ Por fim, em locais com baixa variação de formas de relevo, amplitude de eleva�
 
 ### Combinando as variáveis para gerar a heterogeneidade da paisagem
 
-A combinação dos índices de variedade de formas de relevo, amplitude altitudinal, índice de áreas úmidas e riqueza de solos gera a **heterogeneidade da paisagem**. Esse índice pondera a variedade de formas de relevo com peso maior, sendo ela o dobro do peso das demais variáveis. <!--
- ${diversidade\_da\_paisagem} = 2\times{variedade\_de\_landforms} + \\
-{amplitude\_altitudinal} + \\
-{wetland\_density} + \\
-{soil\_diversity}.$ 
--->
+A combinação dos índices de variedade de formas de relevo, amplitude altitudinal, índice de áreas úmidas e riqueza de solos gera a **heterogeneidade da paisagem**. Esse índice pondera a variedade de formas de relevo com peso maior, sendo ela o dobro do peso das demais variáveis. 
 
 
 ## Conectividade local {#conectividade-local}
 
-A conectividade local representa o grau de permeabilidade da paisagem (ou reciprocamente o grau de resistência) em torno de cada célula avaliada. A partir de um mapa de uso e cobertura do solo, incluindo a presença de infraestruturas energéticas e de transporte, foram atribuídos pesos<!-- realizada uma simplificação dos tipos de uso em componentes principais da paisagem e determinado pesos --> de resistência de movimento para cada categoria de uso do solo, nos quais áreas naturais apresentam o valor mínimo, e áreas com intervenção antrópica intensa (áreas urbanas), o valor máximo.
+A conectividade local representa o grau de permeabilidade da paisagem (ou reciprocamente o grau de resistência) em torno de cada célula avaliada. A partir de um mapa de uso e cobertura do solo, incluindo a presença de infraestruturas energéticas e de transporte, foram atribuídos pesos de resistência de movimento para cada categoria de uso do solo, nos quais áreas naturais apresentam o valor mínimo, e áreas com intervenção antrópica intensa (áreas urbanas), o valor máximo.
 
 As categorias principais de componentes da paisagem foram definidas como:
 
@@ -95,9 +63,9 @@ Antes de calcularmos a resiliência da paisagem, as variáveis variedade de form
 
 ## Resiliência da paisagem: combinando heterogeneidade da paisagem e conectividade local
 
-Finalmente, a **resiliência da paisagem** é calculada pela sobreposição dos mapas de heterogeneidade da paisagem e conectividade local baseada no histograma de distribuição dos valores dessas métricas. Dessa forma, podemos criar um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem. Com base na escala de cor que escolhemos e destacando regiões que merecem atenção especial em termos de conservação e manejo, são identificadas áreas onde a heterogeneidade da paisagem e a conectividade local são mais importantes para a resiliência da paisagem.
+Finalmente, a **resiliência da paisagem** é calculada pela sobreposição dos mapas de heterogeneidade da paisagem e conectividade local baseada no histograma de distribuição dos valores dessas métricas. Dessa forma, podemos criar um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem (@fig_resilience). Com base na escala de cor que escolhemos e destacando regiões que merecem atenção especial em termos de conservação e manejo, são identificadas áreas onde a heterogeneidade da paisagem e a conectividade local são mais importantes para a resiliência da paisagem.
 
-![Figura 2- Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local.](figs/resilience_classes.png){width="300" fig-align="center"}
+![Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local.](figs/resilience_def.png){#fig_resilience width="500" fig-align="center"}
 
 <!--
 ## Conectividade regional 

@@ -2,24 +2,26 @@
 
 A **resiliência da paisagem** se refere à capacidade de um determinado local em manter a diversidade de espécies e as funções ecossistêmicas mesmo diante das pressões provocadas pelas mudanças climáticas. Para calcular essa resiliência, utilizamos as camadas padronizadas de heterogeneidade da paisagem (@fig-hetero) e conectividade local (@fig-conect) descritas anteriormente. A partir delas, classificamos as imagens em quatro quantis, baseados no histograma de distribuição dos valores dessas métricas
 
-![Classificação da heterogeneidade da paisagem de acordo com as divisões do histograma de densidade em quantis de 25%.](figs/Heterogeneity_bivariate.png){#fig-hetero width="400" fig-align="center"}
+![Classificação da heterogeneidade da paisagem de acordo com as divisões do histograma de densidade em quantis de 25%.](figs/Heterogeneity_bivariate.png){#fig-hetero width="600" fig-align="center"}
 
-![Classificação da conectividade local de acordo com as divisões do histograma de densidade em quantis de 25%.](figs/Connectedness_bivariate.png){#fig-conect width="400" fig-align="center"}
+![Classificação da conectividade local de acordo com as divisões do histograma de densidade em quantis de 25%.](figs/Connectedness_bivariate.png){#fig-conect width="600" fig-align="center"}
 
 <!-- Sugestão de colocar essas duas figuras lado a lado com uma legenda única indicando (a) e (b) -->
 
 Com as duas imagens classificadas por quantis, geramos um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem, baseado na escala de cor escolhida (@res_classes).
 
-![Definição das classes de resiliência da paisagem, baseada no histograma de distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local.](figs/resilience_classes.png){#res_classes width="300" fig-align="center"}
+![Definição das classes de resiliência da paisagem, baseada no histograma de distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local.](figs/resilience_classes.png){#res_classes width="500" fig-align="center"}
 
 <!-- Faltou numerar a figura; algumas figuras em outras abas também estão sem numeração; no de conectvididade lembro de não ter número -->
 
 O mapa bivariado da **resiliência da paisagem** (@fig-resilience) destaca as regiões que merecem atenção especial em termos de conservação e manejo, identificando áreas onde a heterogeneidade da paisagem e a conectividade local são mais importantes para determinar a resiliência da paisagem.
 
-![Mapa final de resiliência da paisagem com a sobreposição dos mapas de heterogeneidade da paisagem e conectividade local.](figs/Resilience_bivariate.png){#fig-resilience width="400" fig-align="center"}
+![Mapa final de resiliência da paisagem com a sobreposição dos mapas de heterogeneidade da paisagem e conectividade local.](figs/Resilience_bivariate.png){#fig-resilience width="600" fig-align="center"}
 
-Assim, no mapa bivariado da resiliência da paisagem, podemos identificar diferentes áreas de interesse:
-<!-- Talvez inserir aqui a figura que Milena criou? -->
+Assim, no mapa bivariado da resiliência da paisagem, podemos identificar diferentes áreas de interesse (@fig_resilience):
+
+![Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local.](figs/resilience_def.png){#fig_resilience width="500" fig-align="center"}
+
 -   **Áreas em amarelo**: Apresentam um alto grau de conectividade local, indicando que os elementos do ecossistema estão bem interligados nessa região. No entanto, essas áreas também exibem baixa heterogeneidade da paisagem, sugerindo que a variação topográfica da paisagem é limitada;
 
 -   **Áreas em azul**: Possuem alta heterogeneidade da paisagem, o que significa que há uma grande variedade de tipos de habitats ou características na paisagem. No entanto, a conectividade local é baixa, o que indica que os elementos do ecossistema podem estar isolados ou menos interligados;
