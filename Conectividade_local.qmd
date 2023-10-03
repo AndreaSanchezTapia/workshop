@@ -78,66 +78,6 @@ e controla o efeito da configuração espacial do cálculo de conectividade.
 
 Como é uma análise com uma demanda computacional alta, recortamos regiões de interesse em quadrados de 4.000 pixels para cada bioma e avaliamos os diversos cenários para melhor ajuste de parâmetros e tomadas de decisão, como utilizar `cumulative_current` ou `normalized_current` e utilizar a resistência ou a superfície gerada pelo _kernel_.
 
-<!-- Vamos manter essa implementação do Omniscape ou deixamos de fora? --> 
-
-## Implementação do Omniscape
-
-Como utilizar o Omniscape na linguagem Julia:
-
-## 1 - Instalar Julia
-Disponível em: https://julialang.org/downloads/
-Acessado em 18/08/2022
-
-## 2 - Abrir um terminal e navegar até o diretório onde se encontra o arquivo de resistência
-(mesmo diretório de onde se encontrará o arquivo de parâmetros .ini)
-Isso pode ser feito através do comando cd (exemplo abaixo)
-$cd C:/geo/omniscape
-
-## 3 - Abrir Julia através de um terminal
-Podem-se utilizar várias threads para paralelizar os dados.
-
-Caso queira utilizar todas as threads disponíveis, utilizar o comando abaixo no terminal:
-
-$julia --threads auto
-
-Alternativamente, caso queira utilizar um número específico de threads:
-
-$julia --threads X
-
-Onde X é o número de threads desejado. Esse valor pode ser determinado ao olhar as especifícações da CPU.
-
-## 4 - Instalar Omniscape
-Com Julia aberto, executar o seguinte comando:
-
-$using Pkg; Pkg.add("Omniscape")
-
-## 5 - Criar um arquivo com a extensão .ini (pode utilizar o bloco de notas e ao invés de salvar como .txt, salvar como .ini).
-O arquivo deve ser salvo na mesma pasta onde se encontra o arquivo de resistência.
-O arquivo .ini contém os parâmetros a serem utilizados pelo Omniscape, um exemplo segue abaixo:
-
----------------------------------------------------------
-parallelize=true
-block_size=21
-calc_normalized_current=true
-radius=210
-resistance_file=resistance.tif
-r_cutoff=inf
-run_omniscape(path=:String)
-write_raw_currmap=true
-parallel_batch_size=20
-source_from_resistance=true
-project_name=omniscape
----------------------------------------------------------
-
-## 6 - Executar o comando abaixo utilizando o arquivo .ini previamente criado como argumento:
-$run_omniscape("parametros.ini")
-
-## Observações Importantes
-
-O valor de parallel_batch_size varia muito o tempo de processamento e a demanda da CPU (central processing unit ou processador), valores muito baixos (como o sugerido pelos autores, de 10 ou 20) demandam muito recurso de processamento, enquanto a tarefa demora muito a ser finalizada. Nos testes realizados, percebemos uma grande oscilação da porcentagem de CPU entre 100 e 80% quando valores baixos de parallel_batch_size foram utilizados, em outros testes com valores mais altos o uso de CPU foi estabilizado (oscilando muito pouco) e tempo de processamento reduzido drasticamente. Não há valores ótimos para qualquer tipo de análise, visto que eles dependem do tamanho do raster e da configuração da máquina (especialmente CPU e memória RAM disponível).
-
-Vale ressaltar que a quantidade de threads utilizada para abrir o Julia e consequentemente rodar o Omniscape afeta diretamente o consumo de memória RAM, uma vez que quando mais threads, mais memória será demandada para o processamento.
-
 <!--
 
 Por fim, calculamos os valores de Z para cada pixel ($Z_{pixel}$) ao subtrair o valor da média ($\mu$) e dividindo o resultado pelo desvio padrão ($\sigma$) e multiplicando tudo por -1, como mostrado na fórmula a seguir:
