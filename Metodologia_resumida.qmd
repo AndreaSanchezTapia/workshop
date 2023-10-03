@@ -60,9 +60,9 @@ A conectividade local é a média ponderada das resistências dentro uma vizinha
 
 Antes de calcularmos a resiliência da paisagem, as variáveis variedade de formas de relevo, amplitude de elevação, índice de áreas úmidas, riqueza de solos e conectividade local são convertidas para valores de Z (*Z-scores*), assumindo as médias e desvios padrões dentro de janelas móveis de 200 pixels de raio. Isso garante a inclusão de condições físicas e ambientais distintas e permite capturar variações locais na composição da biota associada. Posteriomente, os valores de Z são combinados em heterogeneidade da paisagem.
 
-## Conectividade regional
+## Conectividade: análise de circuitos
 
-Calculamos a conectividade regional baseada em teoria de circuitos [@mcrae_isolation_2006] utilizando a implementação de Omniscape para Julia [@hall_circuitscape_2021; @landau_omniscapejl_2021].
+Calculamos a conectividade baseada em teoria de circuitos [@mcrae_isolation_2006] utilizando a implementação de Omniscape para Julia [@hall_circuitscape_2021; @landau_omniscapejl_2021].
 
 Como base para estas análises, utilizamos:
 
@@ -80,8 +80,6 @@ O _output_ do Omniscape são três arquivos de conectividade relacionados:
 + `cummulative_current` é a corrente acumulada, levando em conta a configuração espacial e os valores de resistência.
 + `normalized_current` equivale a $\frac{cumulative\_current}{flow\_current}$
 e controla o efeito da configuração espacial do cálculo de conectividade.
-
-Como é uma análise com uma demanda computacional alta, recortamos regiões de interesse em quadrados de 4.000 pixels para cada bioma e avaliamos os diversos cenários para melhor ajuste de parâmetros e tomadas de decisão, como utilizar `cumulative_current` ou `normalized_current` e utilizar a resistência ou a superfície gerada pelo _kernel_. 
 
 ## Resiliência da paisagem: combinando heterogeneidade da paisagem e conectividade local
 
