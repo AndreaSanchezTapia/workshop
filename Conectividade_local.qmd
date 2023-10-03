@@ -55,9 +55,9 @@ Depois de atribuídos os valores de resistência, aplicamos à superfície gerad
 
 ![Mapa final de classificação da resistência dos diferentes tipos de uso e cobertura da terra.](figs/C2_Resistencia.png){#fig-res width="400" fig-align="center"}
 
-## Conectividade regional
+## Conectividade: análise de circuitos
 
-Calculamos a conectividade regional baseada em teoria de circuitos [@mcrae_isolation_2006] utilizando a implementação de Omniscape para Julia [@hall_circuitscape_2021; @landau_omniscapejl_2021].
+Calculamos a conectividade baseada em teoria de circuitos [@mcrae_isolation_2006] utilizando a implementação de Omniscape para Julia [@hall_circuitscape_2021; @landau_omniscapejl_2021].
 
 Como base para estas análises, utilizamos:
 
