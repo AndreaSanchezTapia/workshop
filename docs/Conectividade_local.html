@@ -251,15 +251,17 @@ div.csl-indent {
 
 <section id="conectividade-local" class="level1">
 <h1>Conectividade local</h1>
-<section id="cálculos-de-resistência" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="cálculos-de-resistência">Cálculos de resistência</h2>
+<section id="bases-de-dados-utilizadas" class="level2">
+<h2 class="anchored" data-anchor-id="bases-de-dados-utilizadas">Bases de dados utilizadas</h2>
+<p>Os dados espaciais primários utilizados para calcular a superfície de resistência foram a camada de cobertura do solo gerada pelo MapBiomas <span class="citation" data-cites="mapbiomas_project_collection_2020">(<a href="#ref-mapbiomas_project_collection_2020" role="doc-biblioref">MapBiomas Project 2020</a>)</span>. A esta base foram incluídas as bases de estradas pavimentadas e não pavimentadas fornecida pelo IBGE (BCIM250, ano 2021) e a base de infraestrutura energética fornecidas por… <!-- Precisamos atualizar a explicação das bases usadas na camada de conectividade --></p>
+</section>
+<section id="cálculo-de-resistência" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="cálculo-de-resistência">Cálculo de resistência</h2>
 <p>Os valores de resistência são medidas relativas do grau de dificuldade de deslocamento dos organismos nos diferentes tipos de cobertura do solo. Esses valores foram atribuídos por bioma, seguindo a premissa de que quanto maior for a diferença estrutural entre um dado tipo de cobertura do solo e a vegetação original do bioma, maior será o valor de resistência da classe de cobertura do solo em questão.</p>
-<p>Os dados espaciais primários utilizados para calcular a superfície de resistência foram a camada de cobertura do solo gerada pelo MapBiomas <span class="citation" data-cites="mapbiomas_project_collection_2020">(<a href="#ref-mapbiomas_project_collection_2020" role="doc-biblioref">MapBiomas Project 2020</a>)</span> e a base de estradas pavimentadas e não pavimentadas fornecida pelo IBGE (BCIM250, ano 2021). Em um segundo momento, serão ainda inseridas bases de dados de infraestrutura energética, a serem incorporadas nessa camada. <!-- Precisamos atualizar a explicação das bases usadas na camada de conectividade --></p>
-<p>A superfície de cobertura do solo do MapBiomas foi reamostrada para gerar pixels com 90 m de tamanho, aproximadamente. Também convertemos o arquivo vetorial de estradas para o formato matricial, com pixels de tamanho aproximado de 90 m. Conjugamos, por álgebra de mapas, as bases matriciais do MapBiomas e de estradas, de tal maneira que todos os pixels da base do MapBiomas que se sobrepuseram a um pixel de estrada assumiram um novo valor correpondentes a um pixel de estrada pavimentada ou não pavimentada.</p>
-<p>Os pixels do mapa consolidado de cobertura do solo, já incluindo as estradas pavimentadas e não pavimentadas como novas classes, receberam, separadamente por bioma, valores de resistência que buscaram traduzir, comparativamente entre as classes, o grau de dificuldade de movimentação da biodiversidade numa dada classe de cobertura do solo. Os valores de resistência dos pixels de cada uma das classes foram atribuídos, por bioma, pela equipe do Projeto e podem ser vistos na <a href="#tbl-resistencia">Tabela&nbsp;1</a>.</p>
+<p>A superfície de cobertura do solo do MapBiomas foi reamostrada para gerar pixels com 90 m de tamanho, aproximadamente. Também convertemos o arquivo vetorial de estradas para o formato matricial, com pixels de tamanho aproximado de 90 m. Conjugamos, por álgebra de mapas, as bases matriciais do MapBiomas e de estradas, de tal maneira que todos os pixels da base do MapBiomas que se sobrepuseram a um pixel de estrada assumiram um novo valor correpondentes a um pixel de estrada pavimentada ou não pavimentada. <!-- Necessário complementar a explicação da infraestrutura de energia --> Os pixels do mapa consolidado de cobertura do solo, já incluindo as estradas pavimentadas e não pavimentadas como novas classes, receberam, separadamente por bioma, valores de resistência que buscaram traduzir, comparativamente entre as classes, o grau de dificuldade de movimentação da biodiversidade numa dada classe de cobertura do solo. Os valores de resistência dos pixels de cada uma das classes foram atribuídos, por bioma, pela equipe do projeto e podem ser vistos na <a href="#tbl-resistencia">Tabela&nbsp;1</a>. <!-- Falta incluir a explicação sobre a análise da largura dos rios --></p>
 <div id="tbl-resistencia" class="anchored">
 <table class="table">
-<caption>Tabela&nbsp;1: Valores de resistência para cada tipo de cobertura por bioma</caption>
+<caption>Tabela&nbsp;1: Valores de resistência para cada tipo de cobertura por bioma.</caption>
 <colgroup>
 <col style="width: 18%">
 <col style="width: 13%">
@@ -545,13 +547,18 @@ div.csl-indent {
 </tbody>
 </table>
 </div>
-<p>Depois de atribuídos os valores de resistência, aplicamos à superfície gerada a função <em>kernel</em> de decaimento linear. Esta análise considerou, numa janela móvel de 23 pixels (~2070 m), o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior que os mais distantes. Desta maneira, a função <em>kernel</em> nos auxilia na tarefa de encontrar os melhores caminhos de deslocamento na paisagem, ou seja, aqueles caminhos que oferecem menor resistência.</p>
-<div class="quarto-figure quarto-figure-center">
+<!-- Precisa atualizar a tabela e também incluir o fluxograma da análise que Marina gerou -->
+</section>
+<section id="aplicação-do-filtro-kernel" class="level2">
+<h2 class="anchored" data-anchor-id="aplicação-do-filtro-kernel">Aplicação do filtro kernel</h2>
+<p>Depois de atribuídos os valores de resistência, aplicamos à superfície gerada a função <em>kernel</em> de decaimento linear. Esta análise considerou, numa janela móvel de 23 pixels (~2070 m), o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior que os mais distantes. Desta maneira, a função <em>kernel</em> nos auxilia na tarefa de encontrar os melhores caminhos de deslocamento na paisagem, ou seja, aqueles caminhos que oferecem menor resistência (<a href="#fig-res">Figura&nbsp;1</a>).</p>
+<div id="fig-res" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/C2_Resistencia.png" class="img-fluid figure-img" width="400"></p>
-<figcaption class="figure-caption">Mapa final de classificação da Resistência dos diferentes usos da terra do MapBiomas.</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;1: Mapa final de classificação da resistência dos diferentes tipos de uso e cobertura da terra.</figcaption>
 </figure>
 </div>
+<!-- Falta incluir a descrição da análise omniscape -->
 <!--
 
 Por fim, calculamos os valores de Z para cada pixel ($Z_{pixel}$) ao subtrair o valor da média ($\mu$) e dividindo o resultado pelo desvio padrão ($\sigma$) e multiplicando tudo por -1, como mostrado na fórmula a seguir:

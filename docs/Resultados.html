@@ -235,22 +235,64 @@ ul.task-list li input[type="checkbox"] {
 <p>Os mapas das camadas principais e das variáveis intermediárias da análise podem ser visualizados no seguinte link: <a href="https://projeto-resiliencia-tnc.hub.arcgis.com/?share=link">https://projeto-resiliencia-tnc.hub.arcgis.com/?share=link</a>.</p>
 <p><strong>Atenção: o projeto ainda está em andamento, então os resultados apresentados são ainda versões preliminares do estudo.</strong></p>
 <p>Abaixo são descritos resultados principais por bioma e alguns padrões gerais obtidos para cada uma das camadas.</p>
-<section id="diversidade-da-paisagem" class="level2">
-<h2 class="anchored" data-anchor-id="diversidade-da-paisagem">Diversidade da paisagem</h2>
 <!---
 [explorar resultados; discutir resultados quebrando pelas variáveis, para saber qual atributo está influenciando mais na diversidade da paisagem]
 -->
+<section id="diversidade-da-paisagem" class="level2">
+<h2 class="anchored" data-anchor-id="diversidade-da-paisagem">Diversidade da paisagem</h2>
+<div id="fig-hetero-original" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/heterogeneity_original.png" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figura&nbsp;1: Heterogeneidade da paisagem, criada a partir da média pomderada dos Z-scores de variedade de formas de relevo, amplitude altitudinal, índice de áreas úmidas e diversidade do solo.</figcaption>
+</figure>
+</div>
+<div id="fig-hetero" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/Heterogeneity_bivariate.png" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figura&nbsp;2: Classificação da Heterogeneidade da Paisagem de acordo com as divisões do histograma de densidade em quantis de 25%</figcaption>
+</figure>
+</div>
+<section id="amazônia" class="level3">
+<h3 class="anchored" data-anchor-id="amazônia">Amazônia</h3>
+<p><img src="figs/results_bybiome/Amazonia_heterogeneidade.png" id="fig_biomas_hetero_AM" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Heterogeneidade da Paisagem para a Amazônia"> ### Caatinga <img src="figs/results_bybiome/Caatinga_heterogeneidade.png" id="fig_biomas_hetero_CA" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Heterogeneidade da Paisagem para a Caatinga."> ### Cerrado <img src="figs/results_bybiome/Cerrado_heterogeneidade.png" id="fig_biomas_hetero_CE" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Heterogeneidade da Paisagem para o Cerrado."> ### Mata Atlântica <img src="figs/results_bybiome/Atlantica_heterogeneidade.png" id="fig_biomas_hetero_AT" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Heterogeneidade da Paisagem para o Mata Atlântica."> ### Pampa <img src="figs/results_bybiome/Pampa_heterogeneidade.png" id="fig_biomas_hetero_PM" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Heterogeneidade da Paisagem para o Pampa."> ### Pantanal <img src="figs/results_bybiome/Pantanal_heterogeneidade.png" id="fig_biomas_hetero_PA" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Heterogeneidade da Paisagem para o Pantanal."></p>
+</section>
 </section>
 <section id="conectividade-da-paisagem" class="level2">
 <h2 class="anchored" data-anchor-id="conectividade-da-paisagem">Conectividade da paisagem</h2>
+<div id="fig-conect-original" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/C2_Resistencia.png" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figura&nbsp;3: Resistência da paisagem, baseada na dificuldade de locomoção dos diferentes usos da terra.</figcaption>
+</figure>
+</div>
+<div id="fig-conect" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/Connectedness_bivariate.png" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figura&nbsp;4: Classificação da Conectividade Local de acordo com as divisões do histograma de densidade em quantis de 25%</figcaption>
+</figure>
+</div>
+<section id="amazônia-1" class="level3">
+<h3 class="anchored" data-anchor-id="amazônia-1">Amazônia</h3>
+<p><img src="figs/results_bybiome/Amazonia_resistencia.png" id="fig_biomas_conect_AM" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Conectividade Local para a Amazônia"> ### Caatinga <img src="figs/results_bybiome/Caatinga_resistencia.png" id="fig_biomas_conect_CA" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Conectividade Local para a Caatinga."> ### Cerrado <img src="figs/results_bybiome/Cerrado_resistencia.png" id="fig_biomas_conect_CE" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Conectividade Local para o Cerrado."> ### Mata Atlântica <img src="figs/results_bybiome/Atlantica_resistencia.png" id="fig_biomas_conect_AT" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Conectividade Local para o Mata Atlântica."> ### Pampa <img src="figs/results_bybiome/Pampa_resistencia.png" id="fig_biomas_conect_PM" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Conectividade Local para o Pampa."> ### Pantanal <img src="figs/results_bybiome/Pantanal_resistencia.png" id="fig_biomas_conect_PA" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Conectividade Local para o Pantanal."></p>
+</section>
 </section>
 <section id="resiliência-da-paisagem" class="level2">
 <h2 class="anchored" data-anchor-id="resiliência-da-paisagem">Resiliência da paisagem</h2>
+<div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/Resilience_bivariate.png" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figura&nbsp;5: Mapa final de Resiliência da Paisagem com a sobreposição dos mapas de heterogeneidade e conectividade classificados por quantis de 25%.</figcaption>
+</figure>
+</div>
 <!---
 [padrões gerais para cada bioma; incluir recorte de cada bioma e breve descrição]
 -->
+<section id="amazônia-2" class="level3">
+<h3 class="anchored" data-anchor-id="amazônia-2">Amazônia</h3>
+<p><img src="figs/results_bybiome/Amazonia_resiliencia.png" id="fig_biomas_resilience_AM" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Resiliência da Paisagem para a Amazônia"> ### Caatinga <img src="figs/results_bybiome/Caatinga_resiliencia.png" id="fig_biomas_resilience_CA" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Resiliência da Paisagem para a Caatinga."> ### Cerrado <img src="figs/results_bybiome/Cerrado_resiliencia.png" id="fig_biomas_resilience_CE" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Resiliência da Paisagem para o Cerrado."> ### Mata Atlântica <img src="figs/results_bybiome/Atlantica_resiliencia.png" id="fig_biomas_resilience_AT" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Resiliência da Paisagem para o Mata Atlântica."> ### Pampa <img src="figs/results_bybiome/Pampa_resiliencia.png" id="fig_biomas_resilience_PM" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Resiliência da Paisagem para o Pampa."> ### Pantanal <img src="figs/results_bybiome/Pantanal_resiliencia.png" id="fig_biomas_resilience_PA" class="img-fluid" data-fig-align="center" width="600" alt="Recorte da camada de Resiliência da Paisagem para o Pantanal."></p>
 
 
+</section>
 </section>
 </section>
 

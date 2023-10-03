@@ -11,16 +11,15 @@ O objetivo principal do projeto é **mapear sítios resilientes**, que permitam 
 O termo *áreas resilientes*, neste contexto, indica locais com alta diversidade microclimática e conectividade, condições necessárias para que espécies e processos ecológicos persistam às mudanças climáticas regionais.
 
 ## Quais as premissas básicas desse estudo?
-//
-![Figura 1 - Modelo conceitual do projeto](figs/modelo_conceitual.png){width="400" fig-align="center"}
+
 
 A metodologia desenvolvida segue três premissas básicas:
 
-1.  A heterogeneidade da paisagem resultante da combinação de características do meio físico, como feições topográficas, altitude, disponibilidade hídrica e tipo de solo, e que promovem variabilidade microclimática, que contribui para a diversidade genética e fenotípica de espécies.
+1.  A **heterogeneidade da paisagem** resultante da combinação de características do meio físico, como feições topográficas, altitude, disponibilidade hídrica e tipo de solo, e que promovem variabilidade microclimática, que contribui para a diversidade genética e fenotípica de espécies.
 
-2.  A conectividade da paisagem é influenciada pela resistência que os tipos de uso e cobertura do solo oferecem para a movimentação das espécies na paisagem, considerando as relações de vizinhança estabelecidas em uma escala local.
+2.  A **conectividade local** é influenciada pela resistência que os tipos de uso e cobertura do solo oferecem para a movimentação das espécies na paisagem, considerando as relações de vizinhança estabelecidas em uma escala local.
 
-3.  A resiliência da paisagem a mudanças do clima é influenciada pela heterogeneidade de habitats disponíveis para as espécies, que geram condições diversificadas de microclimas aos organismos, e pela conectividade desses habitats na paisagem, que permitem a movimentação desses organismos para áreas mais adequadas.
+3.  A **resiliência da paisagem** a mudanças do clima é influenciada pela heterogeneidade de habitats disponíveis para as espécies, que geram condições diversificadas de microclimas aos organismos, e pela conectividade desses habitats na paisagem, que permitem a movimentação desses organismos para áreas mais adequadas.
 
 ## Qual metodologia estamos utilizando?
 
