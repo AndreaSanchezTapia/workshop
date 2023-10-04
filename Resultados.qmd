@@ -36,27 +36,27 @@ Abaixo são descritos resultados principais por bioma e alguns padrões gerais o
 
 ### Amazônia
 
-![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Amazônia](figs/results_bybiome/Amazonia_resultados.png){#fig_biomas_hetero_AM width="600" fig-align="center"}
+![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Amazônia](figs/results_bybiome/Amazonia_resultados.png){#fig_biomas_AM width="600" fig-align="center"}
 
 ### Caatinga
 
-![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Caatinga](figs/results_bybiome/Caatinga_resultados.png){#fig_biomas_hetero_CA width="600" fig-align="center"}
+![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Caatinga](figs/results_bybiome/Caatinga_resultados.png){#fig_biomas_CA width="600" fig-align="center"}
 
 ### Cerrado
 
-![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para o Cerrado](figs/results_bybiome/Cerrado_resultados.png){#fig_biomas_hetero_CE width="600" fig-align="center"}
+![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para o Cerrado](figs/results_bybiome/Cerrado_resultados.png){#fig_biomas_CE width="600" fig-align="center"}
 
 ### Mata Atlântica
 
-![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Mata Atlântica.](figs/results_bybiome/Atlantica_resultados.png){#fig_biomas_hetero_AT width="600" fig-align="center"}
+![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Mata Atlântica.](figs/results_bybiome/Atlantic_resultados.png){#fig_biomas_AT width="600" fig-align="center"}
 
 ### Pampa
 
-![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Pampa](figs/results_bybiome/Pampa_resultados.png){#fig_biomas_hetero_PM width="600" fig-align="center"}
+![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Pampa](figs/results_bybiome/Pampa_resultados.png){#fig_biomas_PM width="600" fig-align="center"}
 
 ### Pantanal
 
-![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Pantanal.](figs/results_bybiome/Pantanal_resultados.png){#fig_biomas_hetero_PA width="600" fig-align="center"}
+![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Pantanal.](figs/results_bybiome/Pantanal_resultados.png){#fig_biomas_PA width="600" fig-align="center"}
 
 
 
