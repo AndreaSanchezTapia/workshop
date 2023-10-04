@@ -82,6 +82,8 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -307,6 +309,24 @@ div.csl-indent {
 <h2 class="anchored" data-anchor-id="padronização-dos-dados-z-scores">Padronização dos dados (<em>Z</em>-<em>scores</em>)</h2>
 <p>Antes de calcularmos a resiliência da paisagem, as variáveis variedade de formas de relevo, amplitude de elevação, índice de áreas úmidas, riqueza de solos e conectividade local são convertidas para valores de Z (<em>Z-scores</em>), assumindo as médias e desvios padrões dentro de janelas móveis de 200 pixels de raio. Isso garante a inclusão de condições físicas e ambientais distintas e permite capturar variações locais na composição da biota associada. Posteriomente, os valores de Z são combinados em heterogeneidade da paisagem.</p>
 </section>
+<section id="conectividade-análise-de-circuitos" class="level2">
+<h2 class="anchored" data-anchor-id="conectividade-análise-de-circuitos">Conectividade: análise de circuitos</h2>
+<p>Calculamos a conectividade baseada em teoria de circuitos <span class="citation" data-cites="mcrae_isolation_2006">(<a href="#ref-mcrae_isolation_2006" role="doc-biblioref">McRae 2006</a>)</span> utilizando a implementação de Omniscape para Julia <span class="citation" data-cites="hall_circuitscape_2021 landau_omniscapejl_2021">(<a href="#ref-landau_omniscapejl_2021" role="doc-biblioref">Landau et al. 2021</a>, <a href="#ref-hall_circuitscape_2021" role="doc-biblioref">Hall et al. 2021</a>)</span>.</p>
+<p>Como base para estas análises, utilizamos:</p>
+<ul>
+<li>o raster de resistência utilizado como base para a conectividade local;</li>
+<li>um raio da área de interesse de 210 pixels (~19km);</li>
+<li>agrupamentos de 21 pixels de interesse para a janela móvel (~1.9km).</li>
+</ul>
+<p>O raio da área de interesse é o raio de busca ou tamanho da janela móvel circular. O tamanho da janela foi equivalente ao utilizado no cálculo dos Z scores (200 pixels), o valor é levemente diferente devido à limitação do tamanho do bloco central da janela ser um número ímpar de pixels (agrupamento de 21) e segundo <span class="citation" data-cites="landau_omniscapejl_2021">Landau et al. (<a href="#ref-landau_omniscapejl_2021" role="doc-biblioref">2021</a>)</span> esse valor não deve ultrapassar 10% do raio.</p>
+<p>Consideramos o uso de <em>kernel</em> sobre a superfície de resistência como entrada para o Omniscape, entretanto, os resultados da análise com <em>kernel</em> diluíram muito corredores e passagens menores, por conta da natureza de suavização da superfície de resistência pelo <em>kernel</em>. Dessa maneira, ao utilizar a resistência sem <em>kernel</em> como entrada, preservamos estruturas espaciais menores, mas importantes para a conectividade da paisagem.</p>
+<p>O <em>output</em> do Omniscape são três arquivos de conectividade relacionados:</p>
+<ul>
+<li><code>flow_current</code> é o fluxo que aconteceria sem levar em conta a camada de resistência. Ele leva em conta a configuração espacial da paisagem (estreitos, barras) e dos pixels de baixa resistência de origem. Nem todo pixel é <em>source</em> pixel, mas a corrente que entra em cada pixel de baixa resistência entra sem resistência. Flow current é usado como um “modelo nulo” de conectividade.</li>
+<li><code>cummulative_current</code> é a corrente acumulada, levando em conta a configuração espacial e os valores de resistência.</li>
+<li><code>normalized_current</code> equivale a <span class="math inline">\(\frac{cumulative\_current}{flow\_current}\)</span> e controla o efeito da configuração espacial do cálculo de conectividade.</li>
+</ul>
+</section>
 <section id="resiliência-da-paisagem-combinando-heterogeneidade-da-paisagem-e-conectividade-local" class="level2">
 <h2 class="anchored" data-anchor-id="resiliência-da-paisagem-combinando-heterogeneidade-da-paisagem-e-conectividade-local">Resiliência da paisagem: combinando heterogeneidade da paisagem e conectividade local</h2>
 <p>Finalmente, a <strong>resiliência da paisagem</strong> é calculada pela sobreposição dos mapas de heterogeneidade da paisagem e conectividade local baseada no histograma de distribuição dos valores dessas métricas. Dessa forma, podemos criar um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem (<span class="citation" data-cites="fig_resilience">(<a href="#ref-fig_resilience" role="doc-biblioref"><strong>fig_resilience?</strong></a>)</span>). Com base na escala de cor que escolhemos e destacando regiões que merecem atenção especial em termos de conservação e manejo, são identificadas áreas onde a heterogeneidade da paisagem e a conectividade local são mais importantes para a resiliência da paisagem.</p>
@@ -316,16 +336,6 @@ div.csl-indent {
 <figcaption class="figure-caption">Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local.</figcaption>
 </figure>
 </div>
-<!--
-## Conectividade regional 
-
-A conectividade regional é uma análise complementar que busca encontrar áreas conectadas entre biomas, 
-
-A conectividade baseada em teoria de circuitos utiliza um marco conceitual originário da teoria de circuitos (elétricos) e consegue propor diferentes caminhos de menor resistência por onde a "corrente" (o fluxo entre áreas) pode passar. 
-Esta abordagem detecta áreas onde esta corrente se veria __concentrada__ pela configuração espacial da paisagem (por exemplo, através de uma barra ou um estreito) ou a presença de áreas de alta resistência, e áreas onde o fluxo seria __difuso__ (por exemplo, em áreas contíguas de baixa resistência, onde o fluxo pode acontecer em qualquer direção e com menor intensidade).
-
-Nesta abordagem, áreas com alta resistência--onde o fluxo seria impedido--devem ser diferenciadas das áreas de baixa resistência onde o fluxo é baixo por ter se dispersado. 
--->
 
 
 
@@ -344,6 +354,15 @@ Anderson, M. G., M. Clark, e A. O. Sheldon. 2016a. <a href="https://doi.org/10.1
 </div>
 <div id="ref-anderson_resilient_2016-1" class="csl-entry" role="listitem">
 Anderson, M., A. Barnett, M. Clark, J. Prince, S. A. Olivero, e B. Vickery. 2016b. Resilient and <span>Connected</span> <span>Landscapes</span> for <span>Terrestrial</span> <span>Conservation</span>.
+</div>
+<div id="ref-hall_circuitscape_2021" class="csl-entry" role="listitem">
+Hall, K. R., R. Anantharaman, V. A. Landau, M. Clark, B. G. Dickson, A. Jones, J. Platt, A. Edelman, e V. B. Shah. 2021. <a href="https://doi.org/10.3390/land10030301">Circuitscape in <span>Julia</span>: <span>Empowering</span> <span>Dynamic</span> <span>Approaches</span> to <span>Connectivity</span> <span>Assessment</span></a>. Land 10:301.
+</div>
+<div id="ref-landau_omniscapejl_2021" class="csl-entry" role="listitem">
+Landau, V., V. Shah, R. Anantharaman, e K. Hall. 2021. <a href="https://doi.org/10.21105/joss.02829">Omniscape.jl: <span>Software</span> to compute omnidirectional landscape connectivity</a>. Journal of Open Source Software 6:2829.
+</div>
+<div id="ref-mcrae_isolation_2006" class="csl-entry" role="listitem">
+McRae, B. H. 2006. Isolation by resistance. Evolution 60:1551–1561.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

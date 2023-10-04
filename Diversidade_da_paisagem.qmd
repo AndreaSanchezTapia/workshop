@@ -235,41 +235,41 @@ A heterogeneidade da paisagem é calculada seguindo uma hierarquia nas variávei
 Na etapa 1, ela é definida inicialmente como o valor de Z da variedade de formas de relevo.
 Na etapa 2, em locais onde o valor de Z para amplitude altitudinal é maior que aquele obtido para a variedade de formas de relevo, a heterogeneidade da paisagem é calculada como a média ponderada das duas variáveis, dando peso 2 para variedade de formas de relevo.
 $$
-Z_{heterogeneidade\, da\,paisagem}= \frac{\left(Z_{variedade\,de\,landforms}\times 2 \right)+Z_{amplitude\,altitudinal}}{3}
+Z_{heterogeneidade\, da\,paisagem}= \frac{\left(Z_{variedade\,de\,formas\,de\,relevo}\times 2 \right)+Z_{amplitude\,altitudinal}}{3}
 $$
 <!-- Importante padronizar os termos em português: formas de relevo, riqueza de solos e valor de Z. Revisei o texto geral, mas precisa editar as figuras-->
 Na etapa 3, em locais onde o índice áreas úmidas é maior que a heterogeneidade da paisagem calculada na etapa 2, calculamos a média ponderada da heterogeneidade da paisagem e índice de áreas úmidas, atribuindo peso dois para as áreas úmidas. O peso duplo das áreas úmidas é justificado por esses locais estarem em áreas planas com baixa variabilidade topográfica, sendo as áreas úmidas locais com alta disponibilidade hídrica que determinam a variabilidade microclimática. 
 
 $$
-Z_{heterogeneidade\, da\,paisagem}= \frac{Z_{variedade\,de\,landforms}+Z_{amplitude\,altitudinal} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{4}
+Z_{heterogeneidade\, da\,paisagem}= \frac{Z_{variedade\,de\,formas\,de\,relevo}+Z_{amplitude\,altitudinal} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{4}
 $$
 
 Se, na etapa 2, a amplitude altitudinal não foi importante para a célula, a heterogeneidade da etapa 3 é calculada conforme segue:
 
 $$
-Z_{heterogeneidade\, da\,paisagem}= \frac{Z_{variedade\,de\,landforms} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{3}
+Z_{heterogeneidade\, da\,paisagem}= \frac{Z_{variedade\,de\,formas\,de\,relevo\} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{3}
 $$
 
 Na etapa 4, nos locais onde o valor de Z da riqueza de solos é maior que a heterogeneidade da paisagem calculada na etapa 3, os valores são substituídos pela média ponderada das variáveis naquela localidade, com peso 2 para variedade de formas de relevo.
 
 $$
-Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2)+Z_{amplitude\,altitudinal}+Z_{índice\,de\,áreas\,úmidas}+Z_{diversidade\,de\,solos}}{5}
+Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,formas\,de\,relevo\}\times 2)+Z_{amplitude\,altitudinal}+Z_{índice\,de\,áreas\,úmidas}+Z_{riqueza\,de\,solos}}{5}
 $$
 
 Se, na etapa 3, nas células onde o índice de áreas úmidas não foi importante, a heterogeneidade da paisagem é calculada conforme segue:
 
 $$
-Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2)+Z_{amplitude\,altitudinal}+Z_{diversidade\,de\,solos}}{4}
+Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,formas\,de\,relevo}\times 2)+Z_{amplitude\,altitudinal}+Z_{riqueza\,de\,solos}}{4}
 $$
 
 Da mesma forma, em locais onde a amplitude altitudinal não foi importante, a heterogeneidade da paisagem é calculada conforme segue:
 
 $$
-Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2)+Z_{índice\,de\,áreas\,úmidas}+Z_{diversidade\,de\,solos}}{4}
+Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,formas\,de\,relevo}\times 2)+Z_{índice\,de\,áreas\,úmidas}+Z_{riqueza\,de\,solos}}{4}
 $$
 
 Por fim, em locais onde apenas a variedade de formas de relevo foram importantes até aqui, a heterogeneidade da paisagem é calculada conforme segue:
 
 $$
-Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2) + Z_{diversidade\,de\,solos}}{3}
+Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,formas\,de\,relevo}\times 2) + Z_{riqueza\,de\,solos}}{3}
 $$
