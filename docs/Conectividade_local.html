@@ -556,8 +556,8 @@ div.csl-indent {
 <p>Depois de atribuídos os valores de resistência, aplicamos à superfície gerada a função <em>kernel</em> de decaimento linear. Esta análise considerou, numa janela móvel de 23 pixels (~2070 m), o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior que os mais distantes. Desta maneira, a função <em>kernel</em> nos auxilia na tarefa de encontrar os melhores caminhos de deslocamento na paisagem, ou seja, aqueles caminhos que oferecem menor resistência (<a href="#fig-res">Figura&nbsp;1</a>).</p>
 <div id="fig-res" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="figs/C2_Resistencia.png" class="img-fluid figure-img" width="400"></p>
-<figcaption class="figure-caption">Figura&nbsp;1: Mapa final de classificação da resistência dos diferentes tipos de uso e cobertura da terra.</figcaption>
+<p><img src="figs/C2_Resistencia.png" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figura&nbsp;1: Mapa final de classificação da resistência à movimentação de organismos dos diferentes tipos de uso e cobertura da terra.</figcaption>
 </figure>
 </div>
 </section>
@@ -570,7 +570,7 @@ div.csl-indent {
 <li>um raio da área de interesse de 210 pixels (~19km);</li>
 <li>agrupamentos de 21 pixels de interesse para a janela móvel (~1.9km).</li>
 </ul>
-<p>O raio da área de interesse é o raio de busca ou tamanho da janela móvel circular. O tamanho da janela foi equivalente ao utilizado no cálculo dos Z scores (200 pixels), o valor é levemente diferente devido à limitação do tamanho do bloco central da janela ser um número ímpar de pixels (agrupamento de 21) e segundo <span class="citation" data-cites="landau_omniscapejl_2021">Landau et al. (<a href="#ref-landau_omniscapejl_2021" role="doc-biblioref">2021</a>)</span> esse valor não deve ultrapassar 10% do raio.</p>
+<p>O raio da área de interesse é o raio de busca ou tamanho da janela móvel circular. O tamanho da janela foi equivalente ao utilizado no cálculo dos valores de Z (200 pixels), o valor é levemente diferente devido à limitação do tamanho do bloco central da janela ser um número ímpar de pixels (agrupamento de 21) e segundo <span class="citation" data-cites="landau_omniscapejl_2021">Landau et al. (<a href="#ref-landau_omniscapejl_2021" role="doc-biblioref">2021</a>)</span> esse valor não deve ultrapassar 10% do raio.</p>
 <p>Consideramos o uso de <em>kernel</em> sobre a superfície de resistência como entrada para o Omniscape, entretanto, os resultados da análise com <em>kernel</em> diluíram muito corredores e passagens menores, por conta da natureza de suavização da superfície de resistência pelo <em>kernel</em>. Dessa maneira, ao utilizar a resistência sem <em>kernel</em> como entrada, preservamos estruturas espaciais menores, mas importantes para a conectividade da paisagem.</p>
 <p>O <em>output</em> do Omniscape são três arquivos de conectividade relacionados:</p>
 <ul>

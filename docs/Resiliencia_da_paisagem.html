@@ -232,40 +232,36 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="resiliência-da-paisagem" class="level1">
 <h1>Resiliência da paisagem</h1>
-<p>A <strong>resiliência da paisagem</strong> se refere à capacidade de um determinado local em manter a diversidade de espécies e as funções ecossistêmicas mesmo diante das pressões provocadas pelas mudanças climáticas. Para calcular essa resiliência, utilizamos as camadas padronizadas de heterogeneidade da paisagem (<a href="#fig-hetero">Figura&nbsp;1</a>) e conectividade local (<a href="#fig-conect">Figura&nbsp;2</a>) descritas anteriormente. A partir delas, classificamos as imagens em quatro quantis, baseados no histograma de distribuição dos valores dessas métricas</p>
-<div id="fig-hetero" class="quarto-figure quarto-figure-center anchored">
+<p>A <strong>resiliência da paisagem</strong> se refere à capacidade de um determinado local em manter a diversidade de espécies e as funções ecossistêmicas mesmo diante das pressões provocadas pelas mudanças climáticas. Para calcular essa resiliência, utilizamos as camadas padronizadas de heterogeneidade da paisagem e conectividade local (<a href="#fig-classes">Figura&nbsp;1</a>) descritas anteriormente. A partir delas, classificamos as imagens em quatro quantis, baseados no histograma de distribuição dos valores dessas métricas</p>
+<div id="fig-classes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="figs/Heterogeneity_bivariate.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;1: Classificação da heterogeneidade da paisagem de acordo com as divisões do histograma de densidade em quantis de 25%.</figcaption>
+<p><img src="figs/classes_het_con.png" class="img-fluid figure-img" width="700"></p>
+<figcaption class="figure-caption">Figura&nbsp;1: Classificação do histograma de valores dos pixels em quantis de 25% de: A) <strong>heterogeneidade da paisagem</strong> e B)<strong>Conectividade local</strong>..</figcaption>
 </figure>
 </div>
-<div id="fig-conect" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/Connectedness_bivariate.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;2: Classificação da conectividade local de acordo com as divisões do histograma de densidade em quantis de 25%.</figcaption>
-</figure>
-</div>
-<!-- Sugestão de colocar essas duas figuras lado a lado com uma legenda única indicando (a) e (b) -->
-<p>Com as duas imagens classificadas por quantis, geramos um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem, baseado na escala de cor escolhida (<span class="citation" data-cites="res_classes">(<a href="#ref-res_classes" role="doc-biblioref"><strong>res_classes?</strong></a>)</span>).</p>
-<div id="res_classes" class="quarto-figure quarto-figure-center anchored">
+<p>Com a sobreposição das duas imagens classificadas por quantis, geramos um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem, baseado na escala de cor escolhida (<span class="citation" data-cites="res-classes">(<a href="#ref-res-classes" role="doc-biblioref"><strong>res-classes?</strong></a>)</span>).</p>
+<div id="res-classes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/resilience_classes.png" class="img-fluid figure-img" width="500"></p>
 <figcaption class="figure-caption">Definição das classes de resiliência da paisagem, baseada no histograma de distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local.</figcaption>
 </figure>
 </div>
 <!-- Faltou numerar a figura; algumas figuras em outras abas também estão sem numeração; no de conectvididade lembro de não ter número -->
+<!-- 
+Não sei porque algumas figuras o documento reconhece direto e outras não. Resolvi em outras partes do texto mas ainda aparecem em alguns lugares.
+-->
 <p>O mapa bivariado da <strong>resiliência da paisagem</strong> (<a href="#fig-resilience">Figura&nbsp;3</a>) destaca as regiões que merecem atenção especial em termos de conservação e manejo, identificando áreas onde a heterogeneidade da paisagem e a conectividade local são mais importantes para determinar a resiliência da paisagem.</p>
 <div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/Resilience_bivariate.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;3: Mapa final de resiliência da paisagem com a sobreposição dos mapas de heterogeneidade da paisagem e conectividade local.</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;2: Mapa final de resiliência da paisagem com a sobreposição dos mapas de heterogeneidade da paisagem e conectividade local.</figcaption>
 </figure>
 </div>
-<p>Assim, no mapa bivariado da resiliência da paisagem, podemos identificar diferentes áreas de interesse (<span class="citation" data-cites="fig_resilience">(<a href="#ref-fig_resilience" role="doc-biblioref"><strong>fig_resilience?</strong></a>)</span>):</p>
-<div id="fig_resilience" class="quarto-figure quarto-figure-center anchored">
+<p>Assim, no mapa bivariado da resiliência da paisagem, podemos identificar diferentes áreas de interesse (<a href="#fig-resilience">Figura&nbsp;3</a>):</p>
+<div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/resilience_def.png" class="img-fluid figure-img" width="500"></p>
-<figcaption class="figure-caption">Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local.</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;3: Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local.</figcaption>
 </figure>
 </div>
 <ul>

@@ -16,7 +16,7 @@ A conectividade local é baseada na resistência das matrizes da paisagem ao mov
 
 A metodologia desenvolvida (@fig-premissas) segue três premissas básicas :
 
-![Diagrama da metodologia, premissas e escopo do projeto.](figs/Diagrama_metodologia.png){#fig-premissas width="500" fig-align="center"}
+![Diagrama da metodologia, premissas e escopo do projeto.](figs/Diagrama_metodologia.png){#fig-premissas fig-align="center"}
 
 1. a diversidade de espécies é correlacionada com a heterogeneidade da paisagem (geodiversidade)
 2. em um cenário de mudança climática, espécies se beneficiam de microclimas locais para se manterem na paisagem
