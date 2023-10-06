@@ -1,7 +1,7 @@
-# Modelo conceitual e premissas
+# Premissas
 
 **Premissa #1**
-A diversidade da paisagem é determinada pela heterogeneidade de habitats, variáveis condicionadas por características do meio físico, como feições topográficas, altitude, disponibilidade hídrica e tipo de solo, e que promovem variabilidade microclimática, influenciando diversidade genética e fenotípica de espécies.
+A heterogeneidade da paisagem é determinada pela heterogeneidade de habitats, variáveis condicionadas por características do meio físico, como feições topográficas, altitude, disponibilidade hídrica e tipo de solo, e que promovem variabilidade microclimática, influenciando diversidade genética e fenotípica de espécies.
 
 **Premissa #2**
 A conectividade da paisagem é determinada pela resistência que os tipos de uso e cobertura do solo oferecem para a movimentação das espécies na paisagem, considerando as relações de vizinhança estabelecidas em uma escala local.
