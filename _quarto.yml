@@ -12,7 +12,7 @@ project:
     - Modelo_conceitual_premissas.qmd
     - Metodologia_resumida.qmd
     - Codigos_bases_dados.qmd
-    - Diversidade_da_paisagem.qmd
+    - Heterogeneidade_da_paisagem.qmd
     - Conectividade_local.qmd
     - Resiliencia_da_paisagem.qmd
     - Resultados.qmd
@@ -45,7 +45,7 @@ website:
           - Modelo_conceitual_premissas.qmd
           - Metodologia_resumida.qmd
           - Codigos_bases_dados.qmd
-          - Diversidade_da_paisagem.qmd
+          - Heterogeneidade_da_paisagem.qmd
           - Conectividade_local.qmd
           - Resiliencia_da_paisagem.qmd
           - Resultados.qmd
