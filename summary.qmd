@@ -8,20 +8,22 @@ O objetivo principal do projeto é __mapear sítios resilientes às mudanças cl
 
 O termo _áreas resilientes_ indica locais que apresentam condições necessárias para que espécies e processos ecológicos persistam às mudanças climáticas regionais, definidos por sua alta diversidade microclimática, grau de conservação e conectividade. 
 
-A metodologia proposta para isso combina a diversidade da paisagem, um _proxy_ da variabilidade microclimática, com a conectividade local, identificando locais que forneçam condições microclimáticas para o enfrentamento às mudanças climáticas, cujas matrizes da paisagem sejam permeáveis à movimentação das espécies.
+A metodologia proposta para isso combina a heterogeneidade da paisagem, um _proxy_ da variabilidade microclimática, com a conectividade local, identificando locais que forneçam condições microclimáticas para o enfrentamento às mudanças climáticas, cujas matrizes da paisagem sejam permeáveis à movimentação das espécies.
 
-A diversidade da paisagem é baseada na geodiversidade (geomorfologia, geologia, pedologia e hidrologia) do terreno, composta pela variedade de _landforms_, amplitude altitudinal, densidade e quantidade de áreas úmidas e diversidade de solos.
+A heterogeneidade da paisagem é baseada na geodiversidade (geomorfologia, geologia, pedologia e hidrologia) do terreno, composta pela variedade de _landforms_, amplitude altitudinal, densidade e quantidade de áreas úmidas e diversidade de solos.
 
 A conectividade local é baseada na resistência das matrizes da paisagem ao movimento da biodiversidade, combinando uso do solo e infraestruturas de energia e transporte existentes (com maior ou menor grau de antropização).
 
-A metodologia desenvolvida segue três premissas básicas:
+A metodologia desenvolvida (@fig-premissas) segue três premissas básicas :
 
-1. a diversidade de espécies é correlacionada com a diversidade da paisagem (geodiversidade)
+![Diagrama da metodologia, premissas e escopo do projeto.](figs/Diagrama_metodologia.png){#fig-premissas fig-align="center"}
+
+1. a diversidade de espécies é correlacionada com a heterogeneidade da paisagem (geodiversidade)
 2. em um cenário de mudança climática, espécies se beneficiam de microclimas locais para se manterem na paisagem
 3. populações de espécies podem usar microclimas e acompanhar mudanças microclimáticas se as áreas adequadas forem permeáveis e bem conectadas.
 
 
-Essa análise foi proposta e validada para a América do Norte pela _The Nature Conservancy_ (TNC), complementando outras metodologias disponíveis na literatura, uma vez que ela foca nas propriedades do terreno para identificar áreas resilientes. 
+Essa análise foi proposta e validada para a América do Norte pela _The Nature Conservancy_ (TNC), complementando outras metodologias disponíveis na literatura, uma vez que ela foca nas propriedades do terreno para identificar áreas resilientes.
 
 A aplicação da metodologia da TNC para os biomas brasileiros é um passo importante na identificaçao de sítios resilientes em ambientes tropicais megadiversos. 
 
