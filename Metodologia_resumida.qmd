@@ -43,15 +43,10 @@ A combinação dos índices de variedade de formas de relevo, amplitude altitudi
 
 ## Conectividade local {#conectividade-local}
 
-A conectividade local representa o grau de permeabilidade da paisagem (ou reciprocamente o grau de resistência) em torno de cada célula avaliada. A partir de um mapa de uso e cobertura do solo, incluindo a presença de infraestruturas energéticas e de transporte, foram atribuídos pesos de resistência de movimento para cada categoria de uso do solo, nos quais áreas naturais apresentam o valor mínimo, e áreas com intervenção antrópica intensa (áreas urbanas), o valor máximo.
+A conectividade local é uma medida de facilitação ao deslocamento de organismos entre os elementos que compõem a paisagem (ou tipos de uso e cobertura do solo). A conectividade é maior quanto menor for a resistência que esses elementos oferecem ao deslocamento dos organismos, representando o grau de permeabilidade da paisagem (ou reciprocamente o grau de resistência) em torno de cada célula (ou pixel) avaliada.
+A partir do mapa de uso e cobertura do solo, incluindo a presença de infraestruturas energéticas e de transporte, foram atribuídos, para cada classe de uso e cobertura do solo, pesos de resistência ao movimento de organismos, de modo que áreas naturais apresentam o valor mínimo e áreas com intervenção antrópica intensa (áreas urbanas) o valor máximo.
 
-As categorias principais de componentes da paisagem foram definidas como:
-
--   áreas naturais (florestas, banhados, campos, etc.);
--   áreas agrícolas ou modificadas (incluindo áreas improdutivas não-naturais);
--   áreas urbanizadas (de baixa ou alta intensidade).
-
-A conectividade local é a média ponderada das resistências dentro uma vizinhança quadrada de aproximadamente 2070 m, tendo os pesos um decaimento linear pela distância da célula focal.
+Uma vez atribuídos pesos de resistência para cada classe de uso e cobertura do solo, a conectividade local foi estimada plea média ponderada das resistências dentro um raio de vizinhança de aproximadamente 2070 m, tendo os pesos um decaimento linear pela distância da célula focal.
 
 <!--Nesse contexto, a dispersão teórica de uma espécie (ou processo) a partir de uma célula focal é uma função dos valores de resistência das células vizinhas e suas distâncias com relação à célula focal, até uma distância máxima de 3 km. A nota de conectividade local para uma célula é igual à área de dispersão, levando em conta a resistência dividida pela área de dispersão teórica se não houvesse resistência. -->
 
