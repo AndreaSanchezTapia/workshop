@@ -1,7 +1,7 @@
-# Diversidade da paisagem
+# heterogeneidade da paisagem
 
-A diversidade da paisagem é uma métrica composta pelas médias de *Z-scores* da [__variedade de landforms__](#variedade-de-landforms), [__amplitude altitudinal__](#amplitude-altitudinal), [__índice de áreas úmidas__](#índice-de-áreas-úmidas) e [__diversidade de solo__](#diversidade-de-solo). A métrica é composta por uma média hieráquica das variáveis **(Figura)**. A seguir, descreveremos como cada variável que compõe a métrica é criada e como elas são combinadas para formar a diversidade da paisagem. 
-As análises de diversidade da paisagem foram realizadas no *Google Earth Engine* [@gorelick_google_2017] devido a demanda computacional, sua escalabilidade, a possibilidade de reprodução das análises.
+A heterogeneidade da paisagem é uma métrica composta pelas médias de *Z-scores* da [__variedade de landforms__](#variedade-de-landforms), [__amplitude altitudinal__](#amplitude-altitudinal), [__índice de áreas úmidas__](#índice-de-áreas-úmidas) e [__diversidade de solo__](#diversidade-de-solo). A métrica é composta por uma média hieráquica das variáveis **(Figura)**. A seguir, descreveremos como cada variável que compõe a métrica é criada e como elas são combinadas para formar a heterogeneidade da paisagem. 
+As análises de heterogeneidade da paisagem foram realizadas no *Google Earth Engine* [@gorelick_google_2017] devido a demanda computacional, sua escalabilidade, a possibilidade de reprodução das análises.
 
 ##### Base de dados  
 
@@ -206,15 +206,15 @@ $$
 Z_{índice\,de\,áreas\,úmidas} =\frac {{{(Z_{local}}{\times2)}} + {Z_{regional}} + {Z_{quantidade}}}{4}
 $$
 
-A tranformação de *Z-score* foi aplicada também para a **variedade de _landforms_**, **amplitude de elevação** e **diversidade de solos** para compormos a diversidade da paisagem.
+A tranformação de *Z-score* foi aplicada também para a **variedade de _landforms_**, **amplitude de elevação** e **diversidade de solos** para compormos a heterogeneidade da paisagem.
 
-#### Diversidade da paisagem {-}
+#### heterogeneidade da paisagem {-}
 
-A diversidade da paisagem foi calculada seguindo uma hierarquia nas variáveis. A diversidade da paisagem é definida como o *Z-score* da variedade de *landforms*. Em locais com maior *Z-score* para amplitude altitudinal que variedade de *landforms*, a diversidade da paisagem foi calculada como a média ponderada das duas variáveis, com peso 2 para variedade de *landforms*.
+A heterogeneidade da paisagem foi calculada seguindo uma hierarquia nas variáveis. A heterogeneidade da paisagem é definida como o *Z-score* da variedade de *landforms*. Em locais com maior *Z-score* para amplitude altitudinal que variedade de *landforms*, a heterogeneidade da paisagem foi calculada como a média ponderada das duas variáveis, com peso 2 para variedade de *landforms*.
 $$
 Z_{diversidade\, da\,paisagem}= \frac{\left(Z_{variedade\,de\,landforms}\times 2 \right)+Z_{amplitude\,altitudinal}}{3}
 $$
-Nos locais onde o índice áreas úmida é maior que a diversidade da paisagem calculada anteriormente, calculamos a média ponderada da diversidade da paisagem e índice de áreas úmidas, atribuindo peso dois para as áreas úmidas. O peso dobrado das áreas úmidas é justificado por esses locais estarem em áreas planas com baixa variabilidade topográfica, sendo as áreas úmidas a variável mais importante para determinar a variabilidade microclimática. 
+Nos locais onde o índice áreas úmida é maior que a heterogeneidade da paisagem calculada anteriormente, calculamos a média ponderada da heterogeneidade da paisagem e índice de áreas úmidas, atribuindo peso dois para as áreas úmidas. O peso dobrado das áreas úmidas é justificado por esses locais estarem em áreas planas com baixa variabilidade topográfica, sendo as áreas úmidas a variável mais importante para determinar a variabilidade microclimática. 
 
 $$
 Z_{diversidade\, da\,paisagem}= \frac{Z_{variedade\,de\,landforms}+Z_{amplitude\,altitudinal} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{4}
@@ -226,7 +226,7 @@ $$
 Z_{diversidade\, da\,paisagem}= \frac{Z_{variedade\,de\,landforms} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{3}
 $$
 
-Nas localidades onde o *Z-score* da diversidade de solo foi maior que a diversidade da paisagem anterior, os valores foram substituídos pela média ponderada das variáveis naquela localidade, com peso 2 para variedade de *landforms*.
+Nas localidades onde o *Z-score* da diversidade de solo foi maior que a heterogeneidade da paisagem anterior, os valores foram substituídos pela média ponderada das variáveis naquela localidade, com peso 2 para variedade de *landforms*.
 
 
 $$

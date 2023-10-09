@@ -3,8 +3,8 @@ project:
   output-dir: docs
   render:
     - index.qmd
+    - apresentacao.qmd
     - Introducao.qmd
-    - Equipe_envolvida.qmd
     - Objetivo_produtos.qmd
     - Atividades_oficinas.qmd
     - Glossario.qmd
@@ -35,8 +35,8 @@ website:
       - section: "Sumário"
         contents:
           - index.qmd
+          - apresentacao.qmd
           - Introducao.qmd
-          - Equipe_envolvida.qmd
           - Objetivo_produtos.qmd
           - Atividades_oficinas.qmd
           - Glossario.qmd
@@ -56,11 +56,5 @@ lang: pt-br
 format:
   html:
     theme: default
-    css: styles.css
-    
-  pdf:
-    documentclass: scrreprt
-  docx:
-    reference-doc: custom-reference.docx  
-
+    css: styles.css   
 
