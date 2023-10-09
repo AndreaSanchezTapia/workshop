@@ -10,12 +10,12 @@ O processo consistirá, portanto, da aplicação da abordagem desenvolvida, aná
 
 ## Planejamento das oficinas
 
-As oficinas previstas para o projeto terão como objetivo discutir a metodologia proposta e sugerir adequações (metodológicas e de bases de dados) às características dos ecossistemas e particularidades dos biomas brasileiros. A exequibilidade das sugestões será posteriormente avaliadas internamente sob as condições limitantes de recurso e tempo de conclusão do projeto.  
+As oficinas previstas para o projeto terão como objetivo discutir a metodologia proposta e sugerir adequações (metodológicas e de bases de dados) às características dos ecossistemas e particularidades dos biomas brasileiros. A exequibilidade das sugestões será posteriormente avaliada internamente sob as condições limitantes de recurso e tempo de conclusão do projeto.  
 
 Está prevista a realização de três oficinas, nas quais participarão especialistas de todos os biomas do Brasil. Nessas oficinas serão discutidas questões importantes relativas ao projeto, incluindo pontos teóricos, procedimentos analíticos e resultados obtidos.
 
 |Oficina|Data prevista|Modalidade|Pontos discutidos|
-|--|--|--|--|
+|:--|:--|:--|:--|
 |Oficina #1| 13/06 e 15/06|Virtual|Introdução geral do projeto; apresentação das análises e dos resultados preliminares; momento de perguntas e respostas|
 |Oficina #2| set/outubro (a confirmar)|Virtual|Devolutiva e refinamento das análises; discussão de valores de resistência e avaliação dos resultados das camadas conforme ajustes feitos após Oficina #1|
 |Oficina #3|nov/dez (a confirmar)|presencial (a confirmar)| Apresentação dos resultados obtidos após Oficina #2 e avaliação dos resultados|

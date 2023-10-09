@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Introdução
 
 <!--
@@ -38,3 +39,14 @@ Além disso, a geodiversidade possui correlação com a biodiversidade.--> <!-- 
 
 
 Conserve the stage
+=======
+# Introdução geral
+
+O projeto _Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros_ é coordenado por _The Nature Conservancy Brasil_ e executado por diversas instituições de pesquisa localizadas em cada um dos biomas do Brasil.
+
+O objetivo principal do projeto é mapear a resiliência às mudanças climáticas, por meio do mapeamento da heterogeneidade ambiental e da conectivadade entre áreas, para identificar locais com maior potencial de sustentar a biodiversidade em um futuro de mudanças no clima. O produto principal do projeto é um mapa indicando as áreas resilientes (ambientalmente heterogêneas e conectadas entre si) no Brasil.
+
+<!---
+Detalhar mais a contextualização teórica (brevemente). 
+-->
+>>>>>>> b590b003fdcd8825dfb060688503229ed162237b
