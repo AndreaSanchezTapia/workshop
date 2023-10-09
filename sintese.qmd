@@ -1,0 +1,76 @@
+# Síntese do projeto {.unnumbered}
+
+## Contexto geral do estudo
+
+As mudanças no clima modificam ambientes naturais e pressionam espécies a se adaptarem às novas condições ambientais ou alterarem sua distribuição espacial para locais mais adequados climaticamente. A identificação de locais com potencial para sustentar a biodiversidade no futuro de mudanças climáticas é imprescindível para o planejamento de ações de conservação e restauração.
+
+## O que queremos fazer?
+
+O objetivo principal do projeto é **mapear sítios resilientes**, que permitam a movimentação da biodiversidade na busca de áreas mais adequadas climaticamente em um cenário de mudança climáticas.
+
+O termo *áreas resilientes*, neste contexto, indica locais com alta diversidade microclimática e conectividade, condições necessárias para que espécies e processos ecológicos persistam às mudanças climáticas regionais.
+
+## Quais as premissas básicas desse estudo?
+
+
+A metodologia desenvolvida segue três premissas básicas:
+
+1.  A **heterogeneidade da paisagem** resultante da combinação de características do meio físico, como feições topográficas, altitude, disponibilidade hídrica e tipo de solo, e que promovem variabilidade microclimática, que contribui para a diversidade genética e fenotípica de espécies.
+
+2.  A **conectividade local** é influenciada pela resistência que os tipos de uso e cobertura do solo oferecem para a movimentação das espécies na paisagem, considerando as relações de vizinhança estabelecidas em uma escala local.
+
+3.  A **resiliência da paisagem** a mudanças do clima é influenciada pela heterogeneidade de habitats disponíveis para as espécies, que geram condições diversificadas de microclimas aos organismos, e pela conectividade desses habitats na paisagem, que permitem a movimentação desses organismos para áreas mais adequadas.
+
+## Qual metodologia estamos utilizando?
+
+A metodologia proposta combina a heterogeneidade da paisagem, um *proxy* da variabilidade microclimática, com a conectividade local, para identificar locais que possibilitem adatação das espécies às mudanças climáticas, cujas matrizes da paisagem sejam permeáveis à movimentação das espécies.
+
+O mapeamento da heterogeneidade da paisagem é baseado na geodiversidade (geomorfologia, geologia, pedologia e hidrologia) do terreno e inclui a variedade de formas de relevo, amplitude altitudinal, densidade de áreas úmidas e riqueza de solos.
+
+A conectividade local é baseada na resistência das classes de uso da terra da paisagem ao movimento da biodiversidade, combinando classes naturais e antropizadas, além das infraestruturas de transporte e de energia existentes (com maior ou menor grau de antropização).
+
+## Por que a escolha por essa metodologia de análise?
+
+Essa análise foi proposta e validada para a América do Norte pela *The Nature Conservancy* (TNC), e complementa outras metodologias disponíveis na literatura, uma vez que ela foca nas características do terreno para identificar áreas resilientes.
+
+A aplicação da metodologia da TNC para os biomas brasileiros é um passo importante na identificação de sítios resilientes em ambientes tropicais megadiversos. Atuando em conjunto com especialistas dos diferentes biomas e baseado na literatura disponível, o projeto busca adequar a metodologia original ao contexto dos biomas brasileiros, refinando e adaptando quando necessário.
+
+## Onde e com quem estamos trabalhando?
+
+O mapeamento está sendo conduzido para cada um dos seis biomas do Brasil. Para isso, em cada um dos biomas temos coordenadores(as) responsáveis em instituições de pesquisa, além de um(a) pesquisador(a) de pós-doutorado diretamente envolvido(a) no projeto. Há ainda uma equipe de especialistas, de diversas áreas de atuação relacionadas à Temática do projeto, que participam como colaboradores do desenvolvimento do estudo.
+
+## Quais são os produtos previstos desse projeto?
+
+<!--
+Ana trouxe o questionamento de que não estamos mapeando só áreas resilientes e conectadas. Precisamos pensar no que estamos criando
+-->
+
+O produto resultante desse projeto é um mapa de áreas resilientes e conectadas para os biomas do Brasil que permite identificar o potencial de cada área de sustentar animais e plantas em um clima sob mudanças. Está em construção também um relatório técnico descrevendo o projeto e a metodologia utilizada, além de uma documentação reproduzível das análises. Além desses produtos, está prevista a elaboração de, no mínimo, um artigo científico a ser submetido a uma revista científica internacional.
+
+## Como temos conduzido as atividades?
+
+Os(as) bolsistas de pós-doutorado têm sido responsáveis por liderar as análises e conduzir o projeto regionalmente. A equipe da TNC Brasil coordena as atividades em cada bioma e entre os biomas e também a integração entre as diversas equipes, participando diretamente das discussões nos grupos. Estão sendo realizadas oficinas e reuniões virtuais com as equipes de cada bioma e com os(as) especialistas para discutir as particularidades regionais, refinar as análises e os resultados obtidos.
+
+## Palavras chave
+
+Resiliência climática, mudanças climáticas, conectividade, paisagem, geodiversidade, conservação, biodiversidade.
+
+## Instituições parceiras do projeto
+
+::: {layout-nrow="2"}
+![](figs/TNC_logo.png)
+
+![](figs/MPEG_logo.png)
+
+![](figs/logotipo-ufabc-abaixo.png)
+
+![](figs/tipografia_ufj_preto_modelo_02.png)
+
+![](figs/ufms_logo_negativo_assinatura_vertical_rgb.png)
+
+![](figs/ufrn_logotipo_flat.png)
+
+![](figs/sos_pantanal_logo-slider.png)
+
+![](figs/associacao_caatinga-nova_logo-400.png)
+:::

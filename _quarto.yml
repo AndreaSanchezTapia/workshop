@@ -3,6 +3,7 @@ project:
   output-dir: docs
   render:
     - index.qmd
+    - sintese.qmd
     - apresentacao.qmd
     - Introducao.qmd
     - Objetivo_produtos.qmd
@@ -21,7 +22,7 @@ website:
     left:
       - text: Tutoriais
         menu:
-         - text: Diversidade da paisagem
+         - text: Heterogeneidade da paisagem
          - text: Resistência da paisagem
          - text: Conectividade local 
          - text: Resiliência da paisagem  
@@ -35,6 +36,7 @@ website:
       - section: "Sumário"
         contents:
           - index.qmd
+          - sintese.qmd
           - apresentacao.qmd
           - Introducao.qmd
           - Objetivo_produtos.qmd
