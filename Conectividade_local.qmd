@@ -81,10 +81,15 @@ Como é uma análise com uma demanda computacional alta, recortamos regiões de 
 Algumas regiões de teste foram selecionadas para cada bioma.
 
 ![Conectividade: análise de circuitos para uma região de teste na Amazônia.](figs/conectividade_amazonia.png){#fig-resilience width="600" fig-align="center"}
+
 ![Conectividade: análise de circuitos para uma região de teste na Caatinga.](figs/conectividade_caatinga.png){#fig-resilience width="600" fig-align="center"}
+
 ![Conectividade: análise de circuitos para uma região de teste na Cerrado.](figs/conectividade_cerrado.png){#fig-resilience width="600" fig-align="center"}
+
 ![Conectividade: análise de circuitos para uma região de teste na Mata Atlântica.](figs/mata_atlantica.png){#fig-resilience width="600" fig-align="center"}
+
 ![Conectividade: análise de circuitos para uma região de teste no Pampa.](figs/pampa.png){#fig-resilience width="600" fig-align="center"}
+
 ![Conectividade: análise de circuitos para uma região de teste no Pantanal.](figs/conectividade_pantanal.png){#fig-resilience width="600" fig-align="center"}
 
 <!--
