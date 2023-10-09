@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +49,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Equipe_envolvida.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./Objetivo_produtos.html" rel="next">
+<link href="./apresentacao.html" rel="prev">
 <link href="./figs/1667403883848_theme_logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -66,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -104,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Sumário</a></li><li class="breadcrumb-item"><a href="./Introducao.html">Introdução geral</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Sumário</a></li><li class="breadcrumb-item"><a href="./Introducao.html">Introdução</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -138,14 +157,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Introducao.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Introdução geral</span></a>
+  <a href="./apresentacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Apresentação</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Equipe_envolvida.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Membros da equipe</span></a>
+  <a href="./Introducao.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Introdução</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -187,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Diversidade_da_paisagem.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Diversidade da paisagem</span></a>
+ <span class="menu-text">heterogeneidade da paisagem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -221,26 +240,79 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Outros formatos</h2><ul><li><a href="Introducao.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="Introducao.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 
-<section id="introdução-geral" class="level1">
-<h1>Introdução geral</h1>
-<p>O projeto <em>Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros</em> é coordenado por <em>The Nature Conservancy Brasil</em> e executado por diversas instituições de pesquisa localizadas em cada um dos biomas do Brasil.</p>
-<p>O objetivo principal do projeto é mapear sítios resilientes a mudanças climáticas e conectados entre si, identificando locais que seriam mais adequados a sustentar a biodiversidade em um futuro de mudanças no clima. O produto principal do projeto é um mapa indicando as áreas resilientes e conectadas no Brasil.</p>
+<section id="introdução" class="level1">
+<h1>Introdução</h1>
 <!---
+O projeto _Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros_ é coordenado por _The Nature Conservancy Brasil_ e executado por diversas instituições de pesquisa localizadas em cada um dos biomas do Brasil.
+
+O objetivo principal do projeto é mapear sítios resilientes a mudanças climáticas e conectados entre si, identificando locais que seriam mais adequados a sustentar a biodiversidade em um futuro de mudanças no clima. O produto principal do projeto é um mapa indicando as áreas resilientes e conectadas no Brasil.
+
+
 Detalhar mais a contextualização teórica (brevemente). 
 -->
+<p>As mudanças climáticas estão alterando os regimes de temperatura e pluviosidade global, impactando a fenologia, comportamento e distribuição geográfica das espécies <span class="citation" data-cites="ipcc_climate_2022">(<a href="#ref-ipcc_climate_2022" role="doc-biblioref">IPCC 2022</a>)</span>. As espécies estão trocando suas distribuições para localidades mais temperadas e de maior altitude nas bordas de suas distribuições, deixando de ocorrer nas localidades mais quentes. Essas respostas às mudanças climáticas modificam a composição de espécies das comunidades ecológicas, causa disrupção de interações inter-específicas, distribuição de atributos funcionais, alterando o provimento, regulação e suporte de funções, estrutura e dinâmica ecossistêmicas. <!-- apresentar melhor a os efeitos climáticos, como quanto de aumento de temperatura é esperado etc.. --></p>
+<p>O impacto das mudanças climáticas não é uniforme ao longo do globo. A vulnerabilidade das espécies depende das suas exposições e sensibilidades às mudanças ambientais <span class="citation" data-cites="williams_stephen_e_towards_2008">(<a href="#ref-williams_stephen_e_towards_2008" role="doc-biblioref">Williams, Stephen E. et al. 2008</a>)</span>. A exposição é caracterizada pela forma como as mudanças globais, regionais e locais atuam diretamente nos organismos pela interação entre variáveis climáticas, bióticas, pedológicas (ex. umidade e reflectância do solo), hidrológicas e topográficas (ex. forma do relevo, incidência de radiação solar na superfície e posição no relevo), na determinação das condições microclimáticas e do habitat onde os organismos vivem. Por outro lado, a sensibilidade das espécies é a sua resposta às condições ambientais. Portanto, a sensibilidade dependende da plasticidade fisiológica, morfológica e comportamental da espécies, da sua adaptação às novas condições ambientais e capacidade de dispersar para áreas com condições ambientais adequadas. Desta forma, dependendo do grau de exposição, plasticidade ou resposta adaptativa às mudanças climáticas, as espécies podem continuar nas suas localidades ou buscar áreas adequadas. No entanto, a busca por localidades isoclimáticas é dependente da velocidade climática <span class="citation" data-cites="loarie_scott_r_velocity_2009">(<a href="#ref-loarie_scott_r_velocity_2009" role="doc-biblioref">Loarie, Scott R. et al. 2009</a>)</span> nas regiões onde as espécies ocorrem. Locais com alta velocidade climática possuem alta taxa de mudança local ou baixa diferença climática em relação ao entorno. Nesse cenário, as espécies precisam se locomover por maiores distâncias para encontrarem áreas adequadas. Locais com baixa velocidade climática possuem baixa mudança climática ao longo do tempo ou alta variabilidade climática no entorno, possibilitando a manutenção na localidade ou a busca por regiões adequadas em localidades próximas.</p>
+<!-- mudanças no uso do solo, fragmentação e perda de habitat -->
+<p>As projeções climáticas utilizam modelos climáticos globais e regionais, possibilitando a identificação de áreas mais vulneráveis, refúgios climáticos e a projeção dos impactos futuros. No entanto, os modelos climáticos fornecem dados em escalas regionais ou como interpolações em resoluções mais finas <span class="citation" data-cites="fick_worldclim_2017 karger_dirk_nikolaus_climatologies_2017 lima-ribeiro_matheus_s_ecoclimate_2015">(<a href="#ref-lima-ribeiro_matheus_s_ecoclimate_2015" role="doc-biblioref">Lima-Ribeiro, Matheus S et al. 2015</a>, <a href="#ref-fick_worldclim_2017" role="doc-biblioref">Fick e Hijmans 2017</a>, <a href="#ref-karger_dirk_nikolaus_climatologies_2017" role="doc-biblioref">Karger, Dirk Nikolaus et al. 2017</a>)</span>, limitando o diagnóstico e desenvolvimento de estratégias de mitigação em escalas mais locais, onde as ações podem ser desenvolvidas. Mesmo modelos microclimáticos, desenvolvidos para modelar mudanças em variáveis locais, são fornecidos globalmente em escalas regionais <span class="citation" data-cites="kearney_michael_r_microclim_2014">(<a href="#ref-kearney_michael_r_microclim_2014" role="doc-biblioref">Kearney, Michael R. et al. 2014</a>)</span>. Uma alternativa aos modelos globais e regionais é a utilização de séries temporais de dados climáticos derivados de sensoriamento remoto orbital <span class="citation" data-cites="hulley_g_viirsnpp_2018">(<a href="#ref-hulley_g_viirsnpp_2018" role="doc-biblioref">Hulley, G. e Hook, S. 2018</a>)</span> ou estações metereológicas <span class="citation" data-cites="xavier_new_2022">(<a href="#ref-xavier_new_2022" role="doc-biblioref">Xavier et al. 2022</a>)</span>. Nesse caso, apesar dos dados de longa duração possuírem escalas mais regionais (&gt; 1km²), eles fornecem variabilidade de informação nessa escala, o que não é fornecido pelas interpolações dos modelos climáticos. No entanto, esses dados não possuem projeções para o clima futuro. Uma terceira abordagem, complementar aos dados climáticos, é a utilização da topografia, geodiversidade e aspectos fisiográficos <span class="citation" data-cites="lawler_joshua_j_theory_2015 anderson_mark_g_estimating_2014 theobald_ecologically-relevant_2015">(<a href="#ref-anderson_mark_g_estimating_2014" role="doc-biblioref">Anderson, Mark G. et al. 2014</a>, <a href="#ref-lawler_joshua_j_theory_2015" role="doc-biblioref">Lawler, Joshua J. et al. 2015</a>, <a href="#ref-theobald_ecologically-relevant_2015" role="doc-biblioref">Theobald et al. 2015</a>)</span> para diagnosticar, mapear e desenvolver soluções para as mudanças climáticas.</p>
+<p>A temperatura média da Terra vai aumentar mais que 2ºC na próxima década em relação ao período pré-industrial, com uma janela de atuação para mitigação dos impactos de algumas décadas <span class="citation" data-cites="ipcc_climate_2022">(<a href="#ref-ipcc_climate_2022" role="doc-biblioref">IPCC 2022</a>)</span>. Apesar da dinâmica ao longo do tempo, a geodiversidade da paisagem (ex. topografia, geologia, pedologia e hidrologia) tendem a ter baixa taxa de mudança no intervalo de tempo factível para ações de mitigação das mudanças climáticas. Essas variáveis são determinantes de microclimas locais como a superfície que mais recebe radiação solar, posições no relevo mais expostas a ação de ventos, direcionamento de ventos frios, precipitação, acúmulo de umidade e retenção de água no solo. A interação entre a atmosfera e a topografia resulta em <em>topoclimas</em>, que tendem a ser desconectados do clima regional. Nos locais onde o topoclima permite a manutenção das características microclimáticas, independente nas mudanças regionalmente, tem sido definidos como locais potenciais para refúgios microclimáticos. Além disso, locais com maior complexidade topográfica e amplitude altitudinal proporcionam maior variabilidade de condições ambientais para as espécies. O potencial para atuar como refúgio microclimático e a maior variabilidade microclimática no entorno reduz a velocidade climática localmente.</p>
+<p>Além disso, a geodiversidade possui correlação com a biodiversidade. <!-- Descrever como isso ocorre -->. Portanto, apesar da geodiversidade não descrever as estruturas das comunidades ecológicas, as quais sofrerão mudanças devido aos impactos climáticos, a geodiversidade pode representar locais com potencial de suportar e diversificar maior diversidade biológica. <!-- explicar melhor como isso ocorre 2.5million years A CNS framework does not presuppose a static environment, but given the relationship between geo- diversity and biodiversity, the long-term preservation of geomorphic heterogeneity is a critical component of any CNS-based management plan. -->.</p>
+<!-- estamos mapeando exposição potencial -->
+<!-- entrar na parte da topografia e da geodiversidade como bons proxies climáticos-->
+<!-- falar da maior estabilidade topogrfica em relação ao clima -->
+<!-- estudos macroecologicos e macroevolutivos mostrando a importancia topografica e geodiversidade na biodiversidade -->
+<!-- biodiversidade é custosa de monitorar, sensoriamento remoto e monitoramento da biodiversidade -->
+<!-- Conservar a natureza, não somente a biodiversidade -->
+<!-- Conservar o potencial, não o estado das comunidades, equilibrio dinamico -->
+<p>Conserve the stage</p>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
+<div id="ref-anderson_mark_g_estimating_2014" class="csl-entry" role="listitem">
+Anderson, Mark G., Clark, Melissa, e Sheldon, Arlene Olivero. 2014. <a href="https://doi.org/10.1111/cobi.12272">Estimating climate resilience for conservation across geophysical settings</a>. Conservation Biology 28:959–970.
+</div>
+<div id="ref-fick_worldclim_2017" class="csl-entry" role="listitem">
+Fick, S. E., e R. J. Hijmans. 2017. <a href="https://doi.org/10.1002/joc.5086"><span>WorldClim</span> 2: new 1-km spatial resolution climate surfaces for global land areas</a>. International Journal of Climatology 37:4302–4315.
+</div>
+<div id="ref-hulley_g_viirsnpp_2018" class="csl-entry" role="listitem">
+Hulley, G., e Hook, S. 2018. <a href="https://doi.org/10.5067/VIIRS/VNP21A1D.001"><span>VIIRS</span>/<span>NPP</span> <span>Land</span> <span>Surface</span> <span>Temperature</span> and <span>Emissivity</span> <span>Daily</span> <span>L3</span> <span>Global</span> 1km <span>SIN</span> <span>Grid</span> <span>Day</span> <span>V001</span></a>. NASA EOSDIS Land Processes Distributed Active Archive Center.
+</div>
+<div id="ref-ipcc_climate_2022" class="csl-entry" role="listitem">
+IPCC. 2022. <a href="https://doi:10.1017/9781009325844">Climate <span>Change</span> 2022: <span>Impacts</span>, <span>Adaptation</span> and <span>Vulnerability</span></a>. Página 3056. Cambridge University Press, Cambridge, UK; New York, USA.
+</div>
+<div id="ref-karger_dirk_nikolaus_climatologies_2017" class="csl-entry" role="listitem">
+Karger, Dirk Nikolaus, Conrad, Olaf, Böhner, Jürgen, Kawohl, Tobias, Kreft, Holger, Soria-Auza, Rodrigo Wilber, Zimmermann, Niklaus E., Linder, H. Peter, e Kessler, Michael. 2017. <a href="https://doi.org/10.1038/sdata.2017.122">Climatologies at high resolution for the earth’s land surface areas</a>. Scientific Data 4:170122.
+</div>
+<div id="ref-kearney_michael_r_microclim_2014" class="csl-entry" role="listitem">
+Kearney, Michael R., Isaac, Andrew P., e Porter, Warren P. 2014. <a href="https://doi.org/10.1038/sdata.2014.6">Microclim: <span>Global</span> estimates of hourly microclimate based on long-term monthly climate averages</a>. Scientific Data 1:140006.
+</div>
+<div id="ref-lawler_joshua_j_theory_2015" class="csl-entry" role="listitem">
+Lawler, Joshua J., Ackerly, David D., Albano, Christine M., Anderson, Mark G., Dobrowski, Solomon Z., Gill, Jacquelyn L., Heller, Nicole E., Pressey, Robert L., Sanderson, Eric W., e Weiss, Stuart B. 2015. <a href="https://doi.org/10.1111/cobi.12505">The theory behind, and the challenges of, conserving nature’s stage in a time of rapid change</a>. Conservation Biology 29:618–629.
+</div>
+<div id="ref-lima-ribeiro_matheus_s_ecoclimate_2015" class="csl-entry" role="listitem">
+Lima-Ribeiro, Matheus S, Varela, Sara, González-Hernández, Javier, de Oliveira, Guilherme, Diniz-Filho, José Alexandre F, e Terribile, Levi Carina. 2015. <a href="https://doi.org/10.17161/bi.v10i0.4955">Ecoclimate : a <span>Database</span> of <span>Climate</span> <span>Data</span> <span>From</span> <span>Multiple</span> <span>Models</span> for <span>Past</span> , <span>Present</span> , and <span>Future</span> for <span>Macroecologists</span> and <span>Biogeographers</span></a>. Biodiversity Informatics 10:1–21.
+</div>
+<div id="ref-loarie_scott_r_velocity_2009" class="csl-entry" role="listitem">
+Loarie, Scott R., Duffy, Philip B., Hamilton, Healy, Asner, Gregory P., Field, Christopher B., e Ackerly, David D. 2009. <a href="https://doi.org/10.1038/nature08649">The velocity of climate change</a>. Nature 462:1052–1055.
+</div>
+<div id="ref-theobald_ecologically-relevant_2015" class="csl-entry" role="listitem">
+Theobald, D. M., D. Harrison-Atlas, W. B. Monahan, e C. M. Albano. 2015. <a href="https://doi.org/10.1371/journal.pone.0143619">Ecologically-<span>Relevant</span> <span>Maps</span> of <span>Landforms</span> and <span>Physiographic</span> <span>Diversity</span> for <span>Climate</span> <span>Adaptation</span> <span>Planning</span></a>. PLOS ONE 10:e0143619.
+</div>
+<div id="ref-williams_stephen_e_towards_2008" class="csl-entry" role="listitem">
+Williams, Stephen E., Shoo, Luke P., Isaac, Joanne L., Hoffmann, Ary A., e Langham, Gary. 2008. <a href="https://doi.org/10.1371/journal.pbio.0060325">Towards an integrated framework for assessing the vulnerability of species to climate change.</a> PLoS biology 6:e325.
+</div>
+<div id="ref-xavier_new_2022" class="csl-entry" role="listitem">
+Xavier, A. C., B. R. Scanlon, C. W. King, e A. I. Alves. 2022. <a href="https://doi.org/10.1002/joc.7731">New improved <span>Brazilian</span> daily weather gridded data (1961–2020)</a>. International Journal of Climatology 42:8390–8404.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -476,13 +548,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Síntese do projeto</span>
+      <a href="./apresentacao.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Apresentação</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Equipe_envolvida.html" class="pagination-link">
-        <span class="nav-page-text">Membros da equipe</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Objetivo_produtos.html" class="pagination-link">
+        <span class="nav-page-text">Objetivo</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

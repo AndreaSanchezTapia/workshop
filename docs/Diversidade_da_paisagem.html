@@ -125,7 +125,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Sumário</a></li><li class="breadcrumb-item"><a href="./Diversidade_da_paisagem.html">Diversidade da paisagem</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Sumário</a></li><li class="breadcrumb-item"><a href="./Diversidade_da_paisagem.html">heterogeneidade da paisagem</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -159,14 +159,14 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Introducao.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introdução geral</span></a>
+  <a href="./apresentacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Apresentação</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Equipe_envolvida.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Membros da equipe</span></a>
+  <a href="./Introducao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introdução</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -208,7 +208,7 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Diversidade_da_paisagem.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Diversidade da paisagem</span></a>
+ <span class="menu-text">heterogeneidade da paisagem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -250,9 +250,9 @@ div.csl-indent {
 
 
 
-<section id="diversidade-da-paisagem" class="level1">
-<h1>Diversidade da paisagem</h1>
-<p>A diversidade da paisagem é uma métrica composta pelas médias de <em>Z-scores</em> da <a href="#variedade-de-landforms"><strong>variedade de landforms</strong></a>, <a href="#amplitude-altitudinal"><strong>amplitude altitudinal</strong></a>, <a href="#índice-de-áreas-úmidas"><strong>índice de áreas úmidas</strong></a> e <a href="#diversidade-de-solo"><strong>diversidade de solo</strong></a>. A métrica é composta por uma média hieráquica das variáveis <strong>(Figura)</strong>. A seguir, descreveremos como cada variável que compõe a métrica é criada e como elas são combinadas para formar a diversidade da paisagem. As análises de diversidade da paisagem foram realizadas no <em>Google Earth Engine</em> <span class="citation" data-cites="gorelick_google_2017">(<a href="#ref-gorelick_google_2017" role="doc-biblioref">Gorelick et al. 2017</a>)</span> devido a demanda computacional, sua escalabilidade, a possibilidade de reprodução das análises.</p>
+<section id="heterogeneidade-da-paisagem" class="level1">
+<h1>heterogeneidade da paisagem</h1>
+<p>A heterogeneidade da paisagem é uma métrica composta pelas médias de <em>Z-scores</em> da <a href="#variedade-de-landforms"><strong>variedade de landforms</strong></a>, <a href="#amplitude-altitudinal"><strong>amplitude altitudinal</strong></a>, <a href="#índice-de-áreas-úmidas"><strong>índice de áreas úmidas</strong></a> e <a href="#diversidade-de-solo"><strong>diversidade de solo</strong></a>. A métrica é composta por uma média hieráquica das variáveis <strong>(Figura)</strong>. A seguir, descreveremos como cada variável que compõe a métrica é criada e como elas são combinadas para formar a heterogeneidade da paisagem. As análises de heterogeneidade da paisagem foram realizadas no <em>Google Earth Engine</em> <span class="citation" data-cites="gorelick_google_2017">(<a href="#ref-gorelick_google_2017" role="doc-biblioref">Gorelick et al. 2017</a>)</span> devido a demanda computacional, sua escalabilidade, a possibilidade de reprodução das análises.</p>
 <section id="base-de-dados" class="level5">
 <h5 class="anchored" data-anchor-id="base-de-dados">Base de dados</h5>
 <p>Nós utilizamos o modelo digital de elevação (DEM) do Merit-DEM <span class="citation" data-cites="yamazaki_high-accuracy_2017">(<a href="#ref-yamazaki_high-accuracy_2017" role="doc-biblioref">Yamazaki et al. 2017</a>)</span>, na escala de 90 m, como base para os cálculos de terreno como <a href="#declividade-do-relevo">declividade</a>, <a href="#orientação-do-relevo">orientação do relevo</a> e <a href="#índice-de-posição-topográfica">índice de posição topográfica (TPI)</a>. Esse DEM é um produto em escala global, permitindo a replicabilidade das análises em outras regiões, e possui correções de vários viéses derivados de imagens de satélite, principalmente em áreas com alta densidade de florestas como a floresta Amazônica. Além disso, o Merit-DEM já possui uma camada de <a href="#acúmulo-de-fluxo">acúmulo de fluxo</a>, em escala global, disponível no Merit-Hydro <span class="citation" data-cites="yamazaki_merit_2019">(<a href="#ref-yamazaki_merit_2019" role="doc-biblioref">Yamazaki et al. 2019</a>)</span>. Essa camada de acúmulo de fluxo possui correções para áreas planas e para o efeito da densidade de árvores no cálculo da rede hidrográfica <span class="citation" data-cites="yamazaki_merit_2019">(<a href="#ref-yamazaki_merit_2019" role="doc-biblioref">Yamazaki et al. 2019</a>)</span>, que são importantes para a análise de florestas tropicais com alta densidade de árvores.</p>
@@ -783,13 +783,13 @@ Z_{índice\,de\,áreas\,úmidas}=\frac {{{(Z_{local}}{\times2)}}+{Z_{regional}}}
 <p><span class="math display">\[
 Z_{índice\,de\,áreas\,úmidas} =\frac {{{(Z_{local}}{\times2)}} + {Z_{regional}} + {Z_{quantidade}}}{4}
 \]</span></p>
-<p>A tranformação de <em>Z-score</em> foi aplicada também para a <strong>variedade de <em>landforms</em></strong>, <strong>amplitude de elevação</strong> e <strong>diversidade de solos</strong> para compormos a diversidade da paisagem.</p>
+<p>A tranformação de <em>Z-score</em> foi aplicada também para a <strong>variedade de <em>landforms</em></strong>, <strong>amplitude de elevação</strong> e <strong>diversidade de solos</strong> para compormos a heterogeneidade da paisagem.</p>
 </section>
-<section id="diversidade-da-paisagem-1" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="diversidade-da-paisagem-1">Diversidade da paisagem</h4>
-<p>A diversidade da paisagem foi calculada seguindo uma hierarquia nas variáveis. A diversidade da paisagem é definida como o <em>Z-score</em> da variedade de <em>landforms</em>. Em locais com maior <em>Z-score</em> para amplitude altitudinal que variedade de <em>landforms</em>, a diversidade da paisagem foi calculada como a média ponderada das duas variáveis, com peso 2 para variedade de <em>landforms</em>. <span class="math display">\[
+<section id="heterogeneidade-da-paisagem-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="heterogeneidade-da-paisagem-1">heterogeneidade da paisagem</h4>
+<p>A heterogeneidade da paisagem foi calculada seguindo uma hierarquia nas variáveis. A heterogeneidade da paisagem é definida como o <em>Z-score</em> da variedade de <em>landforms</em>. Em locais com maior <em>Z-score</em> para amplitude altitudinal que variedade de <em>landforms</em>, a heterogeneidade da paisagem foi calculada como a média ponderada das duas variáveis, com peso 2 para variedade de <em>landforms</em>. <span class="math display">\[
 Z_{diversidade\, da\,paisagem}= \frac{\left(Z_{variedade\,de\,landforms}\times 2 \right)+Z_{amplitude\,altitudinal}}{3}
-\]</span> Nos locais onde o índice áreas úmida é maior que a diversidade da paisagem calculada anteriormente, calculamos a média ponderada da diversidade da paisagem e índice de áreas úmidas, atribuindo peso dois para as áreas úmidas. O peso dobrado das áreas úmidas é justificado por esses locais estarem em áreas planas com baixa variabilidade topográfica, sendo as áreas úmidas a variável mais importante para determinar a variabilidade microclimática.</p>
+\]</span> Nos locais onde o índice áreas úmida é maior que a heterogeneidade da paisagem calculada anteriormente, calculamos a média ponderada da heterogeneidade da paisagem e índice de áreas úmidas, atribuindo peso dois para as áreas úmidas. O peso dobrado das áreas úmidas é justificado por esses locais estarem em áreas planas com baixa variabilidade topográfica, sendo as áreas úmidas a variável mais importante para determinar a variabilidade microclimática.</p>
 <p><span class="math display">\[
 Z_{diversidade\, da\,paisagem}= \frac{Z_{variedade\,de\,landforms}+Z_{amplitude\,altitudinal} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{4}
 \]</span></p>
@@ -797,7 +797,7 @@ Z_{diversidade\, da\,paisagem}= \frac{Z_{variedade\,de\,landforms}+Z_{amplitude\
 <p><span class="math display">\[
 Z_{diversidade\, da\,paisagem}= \frac{Z_{variedade\,de\,landforms} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{3}
 \]</span></p>
-<p>Nas localidades onde o <em>Z-score</em> da diversidade de solo foi maior que a diversidade da paisagem anterior, os valores foram substituídos pela média ponderada das variáveis naquela localidade, com peso 2 para variedade de <em>landforms</em>.</p>
+<p>Nas localidades onde o <em>Z-score</em> da diversidade de solo foi maior que a heterogeneidade da paisagem anterior, os valores foram substituídos pela média ponderada das variáveis naquela localidade, com peso 2 para variedade de <em>landforms</em>.</p>
 <p><span class="math display">\[
 Z_{diversidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,landforms}\times 2)+Z_{amplitude\,altitudinal}+Z_{índice\,de\,áreas\,úmidas}+Z_{diversidade\,de\,solos}}{5}
 \]</span></p>
