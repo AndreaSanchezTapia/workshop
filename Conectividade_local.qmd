@@ -78,6 +78,15 @@ e controla o efeito da configuração espacial do cálculo de conectividade.
 
 Como é uma análise com uma demanda computacional alta, recortamos regiões de interesse em quadrados de 4.000 pixels para cada bioma e avaliamos os diversos cenários para melhor ajuste de parâmetros e tomadas de decisão, como utilizar `cumulative_current` ou `normalized_current` e utilizar a resistência ou a superfície gerada pelo _kernel_.
 
+Algumas regiões de teste foram selecionadas para cada bioma.
+
+![Conectividade: análise de circuitos para uma região de teste na Amazônia.](figs/conectividade_amazonia.png){#fig-resilience width="600" fig-align="center"}
+![Conectividade: análise de circuitos para uma região de teste na Caatinga.](figs/conectividade_caatinga.png){#fig-resilience width="600" fig-align="center"}
+![Conectividade: análise de circuitos para uma região de teste na Cerrado.](figs/conectividade_cerrado.png){#fig-resilience width="600" fig-align="center"}
+![Conectividade: análise de circuitos para uma região de teste na Mata Atlântica.](figs/mata_atlantica.png){#fig-resilience width="600" fig-align="center"}
+![Conectividade: análise de circuitos para uma região de teste no Pampa.](figs/pampa.png){#fig-resilience width="600" fig-align="center"}
+![Conectividade: análise de circuitos para uma região de teste no Pantanal.](figs/conectividade_pantanal.png){#fig-resilience width="600" fig-align="center"}
+
 <!--
 
 Por fim, calculamos os valores de Z para cada pixel ($Z_{pixel}$) ao subtrair o valor da média ($\mu$) e dividindo o resultado pelo desvio padrão ($\sigma$) e multiplicando tudo por -1, como mostrado na fórmula a seguir:
