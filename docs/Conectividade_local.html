@@ -50,7 +50,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./Resiliencia_da_paisagem.html" rel="next">
-<link href="./Diversidade_da_paisagem.html" rel="prev">
+<link href="./Heterogeneidade_da_paisagem.html" rel="prev">
 <link href="./figs/1667403883848_theme_logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -154,7 +154,7 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">index.html</span></a>
+ <span class="menu-text">Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -213,8 +213,8 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Diversidade_da_paisagem.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">heterogeneidade da paisagem</span></a>
+  <a href="./Heterogeneidade_da_paisagem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Heterogeneidade da paisagem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -583,7 +583,42 @@ div.csl-indent {
 </ul>
 <p>Como é uma análise com uma demanda computacional alta, recortamos regiões de interesse em quadrados de 4.000 pixels para cada bioma e avaliamos os diversos cenários para melhor ajuste de parâmetros e tomadas de decisão, como utilizar <code>cumulative_current</code> ou <code>normalized_current</code> e utilizar a resistência ou a superfície gerada pelo <em>kernel</em>.</p>
 <p>Algumas regiões de teste foram selecionadas para cada bioma.</p>
-<p><img src="figs/conectividade_amazonia.png" id="fig-resilience" class="img-fluid" data-fig-align="center" width="600" alt="Conectividade: análise de circuitos para uma região de teste na Amazônia."> <img src="figs/conectividade_caatinga.png" id="fig-resilience" class="img-fluid" data-fig-align="center" width="600" alt="Conectividade: análise de circuitos para uma região de teste na Caatinga."> <img src="figs/conectividade_cerrado.png" id="fig-resilience" class="img-fluid" data-fig-align="center" width="600" alt="Conectividade: análise de circuitos para uma região de teste na Cerrado."> <img src="figs/mata_atlantica.png" id="fig-resilience" class="img-fluid" data-fig-align="center" width="600" alt="Conectividade: análise de circuitos para uma região de teste na Mata Atlântica."> <img src="figs/pampa.png" id="fig-resilience" class="img-fluid" data-fig-align="center" width="600" alt="Conectividade: análise de circuitos para uma região de teste no Pampa."> <img src="figs/conectividade_pantanal.png" id="fig-resilience" class="img-fluid" data-fig-align="center" width="600" alt="Conectividade: análise de circuitos para uma região de teste no Pantanal."></p>
+<div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/conectividade_amazonia.png" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figura&nbsp;2: Conectividade: análise de circuitos para uma região de teste na Amazônia.</figcaption>
+</figure>
+</div>
+<div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/conectividade_caatinga.png" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figura&nbsp;3: Conectividade: análise de circuitos para uma região de teste na Caatinga.</figcaption>
+</figure>
+</div>
+<div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/conectividade_cerrado.png" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figura&nbsp;4: Conectividade: análise de circuitos para uma região de teste na Cerrado.</figcaption>
+</figure>
+</div>
+<div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/mata_atlantica.png" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figura&nbsp;5: Conectividade: análise de circuitos para uma região de teste na Mata Atlântica.</figcaption>
+</figure>
+</div>
+<div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/pampa.png" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figura&nbsp;6: Conectividade: análise de circuitos para uma região de teste no Pampa.</figcaption>
+</figure>
+</div>
+<div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/conectividade_pantanal.png" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figura&nbsp;7: Conectividade: análise de circuitos para uma região de teste no Pantanal.</figcaption>
+</figure>
+</div>
 <!--
 
 Por fim, calculamos os valores de Z para cada pixel ($Z_{pixel}$) ao subtrair o valor da média ($\mu$) e dividindo o resultado pelo desvio padrão ($\sigma$) e multiplicando tudo por -1, como mostrado na fórmula a seguir:
@@ -854,8 +889,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Diversidade_da_paisagem.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">heterogeneidade da paisagem</span>
+      <a href="./Heterogeneidade_da_paisagem.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Heterogeneidade da paisagem</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
