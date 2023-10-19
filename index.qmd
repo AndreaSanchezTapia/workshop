@@ -1,8 +1,8 @@
 
-# Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros
+<!--# Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros -->
 
 <p align="center">
-   <img src="figs/capa_fig.png" width="100%" height="40%">
+   <img src="figs/Resiliencia_capa.png" width="100%" height="40%">
 </p>
 
 <br />
@@ -10,7 +10,7 @@
 <br />
 <br />
 <br />
-
+<!--
 :::{layout-nrow=2}
 
 ![](figs/TNC_logo.png)
@@ -30,4 +30,4 @@
 ![](figs/associacao_caatinga-nova_logo-400.png)
 
 :::
-
+-->
