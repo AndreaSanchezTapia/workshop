@@ -24,6 +24,7 @@ website:
         menu:
          - text: Heterogeneidade da paisagem
          - text: Resistência da paisagem
+           href: https://resiliencia-climatica-brasil.github.io/Resistencia/
          - text: Conectividade local 
          - text: Resiliência da paisagem  
       - text: Downloads
