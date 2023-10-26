@@ -11,6 +11,7 @@ project:
     - Glossario.qmd
     - Modelo_conceitual_premissas.qmd
     - Metodologia_resumida.qmd
+    - Refinamento.qmd
     - Codigos_bases_dados.qmd
     - Heterogeneidade_da_paisagem.qmd
     - Conectividade_local.qmd
@@ -45,6 +46,7 @@ website:
           - Glossario.qmd
           - Modelo_conceitual_premissas.qmd
           - Metodologia_resumida.qmd
+          - Refinamento.qmd
           - Codigos_bases_dados.qmd
           - Heterogeneidade_da_paisagem.qmd
           - Conectividade_local.qmd

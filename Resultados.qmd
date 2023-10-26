@@ -48,6 +48,8 @@ Estou deixando as duas figuras em comentarios, caso a gente decida dividir elas 
 
 ### Cerrado
 
+As áreas com maior heterogeneidade da paisagem estiveram distribuidas por todo o bioma Cerrado. A heterogeneidade segue a distribuição de rios em áreas planas, uma vez que essas localidades possuem maior variedade de *landforms*. As áreas com grande rugosidade do relevo também representam áreas de alta heterogeneidade. Nas localidades de maior heterogeneidade nas áreas úmidas foram próximas aos rios e com alta densidade de áreas úmidas     
+
 ![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para o Cerrado](figs/results_bybiome/Cerrado_resultados.png){#fig-biomas-CE width="600" fig-align="center"}
 
 ### Mata Atlântica
