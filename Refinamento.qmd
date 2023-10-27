@@ -1,2 +1,47 @@
+<!---
+Milena: É um rascunho de ideias ainda. Precisa melhorar a redação. Podem ser incluídos novos itens, acho que não acrescentei todos.
+-->
 
-# Refinamento
+# Refinamento das análises
+ 
+A presente análise se baseou em trabalho anterior, que mapeou a resiliência para os Estados Unidos (citar trabalhos Anderson). Com base em discussões internas realizadas pela equipe central do projeto e com base nos comentários e sugestões de especialistas temáticos, foram realizados refinamentos nas análises para melhorar o mapeamento da resiliência para o território brasileiro.
+Abaixo, são incluídos os principais refinamentos realizados, assim como a explicação de alguns pontos de atenção importantes que surgiram ao longo do processo de criação do projeto.
+
+<!---
+## Premissas, definições e termos utilizados
+As premissas utilizadas no estudo estão descritas no item xx (incluir link). O glossário de termos consta no item xx [incluir link].
+Interessante falar que não usamos a premissa de biodiversidade?
+Descrever decisão por termo heterogeneidade da paisagem. Riqueza de solos também (ao invés de diversidade).
+ 
+## Eco-georegiões (antiga geophysical settings) e janelas móveis
+>> Líder: Alisson
+[Descrição sobre camada de eco-geo regiões que substituiria geophysical settings e posterior decisão de utilizar janelas móveis]
+ 
+## Tamanho do raio da análise 
+>> Líder: Lucas
+A descrição sobre a definição do tamanho de raio usado na análise está indicada no item xx [incluir link].
+ 
+## Índice topográfico: TPI em substituição ao xx
+>> Líder: Lucas
+Conforme já descrito no item de metodologia.... [Explicar decisão (já está na metodologia, mas repetir aqui)]
+ 
+## Valores por campo vs. floresta
+>> Líder: Priscila
+[comparação dos valores de resiliência/heterogeneidade por campo vs. floresta e também por fitofisionomia]
+O teste dos valores por fitofisionomia surgiu em função de xx.
+Com base nas análises conduzidas, foram encontrados semelhantes por fitofisionomia xxx
+ 
+## Largura dos rios no mapa de resistência 
+>> Líder: Marina
+A descrição sobre a a análise da largura dos rios para definir valores de resistência está indicada no item xx [incluir link].
+ 
+## Análise de conectividade local
+>> Líder: Marina/Alisson
+Explicar que substituímos o Kernel pelo omniscape.
+A descrição sobre a análise de circuitos (omniscape) está indicada no item xx [incluir link].
+ 
+## Resiliência (bivariada)
+>> Líder: Luciano
+[Explicar nova apresentação do resultado.]
+
+-->
