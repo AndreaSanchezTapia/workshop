@@ -16,10 +16,13 @@ Descrever decisão por termo heterogeneidade da paisagem. Riqueza de solos tamb�
 ## Eco-georegiões (antiga geophysical settings) e janelas móveis
 >> Líder: Alisson
 [Descrição sobre camada de eco-geo regiões que substituiria geophysical settings e posterior decisão de utilizar janelas móveis]
+O nome utilizado no trabalho anterior de geophysical settings potencialmente traria confusão, pois sítios geofísicos poderiam se referir a sítios diferenciados por características geofísicas, as quais não foram utilizadas no trabalho. Com isso chamamos essa camada de eco-geo regiões, que seriam geradas pela intersecção de regiões ecofisiográficas (ecorregiões) e domínios geológicos. Após o Workshop #1, a sugestão de um dos especialistas (geólogo de formação) nos levou a considerar a substituição de geologia por geomorfologia na geração das eco-geo regiões, visto que a diversidade de espécies estaria melhor relacionada com geomorfologia do que com geologia.
+O objetivo da utilização dessas regiões seria pela regionalização dos valores de heterogeneidade da paisagem e de conectividade, visto que temos o interesse em saber qual é a posição dos valores (estatisticamente) relacionados à região em que os mesmos estão inseridos, isso a título de se gerar uma contextualização regional das características de heterogeneidade e conectividade. Entretanto, no mesmo Workshop nos foi sugerida a utilização de janelas móveis para essa regionalização, ao invés de se regionalizar as variáveis dentro de uma eco-geo região, eles seriam regionalizados dentro de uma janela móvel que passaria por todo o Brasil.
+Essa técnica de janelas móveis, também conhecida como filtros ou convolução, foi a técnica selecionada para a regionalização dos dados e determinamos o seu tamanho (circular de raio 200 pixels) através de testes em que não se observassem padrões espaciais destoantes das estruturas espaciais conhecidas (e.g., descontinuidades espaciais abruptas inexistentes).
  
 ## Tamanho do raio da análise 
 >> Líder: Lucas
-A descrição sobre a definição do tamanho de raio usado na análise está indicada no item xx [incluir link].
+A descrição sobre a definição do tamanho de raio usado na análise está indicada no item xx [incluir link]. (descrevi no parágrafo anterior, caso queira utilizar).
  
 ## Índice topográfico: TPI em substituição ao xx
 >> Líder: Lucas
@@ -37,7 +40,8 @@ A descrição sobre a a análise da largura dos rios para definir valores de res
  
 ## Análise de conectividade local
 >> Líder: Marina/Alisson
-Explicar que substituímos o Kernel pelo omniscape.
+Para a análise de conectividade local tínhamos duas opções, a utilização de filtros (Kernel) ou a utilização da análise de circuitos (derivadas do circuitscape).
+A utilização de Kernel traz uma contextualização da resistência de acordo com seu entorno, inicialmente com tamanho 23x23 e pesos seguindo decaimento linear com relação ao centro do Kernel. Por ser uma análise mais sofisticada que o Kernel, cujo resultado é equivalente à passagem de um filtro passa-baixa, optamos pela utilização do Omniscape (técnica de circuitscape omnidirecional), que segue a teoria de circuitos, análoga à análise de resistência e correntes elétricas, trazendo a possibilidade de identificar corredores e onde estão localizados os acúmulos de corrente.
 A descrição sobre a análise de circuitos (omniscape) está indicada no item xx [incluir link].
  
 ## Resiliência (bivariada)
