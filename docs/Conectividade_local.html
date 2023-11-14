@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.361">
+<meta name="generator" content="quarto-1.3.340">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -77,8 +77,7 @@ div.csl-indent {
     "search-more-matches-text": "mais correspondências neste documento",
     "search-clear-button-title": "Limpar",
     "search-detached-cancel-button-title": "Cancelar",
-    "search-submit-button-title": "Enviar",
-    "search-label": "Procurar"
+    "search-submit-button-title": "Enviar"
   }
 }</script>
 
@@ -105,8 +104,14 @@ div.csl-indent {
  <span class="menu-text">Tutoriais</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tutoriais">    
-        <li class="dropdown-header">Heterogeneidade da paisagem</li>
-        <li class="dropdown-header">Resistência da paisagem</li>
+        <li>
+    <a class="dropdown-item" href="https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/1_landforms.html" rel="" target="">
+ <span class="dropdown-text">Heterogeneidade da paisagem</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://resiliencia-climatica-brasil.github.io/Resistencia/" rel="" target="">
+ <span class="dropdown-text">Resistência da paisagem</span></a>
+  </li>  
         <li class="dropdown-header">Conectividade local</li>
         <li class="dropdown-header">Resiliência da paisagem</li>
     </ul>
@@ -204,6 +209,12 @@ div.csl-indent {
   <div class="sidebar-item-container"> 
   <a href="./Metodologia_resumida.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Metodologia resumida</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Refinamento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Refinamento das análises</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -571,10 +582,10 @@ div.csl-indent {
 <p>Como base para estas análises, utilizamos:</p>
 <ul>
 <li>o raster de resistência utilizado como base para a conectividade local;</li>
-<li>um raio da área de interesse de 210 pixels (~19km);</li>
-<li>agrupamentos de 21 pixels de interesse para a janela móvel (~1.9km).</li>
+<li>um raio da área de interesse de 200 pixels (18km);</li>
+<li>agrupamentos de 19 pixels de interesse para a janela móvel (~1.7km).</li>
 </ul>
-<p>O raio da área de interesse é o raio de busca ou tamanho da janela móvel circular. O tamanho da janela foi equivalente ao utilizado no cálculo dos valores de Z (200 pixels), o valor é levemente diferente devido à limitação do tamanho do bloco central da janela ser um número ímpar de pixels (agrupamento de 21) e segundo <span class="citation" data-cites="landau_omniscapejl_2021">Landau et al. (<a href="#ref-landau_omniscapejl_2021" role="doc-biblioref">2021</a>)</span> esse valor não deve ultrapassar 10% do raio.</p>
+<p>O raio da área de interesse é o raio de busca ou tamanho da janela móvel circular. O tamanho da janela foi equivalente ao utilizado no cálculo dos valores de Z (200 pixels), o valor é levemente diferente devido à limitação do tamanho do bloco central da janela ser um número ímpar de pixels (agrupamento de 19) e segundo <span class="citation" data-cites="landau_omniscapejl_2021">Landau et al. (<a href="#ref-landau_omniscapejl_2021" role="doc-biblioref">2021</a>)</span> esse valor não deve ultrapassar 10% do raio.</p>
 <p>Consideramos o uso de <em>kernel</em> sobre a superfície de resistência como entrada para o Omniscape, entretanto, os resultados da análise com <em>kernel</em> diluíram muito corredores e passagens menores, por conta da natureza de suavização da superfície de resistência pelo <em>kernel</em>. Dessa maneira, ao utilizar a resistência sem <em>kernel</em> como entrada, preservamos estruturas espaciais menores, mas importantes para a conectividade da paisagem.</p>
 <p>O <em>output</em> do Omniscape são três arquivos de conectividade relacionados:</p>
 <ul>
@@ -582,45 +593,23 @@ div.csl-indent {
 <li><code>cummulative_current</code> é a corrente acumulada, levando em conta a configuração espacial e os valores de resistência.</li>
 <li><code>normalized_current</code> equivale a <span class="math inline">\(\frac{cumulative\_current}{flow\_current}\)</span> e controla o efeito da configuração espacial do cálculo de conectividade.</li>
 </ul>
-<p>Como é uma análise com uma demanda computacional alta, recortamos regiões de interesse em quadrados de 4.000 pixels para cada bioma e avaliamos os diversos cenários para melhor ajuste de parâmetros e tomadas de decisão, como utilizar <code>cumulative_current</code> ou <code>normalized_current</code> e utilizar a resistência ou a superfície gerada pelo <em>kernel</em>.</p>
-<p>Algumas regiões de teste foram selecionadas para cada bioma.</p>
-<div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/conectividade_amazonia.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;2: Conectividade: análise de circuitos para uma região de teste na Amazônia.</figcaption>
-</figure>
-</div>
-<div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/conectividade_caatinga.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;3: Conectividade: análise de circuitos para uma região de teste na Caatinga.</figcaption>
-</figure>
-</div>
-<div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/conectividade_cerrado.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;4: Conectividade: análise de circuitos para uma região de teste na Cerrado.</figcaption>
-</figure>
-</div>
-<div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/mata_atlantica.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;5: Conectividade: análise de circuitos para uma região de teste na Mata Atlântica.</figcaption>
-</figure>
-</div>
-<div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/pampa.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;6: Conectividade: análise de circuitos para uma região de teste no Pampa.</figcaption>
-</figure>
-</div>
-<div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/conectividade_pantanal.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;7: Conectividade: análise de circuitos para uma região de teste no Pantanal.</figcaption>
-</figure>
-</div>
+<p>Devido à alta demanda computacional a superfície de resistência para todo o Brasil foi fragmentada em 9 tiles com o dobro do raio (total de 400 pixels) de sobreposição entre eles, dessa maneira após o processamento individual dos tiles, foram removidos os 200 pixels de cada borda sobreposta, eliminando o efeito de borda para a execução o mosaico dos tiles, resultando na superfície de conectividade para todo o Brasil. Essa fragmentação para o processamento de grandes regiões é importante para que as análises possam ser feitas com menos poder computacional, sem prejuízo nos resultados.</p>
 <!--
+Como é uma análise com uma demanda computacional alta, recortamos regiões de interesse em quadrados de 4.000 pixels para cada bioma e avaliamos os diversos cenários para melhor ajuste de parâmetros e tomadas de decisão, como utilizar `cumulative_current` ou `normalized_current` e utilizar a resistência ou a superfície gerada pelo _kernel_.
+
+Algumas regiões de teste foram selecionadas para cada bioma.
+
+![Conectividade: análise de circuitos para uma região de teste na Amazônia.](figs/conectividade_amazonia.png){#fig-resilience width="600" fig-align="center"}
+
+![Conectividade: análise de circuitos para uma região de teste na Caatinga.](figs/conectividade_caatinga.png){#fig-resilience width="600" fig-align="center"}
+
+![Conectividade: análise de circuitos para uma região de teste na Cerrado.](figs/conectividade_cerrado.png){#fig-resilience width="600" fig-align="center"}
+
+![Conectividade: análise de circuitos para uma região de teste na Mata Atlântica.](figs/mata_atlantica.png){#fig-resilience width="600" fig-align="center"}
+
+![Conectividade: análise de circuitos para uma região de teste no Pampa.](figs/pampa.png){#fig-resilience width="600" fig-align="center"}
+
+![Conectividade: análise de circuitos para uma região de teste no Pantanal.](figs/conectividade_pantanal.png){#fig-resilience width="600" fig-align="center"}
 
 Por fim, calculamos os valores de Z para cada pixel ($Z_{pixel}$) ao subtrair o valor da média ($\mu$) e dividindo o resultado pelo desvio padrão ($\sigma$) e multiplicando tudo por -1, como mostrado na fórmula a seguir:
 $$
