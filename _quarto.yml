@@ -24,6 +24,7 @@ website:
       - text: Tutoriais
         menu:
          - text: Heterogeneidade da paisagem
+           href: https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/1_landforms.html
          - text: Resistência da paisagem
            href: https://resiliencia-climatica-brasil.github.io/Resistencia/
          - text: Conectividade local 
