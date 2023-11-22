@@ -17,6 +17,7 @@ project:
     - Conectividade_local.qmd
     - Resiliencia_da_paisagem.qmd
     - Resultados.qmd
+    - Aplicacoes.qmd
     - references.qmd
 website: 
   navbar:
@@ -53,6 +54,7 @@ website:
           - Conectividade_local.qmd
           - Resiliencia_da_paisagem.qmd
           - Resultados.qmd
+          - Aplicacoes.qmd
           - references.qmd          
   page-navigation: true
   favicon: figs/1667403883848_theme_logo.png
