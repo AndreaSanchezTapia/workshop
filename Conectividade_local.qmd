@@ -2,58 +2,105 @@
 
 ## Bases de dados utilizadas
 
-Os dados espaciais primários utilizados para calcular a superfície de resistência foram a camada de cobertura do solo gerada pelo MapBiomas [@mapbiomas_project_collection_2020]. A esta base foram incluídas as bases de estradas pavimentadas e não pavimentadas fornecida pelo IBGE (BCIM250, ano 2021) e a base de infraestrutura energética fornecidas por...
-<!-- Precisamos atualizar a explicação das bases usadas na camada de conectividade --> 
+A superfície de resistência foi calculada usando como base os dados de uso e cobertura do solo fornecida pelo MapBiomas coleção 8.0 para o ano de 2021 [@mapbiomas_project_collection_2020]. Complementamos essa camada do uso do solo com informações sobre: 
+::: {}
+1. Largura dos rios;
+2. Presença de infraestruturas de transporte;
+3. Infraestruturas de energia. 
+:::
+
+As informações sobre largura dos rios foram derivadas a partir das camadas de águas do abertas do MapBiomas [@mapbiomas_project_collection_2020], a camada de bacias hidrográficas no nível 8 [Lehner &Grill (2013)]<!--COLOCAR NO ZOTERO--> e a camada de largura efetiva dos corpos d'água [Yamashida et al. 2014]<!--COLOCAR NO ZOTERO-->.
+
+As informações sobre infraestrutura de transporte foram originadas a partir das camadas de estradas pavimentadas, estradas não-pavimentadas e ferrovias fornecidas pelo Instituto Brasileiro de Geografia e Estatística (IBGE) (\[BCIM250, 2021\]) <!-- Isso é uma citação? --> (<https://www.ibge.gov.br/geociencias/cartas-e-mapas/bases-cartograficas-continuas/15759-brasil.html?=&t=downloads>).
+
+As bases de infraestrutura de energia correspondem às camadas de aerogeradores, centrais geradoras de energia fotovoltaicas, linhas de transmissão de energia eólica e usinas termelétricas fornecidas pela Agência Nacional de Energia Elétrica (ANEEL) (<https://gisepeprd2.epe.gov.br/WebMapEPE/>) e a camada de linhas de transmissão de energia fornecida pelo IBGE (\[BCIM250, 2021\]).
+
+<!--
+precisamos citar:
+IBGE
+ANEEL
+YAMASHIDA 2014
+LEHNER & GRILL
+MAPBIOMAS NOVA  
+ -->
 
 ## Cálculo de resistência {-}
+<!--
+Estou atualizando as informações com o que revisamos do tutorial de resistência
+ -->
 
-Os valores de resistência são medidas relativas do grau de dificuldade de deslocamento dos organismos nos diferentes tipos de cobertura do solo. Esses valores foram atribuídos por bioma, seguindo a premissa de que quanto maior for a diferença estrutural entre um dado tipo de cobertura do solo e a vegetação original do bioma, maior será o valor de resistência da classe de cobertura do solo em questão.
+Os valores de resistência são medidas relativas do grau de dificuldade de deslocamento dos organismos nos diferentes tipos de cobertura do solo. Esses valores foram atribuídos por bioma, seguindo a premissa de que quanto maior for a diferença estrutural entre um dado tipo de cobertura do solo e a vegetação original do bioma, maior será o valor de resistência da classe de cobertura do solo em questão. 
 
-A superfície de cobertura do solo do MapBiomas foi reamostrada para gerar pixels com 90 m de tamanho, aproximadamente. Também convertemos o arquivo vetorial de estradas para o formato matricial, com pixels de tamanho aproximado de 90 m. Conjugamos, por álgebra de mapas, as bases matriciais do MapBiomas e de estradas, de tal maneira que todos os pixels da base do MapBiomas que se sobrepuseram a um pixel de estrada assumiram um novo valor correpondentes a um pixel de estrada pavimentada ou não pavimentada.
-<!-- Necessário complementar a explicação da infraestrutura de energia --> 
-Os pixels do mapa consolidado de cobertura do solo, já incluindo as estradas pavimentadas e não pavimentadas como novas classes, receberam, separadamente por bioma, valores de resistência que buscaram traduzir, comparativamente entre as classes, o grau de dificuldade de movimentação da biodiversidade numa dada classe de cobertura do solo. Os valores de resistência dos pixels de cada uma das classes foram atribuídos, por bioma, pela equipe do projeto e podem ser vistos na @tbl-resistencia.
-<!-- Falta incluir a explicação sobre a análise da largura dos rios --> 
+As análises de mapeamento das áreas resilientes às mudanças climáticas estão na resolução espacial de 90 metros. Desta forma, reamostramos os dados do MapBiomas [@mapbiomas_project_collection_2020] , que estão na resolução de 30 metros, para uma resolução de 90 metros e as diferentes classes de uso do solo receberam valores de resistência baseados na a diferença estrutural da classe de cobertura do solo para o hábitat original do bioma [@tbl-resistencia - N: 1 - 28].
 
-|Classe de cobertura do solo|Amazônia|	Caatinga|	Cerrado	|MataAtlântica|	Pampa	| Pantanal|
-|---:|--:|--:|--:|--:|--:|--:|
-|Aquaculture|-	|10	|7	|7	|7	|- |
-|Beach, Dune and Sand Spot|2	|2	|2	|2	|2	|- |
-|Citrus|-	|-	|10	|10	|-	|- |
-|Coffee|-	|7	|10	|10	|-	|- |
-|Cotton|7	|7	|10	|-	|-	|- |
-|Estradas não pavimentadas|10	|10	|7	|10	|7	|7 |
-|Estradas pavimentadas|20	|20	|20	|20	|20	|20|
-|Forest Formation|1	|1	|1	|1	|1	|1 |
-|Forest Plantation|7	|2	|7	|3	|10	|5 |
-|Grassland|2	|1	|1	|2	|1	|1 |
-|Herbaceous Sandbank Vegetation	|-	|1	|-	|2	|1	|- |
-|Mangrove|1	|1	|1	|1	|-	|- |
-|Mining|20	|20	|20	|20	|20	|20|
-|Mosaic of Uses|7	|7	|10	|10	|10	|10|
-|Other non Forest Formations|-	|-	|-	|7	|-	|- |
-|Other non Vegetated Areas|-	|9	|10	|10	|10	|10|
-|Other Perennial Crops|7	|7	|10	|10	|-	|- |
-|Other Temporary Crops|15	|7	|10	|10	|10	|10|
-|Pasture|15	|7	|5	|9	|5	|7 |
-|Rice|-	|-	|10	|10	|10	|- |
-|River, Lake and Ocean|2	|5	|5	|5	|5	|2 |
-|Rocky Outcrop|-	|1	|2	|2	|2	|- |
-|Salt Flat|2	|1	|2	|2	|-	|- |
-|Savanna Formation|2	|1	|1	|2	|-	|2 |
-|Soybean|15	|10	|10	|10	|10	|10|
-|Sugar cane|15	|10	|10	|10	|-	|10|
-|Urban Area|20	|20	|20	|20	|20	|20|
-|Wetland| 1	|-	|1	|1	|1	|1 |
-|Wooded Sandbank Vegetation|-	|1	|-	|1	|1	|- |
-: Valores de resistência para cada tipo de cobertura por bioma. {#tbl-resistencia}
+Para avaliar o efeito das larguras do rio na movimentação das espécies foi necessário avaliar o tamanho máximo do corpo d'água regionalmente. Para isso, a classe do MapBiomas equivalente a águas abertas (rios, lagos e oceanos) foi subdividida em quatro classes distintas de acordo com a largura dos corpos d’água já que rios mais largos tendem a ser barreiras mais resistêntes à movimentação das espécies. Para fazer a divisao, extraímos a máscara de corpos d’água e dividimos essa classe única em pedaços menores, regionalizando suas larguras por trechos que foram utilizados como unidades espaciais de consulta da base de largura efetiva máxima dos corpos d’água, de margem a margem (base GWD – LR de **Yamashida et al. 2014)**. Todos os corpos d'água foram então divididos em quatro classes de resistência [@tbl-resistencia - N: 29 - 32]: :::{}    
+i. 1 a 250 metros, 
+ii. 250 a 1000 metros, 
+iii. 1000 a 4000 metros e 
+iv. maiores de 4000 metros :::.
 
-<!-- Precisa atualizar a tabela e também incluir o fluxograma da análise que Marina gerou --> 
+As camadas de infraestrutura de transportes e energia estavam em formatos vetoriais e foram convertidos para *raster*, com pixels de tamanho aproximado de 90 m e agrupados em um único arquivo matricial que foi sobreposto sobre ao mapa de uso do solo do Mapbiomas e da largura dos rios, sendo que prevalecia o valor do pixel com resistência mais alta nas situações em que havia sobreposição entre pixels de infraestrutura, uso do solo ou largura de rios. 
+
+Os pixels do mapa consolidado de cobertura do solo, largura dos rios e infraestrutura de transportes e energia receberam valores de resistência em cada bioma que buscaram traduzir o grau de dificuldade de movimentação da biodiversidade numa dada classe de cobertura do solo. Os valores de resistência dos pixels de cada uma das classes foram atribuídos pela equipe do projeto, separadamente por bioma, e podem ser vistos na @tbl-resistencia e o **mapa final de resistência** (@fig_res) foi usado como base do cálculo de **Conectividade Local**.
+
+|N|Classe de cobertura do solo|Amazônia|Caatinga|Cerrado|Mata Atlântica|Pampa|Pantanal|
+|--:|--:|--:|--:|--:|--:|--:|--:|
+|1|Afloramento rochoso|3|1|2|3|2|-|
+|2|Algodão|7|7|10|-|-|-|
+|3|Aquacultura|-|10|7|7|7|-|
+|4|Área urbana|20|20|20|20|20|20|
+|5|Áreas alagadas (Campos e Pântanos)|1|-|1|2|1|1|
+|6|Arroz|-|-|10|10|10|-|
+|7|Café|-|7|10|4|-|-|
+|8|Cana de açúcar|15|10|10|10|-|10|
+|9|Citrus|-|-|10|4|-|-|
+|10|Dendê|10|-|-|-|-|-|
+|11|Floresta alagada|1|-|-|-|-|-|
+|12|Formação campestre (campos)|1|1|1|2|1|1|
+|13|Formação de savana|1|1|1|2|-|1|
+|14|Formação florestal|1|1|1|1|1|1|
+|15|Mangue|1|1|1|1|-|-|
+|16|Mineração|20|20|20|20|20|20|
+|17|Mosaico de usos|10|7|10|10|10|7|
+|18|Outras áreas não vegetadas|10|10|10|10|10|10|
+|19|Outras culturas perenes|10|7|7|4|-|-|
+|20|Outras culturas temporárias|15|7|10|10|10|5|
+|21|Outras formações não florestais|-|7|-|2|-|-|
+|22|Pastagem|17|7|7|9|7|7|
+|23|Praia, duna e areal|2|2|2|2|2|2|
+|24|Salina (Apicum)|2|1|2|2|-|-|
+|25|Silvicultura (floresta plantada)|7|2|7|3|10|5|
+|26|Soja|17|10|10|10|10|10|
+|27|Vegetação de restinga arbórea|-|1|-|1|1|-|
+|28|Vegetação de restinga herbácea|-|1|-|2|1|-|
+|29|Corpos d’águas abertas até 250 metros|2|2|2|2|2|2|
+|30|Corpos d’águas abertas de 250 a 1000 metros|5|5|5|5|5|5|
+|31|Corpos d’águas abertas de 1000 a 4000 metros|10|10|10|10|10|10|
+|32|Corpos d’águas abertas acima de 4000 metros|12|12|12|12|12|12|
+|33|Aerogeradores|15|15|15|15|15|15|
+|34|Centrais geradoras de energia solar|15|17|17|17|17|17|
+|35|Estradas não pavimentadas|10|10|7|10|7|3|
+|36|Estradas pavimentadas|20|20|20|20|20|20|
+|37|Ferrovias|10|10|10|10|10|10|
+|38|Linhas de transmissão (tradicionais e anexas ao sistema eólico)|10|7|7|7|7|7|
+|39|Termelétricas|20|20|20|20|20|20|
+: Valores de resistência para as 39 classes de uso e cobertura do solo - resultante da junção das superfícies de uso do solo do MapBiomas (N: 1 - 28), as separações do tamanho dos rios por bacias hidrográficas (N 29 - 32) e de infraestrutura de transporte e energia (N: 33 - 39).{#tbl-resistencia}
+
+<!-- Precisa atualizar a tabela e também incluir o fluxograma da análise que 
+Marina gerou 
+
+23-11-2023 A TABELA E A EXPLICAÇÃO JÁ FORAM ATUALIZADAS 
+--> 
+
+![Mapa final de classificação da resistência à movimentação de organismos dos diferentes tipos de uso e cobertura da terra.](figs/C2_Resistencia.png){#fig-res width="600" fig-align="center"}
+
+<!--
+ESTOU RETIRANDO A EXPLICAÇÃO DO KERNEL
 
 ## Aplicação do filtro kernel
 
 Depois de atribuídos os valores de resistência, aplicamos à superfície gerada a função _kernel_ de decaimento linear. Esta análise considerou, numa janela móvel de 23 pixels (~2070 m), o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior que os mais distantes. Desta maneira, a função _kernel_ nos auxilia na tarefa de encontrar os melhores caminhos de deslocamento na paisagem, ou seja, aqueles caminhos que oferecem menor resistência (@fig-res).
-
-![Mapa final de classificação da resistência à movimentação de organismos dos diferentes tipos de uso e cobertura da terra.](figs/C2_Resistencia.png){#fig-res width="600" fig-align="center"}
+-->
 
 ## Conectividade: análise de circuitos
 
