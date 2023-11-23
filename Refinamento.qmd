@@ -40,10 +40,8 @@ A descrição sobre a a análise da largura dos rios para definir valores de res
 -->
 
 ## Análise de conectividade local
->> Líder: Marina/Alisson
-Para a análise de conectividade local tínhamos duas opções, a utilização de filtros (Kernel) ou a utilização da análise de circuitos (derivadas do circuitscape).
-A utilização de Kernel traz uma contextualização da resistência de acordo com seu entorno, inicialmente com tamanho 23x23 e pesos seguindo decaimento linear com relação ao centro do Kernel. Por ser uma análise mais sofisticada que o Kernel, cujo resultado é equivalente à passagem de um filtro passa-baixa, optamos pela utilização do Omniscape (técnica de circuitscape omnidirecional), que segue a teoria de circuitos, análoga à análise de resistência e correntes elétricas, trazendo a possibilidade de identificar corredores e onde estão localizados os acúmulos de corrente.
-A descrição sobre a análise de circuitos (omniscape) está indicada no item xx [incluir link].
+Para a análise de conectividade local, inicialmente seguimos a metodologia conduzida para a América do Norte, que utilizada filtros kernel como um proxy de conectividade. Em conversas com o time que conduziu o estudo nos EUA, nos foi indicado que o filtro Kernel teria resultados semelhantes a uma análise de circuitos (derivada da ferramenta circuitscape), mas com uma capacidade computacional muito menor, o que facilitaria a análise dada a amplitude territorial.
+A utilização de Kernel traz uma contextualização da resistência de acordo com seu entorno. O filtro considera um tamanho de 23x23 pixels e pesos seguindo decaimento linear com relação ao centro do Kernel. No nosso caso, optamos pela utilização da análise de circuitos com base no omniscape (técnica de circuitscape omnidirecional), por ser uma análise mais sofisticada que o Kernel. O resultado é equivalente à passagem de um filtro passa-baixa. Essa análise segue a teoria de circuitos, análoga à análise de resistência e correntes elétricas, trazendo a possibilidade de identificar corredores e onde estão localizados os acúmulos de corrente. A descrição sobre a análise de circuitos (omniscape) está indicada no item xx [incluir link].
 
 <!---
 ## Resiliência (bivariada)
