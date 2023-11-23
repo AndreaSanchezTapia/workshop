@@ -12,14 +12,13 @@ Abaixo, são incluídos os principais refinamentos realizados, assim como a expl
 As premissas utilizadas no estudo estão descritas no item xx (incluir link). O glossário de termos consta no item xx [incluir link].
 Interessante falar que não usamos a premissa de biodiversidade?
 Descrever decisão por termo heterogeneidade da paisagem. Riqueza de solos também (ao invés de diversidade).
- 
-## Eco-georegiões (antiga geophysical settings) e janelas móveis
->> Líder: Alisson
-[Descrição sobre camada de eco-geo regiões que substituiria geophysical settings e posterior decisão de utilizar janelas móveis]
-O nome utilizado no trabalho anterior de geophysical settings potencialmente traria confusão, pois sítios geofísicos poderiam se referir a sítios diferenciados por características geofísicas, as quais não foram utilizadas no trabalho. Com isso chamamos essa camada de eco-geo regiões, que seriam geradas pela intersecção de regiões ecofisiográficas (ecorregiões) e domínios geológicos. Após o Workshop #1, a sugestão de um dos especialistas (geólogo de formação) nos levou a considerar a substituição de geologia por geomorfologia na geração das eco-geo regiões, visto que a diversidade de espécies estaria melhor relacionada com geomorfologia do que com geologia.
-O objetivo da utilização dessas regiões seria pela regionalização dos valores de heterogeneidade da paisagem e de conectividade, visto que temos o interesse em saber qual é a posição dos valores (estatisticamente) relacionados à região em que os mesmos estão inseridos, isso a título de se gerar uma contextualização regional das características de heterogeneidade e conectividade. Entretanto, no mesmo Workshop nos foi sugerida a utilização de janelas móveis para essa regionalização, ao invés de se regionalizar as variáveis dentro de uma eco-geo região, eles seriam regionalizados dentro de uma janela móvel que passaria por todo o Brasil.
-Essa técnica de janelas móveis, também conhecida como filtros ou convolução, foi a técnica selecionada para a regionalização dos dados e determinamos o seu tamanho (circular de raio 200 pixels) através de testes em que não se observassem padrões espaciais destoantes das estruturas espaciais conhecidas (e.g., descontinuidades espaciais abruptas inexistentes).
- 
+-->
+
+## Eco-georegiões (antiga camada **geophysical settings**) e janelas móveis
+No estudo original conduzido para a América do Norte, foi utilizada uma camada chamada **geophysical settings** que considerava variáveis de pedologia e eco-regiões, de modo a regionalizar o território e incluir a variabilidade de ambientes por região. O objetivo da utilização dessas regiões seria pela regionalização dos valores de heterogeneidade da paisagem e de conectividade, visto que temos o interesse em saber qual é a posição dos valores (estatisticamente) relacionados à região em que os mesmos estão inseridos, gerando uma contextualização regional das características de heterogeneidade e conectividade. No nosso caso, consideramos que o nome utilizado no trabalho anterior poderia potencialmente trazer confusão, pois sítios geofísicos poderiam se referir a sítios diferenciados por características geofísicas, as quais não foram utilizadas no trabalho. Com isso decidimos alterar o nome dessa camada para eco-georegiões, que seriam geradas pela intersecção de regiões ecofisiográficas (eco-regiões) e domínios geológicos. Rodamos os resultados iniciais da nossa análise considerando a regionalização por eco-georegiões.
+Após as discussões com especialistas durante a Oficina #1, a sugestão de um dos especialistas (geólogo de formação) nos levou a considerar a substituição da variável de geologia por uma de geomorfologia na geração das eco-geo regiões, visto que a diversidade de espécies estaria melhor relacionada com geomorfologia do que com geologia. Entretanto, na mesma oficina foi sugerida a utilização de janelas móveis para realizar a regionalização: ao invés de regionalizar as variáveis dentro de uma eco-georegião, elas seriam regionalizados dentro de uma janela móvel que passaria por todo o Brasil, evitando problemas de quebras abruptas no mapeamento. Essa técnica de janelas móveis, também conhecida como filtros ou convolução, foi a técnica selecionada para a regionalização dos dados. O tamanho da janela móvel na análise (circular com raio de 200 pixels) foi determinada através de testes em que não se observassem padrões espaciais destoantes das estruturas espaciais conhecidas (e.g., descontinuidades espaciais abruptas inexistentes).
+
+<!---
 ## Tamanho do raio da análise 
 >> Líder: Lucas
 A descrição sobre a definição do tamanho de raio usado na análise está indicada no item xx [incluir link]. (descrevi no parágrafo anterior, caso queira utilizar).
@@ -37,13 +36,16 @@ Com base nas análises conduzidas, foram encontrados semelhantes por fitofisiono
 ## Largura dos rios no mapa de resistência 
 >> Líder: Marina
 A descrição sobre a a análise da largura dos rios para definir valores de resistência está indicada no item xx [incluir link].
- 
+
+-->
+
 ## Análise de conectividade local
 >> Líder: Marina/Alisson
 Para a análise de conectividade local tínhamos duas opções, a utilização de filtros (Kernel) ou a utilização da análise de circuitos (derivadas do circuitscape).
 A utilização de Kernel traz uma contextualização da resistência de acordo com seu entorno, inicialmente com tamanho 23x23 e pesos seguindo decaimento linear com relação ao centro do Kernel. Por ser uma análise mais sofisticada que o Kernel, cujo resultado é equivalente à passagem de um filtro passa-baixa, optamos pela utilização do Omniscape (técnica de circuitscape omnidirecional), que segue a teoria de circuitos, análoga à análise de resistência e correntes elétricas, trazendo a possibilidade de identificar corredores e onde estão localizados os acúmulos de corrente.
 A descrição sobre a análise de circuitos (omniscape) está indicada no item xx [incluir link].
- 
+
+<!---
 ## Resiliência (bivariada)
 >> Líder: Luciano
 [Explicar nova apresentação do resultado.]
