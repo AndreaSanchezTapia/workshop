@@ -17,8 +17,8 @@ Está prevista a realização de três oficinas, nas quais participarão especia
 |Oficina|Data prevista|Modalidade|Pontos discutidos|
 |:--|:--|:--|:--|
 |Oficina #1| 13/06 e 15/06|Virtual|Introdução geral do projeto; apresentação das análises e dos resultados preliminares; momento de perguntas e respostas|
-|Oficina #2| set/outubro (a confirmar)|Virtual|Devolutiva e refinamento das análises; discussão de valores de resistência e avaliação dos resultados das camadas conforme ajustes feitos após Oficina #1|
-|Oficina #3|nov/dez (a confirmar)|presencial (a confirmar)| Apresentação dos resultados obtidos após Oficina #2 e avaliação dos resultados|
+|Oficina #2| 10/10 e 19/10|Virtual|Devolutiva da Oficina #1 e apresentação do refinamento das análises, conforme ajustes feitos após discussões na Oficina #1|
+|Oficina #3|nov/dez (a confirmar)|Virtual ou presencial (a confirmar)| Apresentação e discussão dos resultados finais obtidos após Oficina #2|
 
 
 
