@@ -6,9 +6,27 @@ Os mapas das camadas principais e das variáveis intermediárias da análise pod
 
 Abaixo são descritos resultados principais por bioma e alguns padrões gerais obtidos para cada uma das camadas.
 
-<!---
 
+## Mapas por bioma
+
+<!---
+Sugiro criar esse item e incluir após a frase abaixo as figuras com os mapas (que está no item de conectividade). Daí depois descrevemos cada uma das camadas. O que acham?
 -->
+
+São apresentados abaixo os mapas de heterogeneidade da paisagem, conectividade local e resiliência da paisagem por bioma: Amazônia, Caatomga, Cerrado, Mata Atlântica, Pampa e Pantanal.
+
+![Recorte das camadas de (A) **Heterogeneidade da paisagem**, (B) **Conectividade local** e (C) **Resiliência da paisagem** para a Amazônia.](figs/results_bybiome/Amazonia_resultados.png){#fig-biomas-AM width="600" fig-align="center"}
+
+![Recorte das camadas de (A) **Heterogeneidade da paisagem**, (B) **Conectividade local** e (C) **Resiliência da paisagem** para a Caatinga.](figs/results_bybiome/Caatinga_resultados.png){#fig-biomas-CA width="600" fig-align="center"}
+
+![Recorte das camadas de (A) **Heterogeneidade da paisagem**, (B) **Conectividade local** e (C) **Resiliência da paisagem** para o Cerrado.](figs/results_bybiome/Cerrado_resultados.png){#fig-biomas-CE width="600" fig-align="center"}
+
+![Recorte das camadas de (A) **Heterogeneidade da paisagem**, (B) **Conectividade local** e (C) **Resiliência da paisagem** para a Mata Atlântica.](figs/results_bybiome/Atlantic_resultados.png){#fig-biomas-AT width="600" fig-align="center"}
+
+![Recorte das camadas de (A) **Heterogeneidade da paisagem**, (B) **Conectividade local** e (C) **Resiliência da paisagem** para a Pampa.](figs/results_bybiome/Pampa_resultados.png){#fig-biomas-PM width="600" fig-align="center"}
+
+![Recorte das camadas de (A) **Heterogeneidade da paisagem**, (B) **Conectividade local** e (C) **Resiliência da paisagem** para a Pantanal.](figs/results_bybiome/Pantanal_resultados.png){#fig-biomas-PA width="600" fig-align="center"}
+
 
 ## Heterogeneidade da paisagem [(link)](https://projeto-resiliencia-tnc.hub.arcgis.com/maps/30e4cffc33314e908cba249ef565d41c/explore)
 
@@ -36,42 +54,36 @@ No nível de bioma, todos eles apresentaram a variedade de formas do relevo e a 
 
 Com relação a algumas regiões de destaque dentro dos biomas, é importante mencionar:
 - Na Amazônia, destacam-se o entorno dos vales dos rios menores (ex. Parque do Xingu), as regiões montanhosas ao norte do bioma (ex. Raposa Serra do Sol) e as regiões com maior rugosidade no relevo (ex. Território Kayapó) (@fig-biomas-AM);
+
 - Na Caatinga, é possível identificar alta heterogeneidade da paisagem nas áreas de alta rugosidade do relevo (ex. Sítio Boqueirão), nas variações de declividade bruscas (ex. Chapada do Araripe) e nos vales de rios (ex. Assunção do Piauí) (@fig-biomas-CA);
+
 - No Cerrado, observa-se alta heterogeneidade nas transições dos platôs das Chapadas para as áreas baixas (ex. Chapada dos Veadeiros, Chapadas do Rio São Franscisco), em localidades com alta rugosidade do relevo (ex. Serra da Canastra) e locais com variação de altitude (ex. Patamares Ocidentais da Bacia do Paraná). Nas áreas de relevo mais planas, destacam-se os rios Araguaia e das Mortes como as áreas de alta heterogeneidade, principalmente em função da presença de grandes áreas úmidas no entorno (@fig-biomas-CE); <!-- Lucas, dá para dizer isso das áreas úmidas? -->
+
 - Na Mata Atlântica, as áreas de alta heterogeneidade da paisagem estão localizadas próximos aos vales das redes fluviais na região oeste do bioma (ex. Araçatuba, Galinhos), nas áreas de transições abruptas de declividade (ex. Bom Jardim da Serra) e com alta rugosidade do relevo (ex. Pacatuba-SE), e em localidades nas grandes cadeias de montanhas (ex. Serra da Mantiqueira, Serra do Mar) (@fig-biomas-AT);
-- No Pantanal, as localidades com maior heterogeneidade da paisagem foram próximas a rios (ex. Piquiri, São Lourenço e Taquari), lagoas (ex. Nhecolândia) e regiões mais altas (ex. Serra do Amolar), contrastantes com o entorno plano; (@fig-biomas-PM) <!--, provavelmente devido ao contraste da variação de relevo com o entorno, visto que pequenas declividades em um ambiente muito plano são relevantes na heterogeneidade da paisagem (@fig-biomas-PM). Dentre regiões altas inseridas no Pantanal, destacamos a paisagem da Serra do Amolar (borda oeste do Pantanal), ... -->
+
 - No Pampa, a heterogeneidade da paisagem se destaca em regiões com alta rugosidade do relevo (ex. Serra do Sudeste, APA do Ibirapuitã, na Campanha, e na região nordeste do Estado), e próximo a rios (ex. rio Jacuí) e lagos (ex. entorno da lagoa dos Patos) (@fig-biomas-PA).
+
+- No Pantanal, as localidades com maior heterogeneidade da paisagem foram próximas a rios (ex. Piquiri, São Lourenço e Taquari), lagoas (ex. Nhecolândia) e regiões mais altas (ex. Serra do Amolar), contrastantes com o entorno plano; (@fig-biomas-PM) <!--, provavelmente devido ao contraste da variação de relevo com o entorno, visto que pequenas declividades em um ambiente muito plano são relevantes na heterogeneidade da paisagem (@fig-biomas-PM). Dentre regiões altas inseridas no Pantanal, destacamos a paisagem da Serra do Amolar (borda oeste do Pantanal), ... -->
    
 
+## Conectividade Local [(link)](https://projeto-resiliencia-tnc.hub.arcgis.com/maps/c7725afd65da4198bba59a7ccde49fce/explore)
 
-## Conectividade Local[(link)](https://projeto-resiliencia-tnc.hub.arcgis.com/maps/c7725afd65da4198bba59a7ccde49fce/explore)
+A conectividade local da paisagem apresenta um padrão diferente daquele apresentado na camada de heterogeneidade da paisagem, mostrando uma divisão entre regiões muito conectadas na região norte e outras com conectividade mais baixa nas região central e sudeste [Figura 5]. Isso se deve ao histórico de ocupação dessas regiões e do uso atual com relação a agricultura e ocupação urbana. <!-- Importante discutir mais o padrão geral para o país -->
 
-![Resistência da paisagem, baseada na dificuldade de locomoção imposta pelos diferentes usos da terra.](figs/C2_Resistencia.png){#fig-conect-original width="600" fig-align="center"}
+![Resistência da paisagem, baseada na dificuldade de movimentação das espécies imposta pelos diferentes usos da terra.](figs/C2_Resistencia.png){#fig-conect-original width="600" fig-align="center"}
 
-A conectividade local no bioma amazônico tende a ser alta, as áreas de baixa conectividade estão situadas principalmente no "Arco do Desmatamento", nas regiões do Sul e Leste do bioma, e ao longo dos maiores rios da região (@fig-biomas-AM B**FIGURA para Amazonia esta com o valor invertido para conectividade**). <!-- Isso reflete muito na forma de expansão do uso da terra no bioma, onde a exploração de recursos madeireiros, a expansão da urbanização e a movimentação da maior quantidade de bens no bioma ocorrem ao longo dos rios e a maior pressão de supressão de habitats naturais para expansão do agronegócio ocorrem na região sul e ao leste do bioma. --> 
+Dentro de cada bioma, podemos destacar alguns padrões gerais:
+- Na Amazônia, a conectividade local tende a ser alta de modo geral. As áreas de baixa conectividade estão situadas principalmente no "Arco do Desmatamento", nas regiões do sul e leste do bioma, e ao longo dos grandes rios da região (ex. [citar alguns]) (@fig-biomas-AM B**FIGURA para Amazonia esta com o valor invertido para conectividade**). <!-- Isso reflete muito na forma de expansão do uso da terra no bioma, onde a exploração de recursos madeireiros, a expansão da urbanização e a movimentação da maior quantidade de bens no bioma ocorrem ao longo dos rios e a maior pressão de supressão de habitats naturais para expansão do agronegócio ocorrem na região sul e ao leste do bioma. --> 
 
-![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Amazônia](figs/results_bybiome/Amazonia_resultados.png){#fig-biomas-AM width="600" fig-align="center"}
+- Na Caatinga, a conectividade local é alta principalmente na porção ocidental do bioma, enquanto a porção leste compreende a região de maior contraste entre os usos e cobertura do solo, o que diminui o grau de conectividade local nessa região em direção ao litoral. As áreas menos conectadas correspondem aos grandes centros urbanos como Fortaleza. <!-- talvez fontes de energia também sejam evidentes -->  <!--A expressão desse padrão deve refletir a desenvolvimento agrícola limitado se comparado a outras regiões do país e a baixa densidade populacional em áreas mais centrais do bioma. --> O Rio São Francisco aparece também como uma importante barreira geográfica no bioma, devido a sua extensa largura em alguns trechos na região central (@fig-biomas-CA B). 
 
-Na Caatinga, a conectividade local é alta principalmente na porção ocidental do bioma, enquanto a porção leste compreende a região de maior contraste entre os usos e cobertura do solo, o que diminui o grau de conectividade local nessa região em direção ao litoral. As áreas menos conectadas correspondem aos grandes centros urbanos como Fortaleza. <!-- talvez fontes de energia também sejam evidentes -->  <!--A expressão desse padrão deve refletir a desenvolvimento agrícola limitado se comparado a outras regiões do país e a baixa densidade populacional em áreas mais centrais do bioma. --> O Rio São Francisco aparece também como uma importante barreira geográfica no bioma, devido a sua extensa largura em alguns trechos no centro da Caatinga (@fig-biomas-CA B). 
+- No Cerrado, as regiões norte, leste e oeste possuem altos valores de conectividade. Na porção central e sul do bioma concentram-se as áreas com baixa conectividade, sendo as menos conectadas aquelas próximas a grandes centros urbanos como Goiânia, Campo Grande e Brasília. Na Chapada do Rio São Franscisco (Bahia), há também baixa conectividade nas áreas de agricultura. Por outro lado, a maior parte da região menos conectada possui áreas de alta e média conectividade dentro delas (@fig-biomas-CE B). 
 
-![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Caatinga](figs/results_bybiome/Caatinga_resultados.png){#fig-biomas-CA width="600" fig-align="center"}
+- Na Mata Atlântica, a conectividade local é amplamente distribuída <!-- não entendi bem o que significaria "amplo" // Milena: também não entendi -->, porém espacialmente estruturado. Regiões de alta conectividade local concentram-se ao sul do bioma com diminuição da conectividade em direção ao limite norte, onde então um padrão bifurcado de áreas de alta conectividade emerge novamente, porém interposto por áreas de conectividade moderada (@fig-biomas-AT A). As áreas de menor conectividade, principalmente localizadas na maior extensão longitudinal do bioma, correspondem a grandes ocupações urbanas nos estados de São Paulo e Rio de Janeiro, áreas de maior densidade populacional do Brasil (@fig-biomas-CA B). <!-- Esse padrão espacialmente estruturado deve-se principalmente ao padrão ocupação humana e histórico regional das atividades ali desenvolvidas por se tratarem das regiões de maior expressão econômica do país desde o século XXXXXX. Ao longo dos X últimos séculos, a região sofreu intenso desmatamento o que levou a uma grande perda e isolamento de manchas de cobertura natural para dar lugar a atividades como mineração, cultivo de café e expansão da infraestrutura urbana como construção de reservatórios, ferrovias, malha rodoviária e moradia --> 
 
-No Cerrado, as regiões Norte, Leste e Oeste possuem altos valores de conectividade. Na porção central e sul do bioma concentram-se as áreas com baixa conectividade, sendo as menos conectadas aquelas próximas ao grandes centros urbanos como Goiânia, Campo Grande e Brasília. Na Chapada do Rio São Franscisco, na Bahia, há também baixa conectividade nas áreas de agricultura. Por outro lado, a maior parte da região menos conectada possui áreas de alta e média conectividade dentro delas (@fig-biomas-CE B). 
+- No Pampa, as localidades com alta conectividade estão localizadas na Serra do Sudeste, na Campanha (nas proximidades com a APA do Ibirapuitã) e na região das Missões. Em contraste, os locais com menor conectividade estão localizados próximo aos principais centros urbanos, como é o caso de Porto Alegre e região metropolitana, assim como nas proximidades com grandes rodovias (ex. ao longo da BR-116 e BR-287);
 
-![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para o Cerrado](figs/results_bybiome/Cerrado_resultados.png){#fig-biomas-CE width="600" fig-align="center"}
-
-Na Mata Atlântica, a conectividade local é amplamente distribuída <!-- não entendi bem o que significaria "amplo" -->, porém espacialmente estruturado. Regiões de alta conectividade local concentram-se ao sul do bioma com diminuição da conectividade em direção ao limite norte, onde então um padrão bifurcado de áreas de alta conectividade emerge novamente, porém interposto por áreas de conectividade moderada (@fig-biomas-AT A). As áreas de menor conectividade, principalmente localizadas na maior extensão longitudinal do bioma, correspondem a grandes ocupações urbanas nos estados de São Paulo e Rio de Janeiro, áreas de maior densidade populacional do Brasil (@fig-biomas-CA B). <!-- Esse padrão espacialmente estruturado deve-se principalmente ao padrão ocupação humana e histórico regional das atividades ali desenvolvidas por se tratarem das regiões de maior expressão econômica do país desde o século XXXXXX. Ao longo dos X últimos séculos, a região sofreu intenso desmatamento o que levou a uma grande perda e isolamento de manchas de cobertura natural para dar lugar a atividades como mineração, cultivo de café e expansão da infraestrutura urbana como construção de reservatórios, ferrovias, malha rodoviária e moradia --> 
-
-![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Mata Atlântica.](figs/results_bybiome/Atlantic_resultados.png){#fig-biomas-AT width="600" fig-align="center"}
-
-No Pantanal, a conectividade local é alta exceto pelo avanço da agricultura na borda leste do bioma <!-- tem umas áreas vermelhas dentro do bioma e na parte oeste. -->
-
-![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Pantanal.](figs/results_bybiome/Pantanal_resultados.png){#fig-biomas-PA width="600" fig-align="center"}
-
-
-No Pampa, as localidades com alta conectividade estão localizadas no Oeste do bioma (ex. região da APA do Ibirapuitã), na parte central, sendo as menores conectividades nos grandes centros urbanos como Porto Alegre. 
-
-![Recorte das camada de A)**Heterogeneidade da Paisagem**, B) **Conectividade Local** e C) **Resiliência da Paisagem** para a Pampa](figs/results_bybiome/Pampa_resultados.png){#fig-biomas-PM width="600" fig-align="center"}
+- No Pantanal, a conectividade local de modo geral é alta ao longo de todo bioma, com excessão nos limites do bioma, como é o caso da borda leste, em função do avanço da agricultura, no limite oeste, devido a xx, e em uma mancha central, em função de xx <!-- tem umas áreas vermelhas dentro do bioma e na parte oeste, importante indicar esse locais -->
 
 
 ## Resiliência da paisagem [(link)](https://projeto-resiliencia-tnc.hub.arcgis.com/maps/4e5b37de7de640c0a7b8505f6c72091d/explore)
