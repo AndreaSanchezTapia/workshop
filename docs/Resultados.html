@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./Aplicacoes.html" rel="next">
 <link href="./Resiliencia_da_paisagem.html" rel="prev">
 <link href="./figs/1667403883848_theme_logo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -58,7 +58,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "mais correspondências neste documento",
     "search-clear-button-title": "Limpar",
     "search-detached-cancel-button-title": "Cancelar",
-    "search-submit-button-title": "Enviar"
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 
@@ -83,7 +84,10 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Tutoriais</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tutoriais">    
-        <li class="dropdown-header">Heterogeneidade da paisagem</li>
+        <li>
+    <a class="dropdown-item" href="https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/1_landforms.html" rel="" target="">
+ <span class="dropdown-text">Heterogeneidade da paisagem</span></a>
+  </li>  
         <li>
     <a class="dropdown-item" href="https://resiliencia-climatica-brasil.github.io/Resistencia/" rel="" target="">
  <span class="dropdown-text">Resistência da paisagem</span></a>
@@ -225,6 +229,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Aplicacoes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aplicações</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -247,122 +257,152 @@ ul.task-list li input[type="checkbox"] {
 <p>Os mapas das camadas principais e das variáveis intermediárias da análise podem ser visualizados no seguinte link: <a href="https://projeto-resiliencia-tnc.hub.arcgis.com/?share=link">https://projeto-resiliencia-tnc.hub.arcgis.com/?share=link</a>.</p>
 <p><strong>Atenção: o projeto ainda está em andamento, então os resultados apresentados são ainda versões preliminares do estudo.</strong></p>
 <p>Abaixo são descritos resultados principais por bioma e alguns padrões gerais obtidos para cada uma das camadas.</p>
+<section id="mapas-por-bioma" class="level2">
+<h2 class="anchored" data-anchor-id="mapas-por-bioma">Mapas por bioma</h2>
 <!---
-[explorar resultados; discutir resultados quebrando pelas variáveis, para saber qual atributo está influenciando mais na diversidade da paisagem]
+Sugiro criar esse item e incluir após a frase abaixo as figuras com os mapas (que está no item de conectividade). Daí depois descrevemos cada uma das camadas. O que acham?
 -->
-<section id="heterogeneidade-da-paisagem-link" class="level2">
-<h2 class="anchored" data-anchor-id="heterogeneidade-da-paisagem-link">Heterogeneidade da paisagem <a href="https://projeto-resiliencia-tnc.hub.arcgis.com/maps/30e4cffc33314e908cba249ef565d41c/explore">(link)</a></h2>
-<p>As áreas de alta heterogeneidade da paisagem estão distribuídas por todo o Brasil (<a href="#fig-hetero-original">Figura&nbsp;1</a>). As regiões de destaque são aquelas próximas aos rios, em localidades com alta rugosidade do relevo, mudanças abruptas de declividade, alta densidade de áreas úmidas e riqueza de solos. A heterogeneidade da paisagem foi calculada utilizando diferentes conjuntos de variáveis para cada localidade (<a href="#fig-hetero-variavel">Figura&nbsp;2</a> A). As distribuições da heterogeneidade da paisagem para cada conjunto de variável tiveram medianas semelhantes, mas diferiram nas suas variâncias (<a href="#fig-vioplot">Figura&nbsp;3</a>). As maiores heterogeneidades estiveram associadas à variedade de formas de relevo e índice de áreas úmidas (<a href="#fig-vioplot">Figura&nbsp;3</a>). A presença de todas as variáveis no cálculo da heterogeneidade, por todo Brasil, mostra que todas as variáveis foram importantes dependendo do contexto local (<a href="#fig-hetero-variavel">Figura&nbsp;2</a> A). A variedade de formas de relevo foi a principal variável na atribuição da heterogeneidade da paisagem, seguida pela média de todas as variáveis (<a href="#fig-hetero-variavel">Figura&nbsp;2</a> B). O índice de áreas úmidas e riqueza de solos também foram importantes nos locais onde a variedade de formas de relevo e a amplitude altitudinal não apresentaram altos valores (<a href="#fig-hetero-variavel">Figura&nbsp;2</a> B).</p>
-<!--Não encontramos viéses para áreas de altas altitudes em relação as áreas de baixa altitudes, nem entre as fitofisionomias.   -->
-<div id="fig-hetero-original" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/heterogeneity_original.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;1: Heterogeneidade da paisagem, criada a partir da média ponderada dos <em>Z-scores</em> de variedade de formas de relevo, amplitude altitudinal, índice de áreas úmidas e diversidade do solo.</figcaption>
-</figure>
-</div>
-<div id="fig-hetero-variavel" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/heterogeneidade_testes.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figura&nbsp;2: Variáveis componentes da heterogeneidade da paisagem em cada localidade. (<strong>A</strong>) Distribuição espacial das variáveis. (<strong>B</strong>) Porcentagem de células composta por cada variável. A heterogeneidade da paisagem é a média ponderada dos <em>Z-scores</em> das variáveis.</figcaption>
-</figure>
-</div>
-<div id="fig-vioplot" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/vioplot.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figura&nbsp;3: Distribuição da heterogeneidade da paisagem por cada variável componente. As variáveis estão ordenadas pelas medianas da heterogeneidade de cada variável. A densidade da heterogeneidade é representada pela forma dos polígonos. Os pontos brancos são as medianas de cada grupo. As caixas cinzas são os quantis (25 e 75%) e as linhas cinzas são 1.5 x intervalo interquantil.</figcaption>
-</figure>
-</div>
-<p>No nível de bioma, a variedade de formas do relevo e a média de todas as variáveis também foram as mais importantes (<a href="#fig-hetero-bioma">Figura&nbsp;4</a>). No entanto, a média de formas de relevo, amplitude altitudinal e riqueza de solo foi mais importantes na Amazônia e Pantanal. A amplitude altitudinal e formas de relevo foram mais importantes na Mata Atlântica e Pampa. As formas do relevo, amplitude altitudinal e índice de áreas úmidas tiveram mais importância na Caatinga e Cerrado. Entretanto, o índice de áreas úmidas foi mais representativo no Pantanal, quando as porcentagens de localidades que utilizaram o índice de áreas úmidas são somadas (<a href="#fig-hetero-bioma">Figura&nbsp;4</a>). Na Amazônia, destacam-se o entorno dos vales dos rios menores (ex. Parque do Xingu), na regiões montanhosas ao Norte do bioma (ex. Raposa Serra do Sol) e nas regiões com maior rugosidade no relevo (ex. Território Kayapó) (<a href="#fig-biomas-AM">Figura&nbsp;6</a>). Na Caatinga é possível identificar alta heterogeneidade da paisagem nas áreas de alta rugosidade do relevo (ex. Sítio Boqueirão), variações de declividade bruscas (ex. Chapada do Araripe) e vales de rios (ex. Assunção do Piauí) (<a href="#fig-biomas-CA">Figura&nbsp;7</a>). No Cerrado, observa-se alta heterogeneidade nas transições dos platôs das Chapadas para as áreas baixas (ex. Chapada dos Veadeiros, Chapadas do Rio São Franscisco), localidades com alta rugosidade do relevo (ex. Serra da Canastra) e variação de altitude (ex. Patamares Ocidentais da Bacia do Paraná). Nas áreas de relevo mais planas, destacam-se os rios Araguaia e das Mortes como as áreas de alta heterogeneidade (<a href="#fig-biomas-CE">Figura&nbsp;8</a>). Na Mata Atlântica, as áreas de alta heterogeneidade da paisagem foram localizadas próximos aos vales das redes fluviais na região Oeste do bioma (ex. Araçatuba, Galinhos), nas áreas de transições abruptas declividade (ex. Bom Jardim da Serra) e alta rugosidade do relevo (ex. Pacatuba-SE) e localidades nas grandes cadeias de montanhas (ex. Serra da Mantiqueira, Serra do Mar) (<a href="#fig-biomas-AT">Figura&nbsp;9</a>). No Pantanal, as localidades com maiores heterogeneidade da paisagem foram rios ex. Piquiri, São Lourenço e Taquari), lagoas (ex. Nhecolândia) e regiões mais altas (ex. Serra do Amolar) contrastantes com o entorno plano-AT). (<a href="#fig-biomas-PM">Figura&nbsp;11</a>) <!--, provavelmente devido ao contraste da variação de relevo com o entorno, visto que pequenas declividades em um ambiente muito plano são relevantes na heterogeneidade da paisagem (@fig-biomas-PM). Dentre regiões altas inseridas no Pantanal, destacamos a paisagem da Serra do Amolar (borda oeste do Pantanal), ... --> No Pampa, as regiões com alta rugosidade do relevo (ex. região de Capão da Porteira, Porto Alegre e APA do Ibirapuitã), rios (ex. rio Jacuí) e lagos (ex. entorno da lagoa dos Patos) tiveram alta heterogeneidade da paisagem (<a href="#fig-biomas-PA">Figura&nbsp;10</a>).</p>
-<div id="fig-hetero-bioma" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/heterogeneidade_test_biomas.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption class="figure-caption">Figura&nbsp;4: Porcentagem de células composta por cada variável no cálculo da média ponderada em cada bioma. A heterogeneidade da paisagem é a média ponderada dos <em>Z-scores</em> das variáveis.</figcaption>
-</figure>
-</div>
-</section>
-<section id="conectividade-locallink" class="level2">
-<h2 class="anchored" data-anchor-id="conectividade-locallink">Conectividade Local<a href="https://projeto-resiliencia-tnc.hub.arcgis.com/maps/c7725afd65da4198bba59a7ccde49fce/explore">(link)</a></h2>
-<div id="fig-conect-original" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/C2_Resistencia.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;5: Resistência da paisagem, baseada na dificuldade de locomoção imposta pelos diferentes usos da terra.</figcaption>
-</figure>
-</div>
-<p>A conectividade local no bioma amazônico tende a ser alta, as áreas de baixa conectividade estão situadas principalmente no “Arco do Desmatamento”, nas regiões do Sul e Leste do bioma, e ao longo dos maiores rios da região (<a href="#fig-biomas-AM">Figura&nbsp;6</a> B<strong>FIGURA para Amazonia esta com o valor invertido para conectividade</strong>). <!-- Isso reflete muito na forma de expansão do uso da terra no bioma, onde a exploração de recursos madeireiros, a expansão da urbanização e a movimentação da maior quantidade de bens no bioma ocorrem ao longo dos rios e a maior pressão de supressão de habitats naturais para expansão do agronegócio ocorrem na região sul e ao leste do bioma. --></p>
+<p>São apresentados abaixo os mapas de heterogeneidade da paisagem, conectividade local e resiliência da paisagem por bioma: Amazônia, Caatomga, Cerrado, Mata Atlântica, Pampa e Pantanal.</p>
 <div id="fig-biomas-AM" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/results_bybiome/Amazonia_resultados.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;6: Recorte das camada de A)<strong>Heterogeneidade da Paisagem</strong>, B) <strong>Conectividade Local</strong> e C) <strong>Resiliência da Paisagem</strong> para a Amazônia</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;1: Recorte das camadas de (A) <strong>Heterogeneidade da paisagem</strong>, (B) <strong>Conectividade local</strong> e (C) <strong>Resiliência da paisagem</strong> para a Amazônia.</figcaption>
 </figure>
 </div>
-<p>Na Caatinga, a conectividade local é alta principalmente na porção ocidental do bioma, enquanto a porção leste compreende a região de maior contraste entre os usos e cobertura do solo, o que diminui o grau de conectividade local nessa região em direção ao litoral. As áreas menos conectadas correspondem aos grandes centros urbanos como Fortaleza. <!-- talvez fontes de energia também sejam evidentes --> <!--A expressão desse padrão deve refletir a desenvolvimento agrícola limitado se comparado a outras regiões do país e a baixa densidade populacional em áreas mais centrais do bioma. --> O Rio São Francisco aparece também como uma importante barreira geográfica no bioma, devido a sua extensa largura em alguns trechos no centro da Caatinga (<a href="#fig-biomas-CA">Figura&nbsp;7</a> B).</p>
 <div id="fig-biomas-CA" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/results_bybiome/Caatinga_resultados.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;7: Recorte das camada de A)<strong>Heterogeneidade da Paisagem</strong>, B) <strong>Conectividade Local</strong> e C) <strong>Resiliência da Paisagem</strong> para a Caatinga</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;2: Recorte das camadas de (A) <strong>Heterogeneidade da paisagem</strong>, (B) <strong>Conectividade local</strong> e (C) <strong>Resiliência da paisagem</strong> para a Caatinga.</figcaption>
 </figure>
 </div>
-<p>No Cerrado, as regiões Norte, Leste e Oeste possuem altos valores de conectividade. Na porção central e sul do bioma concentram-se as áreas com baixa conectividade, sendo as menos conectadas aquelas próximas ao grandes centros urbanos como Goiânia, Campo Grande e Brasília. Na Chapada do Rio São Franscisco, na Bahia, há também baixa conectividade nas áreas de agricultura. Por outro lado, a maior parte da região menos conectada possui áreas de alta e média conectividade dentro delas (<a href="#fig-biomas-CE">Figura&nbsp;8</a> B).</p>
 <div id="fig-biomas-CE" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/results_bybiome/Cerrado_resultados.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;8: Recorte das camada de A)<strong>Heterogeneidade da Paisagem</strong>, B) <strong>Conectividade Local</strong> e C) <strong>Resiliência da Paisagem</strong> para o Cerrado</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;3: Recorte das camadas de (A) <strong>Heterogeneidade da paisagem</strong>, (B) <strong>Conectividade local</strong> e (C) <strong>Resiliência da paisagem</strong> para o Cerrado.</figcaption>
 </figure>
 </div>
-<p>Na Mata Atlântica, a conectividade local é amplamente distribuída <!-- não entendi bem o que significaria "amplo" -->, porém espacialmente estruturado. Regiões de alta conectividade local concentram-se ao sul do bioma com diminuição da conectividade em direção ao limite norte, onde então um padrão bifurcado de áreas de alta conectividade emerge novamente, porém interposto por áreas de conectividade moderada (<a href="#fig-biomas-AT">Figura&nbsp;9</a> A). As áreas de menor conectividade, principalmente localizadas na maior extensão longitudinal do bioma, correspondem a grandes ocupações urbanas nos estados de São Paulo e Rio de Janeiro, áreas de maior densidade populacional do Brasil (<a href="#fig-biomas-CA">Figura&nbsp;7</a> B). <!-- Esse padrão espacialmente estruturado deve-se principalmente ao padrão ocupação humana e histórico regional das atividades ali desenvolvidas por se tratarem das regiões de maior expressão econômica do país desde o século XXXXXX. Ao longo dos X últimos séculos, a região sofreu intenso desmatamento o que levou a uma grande perda e isolamento de manchas de cobertura natural para dar lugar a atividades como mineração, cultivo de café e expansão da infraestrutura urbana como construção de reservatórios, ferrovias, malha rodoviária e moradia --></p>
 <div id="fig-biomas-AT" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/results_bybiome/Atlantic_resultados.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;9: Recorte das camada de A)<strong>Heterogeneidade da Paisagem</strong>, B) <strong>Conectividade Local</strong> e C) <strong>Resiliência da Paisagem</strong> para a Mata Atlântica.</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;4: Recorte das camadas de (A) <strong>Heterogeneidade da paisagem</strong>, (B) <strong>Conectividade local</strong> e (C) <strong>Resiliência da paisagem</strong> para a Mata Atlântica.</figcaption>
 </figure>
 </div>
-<p>No Pantanal, a conectividade local é alta exceto pelo avanço da agricultura na borda leste do bioma <!-- tem umas áreas vermelhas dentro do bioma e na parte oeste. --></p>
-<div id="fig-biomas-PA" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figs/results_bybiome/Pantanal_resultados.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;10: Recorte das camada de A)<strong>Heterogeneidade da Paisagem</strong>, B) <strong>Conectividade Local</strong> e C) <strong>Resiliência da Paisagem</strong> para a Pantanal.</figcaption>
-</figure>
-</div>
-<p>No Pampa, as localidades com alta conectividade estão localizadas no Oeste do bioma (ex. região da APA do Ibirapuitã), na parte central, sendo as menores conectividades nos grandes centros urbanos como Porto Alegre.</p>
 <div id="fig-biomas-PM" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/results_bybiome/Pampa_resultados.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;11: Recorte das camada de A)<strong>Heterogeneidade da Paisagem</strong>, B) <strong>Conectividade Local</strong> e C) <strong>Resiliência da Paisagem</strong> para a Pampa</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;5: Recorte das camadas de (A) <strong>Heterogeneidade da paisagem</strong>, (B) <strong>Conectividade local</strong> e (C) <strong>Resiliência da paisagem</strong> para a Pampa.</figcaption>
+</figure>
+</div>
+<div id="fig-biomas-PA" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/results_bybiome/Pantanal_resultados.png" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figura&nbsp;6: Recorte das camadas de (A) <strong>Heterogeneidade da paisagem</strong>, (B) <strong>Conectividade local</strong> e (C) <strong>Resiliência da paisagem</strong> para a Pantanal.</figcaption>
 </figure>
 </div>
 </section>
-<section id="resiliência-da-paisagem-link" class="level2">
-<h2 class="anchored" data-anchor-id="resiliência-da-paisagem-link">Resiliência da paisagem <a href="https://projeto-resiliencia-tnc.hub.arcgis.com/maps/4e5b37de7de640c0a7b8505f6c72091d/explore">(link)</a></h2>
-<!--
-Estou deixando as duas figuras em comentarios, caso a gente decida dividir elas novamente aqui.
-
-![Classificação da Heterogeneidade da Paisagem de acordo com as divisões do histograma de densidade em quantis de 25%](figs/Heterogeneity_bivariate.png){#fig-hetero width="600" fig-align="center"}
-
-
-![Classificação da Conectividade Local de acordo com as divisões do histograma de densidade em quantis de 25%](figs/Connectedness_bivariate.png){#fig-conect width="600" fig-align="center"}
--->
-<div id="fig-classes" class="quarto-figure quarto-figure-center anchored">
+<section id="heterogeneidade-da-paisagem-link" class="level2">
+<h2 class="anchored" data-anchor-id="heterogeneidade-da-paisagem-link">Heterogeneidade da paisagem <a href="https://projeto-resiliencia-tnc.hub.arcgis.com/maps/30e4cffc33314e908cba249ef565d41c/explore">(link)</a></h2>
+<p>As áreas de alta heterogeneidade da paisagem estão distribuídas por todo o Brasil (<a href="#fig-hetero-original">Figura&nbsp;7</a>). As regiões de destaque são aquelas próximas aos rios, em localidades com alta rugosidade do relevo, mudanças abruptas de declividade, alta densidade de áreas úmidas e riqueza de solos.</p>
+<div id="fig-hetero-original" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="figs/classes_het_con.png" class="img-fluid figure-img" width="700"></p>
-<figcaption class="figure-caption">Figura&nbsp;12: Classificação do histograma de valores dos pixels em quantis de 25% de: A) <strong>heterogeneidade da paisagem</strong> e B)<strong>Conectividade local</strong>.</figcaption>
+<p><img src="figs/heterogeneity_original.png" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figura&nbsp;7: Heterogeneidade da paisagem, gerada a partir da média ponderada dos <em>Z-scores</em> das variáveis: variedade de formas de relevo, amplitude altitudinal, índice de áreas úmidas e riqueza do solo.</figcaption>
 </figure>
 </div>
+<p>A heterogeneidade da paisagem foi calculada utilizando diferentes conjuntos de variáveis para cada localidade (<a href="#fig-hetero-variavel">Figura&nbsp;8</a> A). A presença de todas as variáveis no cálculo da heterogeneidade, por todo Brasil, mostra que todas as variáveis foram importantes dependendo do contexto local (<a href="#fig-hetero-variavel">Figura&nbsp;8</a> A). A variedade de formas de relevo foi a principal variável na atribuição da heterogeneidade da paisagem, seguida pela média de todas as variáveis (<a href="#fig-hetero-variavel">Figura&nbsp;8</a> B). O índice de áreas úmidas e riqueza de solos também foram importantes nos locais onde a variedade de formas de relevo e a amplitude altitudinal não apresentaram altos valores (<a href="#fig-hetero-variavel">Figura&nbsp;8</a> B).</p>
+<!--Não encontramos viéses para áreas de altas altitudes em relação as áreas de baixa altitudes, nem entre as fitofisionomias.   -->
+<div id="fig-hetero-variavel" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/heterogeneidade_testes.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Figura&nbsp;8: Variáveis que compõem a heterogeneidade da paisagem em cada localidade: (<strong>A</strong>) Distribuição espacial das variáveis; (<strong>B</strong>) Porcentagem de células composta por cada variável. A heterogeneidade da paisagem é a média ponderada dos <em>Z-scores</em> das variáveis.</figcaption>
+</figure>
+</div>
+<p>As distribuições da heterogeneidade da paisagem para cada conjunto de variável tiveram medianas semelhantes, mas diferiram nas suas variâncias (<a href="#fig-vioplot">Figura&nbsp;9</a>). As maiores heterogeneidades estiveram associadas à variedade de formas de relevo e índice de áreas úmidas (<a href="#fig-vioplot">Figura&nbsp;9</a>).</p>
+<div id="fig-vioplot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/vioplot.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Figura&nbsp;9: Distribuição da heterogeneidade da paisagem por cada variável componente. As variáveis estão ordenadas pelas medianas da heterogeneidade de cada variável. A densidade da heterogeneidade é representada pela forma dos polígonos. Os pontos brancos são as medianas de cada grupo, as caixas cinzas são os quantis (25% e 75%) e as linhas cinzas são 1.5 x intervalo interquantil.</figcaption>
+</figure>
+</div>
+<p>No nível de bioma, todos eles apresentaram a variedade de formas do relevo e a média de todas as variáveis como as duas variáveis mais importantes (<a href="#fig-hetero-bioma">Figura&nbsp;10</a>). A partir dessas, os biomas diferiram um pouco: para Amazônia e Pantanal, a média de formas de relevo, amplitude altitudinal e riqueza de solo foram mais importantes; para Mata Atlântica e Pampa, amplitude altitudinal e formas de relevo se destacaram; e para Caatinga e Cerrado, foram as formas do relevo, amplitude altitudinal e índice de áreas úmidas. Além disso, o índice de áreas úmidas foi bastante representativo no Pantanal, quando somadas as porcentagens das localidades que utilizaram o índice de áreas úmidas (<a href="#fig-hetero-bioma">Figura&nbsp;10</a>).</p>
+<div id="fig-hetero-bioma" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/heterogeneidade_test_biomas.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Figura&nbsp;10: Porcentagem de células composta por cada variável no cálculo da média ponderada em cada bioma. A heterogeneidade da paisagem é a média ponderada dos <em>Z-scores</em> das variáveis.</figcaption>
+</figure>
+</div>
+<p>Com relação a algumas regiões de destaque dentro dos biomas, é importante mencionar: - Na Amazônia, destacam-se o entorno dos vales dos rios menores (ex. Parque do Xingu), as regiões montanhosas ao norte do bioma (ex. Raposa Serra do Sol) e as regiões com maior rugosidade no relevo (ex. Território Kayapó) (<a href="#fig-biomas-AM">Figura&nbsp;1</a>);</p>
+<ul>
+<li><p>Na Caatinga, é possível identificar alta heterogeneidade da paisagem nas áreas de alta rugosidade do relevo (ex. Sítio Boqueirão), nas variações de declividade bruscas (ex. Chapada do Araripe) e nos vales de rios (ex. Assunção do Piauí) (<a href="#fig-biomas-CA">Figura&nbsp;2</a>);</p></li>
+<li><p>No Cerrado, observa-se alta heterogeneidade nas transições dos platôs das Chapadas para as áreas baixas (ex. Chapada dos Veadeiros, Chapadas do Rio São Franscisco), em localidades com alta rugosidade do relevo (ex. Serra da Canastra) e locais com variação de altitude (ex. Patamares Ocidentais da Bacia do Paraná). Nas áreas de relevo mais planas, destacam-se os rios Araguaia e das Mortes como as áreas de alta heterogeneidade, principalmente em função da presença de grandes áreas úmidas no entorno (<a href="#fig-biomas-CE">Figura&nbsp;3</a>); <!-- Lucas, dá para dizer isso das áreas úmidas? --></p></li>
+<li><p>Na Mata Atlântica, as áreas de alta heterogeneidade da paisagem estão localizadas próximos aos vales das redes fluviais na região oeste do bioma (ex. Araçatuba, Galinhos), nas áreas de transições abruptas de declividade (ex. Bom Jardim da Serra) e com alta rugosidade do relevo (ex. Pacatuba-SE), e em localidades nas grandes cadeias de montanhas (ex. Serra da Mantiqueira, Serra do Mar) (<a href="#fig-biomas-AT">Figura&nbsp;4</a>);</p></li>
+<li><p>No Pampa, a heterogeneidade da paisagem se destaca em regiões com alta rugosidade do relevo (ex. Serra do Sudeste, APA do Ibirapuitã, na Campanha, e na região nordeste do Estado), e próximo a rios (ex. rio Jacuí) e lagos (ex. entorno da lagoa dos Patos) (<a href="#fig-biomas-PA">Figura&nbsp;6</a>).</p></li>
+<li><p>No Pantanal, as localidades com maior heterogeneidade da paisagem foram próximas a rios (ex. Piquiri, São Lourenço e Taquari), lagoas (ex. Nhecolândia) e regiões mais altas (ex. Serra do Amolar), contrastantes com o entorno plano; (<a href="#fig-biomas-PM">Figura&nbsp;5</a>) <!--, provavelmente devido ao contraste da variação de relevo com o entorno, visto que pequenas declividades em um ambiente muito plano são relevantes na heterogeneidade da paisagem (@fig-biomas-PM). Dentre regiões altas inseridas no Pantanal, destacamos a paisagem da Serra do Amolar (borda oeste do Pantanal), ... --></p></li>
+</ul>
+</section>
+<section id="conectividade-local-link" class="level2">
+<h2 class="anchored" data-anchor-id="conectividade-local-link">Conectividade Local <a href="https://projeto-resiliencia-tnc.hub.arcgis.com/maps/c7725afd65da4198bba59a7ccde49fce/explore">(link)</a></h2>
+<p>A conectividade local da paisagem apresenta um padrão diferente daquele apresentado na camada de heterogeneidade da paisagem, mostrando uma divisão entre regiões muito conectadas na região norte e outras com conectividade mais baixa nas região central e sudeste [Figura 5]. Isso se deve ao histórico de ocupação dessas regiões e do uso atual com relação a agricultura e ocupação urbana. <!-- Importante discutir mais o padrão geral para o país --></p>
+<div id="fig-conect-original" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/C2_Resistencia.png" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figura&nbsp;11: Resistência da paisagem, baseada na dificuldade de movimentação das espécies imposta pelos diferentes usos da terra.</figcaption>
+</figure>
+</div>
+<p>Dentro de cada bioma, podemos destacar alguns padrões gerais: - Na Amazônia, a conectividade local tende a ser alta de modo geral. As áreas de baixa conectividade estão situadas principalmente no “Arco do Desmatamento”, nas regiões do sul e leste do bioma, e ao longo dos grandes rios da região (ex. [citar alguns]) (<a href="#fig-biomas-AM">Figura&nbsp;1</a> B<strong>FIGURA para Amazonia esta com o valor invertido para conectividade</strong>). <!-- Isso reflete muito na forma de expansão do uso da terra no bioma, onde a exploração de recursos madeireiros, a expansão da urbanização e a movimentação da maior quantidade de bens no bioma ocorrem ao longo dos rios e a maior pressão de supressão de habitats naturais para expansão do agronegócio ocorrem na região sul e ao leste do bioma. --></p>
+<ul>
+<li><p>Na Caatinga, a conectividade local é alta principalmente na porção ocidental do bioma, enquanto a porção leste compreende a região de maior contraste entre os usos e cobertura do solo, o que diminui o grau de conectividade local nessa região em direção ao litoral. As áreas menos conectadas correspondem aos grandes centros urbanos como Fortaleza. <!-- talvez fontes de energia também sejam evidentes --> <!--A expressão desse padrão deve refletir a desenvolvimento agrícola limitado se comparado a outras regiões do país e a baixa densidade populacional em áreas mais centrais do bioma. --> O Rio São Francisco aparece também como uma importante barreira geográfica no bioma, devido a sua extensa largura em alguns trechos na região central (<a href="#fig-biomas-CA">Figura&nbsp;2</a> B).</p></li>
+<li><p>No Cerrado, as regiões norte, leste e oeste possuem altos valores de conectividade. Na porção central e sul do bioma concentram-se as áreas com baixa conectividade, sendo as menos conectadas aquelas próximas a grandes centros urbanos como Goiânia, Campo Grande e Brasília. Na Chapada do Rio São Franscisco (Bahia), há também baixa conectividade nas áreas de agricultura. Por outro lado, a maior parte da região menos conectada possui áreas de alta e média conectividade dentro delas (<a href="#fig-biomas-CE">Figura&nbsp;3</a> B).</p></li>
+<li><p>Na Mata Atlântica, a conectividade local é amplamente distribuída <!-- não entendi bem o que significaria "amplo" // Milena: também não entendi -->, porém espacialmente estruturado. Regiões de alta conectividade local concentram-se ao sul do bioma com diminuição da conectividade em direção ao limite norte, onde então um padrão bifurcado de áreas de alta conectividade emerge novamente, porém interposto por áreas de conectividade moderada (<a href="#fig-biomas-AT">Figura&nbsp;4</a> A). As áreas de menor conectividade, principalmente localizadas na maior extensão longitudinal do bioma, correspondem a grandes ocupações urbanas nos estados de São Paulo e Rio de Janeiro, áreas de maior densidade populacional do Brasil (<a href="#fig-biomas-CA">Figura&nbsp;2</a> B). <!-- Esse padrão espacialmente estruturado deve-se principalmente ao padrão ocupação humana e histórico regional das atividades ali desenvolvidas por se tratarem das regiões de maior expressão econômica do país desde o século XXXXXX. Ao longo dos X últimos séculos, a região sofreu intenso desmatamento o que levou a uma grande perda e isolamento de manchas de cobertura natural para dar lugar a atividades como mineração, cultivo de café e expansão da infraestrutura urbana como construção de reservatórios, ferrovias, malha rodoviária e moradia --></p></li>
+<li><p>No Pampa, as localidades com alta conectividade estão localizadas na Serra do Sudeste, na Campanha (nas proximidades com a APA do Ibirapuitã) e na região das Missões. Em contraste, os locais com menor conectividade estão localizados próximo aos principais centros urbanos, como é o caso de Porto Alegre e região metropolitana, assim como nas proximidades com grandes rodovias (ex. ao longo da BR-116 e BR-287);</p></li>
+<li><p>No Pantanal, a conectividade local de modo geral é alta ao longo de todo bioma, com excessão nos limites do bioma, como é o caso da borda leste, em função do avanço da agricultura, no limite oeste, devido a xx, e em uma mancha central, em função de xx <!-- tem umas áreas vermelhas dentro do bioma e na parte oeste, importante indicar esse locais --></p></li>
+</ul>
+</section>
+<section id="resiliência-da-paisagem-link" class="level2">
+<h2 class="anchored" data-anchor-id="resiliência-da-paisagem-link">Resiliência da paisagem <a href="https://projeto-resiliencia-tnc.hub.arcgis.com/maps/4e5b37de7de640c0a7b8505f6c72091d/explore">(link)</a></h2>
+<p>A resiliência da paisagem apresentou um padrão… <!-- descrever o padrão geral para o Brasil --></p>
+<!-- Milena: Por que essa figura tem dois mapas? Sugiro incluir apenas o primeiro e colocar ele maior (como o de heterog. e de conectiv. acima) -->
 <div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/Resilience_bivariate.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;13: Mapa final de Resiliência da Paisagem com a sobreposição dos mapas de heterogeneidade e conectividade classificados por quantis de 25%.</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;12: Mapa final de resiliência da paisagem com a sobreposição dos mapas de heterogeneidade da paisagem e conectividade local classificados por quantis de 25%. A classificação bivariada da camada de resiliência da paisagem foi dividida em quadrantes com diferentes graus de conectividade local e heterogeneidade da paisagem.</figcaption>
 </figure>
 </div>
-<!-- A Resiliência da Paisagem na Amazônia (Figura 5 – C) é influenciada em diferentes escalas pela camada de conectividade local (Figura 5 – B) e a camada de heterogeneidade da paisagem (Figura 5 – A) tendo, respectivamente, uma influência em larga escala e uma influência em pequena escala. Essa diferença nas escalas de concentração de valores, com grandes extensões de alta conectividade e concentrações locais de alta heterogeneidade, pode explicada pelo alto grau de conservação dos ambientes naturais da Amazônia, mesmo diante do aumento do desmatamento no bioma (CITAÇÃO) que geram grandes extensões de uso da terra que ainda apresentam baixas resistências para movimentação das espécies. -->
+<!-- Milena: é interessante manter esse mapa? Se for, acho bom incluir uma descrição no texto -->
+<div id="fig-classes" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/classes_het_con.png" class="img-fluid figure-img" width="700"></p>
+<figcaption class="figure-caption">Figura&nbsp;13: Classificação do histograma de valores dos pixels em quantis de 25% de: A) <strong>heterogeneidade da paisagem</strong> e B)<strong>Conectividade local</strong>.</figcaption>
+</figure>
+</div>
+<!--
+Estou deixando as duas figuras em comentarios, caso a gente decida dividir elas novamente aqui.
+Milena: que mapas são esses? Se for manter, sugiro incluir nos respectivos itens (heterog. e conectiv.) e incluir uma descrição no texto. -->
+<div id="fig-hetero" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/Heterogeneity_bivariate.png" class="img-fluid figure-img" width="600"></p>
+<figcaption class="figure-caption">Figura&nbsp;14: Classificação da Heterogeneidade da Paisagem de acordo com as divisões do histograma de densidade em quantis de 25%</figcaption>
+</figure>
+</div>
+<p><img src="figs/Connectedness_bivariate.png" id="fig-conect" class="img-fluid" data-fig-align="center" width="600" alt="Classificação da Conectividade Local de acordo com as divisões do histograma de densidade em quantis de 25%"> –&gt;</p>
+<p>A Amazônia possui a maior porcentagem de áreas resilientes (39,5%), seguida por Pantanal (28,6%), Caatinga (19.9%), Cerrado (18,1), Pampa (13,2%) e Mata Atlântica (5,1%). [citar Figura histogramas] <!-- descrever os resultados dos histrogramas --> Essa mesma ordem é mantida para a porcentagem de áreas com alta conectividade local e baixa heterogeneidade, menor porcentagem de áreas de baixa resiliência e alta heterogeneidade e baixa conectividade local (<a href="#fig-resilience-hist">Figura&nbsp;15</a>). <!-- não entendi essa frase --></p>
 <div id="fig-resilience-hist" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/resiliencia_hist.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;14: Histograma da resiliência para o Brasil e cada bioma. A classificação bivariada da resiliêcia foi dividida em quadrantes com diferentes graus de conectividade local e heterogeneidade da paisagem.</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;15: Histogramas ilustrandos os valores de resiliência da paisagem por classe, para o Brasil (A) e para cada bioma (B-G).</figcaption>
 </figure>
 </div>
-<p>A Amazônia possui a maior porcentagem de áreas resilientes (39,49%), seguida por Pantanal (28,57%), Caatinga (19.88%), Cerrado (18,07), Pampa (13,18%) e Mata Atlântica (5,09%). Essa mesma ordem é mantida para a porcentagem de áreas com alta conectividade local e baixa heterogeneidade, menor porcentagem de áreas de baixa resiliência e alta heterogeneidade e baixa conectividade local (<a href="#fig-resilience-hist">Figura&nbsp;14</a>). As áreas mais resilientes da Amazônia estão concentradas na região Oeste da Amazônia (Estado do Acre) e na região Norte do Estado do Amazonas (<a href="#fig-biomas-AM">Figura&nbsp;6</a> C).<!-- é influenciada de forma distinta pelas camadas de heterogeneidade da paisagem e conectividade local. A camada de conectividade local tem influência em larga escala (@fig-biomas-AM B) e a camada de heterogeneidade da paisagem em pequena escala (@fig-biomas-AM A). Essa diferença nas escalas de influência das camadas na resiliência da paisagem, ocorre por conta da diferença na concentração de valores, sendo  que a camada de conectividade local apresenta grandes extensões de terra com altos valores de conectividade local. --> <!-- e ., pode explicada pelo alto grau de conservação dos ambientes naturais da Amazônia, mesmo diante do aumento do desmatamento no bioma (CITAÇÃO) que geram grandes extensões de uso da terra que ainda apresentam baixas resistências para movimentação das espécies. Diante da diferença na escala de variação das duas camadas, --> No Pantanal, as regiões de maior resiliência da paisagem são majoritariamente nas regiões com maior densidade de áreas úmidas (<a href="#fig-biomas-PA">Figura&nbsp;10</a> C). <!--Essa dominância da conectividade local na resiliência da paisagem se dá pela estacionariedade dos valores de heterogeneidade da paisagem na maior parte da região. Há algumas exceções de valores mais altos de heterogeneidade da paisagem como: alguns rios, lagoas e regiões mais altas, contrastantes com o entorno plano. -->Na Caatinga, as áreas resilientes estão concentradas no interior do bioma (<a href="#fig-biomas-CA">Figura&nbsp;7</a> C).<!--são as menos expressivas do gradiente de resiliência obtido para esse bioma. Apenas 19.88% dos pixels da Caatinga correspondem às áreas altamente resilientes (@fig-resilience-hist C), isto é, regiões com alta conectividade local e alta heterogeneidade da paisagem @fig-resilience-hist C, quadrante 4). Áreas de baixa resiliência, isto é, áreas onde tanto a conectividade local como a heterogeneidade da paisagem são baixas correspondem 33.90% do bioma (@fig-resilience-hist C, quadrante 1). Áreas de resiliência moderadas descritas nos pelos valores dos quadrantes 2 (baixa conectividade e alta heterogeneidade da paisagem) e 3 (alta conectividade e baixa heterogeneidade; @fig-resilience-hist C) compreendem aos outros 26.77% e 19.44% dos pixels restantes, respectivamente (@fig-resilience-hist C, quadrante 3). Portanto, nossos resultados indicam que tanto a conectividade quanto a heterogeneidade da paisagem são fundamentais no padrão espacial da resiliência climática encontrado para o bioma Caatinga. Além disso, a maior parte do bioma é dominado por áreas altamente conectadas, tendendo a concentrarem-se mais ao Oeste do bioma, porém com heterogeneidade da paisagem de baixa a moderada, conferindo um padrão de resiliência climática de baixa a moderada para esse bioma (@fig-resilience-hist C). --> No Cerrado as áreas resilientes estão mais concentradas no Norte do bioma (<a href="#fig-biomas-CE">Figura&nbsp;8</a> C). No Pampa, as áreas resilientes estão na região central e oeste do bioma (<a href="#fig-biomas-PM">Figura&nbsp;11</a> C). A Mata Atlântica é o bioma com menor porcentagem de áreas resilientes e áreas conectadas concentradas nas regiões Sudeste, Sul e Norte do bioma (<a href="#fig-biomas-AT">Figura&nbsp;9</a> C).</p>
+<!-- A Resiliência da Paisagem na Amazônia (Figura 5 – C) é influenciada em diferentes escalas pela camada de conectividade local (Figura 5 – B) e a camada de heterogeneidade da paisagem (Figura 5 – A) tendo, respectivamente, uma influência em larga escala e uma influência em pequena escala. Essa diferença nas escalas de concentração de valores, com grandes extensões de alta conectividade e concentrações locais de alta heterogeneidade, pode explicada pelo alto grau de conservação dos ambientes naturais da Amazônia, mesmo diante do aumento do desmatamento no bioma (CITAÇÃO) que geram grandes extensões de uso da terra que ainda apresentam baixas resistências para movimentação das espécies. -->
+<p>Uma avaliação mais detalhada dos resultados de resiliência por bioma mostra que: - As áreas mais resilientes da Amazônia estão concentradas na região oeste do bioma (estado do Acre) e na região norte do estado do Amazonas (<a href="#fig-biomas-AM">Figura&nbsp;1</a> C). <!-- é influenciada de forma distinta pelas camadas de heterogeneidade da paisagem e conectividade local. A camada de conectividade local tem influência em larga escala (@fig-biomas-AM B) e a camada de heterogeneidade da paisagem em pequena escala (@fig-biomas-AM A). Essa diferença nas escalas de influência das camadas na resiliência da paisagem, ocorre por conta da diferença na concentração de valores, sendo  que a camada de conectividade local apresenta grandes extensões de terra com altos valores de conectividade local. --> <!-- e ., pode explicada pelo alto grau de conservação dos ambientes naturais da Amazônia, mesmo diante do aumento do desmatamento no bioma (CITAÇÃO) que geram grandes extensões de uso da terra que ainda apresentam baixas resistências para movimentação das espécies. Diante da diferença na escala de variação das duas camadas, --></p>
+<ul>
+<li><p>Na Caatinga, as áreas resilientes estão concentradas no interior do bioma (<a href="#fig-biomas-CA">Figura&nbsp;2</a> C). <!--são as menos expressivas do gradiente de resiliência obtido para esse bioma. Apenas 19.9% dos pixels da Caatinga correspondem a áreas altamente resilientes (@fig-resilience-hist C), isto é, regiões com alta conectividade local e alta heterogeneidade da paisagem @fig-resilience-hist C, quadrante 4). Áreas de baixa resiliência, isto é, áreas onde tanto a conectividade local como a heterogeneidade da paisagem são baixas correspondem 33.9% do bioma (@fig-resilience-hist C, quadrante 1). Áreas de resiliência moderadas descritas nos pelos valores dos quadrantes 2 (baixa conectividade e alta heterogeneidade da paisagem) e 3 (alta conectividade e baixa heterogeneidade; @fig-resilience-hist C) compreendem aos outros 26.77% e 19.44% dos pixels restantes, respectivamente (@fig-resilience-hist C, quadrante 3). Portanto, nossos resultados indicam que tanto a conectividade quanto a heterogeneidade da paisagem são fundamentais no padrão espacial da resiliência climática encontrado para o bioma Caatinga. Além disso, a maior parte do bioma é dominado por áreas altamente conectadas, tendendo a concentrarem-se mais a oeste do bioma, porém com heterogeneidade da paisagem de baixa a moderada, conferindo um padrão de resiliência climática de baixa a moderada para esse bioma (@fig-resilience-hist C). --></p></li>
+<li><p>No Cerrado, as áreas resilientes estão mais concentradas no norte do bioma (<a href="#fig-biomas-CE">Figura&nbsp;3</a> C).</p></li>
+<li><p>A Mata Atlântica é o bioma com menor porcentagem de áreas resilientes e áreas conectadas, concentradas nas regiões sudeste, sul e norte do bioma (<a href="#fig-biomas-AT">Figura&nbsp;4</a> C).</p></li>
+<li><p>No Pampa, as áreas resilientes estão na região central e oeste do bioma (<a href="#fig-biomas-PM">Figura&nbsp;5</a> C).</p></li>
+<li><p>No Pantanal, as regiões de maior resiliência da paisagem são majoritariamente nas regiões com maior densidade de áreas úmidas (<a href="#fig-biomas-PA">Figura&nbsp;6</a> C). <!--Essa dominância da conectividade local na resiliência da paisagem se dá pela estacionariedade dos valores de heterogeneidade da paisagem na maior parte da região. Há algumas exceções de valores mais altos de heterogeneidade da paisagem como: alguns rios, lagoas e regiões mais altas, contrastantes com o entorno plano. --></p></li>
+</ul>
 <!--
-encontramos que apenas 5.09% dos pixels correspondem às áreas de maior resiliência a mudanças climáticas, ou seja, áreas com alta heterogeneidade da paisagem e alta conectividade local (@fig-resilience-hist E, quadrante 4). Por outro lado, 41.97% do território do bioma corresponde a áreas identificadas como áreas de baixa resiliência as mudanças do clima  (@fig-resilience-hist E, quadrante 1) evidenciando o predomínio de áreas com baixa conectividade em áreas de baixa heterogeneidade da paisagem e, por isso, é o padrão predominante em escalas regionais. Apenas 3.57% corresponde a áreas com alta conectividade local e baixa heterogeneidade da paisagem (@fig-resilience-hist E, quadrante 3) enquanto os outros 49.37% dos pixels foram identificados como área de baixa conectividade local, porém com alta heterogeneidade da paisagem (@fig-resilience-hist E, quadrante 4). Portanto, nossos resultados mostram que a conectividade da paisagem é um fator determinante no padrão de resiliência atualmente encontrado para a Mata Atlântica. Áreas de maior resiliência concentram-se na porção sul e sudeste do bioma (@fig-biomas-AT C), porém podem estar concentradas em áreas de elevação moderada a alta já que em áreas mais baixas dessa mesma região encontram-se as maiores metrópoles brasileiras (Figura 8B). O histórico de ocupação e degradação desse bioma é potencialmente um dos principais fatores responsáveis pela atual baixa conectividade ao longo do território ocupado pela Mata Atlântica, uma vez que essas são áreas foram amplamente utilizadas tanto para agricultura quanto para o assentamento dos primeiros e mais expressivos centros urbanos do país. -->
+encontramos que apenas 5.1% dos pixels correspondem às áreas de maior resiliência a mudanças climáticas, ou seja, áreas com alta heterogeneidade da paisagem e alta conectividade local (@fig-resilience-hist E, quadrante 4). Por outro lado, 42.0% do território do bioma corresponde a áreas identificadas como áreas de baixa resiliência as mudanças do clima  (@fig-resilience-hist E, quadrante 1) evidenciando o predomínio de áreas com baixa conectividade em áreas de baixa heterogeneidade da paisagem e, por isso, é o padrão predominante em escalas regionais. Apenas 3.6% corresponde a áreas com alta conectividade local e baixa heterogeneidade da paisagem (@fig-resilience-hist E, quadrante 3) enquanto os outros 49.4% dos pixels foram identificados como área de baixa conectividade local, porém com alta heterogeneidade da paisagem (@fig-resilience-hist E, quadrante 4). Portanto, nossos resultados mostram que a conectividade da paisagem é um fator determinante no padrão de resiliência atualmente encontrado para a Mata Atlântica. Áreas de maior resiliência concentram-se na porção sul e sudeste do bioma (@fig-biomas-AT C), porém podem estar concentradas em áreas de elevação moderada a alta já que em áreas mais baixas dessa mesma região encontram-se as maiores metrópoles brasileiras (Figura 8B). O histórico de ocupação e degradação desse bioma é potencialmente um dos principais fatores responsáveis pela atual baixa conectividade ao longo do território ocupado pela Mata Atlântica, uma vez que essas são áreas foram amplamente utilizadas tanto para agricultura quanto para o assentamento dos primeiros e mais expressivos centros urbanos do país. -->
 <div id="fig-unidade_conservacao" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/unidades_conservacao.png" class="img-fluid figure-img" width="600"></p>
@@ -614,8 +654,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Aplicacoes.html" class="pagination-link">
+        <span class="nav-page-text">Aplicações</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

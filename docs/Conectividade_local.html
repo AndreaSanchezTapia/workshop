@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -77,7 +77,8 @@ div.csl-indent {
     "search-more-matches-text": "mais correspondências neste documento",
     "search-clear-button-title": "Limpar",
     "search-detached-cancel-button-title": "Cancelar",
-    "search-submit-button-title": "Enviar"
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 
@@ -249,6 +250,12 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Aplicacoes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aplicações</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -270,38 +277,78 @@ div.csl-indent {
 <h1>Conectividade local</h1>
 <section id="bases-de-dados-utilizadas" class="level2">
 <h2 class="anchored" data-anchor-id="bases-de-dados-utilizadas">Bases de dados utilizadas</h2>
-<p>Os dados espaciais primários utilizados para calcular a superfície de resistência foram a camada de cobertura do solo gerada pelo MapBiomas <span class="citation" data-cites="mapbiomas_project_collection_2020">(<a href="#ref-mapbiomas_project_collection_2020" role="doc-biblioref">MapBiomas Project 2020</a>)</span>. A esta base foram incluídas as bases de estradas pavimentadas e não pavimentadas fornecida pelo IBGE (BCIM250, ano 2021) e a base de infraestrutura energética fornecidas por… <!-- Precisamos atualizar a explicação das bases usadas na camada de conectividade --></p>
+<p>A superfície de resistência foi calculada usando como base os dados de uso e cobertura do solo fornecida pelo MapBiomas coleção 8.0 para o ano de 2021 <span class="citation" data-cites="mapbiomas_project_collection_2020">(<a href="#ref-mapbiomas_project_collection_2020" role="doc-biblioref">MapBiomas Project 2020</a>)</span>. Complementamos essa camada do uso do solo com informações sobre: ::: {} 1. Largura dos rios; 2. Presença de infraestruturas de transporte; 3. Infraestruturas de energia. :::</p>
+<p>As informações sobre largura dos rios foram derivadas a partir das camadas de águas do abertas do MapBiomas <span class="citation" data-cites="mapbiomas_project_collection_2020">(<a href="#ref-mapbiomas_project_collection_2020" role="doc-biblioref">MapBiomas Project 2020</a>)</span>, a camada de bacias hidrográficas no nível 8 [Lehner &amp;Grill (2013)]<!--COLOCAR NO ZOTERO--> e a camada de largura efetiva dos corpos d’água [Yamashida et al.&nbsp;2014]<!--COLOCAR NO ZOTERO-->.</p>
+<p>As informações sobre infraestrutura de transporte foram originadas a partir das camadas de estradas pavimentadas, estradas não-pavimentadas e ferrovias fornecidas pelo Instituto Brasileiro de Geografia e Estatística (IBGE) ([BCIM250, 2021]) <!-- Isso é uma citação? --> (<a href="https://www.ibge.gov.br/geociencias/cartas-e-mapas/bases-cartograficas-continuas/15759-brasil.html?=&amp;t=downloads" class="uri">https://www.ibge.gov.br/geociencias/cartas-e-mapas/bases-cartograficas-continuas/15759-brasil.html?=&amp;t=downloads</a>).</p>
+<p>As bases de infraestrutura de energia correspondem às camadas de aerogeradores, centrais geradoras de energia fotovoltaicas, linhas de transmissão de energia eólica e usinas termelétricas fornecidas pela Agência Nacional de Energia Elétrica (ANEEL) (<a href="https://gisepeprd2.epe.gov.br/WebMapEPE/" class="uri">https://gisepeprd2.epe.gov.br/WebMapEPE/</a>) e a camada de linhas de transmissão de energia fornecida pelo IBGE ([BCIM250, 2021]).</p>
+<!--
+precisamos citar:
+IBGE
+ANEEL
+YAMASHIDA 2014
+LEHNER & GRILL
+MAPBIOMAS NOVA  
+ -->
 </section>
 <section id="cálculo-de-resistência" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="cálculo-de-resistência">Cálculo de resistência</h2>
+<!--
+Estou atualizando as informações com o que revisamos do tutorial de resistência
+ -->
 <p>Os valores de resistência são medidas relativas do grau de dificuldade de deslocamento dos organismos nos diferentes tipos de cobertura do solo. Esses valores foram atribuídos por bioma, seguindo a premissa de que quanto maior for a diferença estrutural entre um dado tipo de cobertura do solo e a vegetação original do bioma, maior será o valor de resistência da classe de cobertura do solo em questão.</p>
-<p>A superfície de cobertura do solo do MapBiomas foi reamostrada para gerar pixels com 90 m de tamanho, aproximadamente. Também convertemos o arquivo vetorial de estradas para o formato matricial, com pixels de tamanho aproximado de 90 m. Conjugamos, por álgebra de mapas, as bases matriciais do MapBiomas e de estradas, de tal maneira que todos os pixels da base do MapBiomas que se sobrepuseram a um pixel de estrada assumiram um novo valor correpondentes a um pixel de estrada pavimentada ou não pavimentada. <!-- Necessário complementar a explicação da infraestrutura de energia --> Os pixels do mapa consolidado de cobertura do solo, já incluindo as estradas pavimentadas e não pavimentadas como novas classes, receberam, separadamente por bioma, valores de resistência que buscaram traduzir, comparativamente entre as classes, o grau de dificuldade de movimentação da biodiversidade numa dada classe de cobertura do solo. Os valores de resistência dos pixels de cada uma das classes foram atribuídos, por bioma, pela equipe do projeto e podem ser vistos na <a href="#tbl-resistencia">Tabela&nbsp;1</a>. <!-- Falta incluir a explicação sobre a análise da largura dos rios --></p>
-<div id="tbl-resistencia" class="anchored">
+<p>As análises de mapeamento das áreas resilientes às mudanças climáticas estão na resolução espacial de 90 metros. Desta forma, reamostramos os dados do MapBiomas <span class="citation" data-cites="mapbiomas_project_collection_2020">(<a href="#ref-mapbiomas_project_collection_2020" role="doc-biblioref">MapBiomas Project 2020</a>)</span> , que estão na resolução de 30 metros, para uma resolução de 90 metros e as diferentes classes de uso do solo receberam valores de resistência baseados na a diferença estrutural da classe de cobertura do solo para o hábitat original do bioma <strong>?@tbl-resistencia</strong>.</p>
+<p>Para avaliar o efeito das larguras do rio na movimentação das espécies foi necessário avaliar o tamanho máximo do corpo d’água regionalmente. Para isso, a classe do MapBiomas equivalente a águas abertas (rios, lagos e oceanos) foi subdividida em quatro classes distintas de acordo com a largura dos corpos d’água já que rios mais largos tendem a ser barreiras mais resistêntes à movimentação das espécies. Para fazer a divisao, extraímos a máscara de corpos d’água e dividimos essa classe única em pedaços menores, regionalizando suas larguras por trechos que foram utilizados como unidades espaciais de consulta da base de largura efetiva máxima dos corpos d’água, de margem a margem (base GWD – LR de <strong>Yamashida et al.&nbsp;2014)</strong>. Todos os corpos d’água foram então divididos em quatro classes de resistência <strong>?@tbl-resistencia</strong>: :::{}<br>
+i. 1 a 250 metros, ii. 250 a 1000 metros, iii. 1000 a 4000 metros e iv. maiores de 4000 metros :::.</p>
+<p>As camadas de infraestrutura de transportes e energia estavam em formatos vetoriais e foram convertidos para <em>raster</em>, com pixels de tamanho aproximado de 90 m e agrupados em um único arquivo matricial que foi sobreposto sobre ao mapa de uso do solo do Mapbiomas e da largura dos rios, sendo que prevalecia o valor do pixel com resistência mais alta nas situações em que havia sobreposição entre pixels de infraestrutura, uso do solo ou largura de rios.</p>
+<p>Os pixels do mapa consolidado de cobertura do solo, largura dos rios e infraestrutura de transportes e energia receberam valores de resistência em cada bioma que buscaram traduzir o grau de dificuldade de movimentação da biodiversidade numa dada classe de cobertura do solo. Os valores de resistência dos pixels de cada uma das classes foram atribuídos pela equipe do projeto, separadamente por bioma, e podem ser vistos na <strong>?@tbl-resistencia</strong> e o <strong>mapa final de resistência</strong> (<span class="citation" data-cites="fig_res">(<a href="#ref-fig_res" role="doc-biblioref"><strong>fig_res?</strong></a>)</span>) foi usado como base do cálculo de <strong>Conectividade Local</strong>.</p>
 <table class="table">
-<caption>Tabela&nbsp;1: Valores de resistência para cada tipo de cobertura por bioma.</caption>
+<caption>Valores de resistência para as 39 classes de uso e cobertura do solo - resultante da junção das superfícies de uso do solo do MapBiomas (N: 1 - 28), as separações do tamanho dos rios por bacias hidrográficas (N 29 - 32) e de infraestrutura de transporte e energia (N: 33 - 39).{#tbl-resistencia}</caption>
 <colgroup>
-<col style="width: 18%">
-<col style="width: 13%">
-<col style="width: 13%">
-<col style="width: 13%">
-<col style="width: 13%">
-<col style="width: 13%">
-<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
+<th style="text-align: right;">N</th>
 <th style="text-align: right;">Classe de cobertura do solo</th>
 <th style="text-align: right;">Amazônia</th>
 <th style="text-align: right;">Caatinga</th>
 <th style="text-align: right;">Cerrado</th>
-<th style="text-align: right;">MataAtlântica</th>
+<th style="text-align: right;">Mata Atlântica</th>
 <th style="text-align: right;">Pampa</th>
 <th style="text-align: right;">Pantanal</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">Aquaculture</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">Afloramento rochoso</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">Algodão</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">Aquacultura</td>
 <td style="text-align: right;">-</td>
 <td style="text-align: right;">10</td>
 <td style="text-align: right;">7</td>
@@ -310,61 +357,108 @@ div.csl-indent {
 <td style="text-align: right;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">Beach, Dune and Sand Spot</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">Área urbana</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">Áreas alagadas (Campos e Pântanos)</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">1</td>
 <td style="text-align: right;">2</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">Arroz</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
 <td style="text-align: right;">-</td>
 </tr>
 <tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">Café</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">Cana de açúcar</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
 <td style="text-align: right;">Citrus</td>
 <td style="text-align: right;">-</td>
 <td style="text-align: right;">-</td>
 <td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
+<td style="text-align: right;">4</td>
 <td style="text-align: right;">-</td>
 <td style="text-align: right;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">Coffee</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">Dendê</td>
+<td style="text-align: right;">10</td>
 <td style="text-align: right;">-</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
 <td style="text-align: right;">-</td>
 <td style="text-align: right;">-</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">Cotton</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">10</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">Floresta alagada</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
 <td style="text-align: right;">-</td>
 <td style="text-align: right;">-</td>
 <td style="text-align: right;">-</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">Estradas não pavimentadas</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">7</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">Formação campestre (campos)</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">Estradas pavimentadas</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">20</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">Formação de savana</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">Forest Formation</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">Formação florestal</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">1</td>
@@ -373,7 +467,108 @@ div.csl-indent {
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">Forest Plantation</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">Mangue</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">Mineração</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">Mosaico de usos</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">Outras áreas não vegetadas</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">Outras culturas perenes</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">Outras culturas temporárias</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">Outras formações não florestais</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">Pastagem</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">Praia, duna e areal</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">Salina (Apicum)</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">Silvicultura (floresta plantada)</td>
 <td style="text-align: right;">7</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">7</td>
@@ -382,199 +577,165 @@ div.csl-indent {
 <td style="text-align: right;">5</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">Grassland</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">Soja</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">Vegetação de restinga arbórea</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">Vegetação de restinga herbácea</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">Corpos d’águas abertas até 250 metros</td>
 <td style="text-align: right;">2</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">Herbaceous Sandbank Vegetation</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">-</td>
 <td style="text-align: right;">2</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">-</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">Mangrove</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">-</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">Corpos d’águas abertas de 250 a 1000 metros</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">Mining</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">20</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">Corpos d’águas abertas de 1000 a 4000 metros</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">Mosaic of Uses</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">Corpos d’águas abertas acima de 4000 metros</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">12</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">Other non Forest Formations</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">-</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">Other non Vegetated Areas</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">Other Perennial Crops</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">-</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">Other Temporary Crops</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">Aerogeradores</td>
 <td style="text-align: right;">15</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">Centrais geradoras de energia solar</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">17</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">Estradas não pavimentadas</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
 <td style="text-align: right;">7</td>
 <td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">Pasture</td>
-<td style="text-align: right;">15</td>
 <td style="text-align: right;">7</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">Estradas pavimentadas</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">Ferrovias</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">Linhas de transmissão (tradicionais e anexas ao sistema eólico)</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
 <td style="text-align: right;">7</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">Rice</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">-</td>
-</tr>
 <tr class="odd">
-<td style="text-align: right;">River, Lake and Ocean</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">Rocky Outcrop</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">-</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">Salt Flat</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">-</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">Savanna Formation</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">Soybean</td>
-<td style="text-align: right;">15</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">Sugar cane</td>
-<td style="text-align: right;">15</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">10</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">Urban Area</td>
+<td style="text-align: right;">39</td>
+<td style="text-align: right;">Termelétricas</td>
 <td style="text-align: right;">20</td>
 <td style="text-align: right;">20</td>
 <td style="text-align: right;">20</td>
 <td style="text-align: right;">20</td>
 <td style="text-align: right;">20</td>
 <td style="text-align: right;">20</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">Wetland</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">Wooded Sandbank Vegetation</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">-</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">-</td>
 </tr>
 </tbody>
 </table>
-</div>
-<!-- Precisa atualizar a tabela e também incluir o fluxograma da análise que Marina gerou -->
-</section>
-<section id="aplicação-do-filtro-kernel" class="level2">
-<h2 class="anchored" data-anchor-id="aplicação-do-filtro-kernel">Aplicação do filtro kernel</h2>
-<p>Depois de atribuídos os valores de resistência, aplicamos à superfície gerada a função <em>kernel</em> de decaimento linear. Esta análise considerou, numa janela móvel de 23 pixels (~2070 m), o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior que os mais distantes. Desta maneira, a função <em>kernel</em> nos auxilia na tarefa de encontrar os melhores caminhos de deslocamento na paisagem, ou seja, aqueles caminhos que oferecem menor resistência (<a href="#fig-res">Figura&nbsp;1</a>).</p>
+<!-- Precisa atualizar a tabela e também incluir o fluxograma da análise que 
+Marina gerou 
+
+23-11-2023 A TABELA E A EXPLICAÇÃO JÁ FORAM ATUALIZADAS 
+-->
 <div id="fig-res" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/C2_Resistencia.png" class="img-fluid figure-img" width="600"></p>
 <figcaption class="figure-caption">Figura&nbsp;1: Mapa final de classificação da resistência à movimentação de organismos dos diferentes tipos de uso e cobertura da terra.</figcaption>
 </figure>
 </div>
+<!--
+ESTOU RETIRANDO A EXPLICAÇÃO DO KERNEL
+
+## Aplicação do filtro kernel
+
+Depois de atribuídos os valores de resistência, aplicamos à superfície gerada a função _kernel_ de decaimento linear. Esta análise considerou, numa janela móvel de 23 pixels (~2070 m), o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior que os mais distantes. Desta maneira, a função _kernel_ nos auxilia na tarefa de encontrar os melhores caminhos de deslocamento na paisagem, ou seja, aqueles caminhos que oferecem menor resistência (@fig-res).
+-->
 </section>
 <section id="conectividade-análise-de-circuitos" class="level2">
 <h2 class="anchored" data-anchor-id="conectividade-análise-de-circuitos">Conectividade: análise de circuitos</h2>
