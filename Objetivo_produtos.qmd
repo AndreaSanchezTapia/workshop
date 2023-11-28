@@ -1,6 +1,6 @@
 # Objetivo
 
-O objetivo principal do projeto é mapear a **resiliência às mudanças climáticas**, por meio do mapeamento da **heterogeneidade ambiental** e da **conectividade local** entre áreas, para identificar locais maior potencial de sustentar a biodiversidade em um futuro de mudanças no clima.
+O objetivo principal do projeto é identificar **áreas resilientes às mudanças climáticas**, com maior potencial de sustentar a biodiversidade no futuro, por meio do mapeamento da **heterogeneidade microclimática** e da **conectividade local** entre  as áreas. 
 
 ## Objetivos específicos
 
@@ -12,7 +12,7 @@ O objetivo geral do estudo pode ser detalhado em dois objetivos específicos:
 
 ## Produtos previstos
 
-O produto principal do projeto é um mapa de áreas resilientes (ambientalmente heterogêneas e conectadas entre si) para os biomas do Brasil, que permita identificar áreas com potencial de sustentar animais e plantas em um clima sob mudanças.
+O produto principal do projeto é um mapa de áreas resilientes para os biomas do Brasil, que permita identificar áreas com potencial de sustentar a biodiversidade em um clima sob mudanças.
 
 Estão previstos ainda:
 

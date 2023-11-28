@@ -1,22 +1,22 @@
 # Glossário
 
 ## Resiliência da paisagem (_landscape resilience_)
-Capacidade de um sítio de absorver impactos das mudanças climáticas na diversidade de espécies e funções ecológicas. Um sítio resiliente apresenta variabilidade de condições que sustentam diversidade de espécies e comunidades naturais, mantendo relações fundamentais entre componentes ecológicos, e permite mudança adaptativa na composição e estrutura do ecossistema.
+Capacidade de uma área de absorver impactos das mudanças climáticas na diversidade de espécies e funções ecológicas. Uma área resiliente apresenta variabilidade de condições que sustentam a biodiversidade, mantendo relações fundamentais entre componentes ecológicos, e permite mudança adaptativa na composição e estrutura do ecossistema.
 
 ## Heterogeneidade da paisagem (_landscape heterogeneity_)
-Estimativa da variabilidade microclimática, definida pelas formas de relevo, amplitude altitudinal, densidade de áreas úmidas e riqueza de solos presentes no entorno de uma dada localidade.
+Estimativa da variabilidade microclimática, definida pelas formas de relevo, amplitude altitudinal, índice de áreas úmidas e riqueza de solos presentes no entorno de uma dada localidade.
 
 ## Resistência da paisagem (_landscape resistance_)
 Dificuldade imposta pelas classes de uso e cobertura do solo à movimentação dos organismos.
 
 ## Conectividade local (_local connectedness_)
-Medida de facilitação ao deslocamento de organismos entre os elementos da paisagem (ou tipos de uso e cobertura do solo). A conectividade é maior quanto menor for a resistência que esses elementos oferecem ao deslocamento dos organismos.
+Medida de facilitação ao deslocamento de organismos entre os elementos da paisagem (ou tipos de uso e cobertura do solo). A conectividade é dependente da resistência dos elementos da paisagem ao deslocamento dos organismos, assim como a sua estruturação espacial.
 
 ## Formas de relevo (_landforms_)
-Feições topográficas presentes na paisagem como topos de montanhas, vales, desfiladeiros e declividades. Cada feição topográfica sofre diferentes níveis de exposição a radiação solar, vento e umidade, sendo a variabilidade das formas de relevo usada como proxy dos microclimas da paisagem.
+Feições topográficas presentes na paisagem como topos de montanhas, vales, desfiladeiros e declividades. Cada feição topográfica sofre diferentes níveis de exposição à radiação solar, vento e umidade, sendo a variabilidade das formas de relevo usada como *proxy* dos microclimas da paisagem.
 
 ## Densidade de áreas úmidas (_wetland density_)
 Média da contagem de locais saturados de água, que ficam encharcados ou alagados de forma perene ou sazonal, presentes em uma determinada região.
 
 ## Padrão de distribuição regional de áreas úmidas (_wetland patchiness_)
-Avaliação da forma com que as áreas úmidas estão distribuídas em uma determinada região, de acordo com o número de áreas úmidas em uma escala espacial.
+Avaliação da forma com que as áreas úmidas estão distribuídas em uma determinada região, de acordo com o número de áreas úmidas naquela escala espacial.

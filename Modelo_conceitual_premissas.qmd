@@ -1,10 +1,25 @@
+# Modelo conceitual e premissas
+
+![Modelo conceitual para o mapeamento das áreas resilientes às mudanças climáticas.](figs/conceito.png){#conceito fig-align="center"}
+
+
 # Premissas
 
-**Premissa #1**
-A heterogeneidade da paisagem é determinada pela heterogeneidade de habitats, variáveis condicionadas por características do meio físico, como feições topográficas, altitude, disponibilidade hídrica e tipo de solo, e que promovem variabilidade microclimática, influenciando diversidade genética e fenotípica de espécies.
+1 - A heterogeneidade da paisagem é composta pelas feições topográficas, altitude, disponibilidade hídrica e riqueza de solos, e promove variabilidade microclimática.
 
-**Premissa #2**
-A conectividade da paisagem é determinada pela resistência que os tipos de uso e cobertura do solo oferecem para a movimentação das espécies na paisagem, considerando as relações de vizinhança estabelecidas em uma escala local.
+2 - O variação microclimática possui dinâmica diferente da variação no clima regional. 
 
-**Premissa #3**
-A resiliência da paisagem a mudanças do clima é determinada pela heterogeneidade de habitat disponíveis para as espécies, que geram condições diversificadas de microclimas aos organismos, e pela conectividade desses habitats na paisagem, que permitem a movimentação desses organismos para áreas mais adequadas.
+3 - Quanto maior a heterogeneidade da paisagem, maior  a probabilidade de haver refúgio microclimático.
+
+4 - A heterogeneidade da paisagem é mais estável que o clima regional, sendo um bom indicador microclimático. 
+
+5 - Quanto maior a heterogeneidade da paisagem maior, a diversidade de espécies.
+
+6 - Conservar locais com maior heterogeneidade da paisagem permite conservar as características que promovem a biodiversidade.
+
+7 - A alta conectividade local da paisagem permite maior mobilidade dos organismos na busca de refúgios microclimáticos.
+
+8 - Locais com alta heterogeneidade da paisagem e alta conectividade local são mais resilientes às mudanças climáticas.
+
+
+
