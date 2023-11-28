@@ -63,12 +63,12 @@ Com relação a algumas regiões de destaque dentro dos biomas, é importante me
 
 - No Pampa, a heterogeneidade da paisagem se destaca em regiões com alta rugosidade do relevo (ex. Serra do Sudeste, APA do Ibirapuitã, na Campanha, e na região nordeste do Estado), e próximo a rios (ex. rio Jacuí) e lagos (ex. entorno da lagoa dos Patos) (@fig-biomas-PA).
 
-- No Pantanal, as localidades com maior heterogeneidade da paisagem foram próximas a rios (ex. Piquiri, São Lourenço e Taquari), lagoas (ex. Nhecolândia) e regiões mais altas (ex. Serra do Amolar), contrastantes com o entorno plano; (@fig-biomas-PM) <!--, provavelmente devido ao contraste da variação de relevo com o entorno, visto que pequenas declividades em um ambiente muito plano são relevantes na heterogeneidade da paisagem (@fig-biomas-PM). Dentre regiões altas inseridas no Pantanal, destacamos a paisagem da Serra do Amolar (borda oeste do Pantanal), ... -->
+- No Pantanal, as localidades com maior heterogeneidade da paisagem foram próximas aos rios (ex. Piquiri, São Lourenço e Taquari), lagoas (ex. Nhecolândia) e regiões mais altas (ex. Serra do Amolar), contrastantes com o entorno plano (@fig-biomas-PM) devido ao contraste da variação de relevo com o entorno, visto que pequenas declividades em um ambiente muito plano são relevantes na heterogeneidade da paisagem (@fig-biomas-PM). Dentre regiões altas inseridas no Pantanal, destacamos a paisagem da Serra do Amolar (borda oeste do Pantanal).
    
 
 ## Conectividade Local [(link)](https://projeto-resiliencia-tnc.hub.arcgis.com/maps/c7725afd65da4198bba59a7ccde49fce/explore)
 
-A conectividade local da paisagem apresenta um padrão diferente daquele apresentado na camada de heterogeneidade da paisagem, mostrando uma divisão entre regiões muito conectadas na região norte e outras com conectividade mais baixa nas região central e sudeste [Figura 5]. Essa distribuição evidencia uma fragmentação clara do mapa do Brasil em duas porções, diviIsso se deve ao histórico de ocupação dessas regiões e do uso atual com relação a agricultura e ocupação urbana. <!-- Importante discutir mais o padrão geral para o país -->
+A conectividade local da paisagem apresenta um padrão diferente daquele apresentado na camada de heterogeneidade da paisagem, mostrando uma divisão entre regiões muito conectadas na região norte e outras com conectividade mais baixa nas região central e sudeste [@fig-conect-original]. Essa distribuição evidencia uma fragmentação clara do mapa do Brasil em duas porções, diviIsso se deve ao histórico de ocupação dessas regiões e do uso atual com relação a agricultura e ocupação urbana. <!-- Importante discutir mais o padrão geral para o país -->
 
 O padrão de conectividade local encontrado reflete a distribuição espacial das classes de uso e cobertura do solo com valores de resistência distintos. É possível observar uma concentração alta de classes com alto valor de resistência na parte mais ao sul e leste da região Norte (coincidindo com o arco do desmatamento) que divide o Brasil em duas porções muito marcadas. Ao noroeste, na região Amazônica, está a porção com maior concentração de áreas naturais, com menores valores de resistência e, portanto com alta conectividade. Na porção sul e ao leste do arco do desmatamento há um mosaico de áreas com diferentes graus de resistência à movimentação dos organismos, prevalencendo classes com valores médios e altos de resistência na região Sul e Sudeste e classes com valores médios e baixos de resistência na região Nordeste, com uma porção litorânea marcadamente mais atropizada que as porções mais a oeste nesta região. 
 
@@ -95,17 +95,7 @@ A resiliência da paisagem apresentou um padrão... <!-- descrever o padrão ger
 <!-- Milena: Por que essa figura tem dois mapas? Sugiro incluir apenas o primeiro e colocar ele maior (como o de heterog. e de conectiv. acima) -->
 ![Mapa final de resiliência da paisagem com a sobreposição dos mapas de heterogeneidade da paisagem e conectividade local classificados por quantis de 25%. A classificação bivariada da camada de resiliência da paisagem foi dividida em quadrantes com diferentes graus de conectividade local e heterogeneidade da paisagem.](figs/Resilience_bivariate.png){#fig-resilience width="600" fig-align="center"}
 
-<!-- Milena: é interessante manter esse mapa? Se for, acho bom incluir uma descrição no texto -->
-![Classificação do histograma de valores dos pixels em quantis de 25% de:  A) **heterogeneidade da paisagem** e B)**Conectividade local**.](figs/classes_het_con.png){#fig-classes width="700" fig-align="center"}
-
-<!--
-Estou deixando as duas figuras em comentarios, caso a gente decida dividir elas novamente aqui.
-Milena: que mapas são esses? Se for manter, sugiro incluir nos respectivos itens (heterog. e conectiv.) e incluir uma descrição no texto. -->
-
-![Classificação da Heterogeneidade da Paisagem de acordo com as divisões do histograma de densidade em quantis de 25%](figs/Heterogeneity_bivariate.png){#fig-hetero width="600" fig-align="center"}
-
-![Classificação da Conectividade Local de acordo com as divisões do histograma de densidade em quantis de 25%](figs/Connectedness_bivariate.png){#fig-conect width="600" fig-align="center"}
--->
+<!-- deixar somente o mapa da esquerda -->
 
 A Amazônia possui a maior porcentagem de áreas resilientes (39,5%), seguida por Pantanal (28,6%), Caatinga (19.9%), Cerrado (18,1), Pampa (13,2%) e Mata Atlântica (5,1%). [citar Figura histogramas] <!-- descrever os resultados dos histrogramas --> Essa mesma ordem é mantida para a porcentagem de áreas com alta conectividade local e baixa heterogeneidade, menor porcentagem de áreas de baixa resiliência e alta heterogeneidade e baixa conectividade local (@fig-resilience-hist). <!-- não entendi essa frase --> 
 
@@ -123,14 +113,16 @@ Uma avaliação mais detalhada dos resultados de resiliência por bioma mostra q
 
 - A Mata Atlântica é o bioma com menor porcentagem de áreas resilientes e áreas conectadas, concentradas nas regiões sudeste, sul e norte do bioma (@fig-biomas-AT C). 
 
+<!--
+encontramos que apenas 5.1% dos pixels correspondem às áreas de maior resiliência a mudanças climáticas, ou seja, áreas com alta heterogeneidade da paisagem e alta conectividade local (@fig-resilience-hist E, quadrante 4). Por outro lado, 42.0% do território do bioma corresponde a áreas identificadas como áreas de baixa resiliência as mudanças do clima  (@fig-resilience-hist E, quadrante 1) evidenciando o predomínio de áreas com baixa conectividade em áreas de baixa heterogeneidade da paisagem e, por isso, é o padrão predominante em escalas regionais. Apenas 3.6% corresponde a áreas com alta conectividade local e baixa heterogeneidade da paisagem (@fig-resilience-hist E, quadrante 3) enquanto os outros 49.4% dos pixels foram identificados como área de baixa conectividade local, porém com alta heterogeneidade da paisagem (@fig-resilience-hist E, quadrante 4). Portanto, nossos resultados mostram que a conectividade da paisagem é um fator determinante no padrão de resiliência atualmente encontrado para a Mata Atlântica. Áreas de maior resiliência concentram-se na porção sul e sudeste do bioma (@fig-biomas-AT C), porém podem estar concentradas em áreas de elevação moderada a alta já que em áreas mais baixas dessa mesma região encontram-se as maiores metrópoles brasileiras (Figura 8B). O histórico de ocupação e degradação desse bioma é potencialmente um dos principais fatores responsáveis pela atual baixa conectividade ao longo do território ocupado pela Mata Atlântica, uma vez que essas são áreas foram amplamente utilizadas tanto para agricultura quanto para o assentamento dos primeiros e mais expressivos centros urbanos do país. -->
+
+
 - No Pampa, as áreas resilientes estão na região central e oeste do bioma (@fig-biomas-PM C).
 
 - No Pantanal, as regiões de maior resiliência da paisagem são majoritariamente nas regiões com maior densidade de áreas úmidas (@fig-biomas-PA C). <!--Essa dominância da conectividade local na resiliência da paisagem se dá pela estacionariedade dos valores de heterogeneidade da paisagem na maior parte da região. Há algumas exceções de valores mais altos de heterogeneidade da paisagem como: alguns rios, lagoas e regiões mais altas, contrastantes com o entorno plano. -->
 
 
-<!--
-encontramos que apenas 5.1% dos pixels correspondem às áreas de maior resiliência a mudanças climáticas, ou seja, áreas com alta heterogeneidade da paisagem e alta conectividade local (@fig-resilience-hist E, quadrante 4). Por outro lado, 42.0% do território do bioma corresponde a áreas identificadas como áreas de baixa resiliência as mudanças do clima  (@fig-resilience-hist E, quadrante 1) evidenciando o predomínio de áreas com baixa conectividade em áreas de baixa heterogeneidade da paisagem e, por isso, é o padrão predominante em escalas regionais. Apenas 3.6% corresponde a áreas com alta conectividade local e baixa heterogeneidade da paisagem (@fig-resilience-hist E, quadrante 3) enquanto os outros 49.4% dos pixels foram identificados como área de baixa conectividade local, porém com alta heterogeneidade da paisagem (@fig-resilience-hist E, quadrante 4). Portanto, nossos resultados mostram que a conectividade da paisagem é um fator determinante no padrão de resiliência atualmente encontrado para a Mata Atlântica. Áreas de maior resiliência concentram-se na porção sul e sudeste do bioma (@fig-biomas-AT C), porém podem estar concentradas em áreas de elevação moderada a alta já que em áreas mais baixas dessa mesma região encontram-se as maiores metrópoles brasileiras (Figura 8B). O histórico de ocupação e degradação desse bioma é potencialmente um dos principais fatores responsáveis pela atual baixa conectividade ao longo do território ocupado pela Mata Atlântica, uma vez que essas são áreas foram amplamente utilizadas tanto para agricultura quanto para o assentamento dos primeiros e mais expressivos centros urbanos do país. -->
 
-![](figs/unidades_conservacao.png){#fig-unidade_conservacao width="600" fig-align="center"}
+
 
 
