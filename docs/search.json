@@ -109,7 +109,7 @@
     "href": "Objetivo_produtos.html",
     "title": "Objetivo",
     "section": "",
-    "text": "O objetivo principal do projeto é mapear a resiliência às mudanças climáticas, por meio do mapeamento da heterogeneidade ambiental e da conectividade local entre áreas, para identificar locais maior potencial de sustentar a biodiversidade em um futuro de mudanças no clima.\n\n\nO objetivo geral do estudo pode ser detalhado em dois objetivos específicos:\n\nAplicar a metodologia de mapeamento de sítios resilientes, proposta e validada para a região da América do Norte, para o Brasil, conduzindo as análises de heterogeneidade da paisagem e de conectividade local ;\nRefinar e adaptar a metodologia proposta, com base em discussões com especialistas no tema que atuam na região de estudo, produzindo um mapa de áreas resilientes para o Brasil.\n\n\n\n\nO produto principal do projeto é um mapa de áreas resilientes (ambientalmente heterogêneas e conectadas entre si) para os biomas do Brasil, que permita identificar áreas com potencial de sustentar animais e plantas em um clima sob mudanças.\nEstão previstos ainda:\n\nRelatório técnico, em português, descrevendo o projeto e a metodologia utilizada;\nDocumentação detalhada das análises, incluindo o compartilhamento dos códigos, para que seja possível reproduzir as análises;\nElaboração de, no mínimo, um artigo científico a ser submetido a uma revista científica internacional."
+    "text": "O objetivo principal do projeto é identificar áreas resilientes às mudanças climáticas, com maior potencial de sustentar a biodiversidade no futuro, por meio do mapeamento da heterogeneidade microclimática e da conectividade local entre as áreas.\n\n\nO objetivo geral do estudo pode ser detalhado em dois objetivos específicos:\n\nAplicar a metodologia de mapeamento de sítios resilientes, proposta e validada para a região da América do Norte, para o Brasil, conduzindo as análises de heterogeneidade da paisagem e de conectividade local ;\nRefinar e adaptar a metodologia proposta, com base em discussões com especialistas no tema que atuam na região de estudo, produzindo um mapa de áreas resilientes para o Brasil.\n\n\n\n\nO produto principal do projeto é um mapa de áreas resilientes para os biomas do Brasil, que permita identificar áreas com potencial de sustentar a biodiversidade em um clima sob mudanças.\nEstão previstos ainda:\n\nRelatório técnico, em português, descrevendo o projeto e a metodologia utilizada;\nDocumentação detalhada das análises, incluindo o compartilhamento dos códigos, para que seja possível reproduzir as análises;\nElaboração de, no mínimo, um artigo científico a ser submetido a uma revista científica internacional."
   },
   {
     "objectID": "Objetivo_produtos.html#objetivos-específicos",
@@ -123,7 +123,7 @@
     "href": "Objetivo_produtos.html#produtos-previstos",
     "title": "Objetivo",
     "section": "",
-    "text": "O produto principal do projeto é um mapa de áreas resilientes (ambientalmente heterogêneas e conectadas entre si) para os biomas do Brasil, que permita identificar áreas com potencial de sustentar animais e plantas em um clima sob mudanças.\nEstão previstos ainda:\n\nRelatório técnico, em português, descrevendo o projeto e a metodologia utilizada;\nDocumentação detalhada das análises, incluindo o compartilhamento dos códigos, para que seja possível reproduzir as análises;\nElaboração de, no mínimo, um artigo científico a ser submetido a uma revista científica internacional."
+    "text": "O produto principal do projeto é um mapa de áreas resilientes para os biomas do Brasil, que permita identificar áreas com potencial de sustentar a biodiversidade em um clima sob mudanças.\nEstão previstos ainda:\n\nRelatório técnico, em português, descrevendo o projeto e a metodologia utilizada;\nDocumentação detalhada das análises, incluindo o compartilhamento dos códigos, para que seja possível reproduzir as análises;\nElaboração de, no mínimo, um artigo científico a ser submetido a uma revista científica internacional."
   },
   {
     "objectID": "Atividades_oficinas.html",
@@ -151,21 +151,21 @@
     "href": "Glossario.html",
     "title": "Glossário",
     "section": "",
-    "text": "Capacidade de um sítio de absorver impactos das mudanças climáticas na diversidade de espécies e funções ecológicas. Um sítio resiliente apresenta variabilidade de condições que sustentam diversidade de espécies e comunidades naturais, mantendo relações fundamentais entre componentes ecológicos, e permite mudança adaptativa na composição e estrutura do ecossistema.\n\n\n\nEstimativa da variabilidade microclimática, definida pelas formas de relevo, amplitude altitudinal, densidade de áreas úmidas e riqueza de solos presentes no entorno de uma dada localidade.\n\n\n\nDificuldade imposta pelas classes de uso e cobertura do solo à movimentação dos organismos.\n\n\n\nMedida de facilitação ao deslocamento de organismos entre os elementos da paisagem (ou tipos de uso e cobertura do solo). A conectividade é maior quanto menor for a resistência que esses elementos oferecem ao deslocamento dos organismos.\n\n\n\nFeições topográficas presentes na paisagem como topos de montanhas, vales, desfiladeiros e declividades. Cada feição topográfica sofre diferentes níveis de exposição a radiação solar, vento e umidade, sendo a variabilidade das formas de relevo usada como proxy dos microclimas da paisagem.\n\n\n\nMédia da contagem de locais saturados de água, que ficam encharcados ou alagados de forma perene ou sazonal, presentes em uma determinada região.\n\n\n\nAvaliação da forma com que as áreas úmidas estão distribuídas em uma determinada região, de acordo com o número de áreas úmidas em uma escala espacial."
+    "text": "Capacidade de uma área de absorver impactos das mudanças climáticas na diversidade de espécies e funções ecológicas. Uma área resiliente apresenta variabilidade de condições que sustentam a biodiversidade, mantendo relações fundamentais entre componentes ecológicos, e permite mudança adaptativa na composição e estrutura do ecossistema.\n\n\n\nEstimativa da variabilidade microclimática, definida pelas formas de relevo, amplitude altitudinal, índice de áreas úmidas e riqueza de solos presentes no entorno de uma dada localidade.\n\n\n\nDificuldade imposta pelas classes de uso e cobertura do solo à movimentação dos organismos.\n\n\n\nMedida de facilitação ao deslocamento de organismos entre os elementos da paisagem (ou tipos de uso e cobertura do solo). A conectividade é dependente da resistência dos elementos da paisagem ao deslocamento dos organismos, assim como a sua estruturação espacial.\n\n\n\nFeições topográficas presentes na paisagem como topos de montanhas, vales, desfiladeiros e declividades. Cada feição topográfica sofre diferentes níveis de exposição à radiação solar, vento e umidade, sendo a variabilidade das formas de relevo usada como proxy dos microclimas da paisagem.\n\n\n\nMédia da contagem de locais saturados de água, que ficam encharcados ou alagados de forma perene ou sazonal, presentes em uma determinada região.\n\n\n\nAvaliação da forma com que as áreas úmidas estão distribuídas em uma determinada região, de acordo com o número de áreas úmidas naquela escala espacial."
   },
   {
     "objectID": "Glossario.html#resiliência-da-paisagem-landscape-resilience",
     "href": "Glossario.html#resiliência-da-paisagem-landscape-resilience",
     "title": "Glossário",
     "section": "",
-    "text": "Capacidade de um sítio de absorver impactos das mudanças climáticas na diversidade de espécies e funções ecológicas. Um sítio resiliente apresenta variabilidade de condições que sustentam diversidade de espécies e comunidades naturais, mantendo relações fundamentais entre componentes ecológicos, e permite mudança adaptativa na composição e estrutura do ecossistema."
+    "text": "Capacidade de uma área de absorver impactos das mudanças climáticas na diversidade de espécies e funções ecológicas. Uma área resiliente apresenta variabilidade de condições que sustentam a biodiversidade, mantendo relações fundamentais entre componentes ecológicos, e permite mudança adaptativa na composição e estrutura do ecossistema."
   },
   {
     "objectID": "Glossario.html#heterogeneidade-da-paisagem-landscape-heterogeneity",
     "href": "Glossario.html#heterogeneidade-da-paisagem-landscape-heterogeneity",
     "title": "Glossário",
     "section": "",
-    "text": "Estimativa da variabilidade microclimática, definida pelas formas de relevo, amplitude altitudinal, densidade de áreas úmidas e riqueza de solos presentes no entorno de uma dada localidade."
+    "text": "Estimativa da variabilidade microclimática, definida pelas formas de relevo, amplitude altitudinal, índice de áreas úmidas e riqueza de solos presentes no entorno de uma dada localidade."
   },
   {
     "objectID": "Glossario.html#resistência-da-paisagem-landscape-resistance",
@@ -179,14 +179,14 @@
     "href": "Glossario.html#conectividade-local-local-connectedness",
     "title": "Glossário",
     "section": "",
-    "text": "Medida de facilitação ao deslocamento de organismos entre os elementos da paisagem (ou tipos de uso e cobertura do solo). A conectividade é maior quanto menor for a resistência que esses elementos oferecem ao deslocamento dos organismos."
+    "text": "Medida de facilitação ao deslocamento de organismos entre os elementos da paisagem (ou tipos de uso e cobertura do solo). A conectividade é dependente da resistência dos elementos da paisagem ao deslocamento dos organismos, assim como a sua estruturação espacial."
   },
   {
     "objectID": "Glossario.html#formas-de-relevo-landforms",
     "href": "Glossario.html#formas-de-relevo-landforms",
     "title": "Glossário",
     "section": "",
-    "text": "Feições topográficas presentes na paisagem como topos de montanhas, vales, desfiladeiros e declividades. Cada feição topográfica sofre diferentes níveis de exposição a radiação solar, vento e umidade, sendo a variabilidade das formas de relevo usada como proxy dos microclimas da paisagem."
+    "text": "Feições topográficas presentes na paisagem como topos de montanhas, vales, desfiladeiros e declividades. Cada feição topográfica sofre diferentes níveis de exposição à radiação solar, vento e umidade, sendo a variabilidade das formas de relevo usada como proxy dos microclimas da paisagem."
   },
   {
     "objectID": "Glossario.html#densidade-de-áreas-úmidas-wetland-density",
@@ -200,14 +200,14 @@
     "href": "Glossario.html#padrão-de-distribuição-regional-de-áreas-úmidas-wetland-patchiness",
     "title": "Glossário",
     "section": "",
-    "text": "Avaliação da forma com que as áreas úmidas estão distribuídas em uma determinada região, de acordo com o número de áreas úmidas em uma escala espacial."
+    "text": "Avaliação da forma com que as áreas úmidas estão distribuídas em uma determinada região, de acordo com o número de áreas úmidas naquela escala espacial."
   },
   {
     "objectID": "Modelo_conceitual_premissas.html",
     "href": "Modelo_conceitual_premissas.html",
-    "title": "Premissas",
+    "title": "Modelo conceitual e premissas",
     "section": "",
-    "text": "Premissas\nPremissa #1 A heterogeneidade da paisagem é determinada pela heterogeneidade de habitats, variáveis condicionadas por características do meio físico, como feições topográficas, altitude, disponibilidade hídrica e tipo de solo, e que promovem variabilidade microclimática, influenciando diversidade genética e fenotípica de espécies.\nPremissa #2 A conectividade da paisagem é determinada pela resistência que os tipos de uso e cobertura do solo oferecem para a movimentação das espécies na paisagem, considerando as relações de vizinhança estabelecidas em uma escala local.\nPremissa #3 A resiliência da paisagem a mudanças do clima é determinada pela heterogeneidade de habitat disponíveis para as espécies, que geram condições diversificadas de microclimas aos organismos, e pela conectividade desses habitats na paisagem, que permitem a movimentação desses organismos para áreas mais adequadas."
+    "text": "Modelo conceitual e premissas\n\n\n\nModelo conceitual para o mapeamento das áreas resilientes às mudanças climáticas.\n\n\n\n\nPremissas\n1 - A heterogeneidade da paisagem é composta pelas feições topográficas, altitude, disponibilidade hídrica e riqueza de solos, e promove variabilidade microclimática.\n2 - O variação microclimática possui dinâmica diferente da variação no clima regional.\n3 - Quanto maior a heterogeneidade da paisagem, maior a probabilidade de haver refúgio microclimático.\n4 - A heterogeneidade da paisagem é mais estável que o clima regional, sendo um bom indicador microclimático.\n5 - Quanto maior a heterogeneidade da paisagem maior, a diversidade de espécies.\n6 - Conservar locais com maior heterogeneidade da paisagem permite conservar as características que promovem a biodiversidade.\n7 - A alta conectividade local da paisagem permite maior mobilidade dos organismos na busca de refúgios microclimáticos.\n8 - Locais com alta heterogeneidade da paisagem e alta conectividade local são mais resilientes às mudanças climáticas."
   },
   {
     "objectID": "Metodologia_resumida.html",
