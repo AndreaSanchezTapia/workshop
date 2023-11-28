@@ -6,7 +6,7 @@ As mudanças no clima modificam ambientes naturais e pressionam espécies a se a
 
 ## O que queremos fazer?
 
-O objetivo principal do projeto é **mapear sítios resilientes**, que permitam a movimentação da biodiversidade na busca de áreas mais adequadas climaticamente em um cenário de mudança climáticas.
+O objetivo principal do projeto é **mapear áreas resilientes**, que permitam a movimentação da biodiversidade na busca de áreas mais adequadas climaticamente em um cenário de mudança climáticas.
 
 O termo *áreas resilientes*, neste contexto, indica locais com alta diversidade microclimática e conectividade, condições necessárias para que espécies e processos ecológicos persistam às mudanças climáticas regionais.
 
@@ -15,7 +15,7 @@ O termo *áreas resilientes*, neste contexto, indica locais com alta diversidade
 
 A metodologia desenvolvida segue três premissas básicas:
 
-1.  A **heterogeneidade da paisagem** resultante da combinação de características do meio físico, (ex. feições topográficas, altitude, disponibilidade hídrica e tipo de solo) proporcionam variabilidade microclimática, que proporcionam refúgios microclimáticos e heterogeneidade de habitats para as espécies. <!--contribui para a diversidade genética e fenotípica de espécies.-->
+1.  A **heterogeneidade da paisagem** resultante da combinação de características do meio físico, (ex. feições topográficas, altitude, disponibilidade hídrica e tipo de solo) proporcionam variabilidade microclimática, que fornecem refúgios microclimáticos e heterogeneidade de habitats para as espécies. <!--contribui para a diversidade genética e fenotípica de espécies.-->
 
 2.  A **conectividade local** é a resistência na movimentação das espécies proporcionada pelos tipos de uso e cobertura do solo e a sua estruturação na paisagem.
 
@@ -33,7 +33,7 @@ A conectividade local é baseada na resistência das classes de uso da terra da 
 
 Essa análise foi proposta e validada para a América do Norte pela *The Nature Conservancy* (TNC), e complementa metodologias baseadas em dados climáticos, uma vez que ela foca nas características do terreno para identificar áreas resilientes.
 
-A aplicação da metodologia da TNC para os biomas brasileiros é um passo importante na identificação de sítios resilientes em ambientes tropicais megadiversos. Atuando em conjunto com especialistas dos diferentes biomas e baseado na literatura disponível, o projeto busca adequar a metodologia original ao contexto dos biomas brasileiros, refinando e adaptando quando necessário.
+A aplicação da metodologia da TNC para os biomas brasileiros é um passo importante na identificação de áreas resilientes em ambientes tropicais megadiversos. Atuando em conjunto com especialistas dos diferentes biomas e baseado na literatura disponível, o projeto busca adequar a metodologia original ao contexto dos biomas brasileiros, refinando e adaptando quando necessário.
 
 ## Onde e com quem estamos trabalhando?
 
@@ -45,7 +45,7 @@ O mapeamento está sendo conduzido para os seis biomas do Brasil. Para isso, em 
 Ana trouxe o questionamento de que não estamos mapeando só áreas resilientes e conectadas. Precisamos pensar no que estamos criando
 -->
 
-O produto resultante desse projeto é um mapa de áreas resilientes e conectadas para os biomas do Brasil que permite identificar o potencial de cada área de sustentar a biodiversidade com o clima sob mudanças. Está em construção também um relatório técnico descrevendo o projeto e a metodologia utilizada, além de uma documentação reproduzível das análises. Além desses produtos, está prevista a elaboração de, no mínimo, um artigo científico a ser submetido a uma revista científica internacional.
+O produto resultante desse projeto é um mapa de áreas resilientes para os biomas do Brasil que permite identificar o potencial de cada área de sustentar a biodiversidade com o clima sob mudanças. Está em construção também um relatório técnico descrevendo o projeto e a metodologia utilizada, além de uma documentação reproduzível das análises. Além desses produtos, está prevista a elaboração de, no mínimo, um artigo científico a ser submetido a uma revista científica internacional.
 
 ## Como temos conduzido as atividades?
 
