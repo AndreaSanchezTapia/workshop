@@ -45,8 +45,6 @@ O mapeamento está sendo conduzido para os seis biomas do Brasil. Para isso, em 
 Ana trouxe o questionamento de que não estamos mapeando só áreas resilientes e conectadas. Precisamos pensar no que estamos criando
 -->
 
-<!-- Resposta: Preciso entender melhor o questionamento para pensar em como solucionar -->
-
 O produto resultante desse projeto é um mapa de áreas resilientes e conectadas para os biomas do Brasil que permite identificar o potencial de cada área de sustentar a biodiversidade com o clima sob mudanças. Está em construção também um relatório técnico descrevendo o projeto e a metodologia utilizada, além de uma documentação reproduzível das análises. Além desses produtos, está prevista a elaboração de, no mínimo, um artigo científico a ser submetido a uma revista científica internacional.
 
 ## Como temos conduzido as atividades?
