@@ -63,7 +63,7 @@ Com relação a algumas regiões de destaque dentro dos biomas, é importante me
 
 - No Pampa, a heterogeneidade da paisagem se destaca em regiões com alta rugosidade do relevo (ex. Serra do Sudeste, APA do Ibirapuitã, na Campanha, e na região nordeste do Estado), e próximo a rios (ex. rio Jacuí) e lagos (ex. entorno da lagoa dos Patos) (@fig-biomas-PA).
 
-- No Pantanal, as localidades com maior heterogeneidade da paisagem foram próximas aos rios (ex. Piquiri, São Lourenço e Taquari), lagoas (ex. Nhecolândia) e regiões mais altas (ex. Serra do Amolar), contrastantes com o entorno plano (@fig-biomas-PM) devido ao contraste da variação de relevo com o entorno, visto que pequenas declividades em um ambiente muito plano são relevantes na heterogeneidade da paisagem (@fig-biomas-PM). Dentre regiões altas inseridas no Pantanal, destacamos a paisagem da Serra do Amolar (borda oeste do Pantanal).
+- No Pantanal, a heterogeneidade da paisagem segue majoritariamente os padrões deposicionais da região, visto que pequenas declividades em um ambiente muito plano são relevantes na heterogeneidade da paisagem (@fig-biomas-PM) devido ao contraste da variação de relevo com o entorno. As localidades com maiores valores de heterogeneidade da paisagem foram as próximas a rios maiores (Piquiri, São Lourenço e Taquari), lagoas da Nhecolândia e regiões mais altas (ex. Serra do Amolar), contrastantes com o entorno plano (@fig-biomas-PM). Dentre regiões altas inseridas no Pantanal, destacamos a paisagem da Serra do Amolar (borda oeste do Pantanal) e alguns morros testemunho na planície Pantaneira.
    
 
 ## Conectividade Local [(link)](https://projeto-resiliencia-tnc.hub.arcgis.com/maps/c7725afd65da4198bba59a7ccde49fce/explore)
@@ -85,7 +85,7 @@ Dentro de cada bioma, podemos destacar alguns padrões gerais:
 
 - No Pampa, as localidades com alta conectividade estão localizadas na Serra do Sudeste, na Campanha (nas proximidades com a APA do Ibirapuitã) e na região das Missões. Em contraste, os locais com menor conectividade estão localizados próximo aos principais centros urbanos, como é o caso de Porto Alegre e região metropolitana, assim como nas proximidades com grandes rodovias (ex. ao longo da BR-116 e BR-287);
 
-- No Pantanal, a conectividade local de modo geral é alta ao longo de todo bioma, com excessão nos limites do bioma, como é o caso da borda leste, em função do avanço da agricultura, no limite oeste, devido a xx, e em uma mancha central, em função de xx <!-- tem umas áreas vermelhas dentro do bioma e na parte oeste, importante indicar esse locais -->
+- No Pantanal, a conectividade local de modo geral é alta na maior parte do bioma, a conectividade vai reduzindo em direção à borda leste em função do avanço da agricultura, no Pantanal do Taquari, por ser uma região inundada o ano todo, e próximas à Serra do Amolar e aos municípios de Corumbá e Ladário.
 
 
 ## Resiliência da paisagem [(link)](https://projeto-resiliencia-tnc.hub.arcgis.com/maps/4e5b37de7de640c0a7b8505f6c72091d/explore)
@@ -119,7 +119,7 @@ encontramos que apenas 5.1% dos pixels correspondem às áreas de maior resiliê
 
 - No Pampa, as áreas resilientes estão na região central e oeste do bioma (@fig-biomas-PM C).
 
-- No Pantanal, as regiões de maior resiliência da paisagem são majoritariamente nas regiões com maior densidade de áreas úmidas (@fig-biomas-PA C). <!--Essa dominância da conectividade local na resiliência da paisagem se dá pela estacionariedade dos valores de heterogeneidade da paisagem na maior parte da região. Há algumas exceções de valores mais altos de heterogeneidade da paisagem como: alguns rios, lagoas e regiões mais altas, contrastantes com o entorno plano. -->
+- No Pantanal, as regiões de maior resiliência da paisagem são majoritariamente nas regiões com maior densidade de áreas úmidas (@fig-biomas-PA C). Essa dominância da conectividade local na resiliência da paisagem se dá pela estacionariedade dos valores de heterogeneidade da paisagem na maior parte da região. O padrão espacial da conectividade se mostra mais dominante na expressão geral da resiliência da paisagem e os valores mais altos de conectividade da paisagem são coincidentes com as lagoas da Nhecolândia, rios Taquari, Piquiri e São Lourenço, por serem regiões com maior heterogeneidade da paisagem.
 
 
 
