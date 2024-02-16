@@ -2,11 +2,13 @@
 
 O objetivo principal do projeto é identificar **áreas resilientes às mudanças climáticas**, com maior potencial de sustentar a biodiversidade no futuro, por meio do mapeamento da **heterogeneidade microclimática** e da **conectividade local** entre  as áreas. 
 
+O objetivo principal do projeto é identificar **áreas resilientes às mudanças climáticas**, que são locais com maior potencial de sustentar a biodiversidade no futuro, por meio do mapeamento da **heterogeneidade da paisagem** e da **conectividade local** entre as áreas.
+
 ## Objetivos específicos
 
 O objetivo geral do estudo pode ser detalhado em dois objetivos específicos:
 
--   Aplicar a metodologia de mapeamento de sítios resilientes, proposta e validada para a região da América do Norte, para o Brasil, conduzindo as análises de **heterogeneidade da paisagem** e de **conectividade local **;
+-   Aplicar a metodologia de mapeamento de sítios resilientes, proposta e validada para a região da América do Norte, no Brasil, conduzindo as análises de **heterogeneidade da paisagem** e de **conectividade local **;
 
 -   Refinar e adaptar a metodologia proposta, **com base em discussões com especialistas no tema que atuam na região de estudo**, produzindo um mapa de áreas resilientes para o Brasil.
 
@@ -18,6 +20,6 @@ Estão previstos ainda:
 
 -   Relatório técnico, em português, descrevendo o projeto e a metodologia utilizada;
 
--   Documentação detalhada das análises, incluindo o compartilhamento dos códigos, para que seja possível reproduzir as análises;
+-   Tutorial das análises, incluindo a disponibilização dos códigos e permitindo a reprodutividade das análises;
 
--   Elaboração de, no mínimo, um artigo científico a ser submetido a uma revista científica internacional.
+-   Elaboração de um artigo científico a ser submetido a uma revista científica internacional.
