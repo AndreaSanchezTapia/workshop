@@ -16,7 +16,7 @@ Medida de facilitação ao deslocamento de organismos entre os elementos da pais
 Área espacialmente delimitada e que apresenta heterogeneidade para diferentes aspectos (formas de relevo, altitude, resistência e configuração espacial) capaz de influenciar os processos ecológicos em seu interior.
 
 ## Formas de relevo (_landforms_)
-Feições topográficas presentes na paisagem, como topos de montanhas, vales e desfiladeiros. Cada feição topográfica sofre diferentes níveis de exposição à radiação solar, vento e umidade, sendo a variabilidade das formas de relevo usada como proxy dos microclimas da paisagem.
+Feições topográficas presentes na paisagem, como topos de montanhas, vales e desfiladeiros. Cada feição topográfica sofre diferentes níveis de exposição à radiação solar, vento e umidade, sendo a variabilidade das formas de relevo usada como *proxy* dos microclimas da paisagem.
 
 ## Densidade de áreas úmidas (_wetland density_)
 Quantidade de locais saturados de água, que ficam encharcados ou alagados de forma perene ou sazonal, presentes em uma determinada região.
