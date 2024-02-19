@@ -4,7 +4,7 @@ project:
 book:
   chapters:
     - index.qmd
-    - agradecimentos.qmd
+    - prefacio.qmd
     - sintese.qmd
     - apresentacao.qmd
     - Introducao.qmd
@@ -30,7 +30,7 @@ book:
            href: https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/apresentacao.html                  
          - text: Conectividade local 
            href: https://resiliencia-climatica-brasil.github.io/Resistencia/         
-      - text: Downloads
+      - text: Mapas
         href: https://projeto-resiliencia-tnc.hub.arcgis.com  
   sidebar: 
     title: "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros" 
