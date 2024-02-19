@@ -5,21 +5,23 @@
 
 ## Premissas
 
-1 - A heterogeneidade da paisagem é composta pelas feições topográficas, altitude, disponibilidade hídrica e riqueza de solos, e promove variabilidade microclimática.
+Premissas principais do nosso estudo, relacionadas às camadas de resultados geradas:
 
-2 - O variação microclimática possui dinâmica diferente da variação no clima regional. 
+- **Premissa #1** -  Características do meio físico, como feições topográficas, altitude, disponibilidade hídrica e tipo de solo, promovem variabilidade de habitat e microclimática, influenciando a diversidade genética e fenotípica de espécies.
 
-3 - Quanto maior a heterogeneidade da paisagem, maior  a probabilidade de haver refúgio microclimático.
+- **Premissa #2** -  Os tipos de uso e cobertura do solo oferecem diferentes níveis de resistência para a movimentação das espécies na paisagem, considerando as relações de vizinhança estabelecidas em uma escala local, sendo mais resistente quanto mais alterada ou mais distinta das formações nativas.
 
-4 - A heterogeneidade da paisagem é mais estável que o clima regional, sendo um bom indicador microclimático. 
-
-5 - Quanto maior a heterogeneidade da paisagem maior, a diversidade de espécies.
-
-6 - Conservar locais com maior heterogeneidade da paisagem permite conservar as características que promovem a biodiversidade.
-
-7 - A alta conectividade local da paisagem permite maior mobilidade dos organismos na busca de refúgios microclimáticos.
-
-8 - Locais com alta heterogeneidade da paisagem e alta conectividade local são mais resilientes às mudanças climáticas.
+- **Premissa #3** - A resiliência da paisagem a mudanças do clima é  resultante da heterogeneidade de habitat disponíveis para as espécies, que geram condições diversificadas de microclimas aos organismos, e pela conectividade, que permite a movimentação desses organismos para áreas mais adequadas.
 
 
+Premissas complementares:
 
+1 - A variação microclimática possui dinâmica diferente da variação no clima regional.
+
+2 - Quanto maior a heterogeneidade da paisagem, maior a probabilidade de haver diferentes refúgios microclimáticos para espécies que tenham necessidades distintas.
+
+3 - Conservar locais com maior heterogeneidade da paisagem permite conservar as características que proporcionam o estabelecimento e a manutenção de maior biodiversidade.
+
+4 - A alta conectividade local da paisagem permite maior mobilidade de organismos de forma geral na busca de refúgios microclimáticos.
+
+5 - Locais com alta heterogeneidade da paisagem e alta conectividade local são mais resilientes às mudanças climáticas por potencialmente permitirem maior movimentação dos organismos em diferentes condições climáticas.
