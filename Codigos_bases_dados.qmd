@@ -2,35 +2,39 @@
 
 ## Códigos
 
-Os códigos para as análises estão disponíveis no repositório do projeto: ...
-[](inserir link)
+A documentação das análises para a criação das camadas de heterogeneidade da paisagem, conectividade local e resiliência da paisagem está disponível nos endereços abaixo.
 
-A documentação para cada uma das diferentes camadas pode ser encontrada nos links abaixo.
 
 ### Heterogeneidade da paisagem
 
-Documentação para a análise de heterogeneidade da paisagem: ...
-[](inserir link)
++ Documentação:
+https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/apresentacao.html
+
++ JupyterNotebook:
+https://github.com/Resiliencia-climatica-Brasil/diversity-resilience-python/tree/master/jupyternotebook
+
 
 ### Conectividade local
 
-+ Documentação para a análise de resistência da paisagem: ...
-[](inserir link)
++ Documentação:
+https://resiliencia-climatica-brasil.github.io/Resistencia/
 
-+ Documentação para a análise de conectividade da paisagem (análise omniscape): ...
-[](inserir link)
 
 ### Resiliência da paisagem
 
-Documentação para a análise de resiliência da paisagem: ..
-[](inserir link)
++ Documentação: 
+https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/resilience.html
+
++ JupyterNotebook:
+https://github.com/Resiliencia-climatica-Brasil/diversity-resilience-python/blob/master/jupyternotebook/resilience.ipynb
 
 
 ## Bases de dados
 
-As seguintes bases de dados foram utilizadas para gerar as análises:
+As bases de dados abaixo foram utilizadas para gerar as análises.
 
-### Diversidade da paisagem
+
+### Heterogeneidade da paisagem
 
 + Formas de relevo e altitude:
 [MERIT DEM: Multi-Error-Removed Improved-Terrain DEM](https://developers.google.com/earth-engine/datasets/catalog/MERIT_DEM_v1_0_3)
@@ -53,7 +57,7 @@ https://mapbiomas.org/)
 
 ### Conectividade local
 
-+ Uso e cobertura do solo: [Mapbiomas Coleção 7](https://mapbiomas.org/)
++ Uso e cobertura do solo: [Mapbiomas Coleção 8](https://mapbiomas.org/)
 
 + Infraestrutura de transporte: [IBGE BCIM](inserir link)
 

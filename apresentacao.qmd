@@ -1,8 +1,9 @@
 # Apresentação
 
-O projeto _Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros_ é coordenado pela _The Nature Conservancy Brasil_ e executado por diversas instituições de pesquisa localizadas em cada um dos biomas do Brasil: Museu Paraense Emílio Goeldi (MPEG), Universidade Federal do ABC (UFABC), Universidade Federal do Jataí (UFJ), Universidade Federal do Mato Grosso do Sul (UFMS) e Universidade Federal do Rio Grande do Norte (UFRN).
+O projeto *Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros* é coordenado pela *The Nature Conservancy Brasil* e executado por diversas instituições de pesquisa localizadas em cada um dos biomas do Brasil: na Amazônia, Museu Paraense Emílio Goeldi (MPEG); na Caatinga, Universidade Federal do Rio Grande do Norte (UFRN); no Cerrado,  Universidade Federal do Jataí (UFJ); na Mata Atlântica, Universidade Federal do ABC (UFABC); no Pantanal, Universidade Federal do Mato Grosso do Sul (UFMS); e no Pampa, *The Nature Conservancy Brasil*.
 
-## Equipe TNC Brasil
+
+## Equipe *The Nature Conservancy Brasil*
 | Nome | Atuação | Lattes |
 |--|--|--|
 |Edenise Garcia|Diretora de ciências|[http://lattes.cnpq.br/6575206025031796](http://lattes.cnpq.br/6575206025031796)|
@@ -12,67 +13,58 @@ O projeto _Mapeamento de áreas resilientes a mudanças climáticas nos biomas b
 |Clícia Barata|Especialista em SIG|[http://lattes.cnpq.br/2750496081930336](http://lattes.cnpq.br/2750496081930336)|
 
 ## Equipe central por bioma
-|Bioma|Supervisão|Equipe|Intituição|
+|Bioma|Supervisão|Equipe|Instituição|
 |--|--|--|--|
 |Amazônia|Ana Albernaz [http://lattes.cnpq.br/1220240487835422](http://lattes.cnpq.br/1220240487835422)|Luciano Querido [http://lattes.cnpq.br/3123978281728788](http://lattes.cnpq.br/3123978281728788)|Museu Paraense Emílio Goeldi|
 |Caatinga|Eduardo Venticinque [http://lattes.cnpq.br/3582966116563351](http://lattes.cnpq.br/3582966116563351)|Marina Antongiovanni [http://lattes.cnpq.br/6734509642838870](http://lattes.cnpq.br/6734509642838870)|Universidade Federal do Rio Grande do Norte|
 |Cerrado| Levi Carina Terribile [http://lattes.cnpq.br/0833667862532867](http://lattes.cnpq.br/0833667862532867)|Lucas Jardim [http://lattes.cnpq.br/6537020596919365](http://lattes.cnpq.br/6537020596919365)|Universidade Federal do Jataí|
-|Mata Atlântica|Leandro Tambosi [http://lattes.cnpq.br/5301210732686095](http://lattes.cnpq.br/5301210732686095)|Priscila Silveira [http://lattes.cnpq.br/4707570912229034](http://lattes.cnpq.br/4707570912229034)|Universidade Federal do ABC|
-|Pampa|Milena Rosenfield [http://lattes.cnpq.br/8181631357765054](http://lattes.cnpq.br/8181631357765054)| Mário Barroso [http://lattes.cnpq.br/7182178358444899](http://lattes.cnpq.br/7182178358444899) e José Fronza [http://lattes.cnpq.br/1205403331686811](http://lattes.cnpq.br/1205403331686811)|The Nature Conservancy Brasil|
+|Mata Atlântica|Leandro Tambosi [http://lattes.cnpq.br/5301210732686095](http://lattes.cnpq.br/5301210732686095)|Andrea S. Tapia [http://lattes.cnpq.br/8900415459588165](http://lattes.cnpq.br/8900415459588165) e Priscila Silveira [http://lattes.cnpq.br/4707570912229034](http://lattes.cnpq.br/4707570912229034)|Universidade Federal do ABC|
+|Pampa|Milena Rosenfield [http://lattes.cnpq.br/8181631357765054](http://lattes.cnpq.br/8181631357765054)|Mário Barroso [http://lattes.cnpq.br/7182178358444899](http://lattes.cnpq.br/7182178358444899) e José Fronza [http://lattes.cnpq.br/1205403331686811](http://lattes.cnpq.br/1205403331686811)|The Nature Conservancy Brasil|
 |Pantanal| Letícia Couto Garcia [http://lattes.cnpq.br/9330007643430035](http://lattes.cnpq.br/9330007643430035)| Alisson Ribeiro [http://lattes.cnpq.br/9104693095499880](http://lattes.cnpq.br/9104693095499880)| Universidade Federal do Mato Grosso do Sul|
 
 
-## Especialistas convidados
+## Especialistas presentes nas oficinas
  
-|Bioma|Pesquisador(a)|Instituição	|Cidade|
-|--|--|--|--|
-|Amazônia|Ane A. C. Alencar|IPAM|Brasília|
-|Amazônia|Cintia Cornelius Frische|UFAM|Manaus|
-|Amazônia|Fernanda Werneck|INPA|Manaus|
-|Amazônia|Flávia Costa|INPA|Manaus|
-|Amazônia|Ima Vieira	|Museu Goeldi	|Belém |
-|Amazônia|Liana O. Anderson|CEMADEN|São José dos Campos|
-|Amazônia|Marcos Adami|INPE|São José dos Campos|
-|Caatinga|Adrian Garda|UFRN|Natal |
-|Caatinga|Camile Lugarini|ICMBio|Juazeiro|
-|Caatinga|Carlos R. S. D. da Fonseca|UFRN|Natal |
-|Caatinga|Cláudia B. Campos|ICMBio|Juazeiro|
-|Caatinga|Eugenia Cordero Schmidt	|IUCN|João Pessoa|
-|Caatinga|Felipe P. L. de Melo	|UFPE|Recife|
-|Caatinga|Marcelo F. Moro|UFC	|Fortaleza|
-|Cerrado |Alessandro R. de Morais|IF Rio Verde	|Rio Verde|
-|Cerrado |Beatriz S. Marimon|UNEMAT|Nova Xavantina|
-|Cerrado |Gustavo Vasquez |Embrapa Solos	|Rio de Janeiro|
-|Cerrado |Karla Maria Silva de Faria|UFG	|Goiânia|
-|Cerrado |Luisa Carvalheiro|UFG	|Goiânia|
-|Cerrado |Manuel E. Ferreira|UFG	|Goiânia|
-|Cerrado |Paulo de Marco|UFG	|Goiânia|
-|Cerrado |Priscila L. de A. Silva|UFMT|Cuiabá|
-|Cerrado |Rafael Loyola|IIS	|Rio de Janeiro|
-|Cerrado |Vania R. Pivello|USP	|São Paulo|
-|Mata Atlântica|Andreza Neri|UFV	|Viçosa|
-|Mata Atlântica|Camila Rezende|FBDS|Rio de Janeiro|
-|Mata Atlântica|Danilo Neves|UFMG|Belo Horizonte|
-|Mata Atlântica|Gerd Sparovek|ESALQ|Piracicaba|
-|Mata Atlântica|Kátia M. de B. Ferraz	|USP	|São Paulo|
-|Mata Atlântica|Maíra Benchimol|UESC|Ilhéus|
-|Mata Atlântica|Márcia Marques|UFPR|Curitiba|
-|Mata Atlântica|Mariana M. Vale|UFRJ|Rio de Janeiro|
-|Mata Atlântica|Ricardo Dobrovolski	|UFBA|Salvador|
-|Mata Atlântica|Rita Portela|UFRJ|Rio de Janeiro|
-|Pampa|Alexandre J. D. Krob	|Inst. Curicaca	|Porto Alegre|
-|Pampa|Eduardo Vélez Martin	|UFRGS	|Porto Alegre|
-|Pampa|Fernando Becker|UFRGS|Porto Alegre|
-|Pampa|Gerhard E. Overbeck	|UFRGS|Porto Alegre|
-|Pampa|Heinrich Hasenack|UFRGS|Porto Alegre|
-|Pampa|Márcio Borges Martins	|UFRGS|Porto Alegre|
-|Pampa|Sandra C. Müller|UFRGS|Porto Alegre|
-|Pantanal|Angélica Guerra|IHP	|Corumbá|
-|Pantanal|Antônio C. Paranhos Filho|UFMS|Campo Grande|
-|Pantanal|Camila Leonardo Mioto	|UFR	|Rondonópolis|
-|Pantanal|Cátia N. da Cunha|UFMT|Cuiabá|
-|Pantanal|Fabio de O. Roque|UFMS|Campo Grande|
-|Pantanal|Geraldo A. Damasceno Júnior	|UFMS|Campo Grande|
-|Pantanal|Mario Luis Assine|Unesp|Rio Claro|
-|Pantanal|Renata Libonati|UFRJ|Rio de Janeiro|
-|Pantanal|Thadeu Sobral de Souza	|UFMT|Cuiabá|
+|Bioma|Pesquisador(a)|Instituição|Cidade|
+|--|--|--|--|--|
+|Amazônia|Cintia Cornelius Frische|UFAM|Manaus|AM|
+|Amazônia|Fernanda Werneck|INPA|Manaus|AM|
+|Amazônia|Flávia Costa|INPA|Manaus|AM|
+|Amazônia|Ima Vieira	|Museu Goeldi	|Belém|PA|
+|Amazônia|Marcos Adami|INPE|São José dos Campos|SP|
+|Caatinga|Adrian Garda|UFRN|Natal|RN|
+|Caatinga|Camile Lugarini|ICMBio|Juazeiro|BA|
+|Caatinga|Carlos R. S. D. da Fonseca|UFRN|Natal|RN|
+|Caatinga|Cláudia B. Campos|ICMBio|Juazeiro|BA|
+|Caatinga|Eugenia Cordero Schmidt|IUCN|João Pessoa|PB|
+|Caatinga|Felipe P. L. de Melo|UFPE|Recife|PE|
+|Caatinga|Samuel Portela|A. Caatinga|Fortaleza|CE|
+|Caatinga|Sandino Moreira Silva|A. Caatinga|Fortaleza|CE|
+|Cerrado |Alessandro R. de Morais|IF Rio Verde|Rio Verde|GO|
+|Cerrado |Gustavo Vasquez |Embrapa Solos|Rio de Janeiro|RJ|
+|Cerrado |Karla Maria Silva de Faria|UFG|Goiânia|GO|
+|Cerrado |Luisa Carvalheiro|UFG|Goiânia|GO|
+|Cerrado |Manuel E. Ferreira|UFG|Goiânia|GO|
+|Cerrado |Paulo de Marco|UFG|Goiânia|GO|
+|Cerrado |Priscila L. de A. Silva|UFMT|Cuiabá|MT|
+|Cerrado |Rafael Loyola|IIS|Rio de Janeiro|RJ|
+|Mata Atlântica|Andreza Neri|UFV|Viçosa|MG|
+|Mata Atlântica|Camila Rezende|FBDS|Rio de Janeiro|RJ|
+|Mata Atlântica|Maíra Benchimol|UESC|Ilhéus|BA|
+|Mata Atlântica|Márcia Marques|UFPR|Curitiba|PR|
+|Mata Atlântica|Mariana M. Vale|UFRJ|Rio de Janeiro|RJ|
+|Mata Atlântica|Ricardo Dobrovolski	|UFBA|Salvador|BA|
+|Mata Atlântica|Rita Portela|UFRJ|Rio de Janeiro|RJ|
+|Pampa|Eduardo Vélez Martin	|UFRGS|Porto Alegre|RS|
+|Pampa|Fernando Becker|UFRGS|Porto Alegre|RS|
+|Pampa|Heinrich Hasenack|UFRGS|Porto Alegre|RS|
+|Pampa|Márcio Borges Martins	|UFRGS|Porto Alegre|RS|
+|Pampa|Sandra C. Müller|UFRGS|Porto Alegre|RS|
+|Pantanal|Angélica Guerra|IHP|Corumbá|MS|
+|Pantanal|Antônio C. Paranhos Filho|UFMS|Campo Grande|MS|
+|Pantanal|Cátia N. da Cunha|UFMT|Cuiabá|MT|
+|Pantanal|Fabio de O. Roque|UFMS|Campo Grande|MS|
+|Pantanal|Geraldo A. Damasceno Júnior|UFMS|Campo Grande|MS|
+|Pantanal|Mario Luis Assine|Unesp|Rio Claro|SP|
+|Pantanal|Renata Libonati|UFRJ|Rio de Janeiro|RJ|
+|Pantanal|Thadeu Sobral de Souza|UFMT|Cuiabá|MT|
