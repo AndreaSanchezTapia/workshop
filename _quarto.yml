@@ -1,8 +1,10 @@
 project:
-  type: website
+  type: book
   output-dir: docs
-  render:
+book:
+  chapters:
     - index.qmd
+    - agradecimentos.qmd
     - sintese.qmd
     - apresentacao.qmd
     - Introducao.qmd
@@ -18,51 +20,33 @@ project:
     - Resiliencia_da_paisagem.qmd
     - Resultados.qmd
     - Aplicacoes.qmd
+    - consideracoes.qmd
     - references.qmd
-website: 
   navbar:
     left:
       - text: Tutoriais
         menu:
          - text: Heterogeneidade da paisagem
-           href: https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/1_landforms.html
-         - text: Resistência da paisagem
-           href: https://resiliencia-climatica-brasil.github.io/Resistencia/
+           href: https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/apresentacao.html                  
          - text: Conectividade local 
-         - text: Resiliência da paisagem  
+           href: https://resiliencia-climatica-brasil.github.io/Resistencia/         
       - text: Downloads
-        href: https://projeto-resiliencia-tnc.hub.arcgis.com        
+        href: https://projeto-resiliencia-tnc.hub.arcgis.com  
   sidebar: 
     title: "Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros" 
     logo: figs/1667403883848_theme_logo.png     
-    style: "docked"
-    contents:
-      - section: "Sumário"
-        contents:
-          - index.qmd
-          - sintese.qmd
-          - apresentacao.qmd
-          - Introducao.qmd
-          - Objetivo_produtos.qmd
-          - Atividades_oficinas.qmd
-          - Glossario.qmd
-          - Modelo_conceitual_premissas.qmd
-          - Metodologia_resumida.qmd
-          - Refinamento.qmd
-          - Codigos_bases_dados.qmd
-          - Heterogeneidade_da_paisagem.qmd
-          - Conectividade_local.qmd
-          - Resiliencia_da_paisagem.qmd
-          - Resultados.qmd
-          - Aplicacoes.qmd
-          - references.qmd          
-  page-navigation: true
+    style: "docked"   
+    page-navigation: true
   favicon: figs/1667403883848_theme_logo.png
+  downloads: pdf
+        
 bibliography: bibliografia.bib
 csl: citation_style.csl
 lang: pt-br
 format:
   html:
-    theme: default
+    theme: default    
     css: styles.css   
+  pdf:
+    documentclass: scrreport
 
