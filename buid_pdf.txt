@@ -1,0 +1,5 @@
+mv ./docs/Relatorio_final.pdf ./docs/report.pdf
+
+pdftk capa.pdf ./docs/report.pdf output Relatorio_final.pdf
+
+rm ./docs/report.pdf
