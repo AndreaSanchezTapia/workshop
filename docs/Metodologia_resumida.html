@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -81,8 +62,6 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -194,7 +173,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Atividades_oficinas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Atividades e oficinas previstas</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Atividades e oficinas realizadas</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -285,12 +264,13 @@ div.csl-indent {
   <li><a href="#b-amplitude-altitudinal" id="toc-b-amplitude-altitudinal" class="nav-link" data-scroll-target="#b-amplitude-altitudinal"><span class="header-section-number">9.1.2</span> (b) Amplitude altitudinal</a></li>
   <li><a href="#c-índice-de-áreas-úmidas" id="toc-c-índice-de-áreas-úmidas" class="nav-link" data-scroll-target="#c-índice-de-áreas-úmidas"><span class="header-section-number">9.1.3</span> (c) Índice de áreas úmidas</a></li>
   <li><a href="#d-riqueza-de-solos" id="toc-d-riqueza-de-solos" class="nav-link" data-scroll-target="#d-riqueza-de-solos"><span class="header-section-number">9.1.4</span> (d) Riqueza de solos</a></li>
-  <li><a href="#combinando-as-variáveis-para-gerar-a-heterogeneidade-da-paisagem" id="toc-combinando-as-variáveis-para-gerar-a-heterogeneidade-da-paisagem" class="nav-link" data-scroll-target="#combinando-as-variáveis-para-gerar-a-heterogeneidade-da-paisagem"><span class="header-section-number">9.1.5</span> Combinando as variáveis para gerar a heterogeneidade da paisagem</a></li>
   </ul></li>
-  <li><a href="#conectividade-local" id="toc-conectividade-local" class="nav-link" data-scroll-target="#conectividade-local"><span class="header-section-number">9.2</span> Conectividade local</a></li>
-  <li><a href="#padronização-dos-dados-z-scores" id="toc-padronização-dos-dados-z-scores" class="nav-link" data-scroll-target="#padronização-dos-dados-z-scores"><span class="header-section-number">9.3</span> Padronização dos dados (<em>Z</em>-<em>scores</em>)</a></li>
-  <li><a href="#conectividade-análise-de-circuitos" id="toc-conectividade-análise-de-circuitos" class="nav-link" data-scroll-target="#conectividade-análise-de-circuitos"><span class="header-section-number">9.4</span> Conectividade: análise de circuitos</a></li>
-  <li><a href="#resiliência-da-paisagem-combinando-heterogeneidade-da-paisagem-e-conectividade-local" id="toc-resiliência-da-paisagem-combinando-heterogeneidade-da-paisagem-e-conectividade-local" class="nav-link" data-scroll-target="#resiliência-da-paisagem-combinando-heterogeneidade-da-paisagem-e-conectividade-local"><span class="header-section-number">9.5</span> Resiliência da paisagem: combinando heterogeneidade da paisagem e conectividade local</a></li>
+  <li><a href="#padronização-dos-dados-valores-de-z" id="toc-padronização-dos-dados-valores-de-z" class="nav-link" data-scroll-target="#padronização-dos-dados-valores-de-z"><span class="header-section-number">9.2</span> Padronização dos dados (valores de Z)</a>
+  <ul class="collapse">
+  <li><a href="#combinando-as-variáveis-para-gerar-a-heterogeneidade-da-paisagem" id="toc-combinando-as-variáveis-para-gerar-a-heterogeneidade-da-paisagem" class="nav-link" data-scroll-target="#combinando-as-variáveis-para-gerar-a-heterogeneidade-da-paisagem"><span class="header-section-number">9.2.1</span> Combinando as variáveis para gerar a heterogeneidade da paisagem</a></li>
+  </ul></li>
+  <li><a href="#conectividade-local" id="toc-conectividade-local" class="nav-link" data-scroll-target="#conectividade-local"><span class="header-section-number">9.3</span> Conectividade local</a></li>
+  <li><a href="#resiliência-da-paisagem-combinando-heterogeneidade-da-paisagem-e-conectividade-local" id="toc-resiliência-da-paisagem-combinando-heterogeneidade-da-paisagem-e-conectividade-local" class="nav-link" data-scroll-target="#resiliência-da-paisagem-combinando-heterogeneidade-da-paisagem-e-conectividade-local"><span class="header-section-number">9.4</span> Resiliência da paisagem: combinando heterogeneidade da paisagem e conectividade local</a></li>
   </ul>
 </nav>
     </div>
@@ -314,77 +294,91 @@ div.csl-indent {
 
 </header>
 
-<p>A metodologia proposta para identificar os sítios resilientes às mudanças climáticas <span class="citation" data-cites="anderson_estimating_2014 anderson_resilient_2016 anderson_resilient_2016-1 anderson_resilient_2023">(<a href="references.html#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>, <a href="references.html#ref-anderson_resilient_2016" role="doc-biblioref">2016a</a>, <a href="references.html#ref-anderson_resilient_2016-1" role="doc-biblioref">Anderson et al. 2016b</a>, e <a href="references.html#ref-anderson_resilient_2023" role="doc-biblioref">Anderson et al. 2023</a>)</span> envolve o mapeamento da <strong>heterogeneidade da paisagem</strong> e da <strong>conectividade local</strong>, que são as camadas que irão compoar a <strong>resiliência da paisagem</strong> (<span class="citation" data-cites="fluxograma">(<a href="references.html#ref-fluxograma" role="doc-biblioref"><strong>fluxograma?</strong></a>)</span>). Os sítios com maior resiliência, possuem alto potencial de abrigar a biodiversidade em um cenário de mudanças climáticas e estão conectados entre si <span class="citation" data-cites="anderson_estimating_2014">(<a href="references.html#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>)</span>, permitindo a movimentação da biodiversidade entre diferentes microclimas nesses locais.</p>
+<p>A metodologia proposta para identificar as áreas resilientes às mudanças climáticas envolve o mapeamento da heterogeneidade da paisagem e da conectividade local (Anderson et al.&nbsp;2014, 2016a, Anderson et al.&nbsp;2016b, e Anderson et al.&nbsp;2023), que são as camadas que irão compor a resiliência da paisagem (Figura 1). Os sítios com maior resiliência possuem alto potencial de manter a biodiversidade em um cenário de mudanças climáticas e estão conectados entre si (Anderson et al.&nbsp;2014), permitindo a movimentação da biodiversidade para locais com microclimas adequados.</p>
+<!-- VERSÃO ANTIGA - @Lucas, mantive em função das referências
+A metodologia proposta para identificar os sítios resilientes às mudanças climáticas [@anderson_estimating_2014; @anderson_resilient_2016; @anderson_resilient_2016-1; e @anderson_resilient_2023] envolve o mapeamento da **heterogeneidade da paisagem** e da **conectividade local**, que são as camadas que irão compoar a **resiliência da paisagem** (@fluxograma). Os sítios com maior resiliência, possuem alto potencial de abrigar a biodiversidade em um cenário de mudanças climáticas e estão conectados entre si [@anderson_estimating_2014], permitindo a movimentação da biodiversidade entre diferentes microclimas nesses locais.
+-->
 <div id="fluxograma" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/Diagrama_metodologia.png" class="img-fluid figure-img" width="500"></p>
-<figcaption class="figure-caption">Fluxograma da análise de resiliência da paisagem, que inclui as camadas de heterogeneidade da paisagem e de conectividade local.</figcaption>
+<figcaption class="figure-caption">Fluxograma da análise de resiliência da paisagem, que inclui a combinação das camadas de heterogeneidade da paisagem e de conectividade local.</figcaption>
 </figure>
 </div>
 <section id="diversidade-da-paisagem" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="diversidade-da-paisagem"><span class="header-section-number">9.1</span> Heterogeneidade da paisagem</h2>
-<p>A heterogeneidade da paisagem está relacionada à variedade de microclimas em um determinado local. A análise de heterogeneidade da paisagem resume informações relacionadas a: (a) variedade de formas de relevo, (b) amplitude altitudinal, (c) índice de áreas úmidas e (d) riqueza de solos.</p>
+<p>A heterogeneidade da paisagem se refere a uma estimativa da variabilidade microclimática. A análise de heterogeneidade da paisagem resume informações relacionadas a: (a) variedade de formas de relevo, (b) amplitude altitudinal, (c) índice de áreas úmidas e (d) riqueza de solos presentes no entorno de uma dada localidade.</p>
 <section id="a-variedade-de-formas-de-relevo" class="level3" data-number="9.1.1">
 <h3 data-number="9.1.1" class="anchored" data-anchor-id="a-variedade-de-formas-de-relevo"><span class="header-section-number">9.1.1</span> (a) Variedade de formas de relevo</h3>
-<p>A variedade de formas de relevo (<em>landforms</em>) diz respeito à variedade de feições topográficas gerados pela topografia. Sua avaliação é baseada em um modelo de <em>landforms</em>, derivado de um modelo digital de elevação (DEM) com resolução de 90 m, que classifica a superfície em diversas categorias, como por exemplo:</p>
+<p>A variedade de formas de relevo (<em>landforms</em>) diz respeito à variedade de feições topográficas baseada em um modelo de formas de relevo. As feições foram, derivadas de um modelo digital de elevação (DEM) com resolução de 90 m, em que a superfície foi classificada a partir de características tais como:</p>
 <ul>
-<li>precipícios e áreas íngremes (<em>cliff</em> e <em>steep slope</em>)</li>
-<li>topos de montanha e divisores de águas (<em>summit/ridge-top</em>)</li>
-<li>vertentes norte e sul, que determinam se uma vertente é quente ou fria, especialmente em latitudes maiores, (<em>warm/cool side slope</em>)</li>
-<li>colinas (<em>flat hill top</em> e <em>gentle slope hilltop</em>)</li>
+<li>precipícios e áreas íngremes (<em>cliff</em> e <em>steep slope</em>);</li>
+<li>topos de montanha e divisores de águas (<em>summit/ridge-top</em>);</li>
+<li>vertentes norte e sul, que determinam se uma vertente é quente ou fria, especialmente em latitudes maiores (<em>warm/cool side slope</em>);</li>
+<li>colinas (<em>flat hill top</em> e <em>gentle slope hilltop</em>);</li>
 <li>áreas planas de terras baixas (<em>dry flat</em>), entre outros.</li>
 </ul>
-<p>A classificação de formas de relevo é baseada em índices de <strong>inclinação do relevo</strong>, <strong>orientação da vertente</strong>, <strong>posição topográfica</strong> e <strong>acúmulo de umidade</strong> (<em>slope</em>, <em>aspect</em>, <em>land position</em> e <em>moisture accumulation</em>), que correspondem aos locais com diferenças em umidade, radiação e deposição. A variedade de formas de relevo é calculada como a quantidade de formas de relevo dentro de uma área circular, de 450 m de raio, no entorno de cada célula de 90 m.</p>
+<p>As classes de formas de relevo foram baseadas no índice de inclinação do relevo, exposição da vertente, posição topográfica e acúmulo de umidade (<em>slope</em>, <em>aspect</em>, <em>land position</em> e <em>moisture accumulation</em>), para representarem locais com diferenças em umidade, radiação e deposição. A variedade de formas de relevo foi calculada como a quantidade de formas de relevo dentro de uma área circular, de 450 m de raio, no entorno de cada célula de 90 m.</p>
 </section>
 <section id="b-amplitude-altitudinal" class="level3" data-number="9.1.2">
 <h3 data-number="9.1.2" class="anchored" data-anchor-id="b-amplitude-altitudinal"><span class="header-section-number">9.1.2</span> (b) Amplitude altitudinal</h3>
-<p>A amplitude altitudinal é determinada a partir do DEM, calculando a amplitude em uma área circular, de 450 m de raio, no entorno de cada célula de 90 m. A amplitude altitudinal considerada no estudo corresponde ao componente não correlacionado com a diversidade de formas de relevo (os resíduos de uma regressão linear simples - <em>Ordinary Linear Squares</em>).</p>
+<p>Para o cálculo da amplitude altitudinal foi utilizada uma área circular de 450 m de raio no entorno de cada célula de 90 m do DEM. A amplitude altitudinal considerada no estudo corresponde ao componente não correlacionado com a variedade de formas de relevo (os resíduos de uma regressão linear simples).</p>
 </section>
 <section id="c-índice-de-áreas-úmidas" class="level3" data-number="9.1.3">
 <h3 data-number="9.1.3" class="anchored" data-anchor-id="c-índice-de-áreas-úmidas"><span class="header-section-number">9.1.3</span> (c) Índice de áreas úmidas</h3>
-<p>Para áreas planas, nas quais a variedade de formas de relevo e a amplitude altitudinal não permitem discriminar a variação microclimática, a densidade e quantidade de áreas úmidas captura a variação microclimática.</p>
-<p>A densidade e quantidade de áreas úmidas são resumidas no índice de áreas úmidas, que é obtido pela média das densidade de aŕeas úmidas dentro de áreas circulares de 450 m de raio (escala local) e 1170 m de raio (escala regional), em cada célula de 90 m. Essa densidade é combinada com a quantidade de áreas úmidas (<em>wetland patchiness</em>) em área circular de 1170 m de raio, formando o índice de áreas úmidas.</p>
+<p>Para áreas planas, nas quais a variedade de formas de relevo e a amplitude altitudinal não permitem discriminar a variação microclimática, a densidade e quantidade de áreas úmidas capturam a variação microclimática.</p>
+<p>A densidade e quantidade de áreas úmidas são resumidas no índice de áreas úmidas, obtido pela média da densidade de áreas úmidas dentro de áreas circulares de 450 m de raio (escala local) e 1.170 m de raio (escala regional), no entorno de cada célula de 90 m. A densidade calculada em áreas circular é combinada com a quantidade de áreas úmidas (<em>wetland patchiness</em>) em área circular de 1.170 m de raio, formando o índice de áreas úmidas.</p>
 </section>
 <section id="d-riqueza-de-solos" class="level3" data-number="9.1.4">
 <h3 data-number="9.1.4" class="anchored" data-anchor-id="d-riqueza-de-solos"><span class="header-section-number">9.1.4</span> (d) Riqueza de solos</h3>
-<p>Por fim, em locais com baixa variação de formas de relevo, amplitude de elevação e presença de áreas úmidas, a riqueza de solo é usada para identificar variações na paisagem que possam sustentar a variação da biodiversidade.</p>
-</section>
-<section id="combinando-as-variáveis-para-gerar-a-heterogeneidade-da-paisagem" class="level3" data-number="9.1.5">
-<h3 data-number="9.1.5" class="anchored" data-anchor-id="combinando-as-variáveis-para-gerar-a-heterogeneidade-da-paisagem"><span class="header-section-number">9.1.5</span> Combinando as variáveis para gerar a heterogeneidade da paisagem</h3>
-<p>A combinação dos índices de variedade de formas de relevo, amplitude altitudinal, índice de áreas úmidas e riqueza de solos gera a <strong>heterogeneidade da paisagem</strong>. Esse índice pondera a variedade de formas de relevo com peso maior, sendo ela o dobro do peso das demais variáveis.</p>
+<p>Por fim, em locais com baixa variação de formas de relevo, amplitude de elevação e presença de áreas úmidas, a riqueza de solo foi usada para identificar variações na paisagem que possam sustentar a variação da biodiversidade.</p>
 </section>
 </section>
-<section id="conectividade-local" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="conectividade-local"><span class="header-section-number">9.2</span> Conectividade local</h2>
-<p>A conectividade local é uma medida de facilitação ao deslocamento de organismos entre os elementos que compõem a paisagem (ou tipos de uso e cobertura do solo). A conectividade é maior quanto menor for a resistência que esses elementos oferecem ao deslocamento dos organismos, representando o grau de permeabilidade da paisagem (ou reciprocamente o grau de resistência) em torno de cada célula avaliada. A partir de um mapa de uso e cobertura do solo, incluindo a presença de infraestruturas energéticas e de transporte, foram atribuídos pesos de resistência à movimentação de organismos para cada classe que compõem este mapa, sendo o valores menores (menor resistência) atribuídos para áreas naturais e os valores maiores (maior resistência) atribuídos a áreas intensamente antropizadas (áreas urbanas), com um gradiente de valores entre um extremo e outro.</p>
-<p>Uma vez atribuídos os valores de resistência, a conectividade local foi estimada pela média ponderada das resistências dentro uma janela móvel circular de aproximadamente 2070 m, que representa o contexto espacial em que cada pixel está inserido. Para o cálculo da média pornderada, foi utilizada uma função de decaimento linear que reconhece que pixels mais próximos possuem maior influência um sobre o outro do que pixels mais distantes, influenciando o valor de conectividade local de cada pixel.</p>
+<section id="padronização-dos-dados-valores-de-z" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="padronização-dos-dados-valores-de-z"><span class="header-section-number">9.2</span> Padronização dos dados (valores de Z)</h2>
+<p>Antes de calcularmos a resiliência da paisagem, as variáveis variedade de formas de relevo, amplitude de elevação, índice de áreas úmidas e riqueza de solos são convertidas para valores de Z (<em>Z-scores</em>), dentro de janelas móveis de 200 pixels de raio. Isso permite a integração de condições físicas e ambientais distintas e permite capturar variações locais na composição da biota associada. Posteriormente, os valores de Z são combinados para gerar a heterogeneidade da paisagem.</p>
+<section id="combinando-as-variáveis-para-gerar-a-heterogeneidade-da-paisagem" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="combinando-as-variáveis-para-gerar-a-heterogeneidade-da-paisagem"><span class="header-section-number">9.2.1</span> Combinando as variáveis para gerar a heterogeneidade da paisagem</h3>
+<p>A combinação dos índices de variedade de formas de relevo, amplitude altitudinal, índice de áreas úmidas e riqueza de solos gera a camada de heterogeneidade da paisagem. Esse índice pondera a variedade de formas de relevo com peso maior, representado pelo dobro do peso das demais variáveis.</p>
+</section>
+</section>
+<section id="conectividade-local" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="conectividade-local"><span class="header-section-number">9.3</span> Conectividade local</h2>
+<p>A conectividade local é uma medida de facilitação ao deslocamento de organismos entre os tipos de uso e cobertura do solo. A conectividade é maior quanto menor for a resistência que ao deslocamento dos organismos, e representa a permeabilidade da paisagem (ou inversamente a resistência) em torno de cada célula avaliada.</p>
+<p>A partir de um mapa de uso e cobertura do solo, incluindo a presença de infraestruturas de transporte e de energia, foram atribuídos, pela equipe central, para cada classe pesos de resistência à movimentação de organismos, sendo os valores menores (menor resistência) atribuídos para áreas naturais e os valores maiores (maior resistência) atribuídos a áreas intensamente antropizadas (áreas urbanas), com um gradiente de valores entre um extremo e outro. Dependendo de suas características, rios podem representar barreiras ao deslocamento das espécies ao longo da paisagem, portanto, também foram atribuídos pesos distintos de resistência aos corpos d’água em função de sua largura (quanto mais largo, maior o valor de resistência).</p>
+<p>Uma vez atribuídos os valores de resistência, a conectividade local foi estimada pela média ponderada das resistências dentro uma janela móvel circular de aproximadamente 2.070 m, que representa o contexto espacial em que cada pixel está inserido. Para o cálculo da média ponderada, foi utilizada uma função de decaimento linear que reconhece que pixels mais próximos possuem maior influência do que pixels mais distantes, influenciando o valor de conectividade local de cada pixel.</p>
 <!--Nesse contexto, a dispersão teórica de uma espécie (ou processo) a partir de uma célula focal é uma função dos valores de resistência das células vizinhas e suas distâncias com relação à célula focal, até uma distância máxima de 3 km. A nota de conectividade local para uma célula é igual à área de dispersão, levando em conta a resistência dividida pela área de dispersão teórica se não houvesse resistência. -->
+<!-- Esse item foi movido mais para cima; fiquei na dúvida se calculamos valores de Z para a camada de conectividade local. Acho que não...
+
+## Padronização dos dados (*Z*-*scores*)
+
+Antes de calcularmos a resiliência da paisagem, as variáveis variedade de formas de relevo, amplitude de elevação, índice de áreas úmidas, riqueza de solos e conectividade local são convertidas para valores de Z (*Z-scores*), assumindo as médias e desvios padrões dentro de janelas móveis de 200 pixels de raio. Isso garante a inclusão de condições físicas e ambientais distintas e permite capturar variações locais na composição da biota associada. Posteriomente, os valores de Z são combinados em heterogeneidade da paisagem.
+-->
+<!-- movido para outro item
+## Conectividade: análise de circuitos
+
+Calculamos a conectividade baseada em teoria de circuitos [@mcrae_isolation_2006] utilizando a implementação de Omniscape para Julia [@hall_circuitscape_2021; @landau_omniscapejl_2021].
+
+Como base para estas análises, utilizamos:
+
++ o raster de resistência utilizado como base para a conectividade local;
++ um raio da área de interesse de 210 pixels (~19km);
++ agrupamentos de 21 pixels de interesse para a janela móvel (~1.9km).
+
+O raio da área de interesse é o raio de busca ou tamanho da janela móvel circular. O tamanho da janela foi equivalente ao utilizado no cálculo dos Z scores (200 pixels), o valor é levemente diferente devido à limitação do tamanho do bloco central da janela ser um número ímpar de pixels (agrupamento de 21) e segundo @landau_omniscapejl_2021 esse valor não deve ultrapassar 10% do raio.
+
+Consideramos o uso de _kernel_ sobre a superfície de resistência como entrada para o Omniscape, entretanto, os resultados da análise com _kernel_ diluíram muito corredores e passagens menores, por conta da natureza de suavização da superfície de resistência pelo _kernel_. Dessa maneira, ao utilizar a resistência sem _kernel_ como entrada, preservamos estruturas espaciais menores, mas importantes para a conectividade da paisagem.
+
+O _output_ do Omniscape são três arquivos de conectividade relacionados:
+
++ `flow_current` é o fluxo que aconteceria sem levar em conta a camada de resistência. Ele leva em conta a configuração espacial da paisagem (estreitos, barras) e dos pixels de baixa resistência de origem. Nem todo pixel é _source_ pixel, mas a corrente que entra em cada pixel de baixa resistência entra sem resistência. Flow current é usado como um "modelo nulo" de conectividade.
++ `cummulative_current` é a corrente acumulada, levando em conta a configuração espacial e os valores de resistência.
++ `normalized_current` equivale a $\frac{cumulative\_current}{flow\_current}$
+e controla o efeito da configuração espacial do cálculo de conectividade.
+-->
 </section>
-<section id="padronização-dos-dados-z-scores" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="padronização-dos-dados-z-scores"><span class="header-section-number">9.3</span> Padronização dos dados (<em>Z</em>-<em>scores</em>)</h2>
-<p>Antes de calcularmos a resiliência da paisagem, as variáveis variedade de formas de relevo, amplitude de elevação, índice de áreas úmidas, riqueza de solos e conectividade local são convertidas para valores de Z (<em>Z-scores</em>), assumindo as médias e desvios padrões dentro de janelas móveis de 200 pixels de raio. Isso garante a inclusão de condições físicas e ambientais distintas e permite capturar variações locais na composição da biota associada. Posteriomente, os valores de Z são combinados em heterogeneidade da paisagem.</p>
-</section>
-<section id="conectividade-análise-de-circuitos" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="conectividade-análise-de-circuitos"><span class="header-section-number">9.4</span> Conectividade: análise de circuitos</h2>
-<p>Calculamos a conectividade baseada em teoria de circuitos <span class="citation" data-cites="mcrae_isolation_2006">(<a href="references.html#ref-mcrae_isolation_2006" role="doc-biblioref">McRae 2006</a>)</span> utilizando a implementação de Omniscape para Julia <span class="citation" data-cites="hall_circuitscape_2021 landau_omniscapejl_2021">(<a href="references.html#ref-landau_omniscapejl_2021" role="doc-biblioref">Landau et al. 2021</a>, <a href="references.html#ref-hall_circuitscape_2021" role="doc-biblioref">Hall et al. 2021</a>)</span>.</p>
-<p>Como base para estas análises, utilizamos:</p>
-<ul>
-<li>o raster de resistência utilizado como base para a conectividade local;</li>
-<li>um raio da área de interesse de 210 pixels (~19km);</li>
-<li>agrupamentos de 21 pixels de interesse para a janela móvel (~1.9km).</li>
-</ul>
-<p>O raio da área de interesse é o raio de busca ou tamanho da janela móvel circular. O tamanho da janela foi equivalente ao utilizado no cálculo dos Z scores (200 pixels), o valor é levemente diferente devido à limitação do tamanho do bloco central da janela ser um número ímpar de pixels (agrupamento de 21) e segundo <span class="citation" data-cites="landau_omniscapejl_2021">Landau et al. (<a href="references.html#ref-landau_omniscapejl_2021" role="doc-biblioref">2021</a>)</span> esse valor não deve ultrapassar 10% do raio.</p>
-<p>Consideramos o uso de <em>kernel</em> sobre a superfície de resistência como entrada para o Omniscape, entretanto, os resultados da análise com <em>kernel</em> diluíram muito corredores e passagens menores, por conta da natureza de suavização da superfície de resistência pelo <em>kernel</em>. Dessa maneira, ao utilizar a resistência sem <em>kernel</em> como entrada, preservamos estruturas espaciais menores, mas importantes para a conectividade da paisagem.</p>
-<p>O <em>output</em> do Omniscape são três arquivos de conectividade relacionados:</p>
-<ul>
-<li><code>flow_current</code> é o fluxo que aconteceria sem levar em conta a camada de resistência. Ele leva em conta a configuração espacial da paisagem (estreitos, barras) e dos pixels de baixa resistência de origem. Nem todo pixel é <em>source</em> pixel, mas a corrente que entra em cada pixel de baixa resistência entra sem resistência. Flow current é usado como um “modelo nulo” de conectividade.</li>
-<li><code>cummulative_current</code> é a corrente acumulada, levando em conta a configuração espacial e os valores de resistência.</li>
-<li><code>normalized_current</code> equivale a <span class="math inline">\(\frac{cumulative\_current}{flow\_current}\)</span> e controla o efeito da configuração espacial do cálculo de conectividade.</li>
-</ul>
-</section>
-<section id="resiliência-da-paisagem-combinando-heterogeneidade-da-paisagem-e-conectividade-local" class="level2" data-number="9.5">
-<h2 data-number="9.5" class="anchored" data-anchor-id="resiliência-da-paisagem-combinando-heterogeneidade-da-paisagem-e-conectividade-local"><span class="header-section-number">9.5</span> Resiliência da paisagem: combinando heterogeneidade da paisagem e conectividade local</h2>
-<p>Finalmente, a <strong>resiliência da paisagem</strong> é calculada pela sobreposição dos mapas de heterogeneidade da paisagem e conectividade local baseada no histograma de distribuição dos valores dessas métricas. Dessa forma, podemos criar um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem (<span class="citation" data-cites="resilience">(<a href="references.html#ref-resilience" role="doc-biblioref"><strong>resilience?</strong></a>)</span>). Com base na escala de cor que escolhemos e destacando regiões que merecem atenção especial em termos de conservação e manejo, são identificadas áreas onde a heterogeneidade da paisagem e a conectividade local são mais importantes para a resiliência da paisagem.</p>
+<section id="resiliência-da-paisagem-combinando-heterogeneidade-da-paisagem-e-conectividade-local" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="resiliência-da-paisagem-combinando-heterogeneidade-da-paisagem-e-conectividade-local"><span class="header-section-number">9.4</span> Resiliência da paisagem: combinando heterogeneidade da paisagem e conectividade local</h2>
+<p>Finalmente, a resiliência da paisagem é calculada pela sobreposição dos mapas de heterogeneidade da paisagem e conectividade local baseada no histograma de distribuição dos valores dessas métricas (Figura 2). Dessa forma, podemos criar um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem. Com base na escala de cor apresentada, são identificadas áreas onde a heterogeneidade da paisagem e a conectividade local são mais importantes para a resiliência da paisagem.</p>
 <div id="resilience" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/resilience_def.png" class="img-fluid figure-img" width="500"></p>
@@ -393,29 +387,6 @@ div.csl-indent {
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
-<div id="ref-anderson_resilient_2023" class="csl-entry" role="listitem">
-Anderson, M. G., M. Clark, A. P. Olivero, A. R. Barnett, K. R. Hall, M. W. Cornett, M. Ahlering, M. Schindel, B. Unnasch, C. Schloss, e D. R. Cameron. 2023. <a href="https://doi.org/10.1073/pnas.2204434119">A resilient and connected network of sites to sustain biodiversity under a changing climate</a>. Proceedings of the National Academy of Sciences 120:e2204434119.
-</div>
-<div id="ref-anderson_estimating_2014" class="csl-entry" role="listitem">
-Anderson, M. G., M. Clark, e A. O. Sheldon. 2014. <a href="https://doi.org/10.1111/cobi.12272">Estimating <span>Climate</span> <span>Resilience</span> for <span>Conservation</span> across <span>Geophysical</span> <span>Settings</span></a>. Conservation Biology 28:959–970.
-</div>
-<div id="ref-anderson_resilient_2016" class="csl-entry" role="listitem">
-Anderson, M. G., M. Clark, e A. O. Sheldon. 2016a. <a href="https://doi.org/10.1111/cobi.12272">Resilient <span>Sites</span> for <span>Terrestrial</span> <span>Conservation</span> in <span>Eastern</span> <span>North</span> <span>America</span></a>. Conservation Biology 28:959–970.
-</div>
-<div id="ref-anderson_resilient_2016-1" class="csl-entry" role="listitem">
-Anderson, M., A. Barnett, M. Clark, J. Prince, S. A. Olivero, e B. Vickery. 2016b. Resilient and <span>Connected</span> <span>Landscapes</span> for <span>Terrestrial</span> <span>Conservation</span>.
-</div>
-<div id="ref-hall_circuitscape_2021" class="csl-entry" role="listitem">
-Hall, K. R., R. Anantharaman, V. A. Landau, M. Clark, B. G. Dickson, A. Jones, J. Platt, A. Edelman, e V. B. Shah. 2021. <a href="https://doi.org/10.3390/land10030301">Circuitscape in <span>Julia</span>: <span>Empowering</span> <span>Dynamic</span> <span>Approaches</span> to <span>Connectivity</span> <span>Assessment</span></a>. Land 10:301.
-</div>
-<div id="ref-landau_omniscapejl_2021" class="csl-entry" role="listitem">
-Landau, V., V. Shah, R. Anantharaman, e K. Hall. 2021. <a href="https://doi.org/10.21105/joss.02829">Omniscape.jl: <span>Software</span> to compute omnidirectional landscape connectivity</a>. Journal of Open Source Software 6:2829.
-</div>
-<div id="ref-mcrae_isolation_2006" class="csl-entry" role="listitem">
-McRae, B. H. 2006. Isolation by resistance. Evolution 60:1551–1561.
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->
