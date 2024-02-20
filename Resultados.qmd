@@ -72,7 +72,7 @@ Com relação a algumas regiões de alta heterogeneidade dentro dos biomas (Figu
 + No Pantanal, a heterogeneidade da paisagem segue majoritariamente os padrões deposicionais da região, visto que pequenas declividades em um ambiente muito plano são relevantes para gerar heterogeneidade da paisagem (Figura 21A, Figura 25) devido ao contraste da variação de relevo com o entorno. As localidades com maiores valores de heterogeneidade da paisagem foram as próximas a rios maiores (Piquiri, São Lourenço e Taquari), lagoas da Nhecolândia e regiões mais altas (ex. Serra do Amolar), contrastantes com o entorno plano (Figura 21 A). Dentre regiões altas inseridas no Pantanal, vale destacar a paisagem da Serra do Amolar (borda oeste do Pantanal) e alguns morros testemunho na planície Pantaneira.
 
 [INSERIR FIGURA 25]
-Recortes da camada de heterogeneidade da paisagem por bioma. A heterogeneidade da paisagem é calculada a partir da média ponderada dos valores de Z das variáveis variedade de formas de relevo, amplitude altitudinal, índice de áreas úmidas e riqueza do solo.
+![Recortes da camada de heterogeneidade da paisagem por bioma. A heterogeneidade da paisagem é calculada a partir da média ponderada dos valores de Z das variáveis variedade de formas de relevo, amplitude altitudinal, índice de áreas úmidas e riqueza do solo.](figs/results_bybiome/Heterogeneidade_por_bioma.png){#fig-25 width="600" fig-align="center"}
 
 
 ## Conectividade Local [(link)](https://projeto-resiliencia-tnc.hub.arcgis.com/maps/c7725afd65da4198bba59a7ccde49fce/explore)
@@ -81,7 +81,7 @@ A conectividade local da paisagem apresenta um padrão diferente daquele apresen
 
 O padrão de conectividade local encontrado reflete a distribuição espacial das classes de uso e cobertura do solo com valores de resistência distintos. É possível observar uma concentração alta de classes com alto valor de resistência na parte mais ao sul e leste da região norte (coincidindo com o arco do desmatamento da Amazônia) que divide o Brasil em duas porções muito marcadas. Ao noroeste, na região Amazônica, está a porção com maior concentração de áreas naturais, com menores valores de resistência e, portanto, com alta conectividade. Na porção sul e ao leste do arco do desmatamento há um mosaico de áreas com diferentes graus de resistência à movimentação dos organismos, prevalecendo classes com valores médios e altos de resistência na região sul e sudeste e classes com valores médios e baixos de resistência na região nordeste, com uma porção litorânea marcadamente mais antropizada que as porções mais a oeste desta região. 
 
-![Conectividade local, baseada no valor de resistência conferido pelos diferentes tipos de uso e cobertura do solo no contexto da paisagem.](figs/C2_Resistencia.png){#fig-conect-original width="600" fig-align="center"}
+![Conectividade local, baseada no valor de resistência conferido pelos diferentes tipos de uso e cobertura do solo no contexto da paisagem.](figs/Full_Connectedness.png){#fig-conect-original width="600" fig-align="center"}
 
 Com relação a regiões de destaque dentro dos biomas (Figura 27), podemos destacar alguns padrões gerais:
 
@@ -98,7 +98,7 @@ Com relação a regiões de destaque dentro dos biomas (Figura 27), podemos dest
 + No Pantanal, a conectividade local é, de modo geral, alta na maior parte do bioma. Considerando os limites da Bacia do Alto Paraguai, a conectividade vai reduzindo em direção à borda leste e sul coincidindo com a divisa com o Cerrado e em direção à borda norte, coincidindo com a divisa com a Amazônia. Essas bordas fazem parte justamente do recém identificado “arco da conversão da vegetação nativa do Pantanal” (Guerra et al. 2020), similar ao que ocorre no arco do desmatamento da Amazônia, em função do avanço da agropecuária. Ademais, também nota-se a diminuição dos valores de conectividade no Pantanal do Taquari, por ser uma região inundada o ano todo, e nas áreas próximas à Serra do Amolar, aos municípios de Corumbá e Ladário do MS e próximos à lagoa de Uberaba no MT (com área aproximada de 160 km2) (Figura 20 B, Figura 27). Além dos avanços mencionados da agropecuária, são evidentes várias regiões de menor conectividade dispersas no Pantanal, sendo em sua grande maioria regiões de pastagens, ocorrendo esse padrão principalmente nas regiões do Paiaguás,  Nhecolândia e Baixo Barão do Melgaço.
 
 [INSERIR FIGURA 27]
-Recorte da camada de conectividade local por bioma. O cálculo de conectividade local é baseado no valor de resistência à movimentação conferido pelos diferentes tipos de uso e cobertura do solo no contexto da paisagem.
+[Recorte da camada de conectividade local por bioma. O cálculo de conectividade local é baseado no valor de resistência à movimentação conferido pelos diferentes tipos de uso e cobertura do solo no contexto da paisagem.](figs/results_bybiome/Conectividade_por_bioma.png){#fig-27 width="600" fig-align="center"}
 
 
 ## Resiliência da paisagem [(link)](https://projeto-resiliencia-tnc.hub.arcgis.com/maps/4e5b37de7de640c0a7b8505f6c72091d/explore)
@@ -129,5 +129,5 @@ Uma avaliação mais detalhada dos resultados de resiliência por bioma mostra q
 + No Pantanal, as regiões de maior resiliência da paisagem são majoritariamente nas regiões com maior densidade de áreas úmidas. Essa dominância da conectividade local na resiliência da paisagem se dá pela estacionariedade dos valores de heterogeneidade da paisagem na maior parte da região. O padrão espacial da conectividade se mostra mais dominante na expressão geral da resiliência da paisagem e os valores mais altos de conectividade da paisagem são coincidentes com as região das baías e salinas da Nhecolândia, rios Taquari, Piquiri e São Lourenço, por serem regiões com maior heterogeneidade da paisagem. 
 
 [INSERIR FIGURA 30]
-Recorte da camada de resiliência da paisagem por bioma. A resiliência da paisagem é baseada no cruzamento dos mapas de heterogeneidade da paisagem e de conectividade local, classificados por quantis de 25%. A classificação bivariada da camada de resiliência da paisagem foi dividida em quadrantes com diferentes graus de conectividade local e heterogeneidade da paisagem.
+[Recorte da camada de resiliência da paisagem por bioma. A resiliência da paisagem é baseada no cruzamento dos mapas de heterogeneidade da paisagem e de conectividade local, classificados por quantis de 25%. A classificação bivariada da camada de resiliência da paisagem foi dividida em quadrantes com diferentes graus de conectividade local e heterogeneidade da paisagem.](figs/results_bybiome/Resilience_por_bioma.png){#fig-30 width="600" fig-align="center"}
 
