@@ -29,7 +29,9 @@ book:
          - text: Heterogeneidade da paisagem
            href: https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/apresentacao.html                  
          - text: Conectividade local 
-           href: https://resiliencia-climatica-brasil.github.io/Resistencia/         
+           href: https://resiliencia-climatica-brasil.github.io/Resistencia/ 
+         - text: Resiliência
+           href: https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/resilience.html      
       - text: Mapas
         href: https://projeto-resiliencia-tnc.hub.arcgis.com  
   sidebar: 

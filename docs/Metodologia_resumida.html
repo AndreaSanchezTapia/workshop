@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -90,6 +109,10 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="https://resiliencia-climatica-brasil.github.io/Resistencia/" rel="" target="">
  <span class="dropdown-text">Conectividade local</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/resilience.html" rel="" target="">
+ <span class="dropdown-text">Resiliência</span></a>
   </li>  
     </ul>
   </li>
@@ -215,7 +238,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Conectividade_local.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Conectividade local</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Análise de conectividade local</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -294,14 +317,11 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>A metodologia proposta para identificar as áreas resilientes às mudanças climáticas envolve o mapeamento da heterogeneidade da paisagem e da conectividade local (Anderson et al.&nbsp;2014, 2016a, Anderson et al.&nbsp;2016b, e Anderson et al.&nbsp;2023), que são as camadas que irão compor a resiliência da paisagem (Figura 1). Os sítios com maior resiliência possuem alto potencial de manter a biodiversidade em um cenário de mudanças climáticas e estão conectados entre si (Anderson et al.&nbsp;2014), permitindo a movimentação da biodiversidade para locais com microclimas adequados.</p>
-<!-- VERSÃO ANTIGA - @Lucas, mantive em função das referências
-A metodologia proposta para identificar os sítios resilientes às mudanças climáticas [@anderson_estimating_2014; @anderson_resilient_2016; @anderson_resilient_2016-1; e @anderson_resilient_2023] envolve o mapeamento da **heterogeneidade da paisagem** e da **conectividade local**, que são as camadas que irão compoar a **resiliência da paisagem** (@fluxograma). Os sítios com maior resiliência, possuem alto potencial de abrigar a biodiversidade em um cenário de mudanças climáticas e estão conectados entre si [@anderson_estimating_2014], permitindo a movimentação da biodiversidade entre diferentes microclimas nesses locais.
--->
-<div id="fluxograma" class="quarto-figure quarto-figure-center anchored">
+<p>A metodologia proposta para identificar as áreas resilientes às mudanças climáticas envolve o mapeamento da heterogeneidade da paisagem e da conectividade local <span class="citation" data-cites="anderson_estimating_2014 anderson_resilient_2016 anderson_resilient_2016-1 anderson_resilient_2023">(<a href="references.html#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>, <a href="references.html#ref-anderson_resilient_2016" role="doc-biblioref">2016a</a>, <a href="references.html#ref-anderson_resilient_2023" role="doc-biblioref">2023</a>, <a href="references.html#ref-anderson_resilient_2016-1" role="doc-biblioref">Anderson et al. 2016b</a>)</span>, que são as camadas que irão compor a resiliência da paisagem (<a href="Conectividade_local.html#fig-fluxograma">Figura&nbsp;<span>12.3</span></a>). Os sítios com maior resiliência possuem alto potencial de manter a biodiversidade em um cenário de mudanças climáticas e estão conectados entre si <span class="citation" data-cites="anderson_estimating_2014">(<a href="references.html#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>)</span>, permitindo a movimentação da biodiversidade para locais com microclimas adequados.</p>
+<div id="fig-fluxograma" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/Diagrama_metodologia.png" class="img-fluid figure-img" width="500"></p>
-<figcaption class="figure-caption">Fluxograma da análise de resiliência da paisagem, que inclui a combinação das camadas de heterogeneidade da paisagem e de conectividade local.</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;8.1: Fluxograma da análise de resiliência da paisagem, que inclui a combinação das camadas de heterogeneidade da paisagem e de conectividade local.</figcaption>
 </figure>
 </div>
 <section id="diversidade-da-paisagem" class="level2" data-number="8.1">
@@ -378,15 +398,29 @@ e controla o efeito da configuração espacial do cálculo de conectividade.
 </section>
 <section id="resiliência-da-paisagem-combinando-heterogeneidade-da-paisagem-e-conectividade-local" class="level2" data-number="8.4">
 <h2 data-number="8.4" class="anchored" data-anchor-id="resiliência-da-paisagem-combinando-heterogeneidade-da-paisagem-e-conectividade-local"><span class="header-section-number">8.4</span> Resiliência da paisagem: combinando heterogeneidade da paisagem e conectividade local</h2>
-<p>Finalmente, a resiliência da paisagem é calculada pela sobreposição dos mapas de heterogeneidade da paisagem e conectividade local baseada no histograma de distribuição dos valores dessas métricas (Figura 2). Dessa forma, podemos criar um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem. Com base na escala de cor apresentada, são identificadas áreas onde a heterogeneidade da paisagem e a conectividade local são mais importantes para a resiliência da paisagem.</p>
-<div id="resilience" class="quarto-figure quarto-figure-center anchored">
+<p>Finalmente, a resiliência da paisagem é calculada pela sobreposição dos mapas de heterogeneidade da paisagem e conectividade local baseada no histograma de distribuição dos valores dessas métricas (<a href="Resultados.html#fig-resilience">Figura&nbsp;<span>14.12</span></a>). Dessa forma, podemos criar um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem. Com base na escala de cor apresentada, são identificadas áreas onde a heterogeneidade da paisagem e a conectividade local são mais importantes para a resiliência da paisagem.</p>
+<div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/resilience_def.png" class="img-fluid figure-img" width="500"></p>
-<figcaption class="figure-caption">Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local.</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;8.2: Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local.</figcaption>
 </figure>
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-anderson_resilient_2016" class="csl-entry" role="listitem">
+Anderson, M. G., Barnett, Analie, M. Clark, A. O. Sheldon, e Prince, John. 2016a. Resilient <span>Sites</span> for <span>Terrestrial</span> <span>Conservation</span> in <span>Eastern</span> <span>North</span> <span>America</span>. Página 186. The Nature Conservancy, Eastern Conservation Science.
+</div>
+<div id="ref-anderson_resilient_2023" class="csl-entry" role="listitem">
+Anderson, M. G., M. Clark, A. P. Olivero, A. R. Barnett, K. R. Hall, M. W. Cornett, M. Ahlering, M. Schindel, B. Unnasch, C. Schloss, e D. R. Cameron. 2023. <a href="https://doi.org/10.1073/pnas.2204434119">A resilient and connected network of sites to sustain biodiversity under a changing climate</a>. Proceedings of the National Academy of Sciences 120:e2204434119.
+</div>
+<div id="ref-anderson_estimating_2014" class="csl-entry" role="listitem">
+Anderson, M. G., M. Clark, e A. O. Sheldon. 2014. <a href="https://doi.org/10.1111/cobi.12272">Estimating <span>Climate</span> <span>Resilience</span> for <span>Conservation</span> across <span>Geophysical</span> <span>Settings</span></a>. Conservation Biology 28:959–970.
+</div>
+<div id="ref-anderson_resilient_2016-1" class="csl-entry" role="listitem">
+Anderson, M., A. Barnett, M. Clark, J. Prince, S. A. Olivero, e B. Vickery. 2016b. Resilient and <span>Connected</span> <span>Landscapes</span> for <span>Terrestrial</span> <span>Conservation</span>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

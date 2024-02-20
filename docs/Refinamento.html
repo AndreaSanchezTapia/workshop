@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -62,6 +81,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -90,6 +111,10 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="https://resiliencia-climatica-brasil.github.io/Resistencia/" rel="" target="">
  <span class="dropdown-text">Conectividade local</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/resilience.html" rel="" target="">
+ <span class="dropdown-text">Resiliência</span></a>
   </li>  
     </ul>
   </li>
@@ -215,7 +240,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Conectividade_local.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Conectividade local</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Análise de conectividade local</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -288,10 +313,10 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>A presente análise se baseou no mapeamento de áreas resilientes para a América do Norte (Anderson et al.). Com base em discussões internas realizadas pela equipe central do projeto e com base nos comentários e sugestões de especialistas temáticos, foram realizados ajustes nas análises para melhorar o mapeamento da resiliência para o território brasileiro. Abaixo, são incluídos os principais refinamentos realizados, assim como a explicação de alguns pontos de atenção importantes que surgiram ao longo do processo de criação do projeto.</p>
+<p>A presente análise se baseou no mapeamento de áreas resilientes para a América do Norte <span class="citation" data-cites="anderson_estimating_2014">(<a href="references.html#ref-anderson_estimating_2014" role="doc-biblioref">Anderson et al. 2014</a>)</span>. Com base em discussões internas realizadas pela equipe central do projeto e com base nos comentários e sugestões de especialistas temáticos, foram realizados ajustes nas análises para melhorar o mapeamento da resiliência para o território brasileiro. Abaixo, são incluídos os principais refinamentos realizados, assim como a explicação de alguns pontos de atenção importantes que surgiram ao longo do processo de criação do projeto.</p>
 <section id="premissas-definições-e-termos-utilizados" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="premissas-definições-e-termos-utilizados"><span class="header-section-number">9.1</span> Premissas, definições e termos utilizados</h2>
-<p>As premissas principais consideradas no estudo estão descritas no item Modelo conceitual e premissas [LINK]. O glossário de termos consta no item Glossário [LINK].</p>
+<p>As premissas principais consideradas no estudo estão descritas no item Modelo conceitual e premissas (<a href="Modelo_conceitual_premissas.html"><span>Capítulo&nbsp;7</span></a>). O glossário de termos consta no item Glossário (<a href="Glossario.html"><span>Capítulo&nbsp;6</span></a>).</p>
 <p>Entre as premissas consideradas no estudo original conduzido nos EUA, a proposição de uma associação positiva entre biodiversidade e geodiversidade não foi considerada como uma premissa básica neste estudo pela ausência de evidências claras para regiões tropicais. Além disso, no estudo anterior conduzido nos EUA, consta o termo “diversidade da paisagem” ao invés de “heterogeneidade da paisagem”, utilizado aqui. Isso se deu, pois em nossa avaliação, não utilizamos uma medida de diversidade propriamente dita, mas sim um indicador da variabilidade de ambientes. Decisão semelhante se deu no uso do termo “riqueza de solos”, medida efetivamente usada para a análise de tipos de solos, ao invés de “diversidade de solos”, como utilizada no estudo anterior.</p>
 </section>
 <section id="configurações-geofísicas-geophysical-settings-e-janelas-móveis" class="level2" data-number="9.2">
@@ -305,26 +330,41 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="índice-topográfico-tpi-em-substituição-ao-lpi" class="level2" data-number="9.4">
 <h2 data-number="9.4" class="anchored" data-anchor-id="índice-topográfico-tpi-em-substituição-ao-lpi"><span class="header-section-number">9.4</span> Índice topográfico: TPI em substituição ao LPI</h2>
-<p>No estudo original de Anderson et al.&nbsp;(2014, 2023), foi utilizado como índice de posição topográfica o Land Position Index (LPI) (Fels &amp; Matson 1996), descrito como:</p>
-<p>[INSERIR FIGURA]</p>
+<p>No estudo original de <span class="citation" data-cites="anderson_estimating_2014 anderson_resilient_2023">Anderson et al. (<a href="references.html#ref-anderson_estimating_2014" role="doc-biblioref">2014</a>, <a href="references.html#ref-anderson_resilient_2023" role="doc-biblioref">2023</a>)</span>, foi utilizado como índice de posição topográfica o Land Position Index (LPI) <span class="citation" data-cites="fels_cognitively-based_1996">(<a href="references.html#ref-fels_cognitively-based_1996" role="doc-biblioref">Fels e Matson 1996</a>)</span>, descrito como:</p>
+<p><span class="math display">\[
+LPI = (\sum_{i = 1}^n (x_i - x_0)/ d_{i0})/n
+\]</span></p>
 <p>Nesse índice, a posição topográfica é calculada como a diferença média da célula focal (xi) para outras células (x0) ponderado pela distância entre as células (di0), n é o número de células. O cálculo é realizado usando kernel anelar de diferentes tamanhos.</p>
 <p>No nosso estudo, optamos por utilizar o <em>Topographic Position Index (TPI)</em> (Theobald et al.&nbsp;xx), por permitir considerar o efeito de diferentes escalas espaciais no cálculo da posição topográfica. Esse índice de posição topográfica média é descrito como:</p>
-<p>[INSERIR FIGURA] sendo j o número de escalas espaciais.</p>
+<p><span class="math display">\[
+TPI = \sum_{j = 1}^m (\sum_{i = 1}^n (x_i - x_0)/n)/m
+\]</span></p>
+<p>sendo m o número de escalas espaciais.</p>
 </section>
 <section id="avaliação-entre-tipos-de-ecossistema-campo-vs.-floresta" class="level2" data-number="9.5">
 <h2 data-number="9.5" class="anchored" data-anchor-id="avaliação-entre-tipos-de-ecossistema-campo-vs.-floresta"><span class="header-section-number">9.5</span> Avaliação entre tipos de ecossistema (campo vs.&nbsp;floresta)</h2>
 <p>Com o objetivo de verificar se a análise geraria alguma tendência ou viés para algum tipo de fisionomia vegetal (<em>i.e.</em>, se eventualmente favoreceria áreas florestais ao invés de áreas campestres), avaliamos as diferenças nos valores de heterogeneidade da paisagem para campos e florestas.</p>
 <p>Primeiramente fizemos comparações entre áreas campestres de altas e baixas altitudes no Brasil todo. Campos de altitude são formações vegetais não-florestais que ocorrem em áreas de altitudes elevadas (superior a 850 m acima do nível do mar). Devido a sua distribuição restrita e isolada nos cumes de montanhas, avaliamos a distribuição dos valores de heterogeneidade da paisagem com relação a áreas campestres de baixas altitudes, partindo da hipótese de que eventualmente os locais mais elevados poderiam apresentar menores valores de heterogeneidade da paisagem. O mesmo foi feito para áreas florestais em diferentes altitudes.</p>
 <p>A comparação foi realizada entre frequência dos valores de heterogeneidade da paisagem em áreas de altitudes mais elevadas (superior a 850 m) e áreas de altitudes mais baixas (inferiores a 850 m) para cada uma das formações vegetacionais descritas acima. Fizemos isso através de histogramas gerados a partir dos valores da imagem <em>raster</em> de heterogeneidade da paisagem. Além disso, calculamos médias e desvio padrão da heterogeneidade da paisagem para cada uma das condições descritas anteriormente.</p>
-<p>Os resultados desse teste indicaram que os valores de heterogeneidade da paisagem entre formações campestres e florestais, tanto em altitudes elevadas como em regiões mais baixas, estão distribuídos de maneira semelhante (Figura 3), com médias e desvios similares (campo baixo, 0.35 ± 0.64 ; campo alto, 0.33 ± 0.69; floresta baixa, 0.42, ±0.70; floresta alta, 0.43, ±0.71). Portanto, não foram encontradas tendências nas estimativas de heterogeneidade da paisagem entre diferentes formações vegetais em diferentes faixas de altitude.</p>
-<p>[INSERIR FIGURA 3] Histograma da densidade de pixels (calculada em porcentagem) dos valores de heterogeneidade da paisagem para fitofisionomias campestres e florestais em altas e baixas altitudes.</p>
-<p>Adicionalmente à análise anterior, realizamos também a comparação da heterogeneidade da paisagem entre as principais fitofisionomias que ocorrem dentro do território brasileiro: florestas ombrófilas e estacionais, savana, estepe e campinarana. Para isso, extraímos os valores dos raster de heterogeneidade da paisagem que se sobrepunham com os polígonos das fitofisionomias mapeadas na carta de vegetação produzida pelo Instituto Brasileiro de Geografia (IBGE) em escala 1:250.000 (IBGE 2021) no QGIS 3.28 (QGIS Association. http://www.qgis.org). Em seguida, produzimos histogramas com a densidade dos valores e transformamos os valores de densidade em porcentagem para torná-los comparáveis entre as diferentes fitofisionomias.</p>
-<p>Foram calculadas a média e o desvio de heterogeneidade da paisagem para cada uma das fitofisionomias (Figura 4). Do mesmo modo como obtido anteriormente, não encontramos tendências na distribuição dos valores de heterogeneidade da paisagem para as diferentes fitofisionomias (Figura 4), com valores pouco destoantes entre cada uma delas.</p>
-<p>[INSERIR FIGURA 4] Histogramas da densidade de pixels (calculada em porcentagem) dos valores de heterogeneidade da paisagem para diferentes fitofisionomias brasileiras.</p>
+<p>Os resultados desse teste indicaram que os valores de heterogeneidade da paisagem entre formações campestres e florestais, tanto em altitudes elevadas como em regiões mais baixas, estão distribuídos de maneira semelhante (<a href="Resiliencia_da_paisagem.html#fig-histograma">Figura&nbsp;<span>13.2</span></a>), com médias e desvios similares (campo baixo, 0.35 ± 0.64 ; campo alto, 0.33 ± 0.69; floresta baixa, 0.42, ±0.70; floresta alta, 0.43, ±0.71). Portanto, não foram encontradas tendências nas estimativas de heterogeneidade da paisagem entre diferentes formações vegetais em diferentes faixas de altitude.</p>
+<div id="fig-histograma" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/Figura_hist_campos_floresta.png" width="800" height="800" class="figure-img"></p>
+<figcaption class="figure-caption">Figura&nbsp;9.1: Histograma da densidade de pixels (calculada em porcentagem) dos valores de heterogeneidade da paisagem para fitofisionomias campestres e florestais em altas e baixas altitudes.</figcaption>
+</figure>
+</div>
+<p>Adicionalmente à análise anterior, realizamos também a comparação da heterogeneidade da paisagem entre as principais fitofisionomias que ocorrem dentro do território brasileiro: florestas ombrófilas e estacionais, savana, estepe e campinarana. Para isso, extraímos os valores dos raster de heterogeneidade da paisagem que se sobrepunham com os polígonos das fitofisionomias mapeadas na carta de vegetação produzida pelo Instituto Brasileiro de Geografia (IBGE) em escala 1:250.000 (<a href="https://www.ibge.gov.br/geociencias/informacoes-ambientais/vegetacao/22453-cartas-1-250-000.html?=&amp;t=downloads">https://www.ibge.gov.br/geociencias/informacoes-ambientais/vegetacao/22453-cartas-1-250-000.html?=&amp;t=downloads</a>) no QGIS 3.28 <span class="citation" data-cites="qgis_development_team_qgis_2023">(<a href="references.html#ref-qgis_development_team_qgis_2023" role="doc-biblioref">QGIS Development Team 2023</a>)</span>. Em seguida, produzimos histogramas com a densidade dos valores e transformamos os valores de densidade em porcentagem para torná-los comparáveis entre as diferentes fitofisionomias.</p>
+<p>Foram calculadas a média e o desvio de heterogeneidade da paisagem para cada uma das fitofisionomias (<a href="#fig-fisio">Figura&nbsp;<span>9.2</span></a>). Do mesmo modo como obtido anteriormente, não encontramos tendências na distribuição dos valores de heterogeneidade da paisagem para as diferentes fitofisionomias (<a href="#fig-fisio">Figura&nbsp;<span>9.2</span></a>), com valores pouco destoantes entre cada uma delas.</p>
+<div id="fig-fisio" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/figura_hist_fitofisionomias.png" width="800" height="800" class="figure-img"></p>
+<figcaption class="figure-caption">Figura&nbsp;9.2: Histogramas da densidade de pixels (calculada em porcentagem) dos valores de heterogeneidade da paisagem para diferentes fitofisionomias brasileiras.</figcaption>
+</figure>
+</div>
 </section>
 <section id="consideração-sobre-a-largura-dos-rios-na-análise-de-resistência" class="level2" data-number="9.6">
 <h2 data-number="9.6" class="anchored" data-anchor-id="consideração-sobre-a-largura-dos-rios-na-análise-de-resistência"><span class="header-section-number">9.6</span> Consideração sobre a largura dos rios na análise de resistência</h2>
-<p>Considerando que corpos d’água com diferentes larguras podem representar barreiras mais ou menos eficientes ao deslocamento dos organismos terrestres na paisagem, incluímos essa característica (largura do corpo d’água) para diferenciar os valores de resistência oferecidos pelas águas abertas. A descrição sobre esta análise está indicada no item de metodologia de Conectividade local [LINK].</p>
+<p>Considerando que corpos d’água com diferentes larguras podem representar barreiras mais ou menos eficientes ao deslocamento dos organismos terrestres na paisagem, incluímos essa característica (largura do corpo d’água) para diferenciar os valores de resistência oferecidos pelas águas abertas. A descrição sobre esta análise está indicada no item de metodologia de Conectividade local (<a href="Conectividade_local.html"><span>Capítulo&nbsp;12</span></a>).</p>
 <!-- isso acho que acabou caindo fora. Talvez verificar se tem algo parecido no Anexo I que trata do omniscape
 ## Análise de conectividade local
 Para a análise de conectividade local, inicialmente seguimos a metodologia conduzida para a América do Norte, que utilizada filtros kernel como um proxy de conectividade. Em conversas com o time que conduziu o estudo nos EUA, nos foi indicado que o filtro Kernel teria resultados semelhantes a uma análise de circuitos (derivada da ferramenta circuitscape), mas com uma capacidade computacional muito menor, o que facilitaria a análise dada a amplitude territorial.
@@ -334,10 +374,29 @@ A utilização de Kernel traz uma contextualização da resistência de acordo c
 <section id="nova-camada-de-resiliência-da-paisagem-bivariada" class="level2" data-number="9.7">
 <h2 data-number="9.7" class="anchored" data-anchor-id="nova-camada-de-resiliência-da-paisagem-bivariada"><span class="header-section-number">9.7</span> Nova camada de resiliência da paisagem (bivariada)</h2>
 <p>No estudo original conduzido nos EUA, a camada final de resiliência era gerada a partir da média dos valores de Z de heterogeneidade da paisagem e de conectividade local. Esse modo de apresentação, entretanto, não permitia identificar a influência de uma ou outra camada no valor final de resiliência (por exemplo, se maior influência era de heterogeneidade da paisagem ou de conectividade local). O detalhamento destas informações é importante para identificar quais condições estão mais limitantes ou mais favoráveis à resiliência local, sendo essenciais para o planejamento de ações voltadas para a manutenção da biodiversidade.</p>
-<p>Para melhorar a visualização da influência de cada uma das variáveis e de como a resiliência da paisagem muda em função de cada uma delas, optamos por apresentar a camada final de resiliência como um mapa bivariado. A partir da classificação em quartis com 25% dos dados e posterior sobreposição dos dois mapas, foi possível criar uma escala de cores para a resiliência da paisagem (conforme apresentado na Figura 5).</p>
-<p>[INSERIR FIGURA 5] Distribuição dos dados das camadas de heterogeneidade da paisagem e conectividade local de modo a gerar o mapa bivariado de resiliência da paisagem.</p>
+<p>Para melhorar a visualização da influência de cada uma das variáveis e de como a resiliência da paisagem muda em função de cada uma delas, optamos por apresentar a camada final de resiliência como um mapa bivariado. A partir da classificação em quartis com 25% dos dados e posterior sobreposição dos dois mapas, foi possível criar uma escala de cores para a resiliência da paisagem (conforme apresentado na <a href="#fig-resilience_classes">Figura&nbsp;<span>9.3</span></a>).</p>
+<div id="fig-resilience_classes" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/resilience_classes.png" class="img-fluid figure-img" width="500"></p>
+<figcaption class="figure-caption">Figura&nbsp;9.3: Distribuição dos dados das camadas de heterogeneidade da paisagem e conectividade local de modo a gerar o mapa bivariado de resiliência da paisagem.</figcaption>
+</figure>
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-anderson_resilient_2023" class="csl-entry" role="listitem">
+Anderson, M. G., M. Clark, A. P. Olivero, A. R. Barnett, K. R. Hall, M. W. Cornett, M. Ahlering, M. Schindel, B. Unnasch, C. Schloss, e D. R. Cameron. 2023. <a href="https://doi.org/10.1073/pnas.2204434119">A resilient and connected network of sites to sustain biodiversity under a changing climate</a>. Proceedings of the National Academy of Sciences 120:e2204434119.
+</div>
+<div id="ref-anderson_estimating_2014" class="csl-entry" role="listitem">
+Anderson, M. G., M. Clark, e A. O. Sheldon. 2014. <a href="https://doi.org/10.1111/cobi.12272">Estimating <span>Climate</span> <span>Resilience</span> for <span>Conservation</span> across <span>Geophysical</span> <span>Settings</span></a>. Conservation Biology 28:959–970.
+</div>
+<div id="ref-fels_cognitively-based_1996" class="csl-entry" role="listitem">
+Fels, J. E., e K. C. Matson. 1996. A cognitively-based approach for hydrogeomorphic land classification using digital terrain models. National Center for Geographic Information; Analysis, Santa Fe, New Mexico, USA.
+</div>
+<div id="ref-qgis_development_team_qgis_2023" class="csl-entry" role="listitem">
+QGIS Development Team. 2023. <a href="https://www.qgis.org"><span>QGIS</span> <span>Geographic</span> <span>Information</span> <span>System</span></a>. QGIS Association.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

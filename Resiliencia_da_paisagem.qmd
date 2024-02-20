@@ -1,32 +1,24 @@
 # Resiliência da paisagem
 
-A **resiliência da paisagem** se refere à capacidade de um determinado local em manter a diversidade de espécies e as funções ecossistêmicas mesmo diante das pressões provocadas pelas mudanças climáticas. Para calcular essa resiliência, utilizamos as camadas padronizadas de heterogeneidade da paisagem e conectividade local (@fig-classes) descritas anteriormente. A partir delas, classificamos as imagens em quatro quantis, baseados no histograma de distribuição dos valores dessas métricas
+A resiliência da paisagem é a capacidade de um determinado local em manter a diversidade de espécies e as funções ecossistêmicas mesmo diante das pressões provocadas pelas mudanças climáticas. Para calcular a resiliência da paisagem, utilizamos a camada de heterogeneidade da paisagem e de conectividade local (@fig-classes) descritas anteriormente. A partir delas, classificamos as imagens em quartis baseados no histograma de distribuição dos valores dessas métricas (@fig-histograma).
 
-![Classificação do histograma de valores dos pixels em quantis de 25% de:  A) **heterogeneidade da paisagem** e B)**Conectividade local**..](figs/classes_het_con.png){#fig-classes width="700" fig-align="center"}
+![Classificação do histograma de valores dos pixels em quantis de 25% para a camada de (A) heterogeneidade da paisagem e (B) conectividade local.](figs/classes_het_con.png){#fig-classes width="700" fig-align="center"}
 
 
 Com a sobreposição das duas imagens classificadas por quantis, geramos um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem, baseado na escala de cor escolhida (@fig-histograma).
 
 ![Definição das classes de resiliência da paisagem, baseada no histograma de distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local.](figs/resilience_classes.png){#fig-histograma width="500" fig-align="center"}
 
-<!-- Faltou numerar a figura; algumas figuras em outras abas também estão sem numeração; no de conectvididade lembro de não ter número --> 
+Com a sobreposição das duas imagens classificadas por quartis, geramos um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem, baseado na escala de cores (@fig-resilience). Esse mapa bivariado destaca, em verde, as áreas com maior heterogeneidade e bem conectadas na paisagem, que, consequentemente, apresentam maior variabilidade microclimática e possibilitam maior potencial para movimentação aos organismos.
 
+![Resiliência da paisagem, resultante do cruzamento dos mapas de heterogeneidade da paisagem e conectividade local.](figs/Resilience_bivariate.png){#fig-resilience width="600" fig-align="center"}
 
-<!-- 
-Não sei porque algumas figuras o documento reconhece direto e outras não. Resolvi em outras partes do texto mas ainda aparecem em alguns lugares.
--->
+As diferentes classes criadas pela sobreposição dos quantis na escala bivariada da resiliência da paisagem, nos permite identificar diferentes áreas de interesse (Figura 15):
 
-O mapa bivariado da **resiliência da paisagem** (@fig-resilience) destaca as regiões que merecem atenção especial em termos de conservação e manejo, identificando áreas onde a heterogeneidade da paisagem e a conectividade local são mais importantes para determinar a resiliência da paisagem.
+* Áreas em verde: são aquelas que apresentam os maiores valores para as duas métricas, ou seja, possuem alta conectividade local e alta heterogeneidade da paisagem. Isso sugere que essas áreas são particularmente resilientes, pois apresentam alto potencial de manter a diversidade de espécies e funções ecossistêmicas, mesmo diante das mudanças climáticas;
+* Áreas em amarelo: apresentam um alto grau de conectividade local, indicando que os elementos do ecossistema estão bem interligados nessas regiões. No entanto, essas áreas exibem baixa heterogeneidade da paisagem, sugerindo que a variação topográfica da paisagem é limitada;
+* Áreas em azul: possuem alta heterogeneidade da paisagem, o que significa que há uma grande variedade de tipos de habitats ou características na paisagem. No entanto, a conectividade local é baixa, o que indica que os elementos do ecossistema podem estar isolados ou menos interligados;
+* Áreas em cinza: são as áreas com menores valores de heterogeneidade da paisagem e menores valores de conectividade, indicando locais que não apresentam grande variação topográfica e, consequentemente, baixa variedade de habitats. Essas áreas também apresentam uma baixa conectividade, o que indica que esses microhabitas estão isolados ou pouco interligados.
 
-![Mapa final de resiliência da paisagem com a sobreposição dos mapas de heterogeneidade da paisagem e conectividade local.](figs/Resilience_bivariate.png){#fig-resilience width="600" fig-align="center"}
-
-Assim, no mapa bivariado da resiliência da paisagem, podemos identificar diferentes áreas de interesse (@fig-res):
-
-![Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local.](figs/resilience_def.png){#fig-res width="500" fig-align="center"}
-
--   **Áreas em amarelo**: Apresentam um alto grau de conectividade local, indicando que os elementos do ecossistema estão bem interligados nessa região. No entanto, essas áreas também exibem baixa heterogeneidade da paisagem, sugerindo que a variação topográfica da paisagem é limitada;
-
--   **Áreas em azul**: Possuem alta heterogeneidade da paisagem, o que significa que há uma grande variedade de tipos de habitats ou características na paisagem. No entanto, a conectividade local é baixa, o que indica que os elementos do ecossistema podem estar isolados ou menos interligados;
-
--   **Áreas em verde**: São aquelas que apresentam os maiores valores para as duas métricas, ou seja, possuem alta conectividade local e alta heterogeneidade da paisagem. Isso sugere que essas áreas são particularmente resilientes, pois apresentam alto potencial de manter a diversidade de espécies e funções ecossistêmicas, mesmo diante das mudanças climáticas.
+![Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local, enfatizando o que cada quadrante da escala bivariada representa no mapa final de resiliência.](figs/resilience_def.png){#fig-res width="700" height="700" fig-align="center"}
 

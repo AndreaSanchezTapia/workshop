@@ -1,12 +1,8 @@
 # Metodologia resumida
 
-A metodologia proposta para identificar as áreas resilientes às mudanças climáticas envolve o mapeamento da heterogeneidade da paisagem e da conectividade local (Anderson et al. 2014, 2016a, Anderson et al. 2016b, e Anderson et al. 2023), que são as camadas que irão compor a resiliência da paisagem (Figura 1). Os sítios com maior resiliência possuem alto potencial de manter a biodiversidade em um cenário de mudanças climáticas e estão conectados entre si (Anderson et al. 2014), permitindo a movimentação da biodiversidade para locais com microclimas adequados.
+A metodologia proposta para identificar as áreas resilientes às mudanças climáticas envolve o mapeamento da heterogeneidade da paisagem e da conectividade local [@anderson_estimating_2014; @anderson_resilient_2016; @anderson_resilient_2016-1; @anderson_resilient_2023], que são as camadas que irão compor a resiliência da paisagem (@fig-fluxograma). Os sítios com maior resiliência possuem alto potencial de manter a biodiversidade em um cenário de mudanças climáticas e estão conectados entre si [@anderson_estimating_2014], permitindo a movimentação da biodiversidade para locais com microclimas adequados.
 
-<!-- VERSÃO ANTIGA - @Lucas, mantive em função das referências
-A metodologia proposta para identificar os sítios resilientes às mudanças climáticas [@anderson_estimating_2014; @anderson_resilient_2016; @anderson_resilient_2016-1; e @anderson_resilient_2023] envolve o mapeamento da **heterogeneidade da paisagem** e da **conectividade local**, que são as camadas que irão compoar a **resiliência da paisagem** (@fluxograma). Os sítios com maior resiliência, possuem alto potencial de abrigar a biodiversidade em um cenário de mudanças climáticas e estão conectados entre si [@anderson_estimating_2014], permitindo a movimentação da biodiversidade entre diferentes microclimas nesses locais.
--->
-
-![Fluxograma da análise de resiliência da paisagem, que inclui a combinação das camadas de heterogeneidade da paisagem e de conectividade local.](figs/Diagrama_metodologia.png){#fluxograma width="500" fig-align="center"}
+![Fluxograma da análise de resiliência da paisagem, que inclui a combinação das camadas de heterogeneidade da paisagem e de conectividade local.](figs/Diagrama_metodologia.png){#fig-fluxograma width="500" fig-align="center"}
 
 
 ## Heterogeneidade da paisagem {#diversidade-da-paisagem}
@@ -96,7 +92,7 @@ e controla o efeito da configuração espacial do cálculo de conectividade.
 
 ## Resiliência da paisagem: combinando heterogeneidade da paisagem e conectividade local
 
-Finalmente, a resiliência da paisagem é calculada pela sobreposição dos mapas de heterogeneidade da paisagem e conectividade local baseada no histograma de distribuição dos valores dessas métricas (Figura 2). Dessa forma, podemos criar um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem. Com base na escala de cor apresentada, são identificadas áreas onde a heterogeneidade da paisagem e a conectividade local são mais importantes para a resiliência da paisagem.
+Finalmente, a resiliência da paisagem é calculada pela sobreposição dos mapas de heterogeneidade da paisagem e conectividade local baseada no histograma de distribuição dos valores dessas métricas (@fig-resilience). Dessa forma, podemos criar um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem. Com base na escala de cor apresentada, são identificadas áreas onde a heterogeneidade da paisagem e a conectividade local são mais importantes para a resiliência da paisagem.
 
 
-![Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local.](figs/resilience_def.png){#resilience width="500" fig-align="center"}
+![Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local.](figs/resilience_def.png){#fig-resilience width="500" fig-align="center"}

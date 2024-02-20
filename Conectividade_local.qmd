@@ -1,19 +1,13 @@
-# Conectividade local
+# Análise de conectividade local {#sec-conectividade_local}
+
+A conectividade local se refere à facilidade de movimentação potencial dos organismos dado o arranjo espacial dos elementos que compõem a paisagem (tipos de uso e cobertura do solo) e a resistência imposta por eles (Tischendorf & Fahrig 2000, Anderson 2014, Kumar & Cushman 2022).
 
 ## Bases de dados utilizadas
 
-A superfície de resistência foi calculada usando como base os dados de uso e cobertura do solo fornecida pelo MapBiomas coleção 8.0 para o ano de 2021 [@mapbiomas_project_collection_2020]. Complementamos essa camada do uso do solo com informações sobre: 
-::: {}
-1. Largura dos rios;
-2. Presença de infraestruturas de transporte;
-3. Infraestruturas de energia. 
-:::
-
-As informações sobre largura dos rios foram derivadas a partir das camadas de águas do abertas do MapBiomas [@mapbiomas_project_collection_2020], a camada de bacias hidrográficas no nível 8 [Lehner &Grill (2013)]<!--COLOCAR NO ZOTERO--> e a camada de largura efetiva dos corpos d'água [Yamashida et al. 2014]<!--COLOCAR NO ZOTERO-->.
-
-As informações sobre infraestrutura de transporte foram originadas a partir das camadas de estradas pavimentadas, estradas não-pavimentadas e ferrovias fornecidas pelo Instituto Brasileiro de Geografia e Estatística (IBGE) (\[BCIM250, 2021\]) <!-- Isso é uma citação? --> (<https://www.ibge.gov.br/geociencias/cartas-e-mapas/bases-cartograficas-continuas/15759-brasil.html?=&t=downloads>).
-
-As bases de infraestrutura de energia correspondem às camadas de aerogeradores, centrais geradoras de energia fotovoltaicas, linhas de transmissão de energia eólica e usinas termelétricas fornecidas pela Agência Nacional de Energia Elétrica (ANEEL) (<https://gisepeprd2.epe.gov.br/WebMapEPE/>) e a camada de linhas de transmissão de energia fornecida pelo IBGE (\[BCIM250, 2021\]).
+A superfície de resistência foi calculada usando como base os dados de uso e cobertura do solo fornecida pelo MapBiomas coleção 8.0 para o ano de 2021 [@mapbiomas_project_collection_2020]. Complementamos essa camada do uso do solo com informações sobre: largura dos rios; infraestruturas de transporte; e infraestruturas de energia.
+As informações sobre largura dos rios foram derivadas a partir das camadas de águas abertas do MapBiomas [@mapbiomas_project_collection_2020], de bacias hidrográficas no nível 8 (Lehner &Grill 2013) e de largura efetiva dos corpos d’água (Yamashida et al. 2014).
+As informações sobre infraestrutura de transporte foram originadas a partir das camadas de estradas pavimentadas, estradas não-pavimentadas e ferrovias fornecidas pelo Instituto Brasileiro de Geografia e Estatística (IBGE) ([BCIM250, 2021])([https://www.ibge.gov.br/geociencias/cartas-e-mapas/bases-cartograficas-continuas/15759-brasil.html?=&t=downloads](https://www.ibge.gov.br/geociencias/cartas-e-mapas/bases-cartograficas-continuas/15759-brasil.html?=&t=downloads)).
+As bases de infraestrutura de energia correspondem às camadas de aerogeradores, centrais geradoras de energia fotovoltaicas, linhas de transmissão de energia eólica e usinas termelétricas fornecidas pela Agência Nacional de Energia Elétrica (ANEEL) ([https://gisepeprd2.epe.gov.br/WebMapEPE/](https://gisepeprd2.epe.gov.br/WebMapEPE/)) e de linhas de transmissão de energia fornecida pelo IBGE (BCIM250, 2021).
 
 <!--
 precisamos citar:
@@ -28,20 +22,12 @@ MAPBIOMAS NOVA
 <!--
 Estou atualizando as informações com o que revisamos do tutorial de resistência
  -->
+ 
+Os valores de resistência são medidas relativas da dificuldade que os diferentes tipos de uso e cobertura do solo potencialmente conferem à movimentação dos organismos na paisagem. Esses valores foram atribuídos por bioma, seguindo duas premissas: (1) quanto maior for a diferença estrutural entre um dado tipo de cobertura do solo e as fitofisionomias nativas presentes no bioma, maior será o valor de resistência da classe de cobertura do solo; e (2) corpos d’água mais largos oferecem maior resistência ao deslocamento de organismos terrestres na paisagem do que corpos d’água mais estreitos. 
 
-Os valores de resistência são medidas relativas do grau de dificuldade de deslocamento dos organismos nos diferentes tipos de cobertura do solo. Esses valores foram atribuídos por bioma, seguindo a premissa de que quanto maior for a diferença estrutural entre um dado tipo de cobertura do solo e a vegetação original do bioma, maior será o valor de resistência da classe de cobertura do solo em questão. 
+As análises de mapeamento das áreas resilientes às mudanças climáticas estão na resolução espacial de 90 m. Desta forma, reamostramos os dados do MapBiomas [@mapbiomas_project_collection_2020], da resolução original de 30m para resolução de 90m. Para avaliar o efeito das larguras do rio na movimentação das espécies foi necessário avaliar o tamanho máximo do corpo d’água regionalmente. Para isso, a classe do MapBiomas equivalente a águas abertas (rios, lagos e oceanos) foi subdividida em quatro classes distintas de acordo com a largura dos corpos d’água, já que rios mais largos tendem a ser barreiras mais resistentes à movimentação das espécies (Hayes & Sewlal 2004). Para fazer a divisão, extraímos a máscara de corpos d’água e dividimos essa classe única em pedaços menores, regionalizando suas larguras por trechos. Para cada um desses trechos foi extraída a largura efetiva máxima dos corpos d’água, de margem a margem, usando a base GWD – LR disponibilizada por Yamashida et al. 2014. Os trechos foram agrupados nas seguintes classes de largura: (1) 1 a 250 m; (2) 250 a 1.000 m; (3) 1.000 a 4.000 m; e (4) maiores de 4.000 m.
 
-As análises de mapeamento das áreas resilientes às mudanças climáticas estão na resolução espacial de 90 metros. Desta forma, reamostramos os dados do MapBiomas [@mapbiomas_project_collection_2020] , que estão na resolução de 30 metros, para uma resolução de 90 metros e as diferentes classes de uso do solo receberam valores de resistência baseados na a diferença estrutural da classe de cobertura do solo para o hábitat original do bioma [@tbl-resistencia - N: 1 - 28].
-
-Para avaliar o efeito das larguras do rio na movimentação das espécies foi necessário avaliar o tamanho máximo do corpo d'água regionalmente. Para isso, a classe do MapBiomas equivalente a águas abertas (rios, lagos e oceanos) foi subdividida em quatro classes distintas de acordo com a largura dos corpos d’água já que rios mais largos tendem a ser barreiras mais resistêntes à movimentação das espécies. Para fazer a divisao, extraímos a máscara de corpos d’água e dividimos essa classe única em pedaços menores, regionalizando suas larguras por trechos que foram utilizados como unidades espaciais de consulta da base de largura efetiva máxima dos corpos d’água, de margem a margem (base GWD – LR de **Yamashida et al. 2014)**. Todos os corpos d'água foram então divididos em quatro classes de resistência [@tbl-resistencia - N: 29 - 32]: :::{}    
-i. 1 a 250 metros, 
-ii. 250 a 1000 metros, 
-iii. 1000 a 4000 metros e 
-iv. maiores de 4000 metros :::.
-
-As camadas de infraestrutura de transportes e energia estavam em formatos vetoriais e foram convertidos para *raster*, com pixels de tamanho aproximado de 90 m e agrupados em um único arquivo matricial que foi sobreposto sobre ao mapa de uso do solo do Mapbiomas e da largura dos rios, sendo que prevalecia o valor do pixel com resistência mais alta nas situações em que havia sobreposição entre pixels de infraestrutura, uso do solo ou largura de rios. 
-
-Os pixels do mapa consolidado de cobertura do solo, largura dos rios e infraestrutura de transportes e energia receberam valores de resistência em cada bioma que buscaram traduzir o grau de dificuldade de movimentação da biodiversidade numa dada classe de cobertura do solo. Os valores de resistência dos pixels de cada uma das classes foram atribuídos pela equipe do projeto, separadamente por bioma, e podem ser vistos na @tbl-resistencia e o **mapa final de resistência** (@fig_res) foi usado como base do cálculo de **Conectividade Local**.
+Cada uma das classes de uso e cobertura do solo do MapBiomas, já incluindo as quatro classes de largura dos corpos d’água, recebeu, por bioma, um valor de resistência baseado nas premissas expostas acima de diferença estrutural entre o uso da terra e o bioma . Os valores de resistência das classes foram atribuídos pela equipe do projeto (@tbl-resistencia). Cada camada de infraestrutura de transporte e energia foi convertida do formato vetorial (formato original das bases) para o formato matricial ou raster, com pixels de tamanho aproximado de 90 m. Feita a conversão, os diferentes tipos de infraestrutura receberam valores específicos de resistência (conforme indicado na @tbl-resistencia) e todas as camadas foram agrupadas em um único raster de infraestrutura. Os valores de resistência dos distintos tipos de infraestrutura foram atribuídos pela equipe do projeto, separadamente por bioma, e podem ser visualizados na  @tbl-resistencia.
 
 |N|Classe de cobertura do solo|Amazônia|Caatinga|Cerrado|Mata Atlântica|Pampa|Pantanal|
 |--:|--:|--:|--:|--:|--:|--:|--:|
@@ -84,7 +70,7 @@ Os pixels do mapa consolidado de cobertura do solo, largura dos rios e infraestr
 |37|Ferrovias|10|10|10|10|10|10|
 |38|Linhas de transmissão (tradicionais e anexas ao sistema eólico)|10|7|7|7|7|7|
 |39|Termelétricas|20|20|20|20|20|20|
-: Valores de resistência para as 39 classes de uso e cobertura do solo - resultante da junção das superfícies de uso do solo do MapBiomas (N: 1 - 28), as separações do tamanho dos rios por bacias hidrográficas (N 29 - 32) e de infraestrutura de transporte e energia (N: 33 - 39).{#tbl-resistencia}
+: Valores de resistência para as 39 classes de uso e cobertura do solo. As classes são resultantes da junção das superfícies de uso do solo do MapBiomas (N: 1 - 28), das categorias de tamanho dos rios por bacias hidrográficas (N 29 - 32) e das infraestruturas de transporte e energia (N: 33 - 39). Valores ausentes indicam que a classe não estava presente no bioma. {#tbl-resistencia}
 
 <!-- Precisa atualizar a tabela e também incluir o fluxograma da análise que 
 Marina gerou 
@@ -92,67 +78,20 @@ Marina gerou
 23-11-2023 A TABELA E A EXPLICAÇÃO JÁ FORAM ATUALIZADAS 
 --> 
 
+A camada com os valores de resistência dos diferentes tipos de uso e cobertura do solo (com base no MapBiomas), já contemplando as classes de largura de corpos d’água, foi combinada com a camada de resistência de infraestrutura de modo que, nas sobreposições entre pixels de classes diferentes, sempre prevalecia o valor do pixel com resistência maior. A combinação dessas camadas deu origem a uma única superfície de resistência que foi utilizada para a construção do mapa de resistência (@fig-res).
+
+
 ![Mapa final de classificação da resistência à movimentação de organismos dos diferentes tipos de uso e cobertura da terra.](figs/C2_Resistencia.png){#fig-res width="600" fig-align="center"}
 
-<!--
-ESTOU RETIRANDO A EXPLICAÇÃO DO KERNEL
+## Filtro kernel {-}
 
-## Aplicação do filtro kernel
+Depois de atribuídos os valores de resistência, aplicamos à superfície de resistência gerada a função kernel de decaimento linear. Esta análise considerou, em uma janela circular móvel de 23 pixels (~2.070 m), o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior que os mais distantes. Desta maneira, a função kernel auxilia na tarefa de encontrar os melhores caminhos de deslocamento na paisagem, ou seja, aqueles caminhos que oferecem menor resistência potencial à movimentação de espécies, baseados no uso do solo e no contexto local da paisagem (@fig-kernel). 
 
-Depois de atribuídos os valores de resistência, aplicamos à superfície gerada a função _kernel_ de decaimento linear. Esta análise considerou, numa janela móvel de 23 pixels (~2070 m), o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior que os mais distantes. Desta maneira, a função _kernel_ nos auxilia na tarefa de encontrar os melhores caminhos de deslocamento na paisagem, ou seja, aqueles caminhos que oferecem menor resistência (@fig-res).
--->
+![Conectividade local baseada na classificação da resistência à movimentação de organismos nos diferentes tipos de uso e cobertura do solo.](figs/Full_Connectedness.png){#fig-kernel width="600" fig-align="center"}
 
-## Conectividade: análise de circuitos
+Uma vez que nossas análises são orientadas para organismos terrestres e a função kernel considera o efeito do contexto no cálculo de conectividade local, optamos por, na análise de vizinhança, desconsiderar o efeito que os pixels de água exercem sobre os pixels terrestres, mas mantivemos o efeito contrário. Em termos práticos isso significa que o custo de deslocamento de um organismo terrestre em um pixel de floresta primária, por exemplo, que esteja localizado na margem de um corpo d’água mais largo, não deve ser maior que o custo de deslocamento num pixel de floresta que esteja localizado na margem de um corpo d’água estreito. Por outro lado, se um pequeno corpo d’água estiver inserido em uma área de baixa resistência, como uma formação florestal, ele terá valores de conectividade local maiores do que se estivesse inserido em uma área de alta resistência, como uma pastagem, por exemplo.
+O fluxograma ilustrando as etapas da análise de conectividade local é apresentado na @fig-fluxograma.
 
-Calculamos a conectividade baseada em teoria de circuitos [@mcrae_isolation_2006] utilizando a implementação de Omniscape para Julia [@hall_circuitscape_2021; @landau_omniscapejl_2021].
+![Fluxograma indicando as etapas da análise de conectividadelocal.](figs/Fluxograma_resistencia_com_Kernel_jan24_corrigido.jpg){#fig-fluxograma height="800" width="900" fig-align="center"}
 
-Como base para estas análises, utilizamos:
 
-+ o raster de resistência utilizado como base para a conectividade local;
-+ um raio da área de interesse de 200 pixels (18km);
-+ agrupamentos de 19 pixels de interesse para a janela móvel (~1.7km).
-
-O raio da área de interesse é o raio de busca ou tamanho da janela móvel circular. O tamanho da janela foi equivalente ao utilizado no cálculo dos  valores de Z (200 pixels), o valor é levemente diferente devido à limitação do tamanho do bloco central da janela ser um número ímpar de pixels (agrupamento de 19) e segundo @landau_omniscapejl_2021 esse valor não deve ultrapassar 10% do raio.
-
-Consideramos o uso de _kernel_ sobre a superfície de resistência como entrada para o Omniscape, entretanto, os resultados da análise com _kernel_ diluíram muito corredores e passagens menores, por conta da natureza de suavização da superfície de resistência pelo _kernel_. Dessa maneira, ao utilizar a resistência sem _kernel_ como entrada, preservamos estruturas espaciais menores, mas importantes para a conectividade da paisagem.
-
-O _output_ do Omniscape são três arquivos de conectividade relacionados:
-
-+ `flow_current` é o fluxo que aconteceria sem levar em conta a camada de resistência. Ele leva em conta a configuração espacial da paisagem (estreitos, barras) e dos pixels de baixa resistência de origem. Nem todo pixel é _source_ pixel, mas a corrente que entra em cada pixel de baixa resistência entra sem resistência. Flow current é usado como um "modelo nulo" de conectividade.
-+ `cummulative_current` é a corrente acumulada, levando em conta a configuração espacial e os valores de resistência.
-+ `normalized_current` equivale a $\frac{cumulative\_current}{flow\_current}$
-e controla o efeito da configuração espacial do cálculo de conectividade.
-
-Devido à alta demanda computacional a superfície de resistência para todo o Brasil foi fragmentada em 9 tiles com o dobro do raio (total de 400 pixels) de sobreposição entre eles, dessa maneira após o processamento individual dos tiles, foram removidos os 200 pixels de cada borda sobreposta, eliminando o efeito de borda para a execução o mosaico dos tiles, resultando na superfície de conectividade para todo o Brasil. Essa fragmentação para o processamento de grandes regiões é importante para que as análises possam ser feitas com menos poder computacional, sem prejuízo nos resultados.
-
-<!--
-Como é uma análise com uma demanda computacional alta, recortamos regiões de interesse em quadrados de 4.000 pixels para cada bioma e avaliamos os diversos cenários para melhor ajuste de parâmetros e tomadas de decisão, como utilizar `cumulative_current` ou `normalized_current` e utilizar a resistência ou a superfície gerada pelo _kernel_.
-
-Algumas regiões de teste foram selecionadas para cada bioma.
-
-![Conectividade: análise de circuitos para uma região de teste na Amazônia.](figs/conectividade_amazonia.png){#fig-resilience width="600" fig-align="center"}
-
-![Conectividade: análise de circuitos para uma região de teste na Caatinga.](figs/conectividade_caatinga.png){#fig-resilience width="600" fig-align="center"}
-
-![Conectividade: análise de circuitos para uma região de teste na Cerrado.](figs/conectividade_cerrado.png){#fig-resilience width="600" fig-align="center"}
-
-![Conectividade: análise de circuitos para uma região de teste na Mata Atlântica.](figs/mata_atlantica.png){#fig-resilience width="600" fig-align="center"}
-
-![Conectividade: análise de circuitos para uma região de teste no Pampa.](figs/pampa.png){#fig-resilience width="600" fig-align="center"}
-
-![Conectividade: análise de circuitos para uma região de teste no Pantanal.](figs/conectividade_pantanal.png){#fig-resilience width="600" fig-align="center"}
-
-Por fim, calculamos os valores de Z para cada pixel ($Z_{pixel}$) ao subtrair o valor da média ($\mu$) e dividindo o resultado pelo desvio padrão ($\sigma$) e multiplicando tudo por -1, como mostrado na fórmula a seguir:
-$$
-Z_{pixel}= \left(\frac {X_{pixel}-\mu} {\sigma}\right) \times -1
-$$
-Os cálculos de $Z$ foram feitos dentro de cada classificação de regiões eco-geológicas usando as médias e desvios padrão dentro de cada uma das classes. Multiplicamos o valores por -1 por considerarmos que a conectividade local é o inverso dos valores de resistência suavizados pelo _kernel_.
-
--->
-
-<!-- Os dados espaciais primários para calcular a superfície de resistência foram a camada de cobertura do solo fornecida pelo MapBiomas [@mapbiomas_project_collection_2020] e a base de estradas fornecida pelo IBGE (BCIM250 de 2021). Os seguintes passos foram realizados:
-1.	Os pixels da camada do MapBiomas foram reamostrados de 30 metros par 90 metros, usando a ferramenta “Ressample” do software ArcGis 10.5
-2.	O shapefile de estradas do IBGE foi convertido para o formato raster, com pixels de aproximadamente 90 metros de tamanho. Os pixels correspondentes a estradas pavimentadas receberam o valor de 2000, os pixels de estradas não pavimentadas receberam o valor de 1000 e os demais pixels (que não correspondem a nenhuma estrada) receberam o valor de 0 (zero)
-3.	No ArcGis 10.5, usando a ferramenta “Map Calculator” as camadas de cobertura do solo e de estradas foram somadas. Na superfície gerada, foram mantidos os valores dos pixels, originalmente atribuídos pelo MapBiomas, quando um pixel de cobertura do solo se sobrepusesse a algum pixel da camada de estradas com valor igual a zero. Nos casos onde os pixels de cobertura do solo se sobrepuseram a um pixel de estrada pavimentadas o valor final desses pixels foi reclassificado para 98 e quando a sobreposição ocorreu com algum pixel de estrada não pavimentada, o valor final foi reclassificado para 99
-4.	Na superfície gerada, os pixels de cada uma das classes receberam valores de resistência, inferidos separadamente para cada bioma (obs: neste arquivo os valores de resistência foram inferidos pela equipe de bolsistas de pós-doutorado do Projeto e seus supervisores, com auxílio da equipe da TNC). Os valores de resistência para cada classe de uso e cobertura do solo, por bioma, encontram-se na tabela 1 (abaixo). Os valores de resistência buscaram traduzir, comparativamente entre as classes, o grau de dificuldade de movimentação de um dado animal ou propágulo naquela classe de cobertura do solo. A premissa assumida aqui, para todos os biomas, é que quanto maior fora a diferença estrutural daquela classe para o hábitat original do bioma, maior será a dificuldade de movimentação por um dado pixel
-5.	Depois de atribuídos os valores de resistência, usando a ferramenta “Focal Statistics” do ArcGis 10.5, foi calculada o valor médio do pixel focal, em um raio de 23 pixels, aplicando a função de _Kernel_, com decaimento linear. Esta análise considera o contexto espacial em que cada pixel está inserido, reconhecendo que pixels mais próximos possuem uma influência maior um sobre o outro do que pixels mais distantes -->

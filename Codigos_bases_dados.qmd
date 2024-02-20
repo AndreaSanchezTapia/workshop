@@ -8,25 +8,27 @@ A documentação das análises para a criação das camadas de heterogeneidade d
 ### Heterogeneidade da paisagem
 
 + Documentação:
-https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/apresentacao.html
+[https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/apresentacao.html](https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/apresentacao.html)
 
 + JupyterNotebook:
-https://github.com/Resiliencia-climatica-Brasil/diversity-resilience-python/tree/master/jupyternotebook
+
+[https://github.com/Resiliencia-climatica-Brasil/diversity-resilience-python/tree/master/jupyternotebook](https://github.com/Resiliencia-climatica-Brasil/diversity-resilience-python/tree/master/jupyternotebook)
 
 
 ### Conectividade local
 
 + Documentação:
-https://resiliencia-climatica-brasil.github.io/Resistencia/
+[https://resiliencia-climatica-brasil.github.io/Resistencia/](https://resiliencia-climatica-brasil.github.io/Resistencia/)
 
 
 ### Resiliência da paisagem
 
 + Documentação: 
-https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/resilience.html
+[https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/resilience.html](https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/resilience.html)
 
 + JupyterNotebook:
-https://github.com/Resiliencia-climatica-Brasil/diversity-resilience-python/blob/master/jupyternotebook/resilience.ipynb
+
+[https://github.com/Resiliencia-climatica-Brasil/diversity-resilience-python/blob/master/jupyternotebook/resilience.ipynb](https://github.com/Resiliencia-climatica-Brasil/diversity-resilience-python/blob/master/jupyternotebook/resilience.ipynb)
 
 
 ## Bases de dados

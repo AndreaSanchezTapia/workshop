@@ -1,4 +1,4 @@
-# Glossário
+# Glossário {#sec-glossario}
 
 ## Resiliência da paisagem (_landscape resilience_)
 Capacidade de uma área de absorver impactos das mudanças climáticas na diversidade de espécies e funções ecológicas. Uma área resiliente apresenta variabilidade de condições que sustentam a biodiversidade, mantendo relações fundamentais entre componentes ecológicos, e permite mudança adaptativa na composição de espécies e estrutura do ecossistema
