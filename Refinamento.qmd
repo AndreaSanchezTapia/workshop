@@ -6,6 +6,7 @@ A presente análise se baseou no mapeamento de áreas resilientes para a Améric
 
 ## Premissas, definições e termos utilizados
 
+
 As premissas principais consideradas no estudo estão descritas no item Modelo conceitual e premissas (@sec-modelo_conceitual). O glossário de termos consta no item Glossário (@sec-glossario). 
 
 Entre as premissas consideradas no estudo original conduzido nos EUA, a proposição de uma associação positiva entre biodiversidade e geodiversidade não foi considerada como uma premissa básica neste estudo pela ausência de evidências claras para regiões tropicais. Além disso, no estudo anterior conduzido nos EUA, consta o termo “diversidade da paisagem” ao invés de “heterogeneidade da paisagem”, utilizado aqui. Isso se deu, pois em nossa avaliação, não utilizamos uma medida de diversidade propriamente dita, mas sim um indicador da variabilidade de ambientes. Decisão semelhante se deu no uso do termo “riqueza de solos”, medida efetivamente usada para a análise de tipos de solos, ao invés de “diversidade de solos”, como utilizada no estudo anterior.
@@ -25,6 +26,7 @@ O tamanho da janela para o cálculo da variedade de formas de relevo, amplitude 
 
 ## Índice topográfico: TPI em substituição ao LPI
 
+
 No estudo original de @anderson_estimating_2014 [-@anderson_resilient_2023], foi utilizado como índice de posição topográfica o Land Position Index (LPI) [@fels_cognitively-based_1996], descrito como:
 
 
@@ -35,6 +37,7 @@ $$
 Nesse índice, a posição topográfica é calculada como a diferença média da célula focal (xi) para outras células (x0) ponderado pela distância entre as células (di0), n é o número de células. O cálculo é realizado usando kernel anelar de diferentes tamanhos.
 
 No nosso estudo, optamos por utilizar o *Topographic Position Index (TPI)* (Theobald et al. xx), por permitir considerar o efeito de diferentes escalas espaciais no cálculo da posição topográfica. Esse índice de posição topográfica média é descrito como:
+
 
 
 $$
@@ -64,8 +67,8 @@ Foram calculadas a média e o desvio de heterogeneidade da paisagem para cada um
 
 ![Histogramas da densidade de pixels (calculada em porcentagem) dos valores de heterogeneidade da paisagem para diferentes fitofisionomias brasileiras.](figs/figura_hist_fitofisionomias.png){#fig-fisio width="800" height="800" fig-align="center"}
 
-
 ## Consideração sobre a largura dos rios na análise de resistência 
+
 
 Considerando que corpos d’água com diferentes larguras podem representar barreiras mais ou menos eficientes ao deslocamento dos organismos terrestres na paisagem, incluímos essa característica (largura do corpo d’água) para diferenciar os valores de resistência oferecidos pelas águas abertas. A descrição sobre esta análise está indicada no item de metodologia de Conectividade local (@sec-conectividade_local).
 
@@ -83,5 +86,6 @@ No estudo original conduzido nos EUA, a camada final de resiliência era gerada 
 Para melhorar a visualização da influência de cada uma das variáveis e de como a resiliência da paisagem muda em função de cada uma delas, optamos por apresentar a camada final de resiliência como um mapa bivariado. A partir da classificação em quartis com 25% dos dados e posterior sobreposição dos dois mapas, foi possível criar uma escala de cores para a resiliência da paisagem (conforme apresentado na @fig-resilience_classes).
 
 ![Distribuição dos dados das camadas de heterogeneidade da paisagem e conectividade local de modo a gerar o mapa bivariado de resiliência da paisagem.](figs/resilience_classes.png){#fig-resilience_classes width="500" fig-align="center"}
+
 
 

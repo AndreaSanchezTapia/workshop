@@ -23,6 +23,7 @@ book:
     - consideracoes.qmd
     - references.qmd
     - anexo.qmd
+
   navbar:
     left:
       - text: Tutoriais
@@ -41,7 +42,7 @@ book:
     style: "docked"   
     page-navigation: true
   favicon: figs/1667403883848_theme_logo.png
-  
+
         
 bibliography: bibliografia.bib
 csl: citation_style.csl
@@ -50,5 +51,4 @@ format:
   html:
     theme: default    
     css: styles.css   
-  
 

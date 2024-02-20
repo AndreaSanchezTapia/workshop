@@ -32,7 +32,7 @@ O entendimento dos impactos das mudanças climáticas localmente necessita da co
 
 O primeiro mapeamento de áreas com potencialmente resilientes às mudanças climáticas dada a sua geodiversidade foi para a América do Norte (citação). Nessa proposta, áreas resilientes são definidas como aquelas com alta diversidade de condições abióticas superficiais e do subsolo, que possuem baixa degradação ambiental e são conectadas na paisagem (citação). Portanto, áreas resilientes teriam alta heterogeneidade de variáveis abióticas na paisagem e alta conectividade entre as manchas de habitat. A partir desse mapeamento, propusemos uma adaptação à metodologia utilizada anteriormente, de modo a aplicá-la para o contexto dos biomas brasileiros e identificar áreas resilientes a mudanças do clima para uma região tropical.
 
--->
+
 
 <!-- estudos macroecologicos e macroevolutivos mostrando a importancia topografica e geodiversidade na biodiversidade -->
 

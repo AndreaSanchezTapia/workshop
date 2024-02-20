@@ -1,5 +1,6 @@
 # Heterogeneidade da paisagem
 
+
 A heterogeneidade da paisagem é uma métrica composta relacionada à diversidade de microclimas presentes em uma determinada localidade. Essa métrica é calculada através de médias hierárquicas de valores de Z de quatro variáveis distintas: variedade de formas de relevo, amplitude altitudinal, índice de áreas úmidas e riqueza de solos. A seguir, descreveremos como cada variável que compõe a métrica é criada e como elas são combinadas para formar a heterogeneidade da paisagem.
 
 ## Bases de dados utilizadas
@@ -10,6 +11,7 @@ O acúmulo de fluxo não captura adequadamente a distribuição e área de lagos
 ## Variáveis que compõem a heterogeneidade da paisagem
 
 ### Variedade de formas de relevo (*landforms*) {-}
+
 
 A variedade do relevo é representada pela quantidade de formas de relevo dentro de uma vizinhança da célula focal (pixels). Primeiro, classificamos as formas de relevo e contabilizamos a quantidade de formas no entorno de cada célula.
 As formas de relevo representam a variação na umidade, exposição à radiação solar, velocidade de ventos e deposição de sedimentos na paisagem (Dobrowski 2011, Anderson et al. 2016). Essa classificação é determinada pelas variáveis de declividade do relevo (slope), exposição do relevo (aspect), índice de posição topográfica (topographic position index), índice de umidade (moisture index) e distribuição de rios e lagos.
@@ -32,7 +34,6 @@ Por fim, a classificação das formas de relevo foi ajustada para valores de TPI
 ![Classificação de formas de relevo de acordo com a declividade do relevo, índice de posição topográfica,
   orientação do relevo, índice de umidade, rios e lagos. Baseado na classificação de @anderson_resilient_2016.](figs/landform_scheme.png){#fig-landforms fig-align="center"}
 
-
 #### Declividade do relevo (*slope*) {-}
 
 A declividade do relevo foi calculada pela função `ee.Terrain.slope`, como um gradiente local das 4 células adjacentes. Os resultados são apresentados em graus de declividade (0º a 90º).
@@ -51,6 +52,7 @@ TPI = \frac {\sum  _{i}^{n}\left(vizinhança_i - focal \right)}{n}
 $$
 
 
+
 O índice é composto pela média de TPI das três escalas, o que permite a consideração de níveis locais e regional de resolução da paisagem [@theobald_ecologically-relevant_2015]. Essa abordagem foi implementada para permitir a classificação de formas de relevo que emergem tanto em escalas locais (ex. vales, topos de montanhas) quanto regionais (ex. topos planos de chapadas; [@fels_cognitively-based_1996]). Os tamanhos das janelas foram ajustados visualmente para que representassem as formas de relevo.
 
 #### Índice de umidade (*moisture index*) {-}
@@ -61,6 +63,7 @@ O índice de umidade (moisture index) foi calculado com base no **acúmulo de fl
 $$
 moisture.index = \frac{\log \left(fluxo+1\right)}{\left(slope+1\right)}  \times1000
 $$
+
 
 Após o cálculo do índice de umidade para cada célula, suavizamos o padrão de distribuição da rede de drenagem como a média do índice dentro de uma janela circular com uma célula de raio.
 
@@ -112,7 +115,6 @@ $$
 Z_{índice\,de\,áreas\,úmidas} =\frac {{{(Z_{local}}{\times2)}} + {Z_{regional}} + {Z_{quantidade}}}{4}
 $$
 
-
 ### Riqueza de solos {-}
 
 A riqueza de solos foi calculada como a quantidade de tipos de solos dominantes e sub-dominantes nos polígonos de solo obtidos da base do Instituto Brasileiro de Geografica e Estatística (IBGE) ([https://www.ibge.gov.br/geociencias/informacoes-ambientais/pedologia/10871-pedologia.html](https://www.ibge.gov.br/geociencias/informacoes-ambientais/pedologia/10871-pedologia.html)). Essa informação foi rasterizada e projetada na mesma resolução espacial das variáveis descritas anteriormente. Em seguida padronizamos a riqueza de solos em valores de Z utilizando a mesma metodologia descrita para as outras variáveis.
@@ -138,6 +140,7 @@ $$
 Z_{heterogeneidade\, da\,paisagem}= \frac{Z_{variedade\,de\,formas\,de\,relevo} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{3}
 $$
 
+
 Na etapa 4, nos locais onde o valor de Z da riqueza de solos foi maior que a heterogeneidade da paisagem calculada na etapa 3, os valores foram substituídos pela média ponderada das variáveis naquela localidade, com peso 2 para variedade de formas de relevo.
 
 
@@ -147,17 +150,17 @@ $$
 
 Se, na etapa 3, nas células onde o índice de áreas úmidas não foi importante, a heterogeneidade da paisagem foi calculada conforme segue:
 
-
 $$
 Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,formas\,de\,relevo}\times 2)+Z_{amplitude\,altitudinal}+Z_{riqueza\,de\,solos}}{4}
 $$
 
-Da mesma forma, em locais onde a amplitude altitudinal não foi importante, a heterogeneidade da paisagem foi calculada conforme segue:
 
+Da mesma forma, em locais onde a amplitude altitudinal não foi importante, a heterogeneidade da paisagem foi calculada conforme segue:
 
 $$
 Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,formas\,de\,relevo}\times 2)+Z_{índice\,de\,áreas\,úmidas}+Z_{riqueza\,de\,solos}}{4}
 $$
+
 
 Por fim, em locais onde apenas a variedade de formas de relevo foi importante até aqui, a heterogeneidade da paisagem foi calculada conforme segue:
 
@@ -166,5 +169,3 @@ Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,formas\,de\,relevo}
 $$
 
 ![Heterogeneidade da paisagem, calculada a partir da média hierárquica entre variedade de formas de relevo, amplitude altitudinal, índice de áreas úmidas e riqueza de solos.](figs/heterogeneity_original.png){#fig-landscape width="600" fig-align="center"}
-
-

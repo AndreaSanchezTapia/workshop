@@ -8,6 +8,7 @@ A documentação das análises para a criação das camadas de heterogeneidade d
 ### Heterogeneidade da paisagem
 
 + Documentação:
+
 [https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/apresentacao.html](https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/apresentacao.html)
 
 + JupyterNotebook:
@@ -18,12 +19,14 @@ A documentação das análises para a criação das camadas de heterogeneidade d
 ### Conectividade local
 
 + Documentação:
+
 [https://resiliencia-climatica-brasil.github.io/Resistencia/](https://resiliencia-climatica-brasil.github.io/Resistencia/)
 
 
 ### Resiliência da paisagem
 
 + Documentação: 
+
 [https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/resilience.html](https://resiliencia-climatica-brasil.github.io/diversity-resilience-python/resilience.html)
 
 + JupyterNotebook:

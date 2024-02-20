@@ -21,4 +21,3 @@ As diferentes classes criadas pela sobreposição dos quantis na escala bivariad
 * Áreas em cinza: são as áreas com menores valores de heterogeneidade da paisagem e menores valores de conectividade, indicando locais que não apresentam grande variação topográfica e, consequentemente, baixa variedade de habitats. Essas áreas também apresentam uma baixa conectividade, o que indica que esses microhabitas estão isolados ou pouco interligados.
 
 ![Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local, enfatizando o que cada quadrante da escala bivariada representa no mapa final de resiliência.](figs/resilience_def.png){#fig-res width="700" height="700" fig-align="center"}
-
