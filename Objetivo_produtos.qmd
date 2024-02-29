@@ -1,20 +1,19 @@
-# Objetivo
+# Objetivo do projeto e produtos previstos
 
-O objetivo principal do projeto é identificar **áreas resilientes às mudanças climáticas**, com maior potencial de sustentar a biodiversidade no futuro, por meio do mapeamento da **heterogeneidade microclimática** e da **conectividade local** entre  as áreas. 
+## Objetivo
 
-O objetivo principal do projeto é identificar **áreas resilientes às mudanças climáticas**, que são locais com maior potencial de sustentar a biodiversidade no futuro, por meio do mapeamento da **heterogeneidade da paisagem** e da **conectividade local** entre as áreas.
-
-## Objetivos específicos
+O objetivo principal do projeto é identificar _áreas resilientes às mudanças climáticas_, que são locais com maior potencial de manter a biodiversidade no futuro, por meio do mapeamento da heterogeneidade microclimática e da conectividade local entre  as áreas. 
 
 O objetivo geral do estudo pode ser detalhado em dois objetivos específicos:
 
--   Aplicar a metodologia de mapeamento de sítios resilientes, proposta e validada para a região da América do Norte, no Brasil, conduzindo as análises de **heterogeneidade da paisagem** e de **conectividade local **;
+-   Aplicar a metodologia de mapeamento de sítios resilientes, proposta e validada para a região da América do Norte, no Brasil, conduzindo as análises de *heterogeneidade da paisagem* e de *conectividade local*;
 
--   Refinar e adaptar a metodologia proposta, **com base em discussões com especialistas no tema que atuam na região de estudo**, produzindo um mapa de áreas resilientes para o Brasil.
+-   Refinar e adaptar a metodologia proposta, *com base em discussões com especialistas no tema que atuam na região de estudo*, produzindo um mapa de áreas resilientes para o Brasil.
+
 
 ## Produtos previstos
 
-O produto principal do projeto é um mapa de áreas resilientes para os biomas do Brasil, que permita identificar áreas com potencial de sustentar a biodiversidade em um clima sob mudanças.
+O produto principal do projeto é um mapa de áreas resilientes para os biomas do Brasil, que permita identificar áreas com potencial de manter a biodiversidade em um clima sob mudanças.
 
 Estão previstos ainda:
 
