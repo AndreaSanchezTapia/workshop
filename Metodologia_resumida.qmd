@@ -1,18 +1,18 @@
 # Metodologia resumida
 
-A metodologia proposta para identificar as áreas resilientes às mudanças climáticas envolve o mapeamento da heterogeneidade da paisagem e da conectividade local [@anderson_estimating_2014; @anderson_resilient_2016; @anderson_resilient_2016-1; @anderson_resilient_2023], que são as camadas que irão compor a resiliência da paisagem (@fig-fluxograma). Os sítios com maior resiliência possuem alto potencial de manter a biodiversidade em um cenário de mudanças climáticas e estão conectados entre si [@anderson_estimating_2014], permitindo a movimentação da biodiversidade para locais com microclimas adequados.
+A metodologia proposta para identificar áreas resilientes às mudanças climáticas envolve o mapeamento da heterogeneidade da paisagem e da conectividade local [@anderson_estimating_2014; @anderson_resilient_2016; @anderson_resilient_2016-1; @anderson_resilient_2023], que são as camadas que, combinadas, irão compor a camada de resiliência da paisagem (@fig-fluxograma). Os sítios com maior resiliência possuem alto potencial de manter a biodiversidade em um cenário de mudanças climáticas e estão conectados entre si [@anderson_estimating_2014], permitindo a movimentação da biodiversidade para locais com microclimas adequados.
 
 ![Fluxograma da análise de resiliência da paisagem, que inclui a combinação das camadas de heterogeneidade da paisagem e de conectividade local.](figs/Diagrama_metodologia.png){#fig-fluxograma width="500" fig-align="center"}
 
 
 ## Heterogeneidade da paisagem {#diversidade-da-paisagem}
 
-A heterogeneidade da paisagem se refere a uma estimativa da variabilidade microclimática. A análise de heterogeneidade da paisagem resume informações relacionadas a: (a) variedade de formas de relevo, (b) amplitude altitudinal, (c) índice de áreas úmidas e (d) riqueza de solos presentes no entorno de uma dada localidade.
+A heterogeneidade da paisagem se refere a uma estimativa da variabilidade microclimática e resume informações relacionadas a: (a) variedade de formas de relevo, (b) amplitude altitudinal, (c) índice de áreas úmidas e (d) riqueza de solos presentes no entorno de uma dada localidade.
 
 
 ### (a) Variedade de formas de relevo
 
-A variedade de formas de relevo (*landforms*) diz respeito à variedade de feições topográficas baseada em um modelo de formas de relevo. As feições foram, derivadas de um modelo digital de elevação (DEM) com resolução de 90 m, em que  a superfície foi classificada  a partir de características  tais como:
+A variedade de formas de relevo (*landforms*) diz respeito à variedade de feições topográficas baseada em um modelo de formas de relevo. As feições foram derivadas de um modelo digital de elevação (DEM) com resolução de 90 m, em que a superfície foi classificada a partir de características tais como:
 
 -   precipícios e áreas íngremes (*cliff* e *steep slope*);
 -   topos de montanha e divisores de águas (*summit/ridge-top*);
@@ -37,24 +37,19 @@ A densidade e quantidade de áreas úmidas são resumidas no índice de áreas �
 
 ### (d) Riqueza de solos
 
-Por fim, em locais com baixa variação de formas de relevo, amplitude de elevação e presença de áreas úmidas, a riqueza de solo foi usada para identificar variações na paisagem que possam sustentar a variação da biodiversidade.
+Por fim, em locais com baixa variação de formas de relevo, amplitude de elevação e presença de áreas úmidas, a riqueza de solo foi usada para identificar variações na paisagem que possam sustentar a variação da biodiversidade. Esse dado é calculado pela soma de tipos de solos dominantes e subdominantes existentes em uma determinada região.
 
 
 ## Padronização dos dados (valores de Z)
 
-Antes de calcularmos a resiliência da paisagem, as variáveis variedade de formas de relevo, amplitude de elevação, índice de áreas úmidas e riqueza de solos são convertidas para valores de Z (*Z-scores*), dentro de janelas móveis de 200 pixels de raio. Isso permite a integração de condições físicas e ambientais distintas e permite capturar variações locais na composição da biota associada. Posteriormente, os valores de Z são combinados para gerar a heterogeneidade da paisagem.
-
-
-### Combinando as variáveis para gerar a heterogeneidade da paisagem
-
-A combinação dos índices de variedade de formas de relevo, amplitude altitudinal, índice de áreas úmidas e riqueza de solos gera a camada de heterogeneidade da paisagem. Esse índice pondera a variedade de formas de relevo com peso maior, representado pelo dobro do peso das demais variáveis.
+Antes de calcularmos a resiliência da paisagem, as variáveis variedade de formas de relevo, amplitude de elevação, índice de áreas úmidas e riqueza de solos são convertidas para valores de Z (*Z-scores*), dentro de janelas móveis de 200 pixels de raio. Isso permite a integração de condições físicas e ambientais distintas e permite capturar variações locais na composição da biota associada. Posteriormente, os valores de Z são combinados para gerar a camada de heterogeneidade da paisagem. Nesse processo de combinação dos valores de Z de cada variável, na maior parte dos casos, a variedade de formas de relevo é ponderada com peso maior, representado pelo dobro do peso das demais variáveis.
 
 
 ## Conectividade local {#conectividade-local}
 
-A conectividade local é uma medida de facilitação ao deslocamento de organismos entre os tipos de uso e cobertura do solo. A conectividade é maior quanto menor for a resistência que ao deslocamento dos organismos, e representa  a permeabilidade da paisagem (ou inversamente a resistência) em torno de cada célula avaliada. 
+A conectividade local é uma medida de facilitação ao deslocamento de organismos entre os tipos de uso e cobertura do solo. Ela é maior quanto menor for a resistência ao deslocamento dos organismos e representa a permeabilidade da paisagem (ou inversamente a resistência) em torno de cada célula avaliada. 
 
-A partir de um mapa de uso e cobertura do solo, incluindo a presença de infraestruturas de transporte e de energia, foram atribuídos, pela equipe central, para cada classe pesos de resistência à movimentação de organismos, sendo os valores menores (menor resistência) atribuídos para áreas naturais e os valores maiores (maior resistência) atribuídos a áreas intensamente antropizadas (áreas urbanas), com um gradiente de valores entre um extremo e outro. Dependendo de suas características, rios podem representar barreiras ao deslocamento das espécies ao longo da paisagem, portanto, também foram atribuídos pesos distintos de resistência aos corpos d’água em função de sua largura (quanto mais largo, maior o valor de resistência). 
+A partir de um mapa de uso e cobertura do solo, incluindo a presença de infraestruturas de transporte e de energia, foram atribuídos pela equipe central, para cada classe, pesos de resistência à movimentação de organismos: os valores menores (menor resistência) foram atribuídos para áreas naturais e os valores maiores (maior resistência), atribuídos a áreas intensamente antropizadas (áreas urbanas), com um gradiente de valores entre um extremo e outro. Rios também podem representar barreiras ao deslocamento das espécies ao longo da paisagem, dependendo de suas características, e portanto também foram atribuídos pesos distintos de resistência aos corpos d’água em função de sua largura: quanto mais largo, maior o valor de resistência. 
 
 Uma vez atribuídos os valores de resistência, a conectividade local foi estimada pela média ponderada das resistências dentro uma janela móvel circular de aproximadamente 2.070 m, que representa o contexto espacial em que cada pixel está inserido. Para o cálculo da média ponderada, foi utilizada uma função de decaimento linear que reconhece que pixels mais próximos possuem maior influência do que pixels mais distantes, influenciando o valor de conectividade local de cada pixel.
 
@@ -90,9 +85,9 @@ O _output_ do Omniscape são três arquivos de conectividade relacionados:
 e controla o efeito da configuração espacial do cálculo de conectividade.
 -->
 
-## Resiliência da paisagem: combinando heterogeneidade da paisagem e conectividade local
+## Resiliência da paisagem
 
-Finalmente, a resiliência da paisagem é calculada pela sobreposição dos mapas de heterogeneidade da paisagem e conectividade local baseada no histograma de distribuição dos valores dessas métricas (@fig-resilience). Dessa forma, podemos criar um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem. Com base na escala de cor apresentada, são identificadas áreas onde a heterogeneidade da paisagem e a conectividade local são mais importantes para a resiliência da paisagem.
+Finalmente, a resiliência da paisagem é calculada pela sobreposição dos mapas de heterogeneidade da paisagem e conectividade local baseada no histograma de distribuição dos valores dessas métricas (classificados em quantis de 25%) (@fig-resilience). Dessa forma, podemos criar um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem. Com base na escala de cor apresentada, são identificadas áreas onde a heterogeneidade da paisagem e a conectividade local são mais importantes para a resiliência da paisagem.
 
 
 ![Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local.](figs/resilience_def.png){#fig-resilience width="500" fig-align="center"}
