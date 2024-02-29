@@ -2,7 +2,7 @@
 # Modelo conceitual e premissas {#sec-modelo_conceitual}
 
 
-![Modelo conceitual para o mapeamento das áreas resilientes às mudanças climáticas.](figs/conceito.png){#conceito fig-align="center"}
+![Modelo conceitual para o mapeamento das áreas resilientes às mudanças climáticas utilizado no projeto.](figs/conceito.png){#conceito fig-align="center"}
 
 
 ## Premissas
@@ -27,3 +27,4 @@ Premissas complementares:
 4 - A alta conectividade local da paisagem permite maior mobilidade de organismos de forma geral na busca de refúgios microclimáticos.
 
 5 - Locais com alta heterogeneidade da paisagem e alta conectividade local são mais resilientes às mudanças climáticas por potencialmente permitirem maior movimentação dos organismos em diferentes condições climáticas.
+
