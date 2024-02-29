@@ -2,20 +2,23 @@
 
 ## Atividades realizadas
 
-As atividades do projeto foram divididas em duas etapas: a primeira envolveu a aplicação da metodologia de mapeamento de diversidade da paisagem, conectividade local e resiliência da paisagem; e a segunda etapa correspondeu ao refinamento e adaptação da metodologia para o contexto dos biomas brasileiros, a partir de discussões com especialistas.
+As atividades do projeto foram divididas em duas etapas:
 
-A partir da metodologia proposta, foram realizadas reuniões internas com a equipe e workshops com especialistas nas temáticas do projeto e com experiência nos biomas do Brasil para apresentação e discussão da metodologia e sugestão de soluções para potenciais limitações do projeto. O processo consistiu, portanto, na aplicação da abordagem desenvolvida, análise dos métodos, avaliação, complementação e validação dos resultados, e geração de mapas de áreas resilientes e conectadas nos biomas brasileiros.
++ a primeira envolveu a aplicação da metodologia de mapeamento de diversidade da paisagem, conectividade local e resiliência da paisagem;
++ e a segunda etapa correspondeu ao refinamento e adaptação da metodologia para o contexto dos biomas brasileiros, a partir de discussões com especialistas.
+
+A partir da metodologia proposta, foram realizadas reuniões internas com a equipe e oficinas com especialistas nas temáticas do projeto e com experiência nos biomas do Brasil para apresentação e discussão da metodologia e sugestão de soluções para potenciais limitações do projeto. O processo consistiu, portanto, na aplicação da abordagem desenvolvida, análise dos métodos, avaliação, complementação e validação dos resultados, e geração de mapas de áreas resilientes e conectadas nos biomas brasileiros.
 
 
 ## Planejamento das oficinas
 
-As oficinas realizadas durante o projeto tiveram como objetivo discutir a metodologia proposta e sugerir adequações (metodológicas e de bases de dados) às características dos ecossistemas e particularidades dos biomas brasileiros. A exequibilidade das sugestões posteriormente foi avaliada internamente sob as condições limitantes de recurso e tempo de conclusão do projeto.
+As oficinas realizadas durante o projeto tiveram como objetivo discutir a metodologia proposta e sugerir adequações (metodológicas e de bases de dados) às características dos ecossistemas e particularidades dos biomas brasileiros. A exequibilidade das sugestões foi posteriormente avaliada internamente sob as condições limitantes de recurso e tempo de conclusão do projeto.
 
 |Oficina|Data prevista|Modalidade|Pontos discutidos|
 |:--|:--|:--|:--|
 |Oficina #1| 13/06 e 15/06/23|Virtual|Introdução geral do projeto; apresentação das análises e dos resultados preliminares; momento de perguntas e respostas|
 |Oficina #2| 10/10 e 19/10/23|Virtual|Devolutiva da Oficina #1 e apresentação do refinamento das análises, conforme ajustes feitos após discussões na Oficina #1|
-|Oficina #3|22/02/24|Virtual| Apresentação e discussão dos resultados finais obtidos após Oficina #2|
+|Oficina #3|22/02/24|Virtual| Apresentação e discussão dos resultados finais obtidos após Oficina #2 e aplicações potenciais do estudo|
 
 
 
