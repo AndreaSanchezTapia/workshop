@@ -1,4 +1,4 @@
-# Objetivo do projeto e produtos previstos
+# Objetivo do projeto e produtos gerados
 
 ## Objetivo
 
@@ -11,14 +11,14 @@ O objetivo geral do estudo pode ser detalhado em dois objetivos específicos:
 -   Refinar e adaptar a metodologia proposta, *com base em discussões com especialistas no tema que atuam na região de estudo*, produzindo um mapa de áreas resilientes para o Brasil.
 
 
-## Produtos previstos
+## Produtos gerados
 
-O produto principal do projeto é um mapa de áreas resilientes para os biomas do Brasil, que permita identificar áreas com potencial de manter a biodiversidade em um clima sob mudanças.
+O produto principal do projeto é um mapa de áreas resilientes para os biomas do Brasil, que permite identificar áreas com potencial de manter a biodiversidade em um clima sob mudanças.
 
-Estão previstos ainda:
+Foram gerados ainda:
 
 -   Relatório técnico, em português, descrevendo o projeto e a metodologia utilizada;
 
 -   Tutorial das análises, incluindo a disponibilização dos códigos e permitindo a reprodutividade das análises;
 
--   Elaboração de um artigo científico a ser submetido a uma revista científica internacional.
+-   Artigo científico a ser submetido a uma revista científica internacional.
