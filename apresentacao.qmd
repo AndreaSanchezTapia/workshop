@@ -1,6 +1,6 @@
 # Apresentação
 
-O projeto *Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros* é coordenado pela *The Nature Conservancy* Brasil e executado por diversas instituições de pesquisa localizadas em cada um dos biomas do Brasil:
+O projeto **Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros** foi coordenado pela *The Nature Conservancy* Brasil e executado por diversas instituições de pesquisa localizadas em cada um dos biomas do Brasil:
 
 + Na Amazônia, Museu Paraense Emílio Goeldi (MPEG);
 + Na Caatinga, Universidade Federal do Rio Grande do Norte (UFRN);
@@ -8,6 +8,8 @@ O projeto *Mapeamento de áreas resilientes a mudanças climáticas nos biomas b
 + Na Mata Atlântica, Universidade Federal do ABC (UFABC);
 + No Pantanal, Universidade Federal do Mato Grosso do Sul (UFMS);
 + E no Pampa, *The Nature Conservancy* Brasil.
+
+O projeto teve duração de 18 meses, com início em julho de 2022 e conclusão em dezembro de 2023, e contou com o envolvimento de diferentes pesquisadoras e pesquisadores de diversas regiões do Brasil. A equipe envolvida na elaboração do estudo está indicada abaixo.
 
 
 ## Equipe *The Nature Conservancy* Brasil
