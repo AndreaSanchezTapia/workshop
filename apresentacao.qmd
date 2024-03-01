@@ -1,12 +1,21 @@
 # Apresentação
 
-O projeto *Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros* é coordenado pela *The Nature Conservancy Brasil* e executado por diversas instituições de pesquisa localizadas em cada um dos biomas do Brasil: na Amazônia, Museu Paraense Emílio Goeldi (MPEG); na Caatinga, Universidade Federal do Rio Grande do Norte (UFRN); no Cerrado,  Universidade Federal do Jataí (UFJ); na Mata Atlântica, Universidade Federal do ABC (UFABC); no Pantanal, Universidade Federal do Mato Grosso do Sul (UFMS); e no Pampa, *The Nature Conservancy Brasil*.
+O projeto **Mapeamento de áreas resilientes a mudanças climáticas nos biomas brasileiros** foi coordenado pela *The Nature Conservancy* Brasil e executado por diversas instituições de pesquisa localizadas em cada um dos biomas do Brasil:
+
++ Na Amazônia, Museu Paraense Emílio Goeldi (MPEG);
++ Na Caatinga, Universidade Federal do Rio Grande do Norte (UFRN);
++ No Cerrado,  Universidade Federal do Jataí (UFJ);
++ Na Mata Atlântica, Universidade Federal do ABC (UFABC);
++ No Pantanal, Universidade Federal do Mato Grosso do Sul (UFMS);
++ E no Pampa, *The Nature Conservancy* Brasil.
+
+O projeto teve duração de 18 meses, com início em julho de 2022 e conclusão em dezembro de 2023, e contou com o envolvimento de diferentes pesquisadoras e pesquisadores de diversas regiões do Brasil. A equipe envolvida na elaboração do estudo está indicada abaixo.
 
 
-## Equipe *The Nature Conservancy Brasil*
+## Equipe *The Nature Conservancy* Brasil
 | Nome | Atuação | Lattes |
 |--|--|--|
-|Edenise Garcia|Diretora de ciências|[http://lattes.cnpq.br/6575206025031796](http://lattes.cnpq.br/6575206025031796)|
+|Edenise Garcia|Coordenadora geral|[http://lattes.cnpq.br/6575206025031796](http://lattes.cnpq.br/6575206025031796)|
 |Milena Rosenfield|Coordenadora técnica|[http://lattes.cnpq.br/8181631357765054](http://lattes.cnpq.br/8181631357765054)|
 |Mário Barroso|Especialista em  SIG|[http://lattes.cnpq.br/7182178358444899](http://lattes.cnpq.br/7182178358444899)|
 |José Fronza|Especialista em SIG e dados|[http://lattes.cnpq.br/1205403331686811](http://lattes.cnpq.br/1205403331686811)|
@@ -29,7 +38,6 @@ O projeto *Mapeamento de áreas resilientes a mudanças climáticas nos biomas b
 |--|--|--|--|--|
 |Amazônia|Cintia Cornelius Frische|UFAM|Manaus|AM|
 |Amazônia|Fernanda Werneck|INPA|Manaus|AM|
-|Amazônia|Flávia Costa|INPA|Manaus|AM|
 |Amazônia|Ima Vieira	|Museu Goeldi	|Belém|PA|
 |Amazônia|Marcos Adami|INPE|São José dos Campos|SP|
 |Caatinga|Adrian Garda|UFRN|Natal|RN|

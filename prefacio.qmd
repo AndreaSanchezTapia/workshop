@@ -1,1 +1,11 @@
 # Prefácio {.unnumbered}
+
+<!--
+
+[incluir um contexto inicial sobre o projeto]
+
+A equipe do projeto gostaria de agradecer à equipe do *Center for Resilient Conservation Science* da *The Nature Conservancy*, especialmente a Mark Anderson, Melissa Clark e Arlene Olivero pelo auxílio, discussões e esclarecimentos metodológicos.
+
+Um agradecimento especial à equipe de especialistas que participaram das oficinas do projeto e que contribuíram para o refinamento das análises, discussões teóricas e apresentação dos resultados.
+
+-->
