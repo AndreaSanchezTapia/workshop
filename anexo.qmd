@@ -2,7 +2,7 @@
 
 ## Contexto geral
 
-Para a camada de conectividade local, uma opção alternativa ao filtro kernel testada foi a análise de conectividade baseada em teoria de circuitos (McRae 2006), utilizando a implementação de Omniscape para Julia (Landau et al. 2021, Hall et al. 2021). Em virtude de algumas limitações computacionais dessa análise e de alguns padrões encontrados nos resultados, decidimos seguir com a análise original, utilizando o filtro kernel (descritoa no capítulo de conectividade local). Entretanto, como compartilhamento de informações, apresentamos aqui a metodologia da análise utilizada e o mapa final obtido para o Brasil.
+Para a camada de conectividade local, uma opção alternativa ao filtro kernel testada foi a análise de conectividade baseada em teoria de circuitos [@mcrae_isolation_2006], utilizando a implementação de Omniscape para Julia [@landau_omniscapejl_2021, @hall_circuitscape_2021]. Em virtude de algumas limitações computacionais dessa análise e de alguns padrões encontrados nos resultados, decidimos seguir com a análise original, utilizando o filtro kernel (descritoa no capítulo de conectividade local). Entretanto, como compartilhamento de informações, apresentamos aqui a metodologia da análise utilizada e o mapa final obtido para o Brasil.
 
 ## Códigos e bases de dados
 
@@ -16,7 +16,7 @@ Devido ao alto custo computacional a análise foi rodada em partes menores (tile
 
 ## Base de dados
 
-A base de dados para gerar a análise é a camada de resistência para as classes de uso e cobertura do solo tendo como base o Mapbiomas Coleção 8. A descrição dessa camada está apresentada no item de Conectividade local (@sec-conectividade_local).
+A base de dados para gerar a análise é a camada de resistência para as classes de uso e cobertura do solo tendo como base o @mapbiomas_project_collection_2020. A descrição dessa camada está apresentada no item de Conectividade local (@sec-conectividade_local).
 
 ## Metodologia
 

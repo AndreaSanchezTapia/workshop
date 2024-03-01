@@ -1,6 +1,6 @@
 # Metodologia resumida
 
-A metodologia proposta para identificar as áreas resilientes às mudanças climáticas envolve o mapeamento da heterogeneidade da paisagem e da conectividade local [@anderson_estimating_2014; @anderson_resilient_2016; @anderson_resilient_2016-1; @anderson_resilient_2023], que são as camadas que irão compor a resiliência da paisagem (@fig-fluxograma). Os sítios com maior resiliência possuem alto potencial de manter a biodiversidade em um cenário de mudanças climáticas e estão conectados entre si [@anderson_estimating_2014], permitindo a movimentação da biodiversidade para locais com microclimas adequados.
+A metodologia proposta para identificar as áreas resilientes às mudanças climáticas envolve o mapeamento da heterogeneidade da paisagem e da conectividade local [@anderson_estimating_2014; @anderson_resilient_2016; @anderson_resilient_2023], que são as camadas que irão compor a resiliência da paisagem (@fig-fluxograma). Os sítios com maior resiliência possuem alto potencial de manter a biodiversidade em um cenário de mudanças climáticas e estão conectados entre si [@anderson_estimating_2014], permitindo a movimentação da biodiversidade para locais com microclimas adequados.
 
 ![Fluxograma da análise de resiliência da paisagem, que inclui a combinação das camadas de heterogeneidade da paisagem e de conectividade local.](figs/Diagrama_metodologia.png){#fig-fluxograma width="500" fig-align="center"}
 

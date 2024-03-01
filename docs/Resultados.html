@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -412,7 +431,7 @@ A heterogeneidade da paisagem foi calculada utilizando diferentes conjuntos de v
 <li><p>No Cerrado, as regiões norte, leste e oeste possuem altos valores de conectividade. As áreas mais conectadas ao norte abrangem, por exemplo, a região de Floresta de Cocais (Maranhão), e porções ao norte da bacia Araguaia-Tocantins. A oeste, as regiões do Bananal e uma parte da Chapada dos Parecis apresentam áreas de alta conectividade. A leste, as áreas de conectividade mais acentuada ocorrem na Depressão do São Francisco (Bahia). Por outro lado, na Chapada do Rio São Francisco, há baixa conectividade nas áreas de agricultura. Nas porções central e sul do bioma concentram-se as áreas com baixa conectividade, sendo as menos conectadas aquelas próximas a grandes centros urbanos como Goiânia, Campo Grande e Brasília. Baixa conectividade é observada também em extensa região no sul do Mato Grosso do Sul e na região de Basaltos do Paraná. Ainda assim, a maior parte da região menos conectada está entremeada de áreas de alta e média conectividade (<a href="#fig-biomas-CE">Figura&nbsp;<span>14.3</span></a> B, <a href="#fig-conectividade-bioma">Figura&nbsp;<span>14.13</span></a>);</p></li>
 <li><p>Na Mata Atlântica, a conectividade local é espacialmente agregada, com regiões de alta conectividade local nas porções de relevo mais acidentado nas serras e próximas ao litoral entre Santa Catarina e sul do Rio de Janeiro e Norte do Espírito Santo até Alagoas, chegando a avançar mais para o interior nos estados de Santa Catarina e Paraná. Extensas áreas de baixa conectividade se estendem pela região do bioma localizada no centro e oeste de São Paulo e Paraná, oeste de Santa Catarina, Rio Grande do Sul e leste de Mato Grosso do Sul. Outra extensa área de conectividade baixa/moderada ocorre paralelo à costa desde o Rio de Janeiro até o norte da Bahia e entre Sergipe e Rio Grande do Norte. Estas últimas dão lugar a áreas novamente com maior conectividade nas divisas com o Cerrado e a Caatinga nos estados de Minas Gerais e Bahia (<a href="#fig-biomas-AT">Figura&nbsp;<span>14.4</span></a> B, <a href="#fig-conectividade-bioma">Figura&nbsp;<span>14.13</span></a>). As áreas de menor conectividade, principalmente localizadas na maior extensão longitudinal do bioma, correspondem a grandes ocupações urbanas nos estados de São Paulo e Rio de Janeiro, áreas de maior densidade populacional do Brasil (<a href="#fig-biomas-AT">Figura&nbsp;<span>14.4</span></a> B, <a href="#fig-conectividade-bioma">Figura&nbsp;<span>14.13</span></a>);</p></li>
 <li><p>No Pampa, as localidades com alta conectividade local estão localizadas na Serra do Sudeste, na Campanha (nas proximidades com a APA do Ibirapuitã) e na região das Missões (Figura 20 B, Figura 27), bem como em alguns trechos do Litoral. Em contraste, os locais com menor conectividade estão localizados próximo aos principais centros urbanos, como é o caso de Porto Alegre e região metropolitana, assim como nas proximidades com grandes rodovias (ex. ao longo da BR-116 e BR-287);</p></li>
-<li><p>No Pantanal, a conectividade local é, de modo geral, alta na maior parte do bioma. Considerando os limites da Bacia do Alto Paraguai, a conectividade vai reduzindo em direção à borda leste e sul coincidindo com a divisa com o Cerrado e em direção à borda norte, coincidindo com a divisa com a Amazônia. Essas bordas fazem parte justamente do recém identificado “arco da conversão da vegetação nativa do Pantanal” (Guerra et al.&nbsp;2020), similar ao que ocorre no arco do desmatamento da Amazônia, em função do avanço da agropecuária. Ademais, também nota-se a diminuição dos valores de conectividade no Pantanal do Taquari, por ser uma região inundada o ano todo, e nas áreas próximas à Serra do Amolar, aos municípios de Corumbá e Ladário do MS e próximos à lagoa de Uberaba no MT (com área aproximada de 160 km2) (<a href="#fig-biomas-PM">Figura&nbsp;<span>14.5</span></a> B, <a href="#fig-conectividade-bioma">Figura&nbsp;<span>14.13</span></a>). Além dos avanços mencionados da agropecuária, são evidentes várias regiões de menor conectividade dispersas no Pantanal, sendo em sua grande maioria regiões de pastagens, ocorrendo esse padrão principalmente nas regiões do Paiaguás, Nhecolândia e Baixo Barão do Melgaço.</p></li>
+<li><p>No Pantanal, a conectividade local é, de modo geral, alta na maior parte do bioma. Considerando os limites da Bacia do Alto Paraguai, a conectividade vai reduzindo em direção à borda leste e sul coincidindo com a divisa com o Cerrado e em direção à borda norte, coincidindo com a divisa com a Amazônia. Essas bordas fazem parte justamente do recém identificado “arco da conversão da vegetação nativa do Pantanal” <span class="citation" data-cites="guerra_drivers_2020">(<a href="references.html#ref-guerra_drivers_2020" role="doc-biblioref">Guerra et al., 2020</a>)</span>, similar ao que ocorre no arco do desmatamento da Amazônia, em função do avanço da agropecuária. Ademais, também nota-se a diminuição dos valores de conectividade no Pantanal do Taquari, por ser uma região inundada o ano todo, e nas áreas próximas à Serra do Amolar, aos municípios de Corumbá e Ladário do MS e próximos à lagoa de Uberaba no MT (com área aproximada de 160 km2) (<a href="#fig-biomas-PM">Figura&nbsp;<span>14.5</span></a> B, <a href="#fig-conectividade-bioma">Figura&nbsp;<span>14.13</span></a>). Além dos avanços mencionados da agropecuária, são evidentes várias regiões de menor conectividade dispersas no Pantanal, sendo em sua grande maioria regiões de pastagens, ocorrendo esse padrão principalmente nas regiões do Paiaguás, Nhecolândia e Baixo Barão do Melgaço.</p></li>
 </ul>
 <div id="fig-conectividade-bioma" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -456,6 +475,11 @@ A heterogeneidade da paisagem foi calculada utilizando diferentes conjuntos de v
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-guerra_drivers_2020" class="csl-entry" role="listitem">
+Guerra, A., Roque, F. D. O., Garcia, L. C., Ochoa-Quintero, J. M., Oliveira, P. T. S. D., Guariento, R. D., &amp; Rosa, I. M. D. (2020). Drivers and projections of vegetation loss in the <span>Pantanal</span> and surrounding ecosystems. <em>Land Use Policy</em>, <em>91</em>, 104388. <a href="https://doi.org/10.1016/j.landusepol.2019.104388">https://doi.org/10.1016/j.landusepol.2019.104388</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

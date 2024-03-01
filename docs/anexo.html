@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -299,7 +318,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="contexto-geral" class="level2" data-number="17.1">
 <h2 data-number="17.1" class="anchored" data-anchor-id="contexto-geral"><span class="header-section-number">17.1</span> Contexto geral</h2>
-<p>Para a camada de conectividade local, uma opção alternativa ao filtro kernel testada foi a análise de conectividade baseada em teoria de circuitos (McRae 2006), utilizando a implementação de Omniscape para Julia (Landau et al.&nbsp;2021, Hall et al.&nbsp;2021). Em virtude de algumas limitações computacionais dessa análise e de alguns padrões encontrados nos resultados, decidimos seguir com a análise original, utilizando o filtro kernel (descritoa no capítulo de conectividade local). Entretanto, como compartilhamento de informações, apresentamos aqui a metodologia da análise utilizada e o mapa final obtido para o Brasil.</p>
+<p>Para a camada de conectividade local, uma opção alternativa ao filtro kernel testada foi a análise de conectividade baseada em teoria de circuitos <span class="citation" data-cites="mcrae_isolation_2006">(<a href="references.html#ref-mcrae_isolation_2006" role="doc-biblioref">McRae, 2006</a>)</span>, utilizando a implementação de Omniscape para Julia <span class="citation" data-cites="landau_omniscapejl_2021">Hall et al. (<a href="references.html#ref-hall_circuitscape_2021" role="doc-biblioref">2021</a>)</span>. Em virtude de algumas limitações computacionais dessa análise e de alguns padrões encontrados nos resultados, decidimos seguir com a análise original, utilizando o filtro kernel (descritoa no capítulo de conectividade local). Entretanto, como compartilhamento de informações, apresentamos aqui a metodologia da análise utilizada e o mapa final obtido para o Brasil.</p>
 </section>
 <section id="códigos-e-bases-de-dados" class="level2" data-number="17.2">
 <h2 data-number="17.2" class="anchored" data-anchor-id="códigos-e-bases-de-dados"><span class="header-section-number">17.2</span> Códigos e bases de dados</h2>
@@ -311,7 +330,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="base-de-dados" class="level2" data-number="17.3">
 <h2 data-number="17.3" class="anchored" data-anchor-id="base-de-dados"><span class="header-section-number">17.3</span> Base de dados</h2>
-<p>A base de dados para gerar a análise é a camada de resistência para as classes de uso e cobertura do solo tendo como base o Mapbiomas Coleção 8. A descrição dessa camada está apresentada no item de Conectividade local (<a href="Conectividade_local.html"><span>Capítulo&nbsp;12</span></a>).</p>
+<p>A base de dados para gerar a análise é a camada de resistência para as classes de uso e cobertura do solo tendo como base o <span class="citation" data-cites="mapbiomas_project_collection_2020">MapBiomas Project (<a href="references.html#ref-mapbiomas_project_collection_2020" role="doc-biblioref">2023</a>)</span>. A descrição dessa camada está apresentada no item de Conectividade local (<a href="Conectividade_local.html"><span>Capítulo&nbsp;12</span></a>).</p>
 </section>
 <section id="metodologia" class="level2" data-number="17.4">
 <h2 data-number="17.4" class="anchored" data-anchor-id="metodologia"><span class="header-section-number">17.4</span> Metodologia</h2>
@@ -334,6 +353,20 @@ ul.task-list li input[type="checkbox"] {
 <p>Percebe-se que há um acúmulo de corrente próximo às regiões de alta resistência. Esse efeito é observado nas bordas do raster e é mais acentuado em ilhas. Esse resultado é esperado pelo método e pelos valores de resistência atribuídos, mas há divergências sobre sua explicação biológica e aplicabilidade para o nosso estudo. Além disso, um acúmulo de fluxo importante também é visualizado no limite com o oceano, o qual representa uma barreira para o deslocamento dos organismos e faz com que a conectividade seja mais baixa nesses locais. Uma limitação encontrada no nosso estudo foi com relação ao padrão observado no limite político continental do Brasil. Uma vez que o nosso mapeamento se concentrou dentro dos limites do Brasil, os países vizinhos não foram mapeados. Isso fez com que os limites do país (tanto o continental, quanto o oceânico) representassem uma barreira intransponível, com consequências para o fluxo de conectividade. Uma complementação importante para a nossa análise, seria a inclusão de uma faixa de borda no limite continental, contemplando diferentes usos e coberturas do solo dos países que fazem fronteira com o Brasil. Esse mapeamento está disponível pelas iniciativas do Mapbiomas, mas não houve tempo hábil para a implementação durante a execução do presente projeto. Para obtermos uma superfície de conectividade adequada para o Brasil, seria necessário o cálculo considerando o efeito de borda discutido acima de pelo menos 5 vezes o raio do Omniscape para dentro do continente, utilizando uma superfície de resistência dessa dimensão como um buffer. Apesar das desvantagens mencionadas, esse método realça corredores de acúmulo de corrente, especialmente ao atravessar obstáculos mais resistentes ao movimento como é o caso dos cursos d’água, onde a corrente acaba se concentrando em áreas de menor largura dos rios. Diferente do método de kernel, que mede a resistência média na paisagem, o Omniscape modela os corredores disponíveis dada a estrutura espacial dos elementos da paisagem. Numericamente, a conectividade pelo Omniscape fica mais contrastante entre as diferentes resistências em comparação ao kernel. Esse efeito é relevante na detecção de corredores e é mais aparente em regiões mais fragmentadas, como é o caso da Mata Atlântica, em que a conectividade fica mais concentrada pelo método do Omniscape e dispersa pelo kernel. Avaliamos também o uso do kernel como entrada para o Omniscape. Entretanto, os resultados da análise com kernel diluíram muito corredores e passagens menores, por conta da natureza de suavização da superfície de resistência pelo kernel. Por esse motivo, essa abordagem foi descartada. Uma grande limitação da análise Omniscape é a alta demanda de memória RAM , apesar dos esforços recentes para aumentar a sua eficiência computacional e paralelização dos processos. O raster de resistência do Brasil foi fragmentado em 9 partes (tiles) e a análise foi rodada em um computador com 1 Terabyte (1024 Gigabytes) de memória RAM e 54 threads, onde o processamento de cada tile durou de 20 a 24h, totalizando 8-9 dias.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-hall_circuitscape_2021" class="csl-entry" role="listitem">
+Hall, K. R., Anantharaman, R., Landau, V. A., Clark, M., Dickson, B. G., Jones, A., Platt, J., Edelman, A., &amp; Shah, V. B. (2021). Circuitscape in <span>Julia</span>: <span>Empowering</span> <span>Dynamic</span> <span>Approaches</span> to <span>Connectivity</span> <span>Assessment</span>. <em>Land</em>, <em>10</em>(3), 301. <a href="https://doi.org/10.3390/land10030301">https://doi.org/10.3390/land10030301</a>
+</div>
+<div id="ref-landau_omniscapejl_2021" class="csl-entry" role="listitem">
+Landau, V., Shah, V., Anantharaman, R., &amp; Hall, K. (2021). Omniscape.jl: <span>Software</span> to compute omnidirectional landscape connectivity. <em>Journal of Open Source Software</em>, <em>6</em>(57), 2829. <a href="https://doi.org/10.21105/joss.02829">https://doi.org/10.21105/joss.02829</a>
+</div>
+<div id="ref-mapbiomas_project_collection_2020" class="csl-entry" role="listitem">
+MapBiomas Project. (2023). <em>Collection 8 of the <span>Annual</span> <span>Series</span> of <span>Land</span> <span>Use</span> and <span>Land</span> <span>Cover</span> <span>Maps</span> of <span>Brazil</span></em>. <a href="https://projects/mapbiomas-workspace/public/collection8/mapbiomas_collection80_integration_v1">projects/mapbiomas-workspace/public/collection8/mapbiomas_collection80_integration_v1</a>
+</div>
+<div id="ref-mcrae_isolation_2006" class="csl-entry" role="listitem">
+McRae, B. H. (2006). Isolation by resistance. <em>Evolution</em>, <em>60</em>(8), 1551–1561.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
