@@ -11,6 +11,8 @@ Com a sobreposição das duas imagens classificadas por quartis, geramos uma com
 
 ![Definição das classes de resiliência da paisagem, baseada no histograma de distribuição de pixels nas imagens originais de heterogeneidade da paisagem e de conectividade local.](figs/resilience_classes.png){#fig-histograma width="500" fig-align="center"}
 
+<!-- 2024-03-01 @LUCIANO, por favor revisar o parágrafo abaixo sobre a máscara da camada de água -->
+Importante mencionar que a avaliação da resiliência da paisagem foi realizada apenas para ambientes terrestres, não sendo avaliada a resiliência de ambientes aquáticos. Portanto, para gerar o mapa final de resiliência os corpos d'água e outros ecossistemas aquáticos foram mascarados do resultado final, não sendo classificados portanto como nenhuma classe de resiliência da paisagem. Esse procedimento foi realizado através da sobreposição das classes de água do MapBiomas Água, indicando os corpos d'água como *no data*.
 
 A partir da combinação dessas imagens, geramos um mapa bivariado da resiliência da paisagem (@fig-resilience), que destaca, em verde, as áreas com maior resiliência da paisagem, *i.e.* que apresentam maiores valores de heterogeneidade da paisagem e de conectividade local, e que consequentemente apresentam maior variabilidade microclimática e maior potencial para movimentação aos organismos na paisagem.
 
