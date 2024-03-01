@@ -170,7 +170,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Objetivo_produtos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Objetivo</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Objetivo do projeto e produtos gerados</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -218,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Conectividade_local.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Análise de conectividade local</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Conectividade local</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -285,38 +285,41 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>A resiliência da paisagem é a capacidade de um determinado local em manter a diversidade de espécies e as funções ecossistêmicas mesmo diante das pressões provocadas pelas mudanças climáticas. Para calcular a resiliência da paisagem, utilizamos a camada de heterogeneidade da paisagem e de conectividade local (<a href="#fig-classes">Figura&nbsp;<span>13.1</span></a>) descritas anteriormente. A partir delas, classificamos as imagens em quartis baseados no histograma de distribuição dos valores dessas métricas (<a href="#fig-histograma">Figura&nbsp;<span>13.2</span></a>).</p>
+<p>A resiliência da paisagem é a capacidade de um determinado local em manter a diversidade de espécies e as funções ecossistêmicas mesmo diante das pressões provocadas pelas mudanças climáticas. Para calcular a resiliência da paisagem, utilizamos a camada de heterogeneidade da paisagem e de conectividade local (<a href="#fig-classes">Figura&nbsp;<span>13.1</span></a>) descritas anteriormente.</p>
+<p>A partir dessas duas camadas, classificamos as imagens em quartis baseados no histograma de distribuição dos valores dessas métricas (<a href="#fig-histograma">Figura&nbsp;<span>13.2</span></a>).</p>
 <div id="fig-classes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/classes_het_con.png" class="img-fluid figure-img" width="700"></p>
-<figcaption class="figure-caption">Figura&nbsp;13.1: Classificação do histograma de valores dos pixels em quantis de 25% para a camada de (A) heterogeneidade da paisagem e (B) conectividade local.</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;13.1: Classificação do histograma de valores dos pixels em quantis de 25% para a camada de heterogeneidade da paisagem e de conectividade local.</figcaption>
 </figure>
 </div>
-<p>Com a sobreposição das duas imagens classificadas por quantis, geramos um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem, baseado na escala de cor escolhida (<a href="#fig-histograma">Figura&nbsp;<span>13.2</span></a>).</p>
+<p>Com a sobreposição das duas imagens classificadas por quartis, geramos uma combinação de classes (11 - 44) para a resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem, baseado na escala de cor escolhida (<a href="#fig-histograma">Figura&nbsp;<span>13.2</span></a>). Essas classes podem ser agrupadas em quadrantres (Q1, Q2, Q3 e Q4) indicando tanto menor (Q1) e maior (Q4) resiliência, quanto maior efeito das camadas de heterogeneidade da paisagem (Q2) e de conectividade local (Q3) isoladamente.</p>
 <div id="fig-histograma" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/resilience_classes.png" class="img-fluid figure-img" width="500"></p>
-<figcaption class="figure-caption">Figura&nbsp;13.2: Definição das classes de resiliência da paisagem, baseada no histograma de distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local.</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;13.2: Definição das classes de resiliência da paisagem, baseada no histograma de distribuição de pixels nas imagens originais de heterogeneidade da paisagem e de conectividade local.</figcaption>
 </figure>
 </div>
-<p>Com a sobreposição das duas imagens classificadas por quartis, geramos um mapa bivariado da resiliência da paisagem, que tem como objetivo mostrar as áreas onde os resultados das duas métricas se sobrepõem ou divergem, baseado na escala de cores (<a href="#fig-resilience">Figura&nbsp;<span>13.3</span></a>). Esse mapa bivariado destaca, em verde, as áreas com maior heterogeneidade e bem conectadas na paisagem, que, consequentemente, apresentam maior variabilidade microclimática e possibilitam maior potencial para movimentação aos organismos.</p>
+<!-- 2024-03-01 @LUCIANO, por favor revisar o parágrafo abaixo sobre a máscara da camada de água -->
+<p>Importante mencionar que a avaliação da resiliência da paisagem foi realizada apenas para ambientes terrestres, não sendo avaliada a resiliência de ambientes aquáticos. Portanto, para gerar o mapa final de resiliência os corpos d’água e outros ecossistemas aquáticos foram mascarados do resultado final, não sendo classificados portanto como nenhuma classe de resiliência da paisagem. Esse procedimento foi realizado através da sobreposição das classes de água do MapBiomas Água, indicando os corpos d’água como <em>no data</em>.</p>
+<p>A partir da combinação dessas imagens, geramos um mapa bivariado da resiliência da paisagem (<a href="#fig-resilience">Figura&nbsp;<span>13.3</span></a>), que destaca, em verde, as áreas com maior resiliência da paisagem, <em>i.e.</em> que apresentam maiores valores de heterogeneidade da paisagem e de conectividade local, e que consequentemente apresentam maior variabilidade microclimática e maior potencial para movimentação aos organismos na paisagem.</p>
 <div id="fig-resilience" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/Resilience_bivariate.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figura&nbsp;13.3: Resiliência da paisagem, resultante do cruzamento dos mapas de heterogeneidade da paisagem e conectividade local.</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;13.3: Resiliência da paisagem, resultante do cruzamento dos mapas de heterogeneidade da paisagem e de conectividade local.</figcaption>
 </figure>
 </div>
-<p>As diferentes classes criadas pela sobreposição dos quantis na escala bivariada da resiliência da paisagem, nos permite identificar diferentes áreas de interesse (Figura 15):</p>
+<p>As diferentes classes criadas pela sobreposição dos quartis na escala bivariada da resiliência da paisagem nos permite identificar diferentes áreas de interesse (Figura 15):</p>
 <ul>
 <li>Áreas em verde: são aquelas que apresentam os maiores valores para as duas métricas, ou seja, possuem alta conectividade local e alta heterogeneidade da paisagem. Isso sugere que essas áreas são particularmente resilientes, pois apresentam alto potencial de manter a diversidade de espécies e funções ecossistêmicas, mesmo diante das mudanças climáticas;</li>
 <li>Áreas em amarelo: apresentam um alto grau de conectividade local, indicando que os elementos do ecossistema estão bem interligados nessas regiões. No entanto, essas áreas exibem baixa heterogeneidade da paisagem, sugerindo que a variação topográfica da paisagem é limitada;</li>
 <li>Áreas em azul: possuem alta heterogeneidade da paisagem, o que significa que há uma grande variedade de tipos de habitats ou características na paisagem. No entanto, a conectividade local é baixa, o que indica que os elementos do ecossistema podem estar isolados ou menos interligados;</li>
-<li>Áreas em cinza: são as áreas com menores valores de heterogeneidade da paisagem e menores valores de conectividade, indicando locais que não apresentam grande variação topográfica e, consequentemente, baixa variedade de habitats. Essas áreas também apresentam uma baixa conectividade, o que indica que esses microhabitas estão isolados ou pouco interligados.</li>
+<li>Áreas em cinza: são as áreas com menores valores de heterogeneidade da paisagem e menores valores de conectividade, indicando locais que apresentam pouca variação topográfica e, consequentemente, baixa variedade de habitats. Essas áreas também apresentam uma baixa conectividade, o que indica que esses microhabitas estão isolados ou pouco interligados.</li>
 </ul>
 <div id="fig-res" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figs/resilience_def.png" width="700" height="700" class="figure-img"></p>
-<figcaption class="figure-caption">Figura&nbsp;13.4: Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e conectividade local, enfatizando o que cada quadrante da escala bivariada representa no mapa final de resiliência.</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;13.4: Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e de conectividade local, enfatizando o que cada quadrante da escala bivariada representa no mapa final de resiliência.</figcaption>
 </figure>
 </div>
 
@@ -559,7 +562,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./Conectividade_local.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Análise de conectividade local</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Conectividade local</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
