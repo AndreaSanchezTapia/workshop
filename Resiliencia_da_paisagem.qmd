@@ -18,7 +18,6 @@ A partir da combinação dessas imagens, geramos um mapa bivariado da resiliênc
 
 ![Resiliência da paisagem, resultante do cruzamento dos mapas de heterogeneidade da paisagem e de conectividade local.](figs/Resilience_bivariate.png){#fig-resilience width="600" fig-align="center"}
 
-
 As diferentes classes criadas pela sobreposição dos quartis na escala bivariada da resiliência da paisagem nos permite identificar diferentes áreas de interesse (Figura 15):
 
 * Áreas em verde (quadrante Q4): são aquelas que apresentam os maiores valores para as duas métricas, ou seja, possuem alta conectividade local e alta heterogeneidade da paisagem. Isso sugere que essas áreas são particularmente resilientes, pois apresentam alto potencial de manter a diversidade de espécies e funções ecossistêmicas, mesmo diante das mudanças climáticas;
@@ -26,4 +25,4 @@ As diferentes classes criadas pela sobreposição dos quartis na escala bivariad
 * Áreas em azul (quadrante Q2): possuem alta heterogeneidade da paisagem, o que significa que há uma grande variedade de tipos de habitats ou características na paisagem. No entanto, a conectividade local é baixa, o que indica que os elementos do ecossistema podem estar isolados ou menos interligados;
 * Áreas em cinza (quadrante Q1): são as áreas com menores valores de heterogeneidade da paisagem e menores valores de conectividade, indicando locais que apresentam pouca variação topográfica e, consequentemente, baixa variedade de habitats. Essas áreas também apresentam uma baixa conectividade, o que indica que esses microhabitas estão isolados ou pouco interligados.
 
-![Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e de conectividade local, enfatizando o que cada quadrante da escala bivariada representa no mapa final de resiliência.](figs/resilience_def.png){#fig-res width="700" height="700" fig-align="center"}
+![Definição das classes de resiliência da paisagem, baseada na distribuição de pixels nas imagens originais de heterogeneidade da paisagem e de conectividade local, enfatizando o que cada quadrante da escala bivariada representa no mapa final de resiliência.](figs/resilience_def_quadrantes.png){#fig-res width="700" fig-align="center"}
