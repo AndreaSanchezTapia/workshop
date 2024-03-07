@@ -1,11 +1,11 @@
 # Prefácio {.unnumbered}
 
-<!--
+As mudanças no clima modificam ambientes naturais e pressionam espécies a se adaptarem às novas condições ambientais ou alterarem sua distribuição espacial para locais mais adequados climaticamente. A identificação de locais com potencial para sustentar a biodiversidade diante das mudanças climáticas é imprescindível para o planejamento de ações de conservação e restauração.
 
-[incluir um contexto inicial sobre o projeto]
+O objetivo principal do projeto é mapear áreas resilientes, que permitam a movimentação da biodiversidade na busca de áreas mais adequadas climaticamente em um cenário de mudança climáticas. O termo áreas resilientes, neste contexto, indica locais com alta diversidade microclimática e conectividade, condições necessárias para que espécies e processos ecológicos persistam às mudanças climáticas regionais.
 
-A equipe do projeto gostaria de agradecer à equipe do *Center for Resilient Conservation Science* da *The Nature Conservancy*, especialmente a Mark Anderson, Melissa Clark e Arlene Olivero pelo auxílio, discussões e esclarecimentos metodológicos.
+A metodologia proposta combina a heterogeneidade da paisagem, um representante da variabilidade microclimática, com a conectividade local, para identificar locais que possibilitem adaptação das espécies às mudanças climáticas, cujas paisagens sejam permeáveis à movimentação das espécies. O mapeamento da heterogeneidade da paisagem é baseado no meio físico e inclui variáveis relacionadas a relevo, altitude, áreas úmidas e solos. A conectividade local é baseada no contexto espacial e na resistência das classes de uso e cobertura da terra ao movimento da biodiversidade, combinando classes naturais e antropizadas com maior ou menor grau de impacto humano.
 
-Um agradecimento especial à equipe de especialistas que participaram das oficinas do projeto e que contribuíram para o refinamento das análises, discussões teóricas e apresentação dos resultados.
+O produto resultante desse projeto é um mapa de áreas resilientes para os biomas do Brasil, que permite identificar o potencial de cada área para sustentar a biodiversidade em um clima sob mudanças. Há ainda indicações sobre aplicações para conservação considerando preservação de fragmentos de vegetação nativos, restauração de ambientes degradados e também uso sustentável e provisão de serviços ecossistêmicos entre as diversas classes de alta e baixa resiliência da paisagem.
 
--->
+A equipe central do projeto contou com o apoio de diversas pessoas e gostaria de agradecer à equipe do *Center for Resilient Conservation Science* da *The Nature Conservancy*, especialmente a Mark Anderson, Melissa Clark e Arlene Olivero pelo auxílio, discussões e esclarecimentos metodológicos. Um agradecimento especial à equipe de especialistas que participaram das oficinas do projeto e que contribuíram para o refinamento das análises, discussões teóricas e apresentação dos resultados.
