@@ -34,7 +34,7 @@ $$
 
 Nesse índice, a posição topográfica é calculada como a diferença média da célula focal (*xi*) para outras células (*x0*) ponderado pela distância entre as células (*di0*); o *n* representa o número de células. O cálculo é realizado usando *kernel* anelar de diferentes tamanhos.
 
-No nosso estudo, optamos por utilizar o *Topographic Position Index* (TPI) (Theobald et al. 2015), por permitir considerar o efeito de diferentes escalas espaciais no cálculo da posição topográfica. Esse índice de posição topográfica média é descrito como:
+No nosso estudo, optamos por utilizar o *Topographic Position Index* (TPI) [@theobald_ecologically-relevant_2015], por permitir considerar o efeito de diferentes escalas espaciais no cálculo da posição topográfica. Esse índice de posição topográfica média é descrito como:
 
 
 
