@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>11&nbsp; Heterogeneidade da paisagem</title>
+<title>Untitled - 11&nbsp; Heterogeneidade da paisagem</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,19 +80,25 @@ div.csl-indent {
     "search-submit-button-title": "Enviar"
   }
 }</script>
+</head><body class="nav-sidebar docked nav-fixed">\usepackage[text = Versão Março/2024, fontsize= 2cm]{draftwatermark}
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
-</head>
 
-<body class="nav-sidebar docked nav-fixed">
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Untitled</span>
+    </a>
+  </div>
             <div id="quarto-search" class="" title="Procurar"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -419,23 +425,23 @@ Z_{índice\,de\,áreas\,úmidas} =\frac {{{(Z_{local}}{\times2)}} + {Z_{regional
 <h2 class="unnumbered anchored" data-anchor-id="calculando-a-heterogeneidade-da-paisagem">Calculando a heterogeneidade da paisagem</h2>
 <p>A heterogeneidade da paisagem (<a href="#fig-landscape">Figura&nbsp;<span>11.4</span></a>) foi calculada seguindo uma hierarquia nas variáveis padronizadas por valores de Z na janela móvel. Na etapa 1, ela foi definida como o valor de Z da variedade de formas de relevo. Na etapa 2, em locais onde o valor de Z para amplitude altitudinal foi maior que aquele obtido para a variedade de formas de relevo, a heterogeneidade da paisagem foi calculada como a média ponderada das duas variáveis, dando peso 2 para variedade de formas de relevo:</p>
 <p><span class="math display">\[
-Z_{heterogeneidade\, da\,paisagem}= \frac{\left(Z_{variedade\,de\,formas\,de\,relevo}\times 2 \right)+Z_{amplitude\,altitudinal}}{3}
+Z_{heterogeneidade\, da\,paisagem}= \frac{\left(Z_{formas\,de\,relevo}\times 2 \right)+Z_{amplitude\,altitudinal}}{3}
 \]</span></p>
 <p>Na etapa 3, em locais onde o índice áreas úmidas foi maior que a heterogeneidade da paisagem calculada na etapa 2, calculamos a média ponderada da heterogeneidade da paisagem e índice de áreas úmidas, atribuindo peso dois para as áreas úmidas (conforme indicado abaixo). O peso duplo das áreas úmidas é justificado por esses locais estarem em áreas planas com baixa variabilidade topográfica, sendo as áreas úmidas locais com alta disponibilidade hídrica as que determinam a variabilidade microclimática.</p>
 <p><span class="math display">\[
-Z_{heterogeneidade\, da\,paisagem}= \frac{Z_{variedade\,de\,formas\,de\,relevo}+Z_{amplitude\,altitudinal} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{4}
+Z_{heterogeneidade\, da\,paisagem}= \frac{Z_{formas\,de\,relevo}+Z_{amplitude\,altitudinal} + (Z_{áreas\,úmidas}\times 2)}{4}
 \]</span></p>
 <p>Se, na etapa 2, a amplitude altitudinal não foi importante para a célula, a heterogeneidade da etapa 3 foi calculada conforme segue:</p>
 <p><span class="math display">\[
-Z_{heterogeneidade\, da\,paisagem}= \frac{Z_{variedade\,de\,formas\,de\,relevo} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{3}
+Z_{heterogeneidade\, da\,paisagem}= \frac{Z_{formas\,de\,relevo} + (Z_{áreas\,úmidas}\times 2)}{3}
 \]</span></p>
 <p>Na etapa 4, nos locais onde o valor de Z da riqueza de solos foi maior que a heterogeneidade da paisagem calculada na etapa 3, os valores foram substituídos pela média ponderada das variáveis naquela localidade, com peso 2 para variedade de formas de relevo.</p>
 <p><span class="math display">\[
-Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,formas\,de\,relevo}\times 2)+Z_{amplitude\,altitudinal}+Z_{índice\,de\,áreas\,úmidas}+Z_{riqueza\,de\,solos}}{5}
+Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{formas\,de\,relevo}\times 2)+Z_{amplitude\,altitudinal}+Z_{áreas\,úmidas}+Z_{riqueza\,de\,solos}}{5}
 \]</span></p>
 <p>Se, na etapa 3, nas células onde o índice de áreas úmidas não foi importante, a heterogeneidade da paisagem foi calculada conforme segue:</p>
 <p><span class="math display">\[
-Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,formas\,de\,relevo}\times 2)+Z_{amplitude\,altitudinal}+Z_{riqueza\,de\,solos}}{4}
+Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{formas\,de\,relevo}\times 2)+Z_{amplitude\,altitudinal}+Z_{riqueza\,de\,solos}}{4}
 \]</span></p>
 <p>Da mesma forma, em locais onde a amplitude altitudinal não foi importante, a heterogeneidade da paisagem foi calculada conforme segue:</p>
 <p><span class="math display">\[

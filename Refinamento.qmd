@@ -55,7 +55,7 @@ A comparação foi realizada entre frequência dos valores de heterogeneidade da
 
 Os resultados desse teste indicaram que os valores de heterogeneidade da paisagem entre formações campestres e florestais, tanto em altitudes elevadas como em regiões mais baixas, estão distribuídos de maneira semelhante (@fig-alta-baixa), com médias e desvios similares (campo baixo, 0.35 ± 0.64; campo alto, 0.33 ± 0.69; floresta baixa, 0.42 ± 0.70; e floresta alta, 0.43, ± 0.71). Portanto, não foram encontradas tendências nas estimativas de heterogeneidade da paisagem entre diferentes formações vegetais em faixas de altitude distintas.
 
-![Histogramas da densidade de pixels (calculada em porcentagem) dos valores de heterogeneidade da paisagem para fitofisionomias campestres e florestais em altas e baixas altitudes.](figs/Figura_hist_campos_floresta.png){#fig-alta-baixa width="800" height="800" fig-align="center"}
+![Histogramas da densidade de pixels (calculada em porcentagem) dos valores de heterogeneidade da paisagem para fitofisionomias campestres e florestais em altas e baixas altitudes.](figs/Figura_hist_campos_floresta.png){#fig-alta-baixa width="700" height="700" fig-align="center"}
 
 
 Adicionalmente à análise anterior, realizamos também a comparação da heterogeneidade da paisagem entre as principais fitofisionomias que ocorrem dentro do território brasileiro: florestas ombrófilas e estacionais, savana, estepe e campinarana. Para isso, extraímos os valores dos raster de heterogeneidade da paisagem que se sobrepunham com os polígonos das fitofisionomias mapeadas na carta de vegetação produzida pelo Instituto Brasileiro de Geografia (IBGE) em escala 1:250.000 ([https://www.ibge.gov.br/geociencias/informacoes-ambientais/vegetacao/22453-cartas-1-250-000.html?=&t=downloads](https://www.ibge.gov.br/geociencias/informacoes-ambientais/vegetacao/22453-cartas-1-250-000.html?=&t=downloads)) no QGIS 3.28 [@qgis_development_team_qgis_2023]. Em seguida, produzimos histogramas com a densidade dos valores e transformamos os valores de densidade em porcentagem para torná-los comparáveis entre as diferentes fitofisionomias.
@@ -63,7 +63,7 @@ Adicionalmente à análise anterior, realizamos também a comparação da hetero
 Foram calculadas a média e o desvio padrção de heterogeneidade da paisagem para cada uma das fitofisionomias (@fig-fisio). Do mesmo modo como obtido anteriormente, não encontramos tendências na distribuição dos valores de heterogeneidade da paisagem para as diferentes fitofisionomias (@fig-fisio), com valores pouco destoantes entre cada uma delas.
 
 
-![Histogramas da densidade de pixels (calculada em porcentagem) dos valores de heterogeneidade da paisagem para diferentes fitofisionomias brasileiras.](figs/figura_hist_fitofisionomias.png){#fig-fisio width="800" height="800" fig-align="center"}
+![Histogramas da densidade de pixels (calculada em porcentagem) dos valores de heterogeneidade da paisagem para diferentes fitofisionomias brasileiras.](figs/figura_hist_fitofisionomias.png){#fig-fisio width="700" height="700" fig-align="center"}
 
 
 ## Consideração sobre a largura dos rios na análise de resistência 

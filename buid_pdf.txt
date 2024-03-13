@@ -1,5 +1,3 @@
-mv ./docs/Relatorio_final.pdf ./docs/report.pdf
+pdftk capa.pdf Pagina_adicional_relatorio_resiliencia.pdf ./docs/Relatorio_final.pdf cat output Relatorio_final.pdf
 
-pdftk capa.pdf ./docs/report.pdf output ./docs/Relatorio_final.pdf
-
-rm ./docs/report.pdf
+mv Relatorio_final.pdf ./docs/Relatorio_final.pdf

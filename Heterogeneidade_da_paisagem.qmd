@@ -130,7 +130,7 @@ A heterogeneidade da paisagem (@fig-landscape) foi calculada seguindo uma hierar
 
 
 $$
-Z_{heterogeneidade\, da\,paisagem}= \frac{\left(Z_{variedade\,de\,formas\,de\,relevo}\times 2 \right)+Z_{amplitude\,altitudinal}}{3}
+Z_{heterogeneidade\, da\,paisagem}= \frac{\left(Z_{formas\,de\,relevo}\times 2 \right)+Z_{amplitude\,altitudinal}}{3}
 $$
 
 
@@ -138,29 +138,33 @@ Na etapa 3, em locais onde o índice áreas úmidas foi maior que a heterogeneid
 
 
 $$
-Z_{heterogeneidade\, da\,paisagem}= \frac{Z_{variedade\,de\,formas\,de\,relevo}+Z_{amplitude\,altitudinal} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{4}
+Z_{heterogeneidade\, da\,paisagem}= \frac{Z_{formas\,de\,relevo}+Z_{amplitude\,altitudinal} + (Z_{áreas\,úmidas}\times 2)}{4}
 $$
 
 
 Se, na etapa 2, a amplitude altitudinal não foi importante para a célula, a heterogeneidade da etapa 3 foi calculada conforme segue:
 
+
 $$
-Z_{heterogeneidade\, da\,paisagem}= \frac{Z_{variedade\,de\,formas\,de\,relevo} + (Z_{índice\,de\,áreas\,úmidas}\times 2)}{3}
+Z_{heterogeneidade\, da\,paisagem}= \frac{Z_{formas\,de\,relevo} + (Z_{áreas\,úmidas}\times 2)}{3}
 $$
+
 
 
 Na etapa 4, nos locais onde o valor de Z da riqueza de solos foi maior que a heterogeneidade da paisagem calculada na etapa 3, os valores foram substituídos pela média ponderada das variáveis naquela localidade, com peso 2 para variedade de formas de relevo.
 
 
 $$
-Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,formas\,de\,relevo}\times 2)+Z_{amplitude\,altitudinal}+Z_{índice\,de\,áreas\,úmidas}+Z_{riqueza\,de\,solos}}{5}
+Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{formas\,de\,relevo}\times 2)+Z_{amplitude\,altitudinal}+Z_{áreas\,úmidas}+Z_{riqueza\,de\,solos}}{5}
 $$
+
+
 
 
 Se, na etapa 3, nas células onde o índice de áreas úmidas não foi importante, a heterogeneidade da paisagem foi calculada conforme segue:
 
 $$
-Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{variedade\,de\,formas\,de\,relevo}\times 2)+Z_{amplitude\,altitudinal}+Z_{riqueza\,de\,solos}}{4}
+Z_{heterogeneidade\, da\,paisagem}= \frac{(Z_{formas\,de\,relevo}\times 2)+Z_{amplitude\,altitudinal}+Z_{riqueza\,de\,solos}}{4}
 $$
 
 

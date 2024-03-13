@@ -64,7 +64,7 @@ https://mapbiomas.org/)
 
 + Uso e cobertura do solo: [Mapbiomas Coleção 8](https://mapbiomas.org/)
 
-+ Infraestrutura de transporte: [IBGE BCIM](inserir link)
++ Infraestrutura de transporte: [IBGEBCIM](https://www.ibge.gov.br/geociencias/cartas-e-mapas/bases-cartograficas-continuas/15759-brasil.html?=&t=downloads)
 
-+ Infraestrutura de energia: [ANEEL](inserir link)
++ Infraestrutura de energia: [ANEEL](https://gisepeprd2.epe.gov.br/WebMapEPE/)
 

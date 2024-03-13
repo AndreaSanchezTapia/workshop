@@ -1,6 +1,8 @@
 project:
   type: book
+  title: "Untitled"
   output-dir: docs
+
 book:
   chapters:
     - index.qmd
@@ -47,8 +49,22 @@ book:
 bibliography: bibliografia.bib
 csl: citation_style.csl
 lang: pt-br
+
+header-includes:
+  - \usepackage[text = Versão Março/2024, fontsize= 2cm]{draftwatermark}
+  
 format:
   html:
     theme: default    
     css: styles.css   
-  docx: default
+  pdf: 
+    keep_tex: yes
+    highlight-style: github
+  
+
+
+   
+ 
+  
+  
+  

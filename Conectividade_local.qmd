@@ -84,6 +84,6 @@ Depois de atribuídos os valores de resistência, aplicamos à superfície de re
 Uma consideração importante é que, uma vez que nossas análises são orientadas para organismos terrestres e a função *kernel* considera o efeito do contexto no cálculo de conectividade local, optamos por, na análise de vizinhança, desconsiderar o efeito que os pixels de água exercem sobre os pixels terrestres, mas mantivemos o efeito contrário. Em termos práticos isso significa que o custo de deslocamento de um organismo terrestre em um pixel de floresta nativa, por exemplo, que esteja localizado na margem de um corpo d’água mais largo, não deve ser maior que o custo de deslocamento num pixel de floresta que esteja localizado na margem de um corpo d’água estreito. Por outro lado, se um pequeno corpo d’água estiver inserido em uma área de baixa resistência, como uma formação florestal, ele terá valores de conectividade local maiores do que se estivesse inserido em uma área de alta resistência, como uma pastagem, por exemplo.
 O fluxograma ilustrando as etapas da análise de conectividade local é apresentado na @fig-fluxograma.
 
-![Fluxograma indicando as etapas da análise de conectividade local.](figs/Fluxograma_geral.png){#fig-fluxograma height="800" width="900" fig-align="center"}
+![Fluxograma indicando as etapas da análise de conectividade local.](figs/Fluxograma_geral.png){#fig-fluxograma height="700" width="700" fig-align="center"}
 
 
