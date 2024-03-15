@@ -1,11 +1,11 @@
 project:
   type: book
-  title: "Untitled"
   output-dir: docs
 
 book:
   chapters:
     - index.qmd
+    - contra_capa.qmd
     - prefacio.qmd
     - sintese.qmd
     - apresentacao.qmd
@@ -50,14 +50,16 @@ bibliography: bibliografia.bib
 csl: citation_style.csl
 lang: pt-br
 
-header-includes:
-  - \usepackage[text = Versão Março/2024, fontsize= 2cm]{draftwatermark}
+
   
 format:
   html:
+    toc: false
     theme: default    
     css: styles.css   
   pdf: 
+    header-includes:
+      - \usepackage[text = Versão Março/2024, fontsize= 2cm]{draftwatermark}
     keep_tex: yes
     highlight-style: github
   
